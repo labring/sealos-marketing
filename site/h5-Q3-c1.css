@@ -319,7 +319,7 @@ button {
   /* ...其他要清除的默认样式... */
 }
 .h5_vid1 {
-  padding: 180px 80px 0px 80px;
+  padding: 100px 80px 0px 80px;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -588,7 +588,7 @@ a, button, .your-element { /*  用逗号分隔多个选择器 */
   margin-top: 140px;
 }
 .vid3_kuangjia {
-  padding: 110px 80px 92px 80px;
+  padding: 120px 80px 92px 80px;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -930,7 +930,7 @@ a, button, .your-element { /*  用逗号分隔多个选择器 */
   padding-right: 60px;
 }
 .vid6 {
-  padding: 140px 80px 0px 80px;
+  padding: 200px 80px 0px 80px;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -1047,7 +1047,7 @@ a, button, .your-element { /*  用逗号分隔多个选择器 */
   align-items: flex-start;
 }
 .vids7 {
-  padding: 140px 80px 140px 80px;
+  padding: 140px 80px 80px 80px;
   max-width: 1280px;
   margin: 0 auto;
 }
