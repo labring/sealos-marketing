@@ -414,21 +414,21 @@ a {
 }
 
 .iconh1 {
-    background-image: url('/images/rocket.svg');
+    background-image: url('./images/rocket.svg');
     background-size: 64px;
     background-position: 5% 50%;
     background-repeat: no-repeat;
 }
 
 .iconh2 {
-    background-image: url('/images/rmb.svg');
+    background-image: url('./images/rmb.svg');
     background-size: 64px;
     background-position: 5% 50%;
     background-repeat: no-repeat;
 }
 
 .iconh3 {
-    background-image: url('/images/app_store.svg');
+    background-image: url('./images/app_store.svg');
     background-size: 64px;
     background-position: 5% 50%;
     background-repeat: no-repeat;
@@ -653,35 +653,35 @@ video {
 }
 
 .tabico1.active {
-    background-image: url('/images/tabico1.png');
+    background-image: url('./images/tabico1.png');
 }
 
 .tabico1 {
-    background-image: url('/images/tabico1-ac.png');
+    background-image: url('./images/tabico1-ac.png');
 }
 
 .tabico2.active {
-    background-image: url('/images/tabico2.png');
+    background-image: url('./images/tabico2.png');
 }
 
 .tabico2 {
-    background-image: url('/images/tabico2-ac.png');
+    background-image: url('./images/tabico2-ac.png');
 }
 
 .tabico3 {
-    background-image: url('/images/tabico3-ac.png');
+    background-image: url('./images/tabico3-ac.png');
 }
 
 .tabico3.active {
-    background-image: url('/images/tabico3.png');
+    background-image: url('./images/tabico3.png');
 }
 
 .tabico4 {
-    background-image: url('/images/tabico4-ac.png');
+    background-image: url('./images/tabico4-ac.png');
 }
 
 .tabico4.active {
-    background-image: url('/images/tabico4.png');
+    background-image: url('./images/tabico4.png');
 }
 
 
@@ -937,25 +937,25 @@ video {
     background: #ECF5FF;
 }
 .caricon1{
-    background-image: url('/images/Frame.svg');
+    background-image: url('./images/Frame.svg');
     background-repeat: no-repeat;
     background-position: 90% 7%;
     background-size: 100px;
 }
 .caricon2{
-    background-image: url('/images/Frame-2.svg');
+    background-image: url('./images/Frame-2.svg');
     background-repeat: no-repeat;
     background-position: 90% 9%;
     background-size: 90px;
 }
 .caricon3{
-    background-image: url('/images/Frame-3.svg');
+    background-image: url('./images/Frame-3.svg');
     background-repeat: no-repeat;
     background-position: 90% 7%;
     background-size: 180px;
 }
 .caricon4{
-    background-image: url('/images/Frame-4.svg');
+    background-image: url('./images/Frame-4.svg');
     background-repeat: no-repeat;
     background-position: 90% 7%;
     background-size: 100px;
@@ -1186,13 +1186,13 @@ background: var(--White, #FFF);
 box-shadow: 0px 0px 0.809px 0px rgba(0, 0, 0, 0.05), 0px 3.742px 14.969px 0px rgba(182, 202, 224, 0.28);
 }
 .cloud_left{
-    background-image: url('/images/Group20793.svg');
+    background-image: url('./images/Group20793.svg');
     background-size: 200px;
     background-position: 340px 40px;
     background-repeat: no-repeat;
 }
 .cloud_right{
-    background-image: url('/images/Group20794.svg');
+    background-image: url('./images/Group20794.svg');
     background-size: 200px;
     background-position: 340px 40px;
     background-repeat: no-repeat;
