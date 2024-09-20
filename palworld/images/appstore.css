@@ -1,0 +1,614 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media (min-width: 1680px) {
+  .navbar, .palu-game-server, .game-server-group, .h5_footer, .appstore-docs {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1680px) {
+  .navbar, .palu-game-server, .game-server-group, .h5_footer, .appstore-docs {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button, a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+a {
+  text-decoration: none;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.navbar {
+  margin: 0 auto;
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.hero {
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo .logo-link {
+  margin-right: 40px;
+}
+
+.navbar-logo img {
+  max-width: 100%;
+  height: 34px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+  color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
+  text-align: center;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  font-style: normal;
+  letter-spacing: 0.009375em;
+  font-weight: 500;
+  margin-left: 50px;
+}
+
+.navbar-links a:hover {
+  color: #219BF4;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.github-stars {
+  display: flex;
+  align-items: center;
+  gap: 0.3125vw;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+.github-stars i {
+  font-size: clamp(1.125rem, 2.5vw, 1.25rem);
+}
+
+.github-stars span {
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.login-button {
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 0.3125em;
+  font-size: 14px;
+  background: #518fee;
+}
+
+.login-button:hover,
+.btn-primary:hover,
+.cta-button:hover,
+.vid6zhann:hover {
+  background: var(--Bright-Blue-600, #0884DD);
+  box-shadow: 0px 4.626px 18.504px 0px rgba(58, 149, 255, 0.28);
+}
+
+.btn-secondary:hover,
+.feature h3:hover {
+  color: var(--light-sealos-secondary-text, var(--Bright-Blue-600, #0884DD));
+}
+
+.navbar-links a {
+  color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+}
+
+.appnav {
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+.app_banner {
+  background-image: url("./huanshou.png");
+  width: 100%;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.app_banner h1 {
+  font-size: 45px;
+  letter-spacing: 2px;
+}
+
+.app_banner p {
+  color: #f6ff00;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.price-description {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #fffbc2;
+}
+
+/* 模块1 */
+.palu-game-server {
+  font-family: Arial, sans-serif;
+  padding: 60px 0px;
+}
+
+.palu-title {
+  margin-bottom: 32px;
+}
+
+.palu-apply-link {
+  margin-left: 20px;
+}
+
+.palu-title h2 {
+  font-size: 28px;
+  line-height: 36px;
+  color: #181818;
+  font-weight: 500;
+}
+
+.palu-apply-link {
+  color: #0884DD;
+  text-decoration: none;
+}
+
+.palu-title p {
+  font-size: 14px;
+  line-height: 22px;
+  color: #4b5b76;
+  margin-top: 12px;
+}
+
+.palu-title p span {
+  color: #ff7800;
+}
+
+.palu-tabs ul {
+  list-style-type: none;
+  padding: 0;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.palu-tabs li {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.palu-tab-active {
+  border-bottom: 2px solid #0884DD;
+}
+
+.palu-guide-image {
+  max-width: 68px;
+  height: auto;
+  margin-right: 30px;
+}
+
+.palu-guide-link {
+  display: block;
+  margin-top: 4px;
+  color: #348147;
+  text-decoration: none;
+}
+
+.palu-purchase,
+.palu-play {
+  margin-top: 36px;
+}
+
+.palu-purchase h3,
+.palu-play h3 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #2252d9;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.palu-purchase h3 span,
+.palu-play h3 span {
+  font-size: 20px;
+  color: #181818;
+}
+
+.palu-section {
+  background: #e6f0ff;
+  width: 44px;
+  height: 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.palu-purchase ul,
+.palu-play ul {
+  padding-left: 20px;
+}
+
+.palu-video video {
+  width: 582px;
+  height: auto;
+}
+
+.palu-tabs {
+  margin-bottom: 40px;
+}
+
+.palu-guide {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  background: #edf9f0;
+  color: #348147;
+  font-size: 16px;
+  width: 413px;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+}
+
+.palu-purchase ul li {
+  margin-top: 8px;
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #4b5b76;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.palu-purchase ul li span {
+  color: #ff7800;
+}
+
+.palu-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.palu-tab-active a {
+  color: #0052d9;
+}
+
+/* 交流群 */
+.games-server-group {
+  background-color: #4169E1;
+  color: white;
+  padding: 20px 0px;
+}
+
+.group-content {
+  flex: 1;
+}
+
+.group-title {
+  font-size: 20px;
+  line-height: 28px;
+  color: #fff;
+  font-weight: 500;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.group-description {
+  font-size: 14px;
+  line-height: 22px;
+  color: hsla(0, 0%, 100%, .7);
+  margin-top: 10px;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.qr-codes {
+  display: flex;
+  gap: 20px;
+}
+
+.qr-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qr-code img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.qr-code span {
+  font-size: 14px;
+}
+
+.game-sever {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.palu-purchase ul p a {
+  color: #348147;
+}
+
+.h5footerlogo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.h5footerlogo img {
+  height: 34px;
+}
+
+.h5footerlm {
+  display: flex;
+  flex-direction: row;
+  width: 45%;
+  justify-content: space-between;
+}
+
+.h5footerlogo p {
+  color: var(--light-general-on-surface-low, var(--Gray-Modern-600, #485264));
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  padding-top: 14px;
+}
+
+.h5footkj {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 64px;
+}
+
+.h5footerlm ul li p {
+  color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  text-transform: uppercase;
+  padding-bottom: 24px;
+}
+
+.h5footerlm ul li {
+  color: var(--light-general-on-surface-low, var(--Gray-Modern-600, #485264));
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  padding-bottom: 14px;
+}
+
+.h5footerlm ul li a {
+  color: var(--light-general-on-surface-low, var(--Gray-Modern-600, #485264));
+}
+
+.h5footer {
+  padding-top: 72px;
+  border-top: 1px solid #E6EDF9;
+  background: linear-gradient(186deg, #FFF 4.82%, #F9FBFF 94.9%);
+}
+
+.h5footerdb {
+  display: flex;
+  padding: 16px 0px 24px 0px;
+  border-top: 1px solid #E6EDF9;
+  justify-content: space-between;
+}
+
+.h5footerdbright {
+  display: flex;
+}
+
+.h5footerico {
+  margin-left: 24px;
+  width: 32px;
+  height: 32px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #f4f4f7;
+}
+
+.h5footerdbleft {
+  color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.zh-batto {
+  text-decoration: none;
+  border-radius: 0.3125em;
+  font-size: 14px;
+  width: 120px;
+  height: 34px;
+  margin-top: 30px;
+  background: #518fee;
+  margin-left: 2px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zh-batto:hover {
+  border: solid 1px #518fee;
+  color: #518fee;
+  background: #ffffff;
+  height: 32px;
+  width: 118px;
+}
+
+.appstore-kj {
+  margin: 100px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.appstore-kj h2 {
+  font-size: 28px;
+  line-height: 36px;
+  color: #181818;
+  font-weight: 500;
+}
+
+.appstore-kj ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-content: flex-start;
+  padding: 36px 0px 20px 20px;
+  border-bottom: solid 1px #ececec;
+  height: 110px;
+}
+
+.appstore-kj li a {
+  margin-top: 8px;
+  list-style-type: disc;
+  color: #4b5b76;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.appstore-kj ul li {
+  list-style-type: disc;
+  color: #4169e1;
+}
+
+.appstore-faq {
+  display: flex;
+  gap: 2.5rem !important;
+  margin-top: 60px;
+}
+
+.appstore-ul {
+  width: 300px;
+  background: linear-gradient(to bottom right, rgb(159 197 255 / 20%), rgba(255, 255, 255, 1));
+  border-radius: 15px;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+  padding: 36px;
+}
+
+.appstore-ul h3 {
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.apptore-butto {
+  margin-top: 30px;
+}
+
+.apptore-butto a {
+  color: #518fee;
+}
+.appstore-ul h3 img{
+  width: 24px;
+  padding-right: 10px;
+}
+
+
