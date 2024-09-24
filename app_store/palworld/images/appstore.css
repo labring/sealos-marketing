@@ -184,7 +184,7 @@ table {
 }
 
 .app_banner {
-  background-image: url("./huanshou.png");
+  background-image: url("/images/huanshou.png");
   width: 100%;
   height: 230px;
   display: flex;
@@ -201,9 +201,9 @@ table {
 
 .app_banner p {
   color: #f6ff00;
-  font-size: 30px;
+  font-size: 46px;
   font-weight: bold;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .price-description {
@@ -219,7 +219,7 @@ table {
 }
 
 .palu-title {
-  margin-bottom: 32px;
+  margin-bottom: 50px;
 }
 
 .palu-apply-link {
@@ -259,13 +259,12 @@ table {
 }
 
 .palu-tabs li {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 18px;
+  width: 25%;
+  text-align: center;
 }
 
 .palu-tab-active {
-  border-bottom: 2px solid #0884DD;
+
 }
 
 .palu-guide-image {
@@ -610,5 +609,39 @@ table {
   width: 24px;
   padding-right: 10px;
 }
+.component-switcher {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.switch-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.switch-button {background: #ffffff;
+  font-size: 16px;
+  width: 80%;
+font-weight: bold;
+padding-bottom: 10px;
+}
+.switch-button:hover {
+  color: #0052d9;
+  border-bottom: 2px solid #0884DD;
+  padding-bottom: 8px;
+cursor: pointer;
+}
+.switch-button.active {
+  border-bottom: 2px solid #0884DD;
+ color: #0052d9;
+ padding-bottom: 8px;
 
+}
+.component {
 
+  display: none;
+}
+.component.active {
+  display: block;
+}
