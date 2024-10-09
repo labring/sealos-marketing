@@ -170,7 +170,7 @@ table {
 }
 
 .navbar-logo .logo-link {
-    margin-right: 40px;
+    margin-right: 80px;
 }
 
 .navbar-logo img {
@@ -196,7 +196,7 @@ table {
 .navbar-right {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 22px;
 }
 
 .github-stars {
@@ -207,20 +207,20 @@ table {
 }
 
 .github-stars i {
-    font-size: clamp(1.125rem, 2.5vw, 1.25rem);
+    font-size: 18px;
 }
 
 .github-stars span {
     font-size: 16px;
-    margin-left: 5px;
+    margin-left: 2px;
 }
 
 .login-button {
     text-decoration: none;
     color: #fff;
-    padding: 0.94em 2.25em;
+    padding: 12px 26px;
     border-radius: 0.3125em;
-    font-size: clamp(0.875rem, 2vw, 1rem);
+    font-size: 14px;
     background: var(--Bright-Blue-500, #219BF4);
     box-shadow: 0px 0.289125em 1.15650em 0px rgba(58, 149, 255, 0.28);
 }
@@ -315,15 +315,15 @@ table {
 
 .hero-buttons {
     display: flex;
-    gap: 0.75vw;
-    justify-content: space-between;
+gap: 30px;
+    justify-content: flex-start;
 }
 
 .btn-primary, .btn-secondary {
-    padding: 0.825em 3.085em;
+    padding: 14px 40px;
     border-radius: 0.4em;
     text-decoration: none;
-    font-size: clamp(0.875rem, 2vw, 1.125rem);
+    font-size: 16px;
 }
 
 a {
@@ -333,7 +333,7 @@ a {
 .navbar-links a {
     color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
@@ -403,40 +403,40 @@ a {
 }
 
 .feature {
-    border-radius: 8px;
+    border-radius: 6px;
     border: 1px solid #E6EDF9;
     display: flex;
-    padding: 28px 0px 28px 80px;
+    padding: 14px 0px 14px 80px;
     gap: 4px;
     flex: 1 0 0;
     flex-direction: column;
-    max-width: 400px;
+    max-width: 280px;
 }
 
 .iconh1 {
     background-image: url('./rocket.svg');
     background-size: 64px;
-    background-position: 5% 50%;
+    background-position: 2% 12px;
     background-repeat: no-repeat;
 }
 
 .iconh2 {
     background-image: url('./rmb.svg');
     background-size: 64px;
-    background-position: 5% 50%;
+    background-position: 2% 12px;
     background-repeat: no-repeat;
 }
 
 .iconh3 {
     background-image: url('./app_store.svg');
     background-size: 64px;
-    background-position: 5% 50%;
+    background-position: 2% 12px;
     background-repeat: no-repeat;
 }
 
 .feature h3 {
     color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 500;
     line-height: 30.292px;
@@ -444,6 +444,7 @@ a {
     align-items: baseline;
     justify-content: flex-start;
     flex-direction: row;
+    letter-spacing: 1px;
 }
 
 .feature p {
@@ -541,6 +542,7 @@ video {
     font-size: 20px;
     cursor: pointer;
     margin-right: 10px;
+    letter-spacing: 2px;
 }
 
 #progressBar {
