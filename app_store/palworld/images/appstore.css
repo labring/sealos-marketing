@@ -184,7 +184,7 @@ table {
 }
 
 .app_banner {
-  background-image: url("/images/huanshou.png");
+  background-image: url("./huanshou.png");
   width: 100%;
   height: 230px;
   display: flex;
