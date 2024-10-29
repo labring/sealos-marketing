@@ -212,7 +212,7 @@
     position: absolute;
     width: 900px;
     height: 492.388px;
-    background: url('./images/Rectangle 1.svg') no-repeat 4px 14px;
+    background: url('/images/Rectangle 1.svg') no-repeat 4px 14px;
     background-size: 8%;
     padding-top: 33px;
     z-index: 1;
@@ -454,7 +454,7 @@
     align-content: flex-start;
   }
   .briefcase {
-    background-image: url('./images/toolkit-0.svg');
+    background-image: url('/images/toolkit-0.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -463,13 +463,13 @@
     display: inline-block;
   }
   .active .briefcase {
-    background-image: url('./images/toolkit-1.svg');
+    background-image: url('/images/toolkit-1.svg');
   }
   .nav-links li {
     position: relative; /* 为下拉菜单定位 */
   }
   .briefcase-1 {
-    background-image: url('./images/robot-ai-0.svg');
+    background-image: url('/images/robot-ai-0.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -478,10 +478,10 @@
     display: inline-block;
   }
   .active .briefcase-1 {
-    background-image: url('./images/robot-ai-1.svg');
+    background-image: url('/images/robot-ai-1.svg');
   }
   .briefcase-2 {
-    background-image: url('./images/database-sjk-0.svg');
+    background-image: url('/images/database-sjk-0.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -490,10 +490,10 @@
     display: inline-block;
   }
   .active .briefcase-2 {
-    background-image: url('./images/database-sjk-1.svg');
+    background-image: url('/images/database-sjk-1.svg');
   }
   .briefcase-3 {
-    background-image: url('./images/params-ddm-0.svg');
+    background-image: url('/images/params-ddm-0.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -502,7 +502,7 @@
     display: inline-block;
   }
   .active .briefcase-3 {
-    background-image: url('./images/params-ddm-1.svg');
+    background-image: url('/images/params-ddm-1.svg');
   }
   .nav-link {
     display: flex;
