@@ -590,8 +590,9 @@
   }
   .hard-top {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+    flex-direction: column;
   }
   .title-logo {
     width: 80px;
@@ -630,6 +631,8 @@
   .hard-title-stats {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
   .hard-top-title {
     margin-left: 24px;
@@ -756,6 +759,7 @@
   }
   .quick-start {
     margin: 40px 0;
+    width: 100%;
   }
   .steps {
     display: flex;
@@ -788,7 +792,7 @@
     align-items: center;
   }
   .features-list {
-    margin: 40px 0;
+    margin: 20px 0;
   }
   .features-list h2 {
     margin-bottom: 10px;
@@ -1186,7 +1190,7 @@
       flex-direction: row;
     }
     .step {
-      padding: 10px 24px;
+      padding: 10px 40px;
       gap: 8px;
     }
     .step-number {
@@ -1217,8 +1221,8 @@
       height: 40px;
     }
     .carousel-nav {
-        width: 150%;
-        left: -120px;
+      width: 180%;
+      left: -200px;
     }
   }
 
