@@ -489,6 +489,14 @@ img {
   height: 20px;
   display: inline-block;
 }
+.title-stats{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.title-logo img{
+  padding: 10px;
+}
 .active .briefcase-2 {
   background-image: url('./database-sjk-1.svg');
 }

@@ -118,6 +118,14 @@ img {
   letter-spacing: 0.048px;
   margin: 20px 0px;
 }
+.title-stats{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.title-logo img{
+  padding: 10px;
+}
 .sealos-detice-span{
   font-size: 14px;
   color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
