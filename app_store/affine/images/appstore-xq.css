@@ -557,6 +557,20 @@ img {
   border-radius: 8px;
   background: #E4F1FF;
 }
+.sealos-detice{
+  color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
+  font-family: "PingFang SC";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.048px;
+  margin: 20px 0px;
+}
+.sealos-detice-span{
+  font-size: 14px;
+    float: right;
+}
 /* Color classes */
 .alist-color {
   background: #70c6be;
