@@ -569,7 +569,8 @@ img {
 }
 .sealos-detice-span{
   font-size: 14px;
-    float: right;
+  color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
+  font-family: "PingFang SC";
 }
 /* Color classes */
 .alist-color {

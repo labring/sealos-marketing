@@ -108,6 +108,21 @@ img {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+.sealos-detice{
+  color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
+  font-family: "PingFang SC";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.048px;
+  margin: 20px 0px;
+}
+.sealos-detice-span{
+  font-size: 14px;
+  color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
+    font-family: "PingFang SC";
+}
 .tool-item {
   margin-bottom: 15px;
   display: none;
