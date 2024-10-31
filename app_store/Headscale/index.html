@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>使用Sealos部署Alist在线网盘管理系统教程</title>
+<title>使用Sealos部署Vaultwarden工具教程</title>
 <link rel="stylesheet" href="../appstore-xq.css">
 <link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
 <script src="../appstor.js" defer></script>
@@ -77,7 +77,7 @@
                           <h2><a href="../DeeplX">DeeplX</a></h2>
                           <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+22.2k</div>
                         </div>
-                        <p>基于深度学习的自然语言处理工具</p>
+                        <p>基于自然语言的翻译API</p>
                       </div>
                     </li>
                   </ul>
@@ -377,10 +377,9 @@
     </div>
     <div class="actions">
       <p> <img src="../img/github.svg" alt="GitHub Icon"> <span>10.4k</span> </p>
-      <a href="https://hzh.sealos.run/" target="_blank" class="login-link">  <button class="btn">
-      登录
-      </button></a>
-    </div>
+      <a href="https://hzh.sealos.run/" target="_blank" class="login-link">
+      <button class="btn"> 登录 </button>
+      </a> </div>
   </div>
 </nav>
 <script>// 添加滚动事件监听
@@ -399,7 +398,7 @@
       <ul class="nav-list">
         <li class="nav-item active"> <a href="#" class="nav-link"> <i class="icon briefcase"></i> <span class="link-text">工具</span> <span class="badge">42</span> </a>
           <ul class="sub-menu" id="menu_sub">
-            <li class="active"><a href="../Alist">
+            <li><a href="../Alist">
               <div class="sub-menu-lef"> <span class="dot alist-color"></span>
                 <p>Alist <span class="sub-muen-desctie">- 在线网盘管理系统</span></p>
               </div>
@@ -409,14 +408,14 @@
                 <p>AFFiNE <span class="sub-muen-desctie">- 开源笔记软件</span></p>
               </div>
               </a> </li>
-            <li><a href="../Headscale">
+            <li class="active"><a href="../Headscale">
               <div class="sub-menu-lef"> <span class="dot Headscale-color"></span>
                 <p>Headscale <span class="sub-muen-desctie">- 构建 WireGuard 网络</span></p>
               </div>
               </a> </li>
             <li><a href="../DeeplX">
               <div class="sub-menu-lef"> <span class="dot DeeplX-color"></span>
-                <p>DeeplX <span class="sub-muen-desctie">- 自然语言处理工具</span></p>
+                <p>DeeplX <span class="sub-muen-desctie">- 翻译API</span></p>
               </div>
               </a> </li>
             <li><a href="../Vaultwarden">
@@ -574,26 +573,28 @@
   <div class="app-h5">
     <div class="hard-top">
       <div class="hard-title-stats">
-       <div class="title-stats"> <div class="title-logo"><img src="../img/Alist.svg" alt="AFFINE Logo"></div>
-        <div class="hard-top-title">
-          <div class="hard-top2">
-            <h1>Alist</h1>
-            <span class="stats"> <span class="stars"><img src="../img/AFFINE-logo2.svg">68.5k</span> <span class="shares"><img src="../img/project.svg"><a href="https://github.com/AlistGo/alist" target="_blank">项目首页</a></span> </span></div>
-          <p class="app-decistore">AList是一个支持多种存储，支持网页浏览和 WebDAV 的文件列表程序。或者说是一个网盘聚合器。可以将你的网盘挂载到一起，方便统一管理。</p>
-        </div></div>
+        <div class="title-stats">
+          <div class="title-logo"><img src="../img/headscale3-dots.svg" alt="AFFINE Logo"></div>
+          <div class="hard-top-title">
+            <div class="hard-top2">
+              <h1>Headscale</h1>
+              <span class="stats"> <span class="stars"><img src="../img/AFFINE-logo2.svg">48.2k</span> <span class="shares"><img src="../img/project.svg"><a href="https://github.com/AlistGo/alist" target="_blank">项目首页</a></span> </span></div>
+            <p class="app-decistore">一款开源的、基于云的、用于快速部署和管理 SSH 服务器的工具。 它可以让你轻松地搭建和配置 SSH 服务器，无需复杂的服务器管理工作，尤其适用于开发者和需要访问服务器的团队。</p>
+          </div>
+        </div>
         <div class="buttons">
           <button class="yaml-button">
-          <a href="./images/alist.yaml" download>导出 Yaml</a>
+          <a href="./images/headscale.yaml" download>导出 Yaml</a>
           </button>
           <button class="deploy-button">
-          <a href="https://template.hzh.sealos.run/deploy?templateName=alist" target=”_blank”>私有化部署</a>
+          <a href="https://template.hzh.sealos.run/deploy?templateName=headscale" target=”_blank”>私有化部署</a>
           </button>
         </div>
       </div>
       <div class="carousel">
-        <div class="carousel-container"> <img src="./images/banner1.jpg" alt="Image 1"
-            class="carousel-item active"> <img src="./images/banner2.jpg" alt="Image 2"
-            class="carousel-item"> <img src="./images/banner3.jpg" alt="Image 3" class="carousel-item"> </div>
+        <div class="carousel-container"> <img src="./images/banner2.png" alt="Image 1"
+            class="carousel-item active"> <img src="./images/banner1.png" alt="Image 2"
+            class="carousel-item"> </div>
         <div class="carousel-nav">
           <button class="carousel-button prev">&lt;</button>
           <button class="carousel-button next">&gt;</button>
@@ -601,7 +602,7 @@
         <script src="../bannerlb.js"></script> 
       </div>
       <div class="quick-start">
-        <h2 class="quick-start-h2"><img src="../img/Rectangle 34624253.svg">如何部署在线 Alist</h2>
+        <h2 class="quick-start-h2"><img src="../img/Rectangle 34624253.svg">如何部署在线 Headscale</h2>
         <div class="steps">
           <div class="step"> <span class="step-number">Step 1</span>
             <p>点击部署</p>
@@ -629,22 +630,37 @@
         </div>
       </div>
       <div class="features-list">
-        <h2 class="quick-start-h2"><img src="../img/Rectangle 34624253.svg">什么是 Alist</h2>
+        <h2 class="quick-start-h2"><img src="../img/Rectangle 34624253.svg">什么是 Headscale</h2>
         <ul class="features-list-ul">
-          <li>AList是一个支持多种存储的文件列表程序，允许用户将不同网盘挂载在一起统一管理。它可以安装在任何连接网络的设备上，如服务器或路由器。<br/><br/>支持的网盘有：本地电脑磁盘、FTP、SFTP、WebDAV、SMB、对象存储、115、123、百度、阿里云、MEGA、谷歌云盘、谷歌相册、移动、天翼、onedrive、迅雷、夸克、蓝奏云、迅雷、Cloudreve等等。</li>
+          <li>Headscale 是一个开源的、自托管的 Tailscale 控制服务器实现。Tailscale 是一个基于 WireGuard 的虚拟私有网络（VPN）服务，而 Headscale 允许用户在自己的服务器上运行 Tailscale 控制平面，从而实现自托管的 VPN 解决方案。Headscale 的目标是为自托管者和爱好者提供一个开源的服务器，用于他们的项目和实验室。
+           </li>
         </ul>
       </div>
       <div class="features-list">
         <h2 class="quick-start-h2"><img src="../img/Rectangle 34624253.svg">功能列表</h2>
         <ul class="features-list-ul">
-          <li><b>支持 WebDAV：</b> AList 支持所有 WebDAV 存储，这是一种用于访问文件的标准。</li>
-          <li><b>受保护的路由：</b>为特定路径添加密码保护和身份验证</li>
-          <li><b>文件预览：</b> 支持视频、音频、文档、PDF、图片预览等，甚至支持 ipa 安装</li>
-          <li><b>打包下载/批量下载：</b>使用浏览器的 stream api 支持打包下载，无需使用服务器 / 使用Aria2进行批量下载支持文件夹</li>
-          <li><b>离线下载：</b>将种子内容离线下载到指定的目录內</li>
-          <li><b>保险箱加密/解密文件：</b>任何人都可以安全地将加密数据存储在远程存储提供商上。数据存储在保险箱中，提供商只能看到保险箱，看不到您的数据。</li>
-          <li><b>更多新功能：</b>包括文本编辑器、README/HTML 渲染、文件永久链接、Cloudflare Workers 代理等</li>
-          
+          <li> 
+            DNS：
+            魔法DNS、
+            全局和受限名称服务器（拆分 DNS）、
+            搜索域名、
+            额外的 DNS 记录（仅限 headscale）<br/>
+            Taildrop（文件共享）<br/>
+            路由通告（包括出口节点）<br/>
+            双栈（IPv4 和 IPv6）<br/>
+            短暂节点<br/>
+            嵌入式DERP 服务器<br/>
+            访问控制列表（GitHub 标签“policy”）：
+            通过 API 进行 ACL 管理、
+            autogroup:internet、
+            autogroup:self、
+            autogroup:member<br/>
+            使用单点登录 (OpenID Connect) 进行节点注册 ( GitHub 标签“OIDC” )：
+            基本注册、
+            动态 ACL 支持、
+            OIDC 组不能用于 ACL<br/>
+            漏斗（#1040）<br/>
+            服务( #1234 ) </li>
         </ul>
       </div>
     </div>
@@ -652,22 +668,21 @@
   <div class="app-faq">
     <div class="app-h5-left">
       <h3>什么是Sealos？</h3>
-     <p class="sealos-detice">基于Kubernetes为内核的云操作系统，独特的集群镜像，可将任意应用打包成 OCI 镜像，自由组合，轻松订制所需的云，一并解决各种依赖问题。</p>
-     <span class="sealos-detice-span"><a href="/">了解更多 ></a></span>
-    </div>
+      <p class="sealos-detice">基于Kubernetes为内核的云操作系统，独特的集群镜像，可将任意应用打包成 OCI 镜像，自由组合，轻松订制所需的云，一并解决各种依赖问题。</p>
+      <span class="sealos-detice-span"><a href="/">了解更多 ></a></span> </div>
     <div class="app-h5-left">
       <h3>Sealos部署优势</h3>
-     <p class="sealos-detice">
-      💰 快速上云：一键创建容器集群，自动化部署容器应用<br/><br/>
-      🌐 成本缩减：仅容器付费，资源成本减少 80%<br/><br/>
-      🛡️ 安全稳定：应用级和租户级网络隔离能力。
-     </p>
-     </div>
+      <p class="sealos-detice"> 💰 快速上云：一键创建容器集群，自动化部署容器应用<br/>
+        <br/>
+        🌐 成本缩减：仅容器付费，资源成本减少 80%<br/>
+        <br/>
+        🛡️ 安全稳定：应用级和租户级网络隔离能力。 </p>
+    </div>
     <div class="app-h5-left">
       <h3>交流讨论</h3>
-     <a href="#"><img src="../img/ewm.png">
-      <p>开发者交流群</p></a>
-       </div>
+      <a href="#"><img src="../img/ewm.png">
+      <p>开发者交流群</p>
+      </a> </div>
   </div>
 </div>
 <div class="h5footer">

@@ -188,12 +188,13 @@ img {
 .actions p {
   display: flex;
   align-items: center;
+  font-size: 14px;
 }
 .actions p img {
-  margin-right: 8px;
+  margin-right: 4px;
 }
 .btn {
-  margin-left: 40px;
+  margin-left: 20px;
   border-radius: 8px;
   background: var(--Bright-Blue-500, #219BF4);
   box-shadow: 0px 4.626px 18.504px 0px rgba(58, 149, 255, 0.28);
@@ -594,11 +595,11 @@ img {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.048px;
-  margin: 10px 0px 16px 0px;
+  margin: 10px 0px 4px 0px;
 }
 .sealos-detice-span{
-  font-size: 14px;
-  color: #101824;
+  font-size: 12px;
+  color: #209bf4;
   font-family: "PingFang SC";
   display: flex;
   justify-content: flex-end;
@@ -716,6 +717,7 @@ img {
   letter-spacing: 0.1px;
   display: flex;
   align-items: center;
+  font-weight: 400;
 }
 .shares {
   color: var(--light-general-on-surface-low, var(--Gray-Modern-600, #485264));
@@ -928,8 +930,8 @@ button::-moz-focus-inner {
 }
 .app-h5-left a img {
   width: 134px;
-  margin-top: 34px;
-  margin-bottom: 6px;
+  margin-top: 18px;
+  margin-bottom: 4px;
 }
 .app-faq {
   width: 242px;
@@ -1214,7 +1216,7 @@ button::-moz-focus-inner {
     flex-direction: row;
   }
   .carousel-nav {
-    width: 130%;
+    width: 125%;
     left: -90px;
   }
 }

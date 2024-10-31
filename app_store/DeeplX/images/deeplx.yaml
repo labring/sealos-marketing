@@ -1,0 +1,141 @@
+apiVersion: app.sealos.io/v1
+kind: Instance
+metadata:
+  name: deeplx-chvizzvd
+  labels:
+    cloud.sealos.io/deploy-on-sealos: deeplx-chvizzvd
+spec:
+  gitRepo: https://github.com/OwO-Network/DeepLX
+  templateType: inline
+  categories:
+    - tool
+  defaults:
+    app_name:
+      type: string
+      value: deeplx-chvizzvd
+    app_host:
+      type: string
+      value: hiwpwtlh
+  inputs:
+    AUTHKEY:
+      description: >-
+        DeepL Official AuthKey. If you have set it up, after the 429 response,
+        the official AuthKey will be used for the request. If multiple authKeys
+        are used simultaneously, they need to be separated by commas.
+      type: string
+      default: ''
+      required: false
+  title: DeeplX
+  url: https://github.com/OwO-Network/DeepLX
+  author: Sealos
+  description: DeepL Free API (No TOKEN required)
+  readme: https://cdn.jsdelivr.net/gh/OwO-Network/DeepLX@main/README.md
+  icon: https://avatars.githubusercontent.com/u/83310993?s=200&v=4
+  deployCount: 1
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deeplx-chvizzvd
+  annotations:
+    originImageName: ghcr.io/owo-network/deeplx:v0.9.5
+    deploy.cloud.sealos.io/minReplicas: '1'
+    deploy.cloud.sealos.io/maxReplicas: '1'
+  labels:
+    cloud.sealos.io/app-deploy-manager: deeplx-chvizzvd
+    app: deeplx-chvizzvd
+    cloud.sealos.io/deploy-on-sealos: deeplx-chvizzvd
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: deeplx-chvizzvd
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 0
+  template:
+    metadata:
+      labels:
+        app: deeplx-chvizzvd
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: deeplx-chvizzvd
+          image: ghcr.io/owo-network/deeplx:v0.9.5
+          env:
+            - name: AUTHKEY
+              value: null
+          resources:
+            requests:
+              cpu: 10m
+              memory: 6Mi
+            limits:
+              cpu: 100m
+              memory: 64Mi
+          ports:
+            - containerPort: 1188
+          imagePullPolicy: IfNotPresent
+          volumeMounts: []
+      volumes: []
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: deeplx-chvizzvd
+  labels:
+    cloud.sealos.io/app-deploy-manager: deeplx-chvizzvd
+    cloud.sealos.io/deploy-on-sealos: deeplx-chvizzvd
+spec:
+  ports:
+    - port: 1188
+  selector:
+    app: deeplx-chvizzvd
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: deeplx-chvizzvd
+  labels:
+    cloud.sealos.io/app-deploy-manager: deeplx-chvizzvd
+    cloud.sealos.io/app-deploy-manager-domain: hiwpwtlh
+    cloud.sealos.io/deploy-on-sealos: deeplx-chvizzvd
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: 32m
+    nginx.ingress.kubernetes.io/server-snippet: |
+      client_header_buffer_size 64k;
+      large_client_header_buffers 4 128k;
+    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/client-body-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-send-timeout: '300'
+    nginx.ingress.kubernetes.io/proxy-read-timeout: '300'
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      if ($request_uri ~* \.(js|css|gif|jpe?g|png)) {
+        expires 30d;
+        add_header Cache-Control "public";
+      }
+spec:
+  rules:
+    - host: hiwpwtlh.sealoshzh.site
+      http:
+        paths:
+          - pathType: Prefix
+            path: /()(.*)
+            backend:
+              service:
+                name: deeplx-chvizzvd
+                port:
+                  number: 1188
+  tls:
+    - hosts:
+        - hiwpwtlh.sealoshzh.site
+      secretName: wildcard-cert
