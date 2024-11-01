@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>使用Sealos部署Deeplx自然语言处理工具教程</title>
+<title>使用Sealos部署Vaultwarden工具教程</title>
 <link rel="stylesheet" href="../appstore-xq.css">
 <link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
 <script src="../appstor.js" defer></script>
@@ -65,7 +65,7 @@
                     <li> <img src="../img/headscale3-dots.svg" class="list-gijtitleico">
                       <div class="list-gij-title">
                         <div class="title-top">
-                          <h2><a href="../Headscale">Headscale</a></h2>
+                          <h2><a href="../headscale">Headscale</a></h2>
                           <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+48.2k</div>
                         </div>
                         <p>用于构建自己的 WireGuard 网络</p>
@@ -74,7 +74,7 @@
                     <li> <img src="../img/DeeplX.svg" class="list-gijtitleico">
                       <div class="list-gij-title">
                         <div class="title-top">
-                          <h2><a href="../DeeplX">DeeplX</a></h2>
+                          <h2><a href="../deeplx">DeeplX</a></h2>
                           <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+22.2k</div>
                         </div>
                         <p>基于自然语言的翻译API</p>
@@ -573,25 +573,27 @@
   <div class="app-h5">
     <div class="hard-top">
       <div class="hard-title-stats">
-       <div class="title-stats"> <div class="title-logo"><img src="../img/DeeplX.svg" alt="AFFINE Logo"></div>
-        <div class="hard-top-title">
-          <div class="hard-top2">
-            <h1>DeepLX</h1>
-            <span class="stats"> <span class="stars"><img src="../img/AFFINE-logo2.svg">22.2k</span> <span class="shares"><img src="../img/project.svg"><a href="https://github.com/AlistGo/alist" target="_blank">项目首页</a></span> </span></div>
-          <p class="app-decistore">DeepLX 是一个强大的免费 DeepL API，无需 Token 即可使用。它基于 DeepL 的免费服务，将其转换为本地 API，供第三方程序使用，如沉浸式翻译等。</p>
-        </div></div>
+        <div class="title-stats">
+          <div class="title-logo"><img src="../img/headscale3-dots.svg" alt="AFFINE Logo"></div>
+          <div class="hard-top-title">
+            <div class="hard-top2">
+              <h1>Headscale</h1>
+              <span class="stats"> <span class="stars"><img src="../img/AFFINE-logo2.svg">48.2k</span> <span class="shares"><img src="../img/project.svg"><a href="https://github.com/AlistGo/alist" target="_blank">项目首页</a></span> </span></div>
+            <p class="app-decistore">一款开源的、基于云的、用于快速部署和管理 SSH 服务器的工具。 它可以让你轻松地搭建和配置 SSH 服务器，无需复杂的服务器管理工作，尤其适用于开发者和需要访问服务器的团队。</p>
+          </div>
+        </div>
         <div class="buttons">
           <button class="yaml-button">
-          <a href="./images/deeplx.yaml" download>导出 Yaml</a>
+          <a href="./images/headscale.yaml" download>导出 Yaml</a>
           </button>
           <button class="deploy-button">
-          <a href="https://template.hzh.sealos.run/deploy?templateName=deeplx" target=”_blank”>私有化部署</a>
+          <a href="https://template.hzh.sealos.run/deploy?templateName=headscale" target=”_blank”>私有化部署</a>
           </button>
         </div>
       </div>
       <div class="carousel">
-        <div class="carousel-container"> <img src="./images/banner2.jpg" alt="Image 1"
-            class="carousel-item active"> <img src="./images/banner1.svg" alt="Image 2"
+        <div class="carousel-container"> <img src="./images/banner2.png" alt="Image 1"
+            class="carousel-item active"> <img src="./images/banner1.png" alt="Image 2"
             class="carousel-item"> </div>
         <div class="carousel-nav">
           <button class="carousel-button prev">&lt;</button>
@@ -600,7 +602,7 @@
         <script src="../bannerlb.js"></script> 
       </div>
       <div class="quick-start">
-        <h2 class="quick-start-h2"><img src="../img/Rectangle 34624253.svg">如何部署在线 DeeplX</h2>
+        <h2 class="quick-start-h2"><img src="../img/Rectangle 34624253.svg">如何部署在线 Headscale</h2>
         <div class="steps">
           <div class="step"> <span class="step-number">Step 1</span>
             <p>点击部署</p>
@@ -628,18 +630,37 @@
         </div>
       </div>
       <div class="features-list">
-        <h2 class="quick-start-h2"><img src="../img/Rectangle 34624253.svg">什么是 DeeplX</h2>
+        <h2 class="quick-start-h2"><img src="../img/Rectangle 34624253.svg">什么是 Headscale</h2>
         <ul class="features-list-ul">
-          <li>DeepLX是一个精心设计的深度学习平台，它集成了最新的算法和技术，旨在简化模型构建、训练和部署的过程。它的目标是让开发者能够更专注于创新，而不是基础架构的复杂性。无论您是经验丰富的数据科学家还是初涉深度学习的新手，DeepLX都能为您提供所需的工具和资源。</li>
+          <li>Headscale 是一个开源的、自托管的 Tailscale 控制服务器实现。Tailscale 是一个基于 WireGuard 的虚拟私有网络（VPN）服务，而 Headscale 允许用户在自己的服务器上运行 Tailscale 控制平面，从而实现自托管的 VPN 解决方案。Headscale 的目标是为自托管者和爱好者提供一个开源的服务器，用于他们的项目和实验室。
+           </li>
         </ul>
       </div>
       <div class="features-list">
         <h2 class="quick-start-h2"><img src="../img/Rectangle 34624253.svg">功能列表</h2>
         <ul class="features-list-ul">
-          <li><b>高度优化的计算库：</b> DeepLX利用Go的并发能力，提供了高效的并行运算，从而大大加快了模型的训练速度。</li>
-          <li><b>简洁的API设计：</b>通过易于理解的API，开发者可以轻松创建和管理神经网络结构。</li>
-          <li><b>容器化部署：</b>与Docker紧密集成，DeepLX使您能够在任何环境中快速部署模型。</li>
-          <li><b>持续集成和测试：</b>项目使用GitHub Actions进行自动化构建和测试，确保代码质量和稳定性。</li>          
+          <li> 
+            DNS：
+            魔法DNS、
+            全局和受限名称服务器（拆分 DNS）、
+            搜索域名、
+            额外的 DNS 记录（仅限 headscale）<br/>
+            Taildrop（文件共享）<br/>
+            路由通告（包括出口节点）<br/>
+            双栈（IPv4 和 IPv6）<br/>
+            短暂节点<br/>
+            嵌入式DERP 服务器<br/>
+            访问控制列表（GitHub 标签“policy”）：
+            通过 API 进行 ACL 管理、
+            autogroup:internet、
+            autogroup:self、
+            autogroup:member<br/>
+            使用单点登录 (OpenID Connect) 进行节点注册 ( GitHub 标签“OIDC” )：
+            基本注册、
+            动态 ACL 支持、
+            OIDC 组不能用于 ACL<br/>
+            漏斗（#1040）<br/>
+            服务( #1234 ) </li>
         </ul>
       </div>
     </div>
@@ -647,22 +668,21 @@
   <div class="app-faq">
     <div class="app-h5-left">
       <h3>什么是Sealos？</h3>
-     <p class="sealos-detice">基于Kubernetes为内核的云操作系统，独特的集群镜像，可将任意应用打包成 OCI 镜像，自由组合，轻松订制所需的云，一并解决各种依赖问题。</p>
-     <span class="sealos-detice-span"><a href="/">了解更多 ></a></span>
-    </div>
+      <p class="sealos-detice">基于Kubernetes为内核的云操作系统，独特的集群镜像，可将任意应用打包成 OCI 镜像，自由组合，轻松订制所需的云，一并解决各种依赖问题。</p>
+      <span class="sealos-detice-span"><a href="/">了解更多 ></a></span> </div>
     <div class="app-h5-left">
       <h3>Sealos部署优势</h3>
-     <p class="sealos-detice">
-      💰 快速上云：一键创建容器集群，自动化部署容器应用<br/><br/>
-      🌐 成本缩减：仅容器付费，资源成本减少 80%<br/><br/>
-      🛡️ 安全稳定：应用级和租户级网络隔离能力。
-     </p>
-     </div>
+      <p class="sealos-detice"> 💰 快速上云：一键创建容器集群，自动化部署容器应用<br/>
+        <br/>
+        🌐 成本缩减：仅容器付费，资源成本减少 80%<br/>
+        <br/>
+        🛡️ 安全稳定：应用级和租户级网络隔离能力。 </p>
+    </div>
     <div class="app-h5-left">
       <h3>交流讨论</h3>
-     <a href="#"><img src="../img/ewm.png">
-      <p>开发者交流群</p></a>
-       </div>
+      <a href="#"><img src="../img/ewm.png">
+      <p>开发者交流群</p>
+      </a> </div>
   </div>
 </div>
 <div class="h5footer">
