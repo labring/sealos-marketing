@@ -214,7 +214,7 @@ img {
   position: absolute;
   width: 900px;
   height: 492.388px;
-  background: url('./img/Rectangle 1.svg') no-repeat 4px 14px;
+  background: url('../img/Rectangle 1.svg') no-repeat 4px 14px;
   background-size: 8%;
   padding-top: 33px;
   z-index: 1;
@@ -476,7 +476,7 @@ img {
   align-content: flex-start;
 }
 .briefcase {
-  background-image: url('./img/toolkit-0.svg');
+  background-image: url('../img/toolkit-0.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -485,13 +485,13 @@ img {
   display: inline-block;
 }
 .active .briefcase {
-  background-image: url('./img/toolkit-1.svg');
+  background-image: url('../img/toolkit-1.svg');
 }
 .nav-links li {
   position: relative; /* 为下拉菜单定位 */
 }
 .briefcase-1 {
-  background-image: url('./img/robot-ai-0.svg');
+  background-image: url('../img/robot-ai-0.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -500,10 +500,10 @@ img {
   display: inline-block;
 }
 .active .briefcase-1 {
-  background-image: url('./img/robot-ai-1.svg');
+  background-image: url('../img/robot-ai-1.svg');
 }
 .briefcase-2 {
-  background-image: url('./img/database-sjk-0.svg');
+  background-image: url('../img/database-sjk-0.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -520,10 +520,10 @@ img {
   padding: 10px;
 }
 .active .briefcase-2 {
-  background-image: url('./img/database-sjk-1.svg');
+  background-image: url('../img/database-sjk-1.svg');
 }
 .briefcase-3 {
-  background-image: url('./img/params-ddm-0.svg');
+  background-image: url('../img/params-ddm-0.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -532,7 +532,7 @@ img {
   display: inline-block;
 }
 .active .briefcase-3 {
-  background-image: url('./img/params-ddm-1.svg');
+  background-image: url('../img/params-ddm-1.svg');
 }
 .nav-link {
   display: flex;
@@ -708,6 +708,7 @@ img {
 .sub-menu li a:hover{
   border-radius: 8px;
   background: #E4F1FF;
+
 }
 .shares a{
   color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
@@ -847,6 +848,63 @@ img {
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0.048px;
+  display: flex;
+  align-items: center;
+}
+.step1ico{
+  display: flex;
+  width: 6px;
+  height: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 3.627px;
+  border-radius: 50%;
+  background: var(--Bright-Blue-400, #47B2FF);
+  margin-right: 4px;
+}
+.step5ico{
+  display: flex;
+  width: 6px;
+  height: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 3.627px;
+  border-radius: 50%;
+  background: #FF8AA9;
+  margin-right: 4px;
+}
+.step4ico{
+  display: flex;
+  width: 6px;
+  height: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 3.627px;
+  border-radius: 50%;
+  background: #BE8AFF;
+  margin-right: 4px;
+}
+.step3ico{
+  display: flex;
+  width: 6px;
+  height: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 3.627px;
+  border-radius: 50%;
+  background: #8D98FB;
+  margin-right: 4px;
+}
+.step2ico{
+  display: flex;
+  width: 6px;
+  height: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 3.627px;
+  border-radius: 50%;
+  background: #00C9B1;
+  margin-right: 4px;
 }
 .arrow {
   display: flex;

@@ -3,746 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>使用Sealos部署Headscale工具教程</title>
-<link rel="stylesheet" href="../appstore-xq.css">
+<title>使用Sealos部署Code-server工具教程</title>
+<link rel="stylesheet" href="../css/appstore-xq.css">
 <link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
-<script src="../appstor.js" defer></script>
+<script src="../js/appstor.js" defer></script>
+<script src="../js/navbar.js"></script>
+<script src="../js/header-left.js"></script>
+<script src="../js/about-right.js"></script>
+<script src="../js/foooter.js"></script>
+<script src="../js/step.js"></script>
 </head>
 <body>
-<nav class="navbar">
-  <div class="navtop">
-    <div class="header-title">
-      <div class="logo"> <img src="../img/sealos.svg" alt="Sealos Logo"> Sealos </div>
-      <ul class="nav-links">
-        <li><a href="/">首页</a></li>
-        <li class="dropdown"> <a href="#appstore">应用商店</a>
-          <div class="dropdown-content">
-          <div class="navbar-list">
-            <ul class="menu">
-              <div class="menu-left">应用商店</div>
-              <div class="menu-list">
-                <li onmouseover="showTools('tool1')" onmouseout="hideTools('tool1')"><img src="../img/toolkit.svg"
-                        alt="工具">工具</li>
-                <li onmouseover="showTools('ai')" onmouseout="hideTools('ai')"><img src="../img/robot.svg"
-                        alt="AI">AI</li>
-                <li onmouseover="showTools('sjk')" onmouseout="hideTools('sjk')"><img src="../img/database.svg"
-                        alt="数据库">数据库</li>
-                <li onmouseover="showTools('ddm')" onmouseout="hideTools('ddm')"><img src="../img/params.svg"
-                        alt="低代码">低代码</li>
-                <!--<li onmouseover="showTools('blgo')" onmouseout="hideTools('blgo')"><img src="../img/quote.svg" alt="博客">博客</li>
-                <li onmouseover="showTools('cunchu')" onmouseout="hideTools('cunchu')"><img src="../img/hard-drive.svg" alt="存储">存储</li>
-                <li onmouseover="showTools('jiankong')" onmouseout="hideTools('jiankong')"><img src="../img/linechart.svg" alt="监控">监控</li>
-                <li onmouseover="showTools('yunwei')" onmouseout="hideTools('yunwei')"><img src="../img/running.svg" alt="运维">运维</li>--> 
-              </div>
-            </ul>
-            <!--appstore-开始-->
-            <div id="tool-content" class="tool-content1">
-              <div id="tool1" class="tool-item active">
-                <div class="menu-right">
-                  <div class="menu-title">工具</div>
-                  <div class="menu-more">查看更多<img src="../img/ico-jt.svg" alt="更多"></div>
-                </div>
-                <div class="list-gj1">
-                  <ul>
-                    <li> <img src="../img/Alist.svg" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../alist">Alist </a>🔥</h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+68.5k</div>
-                        </div>
-                        <p>支持多种云盘存储的在线网盘管理系统</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/favicon-144.png" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../affine">Affine</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+19.6k</div>
-                        </div>
-                        <p>基于现代技术栈开发的开源笔记软件</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/headscale3-dots.svg" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../headscale">Headscale</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+48.2k</div>
-                        </div>
-                        <p>用于构建自己的 WireGuard 网络</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/DeeplX.svg" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../deeplx">DeeplX</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+22.2k</div>
-                        </div>
-                        <p>基于自然语言的翻译API</p>
-                      </div>
-                    </li>
-                  </ul>
-                  <ul>
-                    <li> <img src="../img/vaultwarden-icon.svg" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../Vaultwarden">Vaultwarden</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+16.1k</div>
-                        </div>
-                        <p>开源密码管理器</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/favicon.png" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../kuboard">kuboard</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+2.7k</div>
-                        </div>
-                        <p>专为 Kubernetes 设计的免费管理界面</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/141598483.png" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../blossom">blossom</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+7.3k</div>
-                        </div>
-                        <p>创建和管理双向链接的笔记软件</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/favicon11.svg" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../code-server">code-server</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+8.8k</div>
-                        </div>
-                        <p>VS Code</p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div id="ai" class="tool-item">
-                <div class="menu-right">
-                  <div class="menu-title">AI</div>
-                  <div class="menu-more">查看更多<img src="../img/ico-jt.svg" alt="更多"></div>
-                </div>
-                <div class="list-gj1">
-                  <ul>
-                    <li> <img src="../img/iconchatgpt.svg" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../Chatgpt-next-web">Chatgpt-next-web</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+9.6k</div>
-                        </div>
-                        <p>跨平台的 ChatGPT/Gemini UI</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/fastgpt.svg" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../FastGPT">FastGPT </a> 🔥</h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+200.2k</div>
-                        </div>
-                        <p>大语言AI模型的企业级智能问答知识库</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/26161723.jpeg" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../Gpt-on-wechat">Gpt-on-wechat</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+12.2k</div>
-                        </div>
-                        <p>基于大模型的智能对话机器人</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/chat-web.svg" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../Chatgpt-web">Chatgpt-web</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+49.6k</div>
-                        </div>
-                        <p>基于Python的开源聊天机器人框架</p>
-                      </div>
-                    </li>
-                  </ul>
-                  <ul>
-                    <li> <img src="../img/chatmidjourney.ico" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../Chatgpt-midjourney">Chatgpt-midjourney</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+1.2k</div>
-                        </div>
-                        <p>集成了多种人工智能技术的网页服务框架</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/chatacademic.png" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../Gpt-academic">Gpt-academic</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+5.6k</div>
-                        </div>
-                        <p>论文阅读/写作润色优化的学术GPT</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/librechat.svg" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../LibreChat">LibreChat</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+68.8k</div>
-                        </div>
-                        <p>增强版的 ChatGPT</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/oneapi.ico" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../one-api">one-api 🔥</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+29.9k</div>
-                        </div>
-                        <p>方便管理和分发 API 密钥的工具</p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div id="sjk" class="tool-item">
-                <div class="menu-right">
-                  <div class="menu-title">数据库</div>
-                  <div class="menu-more">查看更多<img src="../img/ico-jt.svg" alt="更多"></div>
-                </div>
-                <div class="list-gj1">
-                  <ul>
-                    <li> <img src="../img/x9gZmjwbtvaGd95qbfUmsZ8Jc.png" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../Teable">Teable</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+6.7k</div>
-                        </div>
-                        <p>企业级高性能多维表格解决方案</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/logo-128.png" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../Pgadmin4">Pgadmin4</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+2.6k</div>
-                        </div>
-                        <p>数据库可视化管理神器</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/nocodb-logo.svg" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../NocoDB">NocoDB</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+1.2k</div>
-                        </div>
-                        <p>将数据库转换为易于操作的在线电子表格</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/redisinsight.svg" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../RedisInsight">RedisInsight</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+1.1k</div>
-                        </div>
-                        <p>redis官方出品的操作redis的可视化工具</p>
-                      </div>
-                    </li>
-                  </ul>
-                  <ul>
-                    <li> <img src="../img/5713248.png" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../Influxdb">Influxdb</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+0.4k</div>
-                        </div>
-                        <p>开源分布式时序、事件和指标数据库</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/bytebase.svg" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../Bytebase">Bytebase</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+1.3k</div>
-                        </div>
-                        <p>数据库版本控制、更改跟踪和实时修改</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/DataEase.png" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../DataEase">DataEase</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">1.4k</div>
-                        </div>
-                        <p>人人可用的开源数据可视化分析工具</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/metabase.svg" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../Metabase">Metabase</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+1.4k</div>
-                        </div>
-                        <p>企业级数据分析和商业智能工具</p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div id="ddm" class="tool-item">
-                <div class="menu-right">
-                  <div class="menu-title">低代码</div>
-                  <div class="menu-more">查看更多<img src="../img/ico-jt.svg" alt="更多"></div>
-                </div>
-                <div class="list-gj1">
-                  <ul>
-                    <li> <img src="../img/Appsmith.png" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../Appsmith">Appsmith</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+6.5k</div>
-                        </div>
-                        <p>构建管理面板/CRUD/应用程序和工作流</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/PagePlug.ico" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../PagePlug">PagePlug</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+5.7k</div>
-                        </div>
-                        <p>基于Appsmith进行汉化的低代码工具</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/Fireboom.png" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../Fireboom">Fireboom</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+1.2k</div>
-                        </div>
-                        <p>API公有云平台,可视化开发和AI辅助</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/ILLA Builder.svg" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../ILLA-Builder">ILLA Builder</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+1.6k</div>
-                        </div>
-                        <p>开源的低代码开发工具</p>
-                      </div>
-                    </li>
-                  </ul>
-                  <ul>
-                    <li> <img src="../img/Halo.svg" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../Halo">Halo</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+13.2k</div>
-                        </div>
-                        <p>强大易用的开源建站工具</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/WordPress.svg" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../WordPress">WordPress</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+17.3k</div>
-                        </div>
-                        <p>博客建站工具</p>
-                      </div>
-                    </li>
-                    <li> <img src="../img/Flarum.png" class="list-gijtitleico">
-                      <div class="list-gij-title">
-                        <div class="title-top">
-                          <h2><a href="../Flarum">Flarum</a></h2>
-                          <div class="list-bsrs"><img src="../img/Icon (Stroke).svg">+4.4k</div>
-                        </div>
-                        <p>轻量级、快速且易于使用的论坛软件</p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              
-              <!--appstore-结束--> 
-              
-            </div>
-          </div>
-        </li>
-        <!---<li><a href="#blog">客户案例</a></li>-->
-        <li><a href="https://sealos.run/docs/Intro/" target="_blank">学习&帮助</a></li>
-        <li><a href="https://forum.laf.run/" target="_blank">社区</a></li>
-      </ul>
-    </div>
-    <div class="actions">
-      <p> <img src="../img/github.svg" alt="GitHub Icon"> <span>10.4k</span> </p>
-      <a href="https://hzh.sealos.run/" target="_blank" class="login-link">
-      <button class="btn"> 登录 </button>
-      </a> </div>
-  </div>
-</nav>
-<script>// 添加滚动事件监听
-    window.addEventListener('scroll', function () {
-      const navbar = document.querySelector('.navbar')
-      if (window.scrollY > 50) { // 当滚动超过50px时
-        navbar.classList.add('navbar-scrolled')
-      } else {
-        navbar.classList.remove('navbar-scrolled')
-      }
-    });
-</script>
+<div id="navbar-container"></div>
 <div class="stepxq">
-  <div class="left-list">
-    <nav class="sidebar">
-      <ul class="nav-list">
-        <li class="nav-item active"> <a href="#" class="nav-link"> <i class="icon briefcase"></i> <span class="link-text">工具</span> <span class="badge">42</span> </a>
-          <ul class="sub-menu" id="menu_sub">
-            <li><a href="../alist">
-              <div class="sub-menu-lef"> <span class="dot alist-color"></span>
-                <p>Alist <span class="sub-muen-desctie">- 在线网盘管理系统</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../affine">
-              <div class="sub-menu-lef"> <span class="dot affine-color"></span>
-                <p>Affine <span class="sub-muen-desctie">- 开源笔记软件</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../headscale">
-              <div class="sub-menu-lef"> <span class="dot Headscale-color"></span>
-                <p>Headscale <span class="sub-muen-desctie">- 构建 WireGuard 网络</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../deeplx">
-              <div class="sub-menu-lef"> <span class="dot DeeplX-color"></span>
-                <p>DeeplX <span class="sub-muen-desctie">- 翻译API</span></p>
-              </div>
-              </a> </li>
-            <li class="active"><a href="../vaultwarden">
-              <div class="sub-menu-lef"> <span class="dot Vaultwarden-color"></span>
-                <p>Vaultwarden <span class="sub-muen-desctie">- 密码管理器</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../kuboard">
-              <div class="sub-menu-lef"> <span class="dot kuboard-color"></span>
-                <p>kuboard <span class="sub-muen-desctie">- Kubernetes管理界面</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../blossom">
-              <div class="sub-menu-lef"> <span class="dot blossom-color"></span>
-                <p>blossom <span class="sub-muen-desctie">- 笔记软件</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../code-server">
-              <div class="sub-menu-lef"> <span class="dot code-color"></span>
-                <p>code-server <span class="sub-muen-desctie">- VS-Code</span></p>
-              </div>
-              </a> </li>
-          </ul>
-        </li>
-        <li class="nav-item"> <a href="#" class="nav-link"> <i class="icon briefcase-1"></i> <span class="link-text">AI</span> <span class="badge">17</span> </a>
-          <ul class="sub-menu" id="menu_sub">
-            <li><a href="../chatgpt-next-web">
-              <div class="sub-menu-lef"> <span class="dot alist-color"></span>
-                <p>Chatgpt-next-web <span class="sub-muen-desctie"> - 私人GPT网页</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../fastgpt">
-              <div class="sub-menu-lef"> <span class="dot affine-color"></span>
-                <p>FastGPT<span class="sub-muen-desctie">- 智能问答知识库</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../chatgpt-on-wechat">
-              <div class="sub-menu-lef"> <span class="dot Headscale-color"></span>
-                <p>Chatgpt-on-wechat <span class="sub-muen-desctie"> - 智能对话机器人</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../chatgpt-web">
-              <div class="sub-menu-lef"> <span class="dot DeeplX-color"></span>
-                <p>Chatgpt-web<span class="sub-muen-desctie">- 聊天机器人</span> </p>
-              </div>
-              </a> </li>
-            <li><a href="../chatgpt-midjourney">
-              <div class="sub-menu-lef"> <span class="dot Vaultwarden-color"></span>
-                <p>Chatgpt-midjourney <span class="sub-muen-desctie">- 人工智能网页框架</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../gpt-academic">
-              <div class="sub-menu-lef"> <span class="dot kuboard-color"></span>
-                <p>Gpt-academic<span class="sub-muen-desctie"> - 论文润色的学术GPT</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../libreChat">
-              <div class="sub-menu-lef"> <span class="dot blossom-color"></span>
-                <p>LibreChat<span class="sub-muen-desctie"> - 增强版的 ChatGPT</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../one-api">
-              <div class="sub-menu-lef"> <span class="dot code-color"></span>
-                <p>one-api<span class="sub-muen-desctie"> - 管理和分发 API 密钥</span></p>
-              </div>
-              </a> </li>
-          </ul>
-        </li>
-        <li class="nav-item"> <a href="#" class="nav-link"> <i class="icon briefcase-2"></i> <span class="link-text">数据库</span> <span class="badge">10</span> </a>
-          <ul class="sub-menu" id="menu_sub">
-            <li><a href="../teable">
-              <div class="sub-menu-lef"> <span class="dot alist-color"></span>
-                <p>Teable <span class="sub-muen-desctie">- 高性能多维表格</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../pgadmin4">
-              <div class="sub-menu-lef"> <span class="dot affine-color"></span>
-                <p>Pgadmin4 <span class="sub-muen-desctie">- 数据库可视化管理神器</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../nocoDB">
-              <div class="sub-menu-lef"> <span class="dot Headscale-color"></span>
-                <p>NocoDB<span class="sub-muen-desctie"> - 将数据库转为电子表格</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../redisInsight">
-              <div class="sub-menu-lef"> <span class="dot DeeplX-color"></span>
-                <p>RedisInsight<span class="sub-muen-desctie"> - redis的可视化工具</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../influxdb">
-              <div class="sub-menu-lef"> <span class="dot Vaultwarden-color"></span>
-                <p>Influxdb<span class="sub-muen-desctie"> - 分布式时序、事件和指标数据库</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../bytebase">
-              <div class="sub-menu-lef"> <span class="dot kuboard-color"></span>
-                <p>Bytebase<span class="sub-muen-desctie"> - 数据库版本控制、更改和修改</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../dataEase">
-              <div class="sub-menu-lef"> <span class="dot blossom-color"></span>
-                <p>DataEase<span class="sub-muen-desctie"> - 数据可视化分析工具</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../metabase">
-              <div class="sub-menu-lef"> <span class="dot code-color"></span>
-                <p>Metabase<span class="sub-muen-desctie"> - 数据分析和商业智能工具</span></p>
-              </div>
-              </a> </li>
-          </ul>
-        </li>
-        <li class="nav-item"> <a href="#" class="nav-link"> <i class="icon briefcase-3"></i> <span class="link-text">低代码</span> <span class="badge">8</span> </a>
-          <ul class="sub-menu" id="menu_sub">
-            <li><a href="../appsmith">
-              <div class="sub-menu-lef"> <span class="dot alist-color"></span>
-                <p>Appsmith<span class="sub-muen-desctie"> - 工作流管理面板</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../pageplug">
-              <div class="sub-menu-lef"> <span class="dot affine-color"></span>
-                <p>PagePlug<span class="sub-muen-desctie"> - 汉化版Appsmith</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../fireboom">
-              <div class="sub-menu-lef"> <span class="dot Headscale-color"></span>
-                <p>Fireboom<span class="sub-muen-desctie"> - API公有云平台</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../illa-builder">
-              <div class="sub-menu-lef"> <span class="dot DeeplX-color"></span>
-                <p>ILLA Builder<span class="sub-muen-desctie"> - 低代码开发工具</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../halo">
-              <div class="sub-menu-lef"> <span class="dot Vaultwarden-color"></span>
-                <p>Halo<span class="sub-muen-desctie"> - 开源建站工具</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../wordpress">
-              <div class="sub-menu-lef"> <span class="dot kuboard-color"></span>
-                <p>WordPress<span class="sub-muen-desctie"> - 博客建站工具</span></p>
-              </div>
-              </a> </li>
-            <li><a href="../flarum">
-              <div class="sub-menu-lef"> <span class="dot code-color"></span>
-                <p>Flarum<span class="sub-muen-desctie"> - 论坛软件</span></p>
-              </div>
-              </a> </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+  <div class="left-list" id="left-header">
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('.nav-item[data-page="tool"]').classList.add('active');
+      document.querySelector('li[data-page="code-server"]').classList.add('active');
+      document.getElementById('menu_sub').style.display = 'block';
+    });
+  </script>
   <div class="app-h5">
     <div class="hard-top">
       <div class="hard-title-stats">
         <div class="title-stats">
-          <div class="title-logo"><img src="../img/headscale3-dots.svg" alt="AFFINE Logo"></div>
+          <div class="title-logo"><img src="../img/favicon11.svg" alt="Kuboard Logo"></div>
           <div class="hard-top-title">
             <div class="hard-top2">
-              <h1>Vaultwarden</h1>
-              <span class="stats"> <span class="stars"><img src="../img/AFFINE-logo2.svg">48.2k</span> <span class="shares"><img src="../img/project.svg"><a href="https://github.com/AlistGo/alist" target="_blank">项目首页</a></span> </span></div>
-            <p class="app-decistore">一款开源的、轻量级的 WireGuard VPN 服务器。 它易于安装和配置，并提供了丰富的功能，适合个人和小型团队使用。</p>
-          </div>
+                <h1>Code-server</h1>
+                <span class="stats"> <span class="stars"><img src="../img/AFFINE-logo2.svg">8.8k</span> <span class="shares"><img src="../img/project.svg"><a href="https://github.com/AlistGo/alist" target="_blank">项目首页</a></span> </span></div>
+              <p class="app-decistore">Code-server‌是一个基于Visual Studio Code（VS Code）开发的在线编辑器，它允许用户在浏览器中编写代码，无需安装本地开发环境。</p>
+            </div>
         </div>
         <div class="buttons">
-          <button class="yaml-button">
-          <a href="./images/headscale.yaml" download>导出 Yaml</a>
-          </button>
-          <button class="deploy-button">
-          <a href="https://template.hzh.sealos.run/deploy?templateName=headscale" target=”_blank”>私有化部署</a>
-          </button>
+            <button class="yaml-button">
+            <a href="./images/code-server.yaml" download>导出 Yaml</a>
+            </button>
+            <button class="deploy-button">
+            <a href="https://template.hzh.sealos.run/deploy?templateName=code-server" target=”_blank”>私有化部署</a>
+            </button>
         </div>
       </div>
       <div class="carousel">
-        <div class="carousel-container"> <img src="./images/banner2.png" alt="Image 1"
-            class="carousel-item active"> <img src="./images/banner1.png" alt="Image 2"
+        <div class="carousel-container"> <img src="./images/banner1.png" alt="Image 1"
+            class="carousel-item active"> <img src="./images/banner2.png" alt="Image 2"
             class="carousel-item"> </div>
         <div class="carousel-nav">
           <button class="carousel-button prev">&lt;</button>
           <button class="carousel-button next">&gt;</button>
         </div>
-        <script src="../bannerlb.js"></script> 
+        <script src="../js/bannerlb.js"></script> 
       </div>
       <div class="quick-start">
-        <h2 class="quick-start-h2"><img src="../img/Rectangle 34624253.svg">如何部署在线 Vaultwarden</h2>
-        <div class="steps">
-          <div class="step"> <span class="step-number">Step 1</span>
-            <p>点击部署</p>
-          </div>
-          <div class="arrow"><img src="../img/Rectangle 34624252.svg"><img
-              src="../img/Polygon 8.svg"></div>
-          <div class="step"> <span class="step-number">Step 2</span>
-            <p>登陆Sealos</p>
-          </div>
-          <div class="arrow"><img src="../img/Rectangle 34624252.svg"><img
-              src="../img/Polygon 8.svg"></div>
-          <div class="step"> <span class="step-number">Step 3</span>
-            <p>填入配置</p>
-          </div>
-          <div class="arrow"><img src="../img/Rectangle 34624252.svg"><img
-              src="../img/Polygon 8.svg"></div>
-          <div class="step"> <span class="step-number">Step 4</span>
-            <p>系统自动部署</p>
-          </div>
-          <div class="arrow"><img src="../img/Rectangle 34624252.svg"><img
-              src="../img/Polygon 8.svg"></div>
-          <div class="step"> <span class="step-number">Step 5</span>
-            <p>开始使用🎉</p>
-          </div>
+        <h2 class="quick-start-h2"><img src="../img/Rectangle 34624253.svg">如何部署在线 Code-server</h2>
+        <div class="steps" id="steper">
+          
         </div>
       </div>
       <div class="features-list">
-        <h2 class="quick-start-h2"><img src="../img/Rectangle 34624253.svg">什么是 Vaultwarden</h2>
+        <h2 class="quick-start-h2"><img src="../img/Rectangle 34624253.svg">什么是 Code-server</h2>
         <ul class="features-list-ul">
-          <li>Vaultwarden是一个开源的密码管理器，它是Bitwarden密码管理器的自托管版本。它提供了类似于Bitwarden的功能，允许用户安全地存储和管理密码、敏感数据和身份信息。</li>
-        </ul>
+            <li>Code-server由Coder公司开发，旨在为开发者提供一个便捷统一的开发环境，使得开发者可以从任意设备、任意位置通过浏览器进行代码编写，从而免去了常规的IDE开发流程中的环境搭建问题‌</li>
+          </ul>
       </div>
       <div class="features-list">
         <h2 class="quick-start-h2"><img src="../img/Rectangle 34624253.svg">功能列表</h2>
         <ul class="features-list-ul">
-          <li><b>开源且免费：</b> 任何人都可以访问、使用和修改它的代码，没有额外的费用。</li>
-          <li><b>轻量级：</b> 它占用资源较少，对硬件要求不高，在各种设备上都能运行良好。</li>
-          <li><b>WireGuard协议：</b>使用 WireGuard 协议，加密和安全性能很高，且速度较快。</li>
-          <li><b>用户和设备管理：</b> 可以管理连接的设备和用户，方便控制和权限分配。</li>
-        </ul>
+            <li><b>在线编辑器：</b> Code-server将VS Code的功能搬到了浏览器上，用户可以在任何设备上通过浏览器访问和使用VS Code的所有功能，包括代码编辑、调试、版本控制等‌</li>
+            <li><b>远程开发‌：</b>支持远程开发和协作，适合需要远程工作或希望在不同设备间无缝切换的开发者。它提供了一个统一的开发环境，使得开发者可以在任何地方进行代码编写和调试‌</li>
+            <li><b>安全性：</b>Code-server提供了用户登录功能，确保只有授权用户可以访问和使用VS Code内核代码，保障了开发环境的安全性‌</li>        
+          </ul>
       </div>
     </div>
   </div>
-  <div class="app-faq">
-    <div class="app-h5-left">
-      <h3>什么是Sealos？</h3>
-      <p class="sealos-detice">基于Kubernetes为内核的云操作系统，独特的集群镜像，可将任意应用打包成 OCI 镜像，自由组合，轻松订制所需的云，一并解决各种依赖问题。</p>
-      <span class="sealos-detice-span"><a href="/">了解更多 ></a></span> </div>
-    <div class="app-h5-left">
-      <h3>Sealos部署优势</h3>
-      <p class="sealos-detice"> 💰 快速上云：一键创建容器集群，自动化部署容器应用<br/>
-        <br/>
-        🌐 成本缩减：仅容器付费，资源成本减少 80%<br/>
-        <br/>
-        🛡️ 安全稳定：应用级和租户级网络隔离能力。 </p>
-    </div>
-    <div class="app-h5-left">
-      <h3>交流讨论</h3>
-      <a href="#"><img src="../img/ewm.png">
-      <p>开发者交流群</p>
-      </a> </div>
-  </div>
+  <div class="app-faq" id="about-right"></div>
 </div>
-<div class="h5footer">
-  <div class="h5_footer">
-    <div class="h5footkj">
-      <div class="h5footerlogo"><img src="https://baidu-h5.sealos.run/site/Frame%2020611.svg">
-        <p>以 kubernetes 为内核的云操作系统</p>
-      </div>
-      <div class="h5footerlm">
-        <ul>
-          <li>
-            <p>快捷入口</p>
-          </li>
-          <li><a
-                href="https://affim.baidu.com/unique_57159132/chat?siteId=21229559&userId=57159132&siteToken=6763f865f8d80f27bf8adf840a3041b6&cp=%E9%A6%96%E9%A1%B5-%E5%BA%95%E9%83%A8-%E5%94%AE%E5%89%8D%E5%92%A8%E8%AF%A2%E6%8C%89%E9%92%AE&cr=&cw="
-                target="_blank">售前咨询</a></li>
-          <li><a
-                href="https://affim.baidu.com/unique_57159132/chat?siteId=21229559&userId=57159132&siteToken=6763f865f8d80f27bf8adf840a3041b6&cp=%E9%A6%96%E9%A1%B5-%E5%BA%95%E9%83%A8-%E5%94%AE%E5%90%8E%E5%92%A8%E8%AF%A2%E6%8C%89%E9%92%AE&cr=&cw="
-                target="_blank">售后咨询</a></li>
-          <li><a href="https://sealos.run/docs/5.0.0/Intro/" target="_blank">帮助中心</a></li>
-        </ul>
-        <ul>
-          <li>
-            <p>开发者</p>
-          </li>
-          <li><a href="https://github.com/labring/sealos/blob/main/CONTRIBUTING.md" target="_blank">参与贡献</a></li>
-          <li><a href="https://forum.laf.run/" target="_blank">开发者社区</a></li>
-        </ul>
-        <ul>
-          <li>
-            <p>联系我们</p>
-          </li>
-          <li><a href="https://github.com/labring/sealos/issues" target="_blank">问题反馈</a></li>
-          <li><a href="https://sealos.run/company/" target="_blank">关于我们</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="h5footerdb">
-      <div class="h5footerdbleft">Sealos. all rights reserved. <a href="https://beian.miit.gov.cn/"
-            target="_blank">粤ICP备2023048773号 </a> 珠海环界云计算有限公司版权所有</div>
-      <div class="h5footerdbright">
-        <div class="h5footerico">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <g clip-path="url(#clip0_2983_5966)">
-              <path
-                  d="M10.0003 1.6665C5.39616 1.6665 1.66699 5.39567 1.66699 9.99984C1.66605 11.7492 2.216 13.4545 3.23884 14.8737C4.26167 16.293 5.70545 17.3541 7.36533 17.9065C7.78199 17.979 7.93783 17.729 7.93783 17.5098C7.93783 17.3123 7.92699 16.6565 7.92699 15.9582C5.83366 16.344 5.29199 15.4482 5.12533 14.979C5.03116 14.739 4.62533 13.9998 4.27116 13.8015C3.97949 13.6457 3.56283 13.2598 4.26033 13.2498C4.91699 13.239 5.38533 13.854 5.54199 14.104C6.29199 15.364 7.49033 15.0098 7.96866 14.7915C8.04199 14.2498 8.26033 13.8857 8.50033 13.6773C6.64616 13.469 4.70866 12.7498 4.70866 9.56234C4.70866 8.65567 5.03116 7.9065 5.56283 7.32234C5.47949 7.114 5.18783 6.25984 5.64616 5.114C5.64616 5.114 6.34366 4.89567 7.93783 5.969C8.61621 5.78072 9.31713 5.68596 10.0212 5.68734C10.7295 5.68734 11.4378 5.78067 12.1045 5.96817C13.6978 4.88484 14.3962 5.11484 14.3962 5.11484C14.8545 6.26067 14.5628 7.11484 14.4795 7.32317C15.0103 7.9065 15.3337 8.64567 15.3337 9.56234C15.3337 12.7607 13.3862 13.469 11.532 13.6773C11.8337 13.9373 12.0945 14.4373 12.0945 15.219C12.0945 16.3332 12.0837 17.229 12.0837 17.5107C12.0837 17.729 12.2403 17.989 12.657 17.9057C14.3112 17.3472 15.7486 16.284 16.7669 14.8658C17.7852 13.4476 18.3332 11.7458 18.3337 9.99984C18.3337 5.39567 14.6045 1.6665 10.0003 1.6665Z"
-                  fill="black"></path>
-            </g>
-            <defs>
-              <clipPath id="clip0_2983_5966">
-                <rect width="20" height="20" fill="white"></rect>
-              </clipPath>
-            </defs>
-          </svg>
-        </div>
-        <div class="h5footerico">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <g clip-path="url(#clip0_2983_5971)">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M12.5696 14.8306C12.3471 14.8848 12.1232 14.9329 11.8981 14.9748C10.6765 15.2048 9.42228 15.2001 8.20242 14.961C7.98878 14.9194 7.68636 14.8458 7.29654 14.7418L6.01886 16.4023C2.86559 16.3011 1.66699 14.1883 1.66699 14.1883C1.66699 9.4979 3.72154 5.69539 3.72154 5.69539C5.77609 4.12361 7.73075 4.16662 7.73075 4.16662L8.28982 4.89494C8.34135 4.88771 8.39321 4.88308 8.4452 4.88106C9.5109 4.7398 10.5909 4.74447 11.6553 4.89494L12.2685 4.16662C12.2685 4.16662 14.2246 4.12361 16.2777 5.69678C16.2777 5.69678 18.3337 9.4979 18.3337 14.1883C18.3337 14.1883 17.1198 16.2997 13.9665 16.4023L12.5696 14.8306ZM7.24466 9.86377C6.41091 9.86377 5.75195 10.488 5.75195 11.251C5.75195 12.014 6.42478 12.6383 7.24466 12.6383C8.07702 12.6383 8.73597 12.014 8.73597 11.251C8.74984 10.488 8.07841 9.86377 7.24466 9.86377ZM12.5829 9.86377C11.7505 9.86377 11.0916 10.488 11.0916 11.251C11.0916 12.014 11.7644 12.6383 12.5829 12.6383C13.4166 12.6383 14.0756 12.014 14.0756 11.251C14.0756 10.488 13.4166 9.86377 12.5829 9.86377Z"
-                  fill="#6688FF"></path>
-            </g>
-            <defs>
-              <clipPath id="clip0_2983_5971">
-                <rect width="20" height="20" fill="white"></rect>
-              </clipPath>
-            </defs>
-          </svg>
-        </div>
-        <div class="h5footerico">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M11.3519 16.45C10.9134 16.5304 10.4614 16.5725 9.99961 16.5725C5.88681 16.5725 2.55273 13.2384 2.55273 9.12558C2.55273 5.01279 5.88681 1.67871 9.99961 1.67871C14.1124 1.67871 17.4465 5.01279 17.4465 9.12558C17.4465 11.6234 16.2167 13.8339 14.3297 15.1849L11.9262 18.2663C11.8501 18.3638 11.6946 18.3256 11.6724 18.204L11.3519 16.45ZM7.78078 6.56973C7.4752 6.56973 7.18899 6.71938 7.01463 6.97033L5.532 9.10414L5.52098 9.10987L5.5245 9.11494L5.52098 9.12001L5.53201 9.12574L7.0149 11.2596C7.18927 11.5105 7.47545 11.6601 7.78101 11.6601L8.94893 11.6601L7.62637 9.11494L8.94893 6.56973H7.78078ZM11.5907 11.6814C11.1026 11.6814 10.7068 11.2857 10.7068 10.7975C10.7068 10.3093 11.1026 9.91358 11.5907 9.91358H13.5943C14.0825 9.91358 14.4782 10.3093 14.4782 10.7975C14.4782 11.2857 14.0825 11.6814 13.5943 11.6814H11.5907Z"
-                fill="#00C1B4"></path>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="h5footer" id="footer">
 </div>
 <script>
     var _hmt = _hmt || [];
