@@ -1,0 +1,167 @@
+apiVersion: app.sealos.io/v1
+kind: Instance
+metadata:
+  name: kuboard-zavuqtrn
+  labels:
+    cloud.sealos.io/deploy-on-sealos: kuboard-zavuqtrn
+spec:
+  gitRepo: https://github.com/eip-work/kuboard-press
+  templateType: inline
+  categories:
+    - tool
+  defaults:
+    app_host:
+      type: string
+      value: pixcgsrm
+    app_name:
+      type: string
+      value: kuboard-zavuqtrn
+  inputs: null
+  title: kuboard
+  url: https://github.com/eip-work/kuboard-press
+  author: 孤城落寞
+  description: Kuboard 是一款专为 Kubernetes 设计的免费管理界面
+  readme: https://cdn.jsdelivr.net/gh/eip-work/kuboard-press@master/README.md
+  icon: https://kuboard.cn/favicon.png
+  deployCount: 1
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: kuboard-zavuqtrn
+  annotations:
+    originImageName: eipwork/kuboard:v3
+    deploy.cloud.sealos.io/minReplicas: '1'
+    deploy.cloud.sealos.io/maxReplicas: '1'
+  labels:
+    cloud.sealos.io/app-deploy-manager: kuboard-zavuqtrn
+    app: kuboard-zavuqtrn
+    cloud.sealos.io/deploy-on-sealos: kuboard-zavuqtrn
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  minReadySeconds: 10
+  serviceName: kuboard-zavuqtrn
+  selector:
+    matchLabels:
+      app: kuboard-zavuqtrn
+  template:
+    metadata:
+      labels:
+        app: kuboard-zavuqtrn
+    spec:
+      terminationGracePeriodSeconds: 10
+      automountServiceAccountToken: false
+      containers:
+        - name: kuboard-zavuqtrn
+          image: eipwork/kuboard:v3
+          env:
+            - name: KUBOARD_ENDPOINT
+              value: http://kuboard-zavuqtrn..svc.cluster.local:80
+            - name: KUBOARD_AGENT_SERVER_TCP_PORT
+              value: '10081'
+            - name: KUBOARD_DISABLE_AUDIT
+              value: 'true'
+            - name: TZ
+              value: Asia/Shanghai
+          resources:
+            requests:
+              cpu: 100m
+              memory: 204Mi
+            limits:
+              cpu: 1000m
+              memory: 2048Mi
+          command: []
+          args: []
+          ports:
+            - containerPort: 80
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: vn-data
+              mountPath: /data
+      volumes: []
+  volumeClaimTemplates:
+    - metadata:
+        annotations:
+          path: /data
+          value: '5'
+        name: vn-data
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 5Gi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kuboard-zavuqtrn
+  labels:
+    cloud.sealos.io/app-deploy-manager: kuboard-zavuqtrn
+    cloud.sealos.io/deploy-on-sealos: kuboard-zavuqtrn
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: kuboard-zavuqtrn
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kuboard-zavuqtrn
+  labels:
+    cloud.sealos.io/app-deploy-manager: kuboard-zavuqtrn
+    cloud.sealos.io/app-deploy-manager-domain: pixcgsrm
+    cloud.sealos.io/deploy-on-sealos: kuboard-zavuqtrn
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: 32m
+    nginx.ingress.kubernetes.io/server-snippet: |
+      client_header_buffer_size 64k;
+      large_client_header_buffers 4 128k;
+    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/client-body-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 64k
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      if ($request_uri ~* \.(js|css|gif|jpe?g|png)) {
+        expires 30d;
+        add_header Cache-Control "public";
+      }
+spec:
+  rules:
+    - host: pixcgsrm.sealoshzh.site
+      http:
+        paths:
+          - pathType: Prefix
+            path: /()(.*)
+            backend:
+              service:
+                name: kuboard-zavuqtrn
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - pixcgsrm.sealoshzh.site
+      secretName: wildcard-cert
+
+---
+apiVersion: app.sealos.io/v1
+kind: App
+metadata:
+  name: kuboard-zavuqtrn
+  labels:
+    cloud.sealos.io/app-deploy-manager: kuboard-zavuqtrn
+    cloud.sealos.io/deploy-on-sealos: kuboard-zavuqtrn
+spec:
+  data:
+    url: https://pixcgsrm.sealoshzh.site
+  displayType: normal
+  icon: https://kuboard.cn/favicon.png
+  name: kuboard-zavuqtrn
+  type: iframe

@@ -117,3 +117,34 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 })
 
+document.addEventListener('DOMContentLoaded', function() {
+  // 获取当前页面的路径
+  const currentPath = window.location.pathname;
+  
+  // 获取所有子菜单项
+  const menuItems = document.querySelectorAll('#menu_sub li a');
+  
+  menuItems.forEach(item => {
+    // 获取菜单项的href
+    const itemPath = item.getAttribute('href');
+    
+    // 如果当前页面路径包含菜单项的href
+    if (currentPath.includes(itemPath)) {
+      // 找到父级li元素并添加active类
+      const parentLi = item.closest('li');
+      if (parentLi) {
+        parentLi.classList.add('active');
+      }
+      
+      // 确保父级菜单也展开
+      const parentNavItem = item.closest('.nav-item');
+      if (parentNavItem) {
+        parentNavItem.classList.add('active');
+        const subMenu = parentNavItem.querySelector('.sub-menu');
+        if (subMenu) {
+          subMenu.style.display = 'block';
+        }
+      }
+    }
+  });
+});
