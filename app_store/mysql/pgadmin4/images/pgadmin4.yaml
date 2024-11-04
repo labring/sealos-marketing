@@ -1,0 +1,141 @@
+apiVersion: app.sealos.io/v1
+kind: Instance
+metadata:
+  name: pgadmin4-afsjrmjg
+  labels:
+    cloud.sealos.io/deploy-on-sealos: pgadmin4-afsjrmjg
+spec:
+  gitRepo: https://github.com/pgadmin-org/pgadmin4
+  templateType: inline
+  categories:
+    - database
+  defaults:
+    app_name:
+      type: string
+      value: pgadmin4-afsjrmjg
+    app_host:
+      type: string
+      value: mperwzas
+  inputs:
+    PGADMIN_DEFAULT_EMAIL:
+      description: login page account email
+      type: string
+      default: admin@sealos.io
+      required: false
+    PGADMIN_DEFAULT_PASSWORD:
+      description: login page account password
+      type: string
+      default: '123456'
+      required: false
+  title: pgadmin4
+  url: https://www.pgadmin.org/
+  author: Sealos
+  description: >-
+    pgAdmin 4 is a rewrite of the popular pgAdmin3 management tool for the
+    PostgreSQL database.
+  readme: https://cdn.jsdelivr.net/gh/pgadmin-org/pgadmin4@master/README.md
+  icon: >-
+    https://cdn.jsdelivr.net/gh/pgadmin-org/pgadmin4@master/web/pgadmin/static/img/logo-128.png
+  deployCount: 1
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pgadmin4-afsjrmjg
+  annotations:
+    originImageName: dpage/pgadmin4:8.9
+    deploy.cloud.sealos.io/minReplicas: '1'
+    deploy.cloud.sealos.io/maxReplicas: '1'
+  labels:
+    cloud.sealos.io/app-deploy-manager: pgadmin4-afsjrmjg
+    app: pgadmin4-afsjrmjg
+    cloud.sealos.io/deploy-on-sealos: pgadmin4-afsjrmjg
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: pgadmin4-afsjrmjg
+  template:
+    metadata:
+      labels:
+        app: pgadmin4-afsjrmjg
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: pgadmin4-afsjrmjg
+          image: dpage/pgadmin4:8.9
+          env:
+            - name: PGADMIN_DEFAULT_EMAIL
+              value: admin@sealos.io
+            - name: PGADMIN_DEFAULT_PASSWORD
+              value: '123456'
+          resources:
+            requests:
+              cpu: 50m
+              memory: 25Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+          ports:
+            - containerPort: 80
+          imagePullPolicy: IfNotPresent
+          volumeMounts: []
+      volumes: []
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pgadmin4-afsjrmjg
+  labels:
+    cloud.sealos.io/app-deploy-manager: pgadmin4-afsjrmjg
+    cloud.sealos.io/app-deploy-manager-domain: mperwzas
+    cloud.sealos.io/deploy-on-sealos: pgadmin4-afsjrmjg
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: 32m
+    nginx.ingress.kubernetes.io/server-snippet: |
+      client_header_buffer_size 64k;
+      large_client_header_buffers 4 128k;
+    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/client-body-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 64k
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      if ($request_uri ~* \.(js|css|gif|jpe?g|png)) {
+        expires 30d;
+        add_header Cache-Control "public";
+      }
+spec:
+  rules:
+    - host: mperwzas.sealoshzh.site
+      http:
+        paths:
+          - pathType: Prefix
+            path: /()(.*)
+            backend:
+              service:
+                name: pgadmin4-afsjrmjg
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - mperwzas.sealoshzh.site
+      secretName: wildcard-cert
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pgadmin4-afsjrmjg
+  labels:
+    cloud.sealos.io/app-deploy-manager: pgadmin4-afsjrmjg
+    cloud.sealos.io/deploy-on-sealos: pgadmin4-afsjrmjg
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: pgadmin4-afsjrmjg

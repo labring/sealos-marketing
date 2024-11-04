@@ -1,0 +1,627 @@
+apiVersion: app.sealos.io/v1
+kind: Instance
+metadata:
+  name: fastgpt-vyxjxrbr
+  labels:
+    cloud.sealos.io/deploy-on-sealos: fastgpt-vyxjxrbr
+spec:
+  gitRepo: https://github.com/labring/FastGPT
+  templateType: inline
+  categories:
+    - ai
+  defaults:
+    app_name:
+      type: string
+      value: fastgpt-vyxjxrbr
+    app_host:
+      type: string
+      value: dmztplbu
+    session_secret:
+      type: string
+      value: domfcbtc
+    root_key:
+      type: string
+      value: ddulrjzy
+  inputs:
+    root_password:
+      description: 'root 用户密码，用户名为: root'
+      type: string
+      default: ''
+      required: true
+    base_url:
+      description: API 基础地址，如果需要部署OneAPI，可以部署完再填写该地址
+      type: string
+      default: https://api.openai.com/v1
+      required: true
+    api_key:
+      description: API密钥
+      type: string
+      default: ''
+      required: true
+  title: FastGPT
+  url: https://ai.fastgpt.in/
+  author: Sealos
+  description: >-
+    A free, open-source, and powerful AI knowledge base platform, offers
+    out-of-the-box data processing, model invocation, RAG retrieval, and visual
+    AI workflows. Easily build complex LLM applications.
+  readme: https://cdn.jsdelivr.net/gh/labring/FastGPT@main/README.md
+  icon: https://cdn.jsdelivr.net/gh/labring/FastGPT@main/.github/imgs/logo.svg
+  deployCount: 49
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    sealos-db-provider-cr: fastgpt-vyxjxrbr-mongo
+    app.kubernetes.io/instance: fastgpt-vyxjxrbr-mongo
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: fastgpt-vyxjxrbr
+  name: fastgpt-vyxjxrbr-mongo
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    sealos-db-provider-cr: fastgpt-vyxjxrbr-pg
+    app.kubernetes.io/instance: fastgpt-vyxjxrbr-pg
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: fastgpt-vyxjxrbr
+  name: fastgpt-vyxjxrbr-pg
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastgpt-vyxjxrbr
+  annotations:
+    originImageName: registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt:v4.8.11-fix
+    deploy.cloud.sealos.io/minReplicas: '1'
+    deploy.cloud.sealos.io/maxReplicas: '1'
+  labels:
+    cloud.sealos.io/app-deploy-manager: fastgpt-vyxjxrbr
+    app: fastgpt-vyxjxrbr
+    cloud.sealos.io/deploy-on-sealos: fastgpt-vyxjxrbr
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: fastgpt-vyxjxrbr
+  template:
+    metadata:
+      labels:
+        app: fastgpt-vyxjxrbr
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: fastgpt-vyxjxrbr
+          image: registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt:v4.8.11-fix
+          env:
+            - name: MONGO_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: fastgpt-vyxjxrbr-mongo-conn-credential
+                  key: password
+            - name: PG_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: fastgpt-vyxjxrbr-pg-conn-credential
+                  key: password
+            - name: DEFAULT_ROOT_PSW
+              value: null
+            - name: OPENAI_BASE_URL
+              value: https://api.openai.com/v1
+            - name: CHAT_API_KEY
+              value: null
+            - name: DB_MAX_LINK
+              value: '100'
+            - name: TOKEN_KEY
+              value: domfcbtc
+            - name: ROOT_KEY
+              value: ddulrjzy}
+            - name: FILE_TOKEN_KEY
+              value: filetoken
+            - name: MONGODB_URI
+              value: >-
+                mongodb://root:$(MONGO_PASSWORD)@fastgpt-vyxjxrbr-mongo-mongodb..svc:27017/fastgpt?authSource=admin
+            - name: PG_URL
+              value: >-
+                postgresql://postgres:$(PG_PASSWORD)@fastgpt-vyxjxrbr-pg-postgresql..svc:5432/postgres
+            - name: SANDBOX_URL
+              value: http://fastgpt-vyxjxrbr-sandbox..svc.cluster.local:3000
+            - name: LOG_LEVEL
+              value: info
+            - name: STORE_LOG_LEVEL
+              value: warn
+          resources:
+            requests:
+              cpu: 50m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 1Gi
+          command: []
+          args: []
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: vn-appvn-datavn-configvn-json
+              mountPath: /app/data/config.json
+              subPath: ./app/data/config.json
+      volumes:
+        - name: vn-appvn-datavn-configvn-json
+          configMap:
+            name: fastgpt-vyxjxrbr
+            items:
+              - key: vn-appvn-datavn-configvn-json
+                path: ./app/data/config.json
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fastgpt-vyxjxrbr
+  labels:
+    cloud.sealos.io/deploy-on-sealos: fastgpt-vyxjxrbr
+data:
+  vn-appvn-datavn-configvn-json: |
+    {
+      "systemEnv": {
+        "openapiPrefix": "fastgpt",
+        "vectorMaxProcess": 15,
+        "qaMaxProcess": 15,
+        "pgHNSWEfSearch": 100,
+        "tokenWorkers": 20
+      },
+      "llmModels": [
+        {
+          "model": "gpt-3.5-turbo",
+          "name": "gpt-3.5-turbo",
+          "maxContext": 16000,
+          "avatar": "/imgs/model/openai.svg",
+          "maxResponse": 4000,
+          "quoteMaxToken": 13000,
+          "maxTemperature": 1.2,
+          "charsPointsPrice": 0,
+          "censor": false,
+          "vision": false,
+          "datasetProcess": true,
+          "usedInClassify": true,
+          "usedInExtractFields": true,
+          "usedInToolCall": true,
+          "usedInQueryExtension": true,
+          "toolChoice": true,
+          "functionCall": true,
+          "customCQPrompt": "",
+          "customExtractPrompt": "",
+          "defaultSystemChatPrompt": "",
+          "defaultConfig": {}
+        },
+        {
+          "model": "gpt-4-0125-preview",
+          "name": "gpt-4-turbo",
+          "avatar": "/imgs/model/openai.svg",
+          "maxContext": 125000,
+          "maxResponse": 4000,
+          "quoteMaxToken": 100000,
+          "maxTemperature": 1.2,
+          "charsPointsPrice": 0,
+          "censor": false,
+          "vision": false,
+          "datasetProcess": false,
+          "usedInClassify": true,
+          "usedInExtractFields": true,
+          "usedInToolCall": true,
+          "usedInQueryExtension": true,
+          "toolChoice": true,
+          "functionCall": false,
+          "customCQPrompt": "",
+          "customExtractPrompt": "",
+          "defaultSystemChatPrompt": "",
+          "defaultConfig": {}
+        },
+        {
+          "model": "gpt-4-vision-preview",
+          "name": "gpt-4-vision",
+          "avatar": "/imgs/model/openai.svg",
+          "maxContext": 128000,
+          "maxResponse": 4000,
+          "quoteMaxToken": 100000,
+          "maxTemperature": 1.2,
+          "charsPointsPrice": 0,
+          "censor": false,
+          "vision": true,
+          "datasetProcess": false,
+          "usedInClassify": false,
+          "usedInExtractFields": false,
+          "usedInToolCall": false,
+          "usedInQueryExtension": false,
+          "toolChoice": true,
+          "functionCall": false,
+          "customCQPrompt": "",
+          "customExtractPrompt": "",
+          "defaultSystemChatPrompt": "",
+          "defaultConfig": {}
+        }
+      ],
+      "vectorModels": [
+        {
+          "model": "text-embedding-3-large",
+          "name": "text-embedding-3-large",
+          "avatar": "/imgs/model/openai.svg",
+          "charsPointsPrice": 0,
+          "defaultToken": 512,
+          "maxToken": 3000,
+          "weight": 100,
+          "dbConfig": {},
+          "queryConfig": {},
+          "defaultConfig": {
+            "dimensions": 1024
+          }
+        },
+        {
+          "model": "text-embedding-3-small",
+          "name": "text-embedding-3-small",
+          "avatar": "/imgs/model/openai.svg",
+          "charsPointsPrice": 0,
+          "defaultToken": 512,
+          "maxToken": 3000,
+          "weight": 100,
+          "dbConfig": {},
+          "queryConfig": {}
+        },
+        {
+          "model": "text-embedding-ada-002",
+          "name": "text-embedding-ada-002",
+          "avatar": "/imgs/model/openai.svg",
+          "charsPointsPrice": 0,
+          "defaultToken": 512,
+          "maxToken": 3000,
+          "weight": 100,
+          "dbConfig": {},
+          "queryConfig": {}
+        }
+      ],
+      "reRankModels": [],
+      "audioSpeechModels": [
+        {
+          "model": "tts-1",
+          "name": "OpenAI TTS1",
+          "charsPointsPrice": 0,
+          "voices": [
+            {
+              "label": "Alloy",
+              "value": "alloy",
+              "bufferId": "openai-Alloy"
+            },
+            {
+              "label": "Echo",
+              "value": "echo",
+              "bufferId": "openai-Echo"
+            },
+            {
+              "label": "Fable",
+              "value": "fable",
+              "bufferId": "openai-Fable"
+            },
+            {
+              "label": "Onyx",
+              "value": "onyx",
+              "bufferId": "openai-Onyx"
+            },
+            {
+              "label": "Nova",
+              "value": "nova",
+              "bufferId": "openai-Nova"
+            },
+            {
+              "label": "Shimmer",
+              "value": "shimmer",
+              "bufferId": "openai-Shimmer"
+            }
+          ]
+        }
+      ],
+      "whisperModel": {
+        "model": "whisper-1",
+        "name": "Whisper1",
+        "charsPointsPrice": 0
+      }
+    }
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastgpt-vyxjxrbr
+  labels:
+    cloud.sealos.io/app-deploy-manager: fastgpt-vyxjxrbr
+    cloud.sealos.io/deploy-on-sealos: fastgpt-vyxjxrbr
+spec:
+  ports:
+    - port: 3000
+  selector:
+    app: fastgpt-vyxjxrbr
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fastgpt-vyxjxrbr
+  labels:
+    cloud.sealos.io/app-deploy-manager: fastgpt-vyxjxrbr
+    cloud.sealos.io/app-deploy-manager-domain: dmztplbu
+    cloud.sealos.io/deploy-on-sealos: fastgpt-vyxjxrbr
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: 32m
+    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/client-body-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-send-timeout: '300'
+    nginx.ingress.kubernetes.io/proxy-read-timeout: '300'
+    nginx.ingress.kubernetes.io/server-snippet: |
+      client_header_buffer_size 64k;
+      large_client_header_buffers 4 128k;
+spec:
+  rules:
+    - host: dmztplbu.sealoshzh.site
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: fastgpt-vyxjxrbr
+                port:
+                  number: 3000
+  tls:
+    - hosts:
+        - dmztplbu.sealoshzh.site
+      secretName: wildcard-cert
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastgpt-vyxjxrbr-sandbox
+  labels:
+    cloud.sealos.io/app-deploy-manager: fastgpt-vyxjxrbr-sandbox
+    cloud.sealos.io/deploy-on-sealos: fastgpt-vyxjxrbr
+spec:
+  ports:
+    - port: 3000
+  selector:
+    app: fastgpt-vyxjxrbr-sandbox
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastgpt-vyxjxrbr-sandbox
+  annotations:
+    originImageName: registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt-sandbox:v4.8.11
+    deploy.cloud.sealos.io/minReplicas: '1'
+    deploy.cloud.sealos.io/maxReplicas: '1'
+    deploy.cloud.sealos.io/resize: 0Gi
+  labels:
+    cloud.sealos.io/app-deploy-manager: fastgpt-vyxjxrbr-sandbox
+    app: fastgpt-vyxjxrbr-sandbox
+    cloud.sealos.io/deploy-on-sealos: fastgpt-vyxjxrbr
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: fastgpt-vyxjxrbr-sandbox
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: fastgpt-vyxjxrbr-sandbox
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: fastgpt-vyxjxrbr-sandbox
+          image: registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt-sandbox:v4.8.11
+          env: []
+          resources:
+            requests:
+              cpu: 50m
+              memory: 102Mi
+            limits:
+              cpu: 500m
+              memory: 1024Mi
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: IfNotPresent
+          volumeMounts: []
+      volumes: []
+
+---
+apiVersion: apps.kubeblocks.io/v1alpha1
+kind: Cluster
+metadata:
+  finalizers:
+    - cluster.kubeblocks.io/finalizer
+  labels:
+    clusterdefinition.kubeblocks.io/name: mongodb
+    clusterversion.kubeblocks.io/name: mongodb-5.0
+    sealos-db-provider-cr: fastgpt-vyxjxrbr-mongo
+    cloud.sealos.io/deploy-on-sealos: fastgpt-vyxjxrbr
+  annotations: {}
+  name: fastgpt-vyxjxrbr-mongo
+  generation: 1
+spec:
+  affinity:
+    nodeLabels: {}
+    podAntiAffinity: Preferred
+    tenancy: SharedNode
+    topologyKeys: []
+  clusterDefinitionRef: mongodb
+  clusterVersionRef: mongodb-5.0
+  backup:
+    enabled: true
+    cronExpression: 0 18 * * *
+    method: backupTool
+    pitrEnabled: false
+    retentionPeriod: 7d
+  componentSpecs:
+    - componentDefRef: mongodb
+      monitor: true
+      name: mongodb
+      replicas: 1
+      resources:
+        limits:
+          cpu: 500m
+          memory: 1Gi
+        requests:
+          cpu: 50m
+          memory: 128Mi
+      serviceAccountName: fastgpt-vyxjxrbr-mongo
+      volumeClaimTemplates:
+        - name: data
+          spec:
+            accessModes:
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: 5Gi
+            storageClassName: openebs-backup
+  terminationPolicy: Delete
+  tolerations: []
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  labels:
+    sealos-db-provider-cr: fastgpt-vyxjxrbr-mongo
+    app.kubernetes.io/instance: fastgpt-vyxjxrbr-mongo
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: fastgpt-vyxjxrbr
+  name: fastgpt-vyxjxrbr-mongo
+rules:
+  - apiGroups:
+      - '*'
+    resources:
+      - '*'
+    verbs:
+      - '*'
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  labels:
+    sealos-db-provider-cr: fastgpt-vyxjxrbr-mongo
+    app.kubernetes.io/instance: fastgpt-vyxjxrbr-mongo
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: fastgpt-vyxjxrbr
+  name: fastgpt-vyxjxrbr-mongo
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: fastgpt-vyxjxrbr-mongo
+subjects:
+  - kind: ServiceAccount
+    name: fastgpt-vyxjxrbr-mongo
+
+---
+apiVersion: apps.kubeblocks.io/v1alpha1
+kind: Cluster
+metadata:
+  finalizers:
+    - cluster.kubeblocks.io/finalizer
+  labels:
+    clusterdefinition.kubeblocks.io/name: postgresql
+    clusterversion.kubeblocks.io/name: postgresql-14.8.0
+    sealos-db-provider-cr: fastgpt-vyxjxrbr-pg
+    cloud.sealos.io/deploy-on-sealos: fastgpt-vyxjxrbr
+  annotations: {}
+  name: fastgpt-vyxjxrbr-pg
+spec:
+  affinity:
+    nodeLabels: {}
+    podAntiAffinity: Preferred
+    tenancy: SharedNode
+    topologyKeys: []
+  clusterDefinitionRef: postgresql
+  clusterVersionRef: postgresql-14.8.0
+  backup:
+    enabled: true
+    cronExpression: 0 18 * * *
+    method: backupTool
+    pitrEnabled: false
+    retentionPeriod: 7d
+  componentSpecs:
+    - componentDefRef: postgresql
+      monitor: true
+      name: postgresql
+      replicas: 1
+      resources:
+        limits:
+          cpu: 500m
+          memory: 1Gi
+        requests:
+          cpu: 50m
+          memory: 128Mi
+      serviceAccountName: fastgpt-vyxjxrbr-pg
+      switchPolicy:
+        type: Noop
+      volumeClaimTemplates:
+        - name: data
+          spec:
+            accessModes:
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: 5Gi
+            storageClassName: openebs-backup
+  terminationPolicy: Delete
+  tolerations: []
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  labels:
+    sealos-db-provider-cr: fastgpt-vyxjxrbr-pg
+    app.kubernetes.io/instance: fastgpt-vyxjxrbr-pg
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: fastgpt-vyxjxrbr
+  name: fastgpt-vyxjxrbr-pg
+rules:
+  - apiGroups:
+      - '*'
+    resources:
+      - '*'
+    verbs:
+      - '*'
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  labels:
+    sealos-db-provider-cr: fastgpt-vyxjxrbr-pg
+    app.kubernetes.io/instance: fastgpt-vyxjxrbr-pg
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: fastgpt-vyxjxrbr
+  name: fastgpt-vyxjxrbr-pg
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: fastgpt-vyxjxrbr-pg
+subjects:
+  - kind: ServiceAccount
+    name: fastgpt-vyxjxrbr-pg

@@ -1,0 +1,278 @@
+apiVersion: app.sealos.io/v1
+kind: Instance
+metadata:
+  name: bytebase-wfnjrate
+  labels:
+    cloud.sealos.io/deploy-on-sealos: bytebase-wfnjrate
+spec:
+  gitRepo: https://github.com/bytebase/bytebase
+  templateType: inline
+  categories:
+    - database
+  defaults:
+    app_name:
+      type: string
+      value: bytebase-wfnjrate
+    app_host:
+      type: string
+      value: wxymyair
+  inputs: {}
+  title: Bytebase
+  url: https://bytebase.com/
+  author: Sealos
+  description: >-
+    Bytebase is GitLab/GitHub for Database DevOps, built for developers, DBAs
+    and platform teams.
+  readme: https://cdn.jsdelivr.net/gh/bytebase/bytebase@main/README.md
+  icon: >-
+    https://cdn.jsdelivr.net/gh/bytebase/bytebase@main/frontend/src/assets/logo-icon.svg
+  deployCount: 1
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    sealos-db-provider-cr: bytebase-wfnjrate-pg
+    app.kubernetes.io/instance: bytebase-wfnjrate-pg
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: bytebase-wfnjrate
+  name: bytebase-wfnjrate-pg
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: bytebase-wfnjrate
+  annotations:
+    originImageName: bytebase/bytebase:2.23.0
+    deploy.cloud.sealos.io/minReplicas: '1'
+    deploy.cloud.sealos.io/maxReplicas: '1'
+  labels:
+    cloud.sealos.io/app-deploy-manager: bytebase-wfnjrate
+    app: bytebase-wfnjrate
+    cloud.sealos.io/deploy-on-sealos: bytebase-wfnjrate
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  minReadySeconds: 10
+  serviceName: bytebase-wfnjrate
+  selector:
+    matchLabels:
+      app: bytebase-wfnjrate
+  template:
+    metadata:
+      labels:
+        app: bytebase-wfnjrate
+    spec:
+      terminationGracePeriodSeconds: 10
+      automountServiceAccountToken: false
+      containers:
+        - name: bytebase-wfnjrate
+          image: bytebase/bytebase:2.23.0
+          env:
+            - name: PG_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: bytebase-wfnjrate-pg-conn-credential
+                  key: password
+            - name: PG_URL
+              value: >-
+                postgresql://postgres:$(PG_PASSWORD)@bytebase-wfnjrate-pg-postgresql..svc:5432/postgres
+          resources:
+            requests:
+              cpu: 50m
+              memory: 102Mi
+            limits:
+              cpu: 500m
+              memory: 1024Mi
+          command: []
+          args:
+            - '--data'
+            - /var/opt/bytebase
+            - '--external-url'
+            - https://wxymyair.sealoshzh.site
+            - '--port'
+            - '8080'
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: vn-varvn-optvn-bytebase
+              mountPath: /var/opt/bytebase
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+            initialDelaySeconds: 300
+            periodSeconds: 300
+            timeoutSeconds: 300
+  volumeClaimTemplates:
+    - metadata:
+        annotations:
+          path: /var/opt/bytebase
+          value: '1'
+        name: vn-varvn-optvn-bytebase
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bytebase-wfnjrate
+  labels:
+    cloud.sealos.io/app-deploy-manager: bytebase-wfnjrate
+    cloud.sealos.io/deploy-on-sealos: bytebase-wfnjrate
+spec:
+  ports:
+    - port: 8080
+  selector:
+    app: bytebase-wfnjrate
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: bytebase-wfnjrate
+  labels:
+    cloud.sealos.io/app-deploy-manager: bytebase-wfnjrate
+    cloud.sealos.io/app-deploy-manager-domain: wxymyair
+    cloud.sealos.io/deploy-on-sealos: bytebase-wfnjrate
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: 1g
+    nginx.ingress.kubernetes.io/server-snippet: |
+      client_header_buffer_size 64k;
+      large_client_header_buffers 4 128k;
+    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/client-body-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 64k
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      if ($request_uri ~* \.(js|css|gif|jpe?g|png)) {
+        expires 30d;
+        add_header Cache-Control "public";
+      }
+spec:
+  rules:
+    - host: wxymyair.sealoshzh.site
+      http:
+        paths:
+          - pathType: Prefix
+            path: /()(.*)
+            backend:
+              service:
+                name: bytebase-wfnjrate
+                port:
+                  number: 8080
+  tls:
+    - hosts:
+        - wxymyair.sealoshzh.site
+      secretName: wildcard-cert
+
+---
+apiVersion: apps.kubeblocks.io/v1alpha1
+kind: Cluster
+metadata:
+  finalizers:
+    - cluster.kubeblocks.io/finalizer
+  labels:
+    clusterdefinition.kubeblocks.io/name: postgresql
+    clusterversion.kubeblocks.io/name: postgresql-14.8.0
+    sealos-db-provider-cr: bytebase-wfnjrate-pg
+    cloud.sealos.io/deploy-on-sealos: bytebase-wfnjrate
+  annotations: {}
+  name: bytebase-wfnjrate-pg
+spec:
+  affinity:
+    nodeLabels: {}
+    podAntiAffinity: Preferred
+    tenancy: SharedNode
+    topologyKeys: []
+  clusterDefinitionRef: postgresql
+  clusterVersionRef: postgresql-14.8.0
+  componentSpecs:
+    - componentDefRef: postgresql
+      monitor: true
+      name: postgresql
+      replicas: 1
+      resources:
+        limits:
+          cpu: 500m
+          memory: 512Mi
+        requests:
+          cpu: 50m
+          memory: 51Mi
+      serviceAccountName: bytebase-wfnjrate-pg
+      switchPolicy:
+        type: Noop
+      volumeClaimTemplates:
+        - name: data
+          spec:
+            accessModes:
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: 1Gi
+            storageClassName: openebs-backup
+  terminationPolicy: Delete
+  tolerations: []
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  labels:
+    sealos-db-provider-cr: bytebase-wfnjrate-pg
+    app.kubernetes.io/instance: bytebase-wfnjrate-pg
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: bytebase-wfnjrate
+  name: bytebase-wfnjrate-pg
+rules:
+  - apiGroups:
+      - '*'
+    resources:
+      - '*'
+    verbs:
+      - '*'
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  labels:
+    sealos-db-provider-cr: bytebase-wfnjrate-pg
+    app.kubernetes.io/instance: bytebase-wfnjrate-pg
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: bytebase-wfnjrate
+  name: bytebase-wfnjrate-pg
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: bytebase-wfnjrate-pg
+subjects:
+  - kind: ServiceAccount
+    name: bytebase-wfnjrate-pg
+
+---
+apiVersion: app.sealos.io/v1
+kind: App
+metadata:
+  name: bytebase-wfnjrate
+  labels:
+    cloud.sealos.io/app-deploy-manager: bytebase-wfnjrate
+    cloud.sealos.io/deploy-on-sealos: bytebase-wfnjrate
+spec:
+  data:
+    url: https://wxymyair.sealoshzh.site
+  displayType: normal
+  icon: >-
+    https://raw.githubusercontent.com/bytebase/bytebase/main/frontend/src/assets/logo-icon.svg
+  name: bytebase-wfnjrate
+  type: iframe

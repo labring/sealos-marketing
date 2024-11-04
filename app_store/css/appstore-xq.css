@@ -130,7 +130,7 @@ img {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 17px 0px;
+  padding: 14px 0px;
   background-color: #fff;
   position: sticky;
   top: 0;
@@ -164,7 +164,7 @@ img {
   display: flex;
   align-items: center;
   gap: 32px;
-  margin-left: 48px;
+  margin-left: 60px;
 }
 .nav-links li a {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
@@ -189,6 +189,7 @@ img {
   display: flex;
   align-items: center;
   font-size: 14px;
+  letter-spacing: 1px;
 }
 .actions p img {
   margin-right: 4px;
@@ -376,6 +377,7 @@ img {
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0.048px;
+  text-align: left;
 }
 .list-gj1 {
   display: flex;
@@ -419,11 +421,11 @@ img {
   letter-spacing: 0.1px;
 }
 .badge {
-  border-radius: 34px;
+  border-radius: 14px;
   background: var(--Bright-Blue-500, #219BF4);
   box-shadow: 0px 1.428px 5.711px 0px rgba(58, 149, 255, 0.28);
   display: flex;
-  padding: 1px 6px;
+  padding: 4px 6px;
   justify-content: center;
   align-items: center;
   gap: 3.627px;
@@ -434,7 +436,7 @@ img {
   font-style: normal;
   font-weight: 500;
   line-height: 16px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 .sub-menu {
   list-style-type: none;
@@ -554,7 +556,7 @@ img {
   justify-content: flex-start;
 }
 .sub-menu-lef p {
-  color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
+  color: #111824;
   text-align: left;
   font-family: "PingFang SC";
   font-size: 14px;
@@ -926,7 +928,7 @@ img {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 25px;
+  line-height: 30px;
   letter-spacing: 0.048px;
   margin: 20px 0px;
 }
@@ -979,6 +981,7 @@ button::-moz-focus-inner {
 .sub-muen-desctie {
   font-weight: 400;
   font-size: 12px;
+  color:var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
 }
 .app-h5-left a {
   display: flex;
@@ -1209,15 +1212,19 @@ button::-moz-focus-inner {
   .sidebar {
     width: 300px;
   }
+  .carousel-container{
+    width: 80%;
+    margin: 0 auto;
+  }
   .hard-top-title {
-    width: 285px;
+    width: 400px;
   }
   .app-h5 {
     padding: 32px 30px;
   }
   .buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
   .step p {
     font-size: 12px;
@@ -1232,8 +1239,8 @@ button::-moz-focus-inner {
     width: 960px;
   }
   .carousel-nav {
-    width: 110%;
-    left: -23px;
+    width: 100%;
+    left: -5px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -1285,6 +1292,14 @@ button::-moz-focus-inner {
   .navtop {
     width: 1440px;
   }
+  .nav-links{
+    margin-left: 80px;
+    gap: 40px;
+  }
+  .actions p{
+    font-size: 16px;
+  }
+
   .sidebar {
     width: 400px;
   }
@@ -1340,11 +1355,14 @@ button::-moz-focus-inner {
     height: 40px;
   }
   .carousel-nav {
-    width: 155%;
-    left: -200px;
+    width: 125%;
+    left: -100px;
   }
   .carousel{
     width: 900px;
+  }
+  .link-text{
+    font-size: 16px;
   }
 }
 

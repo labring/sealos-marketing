@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>使用Sealos部署Vaultwarden工具教程</title>
+<link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
+<link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
+<script src="../../../app_store/js/appstor.js" defer></script>
+<script src="../../../app_store/js/navbar.js"></script>
+<script src="../../../app_store/js/header-left.js"></script>
+<script src="../../../app_store/js/about-right.js"></script>
+<script src="../../../app_store/js/foooter.js"></script>
+<script src="../../../app_store/js/step.js"></script>
+</head>
+<body>
+<div id="navbar-container"></div>
+<div class="stepxq">
+  <div class="left-list" id="left-header">
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('.nav-item[data-page="tool"]').classList.add('active');
+      document.querySelector('li[data-page="Headscale"]').classList.add('active');
+      document.getElementById('menu_sub').style.display = 'block';
+    });
+  </script>
+  <div class="app-h5">
+    <div class="hard-top">
+      <div class="hard-title-stats">
+        <div class="title-stats">
+          <div class="title-logo"><img src="../../img/headscale3-dots.svg" alt="Kuboard Logo"></div>
+          <div class="hard-top-title">
+            <div class="hard-top2">
+                <h1>Headscale</h1>
+                <span class="stats"> <span class="stars"><img src="../../img/AFFINE-logo2.svg">23.2k</span> <span class="shares"><img src="../../img/project.svg"><a href="https://github.com/juanfont/headscale" target="_blank">项目首页</a></span> </span></div>
+              <p class="app-decistore">一款开源的、基于云的、用于快速部署和管理 SSH 服务器的工具。 它可以让你轻松地搭建和配置 SSH 服务器，无需复杂的服务器管理工作，尤其适用于开发者和需要访问服务器的团队。</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="yaml-button">
+            <a href="./images/headscale.yaml" download>导出 Yaml</a>
+            </button>
+            <button class="deploy-button">
+            <a href="https://template.hzh.sealos.run/deploy?templateName=headscale" target=”_blank”>私有化部署</a>
+            </button>
+          </div>
+      </div>
+      <div class="carousel">
+        <div class="carousel-container"> <img src="./images/banner2.png" alt="Image 1"
+            class="carousel-item active"> <img src="./images/banner1.png" alt="Image 2"
+            class="carousel-item"> </div>
+        <div class="carousel-nav">
+          <button class="carousel-button prev">&lt;</button>
+          <button class="carousel-button next">&gt;</button>
+        </div>
+        <script src="../../../app_store/js/bannerlb.js"></script> 
+      </div>
+      <div class="quick-start">
+        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 Headscale</h2>
+        <div class="steps" id="steper">
+          
+        </div>
+      </div>
+      <div class="features-list">
+        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 Headscale</h2>
+        <ul class="features-list-ul">
+            <li>Headscale 是一个开源的、自托管的 Tailscale 控制服务器实现。Tailscale 是一个基于 WireGuard 的虚拟私有网络（VPN）服务，而 Headscale 允许用户在自己的服务器上运行 Tailscale 控制平面，从而实现自托管的 VPN 解决方案。Headscale 的目标是为自托管者和爱好者提供一个开源的服务器，用于他们的项目和实验室。</li>
+        </ul>
+      </div>
+      <div class="features-list">
+        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
+        <ul class="features-list-ul">
+            <li> 
+                DNS：
+                魔法DNS、
+                全局和受限名称服务器（拆分 DNS）、
+                搜索域名、
+                额外的 DNS 记录（仅限 headscale）<br/>
+                Taildrop（文件共享）<br/>
+                路由通告（包括出口节点）<br/>
+                双栈（IPv4 和 IPv6）<br/>
+                短暂节点<br/>
+                嵌入式DERP 服务器<br/>
+                访问控制列表（GitHub 标签“policy”）：
+                通过 API 进行 ACL 管理、
+                autogroup:internet、
+                autogroup:self、
+                autogroup:member<br/>
+                使用单点登录 (OpenID Connect) 进行节点注册 ( GitHub 标签“OIDC” )：
+                基本注册、
+                动态 ACL 支持、
+                OIDC 组不能用于 ACL<br/>
+                漏斗（#1040）<br/>
+                服务( #1234 ) </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="app-faq" id="about-right"></div>
+</div>
+<div class="h5footer" id="footer">
+</div>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script")
+      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
+      var s = document.getElementsByTagName("script")[0]
+      s.parentNode.insertBefore(hm, s)
+    })();
+  </script>
+</body>
+</html>

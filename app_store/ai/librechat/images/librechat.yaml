@@ -1,0 +1,476 @@
+apiVersion: app.sealos.io/v1
+kind: Instance
+metadata:
+  name: librechat-ojrpwsej
+  labels:
+    cloud.sealos.io/deploy-on-sealos: librechat-ojrpwsej
+spec:
+  gitRepo: https://github.com/danny-avila/LibreChat
+  templateType: inline
+  categories:
+    - ai
+  defaults:
+    app_name:
+      type: string
+      value: librechat-ojrpwsej
+    app_host:
+      type: string
+      value: librechat-tozgnwxv
+  inputs:
+    OPENAI_REVERSE_PROXY:
+      description: reverse proxy for openai, remember to add /v1 to the end of the url
+      type: string
+      default: https://api.openai.com/v1
+      required: false
+  title: LibreChat
+  url: https://github.com/danny-avila/LibreChat
+  author: Sealos
+  description: Enhanced ChatGPT Clone
+  readme: https://cdn.jsdelivr.net/gh/danny-avila/LibreChat@main/README.md
+  icon: >-
+    https://cdn.jsdelivr.net/gh/danny-avila/LibreChat@main/client/public/assets/logo.svg
+  deployCount: 9
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    sealos-db-provider-cr: librechat-ojrpwsej-mongo
+    app.kubernetes.io/instance: librechat-ojrpwsej-mongo
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: librechat-ojrpwsej
+  name: librechat-ojrpwsej-mongo
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: librechat-ojrpwsej
+  annotations:
+    originImageName: ghcr.io/danny-avila/librechat:v0.7.3
+    deploy.cloud.sealos.io/minReplicas: '1'
+    deploy.cloud.sealos.io/maxReplicas: '1'
+  labels:
+    cloud.sealos.io/app-deploy-manager: librechat-ojrpwsej
+    app: librechat-ojrpwsej
+    cloud.sealos.io/deploy-on-sealos: librechat-ojrpwsej
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  minReadySeconds: 10
+  serviceName: librechat-ojrpwsej
+  selector:
+    matchLabels:
+      app: librechat-ojrpwsej
+  template:
+    metadata:
+      labels:
+        app: librechat-ojrpwsej
+    spec:
+      terminationGracePeriodSeconds: 10
+      automountServiceAccountToken: false
+      containers:
+        - name: librechat-ojrpwsej
+          image: ghcr.io/danny-avila/librechat:v0.7.3
+          env:
+            - name: MONGO_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: librechat-ojrpwsej-mongo-conn-credential
+                  key: password
+            - name: MONGO_URI
+              value: >-
+                mongodb://root:$(MONGO_PASSWORD)@librechat-ojrpwsej-mongo-mongodb..svc:27017/LibreChat?authSource=admin
+            - name: HOST
+              value: 0.0.0.0
+            - name: MEILI_HOST
+              value: http://librechat-ojrpwsej-meilisearch:7700
+            - name: OPENAI_REVERSE_PROXY
+              value: https://api.openai.com/v1
+            - name: EMAIL_HOST
+              value: ''
+            - name: EMAIL_SERVICE
+              value: ''
+          envFrom:
+            - secretRef:
+                name: librechat-ojrpwsej
+          resources:
+            requests:
+              cpu: 20m
+              memory: 51Mi
+            limits:
+              cpu: 200m
+              memory: 512Mi
+          ports:
+            - containerPort: 3080
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: vn-appvn-clientvn-publicvn-images
+              mountPath: /app/client/public/images
+  volumeClaimTemplates:
+    - metadata:
+        annotations:
+          path: /app/client/public/images
+          value: '1'
+        name: vn-appvn-clientvn-publicvn-images
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: librechat-ojrpwsej
+  labels:
+    cloud.sealos.io/app-deploy-manager: librechat-ojrpwsej
+    cloud.sealos.io/deploy-on-sealos: librechat-ojrpwsej
+type: Opaque
+stringData:
+  ALLOW_EMAIL_LOGIN: 'true'
+  ALLOW_REGISTRATION: 'true'
+  ALLOW_SOCIAL_LOGIN: 'false'
+  ALLOW_SOCIAL_REGISTRATION: 'false'
+  ANTHROPIC_API_KEY: user_provided
+  ANTHROPIC_MODELS: claude-1,claude-instant-1,claude-2
+  APP_TITLE: LibreChat
+  AZURE_AI_SEARCH_API_KEY: ''
+  AZURE_AI_SEARCH_API_VERSION: ''
+  AZURE_AI_SEARCH_INDEX_NAME: ''
+  AZURE_AI_SEARCH_SEARCH_OPTION_QUERY_TYPE: ''
+  AZURE_AI_SEARCH_SEARCH_OPTION_SELECT: ''
+  AZURE_AI_SEARCH_SEARCH_OPTION_TOP: ''
+  AZURE_AI_SEARCH_SERVICE_ENDPOINT: ''
+  AZURE_OPENAI_MODELS: gpt-3.5-turbo,gpt-4
+  AZURE_USE_MODEL_AS_DEPLOYMENT_NAME: 'TRUE'
+  BAN_DURATION: 1000 * 60 * 60 * 2
+  BAN_INTERVAL: '20'
+  BAN_VIOLATIONS: 'true'
+  BINGAI_TOKEN: user_provided
+  CHATGPT_MODELS: text-davinci-002-render-sha
+  CHATGPT_TOKEN: ''
+  CHECK_BALANCE: 'false'
+  CONCURRENT_MESSAGE_MAX: '2'
+  CONCURRENT_VIOLATION_SCORE: '1'
+  CREDS_IV: e2341419ec3dd3d19b13a1a87fafcbfb
+  CREDS_KEY: f34be427ebb29de8d88c107a71546019685ed8b241d8f2ed00c3df97ad2566f0
+  DEBUG_CONSOLE: 'false'
+  DEBUG_LOGGING: 'true'
+  DEBUG_OPENAI: 'false'
+  DEBUG_PLUGINS: 'true'
+  DISCORD_CALLBACK_URL: /oauth/discord/callback
+  DISCORD_CLIENT_ID: ''
+  DISCORD_CLIENT_SECRET: ''
+  DOMAIN_CLIENT: http://localhost:3080
+  DOMAIN_SERVER: http://localhost:3080
+  EMAIL_ALLOW_SELFSIGNED: '         '
+  EMAIL_ENCRYPTION: '               '
+  EMAIL_ENCRYPTION_HOSTNAME: '      '
+  EMAIL_FROM: noreply@librechat.ai
+  EMAIL_FROM_NAME: '                '
+  EMAIL_HOST: '                     '
+  EMAIL_PASSWORD: '                 '
+  EMAIL_PORT: '25                   '
+  EMAIL_SERVICE: '                  '
+  EMAIL_USERNAME: '                 '
+  FACEBOOK_CALLBACK_URL: /oauth/facebook/callback
+  FACEBOOK_CLIENT_ID: ''
+  FACEBOOK_CLIENT_SECRET: ''
+  FIREBASE_API_KEY: ''
+  FIREBASE_APP_ID: ''
+  FIREBASE_AUTH_DOMAIN: ''
+  FIREBASE_MESSAGING_SENDER_ID: ''
+  FIREBASE_PROJECT_ID: ''
+  FIREBASE_STORAGE_BUCKET: ''
+  GITHUB_CALLBACK_URL: /oauth/github/callback
+  GITHUB_CLIENT_ID: ''
+  GITHUB_CLIENT_SECRET: ''
+  GOOGLE_API_KEY: ''
+  GOOGLE_CALLBACK_URL: /oauth/google/callback
+  GOOGLE_CLIENT_ID: ''
+  GOOGLE_CLIENT_SECRET: ''
+  GOOGLE_CSE_ID: ''
+  GOOGLE_KEY: user_provided
+  HOST: localhost
+  JWT_REFRESH_SECRET: eaa5191f2914e30b9387fd84e254e4ba6fc51b4654968a9b0803b456a54b8418
+  JWT_SECRET: 16f8c0ef4a5d391b26034086c628469d3f9f497f08163ab9b40137092f2909ef
+  LIMIT_CONCURRENT_MESSAGES: 'true'
+  LIMIT_MESSAGE_IP: 'true'
+  LIMIT_MESSAGE_USER: 'false'
+  LOGIN_MAX: '7'
+  LOGIN_VIOLATION_SCORE: '1'
+  LOGIN_WINDOW: '5'
+  MEILI_HOST: http://0.0.0.0:7700
+  MEILI_MASTER_KEY: DrhYf7zENyR6AlUCKmnz0eYASOQdl6zxH7s7MKFSfFCt
+  MEILI_NO_ANALYTICS: 'true'
+  MESSAGE_IP_MAX: '40'
+  MESSAGE_IP_WINDOW: '1'
+  MESSAGE_USER_MAX: '40'
+  MESSAGE_USER_WINDOW: '1'
+  MESSAGE_VIOLATION_SCORE: '1'
+  MONGO_URI: mongodb://127.0.0.1:27017/LibreChat
+  NO_INDEX: 'true'
+  NON_BROWSER_VIOLATION_SCORE: '20'
+  OPENAI_API_KEY: user_provided
+  OPENAI_MODERATION: 'false'
+  OPENAI_MODERATION_API_KEY: ''
+  OPENID_BUTTON_LABEL: ''
+  OPENID_CALLBACK_URL: /oauth/openid/callback
+  OPENID_CLIENT_ID: ''
+  OPENID_CLIENT_SECRET: ''
+  OPENID_IMAGE_URL: ''
+  OPENID_ISSUER: ''
+  OPENID_SCOPE: '"openid profile email"'
+  OPENID_SESSION_SECRET: ''
+  PORT: '3080'
+  PROXY: ''
+  REFRESH_TOKEN_EXPIRY: (1000 * 60 * 60 * 24) * 7
+  REGISTER_MAX: '5'
+  REGISTER_WINDOW: '60'
+  REGISTRATION_VIOLATION_SCORE: '1'
+  SD_WEBUI_URL: http://host.docker.internal:7860
+  SEARCH: 'true'
+  SERPAPI_API_KEY: ''
+  SESSION_EXPIRY: 1000 * 60 * 15
+  WOLFRAM_APP_ID: ''
+  ZAPIER_NLA_API_KEY: ''
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: librechat-ojrpwsej
+  labels:
+    cloud.sealos.io/app-deploy-manager: librechat-ojrpwsej
+    cloud.sealos.io/deploy-on-sealos: librechat-ojrpwsej
+spec:
+  ports:
+    - port: 3080
+  selector:
+    app: librechat-ojrpwsej
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: librechat-ojrpwsej-meilisearch
+  annotations:
+    originImageName: getmeili/meilisearch:v1.5
+    deploy.cloud.sealos.io/minReplicas: '1'
+    deploy.cloud.sealos.io/maxReplicas: '1'
+  labels:
+    cloud.sealos.io/app-deploy-manager: librechat-ojrpwsej-meilisearch
+    app: librechat-ojrpwsej-meilisearch
+    cloud.sealos.io/deploy-on-sealos: librechat-ojrpwsej
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  minReadySeconds: 10
+  serviceName: librechat-ojrpwsej-meilisearch
+  selector:
+    matchLabels:
+      app: librechat-ojrpwsej-meilisearch
+  template:
+    metadata:
+      labels:
+        app: librechat-ojrpwsej-meilisearch
+    spec:
+      terminationGracePeriodSeconds: 10
+      automountServiceAccountToken: false
+      containers:
+        - name: librechat-ojrpwsej-meilisearch
+          image: getmeili/meilisearch:v1.5
+          env:
+            - name: MEILI_NO_ANALYTICS
+              value: 'true'
+          resources:
+            requests:
+              cpu: 10m
+              memory: 51Mi
+            limits:
+              cpu: 100m
+              memory: 512Mi
+          ports:
+            - containerPort: 7700
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: vn-meili-data
+              mountPath: /meili_data
+  volumeClaimTemplates:
+    - metadata:
+        annotations:
+          path: /meili_data
+          value: '1'
+        name: vn-meili-data
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: librechat-ojrpwsej-meilisearch
+  labels:
+    cloud.sealos.io/app-deploy-manager: librechat-ojrpwsej-meilisearch
+    cloud.sealos.io/deploy-on-sealos: librechat-ojrpwsej
+spec:
+  ports:
+    - port: 7700
+  selector:
+    app: librechat-ojrpwsej-meilisearch
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: librechat-ojrpwsej
+  labels:
+    cloud.sealos.io/app-deploy-manager: librechat-ojrpwsej
+    cloud.sealos.io/app-deploy-manager-domain: librechat-tozgnwxv
+    cloud.sealos.io/deploy-on-sealos: librechat-ojrpwsej
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: 1g
+    nginx.ingress.kubernetes.io/server-snippet: |
+      client_header_buffer_size 64k;
+      large_client_header_buffers 4 128k;
+    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/client-body-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 64k
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      if ($request_uri ~* \.(js|css|gif|jpe?g|png)) {
+        expires 30d;
+        add_header Cache-Control "public";
+      }
+spec:
+  rules:
+    - host: librechat-tozgnwxv.sealoshzh.site
+      http:
+        paths:
+          - pathType: Prefix
+            path: /()(.*)
+            backend:
+              service:
+                name: librechat-ojrpwsej
+                port:
+                  number: 3080
+  tls:
+    - hosts:
+        - librechat-tozgnwxv.sealoshzh.site
+      secretName: wildcard-cert
+
+---
+apiVersion: apps.kubeblocks.io/v1alpha1
+kind: Cluster
+metadata:
+  finalizers:
+    - cluster.kubeblocks.io/finalizer
+  labels:
+    clusterdefinition.kubeblocks.io/name: mongodb
+    clusterversion.kubeblocks.io/name: mongodb-5.0
+    sealos-db-provider-cr: librechat-ojrpwsej-mongo
+    cloud.sealos.io/deploy-on-sealos: librechat-ojrpwsej
+  annotations: {}
+  name: librechat-ojrpwsej-mongo
+  generation: 1
+spec:
+  affinity:
+    nodeLabels: {}
+    podAntiAffinity: Preferred
+    tenancy: SharedNode
+    topologyKeys: []
+  clusterDefinitionRef: mongodb
+  clusterVersionRef: mongodb-5.0
+  backup:
+    enabled: true
+    cronExpression: 0 18 * * *
+    method: backupTool
+    pitrEnabled: false
+    retentionPeriod: 7d
+  componentSpecs:
+    - componentDefRef: mongodb
+      monitor: true
+      name: mongodb
+      replicas: 1
+      resources:
+        limits:
+          cpu: 500m
+          memory: 512Mi
+        requests:
+          cpu: 50m
+          memory: 51Mi
+      serviceAccountName: librechat-ojrpwsej-mongo
+      volumeClaimTemplates:
+        - name: data
+          spec:
+            accessModes:
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: 3Gi
+            storageClassName: openebs-backup
+  terminationPolicy: Delete
+  tolerations: []
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  labels:
+    sealos-db-provider-cr: librechat-ojrpwsej-mongo
+    app.kubernetes.io/instance: librechat-ojrpwsej-mongo
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: librechat-ojrpwsej
+  name: librechat-ojrpwsej-mongo
+rules:
+  - apiGroups:
+      - '*'
+    resources:
+      - '*'
+    verbs:
+      - '*'
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  labels:
+    sealos-db-provider-cr: librechat-ojrpwsej-mongo
+    app.kubernetes.io/instance: librechat-ojrpwsej-mongo
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: librechat-ojrpwsej
+  name: librechat-ojrpwsej-mongo
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: librechat-ojrpwsej-mongo
+subjects:
+  - kind: ServiceAccount
+    name: librechat-ojrpwsej-mongo
+
+---
+apiVersion: app.sealos.io/v1
+kind: App
+metadata:
+  name: librechat-ojrpwsej
+  labels:
+    cloud.sealos.io/app-deploy-manager: librechat-ojrpwsej
+    cloud.sealos.io/deploy-on-sealos: librechat-ojrpwsej
+spec:
+  data:
+    url: https://librechat-tozgnwxv.sealoshzh.site
+  displayType: normal
+  icon: >-
+    https://raw.githubusercontent.com/danny-avila/LibreChat/main/client/public/assets/logo.svg
+  name: librechat-ojrpwsej
+  type: iframe

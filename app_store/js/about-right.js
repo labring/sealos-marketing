@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <span class="sealos-detice-span"><a href="/">了解更多 ></a></span> </div>
     <div class="app-h5-left">
       <h3>Sealos部署优势</h3>
-      <p class="sealos-detice"> 💰 快速上云：一键创建容器集群，自动化部署容器应用<br/>
+      <p class="sealos-detice"> 💰 快速上云：一键创建容器，自动化部署应用<br/>
         <br/>
         🌐 成本缩减：仅容器付费，资源成本减少 80%<br/>
         <br/>
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
     <div class="app-h5-left">
       <h3>交流讨论</h3>
-      <a href="#"><img src="../img/ewm.png">
+      <a href="#"><img src="../../../app_store/img/ewm.png">
       <p>开发者交流群</p>
       </a> </div>
 

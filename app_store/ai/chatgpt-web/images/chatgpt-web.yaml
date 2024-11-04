@@ -1,0 +1,198 @@
+apiVersion: app.sealos.io/v1
+kind: Instance
+metadata:
+  name: chatgpt-web-rgcjzipk
+  labels:
+    cloud.sealos.io/deploy-on-sealos: chatgpt-web-rgcjzipk
+spec:
+  gitRepo: https://github.com/Chanzhaoyu/chatgpt-web
+  templateType: inline
+  categories:
+    - ai
+  defaults:
+    app_host:
+      type: string
+      value: cvpdbess
+    app_name:
+      type: string
+      value: chatgpt-web-rgcjzipk
+  inputs:
+    OPENAI_API_KEY:
+      description: 这是你在 OpenAI 账户页面申请的 API 密钥
+      type: string
+      default: ''
+      required: true
+    OPENAI_API_BASE_URL:
+      description: 如果你手动配置了 OpenAI 接口代理，可以使用此配置项来覆盖默认的 OpenAI API 请求基础 URL
+      type: string
+      default: ''
+      required: false
+    OPENAI_API_MODEL:
+      description: API 模型
+      type: string
+      default: ''
+      required: false
+    AUTH_SECRET_KEY:
+      description: 访问权限密钥
+      type: string
+      default: ''
+      required: false
+    MAX_REQUEST_PER_HOUR:
+      description: 每小时最大请求次数
+      type: string
+      default: ''
+      required: false
+    TIMEOUT_MS:
+      description: 超时，单位毫秒
+      type: string
+      default: ''
+      required: false
+    SOCKS_PROXY_HOST:
+      description: Socks代理，和 SOCKS_PROXY_PORT 一起时生效
+      type: string
+      default: ''
+      required: false
+    SOCKS_PROXY_PORT:
+      description: Socks代理端口，和 SOCKS_PROXY_HOST 一起时生效
+      type: string
+      default: ''
+      required: false
+    HTTPS_PROXY:
+      description: HTTPS 代理，支持 http，https，socks5
+      type: string
+      default: ''
+      required: false
+  title: chatgpt-web
+  url: https://github.com/Chanzhaoyu/chatgpt-web
+  author: Sealos
+  description: A ChatGPT Interactive Demo Web Application Developed with Express and Vue3.
+  readme: https://cdn.jsdelivr.net/gh/Chanzhaoyu/chatgpt-web@main/README.zh.md
+  icon: https://cdn.jsdelivr.net/gh/Chanzhaoyu/chatgpt-web@main/public/favicon.svg
+  deployCount: 2
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chatgpt-web-rgcjzipk
+  annotations:
+    originImageName: chenzhaoyu94/chatgpt-web
+    deploy.cloud.sealos.io/minReplicas: '1'
+    deploy.cloud.sealos.io/maxReplicas: '1'
+  labels:
+    cloud.sealos.io/app-deploy-manager: chatgpt-web-rgcjzipk
+    app: chatgpt-web-rgcjzipk
+    cloud.sealos.io/deploy-on-sealos: chatgpt-web-rgcjzipk
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: chatgpt-web-rgcjzipk
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 0
+  template:
+    metadata:
+      labels:
+        app: chatgpt-web-rgcjzipk
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: chatgpt-web-rgcjzipk
+          image: chenzhaoyu94/chatgpt-web
+          env:
+            - name: OPENAI_API_KEY
+              value: null
+            - name: OPENAI_API_BASE_URL
+              value: null
+            - name: OPENAI_API_MODEL
+              value: null
+            - name: AUTH_SECRET_KEY
+              value: null
+            - name: AUTH_SECRET_KEY
+              value: null
+            - name: MAX_REQUEST_PER_HOUR
+              value: null
+            - name: TIMEOUT_MS
+              value: null
+            - name: SOCKS_PROXY_HOST
+              value: null
+            - name: SOCKS_PROXY_PORT
+              value: null
+            - name: HTTPS_PROXY
+              value: null
+          resources:
+            requests:
+              cpu: 100m
+              memory: 102Mi
+            limits:
+              cpu: 1000m
+              memory: 1024Mi
+          command: []
+          args: []
+          ports:
+            - containerPort: 3002
+          imagePullPolicy: Always
+          volumeMounts: []
+      volumes: []
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: chatgpt-web-rgcjzipk
+  labels:
+    cloud.sealos.io/app-deploy-manager: chatgpt-web-rgcjzipk
+    cloud.sealos.io/deploy-on-sealos: chatgpt-web-rgcjzipk
+spec:
+  ports:
+    - port: 3002
+  selector:
+    app: chatgpt-web-rgcjzipk
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: chatgpt-web-rgcjzipk
+  labels:
+    cloud.sealos.io/app-deploy-manager: chatgpt-web-rgcjzipk
+    cloud.sealos.io/app-deploy-manager-domain: cvpdbess
+    cloud.sealos.io/deploy-on-sealos: chatgpt-web-rgcjzipk
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: 32m
+    nginx.ingress.kubernetes.io/server-snippet: |
+      client_header_buffer_size 64k;
+      large_client_header_buffers 4 128k;
+    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/client-body-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-send-timeout: '300'
+    nginx.ingress.kubernetes.io/proxy-read-timeout: '300'
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      if ($request_uri ~* \.(js|css|gif|jpe?g|png)) {
+        expires 30d;
+        add_header Cache-Control "public";
+      }
+spec:
+  rules:
+    - host: cvpdbess.sealoshzh.site
+      http:
+        paths:
+          - pathType: Prefix
+            path: /()(.*)
+            backend:
+              service:
+                name: chatgpt-web-rgcjzipk
+                port:
+                  number: 3002
+  tls:
+    - hosts:
+        - cvpdbess.sealoshzh.site
+      secretName: wildcard-cert

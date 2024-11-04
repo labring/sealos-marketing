@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>使用Sealos部署FastGpt教程</title>
+<link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
+<link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
+<script src="../../../app_store/js/appstor.js" defer></script>
+<script src="../../../app_store/js/navbar.js"></script>
+<script src="../../../app_store/js/header-left.js"></script>
+<script src="../../../app_store/js/about-right.js"></script>
+<script src="../../../app_store/js/foooter.js"></script>
+<script src="../../../app_store/js/step.js"></script>
+</head>
+<body>
+<div id="navbar-container"></div>
+<div class="stepxq">
+  <div class="left-list" id="left-header">
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('.nav-item[data-page="AI"]').classList.add('active');
+      document.querySelector('li[data-page="fastgpt"]').classList.add('active');
+      document.getElementById('menu_sub').style.display = 'block';
+    });
+  </script>
+  <div class="app-h5">
+    <div class="hard-top">
+      <div class="hard-title-stats">
+        <div class="title-stats">
+          <div class="title-logo"><img src="../../img/fastgpt.svg" alt="Logo"></div>
+          <div class="hard-top-title">
+            <div class="hard-top2">
+                <h1>FastGPT</h1>
+                <span class="stats"> <span class="stars"><img src="../../img/AFFINE-logo2.svg">17.9k</span> <span class="shares"><img src="../../img/project.svg"><a href="https://github.com/toeverything/AFFiNE" target="_blank">项目首页</a></span> </span></div>
+              <p class="app-decistore">基于 LLM 大模型的开源 AI 知识库构建平台。提供了开箱即用的数据处理、模型调用、RAG 检索、可视化 AI 工作流编排等能力，帮助您轻松构建复杂的 AI 应用。</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="yaml-button">
+            <a href="./images/fastgpt.yaml" download>导出 Yaml</a>
+            </button>
+            <button class="deploy-button">
+            <a href="https://template.hzh.sealos.run/deploy?templateName=fastgpt" target="_blank">私有化部署</a>
+            </button>
+          </div>
+      </div>
+      <div class="carousel">
+        <div class="carousel-container"> 
+          <img src="./images/banner1.png" alt="Image 1" class="carousel-item active"> 
+          <img src="./images/banner2.png" alt="Image 2" class="carousel-item active"> 
+          <img src="./images/banner3.png" alt="Image 3" class="carousel-item active"> 
+          <img src="./images/banner4.png" alt="Image 4" class="carousel-item active"> 
+          </div>
+        <div class="carousel-nav">
+          <button class="carousel-button prev">&lt;</button>
+          <button class="carousel-button next">&gt;</button>
+        </div>
+        <script src="../../../app_store/js/bannerlb.js"></script> 
+      </div>
+      <div class="quick-start">
+        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 FastGPT</h2>
+        <div class="steps" id="steper">
+          
+        </div>
+      </div>
+      <div class="features-list">
+        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 FastGPT</h2>
+        <ul class="features-list-ul">
+          <li>FastGPT是一个基于大语言模型的开源知识库问答系统，由labring团队开发并维护。它提供了一系列开箱即用的功能，包括数据处理、模型调用、RAG(检索增强生成)检索等，让用户能够快速构建和部署智能问答应用。FastGPT的核心优势在于其灵活的工作流编排能力，用户可以通过可视化界面设计复杂的问答流程，实现个性化的AI应用场景。
+          </li>
+        </ul>
+      </div>
+      <div class="features-list">
+        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
+        <ul class="features-list-ul">
+         <li>简单易用的可视化界面：FastGPT采用直观的可视化界面设计，为各种应用场景提供了丰富实用的功能。通过简洁易懂的操作步骤，用户可以轻松完成AI客服的创建和训练流程。</li><li>自动数据预处理：FastGPT提供多种数据导入途径，包括手动输入、直接分段、LLM自动处理和CSV等。它会自动对文本数据进行预处理、向量化和QA分割，从而节省手动训练时间，提升效能。</li><li>工作流编排：基于Flow模块的工作流编排功能，FastGPT可以帮助用户设计更加复杂的问答流程。例如，它可以查询数据库、查询库存、预约实验室等，实现复杂的业务逻辑。</li><li>强大的API集成：FastGPT的API接口与OpenAI官方接口对齐，可以直接接入现有的GPT应用。此外，它还可以轻松集成到企业微信、公众号、飞书等平台，方便用户在不同场景下使用FastGPT。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="app-faq" id="about-right"></div>
+</div>
+<div class="h5footer" id="footer">
+</div>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</body>
+</html>

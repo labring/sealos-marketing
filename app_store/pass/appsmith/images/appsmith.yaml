@@ -1,0 +1,146 @@
+apiVersion: app.sealos.io/v1
+kind: Instance
+metadata:
+  name: appsmith-rdyywxvy
+  labels:
+    cloud.sealos.io/deploy-on-sealos: appsmith-rdyywxvy
+spec:
+  gitRepo: https://github.com/appsmithorg/appsmith
+  templateType: inline
+  categories:
+    - low-code
+  defaults:
+    app_host:
+      type: string
+      value: mhvkzcth
+    app_name:
+      type: string
+      value: appsmith-rdyywxvy
+  inputs: null
+  title: Appsmith
+  url: https://www.appsmith.com/
+  author: Sealos
+  description: >-
+    Appsmith is an open-source platform to build, deploy, and maintain internal
+    apps. You can build anything from simple CRUD apps, admin panels, dashboards
+    to custom business apps and complicated multi-step workflows.
+  readme: https://cdn.jsdelivr.net/gh/appsmithorg/appsmith@release/README.md
+  icon: https://cdn.jsdelivr.net/gh/appsmithorg/appsmith@release/static/logo.png
+  deployCount: 3
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: appsmith-rdyywxvy
+  annotations:
+    originImageName: appsmith/appsmith-ce:v1.29
+    deploy.cloud.sealos.io/minReplicas: '1'
+    deploy.cloud.sealos.io/maxReplicas: '1'
+  labels:
+    cloud.sealos.io/app-deploy-manager: appsmith-rdyywxvy
+    app: appsmith-rdyywxvy
+    cloud.sealos.io/deploy-on-sealos: appsmith-rdyywxvy
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  minReadySeconds: 10
+  serviceName: appsmith-rdyywxvy
+  selector:
+    matchLabels:
+      app: appsmith-rdyywxvy
+  template:
+    metadata:
+      labels:
+        app: appsmith-rdyywxvy
+    spec:
+      terminationGracePeriodSeconds: 10
+      automountServiceAccountToken: false
+      containers:
+        - name: appsmith-rdyywxvy
+          image: appsmith/appsmith-ce:v1.29
+          env: []
+          resources:
+            requests:
+              cpu: 100m
+              memory: 102Mi
+            limits:
+              cpu: 1000m
+              memory: 1024Mi
+          command: []
+          args: []
+          ports:
+            - containerPort: 80
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: vn-appsmith-stacks
+              mountPath: /appsmith-stacks
+      volumes: []
+  volumeClaimTemplates:
+    - metadata:
+        annotations:
+          path: /appsmith-stacks
+          value: '1'
+        name: vn-appsmith-stacks
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: appsmith-rdyywxvy
+  labels:
+    cloud.sealos.io/app-deploy-manager: appsmith-rdyywxvy
+    cloud.sealos.io/deploy-on-sealos: appsmith-rdyywxvy
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: appsmith-rdyywxvy
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: appsmith-rdyywxvy
+  labels:
+    cloud.sealos.io/app-deploy-manager: appsmith-rdyywxvy
+    cloud.sealos.io/app-deploy-manager-domain: mhvkzcth
+    cloud.sealos.io/deploy-on-sealos: appsmith-rdyywxvy
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: 32m
+    nginx.ingress.kubernetes.io/server-snippet: |
+      client_header_buffer_size 64k;
+      large_client_header_buffers 4 128k;
+    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/client-body-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 64k
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      if ($request_uri ~* \.(js|css|gif|jpe?g|png)) {
+        expires 30d;
+        add_header Cache-Control "public";
+      }
+spec:
+  rules:
+    - host: mhvkzcth.sealoshzh.site
+      http:
+        paths:
+          - pathType: Prefix
+            path: /()(.*)
+            backend:
+              service:
+                name: appsmith-rdyywxvy
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - mhvkzcth.sealoshzh.site
+      secretName: wildcard-cert

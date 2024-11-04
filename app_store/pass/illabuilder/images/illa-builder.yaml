@@ -1,0 +1,146 @@
+apiVersion: app.sealos.io/v1
+kind: Instance
+metadata:
+  name: illabuilder-tpozifvp
+  labels:
+    cloud.sealos.io/deploy-on-sealos: illabuilder-tpozifvp
+spec:
+  gitRepo: https://github.com/illacloud/illa-builder
+  templateType: inline
+  categories:
+    - low-code
+  defaults:
+    app_host:
+      type: string
+      value: haknviwy
+    app_name:
+      type: string
+      value: illabuilder-tpozifvp
+  inputs: null
+  title: ILLA Builder
+  url: https://www.illacloud.com/zh-CN
+  author: ILLA
+  description: >-
+    ILLA is a robust open source low-code platform for developers to build
+    internal tools.
+  readme: https://cdn.jsdelivr.net/gh/illacloud/illa-builder@main/README.md
+  icon: >-
+    https://cdn.jsdelivr.net/gh/illacloud/illa-builder@main/apps/cloud/public/logo.svg
+  deployCount: 2
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: illabuilder-tpozifvp
+  annotations:
+    originImageName: illasoft/illa-builder:v4.8.2
+    deploy.cloud.sealos.io/minReplicas: '1'
+    deploy.cloud.sealos.io/maxReplicas: '1'
+  labels:
+    cloud.sealos.io/app-deploy-manager: illabuilder-tpozifvp
+    app: illabuilder-tpozifvp
+    cloud.sealos.io/deploy-on-sealos: illabuilder-tpozifvp
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  minReadySeconds: 10
+  serviceName: illabuilder-tpozifvp
+  selector:
+    matchLabels:
+      app: illabuilder-tpozifvp
+  template:
+    metadata:
+      labels:
+        app: illabuilder-tpozifvp
+    spec:
+      terminationGracePeriodSeconds: 10
+      automountServiceAccountToken: false
+      containers:
+        - name: illabuilder-tpozifvp
+          image: illasoft/illa-builder:v4.8.2
+          env: []
+          resources:
+            requests:
+              cpu: 100m
+              memory: 102Mi
+            limits:
+              cpu: 1000m
+              memory: 1024Mi
+          command: []
+          args: []
+          ports:
+            - containerPort: 2022
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: vn-appvn-data
+              mountPath: /app/data
+      volumes: []
+  volumeClaimTemplates:
+    - metadata:
+        annotations:
+          path: /app/data
+          value: '1'
+        name: vn-appvn-data
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: illabuilder-tpozifvp
+  labels:
+    cloud.sealos.io/app-deploy-manager: illabuilder-tpozifvp
+    cloud.sealos.io/deploy-on-sealos: illabuilder-tpozifvp
+spec:
+  ports:
+    - port: 2022
+  selector:
+    app: illabuilder-tpozifvp
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: illabuilder-tpozifvp
+  labels:
+    cloud.sealos.io/app-deploy-manager: illabuilder-tpozifvp
+    cloud.sealos.io/app-deploy-manager-domain: haknviwy
+    cloud.sealos.io/deploy-on-sealos: illabuilder-tpozifvp
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: 32m
+    nginx.ingress.kubernetes.io/server-snippet: |
+      client_header_buffer_size 64k;
+      large_client_header_buffers 4 128k;
+    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/client-body-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 64k
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      if ($request_uri ~* \.(js|css|gif|jpe?g|png)) {
+        expires 30d;
+        add_header Cache-Control "public";
+      }
+spec:
+  rules:
+    - host: haknviwy.sealoshzh.site
+      http:
+        paths:
+          - pathType: Prefix
+            path: /()(.*)
+            backend:
+              service:
+                name: illabuilder-tpozifvp
+                port:
+                  number: 2022
+  tls:
+    - hosts:
+        - haknviwy.sealoshzh.site
+      secretName: wildcard-cert

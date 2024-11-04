@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>使用Sealos部署librechat教程</title>
+<link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
+<link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
+<script src="../../../app_store/js/appstor.js" defer></script>
+<script src="../../../app_store/js/navbar.js"></script>
+<script src="../../../app_store/js/header-left.js"></script>
+<script src="../../../app_store/js/about-right.js"></script>
+<script src="../../../app_store/js/foooter.js"></script>
+<script src="../../../app_store/js/step.js"></script>
+</head>
+<body>
+<div id="navbar-container"></div>
+<div class="stepxq">
+  <div class="left-list" id="left-header">
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('.nav-item[data-page="AI"]').classList.add('active');
+      document.querySelector('li[data-page="librechat"]').classList.add('active');
+      document.getElementById('menu_sub').style.display = 'block';
+    });
+  </script>
+  <div class="app-h5">
+    <div class="hard-top">
+      <div class="hard-title-stats">
+        <div class="title-stats">
+          <div class="title-logo"><img src="../../img/librechat.svg" alt="Logo"></div>
+          <div class="hard-top-title">
+            <div class="hard-top2">
+                <h1>LibreChat</h1>
+                <span class="stats"> <span class="stars"><img src="../../img/AFFINE-logo2.svg">18.8k</span> <span class="shares"><img src="../../img/project.svg"><a href="https://github.com/danny-avila/LibreChat" target="_blank">项目首页</a></span> </span></div>
+              <p class="app-decistore">LibreChat是一个集成了最新AI技术的聊天平台，拥有多种语言界面、多模态功能、AI模型选择和丰富的定制选项</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="yaml-button">
+            <a href="./images/librechat.yaml" download>导出 Yaml</a>
+            </button>
+            <button class="deploy-button">
+            <a href="https://template.hzh.sealos.run/deploy?templateName=librechat" target="_blank">私有化部署</a>
+            </button>
+          </div>
+      </div>
+      <div class="carousel">
+        <div class="carousel-container"> 
+          <img src="./images/banner1.png" alt="Image 1" class="carousel-item active"> 
+          </div>
+        <div class="carousel-nav">
+          <button class="carousel-button prev">&lt;</button>
+          <button class="carousel-button next">&gt;</button>
+        </div>
+        <script src="../../../app_store/js/bannerlb.js"></script> 
+      </div>
+      <div class="quick-start">
+        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 LibreChat</h2>
+        <div class="steps" id="steper">
+          
+        </div>
+      </div>
+      <div class="features-list">
+        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 LibreChat</h2>
+        <ul class="features-list-ul">
+          <li> LibreChat 的特色在于它整合了多种人工智能模型，增强了原始客户端的功能，如对话和消息搜索、提示模板和插件。它使用户无需选择 ChatGPT Plus，而可以使用免费或按需付费的 API。LibreChat 欢迎用户的贡献、克隆和分叉，以增强这个高级聊天机器人平台的功能。
+          </li>
+        </ul>
+      </div>
+      <div class="features-list">
+        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
+        <ul class="features-list-ul">
+          <li> <p><strong>用户界面(UI)特点</strong>: LibreChat 提供了与 <span class="words-blog hl-git-1" data-tit="ChatGPT" data-pretit="chatgpt">ChatGPT</span> 相似的界面，包括暗模式、流式传输功能，以及截至2023年11月的最新更新。</p> </li><li> <p><strong>多模态聊天功能</strong>: 用户可以上传并通过 GPT-4 和 Gemini <span class="words-blog hl-git-1" data-tit="Vision" data-pretit="vision">Vision</span> 分析图像。同时，支持更多文件类型和正在开发中的助手 API 集成。</p> </li><li> <p><strong>多语言用户界面</strong>: 支持多种语言，包括英语、中文、德语、西班牙语、法语、意大利语、波兰语、巴西葡萄牙语、俄语、日语、瑞典语、韩语、越南语、繁体中文、阿拉伯语、土耳其语和荷兰语。</p> </li><li> <p><strong>AI 模型选择</strong>: 用户可以选择不同的 AI 模型，如 OpenAI API、Azure、BingAI、ChatGPT、Google Vertex AI 和 Anthropic (Claude) 以及其他插件。</p> </li><li> <p><strong>创建、保存和分享自定义预设</strong>: 用户可以创建、保存和分享自定义的聊天环境预设。</p> </li><li> <p><strong>编辑、重提交和继续消息与对话分支</strong>: 支持编辑、重提交和延续消息的功能，使对话可以分支发展。</p> </li><li> <p><strong>导出对话功能</strong>: 可以将对话导出为截图、Markdown、文本、JSON 等格式。</p> </li><li> <p><strong>搜索功能</strong>: 支持搜索所有消息和对话。</p> </li><li> <p><strong>插件支持</strong>: 包括网络访问、图像生成（DALL-E-3 等）的插件。</p> </li><li> <p><strong>多用户支持和安全认证</strong>: 提供多用户支持、安全认证以及监管和代币消费工具。</p> </li><li> <p><strong>多种部署选项和完全开源</strong>: 支持配置代理、反向代理、<span class="words-blog hl-git-1" data-tit="Docker" data-pretit="docker">Docker</span> 等多种部署选项，软件是完全开源的。</p> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="app-faq" id="about-right"></div>
+</div>
+<div class="h5footer" id="footer">
+</div>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</body>
+</html>

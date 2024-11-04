@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>使用Sealos部署appsmith教程</title>
+<link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
+<link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
+<script src="../../../app_store/js/appstor.js" defer></script>
+<script src="../../../app_store/js/navbar.js"></script>
+<script src="../../../app_store/js/header-left.js"></script>
+<script src="../../../app_store/js/about-right.js"></script>
+<script src="../../../app_store/js/foooter.js"></script>
+<script src="../../../app_store/js/step.js"></script>
+</head>
+<body>
+<div id="navbar-container"></div>
+<div class="stepxq">
+  <div class="left-list" id="left-header">
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('.nav-item[data-page="pass"]').classList.add('active');
+      document.querySelector('li[data-page="illabuilder"]').classList.add('active');
+    });
+  </script>
+  <div class="app-h5">
+    <div class="hard-top">
+      <div class="hard-title-stats">
+        <div class="title-stats">
+          <div class="title-logo"><img src="../../img/ILLA%20Builder.svg" alt="Logo"></div>
+          <div class="hard-top-title">
+            <div class="hard-top2">
+                <h1>Illabuilder</h1>
+                <span class="stats">
+                     <span class="stars"><img src="../../img/AFFINE-logo2.svg">11.6k</span> 
+                     <span class="shares"><img src="../../img/project.svg">
+                      <a href="https://github.com/illacloud/illa-builder" target="_blank">项目首页</a>
+                     </span> 
+                </span>
+            </div>
+              <p class="app-decistore">‌ILLA Builder‌是一款开源的低代码开发工具，旨在简化全栈应用程序的开发流程，提供一站式的服务，涵盖代码构建、部署、管理等多个环节。
+              </p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="yaml-button">
+            <a href="./images/illa-builder.yaml" download>导出 Yaml</a>
+            </button>
+            <button class="deploy-button">
+            <a href="https://template.hzh.sealos.run/deploy?templateName=illa-builder" target="_blank">私有化部署</a>
+            </button>
+          </div>
+      </div>
+      <div class="carousel">
+        <div class="carousel-container">
+          <img src="./images/banner1.png" alt="Image 1" class="carousel-item active"/> 
+          <img src="./images/banner2.gif" alt="Image 2" class="carousel-item active"/> 
+          <img src="./images/banner3.gif" alt="Image 3" class="carousel-item active"/> 
+          <img src="./images/banner4.gif" alt="Image 4" class="carousel-item active"/> 
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-button prev">&lt;</button>
+          <button class="carousel-button next">&gt;</button>
+        </div>
+        <script src="../../../app_store/js/bannerlb.js"></script> 
+      </div>
+      <div class="quick-start">
+        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 Illabuilder</h2>
+        <div class="steps" id="steper"></div>
+      </div>
+      <div class="features-list">
+        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 Illabuilder</h2>
+        <ul class="features-list-ul">
+          <li>‌ILLA Builder‌是一款开源的低代码开发工具，旨在简化全栈应用程序的开发流程，提供一站式的服务，涵盖代码构建、部署、管理等多个环节。它支持MySQL、PostgreSQL等数据库和API，通过拖拽式组件构建用户界面（UI），内置Action功能实现数据操作，具有在线实时协作和自动化能力，适合快速构建后台管理系统‌‌</li>
+        </ul>
+      </div>
+      <div class="features-list">
+        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
+        <ul class="features-list-ul">
+
+            <li>‌<strong>JS驱动+极速部署</strong>‌：开发者可以直接使用JavaScript（JS）驱动业务逻辑，使用画布工具进行排版，使用ILLA本身进行部署，实现“分钟级开发，秒级部署”‌</li>
+            <li>‌<strong>易于使用</strong>‌：工具本身没有复杂的学习成本，无需精通复杂的前端知识，掌握简单的JS语法即可创建业务逻辑，通过拖拉拽快速构建页面</li>
+            <li>‌<strong>连接能力</strong>‌：内置多种连接能力，可以无需任何服务端开发，通过简单的SQL或API配置即可连接主流Infra产品、SaaS和数据库等，实现即时响应</li>
+            <li>‌<strong>组件库</strong>‌：内置多种组件能力，如日历、按钮、表单等，帮助开发者快速完善需求，插件能力支持自定义组件，满足特定需求</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="app-faq" id="about-right"></div>
+</div>
+<div class="h5footer" id="footer">
+</div>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</body>
+</html>

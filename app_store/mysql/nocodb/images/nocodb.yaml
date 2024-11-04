@@ -1,0 +1,169 @@
+apiVersion: app.sealos.io/v1
+kind: Instance
+metadata:
+  name: nocodb-fbnzzxnn
+  labels:
+    cloud.sealos.io/deploy-on-sealos: nocodb-fbnzzxnn
+spec:
+  gitRepo: https://github.com/nocodb/nocodb
+  templateType: inline
+  categories:
+    - database
+  defaults:
+    app_host:
+      type: string
+      value: nocodb-ydtvdszn
+    app_name:
+      type: string
+      value: nocodb-fbnzzxnn
+  inputs: {}
+  title: NocoDB
+  url: https://nocodb.com/
+  author: Sealos
+  description: >-
+    Turns any MySQL, PostgreSQL, SQL Server, SQLite & MariaDB into a smart
+    spreadsheet.
+  readme: https://cdn.jsdelivr.net/gh/nocodb/nocodb@develop/README.md
+  icon: >-
+    https://cdn.jsdelivr.net/gh/nocodb/nocodb@develop/packages/nc-gui/assets/img/brand/nocodb-logo.svg
+  deployCount: 1
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: nocodb-fbnzzxnn
+  annotations:
+    originImageName: nocodb/nocodb:0.204.5
+    deploy.cloud.sealos.io/minReplicas: '1'
+    deploy.cloud.sealos.io/maxReplicas: '1'
+  labels:
+    cloud.sealos.io/app-deploy-manager: nocodb-fbnzzxnn
+    app: nocodb-fbnzzxnn
+    cloud.sealos.io/deploy-on-sealos: nocodb-fbnzzxnn
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  minReadySeconds: 10
+  serviceName: nocodb-fbnzzxnn
+  selector:
+    matchLabels:
+      app: nocodb-fbnzzxnn
+  template:
+    metadata:
+      labels:
+        app: nocodb-fbnzzxnn
+    spec:
+      terminationGracePeriodSeconds: 10
+      automountServiceAccountToken: false
+      containers:
+        - name: nocodb-fbnzzxnn
+          image: nocodb/nocodb:0.204.5
+          resources:
+            requests:
+              cpu: 200m
+              memory: 409Mi
+              ephemeral-storage: 400Mi
+            limits:
+              cpu: 2000m
+              memory: 4096Mi
+              ephemeral-storage: 400Mi
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 8080
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: vn-usrvn-appvn-data
+              mountPath: /usr/app/data
+          livenessProbe:
+            tcpSocket:
+              port: 8080
+            initialDelaySeconds: 20
+  volumeClaimTemplates:
+    - metadata:
+        annotations:
+          path: /usr/app/data
+          value: '1'
+        name: vn-usrvn-appvn-data
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nocodb-fbnzzxnn
+  labels:
+    cloud.sealos.io/app-deploy-manager: nocodb-fbnzzxnn
+    cloud.sealos.io/deploy-on-sealos: nocodb-fbnzzxnn
+spec:
+  ports:
+    - port: 8080
+  selector:
+    app: nocodb-fbnzzxnn
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nocodb-fbnzzxnn
+  labels:
+    cloud.sealos.io/app-deploy-manager: nocodb-fbnzzxnn
+    cloud.sealos.io/app-deploy-manager-domain: nocodb-ydtvdszn
+    cloud.sealos.io/deploy-on-sealos: nocodb-fbnzzxnn
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: 32m
+    nginx.ingress.kubernetes.io/server-snippet: |
+      client_header_buffer_size 64k;
+      large_client_header_buffers 4 128k;
+    nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/client-body-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-send-timeout: '300'
+    nginx.ingress.kubernetes.io/proxy-read-timeout: '300'
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      if ($request_uri ~* \.(js|css|gif|jpe?g|png)) {
+        expires 30d;
+        add_header Cache-Control "public";
+      }
+spec:
+  rules:
+    - host: nocodb-ydtvdszn.sealoshzh.site
+      http:
+        paths:
+          - pathType: Prefix
+            path: /()(.*)
+            backend:
+              service:
+                name: nocodb-fbnzzxnn
+                port:
+                  number: 8080
+  tls:
+    - hosts:
+        - nocodb-ydtvdszn.sealoshzh.site
+      secretName: wildcard-cert
+
+---
+apiVersion: app.sealos.io/v1
+kind: App
+metadata:
+  name: nocodb-fbnzzxnn
+  labels:
+    cloud.sealos.io/app-deploy-manager: nocodb-fbnzzxnn
+    cloud.sealos.io/deploy-on-sealos: nocodb-fbnzzxnn
+spec:
+  data:
+    url: https://nocodb-ydtvdszn.sealoshzh.site
+  displayType: normal
+  icon: >-
+    https://raw.githubusercontent.com/nocodb/nocodb/develop/packages/nc-gui/assets/img/brand/nocodb-logo.svg
+  name: nocodb-fbnzzxnn
+  type: iframe

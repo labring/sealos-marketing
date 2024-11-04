@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>使用Sealos部署teable教程</title>
+<link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
+<link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
+<script src="../../../app_store/js/appstor.js" defer></script>
+<script src="../../../app_store/js/navbar.js"></script>
+<script src="../../../app_store/js/header-left.js"></script>
+<script src="../../../app_store/js/about-right.js"></script>
+<script src="../../../app_store/js/foooter.js"></script>
+<script src="../../../app_store/js/step.js"></script>
+</head>
+<body>
+<div id="navbar-container"></div>
+<div class="stepxq">
+  <div class="left-list" id="left-header">
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('.nav-item[data-page="mysql"]').classList.add('active');
+      document.querySelector('li[data-page="teable"]').classList.add('active');
+ 
+    });
+  </script>
+  <div class="app-h5">
+    <div class="hard-top">
+      <div class="hard-title-stats">
+        <div class="title-stats">
+          <div class="title-logo"><img src="../../img/x9gZmjwbtvaGd95qbfUmsZ8Jc.png" alt="Logo"></div>
+          <div class="hard-top-title">
+            <div class="hard-top2">
+                <h1>Teable</h1>
+                <span class="stats">
+                     <span class="stars"><img src="../../img/AFFINE-logo2.svg">12.1k</span> 
+                     <span class="shares"><img src="../../img/project.svg"><a href="https://github.com/teableio/teable" target="_blank">项目首页</a></span> 
+                </span>
+            </div>
+              <p class="app-decistore">Teable 是一个基于 Postgres 构建的超快速、实时、专业、开发人员友好的无代码数据库。它使用简单的、类似电子表格的界面来创建复杂的企业级数据库应用程序。
+              </p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="yaml-button">
+            <a href="./images/teable.yaml" download>导出 Yaml</a>
+            </button>
+            <button class="deploy-button">
+            <a href="https://template.hzh.sealos.run/deploy?templateName=teable" target="_blank">私有化部署</a>
+            </button>
+          </div>
+      </div>
+      <div class="carousel">
+        <div class="carousel-container"> 
+          <img src="./images/banner11.png" alt="Image 1" class="carousel-item active"> 
+          <img src="./images/banner1.png" alt="Image 2" class="carousel-item active"> 
+          <img src="./images/banner2.png" alt="Image 3" class="carousel-item active"> 
+          <img src="./images/banner3.png" alt="Image 4" class="carousel-item active"> 
+          <img src="./images/banner4.png" alt="Image 5" class="carousel-item active"> 
+          <img src="./images/banner5.png" alt="Image 6" class="carousel-item active"> 
+          <img src="./images/banner6.png" alt="Image 7" class="carousel-item active"> 
+          <img src="./images/banner7.png" alt="Image 8" class="carousel-item active"> 
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-button prev">&lt;</button>
+          <button class="carousel-button next">&gt;</button>
+        </div>
+        <script src="../../../app_store/js/bannerlb.js"></script> 
+      </div>
+      <div class="quick-start">
+        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 Teable</h2>
+        <div class="steps" id="steper"></div>
+      </div>
+      <div class="features-list">
+        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 Teable</h2>
+        <ul class="features-list-ul">
+          <li>Teable 是一个创新的在线平台，旨在提供高效、实时的代码分享和协作体验。它的目标是将编程教学、代码审查和团队合作提升到新的层次，通过直观的界面和强大的功能，让用户能够轻松地在任何设备上进行代码交流。</li>
+        </ul>
+      </div>
+      <div class="features-list">
+        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
+        <ul class="features-list-ul">
+          <li> <p><strong>实时协作</strong>：Teable 使用WebSocket等先进技术实现真正的实时同步，无论你在世界何处，都能立即看到队友的改动，如同共用同一台电脑。</p> </li><li> <p><strong>版本控制</strong>：内置Git支持意味着你可以随时查看历史更改，回滚错误，并理解代码演进的过程。</p> </li><li> <p><strong>代码高亮和智能提示</strong>：基于成熟的Ace Editor，Teable 提供了丰富的语言支持和代码高亮，还有自动补全功能，提高编写效率。</p> </li><li> <p><strong>轻量级API</strong>：开发者可以通过其RESTful API扩展和集成Teable到自己的工作流程中，打造个性化的开发环境。</p> </li><li> <p><strong>安全与隐私</strong>：Teable 遵循最佳实践，保护用户数据的安全性和隐私性，支持私有仓库创建和访问控制。</p> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="app-faq" id="about-right"></div>
+</div>
+<div class="h5footer" id="footer">
+</div>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</body>
+</html>

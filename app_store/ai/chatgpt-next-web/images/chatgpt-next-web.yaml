@@ -1,0 +1,204 @@
+apiVersion: app.sealos.io/v1
+kind: Instance
+metadata:
+  name: chatgpt-next-web-chawkofs
+  labels:
+    cloud.sealos.io/deploy-on-sealos: chatgpt-next-web-chawkofs
+spec:
+  gitRepo: https://github.com/Yidadaa/ChatGPT-Next-Web
+  templateType: inline
+  categories:
+    - ai
+  defaults:
+    app_host:
+      type: string
+      value: tysgtavb
+    app_name:
+      type: string
+      value: chatgpt-next-web-chawkofs
+  inputs:
+    OPENAI_API_KEY:
+      description: 这是你在 OpenAI 账户页面申请的 API 密钥，使用英文逗号隔开多个 key，这样可以随机轮询这些 key
+      type: string
+      default: ''
+      required: true
+    CODE:
+      description: 设置页面中的访问密码，可以使用逗号隔开多个密码
+      type: string
+      default: ''
+      required: false
+    BASE_URL:
+      description: 如果你手动配置了 OpenAI 接口代理，可以使用此配置项来覆盖默认的 OpenAI API 请求基础 URL
+      type: string
+      default: https://api.openai.com
+      required: false
+    OPENAI_ORG_ID:
+      description: 指定 OpenAI 中的组织 ID
+      type: string
+      default: ''
+      required: false
+    HIDE_USER_API_KEY:
+      description: 如果你不想让用户自行填入 API Key，将此环境变量设置为 1 即可
+      type: string
+      default: ''
+      required: false
+    DISABLE_GPT4:
+      description: 如果你不想让用户使用 GPT-4，将此环境变量设置为 1 即可
+      type: string
+      default: ''
+      required: false
+    HIDE_BALANCE_QUERY:
+      description: 如果你想启用余额查询功能，将此环境变量设置为 1 即可
+      type: string
+      default: ''
+      required: false
+    AZURE_URL:
+      description: Azure 部署地址
+      type: string
+      default: https://{azure-resource-url}/openai/deployments/{deploy-name}
+      required: false
+    AZURE_API_KEY:
+      description: Azure 密钥
+      type: string
+      default: ''
+      required: false
+    AZURE_API_VERSION:
+      description: Azure API 版本
+      type: string
+      default: ''
+      required: false
+  title: chatgpt-next-web
+  url: https://github.com/Yidadaa/ChatGPT-Next-Web
+  author: Sealos
+  description: A cross-platform ChatGPT/Gemini UI.
+  readme: https://cdn.jsdelivr.net/gh/Yidadaa/ChatGPT-Next-Web@main/README.md
+  icon: >-
+    https://cdn.jsdelivr.net/gh/Yidadaa/ChatGPT-Next-Web@main/docs/images/icon.svg
+  deployCount: 8
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chatgpt-next-web-chawkofs
+  annotations:
+    originImageName: yidadaa/chatgpt-next-web:v2.12.4
+    deploy.cloud.sealos.io/minReplicas: '1'
+    deploy.cloud.sealos.io/maxReplicas: '1'
+  labels:
+    cloud.sealos.io/app-deploy-manager: chatgpt-next-web-chawkofs
+    app: chatgpt-next-web-chawkofs
+    cloud.sealos.io/deploy-on-sealos: chatgpt-next-web-chawkofs
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: chatgpt-next-web-chawkofs
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 0
+  template:
+    metadata:
+      labels:
+        app: chatgpt-next-web-chawkofs
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: chatgpt-next-web-chawkofs
+          image: yidadaa/chatgpt-next-web:v2.12.4
+          env:
+            - name: OPENAI_API_KEY
+              value: null
+            - name: CODE
+              value: null
+            - name: BASE_URL
+              value: https://api.openai.com
+            - name: OPENAI_ORG_ID
+              value: null
+            - name: HIDE_USER_API_KEY
+              value: null
+            - name: DISABLE_GPT4
+              value: null
+            - name: HIDE_BALANCE_QUERY
+              value: null
+            - name: AZURE_URL
+              value: https://{azure-resource-url}/openai/deployments/{deploy-name}
+            - name: AZURE_API_KEY
+              value: null
+            - name: AZURE_API_VERSION
+              value: null
+          resources:
+            requests:
+              cpu: 100m
+              memory: 102Mi
+            limits:
+              cpu: 1000m
+              memory: 1024Mi
+          command: []
+          args: []
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: IfNotPresent
+          volumeMounts: []
+      volumes: []
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: chatgpt-next-web-chawkofs
+  labels:
+    cloud.sealos.io/app-deploy-manager: chatgpt-next-web-chawkofs
+    cloud.sealos.io/deploy-on-sealos: chatgpt-next-web-chawkofs
+spec:
+  ports:
+    - port: 3000
+  selector:
+    app: chatgpt-next-web-chawkofs
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: chatgpt-next-web-chawkofs
+  labels:
+    cloud.sealos.io/app-deploy-manager: chatgpt-next-web-chawkofs
+    cloud.sealos.io/app-deploy-manager-domain: tysgtavb
+    cloud.sealos.io/deploy-on-sealos: chatgpt-next-web-chawkofs
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: 32m
+    nginx.ingress.kubernetes.io/server-snippet: |
+      client_header_buffer_size 64k;
+      large_client_header_buffers 4 128k;
+    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/client-body-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-send-timeout: '300'
+    nginx.ingress.kubernetes.io/proxy-read-timeout: '300'
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      if ($request_uri ~* \.(js|css|gif|jpe?g|png)) {
+        expires 30d;
+        add_header Cache-Control "public";
+      }
+spec:
+  rules:
+    - host: tysgtavb.sealoshzh.site
+      http:
+        paths:
+          - pathType: Prefix
+            path: /()(.*)
+            backend:
+              service:
+                name: chatgpt-next-web-chawkofs
+                port:
+                  number: 3000
+  tls:
+    - hosts:
+        - tysgtavb.sealoshzh.site
+      secretName: wildcard-cert
