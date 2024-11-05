@@ -173,7 +173,7 @@ img {
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
-  letter-spacing: 0.15px;
+  letter-spacing: 0.5px;
 }
 .header-title {
   display: flex;
@@ -194,7 +194,7 @@ img {
   margin-right: 4px;
 }
 .btn {
-  margin-left: 20px;
+  margin-left: 30px;
   border-radius: 8px;
   background: var(--Bright-Blue-500, #219BF4);
   box-shadow: 0px 4.626px 18.504px 0px rgba(58, 149, 255, 0.28);
@@ -1244,7 +1244,7 @@ button::-moz-focus-inner {
 }
 @media screen and (min-width: 1280px) {
   .navtop {
-    width: 1180px;
+    width: 1280px;
   }
   .sidebar {
     width: 300px;

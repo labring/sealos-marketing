@@ -1,748 +1,459 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Sealos-专为云原生开发打造的以K8s为内核的云操作系统</title>
-    <link rel="stylesheet" href="./images/h5-Q3-c2.css">
-    <script src="./images/h5_Q3_C1.js" defer></script>
-    <link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./images/css/appstore-xq.css">
-<script src="./images/js/appstor.js" defer></script>
-<script src="./images/js/navbar.js"></script>
-<script src="./images/js/header-left.js"></script>
-<script src="./images/js/about-right.js"></script>
-<script src="./images/js/foooter.js"></script>
-<script src="./images/js/step.js"></script>
+<meta charset="UTF-8">
+<title>Sealos-专为云原生开发打造的以K8s为内核的云操作系统</title>
+<link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./images/css/appstore-xq.css">
+<link rel="stylesheet" href="./images/css/h5-Q3-c2.css">
+<script src="./images/js/h5_Q3_C1.js" defer></script> 
+<script src="./images/js/appstor.js" defer></script> 
+<script src="./images/js/navbar.js"></script> 
+<script src="./images/js/foooter.js"></script> 
 </head>
 <body>
-    <div class="nav">
-        <div class="nav1">
-          <div id="navbar-container"></div>
-
-
-
-
-            <div class="hero">
-                <div class="hero-section">
-                    <div class="hero-content">
-                        <h1>Sealos
-                            <p>容器云</p>
-                        </h1>
-                        <p class="tips">以 K8s 为内核的云操作系统</p>
-                        <div class="hero-stats">
-                            <div class="stat">
-                                <span>500w+台</span>
-                                <p>装机量</p>
-                            </div>
-                            <div class="stat-divider"></div>
-                            <div class="stat">
-                                <span>5 倍</span>
-                                <p>资源利用再提升</p>
-                            </div>
-                            <div class="stat-divider"></div>
-                            <div class="stat">
-                                <span>0 损耗</span>
-                                <p>轻量级虚拟化</p>
-                            </div>
-                        </div>
-                        <div class="hero-buttons">
-                            <a href="https://bja.sealos.run/" target="_blank" class="btn-primary login-link">免费体验</a>
-                            <a href="https://fael3z0zfze.feishu.cn/share/base/form/shrcn5oHHTKCf3VREMKOhEy6fmf"
-                                target="_blank" class="btn-secondary">解决方案</a>
-                        </div>
-                    </div>
-                    <div class="hero-video">
-                        <div class="video-container video-container2">
-                            <video id="myVideo">
-                                <source src="https://oss.laf.run/itceb8-video/sealos-web.mp4" type="video/mp4">
-                            </video>
-                            <div class="video-controls">
-                                <button id="playPauseButton" class="control-button">▶</button>
-                                <input type="range" id="progressBar" min="0" max="100" value="0">
-                                <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
-                                <button id="fullscreenButton" class="control-button">⛶</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="features-section">
-                    <div class="feature iconh1">
-                        <a href="https://sealos.run/docs/5.0.0/user-guide/app-launchpad/use-app-launchpad"
-                            target="_blank">
-                            <h3>快速入门<span>>></span></h3>
-                        </a>
-                        <p>3 秒钟注册，1 分钟部署，开箱即用</p>
-                    </div>
-                    <div class="feature iconh2">
-                        <a href="#chargev2">
-                            <h3>定价与计费<span>>></span></h3>
-                        </a>
-                        <p>仅需容器付费，自定义所需 CPU 和内存</p>
-                    </div>
-                    <div class="feature iconh3">
-                        <a href="https://template.bja.sealos.run/" target="_blank">
-                            <h3>应用商店<span>>></span></h3>
-                        </a>
-                        <p>多场景应用工具一键部署</p>
-                    </div>
-                </div>
+<div class="nav">
+  <div class="nav1">
+    <div id="navbar-container"></div>
+    <div class="hero">
+      <div class="hero-section">
+        <div class="hero-content">
+          <h1>Sealos<p>容器云</p></h1>
+          <p class="tips"><img src="./images/Frame20670.svg"></p>
+          <div class="hero-stats">
+            <div class="stat"> <span>50w +</span>
+              <p>开发者</p>
             </div>
+            <div class="stat-divider"></div>
+            <div class="stat"> <span>30w +</span>
+              <p>运行应用</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat"> <span>99.99%</span>
+              <p>稳定性</p>
+            </div>
+          </div>
+          <div class="hero-buttons"> 
+            <a href="https://bja.sealos.run/" target="_blank" class="btn-primary">在线体验</a> 
+          <!--<a href="https://fael3z0zfze.feishu.cn/share/base/form/shrcn5oHHTKCf3VREMKOhEy6fmf" target="_blank" class="btn-secondary">解决方案</a> -->
+            <a href="https://oss.laf.run/itceb8-video/sealos-web.mp4" target="_blank" class="demo-a"><img src="./images/Group20612.svg">Dome</a>
+          </div>
         </div>
-    </div>
-    <div class="tab-section-tions">
-        <h3 class="tab-h3">以应用为中心的企业级容器云</h3>
-        <div class="tab-section">
-            <div class="tab-buttons">
-                <button class="tab-button tabico1 active" data-tab="tab1">应用管理</button>
-                <button class="tab-button tabico2" data-tab="tab2">数据库管理</button>
-                <button class="tab-button tabico3" data-tab="tab3">存储管理</button>
-                <button class="tab-button tabico4" data-tab="tab4">云开发 Laf</button>
-            </div>
-            <div class="tab-content">
-                <div class="tab-pane active" id="tab1">
-                    <div class="container">
-                        <div class="column">
-                            <div class="cloud-module1">
-                                <h2>快速上云</h2>
-                                <p>广泛的云原生组件，原生 K8s 管理能力</p>
-                            </div>
-                            <div class="column-kj">
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">应用管理器</h3>
-                                    <p>一键创建容器集群，自动化部署容器应用</p>
-                                    <div class="tags">
-                                        <span class="tag">App Launchpad</span>
-                                        <span class="tag">Terminal</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">应用标准化</h3>
-                                    <p>统一的方式管理和集成，标准化交付应用</p>
-                                    <div class="tags">
-                                        <span class="tag">整体打包</span>
-                                        <span class="tag">一键交付</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">公网访问</h3>
-                                    <p>提供内网/外网访问地址</p>
-                                    <div class="tags">
-                                        <span class="tag">自定义域名</span>
-                                        <span class="tag">自动配置 https</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="cloud-module2">
-                                <h2>便利部署</h2>
-                                <p>丰富的功能模块，快速实现业务部署</p>
-                            </div>
-                            <div class="column-kj">
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">容器镜像</h3>
-                                    <p>有状态容器，轻松运行任意 Docker 镜像</p>
-                                    <div class="tags">
-                                        <span class="tag">镜像仓库</span>
-                                        <span class="tag">集群镜像</span>
-                                        <span class="tag">私有镜像</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">资源管理</h3>
-                                    <p>自定义 CPU 和内存，自动计算调整资源</p>
-                                    <div class="tags">
-                                        <span class="tag">弹性伸缩 HPA</span>
-                                        <span class="tag">负载均衡</span>
-                                        <span class="tag">缓存策略</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">内置终端</h3>
-                                    <p>一键进入容器终端，方便管理和调试</p>
-                                    <div class="tags">
-                                        <span class="tag">命令行参数</span>
-                                        <span class="tag">批量操作</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="cloud-module3">
-                                <h2>超强性能</h2>
-                                <p>应用级和租户级网络隔离能力</p>
-                            </div>
-                            <div class="column-kj">
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">开放兼容</h3>
-                                    <p>兼容Java、Go、Python、Node.js、Html等编程语言</p>
-                                    <div class="tags">
-                                        <span class="tag">GitOps</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">极致性能</h3>
-                                    <p>自研轻量级负载均衡器，支持数万节点集群运行</p>
-                                    <div class="tags">
-                                        <span class="tag">超高性能</span>
-                                        <span class="tag">Higress Envoy 网关</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">数据安全</h3>
-                                    <p>应用级和租户级网络隔离能力</p>
-                                    <div class="tags">
-                                        <span class="tag">计算安全隔离</span>
-                                        <span class="tag">存储隔离</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane" id="tab2">
-                    <div class="container">
-                        <div class="column">
-                            <div class="cloud-module1">
-                                <h2>高可用</h2>
-                                <p>分布式存储，支持快速扩展与无缝迁移</p>
-                            </div>
-                            <div class="column-kj">
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">100% 兼容</h3>
-                                    <p>全面兼容mysql/redis/mongo/pgsql等生态</p>
-                                    <div class="tags">
-                                        <span class="tag">自定义YAML</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">快速部署</h3>
-                                    <p>一键自动部署，无须自行构建复杂的多节点架构</p>
-                                    <div class="tags">
-                                        <span class="tag">集群部署</span>
-                                        <span class="tag">终端连接</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">超性价比</h3>
-                                    <p>成本降低70%，开源免费</p>
-                                    <div class="tags">
-                                        <span class="tag">0.4元/U</span>
-                                        <span class="tag">0.2元/G</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="cloud-module2">
-                                <h2>高并发性能</h2>
-                                <p>以30%的成本提供最高6倍性能提升</p>
-                            </div>
-                            <div class="column-kj">
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">容器镜像</h3>
-                                    <p>超百万级 QPS 的高吞吐</p>
-                                    <div class="tags">
-                                        <span class="tag">高并发</span>
-                                        <span class="tag">高性能</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">性能高优</h3>
-                                    <p>内核性能更优，支持创建多个只读副本</p>
-                                    <div class="tags">
-                                        <span class="tag">读写分离</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">弹性扩展</h3>
-                                    <p>自动升降配，秒级完成扩容</p>
-                                    <div class="tags">
-                                        <span class="tag">弹性存储</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="cloud-module3">
-                                <h2>高安全</h2>
-                                <p>全方位安全加固，企业级安全性和可靠性</p>
-                            </div>
-                            <div class="column-kj">
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">网络安全</h3>
-                                    <p>自动维护多个副本，可靠性达99.9999%。</p>
-                                    <div class="tags">
-                                        <span class="tag">安全组</span>
-                                        <span class="tag">VPC 网络隔离</span>
-                                        <span class="tag">SSL连接</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">数据安全</h3>
-                                    <p>定期自动备份，备份文件自动化管理</p>
-                                    <div class="tags">
-                                        <span class="tag">资源监控</span>
-                                        <span class="tag">状态监控</span>
-                                        <span class="tag">性能监控</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">容灾安全</h3>
-                                    <p>主备双机高可用，节点故障秒级无感切换</p>
-                                    <div class="tags">
-                                        <span class="tag">故障自愈</span>
-                                        <span class="tag">秒级备份回档</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane" id="tab3">
-                    <div class="container">
-                        <div class="column">
-                            <div class="cloud-module1">
-                                <h2>对象存储</h2>
-                                <p>支持 TB 到 PB 级数据迁移上云</p>
-                            </div>
-                            <div class="column-kj">
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">数据迁移</h3>
-                                    <p>根据应用程序类型提供各语言 SDK，实现无缝接入</p>
-                                    <div class="tags">
-                                        <span class="tag">平滑迁移</span>
-                                        <span class="tag">S3 兼容</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">数据加密</h3>
-                                    <p>保障数据安全可靠</p>
-                                    <div class="tags">
-                                        <span class="tag">存储加密</span>
-                                        <span class="tag">传输加密</span>
-                                        <span class="tag">完整性校验</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">容灾备份</h3>
-                                    <p>多冗余备份和异地容灾</p>
-                                    <div class="tags">
-                                        <span class="tag">跨地域容灾备份</span>
-                                        <span class="tag">跨账号数据共享</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="cloud-module2">
-                                <h2>文件存储 sealfs</h2>
-                                <p>高性能、高可靠性分布式存储</p>
-                            </div>
-                            <div class="column-kj">
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">极致性能</h3>
-                                    <p>显著减少I/O延迟，提供近乎裸机的速度体验</p>
-                                    <div class="tags">
-                                        <span class="tag">文件存储</span>
-                                        <span class="tag">元数据存储</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">可扩展性</h3>
-                                    <p>天然适应弹性伸缩，轻松应对数据量的爆发性增长。</p>
-                                    <div class="tags">
-                                        <span class="tag">分布式架构</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">简化运维</h3>
-                                    <p>去中心化管理降低了复杂度，减少了单点故障的风险。</p>
-                                    <div class="tags">
-                                        <span class="tag">灵活定制</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane" id="tab4">
-                    <div class="container">
-                        <div class="column">
-                            <div class="cloud-module1">
-                                <h2>开箱即用</h2>
-                                <p>内置开发环境，无需配置一键使用</p>
-                            </div>
-                            <div class="column-kj">
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">一站式开发</h3>
-                                    <p>多应用管理，无需配置服务器，一分钟上线</p>
-                                    <div class="tags">
-                                        <span class="tag">数据库内置</span>
-                                        <span class="tag">对象存储内置</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">开源开放</h3>
-                                    <p>随时拥有一个属于自己的云开发平台</p>
-                                    <div class="tags">
-                                        <span class="tag">Apache License 2.0</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">高性价比</h3>
-                                    <p>百万次调用，最低仅需 0.01 元</p>
-                                    <div class="tags">
-                                        <span class="tag">市场最低</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="cloud-module2">
-                                <h2>IDE 集成</h2>
-                                <p>开发-测试-部署，完整闭环的开发体验</p>
-                            </div>
-                            <div class="column-kj">
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">在线编程</h3>
-                                    <p>基于 Web 端的代码编辑器</p>
-                                    <div class="tags">
-                                        <span class="tag">类型提示</span>
-                                        <span class="tag">在线调试</span>
-                                        <span class="tag">版本回滚</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">研发提效</h3>
-                                    <p>代码毫秒级发布上线，没有冷启时间</p>
-                                    <div class="tags">
-                                        <span class="tag">快速响应</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">云存储</h3>
-                                    <p>提供专业的文件对象存储服务</p>
-                                    <div class="tags">
-                                        <span class="tag">兼容 S3</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="cloud-module3">
-                                <h2>智能编码</h2>
-                                <p>专注业务本身，节省开发时间</p>
-                            </div>
-                            <div class="column-kj">
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">AI 编码</h3>
-                                    <p>编辑指定代码，包括重构、优化、修改部分逻辑</p>
-                                    <div class="tags">
-                                        <span class="tag">代码生成</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">AI 修复</h3>
-                                    <p>智能测试代码结果，优化bug逻辑，自动修复验收</p>
-                                    <div class="tags">
-                                        <span class="tag">完善逻辑</span>
-                                        <span class="tag">内测版本</span>
-                                    </div>
-                                </div>
-                                <div class="cloud-module">
-                                    <h3><img src="./images/check-circle-broken.svg">函数模板</h3>
-                                    <p>提供多种不同的类型的函数进行调用</p>
-                                    <div class="tags">
-                                        <span class="tag">快速加载</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-video"> <img src="./images/Group20804.svg"> </div>
+      </div>
+      <div class="features-section">
+        <div class="feature iconh1"> <a href="https://sealos.run/docs/5.0.0/Intro" target="_blank">
+          <h3>快速入门</h3>
+          </a>
+          <p>3 秒钟注册，1 分钟部署，开箱即用</p>
         </div>
-    </div>
-    </div>
-    </div>
-    </div>
-
-    <div class="cons">
-        <div class="contai code-ys">
-            <h1>稳定、安全、高性能的云计算服务</h1>
-            <div class="container">
-                <div class="card caricon1">
-                    <div class="card-title">
-                        <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M12 22.165C17.6139 22.165 22.165 17.6139 22.165 12C22.165 6.38599 17.6139 1.83496 12 1.83496C6.38599 1.83496 1.83496 6.38599 1.83496 12C1.83496 17.6139 6.38599 22.165 12 22.165ZM7.76385 6.70485C8.15198 6.39434 8.71834 6.45727 9.02885 6.8454L12 10.5593L14.9711 6.8454C15.2816 6.45727 15.8479 6.39434 16.2361 6.70485C16.6242 7.01536 16.6871 7.58172 16.3766 7.96986L13.8725 11.1H15.6738C16.1709 11.1 16.5738 11.5029 16.5738 12C16.5738 12.497 16.1709 12.9 15.6738 12.9H12.9V13.8554H15.2146C15.7117 13.8554 16.1146 14.2583 16.1146 14.7554C16.1146 15.2525 15.7117 15.6554 15.2146 15.6554H12.9V17.5108C12.9 18.0079 12.497 18.4108 12 18.4108C11.5029 18.4108 11.1 18.0079 11.1 17.5108V15.6554H8.78531C8.28825 15.6554 7.88531 15.2525 7.88531 14.7554C7.88531 14.2583 8.28825 13.8554 8.78531 13.8554H11.1V12.9H8.32607C7.82901 12.9 7.42607 12.497 7.42607 12C7.42607 11.5029 7.82901 11.1 8.32607 11.1H10.1274L7.62329 7.96986C7.31278 7.58172 7.37571 7.01536 7.76385 6.70485Z"
-                                    fill="#219BF4" />
-                            </svg></div>
-                        90% 成本缩减
-                    </div>
-                    <ul>
-                        <li>云内核设计，多租户共享集群</li>
-                        <li>仅容器付费，资源成本减少 80%</li>
-                        <li>弹性伸缩，自动释放计算资源</li>
-                    </ul>
-                </div>
-                <div class="card caricon2">
-                    <div class="card-title">
-                        <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M18.4543 2.34077L18.7194 2.37403C19.4201 2.47071 20.3474 2.60066 20.8723 3.12669C21.3027 3.55603 21.468 4.25463 21.5668 4.87837L21.625 5.27965C21.756 6.22566 21.7903 7.46484 21.5668 8.84124C21.126 11.5576 19.6799 14.799 16.0487 17.3086C16.029 17.504 16.0279 17.7015 16.0321 17.8991L16.0425 18.1943C16.0591 18.6486 16.0757 19.1019 15.9489 19.5437C15.7514 20.2298 15.0476 20.682 14.3895 21.0064L14.0673 21.1592L13.6514 21.3421C12.8738 21.6727 11.8239 22.0116 11.1658 21.3525C10.7708 20.9585 10.6086 20.3805 10.4766 19.8056L10.4277 19.5905C10.3727 19.3188 10.3033 19.0502 10.2198 18.7858C10.1678 18.634 10.1117 18.4791 10.0514 18.3232C9.98503 18.4047 9.9146 18.4827 9.84036 18.5571C9.48171 18.9158 8.94633 19.1663 8.50555 19.342C8.02422 19.5322 7.47948 19.6986 6.97529 19.8358L6.71643 19.9044L6.22056 20.0281L5.77146 20.1321L5.234 20.2464L4.89822 20.3119C4.73075 20.3429 4.55826 20.3327 4.39561 20.2822C4.23296 20.2317 4.08505 20.1424 3.96462 20.0219C3.84419 19.9015 3.75486 19.7536 3.70434 19.5909C3.65382 19.4283 3.64363 19.2558 3.67464 19.0883L3.76404 18.6403L3.92413 17.9147L4.05304 17.3845L4.15076 17.0102C4.28799 16.5071 4.45432 15.9623 4.6456 15.482C4.82025 15.0402 5.07079 14.5048 5.42944 14.1462L5.51261 14.0661L5.44607 14.0391C5.26841 13.9716 5.08845 13.9102 4.90653 13.8551L4.61857 13.7667C3.8971 13.5484 3.12574 13.3135 2.64649 12.8332C2.06433 12.2521 2.26081 11.3674 2.5415 10.6314L2.65585 10.3465L2.83986 9.93071L2.99267 9.60844C3.31702 8.95143 3.76924 8.24764 4.45536 8.05012C4.81921 7.94616 5.19761 7.93992 5.5781 7.95032L5.80681 7.9576C6.10412 7.96799 6.4004 7.97943 6.69045 7.95136C9.19998 4.31908 12.4414 2.87303 15.1578 2.43225C16.2475 2.25352 17.3563 2.22275 18.4543 2.34077ZM8.25397 15.5174C8.09035 15.3963 7.89481 15.3258 7.69155 15.3147C7.4883 15.3037 7.28625 15.3524 7.11043 15.455L6.99608 15.5319L6.8994 15.6182L6.76945 15.7825C6.49916 16.1734 6.34531 16.7139 6.22575 17.2192L6.11348 17.7057L6.06046 17.9271L6.25902 17.8793L6.69356 17.7795C7.29444 17.6392 7.96081 17.4572 8.3704 17.0882C8.54849 16.9102 8.65593 16.6736 8.67275 16.4224C8.68958 16.1711 8.61465 15.9223 8.46188 15.7222L8.37664 15.6245L8.35169 15.6006L8.25397 15.5174ZM15.7212 8.26739C15.5282 8.07428 15.299 7.92109 15.0468 7.81656C14.7945 7.71202 14.5242 7.65819 14.2511 7.65814C13.9781 7.6581 13.7077 7.71183 13.4554 7.81627C13.2031 7.92072 12.9739 8.07383 12.7808 8.26687C12.5877 8.45991 12.4345 8.68909 12.33 8.94133C12.2254 9.19358 12.1716 9.46394 12.1716 9.73698C12.1715 10.01 12.2252 10.2804 12.3297 10.5327C12.4341 10.785 12.5872 11.0142 12.7803 11.2073C13.1701 11.5973 13.699 11.8165 14.2504 11.8166C14.8018 11.8167 15.3307 11.5977 15.7207 11.2078C16.1107 10.818 16.3299 10.2892 16.33 9.73772C16.3301 9.18628 16.1111 8.65739 15.7212 8.26739Z"
-                                    fill="#219BF4" />
-                            </svg></div>
-                        5 倍性能提升
-                    </div>
-                    <ul>
-                        <li>原生节点部署，5 倍资源利用率提升</li>
-                        <li>支持超大规模数万节点集群运行</li>
-                        <li>高吞吐、低延时，可扩展并行的文件存储</li>
-                    </ul>
-                </div>
-                <div class="card caricon3">
-                    <div class="card-title">
-                        <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M1.99902 11.3468C1.99902 8.78819 1.99902 7.50889 2.41171 6.49787C2.97698 5.11305 4.07594 4.01409 5.46076 3.44882C6.47178 3.03613 7.75108 3.03613 10.3097 3.03613H13.6884C16.247 3.03613 17.5263 3.03613 18.5373 3.44882C19.9221 4.01409 21.0211 5.11305 21.5863 6.49787C21.999 7.50889 21.999 8.78819 21.999 11.3468C21.999 13.9054 21.999 15.1847 21.5863 16.1957C21.0211 17.5805 19.9221 18.6795 18.5373 19.2447C17.5263 19.6574 16.247 19.6574 13.6884 19.6574H12.0043C11.9355 19.7594 11.8496 19.8551 11.7456 19.9414L9.28523 21.9825C8.5877 22.5612 7.52735 22.2733 7.21833 21.4212L6.53065 19.5252C6.12604 19.4642 5.78002 19.3751 5.46076 19.2447C4.07594 18.6795 2.97698 17.5805 2.41171 16.1957C1.99902 15.1847 1.99902 13.9054 1.99902 11.3468ZM7.66535 11.3779C8.38332 11.3779 8.96535 10.7959 8.96535 10.0779C8.96535 9.35996 8.38332 8.77793 7.66535 8.77793C6.94738 8.77793 6.36535 9.35996 6.36535 10.0779C6.36535 10.7959 6.94738 11.3779 7.66535 11.3779ZM17.6331 10.0779C17.6331 10.7959 17.0511 11.3779 16.3331 11.3779C15.6152 11.3779 15.0331 10.7959 15.0331 10.0779C15.0331 9.35996 15.6152 8.77793 16.3331 8.77793C17.0511 8.77793 17.6331 9.35996 17.6331 10.0779ZM15.5701 14.1231C15.9759 13.6376 15.9114 12.9151 15.4259 12.5093C14.9404 12.1035 14.2179 12.1681 13.8121 12.6535C13.4378 13.1012 12.8443 13.4157 12.0454 13.4157C11.238 13.4157 10.4851 13.0074 10.1839 12.65C9.77613 12.1662 9.05335 12.1045 8.56953 12.5123C8.08571 12.9201 8.02407 13.6429 8.43186 14.1267C9.19764 15.0353 10.6091 15.707 12.0454 15.707C13.49 15.707 14.7397 15.1165 15.5701 14.1231Z"
-                                    fill="#219BF4" />
-                            </svg></div>
-                        极高稳定性
-                    </div>
-                    <ul>
-                        <li>节点巡检，故障自愈</li>
-                        <li>自动负载均衡，消除单点故障</li>
-                        <li>基于 Higress Envoy 的配网关</li>
-                    </ul>
-                </div>
-                <div class="card caricon4">
-                    <div class="card-title">
-                        <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M3.46959 4.3159C3.1886 4.41268 3 4.67712 3 4.97431V13.3837C3 18.3542 7.02944 22.3837 12 22.3837C16.9706 22.3837 21 18.3542 21 13.3837V4.97519C21 4.67757 20.8109 4.41286 20.5293 4.31642L13.2747 1.83155C12.4324 1.54302 11.5178 1.5438 10.6759 1.83377L3.46959 4.3159ZM17.1623 8.95692C17.5529 9.34745 17.5529 9.98061 17.1623 10.3711L12.0828 15.4507C12.0727 15.4608 12.0625 15.4706 12.0521 15.4801C11.6599 15.8445 11.0465 15.8358 10.6648 15.4542L7.65707 12.4464C7.26654 12.0559 7.26654 11.4227 7.65707 11.0322C8.04759 10.6417 8.68076 10.6417 9.07128 11.0322L11.3721 13.333L15.7481 8.95692C16.1386 8.5664 16.7718 8.5664 17.1623 8.95692Z"
-                                    fill="#219BF4" />
-                            </svg></div>
-                        100% 安全防护
-                    </div>
-                    <ul>
-                        <li>轻量级虚拟化技术，计算安全隔离</li>
-                        <li>存储隔离且获得本地磁盘同等 IO 能力</li>
-                    </ul>
-                </div>
-            </div>
-            <a class="login-link" href="https://bja.sealos.run/" target="_blank"><button
-                    class="cta-button">立即体验</button></a>
+        <div class="feature iconh2"> <a href="#chargev2">
+          <h3>定价与计费</h3>
+          </a>
+          <p>仅需容器付费，自定义所需 CPU 和内存</p>
         </div>
-    </div>
-    <div class="test">
-        <div class="testimonial-container">
-            <div class="testimonial">"我在 Sealos 上运行 10 个应用近 2 年，包含 3 个数据库，1 个博客，1 个低代码平台，6 个测试平台等，每天只花 4 块钱，真的太不可思议了！"
-            </div>
-            <p>——Sealos个人开发者的真实自述</p>
+        <div class="feature iconh3"> <a href="https://template.bja.sealos.run/" target="_blank">
+          <h3>应用商店</h3>
+          </a>
+          <p>多场景应用工具一键部署</p>
         </div>
+      </div>
     </div>
-    <div class="Feature">
-        <div class="container3">
-            <h1>企业级容器云，优选数据底座</h1>
-            <p>Kubernetes 云内核，多 Region 统一管理</p>
-            <img src="./images/Frame 20765.svg">
+  </div>
+</div>
+<div class="tab-section-tions">
+  <h3 class="tab-h3">应用为中心的企业级容器云</h3>
+  <div class="tab-section">
+    <div class="tab-buttons">
+      <button class="tab-button tabico1 active" data-tab="tab1">应用管理</button>
+      <button class="tab-button tabico2" data-tab="tab2">数据库管理</button>
+      <button class="tab-button tabico3" data-tab="tab3">存储管理</button>
+      <button class="tab-button tabico4" data-tab="tab4">云开发 Laf</button>
+    </div>
+    <div class="tab-content">
+      <div class="tab-pane active" id="tab1">
+        <div class="container">
+          <div class="column">
+            <div class="cloud-module1">
+              <h2>快速上云</h2>
+              <p>广泛的云原生组件，原生 K8s 管理能力</p>
+            </div>
+            <div class="column-kj">
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">应用管理器</h3>
+                <p>一键创建容器集群，自动化部署容器应用</p>
+                <div class="tags"> <span class="tag">App Launchpad</span> <span class="tag">Terminal</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">应用标准化</h3>
+                <p>统一的方式管理和集成，标准化交付应用</p>
+                <div class="tags"> <span class="tag">整体打包</span> <span class="tag">一键交付</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">公网访问</h3>
+                <p>提供内网/外网访问地址</p>
+                <div class="tags"> <span class="tag">自定义域名</span> <span class="tag">自动配置 https</span> </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="cloud-module2">
+              <h2>便利部署</h2>
+              <p>丰富的功能模块，快速实现业务部署</p>
+            </div>
+            <div class="column-kj">
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">容器镜像</h3>
+                <p>有状态容器，轻松运行任意 Docker 镜像</p>
+                <div class="tags"> <span class="tag">镜像仓库</span> <span class="tag">集群镜像</span> <span class="tag">私有镜像</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">资源管理</h3>
+                <p>自定义 CPU 和内存，自动计算调整资源</p>
+                <div class="tags"> <span class="tag">弹性伸缩 HPA</span> <span class="tag">负载均衡</span> <span class="tag">缓存策略</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">内置终端</h3>
+                <p>一键进入容器终端，方便管理和调试</p>
+                <div class="tags"> <span class="tag">命令行参数</span> <span class="tag">批量操作</span> </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="cloud-module3">
+              <h2>超强性能</h2>
+              <p>应用级和租户级网络隔离能力</p>
+            </div>
+            <div class="column-kj">
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">开放兼容</h3>
+                <p>兼容Java、Go、Python、Node.js、Html等语言</p>
+                <div class="tags"> <span class="tag">GitOps</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">极致性能</h3>
+                <p>自研轻量级负载均衡器，支持数万节点集群运行</p>
+                <div class="tags"> <span class="tag">超高性能</span> <span class="tag">Higress Envoy 网关</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">数据安全</h3>
+                <p>应用级和租户级网络隔离能力</p>
+                <div class="tags"> <span class="tag">计算安全隔离</span> <span class="tag">存储隔离</span> </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="specification" id="chargev2">
-        <h1>产品规格</h1>
-        <div class="cloud-services">
-            <div class="public-cloud">
-                <div class="cloud_left">
-                    <div class="cloud-option cloud_coro">
-                        <div class="cloud-header">
-                            <span class="cloud-title">公有云</span>
-                        </div>
-                        <div class="cloud-features">
-                            <p class="cloud-feature">快速启用，精简运维</p>
-                            <p class="cloud-feature">更低上云成本</p>
-                        </div>
-                        <a href="https://bja.sealos.run" class="cloud-cta login-link">
-                            <div class="cloud-cta-container">进入产品</div>
-                        </a>
-                    </div>
-                </div>
+      </div>
+      <div class="tab-pane" id="tab2">
+        <div class="container">
+          <div class="column">
+            <div class="cloud-module1">
+              <h2>高可用</h2>
+              <p>分布式存储，支持快速扩展与无缝迁移</p>
             </div>
-            <div class="private-cloud">
-                <div class="cloud_right">
-                    <div class="cloud-option cloud_coro">
-                        <div class="cloud-header">
-                            <span class="cloud-title">私有云</span>
-                            <span class="cloud-tag">1v1 产品上云方案定制</span>
-                        </div>
-                        <div class="cloud-features">
-                            <p class="cloud-feature cloud-feature-private">1v1 专家服务，定制化解决方案</p>
-                            <p class="cloud-feature cloud-feature-private">本地化灵活部署，私有化数据存储</p>
-                        </div>
-                        <a href="https://fael3z0zfze.feishu.cn/share/base/form/shrcn5oHHTKCf3VREMKOhEy6fmf"
-                            class="cloud-cta" target="_blank">
-                            <div class="cloud-cta-container2">获取专属解决方案</div>
-                        </a>
-                    </div>
-                </div>
+            <div class="column-kj">
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">100% 兼容</h3>
+                <p>全面兼容mysql/redis/mongo/pgsql等生态</p>
+                <div class="tags"> <span class="tag">自定义YAML</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">快速部署</h3>
+                <p>一键自动部署，无须自行构建复杂的多节点架构</p>
+                <div class="tags"> <span class="tag">集群部署</span> <span class="tag">终端连接</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">超性价比</h3>
+                <p>成本降低70%，开源免费</p>
+                <div class="tags"> <span class="tag">0.4元/U</span> <span class="tag">0.2元/G</span> </div>
+              </div>
             </div>
+          </div>
+          <div class="column">
+            <div class="cloud-module2">
+              <h2>高并发性能</h2>
+              <p>以30%的成本提供最高6倍性能提升</p>
+            </div>
+            <div class="column-kj">
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">容器镜像</h3>
+                <p>超百万级 QPS 的高吞吐</p>
+                <div class="tags"> <span class="tag">高并发</span> <span class="tag">高性能</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">性能高优</h3>
+                <p>内核性能更优，支持创建多个只读副本</p>
+                <div class="tags"> <span class="tag">读写分离</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">弹性扩展</h3>
+                <p>自动升降配，秒级完成扩容</p>
+                <div class="tags"> <span class="tag">弹性存储</span> </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="cloud-module3">
+              <h2>高安全</h2>
+              <p>全方位安全加固，企业级安全性和可靠性</p>
+            </div>
+            <div class="column-kj">
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">网络安全</h3>
+                <p>自动维护多个副本，可靠性达99.9999%。</p>
+                <div class="tags"> <span class="tag">安全组</span> <span class="tag">VPC 网络隔离</span> <span class="tag">SSL连接</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">数据安全</h3>
+                <p>定期自动备份，备份文件自动化管理</p>
+                <div class="tags"> <span class="tag">资源监控</span> <span class="tag">状态监控</span> <span class="tag">性能监控</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">容灾安全</h3>
+                <p>主备双机高可用，节点故障秒级无感切换</p>
+                <div class="tags"> <span class="tag">故障自愈</span> <span class="tag">秒级备份回档</span> </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-
-    </div>
-    <!--
-    <div class="charge" id="charge">
-        <h1>计价方案</h1>
-    </div>
-    -->
-    <div class="vids7" style="margin-top: 140px;">
-        <div class="vids8fream">
-            <h2>快速上手</h2>
-            <div class="vids8fream2">
-                <div class="vids7_qy1">
-                    <p><span>01</span>准备容器集群</p>
-                    <div class="vids7bkx"></div>
-                    <p><span>02</span>拉取镜像并创建应用</p>
-                    <div class="vids7bkx"></div>
-                    <p><span>03</span>应用更新与扩容</p>
-                </div>
-                <div class="vids7_rq2">
-                    <ul>
-                        <li>
-                            <div class="vids7_ico">
-                                <div class="vids7ico-0"></div>
-                                <div class="vids7ico-1"></div>
-                                <div class="vids7ico-0"></div>
-                            </div>
-                            <div class="vid7skj2">
-                                <div class="vids7bz">
-                                    <p>创建容器集群</p>
-                                    <p> [可选] 在本地连接云上容器集群</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="vids7_ico">
-                                <div class="vids7ico-0"></div>
-                                <div class="vids7ico-1"></div>
-                                <div class="vids7ico-0"></div>
-                            </div>
-                            <div class="vid7skj2">
-                                <div class="vids7bz">
-                                    <p>使用容器服务支持的官网镜像部署应用</p>
-                                    <p>上传自有应用镜像，并在容器服务中运行</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="vids7_ico">
-                                <div class="vids7ico-0"></div>
-                                <div class="vids7ico-1"></div>
-                                <div class="vids7ico-0"></div>
-                            </div>
-                            <div class="vid7skj2">
-                                <div class="vids7bz">
-                                    <p>通过灰度、蓝绿等发布模式更新应用</p>
-                                    <p> 基于业务需求配置扩所容策略与方案</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="vid7zh">
-                    <div class="vid6zhann"><a class="login-link" href="https://bja.sealos.run" target="_blank">创建应用</a>
-                    </div>
-                </div>
+      </div>
+      <div class="tab-pane" id="tab3">
+        <div class="container">
+          <div class="column">
+            <div class="cloud-module1">
+              <h2>对象存储</h2>
+              <p>支持 TB 到 PB 级数据迁移上云</p>
             </div>
+            <div class="column-kj">
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">数据迁移</h3>
+                <p>根据应用程序类型提供各语言 SDK，实现无缝接入</p>
+                <div class="tags"> <span class="tag">平滑迁移</span> <span class="tag">S3 兼容</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">数据加密</h3>
+                <p>保障数据安全可靠</p>
+                <div class="tags"> <span class="tag">存储加密</span> <span class="tag">传输加密</span> <span class="tag">完整性校验</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">容灾备份</h3>
+                <p>多冗余备份和异地容灾</p>
+                <div class="tags"> <span class="tag">跨地域容灾备份</span> <span class="tag">跨账号数据共享</span> </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="cloud-module2">
+              <h2>文件存储 sealfs</h2>
+              <p>高性能、高可靠性分布式存储</p>
+            </div>
+            <div class="column-kj">
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">极致性能</h3>
+                <p>显著减少I/O延迟，提供近乎裸机的速度体验</p>
+                <div class="tags"> <span class="tag">文件存储</span> <span class="tag">元数据存储</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">可扩展性</h3>
+                <p>天然适应弹性伸缩，轻松应对数据量的爆发性增长。</p>
+                <div class="tags"> <span class="tag">分布式架构</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">简化运维</h3>
+                <p>去中心化管理降低了复杂度，减少了单点故障的风险。</p>
+                <div class="tags"> <span class="tag">灵活定制</span> </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-
-
-
-
-    <div class="h5footer">
-        <div class="h5_footer">
-            <div class="h5footkj">
-                <div class="h5footerlogo"><img src="https://baidu-h5.sealos.run/site/Frame%2020611.svg">
-                    <p>以 kubernetes 为内核的云操作系统</p>
-                </div>
-                <div class="h5footerlm">
-                    <ul>
-                        <li>
-                            <p> 产品</p>
-                        </li>
-                        <li><a href="https://github.com/labring/laf" target="_blank">Laf</a></li>
-                        <li><a href="https://github.com/labring/sealfs" target="_blank">Sealfs</a></li>
-                        <li><a href="https://github.com/labring/FastGPT" target="_blank">FastGPT</a></li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <p>开发者</p>
-                        </li>
-                        <li><a href="https://github.com/labring/sealos/blob/main/CONTRIBUTING.md"
-                                target="_blank">参与贡献</a></li>
-                        <li><a href="https://sealos.run/docs/Intro/" target="_blank">文档中心</a></li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <p>支持者</p>
-                        </li>
-                        <li><a href="https://forum.laf.run/" target="_blank">中文论坛</a></li>
-                        <li><a href="https://github.com/labring/sealos/issues" target="_blank">问题反馈</a></li>
-                        <li><a href="https://sealos.run/company/" target="_blank">关于我们</a></li>
-                    </ul>
-                </div>
+      </div>
+      <div class="tab-pane" id="tab4">
+        <div class="container">
+          <div class="column">
+            <div class="cloud-module1">
+              <h2>开箱即用</h2>
+              <p>内置开发环境，无需配置一键使用</p>
             </div>
-            <div class="h5footerdb">
-                <div class="h5footerdbleft">Sealos. all rights reserved. © 2023</div>
-                <div class="h5footerdbright">
-                    <div class="h5footerico">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <g clip-path="url(#clip0_2983_5966)">
-                                <path
-                                    d="M10.0003 1.6665C5.39616 1.6665 1.66699 5.39567 1.66699 9.99984C1.66605 11.7492 2.216 13.4545 3.23884 14.8737C4.26167 16.293 5.70545 17.3541 7.36533 17.9065C7.78199 17.979 7.93783 17.729 7.93783 17.5098C7.93783 17.3123 7.92699 16.6565 7.92699 15.9582C5.83366 16.344 5.29199 15.4482 5.12533 14.979C5.03116 14.739 4.62533 13.9998 4.27116 13.8015C3.97949 13.6457 3.56283 13.2598 4.26033 13.2498C4.91699 13.239 5.38533 13.854 5.54199 14.104C6.29199 15.364 7.49033 15.0098 7.96866 14.7915C8.04199 14.2498 8.26033 13.8857 8.50033 13.6773C6.64616 13.469 4.70866 12.7498 4.70866 9.56234C4.70866 8.65567 5.03116 7.9065 5.56283 7.32234C5.47949 7.114 5.18783 6.25984 5.64616 5.114C5.64616 5.114 6.34366 4.89567 7.93783 5.969C8.61621 5.78072 9.31713 5.68596 10.0212 5.68734C10.7295 5.68734 11.4378 5.78067 12.1045 5.96817C13.6978 4.88484 14.3962 5.11484 14.3962 5.11484C14.8545 6.26067 14.5628 7.11484 14.4795 7.32317C15.0103 7.9065 15.3337 8.64567 15.3337 9.56234C15.3337 12.7607 13.3862 13.469 11.532 13.6773C11.8337 13.9373 12.0945 14.4373 12.0945 15.219C12.0945 16.3332 12.0837 17.229 12.0837 17.5107C12.0837 17.729 12.2403 17.989 12.657 17.9057C14.3112 17.3472 15.7486 16.284 16.7669 14.8658C17.7852 13.4476 18.3332 11.7458 18.3337 9.99984C18.3337 5.39567 14.6045 1.6665 10.0003 1.6665Z"
-                                    fill="black"></path>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_2983_5966">
-                                    <rect width="20" height="20" fill="white"></rect>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    <div class="h5footerico">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <g clip-path="url(#clip0_2983_5971)">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M12.5696 14.8306C12.3471 14.8848 12.1232 14.9329 11.8981 14.9748C10.6765 15.2048 9.42228 15.2001 8.20242 14.961C7.98878 14.9194 7.68636 14.8458 7.29654 14.7418L6.01886 16.4023C2.86559 16.3011 1.66699 14.1883 1.66699 14.1883C1.66699 9.4979 3.72154 5.69539 3.72154 5.69539C5.77609 4.12361 7.73075 4.16662 7.73075 4.16662L8.28982 4.89494C8.34135 4.88771 8.39321 4.88308 8.4452 4.88106C9.5109 4.7398 10.5909 4.74447 11.6553 4.89494L12.2685 4.16662C12.2685 4.16662 14.2246 4.12361 16.2777 5.69678C16.2777 5.69678 18.3337 9.4979 18.3337 14.1883C18.3337 14.1883 17.1198 16.2997 13.9665 16.4023L12.5696 14.8306ZM7.24466 9.86377C6.41091 9.86377 5.75195 10.488 5.75195 11.251C5.75195 12.014 6.42478 12.6383 7.24466 12.6383C8.07702 12.6383 8.73597 12.014 8.73597 11.251C8.74984 10.488 8.07841 9.86377 7.24466 9.86377ZM12.5829 9.86377C11.7505 9.86377 11.0916 10.488 11.0916 11.251C11.0916 12.014 11.7644 12.6383 12.5829 12.6383C13.4166 12.6383 14.0756 12.014 14.0756 11.251C14.0756 10.488 13.4166 9.86377 12.5829 9.86377Z"
-                                    fill="#6688FF"></path>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_2983_5971">
-                                    <rect width="20" height="20" fill="white"></rect>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    <div class="h5footerico">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M11.3519 16.45C10.9134 16.5304 10.4614 16.5725 9.99961 16.5725C5.88681 16.5725 2.55273 13.2384 2.55273 9.12558C2.55273 5.01279 5.88681 1.67871 9.99961 1.67871C14.1124 1.67871 17.4465 5.01279 17.4465 9.12558C17.4465 11.6234 16.2167 13.8339 14.3297 15.1849L11.9262 18.2663C11.8501 18.3638 11.6946 18.3256 11.6724 18.204L11.3519 16.45ZM7.78078 6.56973C7.4752 6.56973 7.18899 6.71938 7.01463 6.97033L5.532 9.10414L5.52098 9.10987L5.5245 9.11494L5.52098 9.12001L5.53201 9.12574L7.0149 11.2596C7.18927 11.5105 7.47545 11.6601 7.78101 11.6601L8.94893 11.6601L7.62637 9.11494L8.94893 6.56973H7.78078ZM11.5907 11.6814C11.1026 11.6814 10.7068 11.2857 10.7068 10.7975C10.7068 10.3093 11.1026 9.91358 11.5907 9.91358H13.5943C14.0825 9.91358 14.4782 10.3093 14.4782 10.7975C14.4782 11.2857 14.0825 11.6814 13.5943 11.6814H11.5907Z"
-                                fill="#00C1B4"></path>
-                        </svg>
-                    </div>
-                </div>
+            <div class="column-kj">
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">一站式开发</h3>
+                <p>多应用管理，无需配置服务器，一分钟上线</p>
+                <div class="tags"> <span class="tag">数据库内置</span> <span class="tag">对象存储内置</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">开源开放</h3>
+                <p>随时拥有一个属于自己的云开发平台</p>
+                <div class="tags"> <span class="tag">Apache License 2.0</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">高性价比</h3>
+                <p>百万次调用，最低仅需 0.01 元</p>
+                <div class="tags"> <span class="tag">市场最低</span> </div>
+              </div>
             </div>
+          </div>
+          <div class="column">
+            <div class="cloud-module2">
+              <h2>IDE 集成</h2>
+              <p>开发-测试-部署，完整闭环的开发体验</p>
+            </div>
+            <div class="column-kj">
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">在线编程</h3>
+                <p>基于 Web 端的代码编辑器</p>
+                <div class="tags"> <span class="tag">类型提示</span> <span class="tag">在线调试</span> <span class="tag">版本回滚</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">研发提效</h3>
+                <p>代码毫秒级发布上线，没有冷启时间</p>
+                <div class="tags"> <span class="tag">快速响应</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">云存储</h3>
+                <p>提供专业的文件对象存储服务</p>
+                <div class="tags"> <span class="tag">兼容 S3</span> </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="cloud-module3">
+              <h2>智能编码</h2>
+              <p>专注业务本身，节省开发时间</p>
+            </div>
+            <div class="column-kj">
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">AI 编码</h3>
+                <p>编辑指定代码，包括重构、优化、修改部分逻辑</p>
+                <div class="tags"> <span class="tag">代码生成</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">AI 修复</h3>
+                <p>智能测试代码结果，优化bug逻辑，自动修复验收</p>
+                <div class="tags"> <span class="tag">完善逻辑</span> <span class="tag">内测版本</span> </div>
+              </div>
+              <div class="cloud-module">
+                <h3><img src="./images/duihaoico.svg">函数模板</h3>
+                <p>提供多种不同的类型的函数进行调用</p>
+                <div class="tags"> <span class="tag">快速加载</span> </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <script>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<div class="cons">
+  <div class="contai code-ys">
+    <h2>稳定、安全、高性能</h2>
+    <div class="container">
+      <div class="card caricon1">
+        <div class="card-title">
+          <div class="card-icon">
+            <img src="./images/rmb-a.svg">
+          </div>
+          90% 成本缩减 </div>
+        <ul>
+          <li><img src="./images/ico-duihao.svg">云内核设计，多租户共享集群</li>
+          <li><img src="./images/ico-duihao.svg">仅容器付费，资源成本减少 80%</li>
+          <li><img src="./images/ico-duihao.svg">弹性伸缩，自动释放计算资源</li>
+        </ul>
+      </div>
+      <div class="card caricon2">
+        <div class="card-title">
+          <div class="card-icon card-icon2">
+            <img src="./images/rmb-b.svg">
+          </div>
+          5 倍性能提升 </div>
+        <ul>
+          <li><img src="./images/ico-duihao.svg">原生节点部署，5 倍资源利用率提升</li>
+          <li><img src="./images/ico-duihao.svg">支持超大规模数万节点集群运行</li>
+          <li><img src="./images/ico-duihao.svg">高吞吐、低延时，可扩展并行的文件存储</li>
+        </ul>
+      </div>
+      <div class="card caricon3">
+        <div class="card-title">
+          <div class="card-icon card-icon3">
+            <img src="./images/rmb-c.svg">
+          </div>
+          极高稳定性 </div>
+        <ul>
+          <li><img src="./images/ico-duihao.svg">节点巡检，故障自愈</li>
+          <li><img src="./images/ico-duihao.svg">自动负载均衡，消除单点故障</li>
+          <li><img src="./images/ico-duihao.svg">基于 Higress Envoy 的配网关</li>
+        </ul>
+      </div>
+      <div class="card caricon4">
+        <div class="card-title">
+          <div class="card-icon card-icon4">
+            <img src="./images/rmb-d.svg">
+          </div>
+          100% 安全防护 </div>
+        <ul>
+          <li><img src="./images/ico-duihao.svg">轻量级虚拟化技术，计算安全隔离</li>
+          <li><img src="./images/ico-duihao.svg">存储隔离且获得本地磁盘同等 IO 能力</li>
+        </ul>
+      </div>
+    </div>
+    <a href="https://bja.sealos.run/" target="_blank">
+    <button class="cta-button">立即体验</button>
+    </a> </div>
+</div>
+<div class="test">
+  <div class="testimonial-container">
+    <div class="testimonial">"我在 Sealos 上运行 10 个应用近 2 年，包含 3 个数据库，1 个博客，1 个低代码平台，6 个测试平台等，每天只花 4 块钱，真的太不可思议了！" </div>
+    <p>——Sealos个人开发者的真实自述</p>
+  </div>
+</div>
+<div class="Feature">
+  <div class="container3">
+    <h2>Sealos 的能力，远不止于此</h2>
+    <p>不断进化的功能，等你来体验</p>
+    <img src="./images/Frame 20765.svg"> </div>
+</div>
+<div class="fooddos">
+<div class="specification" id="chargev2">
+  <h2>卓越架构</h2>
+  <div class="ddos">
+    <ul>
+      <li><img src="./images/ddos-1.svg"> DDOS防护</li>
+      <li><img src="./images/ddos-2.svg"> Gartner 认证</li>
+      <li><img src="./images/ddos-3.svg"> 应用防火墙</li>
+      <li><img src="./images/ddos-4.svg"> 数据安全中心</li>
+    </ul>
+    <ul>
+      <li><img src="./images/ddos-5.svg"> 集群隔离</li>
+      <li><img src="./images/ddos-6.svg"> 存储管理</li>
+      <li><img src="./images/ddos-7.svg"> 身份防护</li>
+      <li><img src="./images/ddos-8.svg"> 加密服务</li>
+    </ul>
+  </div>
+</div>
+<div class="hzkh">
+  <h2>合作客户</h2>
+<img src="./images/hzkh8.svg">
+</div>
+</div>
+<div class="vids7">
+  <div class="vids7-left">
+<h3>开始新建</h3>
+<p>属于自己的企业级应用</p>
+<div class="login-footer1"><a href="https://hzh.sealos.run/" target="_blank" class="login-footer">开始使用</a>
+<a href="https://fael3z0zfze.feishu.cn/share/base/form/shrcn5oHHTKCf3VREMKOhEy6fmf" target="_blank" class="login-footer2">解决方案</a>
+</div>
+  </div>
+  <div class="vids7-right">
+<img src="./images/image33.svg">
+  </div>
+</div>
+<div class="h5footer" id="footer">
+</div>
+<script>
         var _hmt = _hmt || [];
         (function () {
             var hm = document.createElement("script")
@@ -750,8 +461,15 @@
             var s = document.getElementsByTagName("script")[0]
             s.parentNode.insertBefore(hm, s)
         })();
-    </script>
-
+</script>
+<script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+</script>
 </body>
-
 </html>

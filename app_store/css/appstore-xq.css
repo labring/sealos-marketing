@@ -1245,7 +1245,7 @@ button::-moz-focus-inner {
 }
 @media screen and (min-width: 1280px) {
   .navtop {
-    width: 1180px;
+    width: 1280px;
   }
   .sidebar {
     width: 300px;

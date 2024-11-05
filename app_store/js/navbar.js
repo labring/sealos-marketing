@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   </div>
                   <div class="list-gj1">
                     <ul>
-                     <a href="../alist"> <li> <img src="../../../app_store/img/Alist.svg" class="list-gijtitleico">
+                     <a href="/app_store/tool/alist"> <li> <img src="../../../app_store/img/Alist.svg" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>Alist 🔥</h2>
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>支持多种云盘存储的在线网盘管理系统</p>
                         </div>
                       </li></a>
-                      <a href="../affine"><li> <img src="../../../app_store/img/favicon-144.png" class="list-gijtitleico">
+                      <a href="/app_store/tool/affine"><li> <img src="../../../app_store/img/favicon-144.png" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>Affine</h2>
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>基于现代技术栈开发的开源笔记软件</p>
                         </div>
                       </li></a>
-                     <a href="../headscale"> <li> <img src="../../../app_store/img/headscale3-dots.svg" class="list-gijtitleico">
+                     <a href="/app_store/tool/headscale"> <li> <img src="../../../app_store/img/headscale3-dots.svg" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>Headscale</h2>
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>用于构建自己的 WireGuard 网络</p>
                         </div>
                       </li></a>
-                      <a href="../deeplx"><li> <img src="../../../app_store/img/DeeplX.svg" class="list-gijtitleico">
+                      <a href="/app_store/tool/deeplx"><li> <img src="../../../app_store/img/DeeplX.svg" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>DeeplX</h2>
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
                       </li></a>
                     </ul>
                     <ul>
-                      <a href="../Vaultwarden"><li> <img src="../../../app_store/img/vaultwarden-icon.svg" class="list-gijtitleico">
+                      <a href="/app_store/tool/Vaultwarden"><li> <img src="../../../app_store/img/vaultwarden-icon.svg" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>Vaultwarden</h2>
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>开源密码管理器</p>
                         </div>
                       </li></a>
-                     <a href="../kuboard"> <li> <img src="../../../app_store/img/favicon.png" class="list-gijtitleico">
+                     <a href="/app_store/tool/kuboard"> <li> <img src="../../../app_store/img/favicon.png" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>kuboard</h2>
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>专为 Kubernetes 设计的免费管理界面</p>
                         </div>
                       </li></a>
-                      <a href="../blossom"><li> <img src="../../../app_store/img/141598483.png" class="list-gijtitleico">
+                      <a href="/app_store/tool/blossom"><li> <img src="../../../app_store/img/141598483.png" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>blossom</h2>
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>创建和管理双向链接的笔记软件</p>
                         </div>
                       </li></a>
-                     <a href="../code-server"> <li> <img src="../../../app_store/img/favicon11.svg" class="list-gijtitleico">
+                     <a href="/app_store/tool/code-server"> <li> <img src="../../../app_store/img/favicon11.svg" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>code-server</h2>
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   </div>
                   <div class="list-gj1">
                     <ul>
-                      <a href="../chatgpt-next-web"><li> <img src="../../../app_store/img/iconchatgpt.svg" class="list-gijtitleico">
+                      <a href="/app_store/ai/chatgpt-next-web"><li> <img src="../../../app_store/img/iconchatgpt.svg" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>Chatgpt-next-web</h2>
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>跨平台的 ChatGPT/Gemini UI</p>
                         </div>
                       </li></a>
-                      <a href="../fastgpt"><li> <img src="../../../app_store/img/fastgpt.svg" class="list-gijtitleico">
+                      <a href="/app_store/ai/fastgpt"><li> <img src="../../../app_store/img/fastgpt.svg" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>FastGPT  🔥</h2>
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>大语言AI模型的企业级智能问答知识库</p>
                         </div>
                       </li></a>
-                     <a href="../chatgpt-on-wechat"> <li> <img src="../../../app_store/img/26161723.jpeg" class="list-gijtitleico">
+                     <a href="/app_store/ai/chatgpt-on-wechat"> <li> <img src="../../../app_store/img/26161723.jpeg" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>ChatGpt-on-Wechat</h2>
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>基于大模型的智能对话机器人</p>
                         </div>
                       </li></a>
-                      <a href="../chatgpt-web"><li> <img src="../../../app_store/img/chat-web.svg" class="list-gijtitleico">
+                      <a href="/app_store/ai/chatgpt-web"><li> <img src="../../../app_store/img/chat-web.svg" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>Chatgpt-Web</h2>
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
                       </li></a>
                     </ul>
                     <ul>
-                      <a href="../chatgpt-midjourney"><li> <img src="../../../app_store/img/chatmidjourney.ico" class="list-gijtitleico">
+                      <a href="/app_store/ai/chatgpt-midjourney"><li> <img src="../../../app_store/img/chatmidjourney.ico" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>Chatgpt-Midjourney</h2>
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>集成了多种人工智能技术的网页服务框架</p>
                         </div>
                       </li></a>
-                      <a href="../gpt-academic"><li> <img src="../../../app_store/img/chatacademic.png" class="list-gijtitleico">
+                      <a href="/app_store/ai/gpt-academic"><li> <img src="../../../app_store/img/chatacademic.png" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>Gpt-Academic</h2>
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>论文阅读/写作润色优化的学术GPT</p>
                         </div>
                       </li></a>
-                     <a href="../librechat"> <li> <img src="../../../app_store/img/librechat.svg" class="list-gijtitleico">
+                     <a href="/app_store/ai/librechat"> <li> <img src="../../../app_store/img/librechat.svg" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>LibreChat</h2>
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>增强版的 ChatGPT</p>
                         </div>
                       </li></a>
-                     <a href="../one-api"> <li> <img src="../../../app_store/img/oneapi.ico" class="list-gijtitleico">
+                     <a href="/app_store/ai/one-api"> <li> <img src="../../../app_store/img/oneapi.ico" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>One-api 🔥</h2>
@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   </div>
                   <div class="list-gj1">
                     <ul>
-                     <a href="../teable"> <li> <img src="../../../app_store/img/x9gZmjwbtvaGd95qbfUmsZ8Jc.png" class="list-gijtitleico">
+                     <a href="/app_store/mysql/teable"> <li> <img src="../../../app_store/img/x9gZmjwbtvaGd95qbfUmsZ8Jc.png" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>Teable</h2>
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>企业级高性能多维表格解决方案</p>
                         </div>
                       </li></a>
-                     <a href="../pgadmin4"> <li> <img src="../../../app_store/img/logo-128.png" class="list-gijtitleico">
+                     <a href="/app_store/mysql/pgadmin4"> <li> <img src="../../../app_store/img/logo-128.png" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>Pgadmin4</h2>
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>数据库可视化管理神器</p>
                         </div>
                       </li></a>
-                      <a href="../nocodb"><li> <img src="../../../app_store/img/nocodb-logo.svg" class="list-gijtitleico">
+                      <a href="/app_store/mysql/nocodb"><li> <img src="../../../app_store/img/nocodb-logo.svg" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>NocoDB</h2>
@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>将数据库转换为易于操作的在线电子表格</p>
                         </div>
                       </li></a>
-                      <a href="../redisInsight"><li> <img src="../../../app_store/img/redisinsight.svg" class="list-gijtitleico">
+                      <a href="/app_store/mysql/redisInsight"><li> <img src="../../../app_store/img/redisinsight.svg" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>RedisInsight</h2>
@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function() {
                       </li>t</a>
                     </ul>
                     <ul>
-                      <a href="../influxdb"><li> <img src="../../../app_store/img/5713248.png" class="list-gijtitleico">
+                      <a href="/app_store/mysql/influxdb"><li> <img src="../../../app_store/img/5713248.png" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>Influxdb</h2>
@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>开源分布式时序、事件和指标数据库</p>
                         </div>
                       </li></a>
-                     <a href="../bytebase"> <li> <img src="../../../app_store/img/bytebase.svg" class="list-gijtitleico">
+                     <a href="/app_store/mysql/bytebase"> <li> <img src="../../../app_store/img/bytebase.svg" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>Bytebase</h2>
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>数据库版本控制、更改跟踪和实时修改</p>
                         </div>
                       </li></a>
-                     <a href="../dataease"> <li> <img src="../../../app_store/img/DataEase.png" class="list-gijtitleico">
+                     <a href="/app_store/mysql/dataease"> <li> <img src="../../../app_store/img/DataEase.png" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>DataEase</h2>
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>人人可用的开源数据可视化分析工具</p>
                         </div>
                       </li></a>
-                     <a href="../metabase"> <li> <img src="../../../app_store/img/metabase.svg" class="list-gijtitleico">
+                     <a href="/app_store/mysql/metabase"> <li> <img src="../../../app_store/img/metabase.svg" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>Metabase</h2>
@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   </div>
                   <div class="list-gj1">
                     <ul>
-                     <a href="../appsmith"> <li> <img src="../../../app_store/img/Appsmith.png" class="list-gijtitleico">
+                     <a href="/app_store/pass/appsmith"> <li> <img src="../../../app_store/img/Appsmith.png" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>Appsmith</h2>
@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>构建管理面板/CRUD/应用程序和工作流</p>
                         </div>
                       </li></a>
-                      <a href="../pageplug"><li> <img src="../../../app_store/img/PagePlug.ico" class="list-gijtitleico">
+                      <a href="/app_store/pass/pageplug"><li> <img src="../../../app_store/img/PagePlug.ico" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>PagePlug</h2>
@@ -305,7 +305,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>基于Appsmith进行汉化的低代码工具</p>
                         </div>
                       </li></a>
-                      <a href="../fireboom"><li> <img src="../../../app_store/img/Fireboom.png" class="list-gijtitleico">
+                      <a href="/app_store/pass/fireboom"><li> <img src="../../../app_store/img/Fireboom.png" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>Fireboom</h2>
@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>API公有云平台,可视化开发和AI辅助</p>
                         </div>
                       </li></a>
-                      <a href="../illabuilder"><li> <img src="../../../app_store/img/ILLA Builder.svg" class="list-gijtitleico">
+                      <a href="/app_store/pass/illabuilder"><li> <img src="../../../app_store/img/ILLA Builder.svg" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>ILLA Builder</h2>
@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', function() {
                       </li></a>
                     </ul>
                     <ul>
-                      <a href="../halo"><li> <img src="../../../app_store/img/Halo.svg" class="list-gijtitleico">
+                      <a href="/app_store/pass/halo"><li> <img src="../../../app_store/img/Halo.svg" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>Halo</h2>
@@ -334,7 +334,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>强大易用的开源建站工具</p>
                         </div>
                       </li></a>
-                      <a href="../wordpress"><li> <img src="../../../app_store/img/WordPress.svg" class="list-gijtitleico">
+                      <a href="/app_store/pass/wordpress"><li> <img src="../../../app_store/img/WordPress.svg" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>WordPress</h2>
@@ -343,7 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <p>博客建站工具</p>
                         </div>
                       </li></a>
-                      <a href="../flarum"><li> <img src="../../../app_store/img/Flarum.png" class="list-gijtitleico">
+                      <a href="/app_store/pass/flarum"><li> <img src="../../../app_store/img/Flarum.png" class="list-gijtitleico">
                         <div class="list-gij-title">
                           <div class="title-top">
                             <h2>Flarum</h2>
