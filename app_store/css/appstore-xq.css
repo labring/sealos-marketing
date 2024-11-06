@@ -1248,7 +1248,7 @@ button::-moz-focus-inner {
     width: 1280px;
   }
   .sidebar {
-    width: 300px;
+    width: 350px;
   }
   .hard-top-title {
     width: 370px;
@@ -1267,7 +1267,7 @@ button::-moz-focus-inner {
 }
 @media screen and (min-width: 1440px) {
   .hard-top-title {
-    width: 560px;
+    width: 510px;
   }
   .app-h5 {
     width: 100%;
