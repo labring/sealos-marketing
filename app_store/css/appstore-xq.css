@@ -589,6 +589,15 @@ img {
   border-radius: 8px;
   background: #E4F1FF;
 }
+.footer-title{
+font-size: 24px;
+font-weight: bold;
+margin-left: 8px;
+}
+.h5footerlogo2{
+  display: flex;
+  align-items: center;
+}
 .sealos-detice{
   color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
   font-family: "PingFang SC";

@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <p>Bytebase<span class="sub-muen-desctie"> - 数据库版本控制、更改和修改</span></p>
               </div>
               </a> </li>
-            <li data-page="dataease"><a href="/app_store/mysql/dataEase">
+            <li data-page="dataease"><a href="/app_store/mysql/dataease">
               <div class="sub-menu-lef"> <span class="dot blossom-color"></span>
                 <p>DataEase<span class="sub-muen-desctie"> - 数据可视化分析工具</span></p>
               </div>
