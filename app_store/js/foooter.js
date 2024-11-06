@@ -75,7 +75,15 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </div>
   </div>
-
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d8e8ecf669c47dc2512d3f1417e761f9";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
     `;
 
     // 获取导航栏容器并插入内容
