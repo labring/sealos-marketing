@@ -362,7 +362,8 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
           </li>
           <!---<li><a href="#blog">客户案例</a></li>-->
-          <li><a href="https://sealos.run/docs/Intro/" target="_blank">学习&帮助</a></li>
+          <li><a href="/Price" target="_blank">定价</a></li>
+          <li><a href="https://sealos.run/docs/Intro/" target="_blank">帮助文档</a></li>
           <li><a href="https://forum.laf.run/" target="_blank">社区</a></li>
         </ul>
       </div>

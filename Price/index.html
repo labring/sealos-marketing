@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品定价-Sealos</title>
+    <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
+    <link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
+    <script src="../../../app_store/js/appstor.js" defer></script>
+    <script src="../../../app_store/js/navbar.js"></script>
+    <script src="../../../app_store/js/foooter.js"></script>
+    <link rel="stylesheet" href="../images/css/price.css">
+</head>
+<body>
+    <div id="navbar-container" class="navbar-container1"></div>
+    <div class="price">
+        <div class="calculator">
+            <div class="col">计费系统</div>
+            <div class="pricing-info">
+                <div class="pricine-jg">单价</div>
+                <div>
+                    <span>CPU: 6 元/核心/月</span>
+                    <span style="margin-left: 20px">内存: 3 元/G/月</span>
+                </div>
+            </div>
+            <div class="jsq">
+                <div class="slider-container">
+                    <div class="slider-label">
+                        <span>CPU</span>
+                        <span id="cpuValue">256 核</span>
+                    </div>
+                    <div class="slider-wrapper">
+                        <input type="range" min="8" max="2048" value="8" class="slider" id="cpuSlider">
+                        <div class="slider-ticks">
+                            <span class="tick tick1" data-value="8">8核</span>
+                            <span class="tick tick2" data-value="256">256核</span>
+                            <span class="tick tick3" data-value="512">512核</span>
+                            <span class="tick tick4" data-value="1024">1024核</span>
+                            <span class="tick tick5" data-value="2048">2048核</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-container">
+                    <div class="slider-label">
+                        <span>内存</span>
+                        <span id="memoryValue">512 G</span>
+                    </div>
+                    <div class="slider-wrapper">
+                        <input type="range" min="16" max="4096" value="16" class="slider" id="memorySlider">
+                        <div class="slider-ticks">
+                            <span class="tick tick1" data-value="16">16G</span>
+                            <span class="tick tick2" data-value="512">512G</span>
+                            <span class="tick tick3" data-value="1024">1024G</span>
+                            <span class="tick tick4" data-value="2048">2048G</span>
+                            <span class="tick tick5" data-value="4096">4096G</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-jsq">
+                <div class="year">月数</div>
+                <select id="monthSelect">
+                    <option value="1">1个月</option>
+                    <option value="3">3个月</option> 
+                    <option value="6">6个月</option>
+                    <option value="12">1年</option>
+                    <option value="24">2年</option>
+                    <option value="36">3年</option>
+                </select>
+            </div>
+
+
+
+            <div class="total">
+                价格<span class="total-span">¥</span>  <span id="totalPrice">0</span>
+            </div>
+        </div>
+        <script>
+            const cpuSlider = document.getElementById('cpuSlider');
+            const memorySlider = document.getElementById('memorySlider');
+            const monthSelect = document.getElementById('monthSelect');
+            const cpuValue = document.getElementById('cpuValue');
+            const memoryValue = document.getElementById('memoryValue');
+            const totalPrice = document.getElementById('totalPrice');
+
+            function calculatePrice() {
+                const cpu = parseInt(cpuSlider.value);
+                const memory = parseInt(memorySlider.value);
+                const months = parseInt(monthSelect.value) * 1;
+                
+                const cpuPrice = cpu * 6;
+                const memoryPrice = memory * 3;
+                const total = (cpuPrice + memoryPrice) * months;
+
+                cpuValue.textContent = `${cpu} 核`;
+                memoryValue.textContent = `${memory} G`;
+                totalPrice.textContent = total.toLocaleString();
+            }
+
+            cpuSlider.addEventListener('input', calculatePrice);
+            memorySlider.addEventListener('input', calculatePrice);
+            monthSelect.addEventListener('change', calculatePrice);
+
+            // Initial calculation
+            calculatePrice();
+
+            document.querySelectorAll('.tick').forEach(tick => {
+                tick.addEventListener('click', function() {
+                    const value = this.dataset.value;
+                    const slider = this.closest('.slider-wrapper').querySelector('.slider');
+                    slider.value = value;
+                    
+                    // 触发 input 事件以更新显示和计算
+                    const event = new Event('input', {
+                        bubbles: true,
+                        cancelable: true,
+                    });
+                    slider.dispatchEvent(event);
+                });
+            });
+        </script>
+    </div>
+
+    <div class="h5footer" id="footer"></div>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</body>
+</html>
