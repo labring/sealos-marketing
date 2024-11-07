@@ -486,6 +486,9 @@ video {
 .card ul li img {
   margin-right: 6px;
 }
+.btn-primary svg{
+  margin-left: 10px;
+}
 .cta-button {
   color: white;
   border: none;
