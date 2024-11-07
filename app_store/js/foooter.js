@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </div>
   </div>
-<script>
+  <script>
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");

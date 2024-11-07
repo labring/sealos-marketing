@@ -40,7 +40,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="slider-container">
                     <div class="slider-label">
                         <span>内存</span>
@@ -58,23 +57,19 @@
                     </div>
                 </div>
             </div>
-
             <div class="year-jsq">
                 <div class="year">月数</div>
                 <select id="monthSelect">
                     <option value="1">1个月</option>
-                    <option value="3">3个月</option> 
+                    <option value="3">3个月</option>
                     <option value="6">6个月</option>
                     <option value="12">1年</option>
                     <option value="24">2年</option>
                     <option value="36">3年</option>
                 </select>
             </div>
-
-
-
             <div class="total">
-                价格<span class="total-span">¥</span>  <span id="totalPrice">0</span>
+                价格<span class="total-span">¥</span> <span id="totalPrice">0</span>
             </div>
         </div>
         <script>
@@ -88,7 +83,7 @@
             function calculatePrice() {
                 const cpu = parseInt(cpuSlider.value);
                 const memory = parseInt(memorySlider.value);
-                const months = parseInt(monthSelect.value) * 1;
+                const months = parseInt(monthSelect.value);
                 
                 const cpuPrice = cpu * 6;
                 const memoryPrice = memory * 3;
@@ -103,7 +98,6 @@
             memorySlider.addEventListener('input', calculatePrice);
             monthSelect.addEventListener('change', calculatePrice);
 
-            // Initial calculation
             calculatePrice();
 
             document.querySelectorAll('.tick').forEach(tick => {
@@ -112,7 +106,6 @@
                     const slider = this.closest('.slider-wrapper').querySelector('.slider');
                     slider.value = value;
                     
-                    // 触发 input 事件以更新显示和计算
                     const event = new Event('input', {
                         bubbles: true,
                         cancelable: true,
@@ -122,17 +115,24 @@
             });
         </script>
     </div>
-
-    <div class="h5footer" id="footer"></div>
-
-    <script>
+<div class="h5footer" id="footer"></div>
+<script>
         var _hmt = _hmt || [];
-        (function () {
+        (function() {
             var hm = document.createElement("script");
             hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6";
             var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
-    </script>
+</script>
+<script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?d8e8ecf669c47dc2512d3f1417e761f9";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+</script>
 </body>
 </html>
