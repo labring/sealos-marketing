@@ -681,7 +681,7 @@ video {
   margin-top: 160px;
   margin-bottom: 80px;
 }
-.hzkh img {}
+
 .ddos ul {
   gap: 50px;
   list-style: none;
@@ -1298,17 +1298,11 @@ a {
 .hero-video img{
   width: 80%;
 }
-
-
-
 }
 @media screen and (min-width: 1680px) {
   .tab-section-tions, .hero, .navbar-container, .contai, .test, .Feature, .charge, .specification, .vids7, .h5_footer {
     width: 1440px;
     margin: 0 auto;
-  }
-  .nav-links li a{
-    font-size: 18px;
   }
   .hero-stats{
     gap: 40px;

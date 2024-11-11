@@ -26,8 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
         // 添加 s 参数
         newUrl += (newUrl.includes('?') ? '&' : '?') + 's=bd-sealos-appstore-game-Paru'
   
-        // 在新窗口中打开修改后的URL
-        window.open(newUrl, '_blank')
       })
     })
 })

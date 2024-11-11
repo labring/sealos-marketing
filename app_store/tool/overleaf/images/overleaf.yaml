@@ -1,0 +1,525 @@
+apiVersion: app.sealos.io/v1
+kind: Instance
+metadata:
+  name: overleaf-pebtsmcz
+  labels:
+    cloud.sealos.io/deploy-on-sealos: overleaf-pebtsmcz
+spec:
+  gitRepo: https://github.com/overleaf/overleaf
+  templateType: inline
+  categories:
+    - tool
+  defaults:
+    app_host:
+      type: string
+      value: overleaf-hvddgetb
+    app_name:
+      type: string
+      value: overleaf-pebtsmcz
+  inputs:
+    OVERLEAF_SITE_LANGUAGE:
+      description: Set language
+      type: string
+      default: zh-CN
+      required: false
+    OVERLEAF_APP_NAME:
+      description: ''
+      type: string
+      default: Overleaf Community Edition
+      required: false
+    ENABLED_LINKED_FILE_TYPES:
+      description: ''
+      type: string
+      default: project_file,project_output_file
+      required: false
+    ENABLE_CONVERSIONS:
+      description: Enables Thumbnail generation using ImageMagick
+      type: string
+      default: 'true'
+      required: false
+    EMAIL_CONFIRMATION_DISABLED:
+      description: Disables email confirmation requirementk
+      type: string
+      default: 'true'
+      required: false
+  title: Overleaf
+  url: https://github.com/overleaf/overleaf
+  author: Sealos
+  description: Overleaf is an open-source online real-time collaborative LaTeX editor.
+  readme: https://cdn.jsdelivr.net/gh/overleaf/overleaf@main/README.md
+  icon: https://avatars.githubusercontent.com/u/6359919?s=48&v=4
+  deployCount: 2
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: overleaf-pebtsmcz
+  annotations:
+    originImageName: sharelatex/sharelatex:5.0.6
+    deploy.cloud.sealos.io/minReplicas: '1'
+    deploy.cloud.sealos.io/maxReplicas: '1'
+  labels:
+    cloud.sealos.io/app-deploy-manager: overleaf-pebtsmcz
+    app: overleaf-pebtsmcz
+    cloud.sealos.io/deploy-on-sealos: overleaf-pebtsmcz
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  minReadySeconds: 10
+  serviceName: overleaf-pebtsmcz
+  selector:
+    matchLabels:
+      app: overleaf-pebtsmcz
+  template:
+    metadata:
+      labels:
+        app: overleaf-pebtsmcz
+    spec:
+      terminationGracePeriodSeconds: 10
+      automountServiceAccountToken: false
+      containers:
+        - name: overleaf-pebtsmcz
+          image: sharelatex/sharelatex:5.0.6
+          env:
+            - name: OVERLEAF_MONGO_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: overleaf-pebtsmcz-mongo-conn-credential
+                  key: password
+            - name: OVERLEAF_MONGO_URL
+              value: >-
+                mongodb://root:$(OVERLEAF_MONGO_PASS)@overleaf-pebtsmcz-mongo-mongodb..svc:27017/sharelatex?authSource=admin
+            - name: OVERLEAF_REDIS_HOST
+              value: overleaf-pebtsmcz-redis-redis
+            - name: OVERLEAF_REDIS_PORT
+              value: '6379'
+            - name: OVERLEAF_REDIS_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: overleaf-pebtsmcz-redis-conn-credential
+                  key: password
+            - name: OVERLEAF_LISTEN_IP
+              value: 0.0.0.0
+            - name: OVERLEAF_SITE_LANGUAGE
+              value: zh-CN
+            - name: OVERLEAF_APP_NAME
+              value: Overleaf Community Edition
+            - name: ENABLED_LINKED_FILE_TYPES
+              value: project_file,project_output_file
+            - name: ENABLE_CONVERSIONS
+              value: 'true'
+            - name: EMAIL_CONFIRMATION_DISABLED
+              value: 'true'
+            - name: TEXMFVAR
+              value: /var/lib/overleaf/tmp/texmf-var
+            - name: OVERLEAF_APP_NAME
+              value: Overleaf Community Edition
+            - name: OVERLEAF_BEHIND_PROXY
+              value: 'true'
+          resources:
+            requests:
+              cpu: 50m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 1280Mi
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 80
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: vn-varvn-libvn-overleaf
+              mountPath: /var/lib/overleaf
+  volumeClaimTemplates:
+    - metadata:
+        annotations:
+          path: /var/lib/overleaf
+          value: '1'
+        name: vn-varvn-libvn-overleaf
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: overleaf-pebtsmcz
+  labels:
+    cloud.sealos.io/app-deploy-manager: overleaf-pebtsmcz
+    cloud.sealos.io/deploy-on-sealos: overleaf-pebtsmcz
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: overleaf-pebtsmcz
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: overleaf-pebtsmcz
+  labels:
+    cloud.sealos.io/app-deploy-manager: overleaf-pebtsmcz
+    cloud.sealos.io/app-deploy-manager-domain: overleaf-hvddgetb
+    cloud.sealos.io/deploy-on-sealos: overleaf-pebtsmcz
+  annotations:
+    higress.io/response-header-control-remove: X-Frame-Options
+    higress.io/response-header-control-update: >
+      Content-Security-Policy "default-src * blob: data: *.sealoshzh.site
+      sealoshzh.site; img-src * data: blob: resource: *.sealoshzh.site
+      sealoshzh.site; connect-src * wss: blob: resource:; style-src 'self'
+      'unsafe-inline' blob: *.sealoshzh.site sealoshzh.site resource:;
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: *.sealoshzh.site
+      sealoshzh.site resource: *.baidu.com *.bdstatic.com; frame-src 'self'
+      *.sealoshzh.site sealoshzh.site mailto: tel: weixin: mtt: *.baidu.com;
+      frame-ancestors 'self' https://sealoshzh.site https://*.sealoshzh.site"
+
+      X-Xss-Protection "1; mode=block"
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: 32m
+    nginx.ingress.kubernetes.io/server-snippet: |
+      client_header_buffer_size 64k;
+      large_client_header_buffers 4 128k;
+    nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/client-body-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-send-timeout: '300'
+    nginx.ingress.kubernetes.io/proxy-read-timeout: '300'
+    nginx.ingress.kubernetes.io/configuration-snippet: >
+      more_clear_headers "X-Frame-Options:";
+
+      more_set_headers "Content-Security-Policy: default-src * blob: data:
+      *.sealoshzh.site sealoshzh.site; img-src * data: blob: resource:
+      *.sealoshzh.site sealoshzh.site; connect-src * wss: blob: resource:;
+      style-src 'self' 'unsafe-inline' blob: *.sealoshzh.site sealoshzh.site
+      resource:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:
+      *.sealoshzh.site sealoshzh.site resource: *.baidu.com *.bdstatic.com;
+      frame-src 'self' *.sealoshzh.site sealoshzh.site mailto: tel: weixin: mtt:
+      *.baidu.com; frame-ancestors 'self' https://sealoshzh.site
+      https://*.sealoshzh.site";
+
+      more_set_headers "X-Xss-Protection: 1; mode=block";
+
+      if ($request_uri ~* \.(js|css|gif|jpe?g|png)) {
+        expires 30d;
+        add_header Cache-Control "public";
+      }
+spec:
+  rules:
+    - host: overleaf-hvddgetb.sealoshzh.site
+      http:
+        paths:
+          - pathType: Prefix
+            path: /()(.*)
+            backend:
+              service:
+                name: overleaf-pebtsmcz
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - overleaf-hvddgetb.sealoshzh.site
+      secretName: wildcard-cert
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: overleaf-pebtsmcz-redirect
+  labels:
+    cloud.sealos.io/app-deploy-manager: overleaf-pebtsmcz
+    cloud.sealos.io/app-deploy-manager-domain: overleaf-hvddgetb
+    cloud.sealos.io/deploy-on-sealos: overleaf-pebtsmcz
+  annotations:
+    higress.io/response-header-control-remove: X-Frame-Options
+    higress.io/response-header-control-update: >
+      Content-Security-Policy "default-src * blob: data: *.sealoshzh.site
+      sealoshzh.site; img-src * data: blob: resource: *.sealoshzh.site
+      sealoshzh.site; connect-src * wss: blob: resource:; style-src 'self'
+      'unsafe-inline' blob: *.sealoshzh.site sealoshzh.site resource:;
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: *.sealoshzh.site
+      sealoshzh.site resource: *.baidu.com *.bdstatic.com; frame-src 'self'
+      *.sealoshzh.site sealoshzh.site mailto: tel: weixin: mtt: *.baidu.com;
+      frame-ancestors 'self' https://sealoshzh.site https://*.sealoshzh.site"
+
+      X-Xss-Protection "1; mode=block"
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: 32m
+    nginx.ingress.kubernetes.io/server-snippet: |
+      client_header_buffer_size 64k;
+      large_client_header_buffers 4 128k;
+    nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/rewrite-target: /launchpad
+    nginx.ingress.kubernetes.io/client-body-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-send-timeout: '300'
+    nginx.ingress.kubernetes.io/proxy-read-timeout: '300'
+    nginx.ingress.kubernetes.io/configuration-snippet: >
+      more_clear_headers "X-Frame-Options:";
+
+      more_set_headers "Content-Security-Policy: default-src * blob: data:
+      *.sealoshzh.site sealoshzh.site; img-src * data: blob: resource:
+      *.sealoshzh.site sealoshzh.site; connect-src * wss: blob: resource:;
+      style-src 'self' 'unsafe-inline' blob: *.sealoshzh.site sealoshzh.site
+      resource:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:
+      *.sealoshzh.site sealoshzh.site resource: *.baidu.com *.bdstatic.com;
+      frame-src 'self' *.sealoshzh.site sealoshzh.site mailto: tel: weixin: mtt:
+      *.baidu.com; frame-ancestors 'self' https://sealoshzh.site
+      https://*.sealoshzh.site";
+
+      more_set_headers "X-Xss-Protection: 1; mode=block";
+
+      if ($request_uri ~* \.(js|css|gif|jpe?g|png)) {
+        expires 30d;
+        add_header Cache-Control "public";
+      }
+spec:
+  rules:
+    - host: overleaf-hvddgetb.sealoshzh.site
+      http:
+        paths:
+          - pathType: Exact
+            path: /
+            backend:
+              service:
+                name: overleaf-pebtsmcz
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - overleaf-hvddgetb.sealoshzh.site
+      secretName: wildcard-cert
+
+---
+apiVersion: app.sealos.io/v1
+kind: App
+metadata:
+  name: overleaf-pebtsmcz
+  labels:
+    cloud.sealos.io/app-deploy-manager: overleaf-pebtsmcz
+    cloud.sealos.io/deploy-on-sealos: overleaf-pebtsmcz
+spec:
+  data:
+    url: https://overleaf-hvddgetb.sealoshzh.site
+  displayType: normal
+  icon: https://avatars.githubusercontent.com/u/6359919?s=48&v=4
+  name: Overleaf
+  type: iframe
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    sealos-db-provider-cr: overleaf-pebtsmcz-mongo
+    app.kubernetes.io/instance: overleaf-pebtsmcz-mongo
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: overleaf-pebtsmcz
+  name: overleaf-pebtsmcz-mongo
+
+---
+apiVersion: apps.kubeblocks.io/v1alpha1
+kind: Cluster
+metadata:
+  finalizers:
+    - cluster.kubeblocks.io/finalizer
+  labels:
+    clusterdefinition.kubeblocks.io/name: mongodb
+    clusterversion.kubeblocks.io/name: mongodb-5.0
+    sealos-db-provider-cr: overleaf-pebtsmcz-mongo
+    cloud.sealos.io/deploy-on-sealos: overleaf-pebtsmcz
+  annotations: {}
+  name: overleaf-pebtsmcz-mongo
+  generation: 1
+spec:
+  affinity:
+    nodeLabels: {}
+    podAntiAffinity: Preferred
+    tenancy: SharedNode
+    topologyKeys: []
+  clusterDefinitionRef: mongodb
+  clusterVersionRef: mongodb-5.0
+  backup:
+    enabled: true
+    cronExpression: 0 18 * * *
+    method: backupTool
+    pitrEnabled: false
+    retentionPeriod: 7d
+  componentSpecs:
+    - componentDefRef: mongodb
+      monitor: true
+      name: mongodb
+      replicas: 1
+      resources:
+        limits:
+          cpu: 500m
+          memory: 512Mi
+        requests:
+          cpu: 50m
+          memory: 51Mi
+      serviceAccountName: overleaf-pebtsmcz-mongo
+      volumeClaimTemplates:
+        - name: data
+          spec:
+            accessModes:
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: 3Gi
+            storageClassName: openebs-backup
+  terminationPolicy: Delete
+  tolerations: []
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  labels:
+    sealos-db-provider-cr: overleaf-pebtsmcz-mongo
+    app.kubernetes.io/instance: overleaf-pebtsmcz-mongo
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: overleaf-pebtsmcz
+  name: overleaf-pebtsmcz-mongo
+rules:
+  - apiGroups:
+      - '*'
+    resources:
+      - '*'
+    verbs:
+      - '*'
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  labels:
+    sealos-db-provider-cr: overleaf-pebtsmcz-mongo
+    app.kubernetes.io/instance: overleaf-pebtsmcz-mongo
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: overleaf-pebtsmcz
+  name: overleaf-pebtsmcz-mongo
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: overleaf-pebtsmcz-mongo
+subjects:
+  - kind: ServiceAccount
+    name: overleaf-pebtsmcz-mongo
+    namespace: null
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    sealos-db-provider-cr: overleaf-pebtsmcz-redis
+    app.kubernetes.io/instance: overleaf-pebtsmcz-redis
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: overleaf-pebtsmcz
+  name: overleaf-pebtsmcz-redis
+
+---
+apiVersion: apps.kubeblocks.io/v1alpha1
+kind: Cluster
+metadata:
+  finalizers:
+    - cluster.kubeblocks.io/finalizer
+  labels:
+    clusterdefinition.kubeblocks.io/name: redis
+    clusterversion.kubeblocks.io/name: redis-7.0.6
+    sealos-db-provider-cr: overleaf-pebtsmcz-redis
+    cloud.sealos.io/deploy-on-sealos: overleaf-pebtsmcz
+  annotations: {}
+  name: overleaf-pebtsmcz-redis
+spec:
+  affinity:
+    nodeLabels: {}
+    podAntiAffinity: Preferred
+    tenancy: SharedNode
+    topologyKeys: []
+  clusterDefinitionRef: redis
+  clusterVersionRef: redis-7.0.6
+  componentSpecs:
+    - componentDefRef: redis
+      monitor: true
+      name: redis
+      replicas: 1
+      resources:
+        limits:
+          cpu: 1000m
+          memory: 1024Mi
+        requests:
+          cpu: 100m
+          memory: 102Mi
+      serviceAccountName: overleaf-pebtsmcz-redis
+      switchPolicy:
+        type: Noop
+      volumeClaimTemplates:
+        - name: data
+          spec:
+            accessModes:
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: 3Gi
+            storageClassName: openebs-backup
+    - componentDefRef: redis-sentinel
+      monitor: true
+      name: redis-sentinel
+      replicas: 1
+      resources:
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        requests:
+          cpu: 100m
+          memory: 100Mi
+      serviceAccountName: overleaf-pebtsmcz-redis
+  terminationPolicy: Delete
+  tolerations: []
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  labels:
+    sealos-db-provider-cr: overleaf-pebtsmcz-redis
+    app.kubernetes.io/instance: overleaf-pebtsmcz-redis
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: overleaf-pebtsmcz
+  name: overleaf-pebtsmcz-redis
+rules:
+  - apiGroups:
+      - '*'
+    resources:
+      - '*'
+    verbs:
+      - '*'
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  labels:
+    sealos-db-provider-cr: overleaf-pebtsmcz-redis
+    app.kubernetes.io/instance: overleaf-pebtsmcz-redis
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: overleaf-pebtsmcz
+  name: overleaf-pebtsmcz-redis
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: overleaf-pebtsmcz-redis
+subjects:
+  - kind: ServiceAccount
+    name: overleaf-pebtsmcz-redis
+    namespace: null
