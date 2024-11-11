@@ -1,0 +1,126 @@
+apiVersion: app.sealos.io/v1
+kind: Instance
+metadata:
+  name: phpmyadmin-jsbcfkjw
+  labels:
+    cloud.sealos.io/deploy-on-sealos: phpmyadmin-jsbcfkjw
+spec:
+  gitRepo: https://github.com/phpmyadmin/phpmyadmin
+  templateType: inline
+  categories:
+    - tool
+  defaults:
+    app_name:
+      type: string
+      value: phpmyadmin-jsbcfkjw
+    app_host:
+      type: string
+      value: ylrpfrho
+  inputs: {}
+  title: phpmyadmin
+  url: https://www.phpmyadmin.net/
+  author: Sealos
+  description: A web interface for MySQL and MariaDB.
+  readme: https://cdn.jsdelivr.net/gh/phpmyadmin/phpmyadmin@master/README.rst
+  icon: https://cdn.jsdelivr.net/gh/phpmyadmin/phpmyadmin@master/public/favicon.ico
+  deployCount: 1
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: phpmyadmin-jsbcfkjw
+  annotations:
+    originImageName: phpmyadmin:5.2.1
+    deploy.cloud.sealos.io/minReplicas: '1'
+    deploy.cloud.sealos.io/maxReplicas: '1'
+  labels:
+    cloud.sealos.io/app-deploy-manager: phpmyadmin-jsbcfkjw
+    app: phpmyadmin-jsbcfkjw
+    cloud.sealos.io/deploy-on-sealos: phpmyadmin-jsbcfkjw
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: phpmyadmin-jsbcfkjw
+  template:
+    metadata:
+      labels:
+        app: phpmyadmin-jsbcfkjw
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: phpmyadmin-jsbcfkjw
+          image: phpmyadmin:5.2.1
+          env:
+            - name: PMA_ARBITRARY
+              value: '1'
+          resources:
+            requests:
+              cpu: 50m
+              memory: 25Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+          ports:
+            - containerPort: 80
+          imagePullPolicy: IfNotPresent
+          volumeMounts: []
+      volumes: []
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: phpmyadmin-jsbcfkjw
+  labels:
+    cloud.sealos.io/app-deploy-manager: phpmyadmin-jsbcfkjw
+    cloud.sealos.io/app-deploy-manager-domain: ylrpfrho
+    cloud.sealos.io/deploy-on-sealos: phpmyadmin-jsbcfkjw
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: 32m
+    nginx.ingress.kubernetes.io/server-snippet: |
+      client_header_buffer_size 64k;
+      large_client_header_buffers 4 128k;
+    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/client-body-buffer-size: 64k
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 64k
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      if ($request_uri ~* \.(js|css|gif|jpe?g|png)) {
+        expires 30d;
+        add_header Cache-Control "public";
+      }
+spec:
+  rules:
+    - host: ylrpfrho.sealoshzh.site
+      http:
+        paths:
+          - pathType: Prefix
+            path: /()(.*)
+            backend:
+              service:
+                name: phpmyadmin-jsbcfkjw
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - ylrpfrho.sealoshzh.site
+      secretName: wildcard-cert
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: phpmyadmin-jsbcfkjw
+  labels:
+    cloud.sealos.io/app-deploy-manager: phpmyadmin-jsbcfkjw
+    cloud.sealos.io/deploy-on-sealos: phpmyadmin-jsbcfkjw
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: phpmyadmin-jsbcfkjw

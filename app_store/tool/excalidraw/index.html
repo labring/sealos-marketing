@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用Sealos部署excalidraw教程</title>
+    <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
+    <link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
+    <script src="../../../app_store/js/appstor.js" defer></script>
+    <script src="../../../app_store/js/navbar.js"></script>
+    <script src="../../../app_store/js/header-left.js"></script>
+    <script src="../../../app_store/js/about-right.js"></script>
+    <script src="../../../app_store/js/foooter.js"></script>
+    <script src="../../../app_store/js/step.js"></script>
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <div class="stepxq">
+        <div class="left-list" id="left-header"></div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.querySelector('.nav-item[data-page="tool"]').classList.add('active');
+                document.querySelector('li[data-page="excalidraw"]').classList.add('active');
+            });
+        </script>
+        <div class="app-h5">
+            <div class="hard-top">
+                <div class="hard-title-stats">
+                    <div class="title-stats">
+                        <div class="title-logo">
+                            <img src="../../img/Excalidraw.png" alt="Kuboard Logo">
+                        </div>
+                        <div class="hard-top-title">
+                            <div class="hard-top2">
+                                <h1>Excalidraw</h1>
+                                <span class="stats">
+                                    <span class="stars">
+                                        <img src="../../img/AFFINE-logo2.svg">84.4k
+                                    </span>
+                                    <span class="shares">
+                                        <img src="../../img/project.svg">
+                                        <a href="https://github.com/excalidraw/excalidraw" target="_blank">项目首页</a>
+                                    </span>
+                                </span>
+                            </div>
+                            <p class="app-decistore">基于 Web 的开源矢量图形编辑工具，主要包含白板、流程图的能力，简单好用。旨在帮助用户快速创建简单且美观的图形。</p>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="yaml-button">
+                            <a href="./images/excalidraw.yaml" download>导出 Yaml</a>
+                        </button>
+                        <button class="deploy-button">
+                            <a href="https://hzh.sealos.run/?openapp=system-template%3FtemplateName%3Dexcalidraw%26sealos_inside%3Dtrue"
+                                target="_blank">一键安装</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel">
+                    <div class="carousel-container">
+                        <img src="./images/banner1.png" alt="Image 1" class="carousel-item active">
+                        <img src="./images/banner2.png" alt="Image 2" class="carousel-item">
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-button prev">&lt;</button>
+                        <button class="carousel-button next">&gt;</button>
+                    </div>
+                    <script src="../../../app_store/js/bannerlb.js"></script>
+                </div>
+                <div class="quick-start">
+                    <h2 class="quick-start-h2">
+                        <img src="../../img/Rectangle 34624253.svg">如何部署在线 Excalidraw
+                    </h2>
+                    <div class="steps" id="steper"></div>
+                </div>
+                <div class="features-list">
+                    <h2 class="quick-start-h2">
+                        <img src="../../img/Rectangle 34624253.svg">什么是 Excalidraw
+                    </h2>
+                    <ul class="features-list-ul">
+                        <li>Excalidraw 它是近两年新起的一款画图工具，基于 Web
+                            的开源矢量图形编辑工具，主要包含白板、流程图的能力，简单好用。旨在帮助用户快速创建简单且美观的图形。它提供了一个简洁的绘图界面，用户可以使用鼠标或触摸屏在画布上绘制各种形状，如线条、矩形、圆形等。同时，Excalidraw
+                            还支持多种颜色和线条样式，使用户能够自由地定制图形的外观。
+
+                            Excalidraw 的特点是其简单易用和实时协作功能。用户只需打开网页，即可开始绘制图形，无需下载或安装任何软件。此外，Excalidraw
+                            还支持多人同时编辑同一画布，用户可以邀请其他人加入协作，实时查看和编辑彼此的绘图内容。这使得 Excalidraw 成为团队协作和远程工作的理想选择。
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="features-list">
+                    <h2 class="quick-start-h2">
+                        <img src="../../img/Rectangle 34624253.svg">功能列表
+                    </h2>
+                    <ul class="features-list-ul">
+                        <li>
+                            <p>支持手绘风格的草图设计</p>
+                        </li>
+                        <li>
+                            <p>支持流程图, 思维导图的设计</p>
+                        </li>
+                        <li>
+                            <p>支持多人协同</p>
+                        </li>
+                        <li>
+                            <p>支持会议白板, 激光笔标注</p>
+                        </li>
+                        <li>
+                            <p>支持多种导出格式</p>
+                        </li>
+                        <li>
+                            <p>支持二次开发</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="app-faq" id="about-right"></div>
+    </div>
+    <div class="h5footer" id="footer"></div>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</body>
+
+</html>
