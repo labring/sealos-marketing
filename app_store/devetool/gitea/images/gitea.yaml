@@ -1,0 +1,274 @@
+apiVersion: app.sealos.io/v1
+kind: Instance
+metadata:
+  name: gitea-tpxzohkg
+  labels:
+    cloud.sealos.io/deploy-on-sealos: gitea-tpxzohkg
+spec:
+  gitRepo: https://github.com/go-gitea/gitea
+  templateType: inline
+  categories:
+    - tool
+  defaults:
+    app_name:
+      type: string
+      value: gitea-tpxzohkg
+    app_host:
+      type: string
+      value: ayuzjtbh
+  inputs: {}
+  title: Gitea
+  url: https://gitea.com
+  author: Gitea
+  description: >-
+    An all-in-one software development service, including Git hosting, code
+    review, team collaboration, package registry, and CI/CD.
+  readme: https://jsd.onmicrosoft.cn/gh/go-gitea/gitea@main/README_ZH.md
+  icon: >-
+    https://jsd.onmicrosoft.cn/gh/go-gitea/gitea@main/public/assets/img/gitea.svg
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: gitea-tpxzohkg
+  annotations:
+    originImageName: gitea/gitea:1.22.0-rootless
+    deploy.cloud.sealos.io/minReplicas: '1'
+    deploy.cloud.sealos.io/maxReplicas: '1'
+  labels:
+    cloud.sealos.io/app-deploy-manager: gitea-tpxzohkg
+    app: gitea-tpxzohkg
+    cloud.sealos.io/deploy-on-sealos: gitea-tpxzohkg
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: gitea-tpxzohkg
+  updateStrategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 50%
+  minReadySeconds: 10
+  serviceName: gitea-tpxzohkg
+  template:
+    metadata:
+      labels:
+        app: gitea-tpxzohkg
+    spec:
+      terminationGracePeriodSeconds: 10
+      automountServiceAccountToken: false
+      containers:
+        - name: gitea-tpxzohkg
+          image: gitea/gitea:1.22.0-rootless
+          env:
+            - name: GITEA__database__DB_TYPE
+              value: mysql
+            - name: GITEA__database__HOST
+              value: gitea-tpxzohkg-mysql-mysql..svc:3306
+            - name: GITEA__database__NAME
+              value: mydb
+            - name: GITEA__database__USER
+              value: root
+            - name: GITEA__database__PASSWD
+              valueFrom:
+                secretKeyRef:
+                  name: gitea-tpxzohkg-mysql-conn-credential
+                  key: password
+          resources:
+            requests:
+              cpu: 50m
+              memory: 51Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
+          ports:
+            - containerPort: 3000
+            - containerPort: 2222
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: vn-varvn-libvn-gitea
+              mountPath: /var/lib/gitea
+            - name: vn-tmpvn-gitea
+              mountPath: /tmp/gitea
+            - name: vn-etcvn-gitea
+              mountPath: /etc/gitea
+      volumes: []
+      securityContext:
+        fsGroup: 1000
+        runAsUser: 1000
+  volumeClaimTemplates:
+    - metadata:
+        annotations:
+          path: /var/lib/gitea
+          value: '5'
+        name: vn-varvn-libvn-gitea
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 5Gi
+    - metadata:
+        annotations:
+          path: /tmp/gitea
+          value: '5'
+        name: vn-tmpvn-gitea
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 5Gi
+    - metadata:
+        annotations:
+          path: /etc/gitea
+          value: '1'
+        name: vn-etcvn-gitea
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gitea-tpxzohkg
+  labels:
+    cloud.sealos.io/app-deploy-manager: gitea-tpxzohkg
+    cloud.sealos.io/deploy-on-sealos: gitea-tpxzohkg
+spec:
+  ports:
+    - port: 3000
+      targetPort: 3000
+      name: gitea-tpxzohkg-http-port
+    - port: 2222
+      targetPort: 2222
+      name: gitea-tpxzohkg-ssh-port
+  selector:
+    app: gitea-tpxzohkg
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: gitea-tpxzohkg
+  labels:
+    cloud.sealos.io/app-deploy-manager: gitea-tpxzohkg
+    cloud.sealos.io/app-deploy-manager-domain: ayuzjtbh
+    cloud.sealos.io/deploy-on-sealos: gitea-tpxzohkg
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - host: ayuzjtbh.sealoshzh.site
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: gitea-tpxzohkg
+                port:
+                  number: 3000
+  tls:
+    - hosts:
+        - ayuzjtbh.sealoshzh.site
+      secretName: wildcard-cert
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    sealos-db-provider-cr: gitea-tpxzohkg-mysql
+    app.kubernetes.io/instance: gitea-tpxzohkg-mysql
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: gitea-tpxzohkg
+  name: gitea-tpxzohkg-mysql
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  labels:
+    sealos-db-provider-cr: gitea-tpxzohkg-mysql
+    app.kubernetes.io/instance: gitea-tpxzohkg-mysql
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: gitea-tpxzohkg
+  name: gitea-tpxzohkg-mysql
+rules:
+  - apiGroups:
+      - '*'
+    resources:
+      - '*'
+    verbs:
+      - '*'
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  labels:
+    sealos-db-provider-cr: gitea-tpxzohkg-mysql
+    app.kubernetes.io/instance: gitea-tpxzohkg-mysql
+    app.kubernetes.io/managed-by: kbcli
+    cloud.sealos.io/deploy-on-sealos: gitea-tpxzohkg
+  name: gitea-tpxzohkg-mysql
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: gitea-tpxzohkg-mysql
+subjects:
+  - kind: ServiceAccount
+    name: gitea-tpxzohkg-mysql
+
+---
+apiVersion: apps.kubeblocks.io/v1alpha1
+kind: Cluster
+metadata:
+  finalizers:
+    - cluster.kubeblocks.io/finalizer
+  labels:
+    clusterdefinition.kubeblocks.io/name: apecloud-mysql
+    clusterversion.kubeblocks.io/name: ac-mysql-8.0.30
+    sealos-db-provider-cr: gitea-tpxzohkg-mysql
+    cloud.sealos.io/deploy-on-sealos: gitea-tpxzohkg
+  annotations: {}
+  name: gitea-tpxzohkg-mysql
+spec:
+  affinity:
+    nodeLabels: {}
+    podAntiAffinity: Preferred
+    tenancy: SharedNode
+    topologyKeys: []
+  clusterDefinitionRef: apecloud-mysql
+  clusterVersionRef: ac-mysql-8.0.30
+  componentSpecs:
+    - componentDefRef: mysql
+      monitor: true
+      name: mysql
+      replicas: 1
+      resources:
+        limits:
+          cpu: 1000m
+          memory: 1024Mi
+        requests:
+          cpu: 100m
+          memory: 102Mi
+      serviceAccountName: gitea-tpxzohkg-mysql
+      volumeClaimTemplates:
+        - name: data
+          spec:
+            accessModes:
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: 3Gi
+            storageClassName: openebs-backup
+  terminationPolicy: Delete
+  tolerations: []
