@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                     </a>
                 </li>
-                <li data-page="gitea"><a href="/app_store/tool/gitea">
+                <li data-page="gitea"><a href="/app_store/devetool/gitea">
                         <div class="sub-menu-lef"> <span class="dot blossom-color"></span>
                             <p>Gitea<span class="sub-muen-desctie">-自托管 Git 服务</span></p>
                         </div>
@@ -242,6 +242,12 @@ document.addEventListener('DOMContentLoaded', function () {
               <li data-page="flarum"><a href="/app_store/pass/flarum">
                 <div class="sub-menu-lef"> <span class="dot code-color"></span>
                   <p>Flarum<span class="sub-muen-desctie"> - 论坛软件</span></p>
+                </div>
+                </a> 
+              </li>
+              <li data-page="crmeb"><a href="/app_store/pass/crmeb">
+                <div class="sub-menu-lef"> <span class="dot code-color"></span>
+                  <p>CRMEB<span class="sub-muen-desctie"> - 论坛软件</span></p>
                 </div>
                 </a> 
               </li>
