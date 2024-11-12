@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function () {
               </li>
               <li data-page="crmeb"><a href="/app_store/pass/crmeb">
                 <div class="sub-menu-lef"> <span class="dot code-color"></span>
-                  <p>CRMEB<span class="sub-muen-desctie"> - 论坛软件</span></p>
+                  <p>CRMEB<span class="sub-muen-desctie"> - 开源商城框架</span></p>
                 </div>
                 </a> 
               </li>
