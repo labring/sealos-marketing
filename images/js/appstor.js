@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       newUrl += (newUrl.includes('?') ? '&' : '?') + 's=bd-sealos-marketing-appstore'
 
-      window.open(newUrl, '_blank')
+      window.open(newUrl, '_self')
     })
 
   })
