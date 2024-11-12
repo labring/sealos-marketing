@@ -19,20 +19,30 @@
 		.number-input {
 			display: flex;
 			align-items: center;
-			border: 1px solid #E8EBF0;
+			border: 0.84px solid var(--Gray-Modern-200, #E8EBF0);
 			color: #667085;
 			border-radius: 4px;
-			width: fit-content;
+			width: 236px;
 			background: #F7F8FA;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.number-input .right-element {
+			position: absolute;
+			right: 26px;
+			font-size: 10px;
+			font-weight: 500;
+
 		}
 
 		.quantity-input {
-			width: 60px;
+			width: 215px;
 			border: none;
-			text-align: center;
-			padding: 8px;
+			padding: 6px 10px;
+			box-sizing: border-box;
 			background-color: #F7F8FA;
-			font-size: 14px;
+			font-size: 10px;
 			outline: none;
 			-moz-appearance: textfield;
 			/* Firefox */
@@ -44,27 +54,56 @@
 			margin: 0;
 		}
 
-		.arrows {
-			display: flex;
-			flex-direction: column;
-			border-left: 1px solid #E8EBF0;
+		.cpu-number-input,
+		.memory-number-input {
+			width: 88px;
 		}
 
-		.arrow {
+		.cpu-number-input .quantity-input,
+		.memory-number-input .quantity-input {
+			width: 52px;
+		}
+
+		.number-input .arrows {
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			height: 100%;
+			border-left: 0.84px solid #E8EBF0;
+		}
+
+		.number-input .arrow {
+
 			border: none;
 			background: none;
-			padding: 4px 8px;
+			width: 20px;
+			height: 13px;
+			padding: 1px 5px;
 			cursor: pointer;
 			color: #667085;
 			font-size: 8px;
 		}
 
-		.arrow:hover {
+		.number-input .arrow:hover {
 			background-color: #f5f5f5;
 		}
 
-		.up {
-			border-bottom: 1px solid #ddd;
+		.number-input .up img,
+		.number-input .down img {
+			width: 10.13px;
+			height: 10.13px;
+			/* Inside auto layout */
+			flex: none;
+			order: 0;
+			flex-grow: 0;
+
+		}
+
+		.number-input .up {
+			border-bottom: 0.84px solid #ddd;
 		}
 
 		/* time select */
@@ -80,7 +119,7 @@
 			justify-content: space-between;
 			padding: 8px 12px;
 			background: white;
-			border: 1px solid #E8EBF0;
+			border: 0.84px solid #E8EBF0;
 			border-radius: 8px;
 			cursor: pointer;
 			font-size: 14px;
@@ -94,8 +133,9 @@
 			right: 0;
 			margin-top: 4px;
 			background: white;
-			border: 1px solid #E8EBF0;
+			border: 0.84px solid #E8EBF0;
 			border-radius: 8px;
+			overflow: hidden;
 			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			display: none;
 			z-index: 1000;
@@ -123,6 +163,89 @@
 		.arrow-icon {
 			transition: transform 0.2s ease;
 		}
+
+		.region-select-container .select-trigger {
+			/* dropdown */
+			box-sizing: border-box;
+
+			width: 300px;
+			height: 36px;
+
+			background: #FFFFFF;
+			/* light/general/outline-low */
+			border: 0.84px solid #E8EBF0;
+			/* light/1 */
+			box-shadow: 0px 1px 2px rgba(19, 51, 107, 0.05), 0px 0px 1px rgba(19, 51, 107, 0.08);
+			border-radius: 6px;
+			/* Inside auto layout */
+			flex: none;
+			order: 0;
+			flex-grow: 1;
+		}
+
+		.region-select-container .option,
+		.region-select-container .select-options,
+		.region-select-container .select-trigger,
+		.region-select-container .menu-select {
+			width: 300px;
+		}
+
+		.time-select-container .select-trigger {
+			width: 85px;
+			height: 27px;
+			/* light/general/surface-low */
+			background: #F7F8FA;
+			/* light/general/outline-low */
+			border: 0.844131px solid #E8EBF0;
+			border-radius: 5.27381px;
+			font-weight: 400;
+			font-size: 10px;
+			/* Gray modern/900 */
+			color: #24282C;
+		}
+
+		.time-select-container .option,
+		.time-select-container .select-options,
+		.time-select-container .select-trigger,
+		.time-select-container .menu-select {
+			width: 85px;
+		}
+
+		.time-select-container2 {
+			width: auto;
+		}
+
+		.select-label {
+			/* 可用区 */
+
+			width: 49.53px;
+			height: 20px;
+
+			/* label/large */
+			font-family: 'PingFang SC';
+			font-style: normal;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 20px;
+			/* identical to box height, or 143% */
+			display: flex;
+			align-items: flex-end;
+			letter-spacing: 0.1px;
+
+			/* light/general/on-surface */
+			color: #111824;
+
+
+			/* Inside auto layout */
+			flex: none;
+			order: 0;
+			flex-grow: 0;
+		}
+
+		.duration-input-container {
+			display: flex;
+			gap: 10px;
+		}
 	</style>
 	<style>
 		/* 段落式进度条 */
@@ -130,7 +253,8 @@
 			position: relative;
 			width: 300px;
 			padding: 20px 0;
-			margin: 0 40px;
+			margin-right: 40px;
+			/* margin: 0 40px; */
 		}
 
 		.slider-track {
@@ -186,6 +310,391 @@
 			color: #667085;
 		}
 	</style>
+
+	<style>
+		main {
+			/* Ellipse 108 */
+
+			position: relative;
+
+		}
+
+		main .ellipse {
+			/* Ellipse 108 */
+
+			position: absolute;
+			width: 524.84px;
+			height: 524.84px;
+			left: calc(50% - 524.84px/2 - 411.42px);
+			top: 28.77px;
+			z-index: -1;
+			background: rgba(235, 242, 255, 0.7);
+			filter: blur(61.8477px);
+
+		}
+
+		main .main-container {
+
+			width: 960px;
+			margin: 40px auto;
+		}
+
+		.price-header {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0px;
+			width: 100%;
+			height: 36px;
+			margin-bottom: 24px;
+		}
+
+		.price-header .title {
+			/* 定价 */
+
+			height: 36px;
+
+			font-family: 'Inter';
+			font-style: normal;
+			font-weight: 600;
+			font-size: 28px;
+			line-height: 36px;
+			/* identical to box height, or 129% */
+
+			/* light/general/on-surface */
+			color: #111824;
+
+
+			/* Inside auto layout */
+			flex: none;
+			order: 1;
+			flex-grow: 0;
+		}
+
+		.price-header .title-container {
+			/* Frame 427319392 */
+
+			/* Auto layout */
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 0px;
+			gap: 13.51px;
+
+			height: 36px;
+
+
+			/* Inside auto layout */
+			flex: none;
+			order: 0;
+			flex-grow: 0;
+
+		}
+
+		.price-calculator {
+			display: flex;
+			width: 960px;
+			height: 517px;
+			background: #FFFFFF;
+			box-shadow: 0px 0px 0.682898px rgba(0, 0, 0, 0.05), 0px 3.15903px 12.6361px rgba(182, 202, 224, 0.28);
+			border-radius: 12px;
+			border: Mixed solid var(--Gray-Modern-200, #E8EBF0)
+		}
+
+		.region-select-container {
+			/* Frame 20856 */
+			/* Auto layout */
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 0px;
+			gap: 24px;
+
+			width: 376.76px;
+			height: 36px;
+
+
+			/* Inside auto layout */
+			flex: none;
+			order: 1;
+			flex-grow: 0;
+
+		}
+
+		.calculator-container {
+			/* Frame 427319389 */
+			width: 701px;
+			height: 517px;
+			padding: 20px 35px;
+			border-radius: 10.1296px 0px 0px 10.1296px;
+		}
+
+		.price-table-container {
+			border-left: 0.84px solid var(--Gray-Modern-200, #E8EBF0);
+			padding: 20px 24px;
+		}
+
+		.calculator-header,
+		.price-table-header {
+			/* Frame 20858 */
+
+			/* Auto layout */
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0;
+		}
+
+		.calculator-header {
+			margin-bottom: 17px;
+			width: 629px;
+			height: 32px;
+		}
+
+		.price-header {
+			width: 100%;
+			margin-bottom: 15px;
+		}
+
+		.calculator-header+.line {
+			margin-top: 13px;
+			margin-bottom: 17px;
+			border: 0.84px solid var(--Gray-Modern-200, #E8EBF0)
+		}
+
+		.calculator-header .title,
+		.price-table-header .title {
+			/* 价格计算器 */
+			height: 22px;
+
+			font-family: 'PingFang SC';
+			font-style: normal;
+			font-weight: 500;
+			font-size: 16.8826px;
+			line-height: 22px;
+			/* identical to box height, or 130% */
+			display: flex;
+			align-items: flex-end;
+			letter-spacing: 0.12662px;
+
+			/* light/general/on-surface */
+			color: #111824;
+
+			/* Inside auto layout */
+			flex: none;
+			order: 0;
+			flex-grow: 0;
+
+		}
+
+		.calculator-container .cpu-resource,
+		.calculator-container .memory-resource {
+			/* Frame 20837 */
+			/* Auto layout */
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			padding: 5.06479px 0px;
+			gap: 8.44px;
+
+			width: 528px;
+			height: 37.14px;
+			/* Inside auto layout */
+			flex: none;
+			order: 0;
+			align-self: stretch;
+			flex-grow: 0;
+
+		}
+
+		.resource-item,
+		.usage-item {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			padding: 0px;
+			width: auto;
+		}
+
+		.calculator-container .resource-item>label,
+		.calculator-container .usage-item>label {
+			display: flex;
+			gap: 5px;
+			align-items: center;
+			width: 125px;
+			/* height: 17px; */
+			/* Inside auto layout */
+			flex: none;
+			order: 0;
+			flex-grow: 0;
+			font-family: PingFang SC;
+			font-size: 11px;
+			font-weight: 500;
+
+		}
+
+		.calculator-content {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+			/* margin: 0 auto; */
+			width: 630px;
+		}
+
+		.calculator-content>section {
+			/* Frame 20906 */
+			/* Auto layout */
+			display: flex;
+			flex-direction: row;
+			/* justify-content: space-between; */
+			align-items: flex-start;
+			padding: 0px;
+		}
+
+		.total-price {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		.total-price .price {
+			color: #1890ff;
+			font-size: 24px;
+			font-weight: 500;
+		}
+
+		.calculator-input {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+
+		.section-title {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 6.75305px 0.844131px;
+			gap: 8.44px;
+			/* margin: 0 auto; */
+			width: 100px;
+			/* Inside auto layout */
+			flex: none;
+			order: 0;
+			flex-grow: 0;
+		}
+
+		.section-title span {
+			/* Line 44 */
+
+			width: 8.44px;
+			height: 0px;
+
+			/* light/sealos/secondary */
+			border: 3.37652px solid #219BF4;
+			transform: rotate(90deg);
+
+			/* Inside auto layout */
+			flex: none;
+			order: 0;
+			flex-grow: 0;
+
+		}
+
+		/* Add more specific styles as needed */
+	</style>
+	<style scoped>
+		.price-list {
+			width: 212px;
+			padding: 0;
+			margin-top: 15px;
+			background: #FFFFFF;
+		}
+
+		.price-list-header {
+			display: grid;
+			grid-template-columns: 90px 1fr;
+			align-items: center;
+			padding: 11px 20px;
+			background: #F4F4F7;
+			border-radius: 5px;
+		}
+
+		.price-list-header span {
+			font-size: 10px;
+			font-weight: 500;
+			color: #111824;
+			letter-spacing: 0.42px;
+		}
+
+		.unit-price {
+			display: flex;
+			align-items: center;
+			gap: 3.4px;
+			justify-content: flex-start;
+		}
+
+		.unit-price img {
+			width: 10px;
+			height: 10px;
+		}
+
+		.price-items {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.price-item {
+			display: grid;
+			/* 修改为grid布局并设置两列 */
+			grid-template-columns: 90px 1fr;
+			justify-content: space-between;
+			align-items: center;
+			padding: 15px 20px;
+			height: 44px;
+		}
+
+		.resource {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+		}
+
+		.resource img {
+			width: 13.5px;
+			height: 13.5px;
+		}
+
+		.resource span {
+			font-size: 10px;
+			font-weight: 500;
+			color: #111824;
+			letter-spacing: 0.42px;
+		}
+
+		.price-value {
+			display: flex;
+			align-items: center;
+			gap: 3.4px;
+			justify-content: flex-start;
+		}
+
+		.price-value-amount {
+			font-size: 12px;
+			font-weight: 500;
+			color: #0884DD;
+			letter-spacing: 0.08px;
+		}
+
+		.price-value-unit {
+			font-size: 10px;
+			font-weight: 500;
+			color: #667085;
+			letter-spacing: 0.42px;
+		}
+	</style>
 </head>
 
 <body>
@@ -194,203 +703,358 @@
 			<div id="navbar-container"></div>
 		</div>
 	</div>
-	<div>
-		<div>
-			<div>
-				CPU
-			</div>
-			<!-- cpu -->
-			<div class="segmented-slider cpu-slider">
-				<div class="slider-track">
-					<div class="slider-fill"></div>
-					<div class="slider-thumb"></div>
+	<main>
+		<div class="main-container">
+			<div class="price-header">
+				<!-- price -->
+				<div class="title-container">
+					<img src="/images/img/price/frame.svg">
+					<span class="title">定价</span>
 				</div>
-				<div class="value-points">
-					<div class="point-value" style="left: calc(0% + 0px)">1</div>
-					<div class="point-value" style="left: calc((8 - 1) / (24 - 1) * 100%)">8</div>
-					<div class="point-value" style="left: calc((16 - 1) / (24 - 1) * 100%)">16</div>
-					<div class="point-value" style="left: calc(100% + 0px)">24</div>
-				</div>
-				<div class="unit">C</div>
-			</div>
-			<div class="number-input cpu-number-input">
-				<input type="number" class="quantity-input">
-				<div class="arrows">
-					<button class="arrow up">
-						<img src="/images/img/up.svg" />
-					</button>
-					<button class="arrow down">
-						<img src="/images/img/down.svg" />
-					</button>
-				</div>
-			</div>
-		</div>
-		<div>
-			<div>
-				内存
-			</div>
-			<!-- memory -->
-			<div class="segmented-slider memory-slider">
-				<div class="slider-track">
-					<div class="slider-fill"></div>
-					<div class="slider-thumb"></div>
-				</div>
-				<div class="value-points">
-					<div class="point-value" style="left: calc(0% + 0px)">1</div>
-					<div class="point-value" style="left: calc((8 - 1) / (24 - 1) * 100%)">8</div>
-					<div class="point-value" style="left: calc((16 - 1) / (24 - 1) * 100%)">16</div>
-					<div class="point-value" style="left: calc(100% + 0px)">24</div>
-				</div>
-				<div class="unit">C</div>
-			</div>
-			<div class="number-input memory-number-input">
-				<input type="number" class="quantity-input">
-				<div class="arrows">
-					<button class="arrow up">
-						<img src="/images/img/up.svg" />
-					</button>
-					<button class="arrow down">
-						<img src="/images/img/down.svg" />
-					</button>
-				</div>
-			</div>
-		</div>
 
-		<div>
-			<div>
-				存储
+				<div class="region-select-container">
+					<div class="select-label">可用区</div>
+					<!-- 区域选择 -->
+					<div class="region-select menu-select">
+						<div class="select-trigger">
+							<span class="selected-text">北京 A</span>
+							<svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+						</div>
+						<div class="select-options">
+							<div class="option" data-value="a">北京 A</div>
+							<div class="option" data-value="g">广州 G</div>
+							<div class="option" data-value="b">新加坡 B</div>
+							<div class="option" data-value="h">杭州 H</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<!-- storage -->
-			<div class="number-input storage-number-input">
-				<input type="number" class="quantity-input">
-				<div class="arrows">
-					<button class="arrow up">
-						<img src="/images/img/up.svg" />
-					</button>
-					<button class="arrow down">
-						<img src="/images/img/down.svg" />
-					</button>
+			<div class="price-calculator">
+				<div class="calculator-container">
+					<div class="calculator-header">
+						<div class="title">价格计算器</div>
+						<div class="total-price">
+							<span>总价格:</span>
+							<span class="price">160.02</span>
+							<img src="/images/img/price/currency.svg" />
+						</div>
+					</div>
+					<div class="line"></div>
+					<!-- Main Content -->
+					<div class="calculator-content">
+						<!-- Resources Section -->
+						<section>
+							<div class="section-title">
+								<img src="/images/img/price/labelLine.svg" />
+								资源
+							</div>
+							<div class="calculator-input">
+								<!-- CPU -->
+								<div class="resource-item cpu-resource">
+									<label>
+										<img src="/images/img/price/cpu.svg" />
+										CPU
+									</label>
+									<!-- cpu -->
+									<div class="segmented-slider cpu-slider">
+										<div class="slider-track">
+											<div class="slider-fill"></div>
+											<div class="slider-thumb"></div>
+										</div>
+										<div class="value-points">
+											<div class="point-value" style="left: calc(0% + 0px)">1</div>
+											<div class="point-value" style="left: calc((8 - 1) / (24 - 1) * 100%)">8</div>
+											<div class="point-value" style="left: calc((16 - 1) / (24 - 1) * 100%)">16</div>
+											<div class="point-value" style="left: calc(100% + 0px)">24</div>
+										</div>
+										<div class="unit">C</div>
+									</div>
+									<div class="number-input cpu-number-input">
+										<input type="number" class="quantity-input">
+										<div class="right-element">C</div>
+										<div class="arrows">
+											<button class="arrow up">
+												<img src="/images/img/up.svg" />
+											</button>
+											<button class="arrow down">
+												<img src="/images/img/down.svg" />
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<!-- Memory -->
+								<div class="resource-item memory-resource">
+									<label>
+										<img src="/images/img/price/memory.svg" />
+										内存
+									</label>
+
+									<!-- memory -->
+									<div class="segmented-slider memory-slider">
+										<div class="slider-track">
+											<div class="slider-fill"></div>
+											<div class="slider-thumb"></div>
+										</div>
+										<div class="value-points">
+											<div class="point-value" style="left: calc(0% + 0px)">1</div>
+											<div class="point-value" style="left: calc((8 - 1) / (24 - 1) * 100%)">8</div>
+											<div class="point-value" style="left: calc((16 - 1) / (24 - 1) * 100%)">16</div>
+											<div class="point-value" style="left: calc(100% + 0px)">24</div>
+										</div>
+										<div class="unit">G</div>
+									</div>
+									<div class="number-input memory-number-input">
+										<input type="number" class="quantity-input">
+										<div class="right-element">G</div>
+										<div class="arrows">
+											<button class="arrow up">
+												<img src="/images/img/up.svg" />
+											</button>
+											<button class="arrow down">
+												<img src="/images/img/down.svg" />
+											</button>
+										</div>
+									</div>
+
+								</div>
+
+								<!-- Storage -->
+								<div class="resource-item">
+									<label>
+										<img src="/images/img/price/storage.svg" />
+										存储
+									</label>
+									<!-- storage -->
+									<div class="number-input storage-number-input">
+										<input type="number" class="quantity-input">
+										<div class="right-element">G</div>
+										<div class="arrows">
+											<button class="arrow up">
+												<img src="/images/img/up.svg" />
+											</button>
+											<button class="arrow down">
+												<img src="/images/img/down.svg" />
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<!-- Network -->
+								<div class="resource-item">
+									<label>
+										<img src="/images/img/price/network.svg" />
+										流量
+									</label>
+									<!-- network -->
+									<div class="number-input network-number-input">
+										<input type="number" class="quantity-input">
+										<div class="right-element">G</div>
+
+										<div class="arrows">
+											<button class="arrow up">
+												<img src="/images/img/up.svg" />
+											</button>
+											<button class="arrow down">
+												<img src="/images/img/down.svg" />
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<!-- TCP Port -->
+								<div class="resource-item">
+									<label>
+										<img src="/images/img/price/port.svg" />
+										端口
+									</label>
+									<!-- tcp port -->
+									<div class="number-input port-number-input">
+										<input type="number" class="quantity-input">
+										<div class="right-element">个</div>
+										<div class="arrows">
+											<button class="arrow up">
+												<img src="/images/img/up.svg" />
+											</button>
+											<button class="arrow down">
+												<img src="/images/img/down.svg" />
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<!-- Usage Section -->
+						<section>
+							<div class="section-title">
+								<img src="/images/img/price/labelLine.svg" />
+								用量
+							</div>
+							<div class="calculator-input">
+								<!-- Count -->
+								<div class="usage-item">
+									<label>
+										<img src="/images/img/price/node.svg" />
+										数量
+									</label>
+									<div class="number-input count-number-input">
+										<input type="number" class="quantity-input">
+										<div class="arrows">
+											<button class="arrow up">
+												<img src="/images/img/up.svg" />
+											</button>
+											<button class="arrow down">
+												<img src="/images/img/down.svg" />
+											</button>
+										</div>
+									</div>
+								</div>
+								<!-- Time -->
+								<div class="usage-item">
+									<label>
+										<img src="/images/img/price/clock.svg" />
+										时间
+									</label>
+									<div class="duration-input-container">
+										<div class="number-input time-count-number-input">
+											<input type="number" class="quantity-input">
+											<div class="arrows">
+												<button class="arrow up">
+													<img src="/images/img/up.svg" />
+												</button>
+												<button class="arrow down">
+													<img src="/images/img/down.svg" />
+												</button>
+											</div>
+										</div>
+										<div class="time-select-container menu-select time-select-container1">
+											<div class="select-trigger">
+												<span class="selected-text">小时</span>
+												<img src="/images/img/down.svg" class="arrow-icon" />
+											</div>
+											<div class="select-options">
+												<div class="option" data-value="hour">小时</div>
+												<div class="option" data-value="week">周</div>
+												<div class="option" data-value="day">天</div>
+												<div class="option" data-value="month">月</div>
+												<div class="option" data-value="year">年</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</section>
+					</div>
+				</div>
+				<!-- Header -->
+				<div class="price-table-container">
+					<!-- 价格表 -->
+					<div class="price-table-header">
+						<div class="title">单价</div>
+						<div class="menu-select time-select-container2 time-select-container">
+							<div class="select-trigger">
+								<span class="selected-text">小时</span>
+								<img src="/images/img/down.svg" class="arrow-icon" />
+							</div>
+							<div class="select-options">
+								<div class="option" data-value="hour">小时</div>
+								<div class="option" data-value="week">周</div>
+								<div class="option" data-value="day">天</div>
+								<div class="option" data-value="month">月</div>
+								<div class="option" data-value="year">年</div>
+							</div>
+						</div>
+					</div>
+					<div class="price-list">
+						<div class="price-list-header">
+							<span>资源名</span>
+							<div class="unit-price">
+								<span>单价</span>
+								<img src="/images/img/price/currency.svg" alt="currency" />
+							</div>
+						</div>
+
+						<div class="price-items price-container">
+							<!-- CPU -->
+							<div class="price-item">
+								<div class="resource">
+									<img src="/images/img/price/cpu.svg" alt="cpu" />
+									<span>CPU</span>
+								</div>
+								<div class="price-value">
+									<span class="price-value-amount cpu-price-result">0.02</span>
+									<span class="price-value-unit">核 /</span>
+									<span class="price-value-unit price-cycle">小时</span>
+								</div>
+							</div>
+
+							<!-- Memory -->
+							<div class="price-item">
+								<div class="resource">
+									<img src="/images/img/price/memory.svg" alt="memory" />
+									<span>内存</span>
+								</div>
+								<div class="price-value">
+									<span class="price-value-amount memory-price-result">0.02</span>
+									<span class="price-value-unit">G /</span>
+									<span class="price-value-unit price-cycle">小时</span>
+								</div>
+							</div>
+
+							<!-- Storage -->
+							<div class="price-item">
+								<div class="resource">
+									<img src="/images/img/price/storage.svg" alt="storage" />
+									<span>存储卷</span>
+								</div>
+								<div class="price-value">
+									<span class="price-value-amount storage-price-result">0.02</span>
+									<span class="price-value-unit">G /<span>
+											<span class="price-value-unit price-cycle">小时</span>
+								</div>
+							</div>
+
+							<!-- TCP Port -->
+							<div class="price-item">
+								<div class="resource">
+									<img src="/images/img/price/port.svg" alt="port" />
+									<span>端口</span>
+								</div>
+								<div class="price-value">
+									<span class="price-value-amount port-price-result">0.02</span>
+									<span class="price-value-unit">/</span>
+									<span class="price-value-unit price-cycle">小时</span>
+								</div>
+							</div>
+
+							<!-- Network -->
+							<div class="price-item">
+								<div class="resource">
+									<img src="/images/img/price/network.svg" alt="network" />
+									<span>流量</span>
+								</div>
+								<div class="price-value">
+									<span class="price-value-amount network-price-result">0.02</span>
+									<span class="price-value-unit">/ G</span>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div>
-			<div>
-				流量
-			</div>
-			<!-- network -->
-			<div class="number-input network-number-input">
-				<input type="number" class="quantity-input">
-				<div class="arrows">
-					<button class="arrow up">
-						<img src="/images/img/up.svg" />
-					</button>
-					<button class="arrow down">
-						<img src="/images/img/down.svg" />
-					</button>
-				</div>
-			</div>
-		</div>
-		<div>
-			<div>
-				端口
-			</div>
-			<!-- port -->
-			<div class="number-input port-number-input">
-				<input type="number" class="quantity-input">
-				<div class="arrows">
-					<button class="arrow up">
-						<img src="/images/img/up.svg" />
-					</button>
-					<button class="arrow down">
-						<img src="/images/img/down.svg" />
-					</button>
-				</div>
-			</div>
-		</div>
-		<div>
-			<div>
-				数量
-			</div>
-			<div class="number-input count-number-input">
-				<input type="number" class="quantity-input">
-				<div class="arrows">
-					<button class="arrow up">
-						<img src="/images/img/up.svg" />
-					</button>
-					<button class="arrow down">
-						<img src="/images/img/down.svg" />
-					</button>
-				</div>
-			</div>
-		</div>
-		<div class="time-select menu-select">
-			<div class="select-trigger">
-				<span class="selected-text">小时</span>
-				<svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-					xmlns="http://www.w3.org/2000/svg">
-					<path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-						stroke-linejoin="round" />
-				</svg>
-			</div>
-			<div class="select-options">
-				<div class="option" data-value="hour">小时</div>
-				<div class="option" data-value="week">周</div>
-				<div class="option" data-value="day">天</div>
-				<div class="option" data-value="month">月</div>
-				<div class="option" data-value="year">年</div>
-			</div>
-		</div>
-		<div class="region-select menu-select">
-			<div class="select-trigger">
-				<span class="selected-text">北京 A</span>
-				<svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-					xmlns="http://www.w3.org/2000/svg">
-					<path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-						stroke-linejoin="round" />
-				</svg>
-			</div>
-			<div class="select-options">
-				<div class="option" data-value="a">北京 A</div>
-				<div class="option" data-value="g">广州 G</div>
-				<div class="option" data-value="b">新加坡 B</div>
-				<div class="option" data-value="h">杭州 H</div>
-			</div>
-		</div>
-		<div class="total-price-container">
-			<div>
-				价格
-			</div>
-			<div class="price-result"></div>
-		</div>
-		<!-- 价格表 -->
-		<div class="price-container">
-			<div>
-				CPU 价格
-			</div>
-			<div class="cpu-price-result"></div>
-			<div>
-				内存 价格
-			</div>
-			<div class="memory-price-result"></div>
-			<div>
-				存储 价格
-			</div>
-			<div class="storage-price-result"></div>
-			<div>
-				流量 价格
-			</div>
-			<div class="network-price-result"></div>
-			<div>
-				端口 价格
-			</div>
-			<div class="port-price-result"></div>
-		</div>
-	</div>
-	</div>
-	</div>
+		<div class="ellipse"></div>
+	</main>
 	<div class="h5footer" id="footer">
 	</div>
 	<script>
+		// const
 		// 价格
 		const regionPriceMap = new Map([
 			['g', {
@@ -513,11 +1177,31 @@
 		])
 
 		const timeMap = new Map([
-			['hour', 1],
-			['day', 24],
-			['week', 168],
-			['month', 720],
-			['year', 8760]
+			['hour', {
+				"name": "hour",
+				"unit": "小时",
+				"value": 1
+			}],
+			['day', {
+				"name": "day",
+				"unit": "天",
+				"value": 24
+			}],
+			['week', {
+				"name": "week",
+				"unit": "周",
+				"value": 168
+			}],
+			['month', {
+				"name": "month",
+				"unit": "月",
+				"value": 720
+			}],
+			['year', {
+				"name": "year",
+				"unit": "年",
+				"value": 8760
+			}]
 		])
 	</script>
 	<script>
@@ -525,7 +1209,6 @@
 		class SelectManager {
 			constructor(options = {}) {
 				this.config = {
-
 					containerSelector: options.containerSelector || '.select-container',
 					triggerSelector: options.triggerSelector || '.select-trigger',
 					selectedTextSelector: options.selectedTextSelector || '.selected-text',
@@ -545,7 +1228,7 @@
 					isOpen: false,
 					selectedValue: this.config.defaultValue
 				};
-				console.log('init')
+				this.isInternalUpdate = false;  // 添加内部更新标志
 				this.init();
 			}
 
@@ -556,7 +1239,6 @@
 					console.error('Time select container not found');
 					return;
 				}
-
 				this.elements.trigger = this.elements.container.querySelector(this.config.triggerSelector);
 				this.elements.selectedText = this.elements.container.querySelector(this.config.selectedTextSelector);
 				this.elements.options = this.elements.container.querySelectorAll(this.config.optionSelector);
@@ -610,7 +1292,6 @@
 
 			initializeSelection() {
 				// 初始化选中状态
-				console.log(this.config.defaultValue)
 				if (this.config.defaultValue) {
 
 					const defaultOption = Array.from(this.elements.options)
@@ -651,7 +1332,7 @@
 
 				this.closeDropdown();
 
-				if (shouldNotify) {
+				if (shouldNotify && !this.isInternalUpdate) {
 					this.config.onChange(value, text);
 				}
 			}
@@ -666,12 +1347,16 @@
 			}
 
 			setValue(value) {
+				if (this.isInternalUpdate) return;  // 如果是内部更新，直接返回
+
+				this.isInternalUpdate = true;  // 设置标志
 				const option = Array.from(this.elements.options)
 					.find(opt => opt.dataset.value === value);
 
 				if (option) {
-					this.selectOption(option);
+					this.selectOption(option, false);  // 不触发 onChange 回调
 				}
+				this.isInternalUpdate = false;  // 重置标志
 			}
 
 			disable() {
@@ -688,9 +1373,9 @@
 		class QuantityManager {
 			constructor(options = {}) {
 				this.config = {
-					minValue: options.minValue || 1,
+					minValue: options.minValue ?? 0,
 					maxValue: options.maxValue || 999,
-					defaultValue: options.defaultValue || 1,
+					defaultValue: options.defaultValue ?? 1,
 					onChange: options.onChange || (() => { })
 				};
 
@@ -940,7 +1625,6 @@
 
 			setState(key, value, source) {
 				this.state[key] = value;
-				console.log('active')
 				this.notifyListeners(key, value, source);
 			}
 
@@ -951,7 +1635,6 @@
 
 			addListener(listener) {
 				this.listeners.push(listener);
-				console.log('addListener', this.listeners)
 			}
 
 			notifyListeners(key, value, source) {
@@ -960,56 +1643,68 @@
 		}
 
 		// 展示计算结果管理器
-		class ShowManager {
-			constructor(options = {}) {
-				this.config = {
-					containerSelector: options.containerSelector || '.result-container',
-					resultSelector: options.resultSelector || '.result',
-					resultFormat: options.resultFormat || (value => value.toFixed(2)),
-					defaultValue: options.defaultValue || 0
-				};
+// 展示计算结果管理器
+class ShowManager {
+    constructor(options = {}) {
+        this.config = {
+            containerSelector: options.containerSelector || '.result-container',
+            resultSelector: options.resultSelector || '.result',
+            resultFormat: options.resultFormat || (value => value.toFixed(2)),
+            defaultValue: options.defaultValue || 0
+        };
 
-				this.elements = {
-					container: null,
-					result: null
-				};
+        this.elements = {
+            containers: [], // 改为数组存储多个容器
+            results: []    // 改为数组存储多个结果元素
+        };
 
-				this.state = {
-					currentValue: this.config.defaultValue
-				};
+        this.state = {
+            currentValue: this.config.defaultValue
+        };
 
-				this.init();
-			}
+        this.init();
+    }
 
-			init() {
-				this.elements.container = document.querySelector(this.config.containerSelector);
-				if (!this.elements.container) {
-					console.error('Result container not found');
-					return;
-				}
+    init() {
+        // 获取所有匹配的容器
+        this.elements.containers = Array.from(document.querySelectorAll(this.config.containerSelector));
+				console.log(this.elements.containers);
+        if (this.elements.containers.length === 0) {
+            console.error('No result containers found');
+            return;
+        }
 
-				this.elements.result = this.elements.container.querySelector(this.config.resultSelector);
-				if (!this.elements.result) {
-					console.error('Result element not found');
-					return;
-				}
+        // 从每个容器中获取结果元素
+        this.elements.results = this.elements.containers.flatMap(container => {
+						const result = Array.from(container.querySelectorAll(this.config.resultSelector));
+						console.log(result);
+          	return result;
+        }); // 过滤掉无效的结果元素
+				console.log(this.elements.results);
+        if (this.elements.results.length === 0) {
+            console.error('No result elements found');
+            return;
+        }
+        this.updateDisplay();
+    }
 
-				this.updateDisplay();
-			}
+    updateDisplay() {
+        const formattedValue = this.config.resultFormat(this.state.currentValue);
+        // 更新所有结果元素
+        this.elements.results.forEach(result => {
+            result.textContent = formattedValue;
+        });
+    }
 
-			updateDisplay() {
-				this.elements.result.textContent = this.config.resultFormat(this.state.currentValue);
-			}
-
-			setValue(value) {
-				this.state.currentValue = value;
-				this.updateDisplay();
-			}
-		}
+    setValue(value) {
+        this.state.currentValue = value;
+        this.updateDisplay();
+    }
+}
 
 		// 使用示例
 		document.addEventListener('DOMContentLoaded', function () {
-			// 创建状态管理器
+			// 创建计算状态管理器
 			const resourceState = new ResourceStateManager({
 				cpu: 1,
 				memory: 1,
@@ -1018,7 +1713,8 @@
 				port: 0,
 				count: 0,
 				time: 'hour',
-				region: 'a'
+				region: 'a',
+				timeCount: 0,
 			});
 			// CPU 控件初始化
 			const cpuSlider = new SliderManager({
@@ -1028,7 +1724,6 @@
 				onChange: (value, source) => {
 					if (source === 'slider') {
 						cpuQuantity.setValue(value);
-						console.log('cpuSlider update', value)
 						resourceState.setState('cpu', value, source);
 					}
 				}
@@ -1132,22 +1827,48 @@
 				maxValue: 100,
 				defaultValue: resourceState.getState('count'),
 				onChange: (value, source) => {
-					// if (source === 'quantity') {
 					resourceState.setState('count', value, source);
-					// }
 				}
 			});
 			// time 控件初始化
 			console.log('time mangeer')
 			const timeSelect = new SelectManager({
-				containerSelector: '.time-select',
+				containerSelector: '.time-select-container1',
 				defaultValue: resourceState.getState('time'),
 				onChange: (value, text) => {
 					console.log(`Selected: ${text} (value: ${value})`);
-					resourceState.setState('time', value);
+					resourceState.setState('time', value, timeSelect);
 					// 处理选择变更
 				}
 			});
+
+
+			// time count 控件初始化
+			console.log('time count mangeer')
+			const timeCountSelect = new QuantityManager({
+				inputSelector: '.time-count-number-input .quantity-input',
+				upButtonSelector: '.time-count-number-input .arrow.up',
+				downButtonSelector: '.time-count-number-input .arrow.down',
+				minValue: 0,
+				maxValue: 100,
+				defaultValue: resourceState.getState('timeCount'),
+				onChange: (value, source) => {
+					resourceState.setState('timeCount', value, source);
+				}
+			});
+
+			// price time2 控件初始化
+			console.log('price time mangeer 2')
+			const timeSelect2 = new SelectManager({
+				containerSelector: '.time-select-container2',
+				defaultValue: resourceState.getState('time'),
+				onChange: (value, text) => {
+					console.log(`Selected: ${text} (value: ${value})`);
+					resourceState.setState('time', value, timeSelect2);
+					// 处理选择变更
+				}
+			});
+			console.log('region init')
 			// region 控件初始化
 			const regionSelect = new SelectManager({
 				containerSelector: '.region-select',
@@ -1159,12 +1880,12 @@
 					// 处理选择变更
 				}
 			})
-			console.log(regionSelect)
+
 			// show 控件初始化
 			console.log('show init')
 			const showManager = new ShowManager({
-				containerSelector: '.total-price-container',
-				resultSelector: '.total-price-container .price-result',
+				containerSelector: '.total-price',
+				resultSelector: '.total-price .price',
 				resultFormat: (value) => {
 					return value.toFixed(6);
 				},
@@ -1175,7 +1896,7 @@
 				containerSelector: '.price-container',
 				resultSelector: '.price-container .cpu-price-result',
 				resultFormat: (value) => {
-					return value.toFixed(6);
+					return value.toFixed(2);
 				},
 				defaultValue: 0
 			})
@@ -1183,7 +1904,7 @@
 				containerSelector: '.price-container',
 				resultSelector: '.price-container .memory-price-result',
 				resultFormat: (value) => {
-					return value.toFixed(6);
+					return value.toFixed(2);
 				},
 				defaultValue: 0
 			})
@@ -1191,7 +1912,7 @@
 				containerSelector: '.price-container',
 				resultSelector: '.price-container .storage-price-result',
 				resultFormat: (value) => {
-					return value.toFixed(6);
+					return value.toFixed(2);
 				},
 				defaultValue: 0
 			})
@@ -1199,7 +1920,7 @@
 				containerSelector: '.price-container',
 				resultSelector: '.price-container .port-price-result',
 				resultFormat: (value) => {
-					return value.toFixed(6);
+					return value.toFixed(2);
 				},
 				defaultValue: 0
 			})
@@ -1207,12 +1928,33 @@
 				containerSelector: '.price-container',
 				resultSelector: '.price-container .network-price-result',
 				resultFormat: (value) => {
-					return value.toFixed(6);
+					return value.toFixed(2);
 				},
 				defaultValue: 0
 			})
+			const showCycleManager = new ShowManager({
+				containerSelector: '.price-container',
+				resultSelector: '.price-container .price-cycle',
+				resultFormat: (value) => {
+					return value;
+				},
+				defaultValue: resourceState.getState('time')
+			})
 			console.log('add listener')
-			// 添加状态变化监听器（可选）
+			// 两个time 控件状态绑定
+			resourceState.addListener((key, value, source) => {
+				// 只处理 time 相关的更新
+				if (key !== 'time') return;
+
+				// 根据来源更新另一个选择器
+				if (source === timeSelect) {
+					timeSelect2.setValue(value);
+				} else if (source === timeSelect2) {
+					timeSelect.setValue(value);
+				}
+			});
+
+			// 添加价格状态变化监听器（可选）for total price
 			resourceState.addListener((key, value, source) => {
 				if (![
 					'cpu',
@@ -1222,12 +1964,12 @@
 					'port',
 					'time',
 					'region',
-					'count'
+					'count',
+					'timeCount'
 				].includes(key)) return
 				console.log('update state')
 				console.log(key)
 				console.log(`${key}: ${value} (from ${source})`);
-				// 这里可以添加价格计算等逻辑
 				const priceData = regionPriceMap.get(resourceState.getState('region'));
 				if (!priceData) {
 					throw new Error('region not found')
@@ -1247,34 +1989,20 @@
 				const portPrice = priceData.port.unit_price;
 				const portAmount = portPrice * resourceState.getState('port');
 
-				console.log(cpuAmount, 'cpuAmount')
-
-				console.log(memoryAmount, 'memoryAmount')
-
-				console.log(storageAmount, 'storageAmount')
-
-				console.log(networkAmount, 'networkAmount')
-
-				console.log(portAmount, 'portAmount')
-
 				let amount = cpuAmount + memoryAmount + storageAmount + portAmount;
 				const count = resourceState.getState('count');
 				const time = resourceState.getState('time');
+				const timeCount = resourceState.getState('timeCount') || 0;
 
 				amount = Math.floor(amount);
-				const duration_scale = timeMap.get(time) || 1;
+				const duration_scale = timeMap.get(time)?.value || 1;
 				// 计算总金额
-				amount = (amount * duration_scale + networkAmount) * count;
-				console.log(amount, 'amount')
-				console.log(count, 'count')
-
-				console.log(duration_scale, 'duration_scale')
-				console.log(time, 'time')
+				amount = (amount * duration_scale * timeCount + networkAmount) * count;
 				// 更新展示结果
 				showManager.setValue((amount));
 			});
 
-			// 添加状态变化监听器（可选）
+			// 添加状态变化监听器（可选）for price table
 			resourceState.addListener((key, value, source) => {
 				if (![
 					'region',
@@ -1286,40 +2014,40 @@
 					throw new Error('region not found')
 				}
 				const time = resourceState.getState('time');
-				const duration_scale = timeMap.get(time) || 1;
+				const duration_scale = timeMap.get(time)?.value || 1;
+				const unit = timeMap.get(time)?.unit || '';
 				const cpuPrice = priceData.cpu.unit_price;
-
+				
 				const cpuAmount = cpuPrice * duration_scale / 1_000_000
 				showCpuManager.setValue(cpuAmount);
-				console.log(cpuAmount, 'cpuAmount', cpuPrice)
 
 				const memoryPrice = priceData.memory.unit_price;
 				const memoryAmount = memoryPrice * duration_scale / 1_000_000
 				showMemoryManager.setValue(memoryAmount);
-				console.log(memoryAmount, 'memoryAmount', memoryPrice)
 
 				const storagePrice = priceData.storage.unit_price;
 				const storageAmount = storagePrice * duration_scale / 1_000_000;
 				showstorageManager.setValue(storageAmount);
 
-				console.log(storageAmount, 'storageAmount', storagePrice)
 
 				const networkPrice = priceData.network.unit_price;
 				showNetWorkManager.setValue(networkPrice / 1_000_000);
-				console.log('networkAmount', networkPrice)
 
 				const portPrice = priceData.port.unit_price;
 				const portAmount = portPrice * duration_scale / 1_000_000;
-				console.log(portAmount, 'portAmount', portPrice)
+
 				showPortManager.setValue(portAmount);
+
+				showCycleManager.setValue(unit);
 			});
+
 
 			function triggerInitialCalculations() {
 				// Trigger calculations for total price
-				resourceState.notifyListeners('cpu', resourceState.getState('cpu'), 'init');
-
+				// resourceState.notifyListeners('cpu', resourceState.getState('cpu'), 'init');
 				// Trigger calculations for individual component prices
 				resourceState.notifyListeners('region', resourceState.getState('region'), 'init');
+
 			}
 			triggerInitialCalculations()
 		});
