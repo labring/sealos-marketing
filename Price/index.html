@@ -335,7 +335,7 @@
 
 		main .main-container {
 
-			width: 960px;
+			width: 1000px;
 			margin: 40px auto;
 		}
 
@@ -394,7 +394,6 @@
 
 		.price-calculator {
 			display: flex;
-			width: 960px;
 			height: 517px;
 			background: #FFFFFF;
 			box-shadow: 0px 0px 0.682898px rgba(0, 0, 0, 0.05), 0px 3.15903px 12.6361px rgba(182, 202, 224, 0.28);
@@ -607,7 +606,7 @@
 	</style>
 	<style scoped>
 		.price-list {
-			width: 212px;
+			width: 250px;
 			padding: 0;
 			margin-top: 15px;
 			background: #FFFFFF;
@@ -804,7 +803,7 @@
 											<div class="point-value" style="left: calc(0% + 0px)">1</div>
 											<div class="point-value" style="left: calc((8 - 1) / (24 - 1) * 100%)">8</div>
 											<div class="point-value" style="left: calc((16 - 1) / (24 - 1) * 100%)">16</div>
-											<div class="point-value" style="left: calc(100% + 0px)">24</div>
+											<div class="point-value" style="left: calc((24 - 1) / (24 - 1) * 100%)">24</div>
 										</div>
 										<div class="unit">G</div>
 									</div>
@@ -1060,27 +1059,27 @@
 			['g', {
 				cpu: {
 					"name": "cpu",
-					"unit_price": 27.6706,
-					"unit": "1m"
+					"unit_price": 17420, // Converted from 1m to 1c
+					"unit": "1c"
 				},
 				memory: {
 					"name": "memory",
-					"unit_price": 13.6288,
-					"unit": "1Mi"
+					"unit_price": 8.58 * 1024, // Converted from 1Mi to 1Gi
+					"unit": "1Gi"
 				},
 				storage: {
 					"name": "storage",
-					"unit_price": 0.826,
-					"unit": "1Mi"
+					"unit_price": 0.52 * 1024, // Converted from 1Mi to 1Gi
+					"unit": "1Gi"
 				},
 				network: {
 					"name": "network",
-					"unit_price": 781,
-					"unit": "1Mi"
+					"unit_price": 781 * 1024, // Converted from 1Mi to 1Gi
+					"unit": "1Gi"
 				},
 				port: {
 					"name": "services.nodeports",
-					"unit_price": 13.9,
+					"unit_price": 7000,
 					"unit": "1"
 				}
 			}],
@@ -1089,27 +1088,27 @@
 				{
 					cpu: {
 						"name": "cpu",
-						"unit_price": 17.1247,
-						"unit": "1m"
+						"unit_price": 17.1247 * 1000, // Converted from 1m to 1c
+						"unit": "1c"
 					},
 					memory: {
 						"name": "memory",
-						"unit_price": 8.4346,
-						"unit": "1Mi"
+						"unit_price": 8.4346 * 1024, // Converted from 1Mi to 1Gi
+						"unit": "1Gi"
 					},
 					storage: {
 						"name": "storage",
-						"unit_price": 0.5112,
-						"unit": "1Mi"
+						"unit_price": 0.5112 * 1024, // Converted from 1Mi to 1Gi
+						"unit": "1Gi"
 					},
 					network: {
 						"name": "network",
-						"unit_price": 781,
-						"unit": "1Mi"
+						"unit_price": 781 * 1024, // Converted from 1Mi to 1Gi
+						"unit": "1Gi"
 					},
 					port: {
 						"name": "services.nodeports",
-						"unit_price": 7,
+						"unit_price": 7000,
 						"unit": "1"
 					}
 				}
@@ -1119,28 +1118,29 @@
 				{
 					cpu: {
 						"name": "cpu",
-						"unit_price": 67,
-						"unit": "1m"
+						"unit_price": 67 * 1000, // Converted from 1m to 1c
+						"unit": "1c"
 					},
 					memory: {
 						"name": "memory",
-						"unit_price": 33,
-						"unit": "1Mi"
+						"unit_price": 33 * 1024, // Converted from 1Mi to 1Gi
+						"unit": "1Gi"
 					},
 					storage: {
 						"name": "storage",
-						"unit_price": 2,
-						"unit": "1Mi"
+						"unit_price": 2 * 1024, // Converted from 1Mi to 1Gi
+						"unit": "1Gi"
 					},
 					network: {
 						"name": "network",
-						"unit_price": 781,
-						"unit": "1Mi"
+						"unit_price": 781 * 1024, // Converted from 1Mi to 1Gi
+						"unit": "1Gi"
 					},
 					port: {
 						"name": "services.nodeports",
-						"unit_price": 69.5,
+						"unit_price": 69500,
 						"unit": "1"
+						// Converted from 1 to 1
 					}
 				}
 			],
@@ -1149,27 +1149,27 @@
 				{
 					cpu: {
 						"name": "cpu",
-						"unit_price": 27.6706,
-						"unit": "1m"
+						"unit_price": 27.6706 * 1000, // Converted from 1m to 1c
+						"unit": "1c"
 					},
 					memory: {
 						"name": "memory",
-						"unit_price": 13.6288,
-						"unit": "1Mi"
+						"unit_price": 13.6288 * 1024, // Converted from 1Mi to 1Gi
+						"unit": "1Gi"
 					},
 					storage: {
 						"name": "storage",
-						"unit_price": 0.826,
-						"unit": "1Mi"
+						"unit_price": 0.826 * 1024, // Converted from 1Mi to 1Gi
+						"unit": "1Gi"
 					},
 					network: {
 						"name": "network",
-						"unit_price": 781,
-						"unit": "1Mi"
+						"unit_price": 781 * 1024, // Converted from 1Mi to 1Gi
+						"unit": "1Gi"
 					},
 					port: {
 						"name": "services.nodeports",
-						"unit_price": 13.9,
+						"unit_price": 13900,
 						"unit": "1"
 					}
 				}
@@ -1711,10 +1711,10 @@ class ShowManager {
 				storage: 0,
 				network: 0,
 				port: 0,
-				count: 0,
+				count: 1,
 				time: 'hour',
 				region: 'a',
-				timeCount: 0,
+				timeCount: 1,
 			});
 			// CPU 控件初始化
 			const cpuSlider = new SliderManager({
@@ -1896,7 +1896,7 @@ class ShowManager {
 				containerSelector: '.price-container',
 				resultSelector: '.price-container .cpu-price-result',
 				resultFormat: (value) => {
-					return value.toFixed(2);
+					return value.toFixed(6);
 				},
 				defaultValue: 0
 			})
@@ -1904,7 +1904,7 @@ class ShowManager {
 				containerSelector: '.price-container',
 				resultSelector: '.price-container .memory-price-result',
 				resultFormat: (value) => {
-					return value.toFixed(2);
+					return value.toFixed(6);
 				},
 				defaultValue: 0
 			})
@@ -1912,7 +1912,7 @@ class ShowManager {
 				containerSelector: '.price-container',
 				resultSelector: '.price-container .storage-price-result',
 				resultFormat: (value) => {
-					return value.toFixed(2);
+					return value.toFixed(6);
 				},
 				defaultValue: 0
 			})
@@ -1920,7 +1920,7 @@ class ShowManager {
 				containerSelector: '.price-container',
 				resultSelector: '.price-container .port-price-result',
 				resultFormat: (value) => {
-					return value.toFixed(2);
+					return value.toFixed(6);
 				},
 				defaultValue: 0
 			})
@@ -1928,7 +1928,7 @@ class ShowManager {
 				containerSelector: '.price-container',
 				resultSelector: '.price-container .network-price-result',
 				resultFormat: (value) => {
-					return value.toFixed(2);
+					return value.toFixed(6);
 				},
 				defaultValue: 0
 			})
@@ -1994,12 +1994,12 @@ class ShowManager {
 				const time = resourceState.getState('time');
 				const timeCount = resourceState.getState('timeCount') || 0;
 
-				amount = Math.floor(amount);
 				const duration_scale = timeMap.get(time)?.value || 1;
 				// 计算总金额
-				amount = (amount * duration_scale * timeCount + networkAmount) * count;
+				const totalAmount = (amount * duration_scale * timeCount + networkAmount) * count / 1_000_000;
+				console.log(duration_scale, timeCount, networkAmount,amount, totalAmount) 
 				// 更新展示结果
-				showManager.setValue((amount));
+				showManager.setValue((totalAmount));
 			});
 
 			// 添加状态变化监听器（可选）for price table
