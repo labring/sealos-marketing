@@ -1,103 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>使用Sealos部署one-api教程</title>
-<link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
-<link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
-<script src="../../../app_store/js/appstor.js" defer></script>
-<script src="../../../app_store/js/navbar.js"></script>
-<script src="../../../app_store/js/header-left.js"></script>
-<script src="../../../app_store/js/about-right.js"></script>
-<script src="../../../app_store/js/foooter.js"></script>
-<script src="../../../app_store/js/step.js"></script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使用Sealos部署one-api教程</title>
+  <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
+  <link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
+  <script src="../../../app_store/js/appstor.js" defer></script>
+  <script src="/js/sem.js" defer></script>
+  <script src="../../../app_store/js/navbar.js"></script>
+  <script src="../../../app_store/js/header-left.js"></script>
+  <script src="../../../app_store/js/about-right.js"></script>
+  <script src="../../../app_store/js/foooter.js"></script>
+  <script src="../../../app_store/js/step.js"></script>
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) }
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y)
     })(window, document, "clarity", "script", "oxaa4saana");
-</script>
-</head>
-<body>
-<div id="navbar-container"></div>
-<div class="stepxq">
-  <div class="left-list" id="left-header">
-  </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelector('.nav-item[data-page="AI"]').classList.add('active');
-      document.querySelector('li[data-page="one-api"]').classList.add('active');
-      document.getElementById('menu_sub').style.display = 'block';
-    });
   </script>
-  <div class="app-h5">
-    <div class="hard-top">
-      <div class="hard-title-stats">
-        <div class="title-stats">
-          <div class="title-logo"><img src="../../img/oneapi.ico" alt="Logo"></div>
-          <div class="hard-top-title">
-            <div class="hard-top2">
+</head>
+
+<body>
+  <div id="navbar-container"></div>
+  <div class="stepxq">
+    <div class="left-list" id="left-header">
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('.nav-item[data-page="AI"]').classList.add('active')
+        document.querySelector('li[data-page="one-api"]').classList.add('active')
+        document.getElementById('menu_sub').style.display = 'block'
+      });
+    </script>
+    <div class="app-h5">
+      <div class="hard-top">
+        <div class="hard-title-stats">
+          <div class="title-stats">
+            <div class="title-logo"><img src="../../img/oneapi.ico" alt="Logo"></div>
+            <div class="hard-top-title">
+              <div class="hard-top2">
                 <h1>One-api</h1>
-                <span class="stats"> <span class="stars"><img src="../../img/AFFINE-logo2.svg">18.9k</span> <span class="shares"><img src="../../img/project.svg"><a href="https://github.com/songquanpeng/one-api" target="_blank">项目首页</a></span> </span></div>
-              <p class="app-decistore">一个大模型接口管理和分发系统，能够支持多种主流的AI模型接口，包括但不限于OpenAI、Azure、Anthropic Claude、Google PaLM系列、智谱ChatGLM、百度文心一言、讯飞星火认知、阿里通义千问、360智脑及腾讯混元等，实现了接口的整合与统一管理。</p>
+                <span class="stats"> <span class="stars"><img src="../../img/AFFINE-logo2.svg">18.9k</span> <span
+                    class="shares"><img src="../../img/project.svg"><a href="https://github.com/songquanpeng/one-api"
+                      target="_blank">项目首页</a></span> </span>
+              </div>
+              <p class="app-decistore">一个大模型接口管理和分发系统，能够支持多种主流的AI模型接口，包括但不限于OpenAI、Azure、Anthropic Claude、Google
+                PaLM系列、智谱ChatGLM、百度文心一言、讯飞星火认知、阿里通义千问、360智脑及腾讯混元等，实现了接口的整合与统一管理。</p>
             </div>
-        </div>
-        <div class="buttons">
+          </div>
+          <div class="buttons">
             <button class="yaml-button">
-            <a href="./images/one-api.yaml" download>导出 Yaml</a>
+              <a href="./images/one-api.yaml" download>导出 Yaml</a>
             </button>
             <button class="deploy-button">
-            <a href="https://hzh.sealos.run/?openapp=system-template%3FtemplateName%3Done-api%26sealos_inside%3Dtrue" target="_blank">一键安装</a>
+              <a href="https://hzh.sealos.run/?openapp=system-template%3FtemplateName%3Done-api%26sealos_inside%3Dtrue"
+                target="_blank">一键安装</a>
             </button>
           </div>
-      </div>
-      <div class="carousel">
-        <div class="carousel-container"> 
-          <img src="./images/banner1.png" alt="Image 1" class="carousel-item active"> 
-          <img src="./images/banner2.png" alt="Image 2" class="carousel-item active"> 
+        </div>
+        <div class="carousel">
+          <div class="carousel-container">
+            <img src="./images/banner1.png" alt="Image 1" class="carousel-item active">
+            <img src="./images/banner2.png" alt="Image 2" class="carousel-item active">
           </div>
-        <div class="carousel-nav">
-          <button class="carousel-button prev">&lt;</button>
-          <button class="carousel-button next">&gt;</button>
+          <div class="carousel-nav">
+            <button class="carousel-button prev">&lt;</button>
+            <button class="carousel-button next">&gt;</button>
+          </div>
+          <script src="../../../app_store/js/bannerlb.js"></script>
         </div>
-        <script src="../../../app_store/js/bannerlb.js"></script> 
-      </div>
-      <div class="quick-start">
-        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 One-api</h2>
-        <div class="steps" id="steper">
-          
+        <div class="quick-start">
+          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 One-api</h2>
+          <div class="steps" id="steper">
+
+          </div>
         </div>
-      </div>
-      <div class="features-list">
-        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 One-api</h2>
-        <ul class="features-list-ul">
-          <li>One-API 是 OpenAI 接口管理 & 分发系统，支持 Azure、Anthropic Claude、Google PaLM 2 & Gemini、智谱 ChatGLM、百度文心一言、讯飞星火认知、阿里通义千问、360 智脑以及腾讯混元，可用于二次分发管理 key，仅单可执行文件，已打包好 Docker 镜像，一键部署，开箱即用。
-          
-          </li>
-        </ul>
-      </div>
-      <div class="features-list">
-        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
-        <ul class="features-list-ul">
-         <li>多模型支持：它是一个大模型接口管理和分发系统，能够支持多种主流的AI模型接口，包括但不限于OpenAI、Azure、Anthropic Claude、Google PaLM系列、智谱ChatGLM、百度文心一言、讯飞星火认知、阿里通义千问、360智脑及腾讯混元等，实现了接口的整合与统一管理。</li><li>一键部署与开箱即用：通过Docker镜像形式，one-api可以实现快速部署，降低了使用门槛，使得用户能够迅速搭建起自己的API管理系统。</li><li>API管理功能：包括文档自动生成、接口测试、版本控制、权限管理等，这些功能有助于提升API的开发效率与维护质量，确保API服务的稳定性和安全性。</li><li>高性能与轻量级：基于Go语言开发，确保了系统的高性能运行和资源的高效利用，适合微服务架构下的快速响应需求。</li><li>持续更新与发展：项目活跃，不断有新特性的加入和优化，如对响应解析逻辑的重构以支持多种格式，以及对新兴模型如GPT-4的计费方案的支持等。</li>
-        </ul>
+        <div class="features-list">
+          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 One-api</h2>
+          <ul class="features-list-ul">
+            <li>One-API 是 OpenAI 接口管理 & 分发系统，支持 Azure、Anthropic Claude、Google PaLM 2 & Gemini、智谱
+              ChatGLM、百度文心一言、讯飞星火认知、阿里通义千问、360 智脑以及腾讯混元，可用于二次分发管理 key，仅单可执行文件，已打包好 Docker 镜像，一键部署，开箱即用。
+
+            </li>
+          </ul>
+        </div>
+        <div class="features-list">
+          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
+          <ul class="features-list-ul">
+            <li>多模型支持：它是一个大模型接口管理和分发系统，能够支持多种主流的AI模型接口，包括但不限于OpenAI、Azure、Anthropic Claude、Google
+              PaLM系列、智谱ChatGLM、百度文心一言、讯飞星火认知、阿里通义千问、360智脑及腾讯混元等，实现了接口的整合与统一管理。</li>
+            <li>一键部署与开箱即用：通过Docker镜像形式，one-api可以实现快速部署，降低了使用门槛，使得用户能够迅速搭建起自己的API管理系统。</li>
+            <li>API管理功能：包括文档自动生成、接口测试、版本控制、权限管理等，这些功能有助于提升API的开发效率与维护质量，确保API服务的稳定性和安全性。</li>
+            <li>高性能与轻量级：基于Go语言开发，确保了系统的高性能运行和资源的高效利用，适合微服务架构下的快速响应需求。</li>
+            <li>持续更新与发展：项目活跃，不断有新特性的加入和优化，如对响应解析逻辑的重构以支持多种格式，以及对新兴模型如GPT-4的计费方案的支持等。</li>
+          </ul>
+        </div>
       </div>
     </div>
+    <div class="app-faq" id="about-right"></div>
   </div>
-  <div class="app-faq" id="about-right"></div>
-</div>
-<div class="h5footer" id="footer">
-</div>
-<script>
+  <div class="h5footer" id="footer">
+  </div>
+  <script>
     var _hmt = _hmt || [];
     (function () {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
+      var hm = document.createElement("script")
+      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
+      var s = document.getElementsByTagName("script")[0]
+      s.parentNode.insertBefore(hm, s)
     })();
-</script>
+  </script>
 </body>
+
 </html>

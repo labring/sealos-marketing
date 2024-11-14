@@ -1,113 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>使用Sealos部署Influxdb教程</title>
-<link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
-<link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
-<script src="../../../app_store/js/appstor.js" defer></script>
-<script src="../../../app_store/js/navbar.js"></script>
-<script src="../../../app_store/js/header-left.js"></script>
-<script src="../../../app_store/js/about-right.js"></script>
-<script src="../../../app_store/js/foooter.js"></script>
-<script src="../../../app_store/js/step.js"></script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使用Sealos部署Influxdb教程</title>
+  <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
+  <link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
+  <script src="../../../app_store/js/appstor.js" defer></script>
+  <script src="/js/sem.js" defer></script>
+  <script src="../../../app_store/js/navbar.js"></script>
+  <script src="../../../app_store/js/header-left.js"></script>
+  <script src="../../../app_store/js/about-right.js"></script>
+  <script src="../../../app_store/js/foooter.js"></script>
+  <script src="../../../app_store/js/step.js"></script>
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) }
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y)
     })(window, document, "clarity", "script", "oxaa4saana");
-</script>
-</head>
-<body>
-<div id="navbar-container"></div>
-<div class="stepxq">
-  <div class="left-list" id="left-header">
-  </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelector('.nav-item[data-page="mysql"]').classList.add('active');
-      document.querySelector('li[data-page="influxdb"]').classList.add('active');
-    });
   </script>
-  <div class="app-h5">
-    <div class="hard-top">
-      <div class="hard-title-stats">
-        <div class="title-stats">
-          <div class="title-logo"><img src="../../img/5713248.png" alt="Logo"></div>
-          <div class="hard-top-title">
-            <div class="hard-top2">
+</head>
+
+<body>
+  <div id="navbar-container"></div>
+  <div class="stepxq">
+    <div class="left-list" id="left-header">
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('.nav-item[data-page="mysql"]').classList.add('active')
+        document.querySelector('li[data-page="influxdb"]').classList.add('active')
+      });
+    </script>
+    <div class="app-h5">
+      <div class="hard-top">
+        <div class="hard-title-stats">
+          <div class="title-stats">
+            <div class="title-logo"><img src="../../img/5713248.png" alt="Logo"></div>
+            <div class="hard-top-title">
+              <div class="hard-top2">
                 <h1>Influxdb</h1>
                 <span class="stats">
-                     <span class="stars"><img src="../../img/AFFINE-logo2.svg">28.9k</span> 
-                     <span class="shares"><img src="../../img/project.svg">
-                      <a href="https://github.com/influxdata/influxdb" target="_blank">项目首页</a>
-                     </span> 
+                  <span class="stars"><img src="../../img/AFFINE-logo2.svg">28.9k</span>
+                  <span class="shares"><img src="../../img/project.svg">
+                    <a href="https://github.com/influxdata/influxdb" target="_blank">项目首页</a>
+                  </span>
                 </span>
-            </div>
-              <p class="app-decistore">influxdb是一个分布式的时序数据库，它使用Go语言编写的一个开源分布式时序、事件和指标数据库，无需外部依赖。类似的数据库有Elasticsearch、Graphite等。
+              </div>
+              <p class="app-decistore">
+                influxdb是一个分布式的时序数据库，它使用Go语言编写的一个开源分布式时序、事件和指标数据库，无需外部依赖。类似的数据库有Elasticsearch、Graphite等。
               </p>
             </div>
-        </div>
-        <div class="buttons">
+          </div>
+          <div class="buttons">
             <button class="yaml-button">
-            <a href="./images/influxdb.yaml" download>导出 Yaml</a>
+              <a href="./images/influxdb.yaml" download>导出 Yaml</a>
             </button>
             <button class="deploy-button">
-            <a href="https://hzh.sealos.run/?openapp=system-template%3FtemplateName%3Dinfluxdb%26sealos_inside%3Dtrue" target="_blank">一键安装</a>
+              <a href="https://hzh.sealos.run/?openapp=system-template%3FtemplateName%3Dinfluxdb%26sealos_inside%3Dtrue"
+                target="_blank">一键安装</a>
             </button>
           </div>
-      </div>
-      <div class="carousel">
-        <div class="carousel-container">
-          <img src="./images/banner3.png" alt="Image 1" class="carousel-item active"/> 
-          <img src="./images/banner1.png" alt="Image 1" class="carousel-item active"/> 
         </div>
-        <div class="carousel-nav">
-          <button class="carousel-button prev">&lt;</button>
-          <button class="carousel-button next">&gt;</button>
+        <div class="carousel">
+          <div class="carousel-container">
+            <img src="./images/banner3.png" alt="Image 1" class="carousel-item active" />
+            <img src="./images/banner1.png" alt="Image 1" class="carousel-item active" />
+          </div>
+          <div class="carousel-nav">
+            <button class="carousel-button prev">&lt;</button>
+            <button class="carousel-button next">&gt;</button>
+          </div>
+          <script src="../../../app_store/js/bannerlb.js"></script>
         </div>
-        <script src="../../../app_store/js/bannerlb.js"></script> 
-      </div>
-      <div class="quick-start">
-        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 Influxdb</h2>
-        <div class="steps" id="steper"></div>
-      </div>
-      <div class="features-list">
-        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 Influxdb</h2>
-        <ul class="features-list-ul">
-          <li>InfluxDB是一款用Go语言编写的开源分布式时序、事件和指标数据库，无需外部依赖。该数据库现在主要用于存储涉及大量的时间戳数据，如DevOps监控数据，APP metrics, loT传感器数据和实时分析数据。</li>
-        </ul>
-      </div>
-      <div class="features-list">
-        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
-        <ul class="features-list-ul">
-          <ul>
-            <ol>
-              <li>‌<strong>高性能</strong>‌：InfluxDB支持高并发写入，适用于处理实时数据流。</li>
-              <li>‌<strong>数据压缩</strong>‌：采用自适应压缩算法，有效减少存储空间。</li>
-              <li>‌<strong>低查询延时</strong>‌：提供丰富的查询功能，支持类似SQL的查询语言（InfluxQL）。</li>
-              <li>‌<strong>高可用性</strong>‌：支持数据复制和故障转移，确保数据的安全和系统的稳定性。</li>
-              <li>‌<strong>插件生态系统</strong>‌：拥有丰富的插件生态系统，可以扩展其功能</li>
+        <div class="quick-start">
+          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 Influxdb</h2>
+          <div class="steps" id="steper"></div>
+        </div>
+        <div class="features-list">
+          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 Influxdb</h2>
+          <ul class="features-list-ul">
+            <li>InfluxDB是一款用Go语言编写的开源分布式时序、事件和指标数据库，无需外部依赖。该数据库现在主要用于存储涉及大量的时间戳数据，如DevOps监控数据，APP metrics,
+              loT传感器数据和实时分析数据。</li>
+          </ul>
+        </div>
+        <div class="features-list">
+          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
+          <ul class="features-list-ul">
+            <ul>
+              <ol>
+                <li>‌<strong>高性能</strong>‌：InfluxDB支持高并发写入，适用于处理实时数据流。</li>
+                <li>‌<strong>数据压缩</strong>‌：采用自适应压缩算法，有效减少存储空间。</li>
+                <li>‌<strong>低查询延时</strong>‌：提供丰富的查询功能，支持类似SQL的查询语言（InfluxQL）。</li>
+                <li>‌<strong>高可用性</strong>‌：支持数据复制和故障转移，确保数据的安全和系统的稳定性。</li>
+                <li>‌<strong>插件生态系统</strong>‌：拥有丰富的插件生态系统，可以扩展其功能</li>
               </ol>
             </ul>
-        </ul>
+          </ul>
+        </div>
       </div>
     </div>
+    <div class="app-faq" id="about-right"></div>
   </div>
-  <div class="app-faq" id="about-right"></div>
-</div>
-<div class="h5footer" id="footer">
-</div>
-<script>
+  <div class="h5footer" id="footer">
+  </div>
+  <script>
     var _hmt = _hmt || [];
     (function () {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
+      var hm = document.createElement("script")
+      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
+      var s = document.getElementsByTagName("script")[0]
+      s.parentNode.insertBefore(hm, s)
     })();
-</script>
+  </script>
 </body>
+
 </html>

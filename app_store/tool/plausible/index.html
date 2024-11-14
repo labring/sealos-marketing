@@ -1,108 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>使用Sealos部署plausible流量分析工具教程</title>
-<link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
-<link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
-<script src="../../../app_store/js/appstor.js" defer></script>
-<script src="../../../app_store/js/navbar.js"></script>
-<script src="../../../app_store/js/header-left.js"></script>
-<script src="../../../app_store/js/about-right.js"></script>
-<script src="../../../app_store/js/foooter.js"></script>
-<script src="../../../app_store/js/step.js"></script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使用Sealos部署plausible流量分析工具教程</title>
+  <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
+  <link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
+  <script src="../../../app_store/js/appstor.js" defer></script>
+  <script src="/js/sem.js" defer></script>
+  <script src="../../../app_store/js/navbar.js"></script>
+  <script src="../../../app_store/js/header-left.js"></script>
+  <script src="../../../app_store/js/about-right.js"></script>
+  <script src="../../../app_store/js/foooter.js"></script>
+  <script src="../../../app_store/js/step.js"></script>
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) }
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y)
     })(window, document, "clarity", "script", "oxaa4saana");
-</script>
-</head>
-<body>
-<div id="navbar-container"></div>
-<div class="stepxq">
-  <div class="left-list" id="left-header">
-  </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelector('.nav-item[data-page="tool"]').classList.add('active');
-      document.querySelector('li[data-page="plausible"]').classList.add('active');
-      document.getElementById('menu_sub').style.display = 'block';
-    });
   </script>
-  <div class="app-h5">
-    <div class="hard-top">
-      <div class="hard-title-stats">
-        <div class="title-stats">
-          <div class="title-logo"><img src="../../img/plausible-analytics-icon-top.png" alt="AFFiNE Logo"></div>
-          <div class="hard-top-title">
-            <div class="hard-top2">
+</head>
+
+<body>
+  <div id="navbar-container"></div>
+  <div class="stepxq">
+    <div class="left-list" id="left-header">
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('.nav-item[data-page="tool"]').classList.add('active')
+        document.querySelector('li[data-page="plausible"]').classList.add('active')
+        document.getElementById('menu_sub').style.display = 'block'
+      });
+    </script>
+    <div class="app-h5">
+      <div class="hard-top">
+        <div class="hard-title-stats">
+          <div class="title-stats">
+            <div class="title-logo"><img src="../../img/plausible-analytics-icon-top.png" alt="AFFiNE Logo"></div>
+            <div class="hard-top-title">
+              <div class="hard-top2">
                 <h1>Plausible</h1>
-                <span class="stats"> <span class="stars"><img src="../../img/AFFINE-logo2.svg">20.4k</span> <span class="shares"><img src="../../img/project.svg"><a href="https://github.com/plausible/analytics" target="_blank">项目首页</a></span> </span></div>
+                <span class="stats"> <span class="stars"><img src="../../img/AFFINE-logo2.svg">20.4k</span> <span
+                    class="shares"><img src="../../img/project.svg"><a href="https://github.com/plausible/analytics"
+                      target="_blank">项目首页</a></span> </span>
+              </div>
               <p class="app-decistore">Plausible 是一款轻量级、开源且注重隐私的流量分析工具，无需使用 cookies，操作简洁高效。</p>
             </div>
-        </div>
-        <div class="buttons">
+          </div>
+          <div class="buttons">
             <button class="yaml-button">
-            <a href="./images/plausible.yaml" download>导出 Yaml</a>
+              <a href="./images/plausible.yaml" download>导出 Yaml</a>
             </button>
             <button class="deploy-button">
-            <a href="https://hzh.sealos.run/?openapp=system-template%3FtemplateName%3Dplausible%26sealos_inside%3Dtrue" target="_blank">一键安装</a>
+              <a href="https://hzh.sealos.run/?openapp=system-template%3FtemplateName%3Dplausible%26sealos_inside%3Dtrue"
+                target="_blank">一键安装</a>
             </button>
           </div>
-      </div>
-      <div class="carousel">
-        <div class="carousel-container"> 
-          <img src="./images/banner1.png" alt="Image 1" class="carousel-item active"> 
-            <img src="./images/banner2.png" alt="Image 2" class="carousel-item"> 
-            <img src="./images/banner3.png" alt="Image 3" class="carousel-item"> 
-            <img src="./images/banner4.png" alt="Image 3" class="carousel-item"> 
+        </div>
+        <div class="carousel">
+          <div class="carousel-container">
+            <img src="./images/banner1.png" alt="Image 1" class="carousel-item active">
+            <img src="./images/banner2.png" alt="Image 2" class="carousel-item">
+            <img src="./images/banner3.png" alt="Image 3" class="carousel-item">
+            <img src="./images/banner4.png" alt="Image 3" class="carousel-item">
           </div>
-        <div class="carousel-nav">
-          <button class="carousel-button prev">&lt;</button>
-          <button class="carousel-button next">&gt;</button>
+          <div class="carousel-nav">
+            <button class="carousel-button prev">&lt;</button>
+            <button class="carousel-button next">&gt;</button>
+          </div>
+          <script src="../../../app_store/js/bannerlb.js"></script>
         </div>
-        <script src="../../../app_store/js/bannerlb.js"></script> 
-      </div>
-      <div class="quick-start">
-        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 AFFiNE</h2>
-        <div class="steps" id="steper">
-          
+        <div class="quick-start">
+          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 AFFiNE</h2>
+          <div class="steps" id="steper">
+
+          </div>
         </div>
-      </div>
-      <div class="features-list">
-        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 AFFiNE</h2>
-        <ul class="features-list-ul">
-          <li>Plausible 是一款轻量级、开源且注重隐私的流量分析工具，无需使用 cookies，操作简洁高效。它提供关键的流量指标，界面直观，无冗余信息，对网站性能影响极小。Plausible 支持自托管和 SaaS模式，非常适合需要基础流量统计且重视用户隐私的个人和企业使用。</li>
-        </ul>
-      </div>
-      <div class="features-list">
-        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
-        <ul class="features-list-ul">
+        <div class="features-list">
+          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 AFFiNE</h2>
+          <ul class="features-list-ul">
+            <li>Plausible 是一款轻量级、开源且注重隐私的流量分析工具，无需使用 cookies，操作简洁高效。它提供关键的流量指标，界面直观，无冗余信息，对网站性能影响极小。Plausible 支持自托管和
+              SaaS模式，非常适合需要基础流量统计且重视用户隐私的个人和企业使用。</li>
+          </ul>
+        </div>
+        <div class="features-list">
+          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
+          <ul class="features-list-ul">
             <li><b>快速且易于集成：</b>设置简单，可与 WordPress、Ghost、Squarespace、Wix 和 Weebly 等流行工具集成。支持单页应用程序和基于哈希的路由。</li>
             <li><b>强大而灵活的 API：</b>我们的 API 提供了一种以编程方式检索您的统计数据、将您的指标发送到您想要的任何位置并以您想要的任何形状呈现它们的方法。</li>
             <li><b>电子邮件和 Slack 报告：</b>通过每周和/或每月报告密切关注您的流量。获取流量高峰通知，这样您就不会错过 Hacker News。报告可以发送给多个收件人。</li>
             <li><b>将脚本作为第一方连接：</b> AFFiNE有一个活跃的社区，提供了丰富的插件和扩展，可以根据你的需求定制软件的功能。例如，代码高亮、任务管理、日历集成等插件应有尽有。</li>
             <li><b>拥有并控制您的数据：</b> 您的站点数据绝不会与任何第三方共享或出售。它绝不会被货币化、挖掘和收集，用于个人和行为趋势。 </li>
-            <li><b>与 Search Console 集成：</b>与 Google Search Console 集成，即可直接在 Plausible 仪表板中查看人们用来在 Google 搜索结果中找到您的网站的搜索查询。</li>
+            <li><b>与 Search Console 集成：</b>与 Google Search Console 集成，即可直接在 Plausible 仪表板中查看人们用来在 Google
+              搜索结果中找到您的网站的搜索查询。</li>
           </ul>
+        </div>
       </div>
     </div>
+    <div class="app-faq" id="about-right"></div>
   </div>
-  <div class="app-faq" id="about-right"></div>
-</div>
-<div class="h5footer" id="footer">
-</div>
-<script>
+  <div class="h5footer" id="footer">
+  </div>
+  <script>
     var _hmt = _hmt || [];
     (function () {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
+      var hm = document.createElement("script")
+      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
+      var s = document.getElementsByTagName("script")[0]
+      s.parentNode.insertBefore(hm, s)
     })();
-</script>
+  </script>
 </body>
+
 </html>

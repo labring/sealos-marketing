@@ -1,87 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>使用Sealos部署chatgpt-next-web教程</title>
-<link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
-<link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
-<script src="../../../app_store/js/appstor.js" defer></script>
-<script src="../../../app_store/js/navbar.js"></script>
-<script src="../../../app_store/js/header-left.js"></script>
-<script src="../../../app_store/js/about-right.js"></script>
-<script src="../../../app_store/js/foooter.js"></script>
-<script src="../../../app_store/js/step.js"></script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使用Sealos部署chatgpt-next-web教程</title>
+  <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
+  <link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
+  <script src="../../../app_store/js/appstor.js" defer></script>
+  <script src="/js/sem.js" defer></script>
+  <script src="../../../app_store/js/navbar.js"></script>
+  <script src="../../../app_store/js/header-left.js"></script>
+  <script src="../../../app_store/js/about-right.js"></script>
+  <script src="../../../app_store/js/foooter.js"></script>
+  <script src="../../../app_store/js/step.js"></script>
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) }
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y)
     })(window, document, "clarity", "script", "oxaa4saana");
-</script>
-</head>
-<body>
-<div id="navbar-container"></div>
-<div class="stepxq">
-  <div class="left-list" id="left-header">
-  </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelector('.nav-item[data-page="AI"]').classList.add('active');
-      document.querySelector('li[data-page="Chatgpt-next-web"]').classList.add('active');
-      document.getElementById('menu_sub').style.display = 'block';
-    });
   </script>
-  <div class="app-h5">
-    <div class="hard-top">
-      <div class="hard-title-stats">
-        <div class="title-stats">
-          <div class="title-logo"><img src="../../img/iconchatgpt.svg" alt="Logo"></div>
-          <div class="hard-top-title">
-            <div class="hard-top2">
+</head>
+
+<body>
+  <div id="navbar-container"></div>
+  <div class="stepxq">
+    <div class="left-list" id="left-header">
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('.nav-item[data-page="AI"]').classList.add('active')
+        document.querySelector('li[data-page="Chatgpt-next-web"]').classList.add('active')
+        document.getElementById('menu_sub').style.display = 'block'
+      });
+    </script>
+    <div class="app-h5">
+      <div class="hard-top">
+        <div class="hard-title-stats">
+          <div class="title-stats">
+            <div class="title-logo"><img src="../../img/iconchatgpt.svg" alt="Logo"></div>
+            <div class="hard-top-title">
+              <div class="hard-top2">
                 <h1>Chatgpt-Next-Web</h1>
-                <span class="stats"> <span class="stars"><img src="../../img/AFFINE-logo2.svg">76.2k</span> <span class="shares"><img src="../../img/project.svg"><a href="https://github.com/toeverything/AFFiNE" target="_blank">项目首页</a></span> </span></div>
-              <p class="app-decistore">基于React和Flask的在线应用，利用OpenAI的ChatGPT模型提供高效、实时的聊天体验。它支持知识查询、学习辅导和创意启发，通过Docker简化部署，为开发者和用户带来智能化的交流平台。</p>
+                <span class="stats"> <span class="stars"><img src="../../img/AFFINE-logo2.svg">76.2k</span> <span
+                    class="shares"><img src="../../img/project.svg"><a href="https://github.com/toeverything/AFFiNE"
+                      target="_blank">项目首页</a></span> </span>
+              </div>
+              <p class="app-decistore">
+                基于React和Flask的在线应用，利用OpenAI的ChatGPT模型提供高效、实时的聊天体验。它支持知识查询、学习辅导和创意启发，通过Docker简化部署，为开发者和用户带来智能化的交流平台。</p>
             </div>
-        </div>
-        <div class="buttons">
+          </div>
+          <div class="buttons">
             <button class="yaml-button">
-            <a href="./images/chatgpt-next-web.yaml" download>导出 Yaml</a>
+              <a href="./images/chatgpt-next-web.yaml" download>导出 Yaml</a>
             </button>
             <button class="deploy-button">
-            <a href="https://hzh.sealos.run/?openapp=system-template%3FtemplateName%3Dchatgpt-next-web%26sealos_inside%3Dtrue" target="_blank">一键安装</a>
+              <a href="https://hzh.sealos.run/?openapp=system-template%3FtemplateName%3Dchatgpt-next-web%26sealos_inside%3Dtrue"
+                target="_blank">一键安装</a>
             </button>
           </div>
-      </div>
-      <div class="carousel">
-        <div class="carousel-container"> 
-          <img src="./images/banner1.png" alt="Image 1" class="carousel-item active"> 
-          <img src="./images/banner2.png" alt="Image 2" class="carousel-item active"> 
-          <img src="./images/banner3.png" alt="Image 3" class="carousel-item active"> 
-          <img src="./images/banner4.png" alt="Image 4" class="carousel-item active"> 
-          <img src="./images/banner5.png" alt="Image 5" class="carousel-item active"> 
+        </div>
+        <div class="carousel">
+          <div class="carousel-container">
+            <img src="./images/banner1.png" alt="Image 1" class="carousel-item active">
+            <img src="./images/banner2.png" alt="Image 2" class="carousel-item active">
+            <img src="./images/banner3.png" alt="Image 3" class="carousel-item active">
+            <img src="./images/banner4.png" alt="Image 4" class="carousel-item active">
+            <img src="./images/banner5.png" alt="Image 5" class="carousel-item active">
           </div>
-        <div class="carousel-nav">
-          <button class="carousel-button prev">&lt;</button>
-          <button class="carousel-button next">&gt;</button>
+          <div class="carousel-nav">
+            <button class="carousel-button prev">&lt;</button>
+            <button class="carousel-button next">&gt;</button>
+          </div>
+          <script src="../../../app_store/js/bannerlb.js"></script>
         </div>
-        <script src="../../../app_store/js/bannerlb.js"></script> 
-      </div>
-      <div class="quick-start">
-        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 Chatgpt-Next-Web</h2>
-        <div class="steps" id="steper">
-          
+        <div class="quick-start">
+          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 Chatgpt-Next-Web</h2>
+          <div class="steps" id="steper">
+
+          </div>
         </div>
-      </div>
-      <div class="features-list">
-        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 Chatgpt-Next-Web</h2>
-        <ul class="features-list-ul">
-          <li>ChatGPT-Next-Web 是一个基于开源框架创建的在线聊天应用，它利用了OpenAI的ChatGPT模型，提供了与人工智能进行自然对话的交互体验。该项目旨在为用户提供一个简洁、高效的平台，让用户可以轻松地与AI助手进行交流，获取信息，解答疑问，甚至进行创造性思考。</li>
-        </ul>
-      </div>
-      <div class="features-list">
-        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
-        <ul class="features-list-ul">
+        <div class="features-list">
+          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 Chatgpt-Next-Web</h2>
+          <ul class="features-list-ul">
+            <li>ChatGPT-Next-Web
+              是一个基于开源框架创建的在线聊天应用，它利用了OpenAI的ChatGPT模型，提供了与人工智能进行自然对话的交互体验。该项目旨在为用户提供一个简洁、高效的平台，让用户可以轻松地与AI助手进行交流，获取信息，解答疑问，甚至进行创造性思考。
+            </li>
+          </ul>
+        </div>
+        <div class="features-list">
+          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
+          <ul class="features-list-ul">
             <li>在 1 分钟内使用 Vercel <strong>免费一键部署</strong></li>
             <li>提供体积极小（~5MB）的跨平台客户端（Linux/Windows/MacOS）, </li>
             <li>完整的 Markdown 支持：LaTex 公式、Mermaid 流程图、代码高亮等等</li>
@@ -89,26 +99,29 @@
             <li>极快的首屏加载速度（~100kb），支持流式响应</li>
             <li>隐私安全，所有数据保存在用户浏览器本地</li>
             <li>预制角色功能（面具），方便地创建、分享和调试你的个性化对话</li>
-            <li>海量的内置 prompt 列表，来自<a href="https://github.com/PlexPt/awesome-chatgpt-prompts-zh">中文</a>和<a href="https://github.com/f/awesome-chatgpt-prompts">英文</a></li>
+            <li>海量的内置 prompt 列表，来自<a href="https://github.com/PlexPt/awesome-chatgpt-prompts-zh">中文</a>和<a
+                href="https://github.com/f/awesome-chatgpt-prompts">英文</a></li>
             <li>自动压缩上下文聊天记录，在节省 Token 的同时支持超长对话</li>
-            <li>多国语言支持：English, 简体中文, 繁体中文, 日本語, Español, Italiano, Türkçe, Deutsch, Tiếng Việt, Русский, Čeština, 한국어, Indonesia</li>
+            <li>多国语言支持：English, 简体中文, 繁体中文, 日本語, Español, Italiano, Türkçe, Deutsch, Tiếng Việt, Русский, Čeština, 한국어,
+              Indonesia</li>
             <li>拥有自己的域名？好上加好，绑定后即可在任何地方<strong>无障碍</strong>快速访问</li>
-        </ul>
+          </ul>
+        </div>
       </div>
     </div>
+    <div class="app-faq" id="about-right"></div>
   </div>
-  <div class="app-faq" id="about-right"></div>
-</div>
-<div class="h5footer" id="footer">
-</div>
-<script>
+  <div class="h5footer" id="footer">
+  </div>
+  <script>
     var _hmt = _hmt || [];
     (function () {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
+      var hm = document.createElement("script")
+      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
+      var s = document.getElementsByTagName("script")[0]
+      s.parentNode.insertBefore(hm, s)
     })();
-</script>
+  </script>
 </body>
+
 </html>

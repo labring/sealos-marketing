@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
   <link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
   <script src="../../../app_store/js/appstor.js" defer></script>
+  <script src="/js/sem.js" defer></script>
   <script src="../../../app_store/js/navbar.js"></script>
   <script src="../../../app_store/js/header-left.js"></script>
   <script src="../../../app_store/js/about-right.js"></script>
@@ -18,12 +20,12 @@
   <div id="navbar-container"></div>
   <div class="stepxq">
     <div class="left-list" id="left-header"></div>
-    
+
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        document.querySelector('.nav-item[data-page="devetool"]').classList.add('active');
-        document.querySelector('li[data-page="frp"]').classList.add('active');
-        document.getElementById('menu_sub').style.display = 'block';
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('.nav-item[data-page="devetool"]').classList.add('active')
+        document.querySelector('li[data-page="frp"]').classList.add('active')
+        document.getElementById('menu_sub').style.display = 'block'
       });
     </script>
 
@@ -47,7 +49,8 @@
                   </span>
                 </span>
               </div>
-              <p class="app-decistore">frp 是一个专注于内网穿透的高性能的反向代理应用，支持 TCP、UDP、HTTP、HTTPS 等多种协议。可以将内网服务以安全、便捷的方式通过具有公网 IP 节点的中转暴露到公网。</p>
+              <p class="app-decistore">frp 是一个专注于内网穿透的高性能的反向代理应用，支持 TCP、UDP、HTTP、HTTPS 等多种协议。可以将内网服务以安全、便捷的方式通过具有公网 IP
+                节点的中转暴露到公网。</p>
             </div>
           </div>
           <div class="buttons">
@@ -55,7 +58,8 @@
               <a href="./images/frp.yaml" download>导出 Yaml</a>
             </button>
             <button class="deploy-button">
-              <a href="https://hzh.sealos.run/?openapp=system-template%3FtemplateName%3Dfrp%26sealos_inside%3Dtrue" target="_blank">一键安装</a>
+              <a href="https://hzh.sealos.run/?openapp=system-template%3FtemplateName%3Dfrp%26sealos_inside%3Dtrue"
+                target="_blank">一键安装</a>
             </button>
           </div>
         </div>
@@ -83,7 +87,8 @@
             <img src="../../img/Rectangle 34624253.svg">什么是 frp(Fast Reverse Proxy)
           </h2>
           <ul class="features-list-ul">
-            <li>frp(Fast Reverse Proxy) 是一个高性能的反向代理工具，使用 Go 语言编写，能够帮助你轻松地将内网服务暴露到公网，实现安全、快速、便捷的内网穿透。它支持 TCP、UDP、HTTP、HTTPS 等多种协议，并提供丰富的功能，例如自定义域名、负载均衡、加密传输等，能够满足各种场景下的内网穿透需求。</li>
+            <li>frp(Fast Reverse Proxy) 是一个高性能的反向代理工具，使用 Go 语言编写，能够帮助你轻松地将内网服务暴露到公网，实现安全、快速、便捷的内网穿透。它支持
+              TCP、UDP、HTTP、HTTPS 等多种协议，并提供丰富的功能，例如自定义域名、负载均衡、加密传输等，能够满足各种场景下的内网穿透需求。</li>
           </ul>
         </div>
 
@@ -126,12 +131,13 @@
 
   <script>
     var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
+    (function () {
+      var hm = document.createElement("script")
+      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
+      var s = document.getElementsByTagName("script")[0]
+      s.parentNode.insertBefore(hm, s)
     })();
   </script>
 </body>
+
 </html>

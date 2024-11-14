@@ -1,100 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>使用Sealos部署blossom笔记软件教程</title>
-<link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
-<link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
-<script src="../../../app_store/js/appstor.js" defer></script>
-<script src="../../../app_store/js/navbar.js"></script>
-<script src="../../../app_store/js/header-left.js"></script>
-<script src="../../../app_store/js/about-right.js"></script>
-<script src="../../../app_store/js/foooter.js"></script>
-<script src="../../../app_store/js/step.js"></script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使用Sealos部署blossom笔记软件教程</title>
+  <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
+  <link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
+  <script src="../../../app_store/js/appstor.js" defer></script>
+  <script src="/js/sem.js" defer></script>
+  <script src="../../../app_store/js/navbar.js"></script>
+  <script src="../../../app_store/js/header-left.js"></script>
+  <script src="../../../app_store/js/about-right.js"></script>
+  <script src="../../../app_store/js/foooter.js"></script>
+  <script src="../../../app_store/js/step.js"></script>
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) }
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y)
     })(window, document, "clarity", "script", "oxaa4saana");
-</script>
-</head>
-<body>
-<div id="navbar-container"></div>
-<div class="stepxq">
-  <div class="left-list" id="left-header">
-  </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelector('.nav-item[data-page="tool"]').classList.add('active');
-      document.querySelector('li[data-page="blossom"]').classList.add('active');
-      document.getElementById('menu_sub').style.display = 'block';
-    });
   </script>
-  <div class="app-h5">
-    <div class="hard-top">
-      <div class="hard-title-stats">
-        <div class="title-stats">
-          <div class="title-logo"><img src="../../img/141598483.png" alt="Kuboard Logo"></div>
-          <div class="hard-top-title">
-            <div class="hard-top2">
+</head>
+
+<body>
+  <div id="navbar-container"></div>
+  <div class="stepxq">
+    <div class="left-list" id="left-header">
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('.nav-item[data-page="tool"]').classList.add('active')
+        document.querySelector('li[data-page="blossom"]').classList.add('active')
+        document.getElementById('menu_sub').style.display = 'block'
+      });
+    </script>
+    <div class="app-h5">
+      <div class="hard-top">
+        <div class="hard-title-stats">
+          <div class="title-stats">
+            <div class="title-logo"><img src="../../img/141598483.png" alt="Kuboard Logo"></div>
+            <div class="hard-top-title">
+              <div class="hard-top2">
                 <h1>blossom</h1>
-                <span class="stats"> <span class="stars"><img src="../../img/AFFINE-logo2.svg">3.1k</span> <span class="shares"><img src="../../img/project.svg"><a href="https://github.com/blossom-editor/blossom" target="_blank">项目首页</a></span> </span></div>
+                <span class="stats"> <span class="stars"><img src="../../img/AFFINE-logo2.svg">3.1k</span> <span
+                    class="shares"><img src="../../img/project.svg"><a href="https://github.com/blossom-editor/blossom"
+                      target="_blank">项目首页</a></span> </span>
+              </div>
               <p class="app-decistore">Blossom是一款支持私有部署的云端双链笔记软件‌，用户可以将笔记、图片和个人计划安排保存在自己的服务器中，并在任意设备之间实时同步</p>
             </div>
-        </div>
-        <div class="buttons">
+          </div>
+          <div class="buttons">
             <button class="yaml-button">
-            <a href="./images/blossom.yaml" download>导出 Yaml</a>
+              <a href="./images/blossom.yaml" download>导出 Yaml</a>
             </button>
             <button class="deploy-button">
-            <a href="https://hzh.sealos.run/?openapp=system-template%3FtemplateName%3Dblossom%26sealos_inside%3Dtrue" target=”_blank”>一键安装</a>
+              <a href="https://hzh.sealos.run/?openapp=system-template%3FtemplateName%3Dblossom%26sealos_inside%3Dtrue"
+                target=”_blank”>一键安装</a>
             </button>
           </div>
-      </div>
-      <div class="carousel">
-        <div class="carousel-container"> <img src="./images/banner3.png" alt="Image 1"
-            class="carousel-item active"> 
-            <img src="./images/banner1.png" alt="Image 2" class="carousel-item"> 
-            <img src="./images/banner2.png" alt="Image 2" class="carousel-item"> 
         </div>
-        <div class="carousel-nav">
-          <button class="carousel-button prev">&lt;</button>
-          <button class="carousel-button next">&gt;</button>
+        <div class="carousel">
+          <div class="carousel-container"> <img src="./images/banner3.png" alt="Image 1" class="carousel-item active">
+            <img src="./images/banner1.png" alt="Image 2" class="carousel-item">
+            <img src="./images/banner2.png" alt="Image 2" class="carousel-item">
+          </div>
+          <div class="carousel-nav">
+            <button class="carousel-button prev">&lt;</button>
+            <button class="carousel-button next">&gt;</button>
+          </div>
+          <script src="../../../app_store/js/bannerlb.js"></script>
         </div>
-        <script src="../../../app_store/js/bannerlb.js"></script> 
-      </div>
-      <div class="quick-start">
-        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 blossom</h2>
-        <div class="steps" id="steper">
-          
+        <div class="quick-start">
+          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 blossom</h2>
+          <div class="steps" id="steper">
+
+          </div>
         </div>
-      </div>
-      <div class="features-list">
-        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 blossom</h2>
-        <ul class="features-list-ul">
+        <div class="features-list">
+          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 blossom</h2>
+          <ul class="features-list-ul">
             <li>Blossom 是一个支持私有部署的云端双链笔记软件，你可以将你的笔记，图片，个人计划安排保存在自己的服务器中，并在任意设备之间实时同步‌</li>
           </ul>
-      </div>
-      <div class="features-list">
-        <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
-        <ul class="features-list-ul">
+        </div>
+        <div class="features-list">
+          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
+          <ul class="features-list-ul">
             <li><b>服务端 Docker 部署，客户端网页部署：</b>部署在云服务器就是多端同步云笔记，部署在本地就是本地笔记。‌</li>
             <li><b>文章图片保存、管理‌：</b>不依赖任何对象存储，保存图片与文章的引用关系，一键导出并转换为本地笔记。‌</li>
-            <li><b>计划安排 / Todo List：</b>创建计划与待办事项，一键导出为 Markdown，轻松形成一篇周报/月报。‌</li> 
-            <li><b>多用户隔离：</b>Blossom 允许创建多个账号，账号之间完全隔离，可与家人朋友共同使用、工作生活分开存储。‌</li> 
-            <li><b>响应式博客 / 移动端支持：</b>附带网页端博客，完善的文章上下线控制，登录博客即是一个移动客户端。‌</li> 
-            <li><b>多项常用功能：</b>主题设置，番茄钟，字数统计，字数折线图，编辑热力图，天气预报。‌</li>        
+            <li><b>计划安排 / Todo List：</b>创建计划与待办事项，一键导出为 Markdown，轻松形成一篇周报/月报。‌</li>
+            <li><b>多用户隔离：</b>Blossom 允许创建多个账号，账号之间完全隔离，可与家人朋友共同使用、工作生活分开存储。‌</li>
+            <li><b>响应式博客 / 移动端支持：</b>附带网页端博客，完善的文章上下线控制，登录博客即是一个移动客户端。‌</li>
+            <li><b>多项常用功能：</b>主题设置，番茄钟，字数统计，字数折线图，编辑热力图，天气预报。‌</li>
           </ul>
+        </div>
       </div>
     </div>
+    <div class="app-faq" id="about-right"></div>
   </div>
-  <div class="app-faq" id="about-right"></div>
-</div>
-<div class="h5footer" id="footer">
-</div>
-<script>
+  <div class="h5footer" id="footer">
+  </div>
+  <script>
     var _hmt = _hmt || [];
     (function () {
       var hm = document.createElement("script")
@@ -104,4 +110,5 @@
     })();
   </script>
 </body>
+
 </html>
