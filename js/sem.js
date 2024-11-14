@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
       var baseUrl = this.getAttribute('href')
 
+      console.log(baseUrl, 'baseUrl')
+
       // 如果链接不存在或是锚点链接，则不处理
       if (!baseUrl || baseUrl.startsWith('#')) {
         return
@@ -30,7 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
       newUrl += (newUrl.includes('?') ? '&' : '?') + 's=bd-sealos-marketing-appstore'
 
-      window.open(newUrl, '_self')
+      const target = baseUrl.includes('hzh.sealos.run') || baseUrl.includes('mp.weixin.qq.com') ? '_blank' : '_self'
+      window.open(newUrl, target)
     })
 
   })
