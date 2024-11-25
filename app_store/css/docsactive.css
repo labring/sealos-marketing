@@ -22,9 +22,9 @@
 .body_left {
     background: #ffffff;
     width: 400px;
-    margin-right: 100px;
+    margin-right: 40px;
     border-right: 1px solid #E6EDF9;
-    padding-right: 50px;
+    padding-right: 20px;
 }
 .body-about{
     display: flex;
@@ -51,7 +51,7 @@
 
 .title-tdk {
     display: flex;
-    padding: 20px 0px;
+    padding: 30px 0px 20px 0px;
 }
 
 .title-tdk img {
@@ -83,13 +83,19 @@
     flex-direction: column;
     font-size: 14px;
     color: #667085;
-    gap: 25px;
+    gap: 20px;
     line-height: 24px;
 }
 .body_left h2{
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 6px;
+}
+.body-right h3{
+    margin-left: 30px;
+}
+.bodyico{
+    margin-left: 30px;
 }
 .bodyico{
     width: 30px;
@@ -103,3 +109,127 @@ a:hover{
 .body-about li a p{
     padding-left: 20px;
 }
+
+body {
+    overflow-y: scroll;
+  }
+       .bdynr p {
+           line-height: inherit;
+           margin-top: 22px;
+           margin-bottom: 22px;
+           font-size: 15px;
+           word-spacing: 3px;
+           letter-spacing: 1px;
+           color: rgb(66, 75, 93);
+       }
+       .bdynr strong {
+           color: rgb(61, 172, 251);
+           visibility: visible;
+       }
+
+       .codeya {
+           color: rgb(166, 226, 46);
+
+       }
+
+       .bdynr h2 {
+           line-height: 1.5;
+           margin: 4em auto 2em;
+           padding-right: 20px;
+           padding-left: 20px;
+           font-size: 20px;
+           font-weight: bold;
+           border-bottom: 1px solid rgb(236, 236, 236);
+           color: rgb(255, 255, 255);
+           text-align: center;
+           background: rgb(61, 172, 251);
+           border-radius: 1px;
+           display: table;
+           letter-spacing: 2px;
+       }
+       .bdynr h3 {
+           line-height: 1.5;
+           margin-top: 2em;
+           margin-right: 8px;
+           margin-bottom: 0.75em;
+           font-size: 18px;
+           padding-left: 8px;
+           font-weight: bold;
+           display: inline-block;
+           border-left: 3px solid rgb(61, 172, 251);
+       }
+
+       .bodyimg img {
+           width: 700px;
+       }
+
+       .bodyimg {
+           text-align: center;
+       }
+
+       pre {
+           display: flex;
+           background-color: rgb(38, 50, 56);
+           border-radius: 6px;
+           border-width: 2px;
+           border-style: solid;
+           border-color: rgb(61, 172, 251);
+           overflow: visible;
+           padding: 10px 30px;
+           overflow-x: auto;
+           /* Ensures horizontal scrollbar */
+           white-space: pre-wrap;
+       }
+
+       code {
+           color: rgb(166, 166, 166);
+           font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+       }
+
+
+       @media screen and (max-width: 1680px) {
+           .body_left{
+               margin-right: 40px;
+       
+           }
+           .body-3{
+               gap: 10px;
+               font-size: 13px;
+           }
+           .bodyico{
+               margin-bottom: 20px;
+           }
+           .body-2{
+               padding: 40px 30px;
+           }
+           .active-body h2{
+               font-size: 24px;
+           }
+           .active-body{
+               width:700px;
+               padding: 10px 30px;
+           }
+           .body-about{
+               font-size: 12px;
+           }
+           .body-right h3{
+               margin-left: 30px;
+           }
+           .bodyico{
+               margin-left: 30px;
+           }
+           .bdynr p{
+               font-size: 14px;
+           }
+           .title-tdk img{
+               width: 30px;
+               margin-right: 10px;
+           }
+           .title-dk h3{
+               font-size: 14px;
+           }
+           .title-dk span{
+               font-size: 12px;
+               padding-top:2px;
+           }
+       }

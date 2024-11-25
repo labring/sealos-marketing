@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   links.forEach(function (link) {
     link.addEventListener('click', function (e) {
-      e.preventDefault()
 
       var baseUrl = this.getAttribute('href')
 
@@ -16,6 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!baseUrl || baseUrl.startsWith('#')) {
         return
       }
+
+      e.preventDefault()
 
       var urlParams = new URLSearchParams(window.location.search)
       var bdVid = urlParams.get('bd_vid')

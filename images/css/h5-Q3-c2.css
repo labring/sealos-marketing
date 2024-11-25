@@ -231,7 +231,7 @@ video {
   gap: 24px;
   margin-bottom: 100px;
   justify-content: flex-end;
-  width: 1280px;
+  width: 100%;
 }
 .demo-a {
   display: flex;
@@ -1298,6 +1298,25 @@ a {
 .hero-video img{
   width: 80%;
 }
+.tab-section-tions{
+  width: 1280px;
+  margin: 0 auto;
+}
+.test{
+  width: 1280px;
+  margin: 0 auto;
+}
+.column-kj{
+  padding: 10px 32px 20px 32px;
+  gap: 12px;
+}
+.tab-h3{
+  margin-bottom: 50px;
+}
+.tab-section{
+  margin-bottom: 40px;
+}
+
 }
 @media screen and (min-width: 1680px) {
   .tab-section-tions, .hero, .navbar-container, .contai, .test, .Feature, .charge, .specification, .vids7, .h5_footer {

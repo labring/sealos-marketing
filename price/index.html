@@ -1,8 +1,6 @@
 <!doctype html>
 <html>
-
 <head>
-
   <meta charset="UTF-8">
   <title>产品定价-Sealos</title>
   <link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
@@ -32,7 +30,7 @@
     .number-input .right-element {
       position: absolute;
       right: 26px;
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 500;
 
     }
@@ -43,7 +41,7 @@
       padding: 6px 10px;
       box-sizing: border-box;
       background-color: #F7F8FA;
-      font-size: 10px;
+      font-size: 14px;
       outline: none;
       -moz-appearance: textfield;
       /* Firefox */
@@ -200,7 +198,7 @@
       border: 0.844131px solid #E8EBF0;
       border-radius: 5.27381px;
       font-weight: 400;
-      font-size: 10px;
+      font-size: 12px;
       /* Gray modern/900 */
       color: #24282C;
     }
@@ -336,7 +334,7 @@
 
     main .main-container {
 
-      width: 1000px;
+      width: 1300px;
       margin: 40px auto;
     }
 
@@ -395,16 +393,15 @@
 
     .price-calculator {
       display: flex;
-      height: 517px;
-      background: #FFFFFF;
-      box-shadow: 0px 0px 0.682898px rgba(0, 0, 0, 0.05), 0px 3.15903px 12.6361px rgba(182, 202, 224, 0.28);
-      border-radius: 12px;
-      border: Mixed solid var(--Gray-Modern-200, #E8EBF0)
+    height: 600px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 0.682898px rgba(0, 0, 0, 0.05), 0px 3.15903px 12.6361px rgba(182, 202, 224, 0.28);
+    border-radius: 12px;
+    border: Mixed solid var(--Gray-Modern-200, #E8EBF0);
+    justify-content: space-between;
     }
 
     .region-select-container {
-      /* Frame 20856 */
-      /* Auto layout */
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -413,26 +410,19 @@
 
       width: 376.76px;
       height: 36px;
-
-
-      /* Inside auto layout */
       flex: none;
       order: 1;
       flex-grow: 0;
 
     }
-
     .calculator-container {
-      /* Frame 427319389 */
-      width: 701px;
       height: 517px;
-      padding: 20px 35px;
+      padding: 20px 100px;
       border-radius: 10.1296px 0px 0px 10.1296px;
     }
-
     .price-table-container {
       border-left: 0.84px solid var(--Gray-Modern-200, #E8EBF0);
-      padding: 20px 24px;
+      padding: 30px 100px 30px 100px;
     }
 
     .calculator-header,
@@ -448,19 +438,20 @@
     }
 
     .calculator-header {
-      margin-bottom: 17px;
+      margin-bottom: 30px;
       width: 629px;
       height: 32px;
+      margin-top: 10px;
     }
 
     .price-header {
       width: 100%;
-      margin-bottom: 15px;
+      margin-bottom: 40px;
     }
 
     .calculator-header+.line {
       margin-top: 13px;
-      margin-bottom: 17px;
+      margin-bottom: 30px;
       border: 0.84px solid var(--Gray-Modern-200, #E8EBF0)
     }
 
@@ -472,23 +463,16 @@
       font-family: 'PingFang SC';
       font-style: normal;
       font-weight: 500;
-      font-size: 16.8826px;
+      font-size: 20px;
       line-height: 22px;
-      /* identical to box height, or 130% */
       display: flex;
       align-items: flex-end;
       letter-spacing: 0.12662px;
-
-      /* light/general/on-surface */
       color: #111824;
-
-      /* Inside auto layout */
       flex: none;
       order: 0;
       flex-grow: 0;
-
     }
-
     .calculator-container .cpu-resource,
     .calculator-container .memory-resource {
       /* Frame 20837 */
@@ -531,9 +515,9 @@
       order: 0;
       flex-grow: 0;
       font-family: PingFang SC;
-      font-size: 11px;
+      font-size: 14px;
       font-weight: 500;
-
+letter-spacing: 1px;
     }
 
     .calculator-content {
@@ -557,7 +541,8 @@
     .total-price {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 12px;
+      font-size: 18px;
     }
 
     .total-price .price {
@@ -569,7 +554,7 @@
     .calculator-input {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 30px;
     }
 
     .section-title {
@@ -609,7 +594,7 @@
     .price-list {
       width: 250px;
       padding: 0;
-      margin-top: 15px;
+      margin-top: 30px;
       background: #FFFFFF;
     }
 
@@ -620,10 +605,11 @@
       padding: 11px 20px;
       background: #F4F4F7;
       border-radius: 5px;
+      margin-bottom: 10px;
     }
 
     .price-list-header span {
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 500;
       color: #111824;
       letter-spacing: 0.42px;
@@ -637,8 +623,8 @@
     }
 
     .unit-price img {
-      width: 10px;
-      height: 10px;
+      width: 14px;
+      height: 14px;
     }
 
     .price-items {
@@ -668,10 +654,10 @@
     }
 
     .resource span {
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 500;
       color: #111824;
-      letter-spacing: 0.42px;
+      letter-spacing: 0.52px;
     }
 
     .price-value {
@@ -689,7 +675,7 @@
     }
 
     .price-value-unit {
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 500;
       color: #667085;
       letter-spacing: 0.42px;
