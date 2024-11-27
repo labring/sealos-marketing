@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
             <p>联系我们</p>
           </li>
           <li><a href="https://github.com/labring/sealos/issues" target="_blank">问题反馈</a></li>
-          <li><a href="https://sealos.run/company/" target="_blank">关于我们</a></li>
         </ul>
       </div>
     </div>
