@@ -75,6 +75,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+.quick-start .quick-video{
+  display: flex ;
+  justify-content: space-between;
+}
 /* App store styles */
 .app-store {
   max-width: 1200px;
@@ -141,6 +145,11 @@ img {
   background-color: rgba(255, 255, 255, 0.95); /* 半透明背景 */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 更明显的阴影 */
   backdrop-filter: blur(10px); /* 毛玻璃效果 */
+}
+.video{
+  color: #379bf4;
+  padding-left: 10px;
+  font-size: 18px;
 }
 .logo {
   display: flex;
@@ -1316,11 +1325,12 @@ button::-moz-focus-inner {
   .app-h5 {
     width: 100%;
   }
+
   .app-faq {
     width: 400px;
   }
   .hard-top-title {
-    width: 840px;
+    width: 750px;
   }
   .app-decistore {
     font-size: 14px;
