@@ -12,11 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
         <br/>
         🛡️ 安全稳定：应用级和租户级网络隔离能力。 </p>
     </div>
-    <div class="app-h5-left">
-      <h3>交流讨论</h3>
-      <a href="#"><img src="../../../app_store/img/ewm.png">
-      <p>开发者交流群</p>
-      </a> </div>
 
     `;
 
