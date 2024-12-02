@@ -404,7 +404,6 @@ document.addEventListener('DOMContentLoaded', function() {
         <li><a href="/price" target="_blank">定价</a></li>
         <li><a href="https://sealos.run/docs/Intro/" target="_blank">文档</a></li>
         <li><a href="https://forum.laf.run/" target="_blank">社区</a></li>
-        <li><a href="https://fael3z0zfze.feishu.cn/share/base/form/shrcn5oHHTKCf3VREMKOhEy6fmf" target="_blank">商务咨询</a></li>
       </ul>
     </div>
     <div class="actions">

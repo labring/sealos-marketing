@@ -136,4 +136,12 @@ document.addEventListener('DOMContentLoaded', function () {
 //     })
 //   })
 // })
-
+        // 添加滚动事件监听
+        window.addEventListener('scroll', function () {
+          const navbar = document.querySelector('.navbar');
+          if (window.scrollY > 0) { // 当滚动超过50px时
+            navbar.classList.add('navbar-scrolled2');
+          } else {
+            navbar.classList.remove('navbar-scrolled2');
+          }
+        });

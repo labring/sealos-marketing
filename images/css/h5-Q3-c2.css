@@ -266,7 +266,7 @@ video {
   letter-spacing: 0.4px;
   text-align: center;
   margin-bottom: 72px;
-  padding-top: 40px;
+  padding-top: 80px;
 }
 .tabico1 {
   background-image: url('../tabico1-ac.png');
@@ -1107,7 +1107,7 @@ background-clip: text;
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 .hero-content h1 p {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
@@ -1120,12 +1120,37 @@ background-clip: text;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 170px;
+  margin-bottom: 80px;
 }
 .hero-content {
   max-width: 50%;
   margin-left: 70px;
-  margin-top: 30px;
+
+}
+.dropdown-content {
+  display: none; /* 默认隐藏下拉菜单 */
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.navbar-scrolled2{
+  position: fixed;
+  box-shadow: 0px 12px 64px -12px rgba(19, 51, 107, 0.08), 0px 0px 1px 0px rgba(19, 51, 107, 0.20);
+  background: #ffffff;
+  padding: 16px 0px;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+}
+.dropdown:hover .dropdown-content {
+  display: block; /* 悬停时显示下拉菜单 */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 .tips {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
@@ -1138,7 +1163,7 @@ background-clip: text;
 .hero-stats {
   display: flex;
   gap: 2vw;
-  margin: 50px 0px 35px 0px;
+  margin: 64px 0px 35px 0px;
   align-items: center;
 }
 .stat {
@@ -1161,6 +1186,12 @@ background-clip: text;
   border-radius: 0.4em;
   text-decoration: none;
   font-size: 16px;
+  letter-spacing: 1px;
+}
+.hero-video video{
+  width: 650px;
+  border-radius: 10px;
+  border: solid 8px #333333;
 }
 a {
   text-decoration: none;
@@ -1179,7 +1210,7 @@ a {
   color: var(--Neutrals-White, var(--White, #FFF));
   text-align: center;
   font-style: normal;
-  letter-spacing: 0.009375em;
+
   box-shadow: 0px 0.289125em 1.15650em 0px rgba(58, 149, 255, 0.28);
   display: flex;
   align-items: center;
@@ -1191,7 +1222,7 @@ a {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
   text-align: center;
   font-style: normal;
-  letter-spacing: 0.009375em;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1222,7 +1253,7 @@ a {
   justify-content: space-between;
   display: flex;
   flex: 1 0 0;
-  gap: 32px;
+  gap: 64px;
   align-items: center;
   position: relative;
   margin-top: 20px;
