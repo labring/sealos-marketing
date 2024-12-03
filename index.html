@@ -16,26 +16,6 @@
   <script src="/js/sem.js" defer></script>
   <script src="./images/js/navbar.js"></script>
   <script src="./images/js/foooter.js"></script>
-  <style>
-    .card {
-      transition: transform 0.3s ease-in-out;
-      transform-style: preserve-3d;
-      perspective: 1000px;
-    }
-    .card:hover {
-      transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    }
-    .feature {
-      transition: transform 0.3s ease-in-out;
-      transform-style: preserve-3d;
-      perspective: 1000px;
-    }
-    .feature:hover {
-      transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    }
-  </style>
   <script type="text/javascript">
     (function (c, l, a, r, i, t, y) {
       c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) }
@@ -49,8 +29,6 @@
     <div class="nav1">
       <div id="navbar-container"> </div>
       <div class="hero">
-        <!-- Add canvas for particle effect -->
-        <canvas id="particleCanvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></canvas>
         <div class="hero-section">
           <div class="hero-content">
             <h1>Sealos<p>容器云</p>
@@ -65,7 +43,7 @@
                 <p>个人应用</p>
               </div>
               <div class="stat-divider"></div>
-              <div class="stat"> <span>1w +</span>
+              <div class="stat"> <span>5w +</span>
                 <p>企业应用</p>
               </div>
             </div>
@@ -100,7 +78,7 @@
   </div>  </div>
   
   <div class="tab-section-tions">
-    <h3 class="tab-h3">应用为中心的企业级容器云</h3>
+    <h3 class="tab-h3">企业级云操作系统</h3>
     <div class="tab-section">
       <div class="tab-buttons">
         <button class="tab-button tabico1 active" data-tab="tab1">应用管理</button>

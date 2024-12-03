@@ -3,6 +3,10 @@
 * {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+@font-face {
+  font-family: 'PingFang SC';
+  src: url('/images/css/pingfang.ttf') format('truetype');
+}
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button, a {
   margin: 0;
@@ -10,12 +14,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   border: 0;
   font-size: 100%;
   vertical-align: baseline;
+  font-family: PingFang SC;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 body {
   line-height: 1;
+  font-family: PingFang SC;
 }
 ol, ul {
   list-style: none;
@@ -84,6 +90,16 @@ table {
   max-width: 100%;
   height: auto;
 }
+.card {
+  transition: transform 0.3s ease-in-out;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.card:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
 .navbar-links {
   display: flex;
   gap: 30px;
@@ -324,7 +340,6 @@ video {
 }
 .cloud-module1 h2 {
   color: #0080DD;
-  font-family: Inter;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -374,7 +389,7 @@ video {
 }
 .cloud-module2 h2 {
   color: #008EC7;
-  font-family: Inter;
+  
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -401,7 +416,7 @@ video {
 }
 .cloud-module3 h2 {
   color: #7F4EC8;
-  font-family: Inter;
+  
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -515,7 +530,7 @@ video {
 }
 .specification h2 {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
-  font-family: Inter;
+  
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -653,7 +668,7 @@ video {
   height: 60px;
   flex: 1 0 0;
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
-  font-family: Inter;
+  
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -672,7 +687,7 @@ video {
 }
 .hzkh h2 {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
-  font-family: Inter;
+  
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -1041,7 +1056,7 @@ video {
     margin: 0 auto;
 }
 .vids7-left h3{color: #00223B;
-    font-family: Inter;
+    
     font-size: 30px;
     font-style: normal;
     font-weight: 600;
@@ -1049,7 +1064,7 @@ video {
 
 }
 .vids7-left p{
-    font-family: Inter;
+    
     font-size: 30px;
     font-style: normal;
     font-weight: 600;
