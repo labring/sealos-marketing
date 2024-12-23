@@ -79,40 +79,24 @@ function updateCarousel () {
   })
 }
 
+// ... existing code ...
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   // 选择所有的 a 标签，而不是仅限于 .login-link
-//   var links = document.querySelectorAll('a')
+// 将滚动监听代码包装在 DOMContentLoaded 事件监听器中
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM loaded');
+  const navbar = document.getElementById('navbar-container');
+  console.log('Navbar element:', navbar);
+  
+  if (navbar) {
+    window.addEventListener('scroll', function() {
+      console.log('Scrolling', window.scrollY);
+      if (window.scrollY > 0) {
+        navbar.classList.add('nav-fixed');
+      } else {
+        navbar.classList.remove('nav-fixed');
+      }
+    });
+  }
+});
 
-
-//   links.forEach(function (link) {
-//     link.addEventListener('click', function (e) {
-//       e.preventDefault()
-
-//       var baseUrl = this.getAttribute('href')
-
-//       // 如果链接不存在或是锚点链接，则不处理
-//       if (!baseUrl || baseUrl.startsWith('#')) {
-//         return
-//       }
-
-//       var urlParams = new URLSearchParams(window.location.search)
-//       var bdVid = urlParams.get('bd_vid')
-//       var kValue = urlParams.get('k')
-
-//       var newUrl = baseUrl
-//       if (bdVid) {
-//         newUrl += (baseUrl.includes('?') ? '&' : '?') + 'bd_vid=' + encodeURIComponent(bdVid)
-//       }
-
-//       if (kValue) {
-//         newUrl += (newUrl.includes('?') ? '&' : '?') + 'k=' + encodeURIComponent(kValue)
-//       }
-
-//       newUrl += (newUrl.includes('?') ? '&' : '?') + 's=bd-sealos-marketing-appstore'
-
-//       window.open(newUrl, '_self')
-//     })
-
-//   })
-// })
+// ... existing code ...

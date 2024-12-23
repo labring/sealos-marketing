@@ -130,11 +130,12 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 1440px;
   padding: 24px 0px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  margin: 0 auto;
 }
 .navbar-scrolled {
   background-color: rgba(255, 255, 255, 0.95); /* 半透明背景 */
@@ -170,7 +171,7 @@ img {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
   text-align: center;
   font-family: "PingFang SC";
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   line-height: 24px;
   letter-spacing: 0.5px;
@@ -194,7 +195,7 @@ img {
   margin-right: 4px;
 }
 .btn {
-  margin-left: 30px;
+  margin-left: 40px;
   border-radius: 8px;
   background: var(--Bright-Blue-500, #219BF4);
   box-shadow: 0px 4.626px 18.504px 0px rgba(58, 149, 255, 0.28);
@@ -214,7 +215,7 @@ img {
   position: absolute;
   width: 900px;
   height: 492.388px;
-  background: url('./img/Rectangle 1.svg') no-repeat 4px 14px;
+  background: url('/images/img/Rectangle 1.svg') no-repeat 1px 14px;
   background-size: 8%;
   padding-top: 33px;
   z-index: 1;
@@ -1301,6 +1302,9 @@ button::-moz-focus-inner {
 
   .sidebar {
     width: 400px;
+  }
+  .nav-links li a{
+    font-size: 14px;
   }
   .app-h5 {
     width: 100%;
