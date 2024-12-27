@@ -317,7 +317,7 @@ img {
   width: 100%;
 }
 
-.nav-links {
+.header-title .nav-links {
   display: flex;
   align-items: center;
   gap: 32px;
