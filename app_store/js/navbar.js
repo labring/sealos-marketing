@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="logo"> <img src="../../../app_store/img/sealos.svg" alt="Sealos Logo"> Sealos </div>
             </a>
             <ul class="nav-links">
+            <li><a href="/" target="_blank">首页</a></li>
                 <li class="dropdown"> <a href="#appstore">应用商店</a>
                     <div class="dropdown-content">
                         <div class="navbar-list">
@@ -519,7 +520,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <!--appstore-结束-->
                 <li><a href="/devbox/" target="_blank">Devbox</a></li>
                 <li><a href="/price" target="_blank">定价</a></li>
-                <!--<li><a href="/case">解决方案</a></li>-->
+                <li><a href="/case">客户案例</a></li>
                 <li><a href="https://sealos.run/docs/Intro/" target="_blank">开发文档</a></li>
         </div>
     </div>

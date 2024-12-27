@@ -132,7 +132,11 @@ h1 {
     background: #f1f8ff;
 
 }
-
+.anliqy{
+    display: flex;
+    justify-content: flex-start;
+    gap: clamp(20px, 2vw, 40px);
+}
 .ico4 {
     background: #fdf5eb;
 
@@ -571,7 +575,7 @@ h1 {
 }
 
 .job-cards {
-    margin: 0 auto;
+    margin: 0 10%;
     background: #FFFFFF;
     box-shadow: 0px 8px 24px 0px rgba(19, 51, 107, 0.10);
     border-radius: 8px;
@@ -585,18 +589,18 @@ h1 {
     padding: 20px 20px 30px 20px;
     margin-bottom: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
-    width: 350px;
+    width: 24%;
 }
 
 /* Company Info Section */
 .company-info {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: clamp(10px, 1vw, 15px);
 }
 
 .company-logo {
-    width: clamp(30px, 1vw, 60px);
+    width: clamp(30px, 3vw, 50px);
     height: auto;
     border-radius: 8px;
     margin-right: 12px;
@@ -611,7 +615,7 @@ h1 {
 
 .job-title {
     display: block;
-    font-size: 16px;
+    font-size: clamp(12px, 1vw, 18px);
     color: #263162;
     margin-bottom: 6px;
     letter-spacing: 0.5px;
@@ -648,25 +652,25 @@ h1 {
 }
 
 .salary {
-    font-size: 18px;
+    font-size: clamp(10px, 1vw, 18px);
     font-weight: 600;
     color: #2563eb;
     letter-spacing: 1px;
 }
 
 .salary span {
-    font-size: 14px;
+    font-size: clamp(10px, 1vw, 16px);
     font-weight: normal;
     color: #666;
 }
 
 .apply-now {
-    padding: 8px 20px;
+    padding: 10% 20%;
     background: #dee9fd;
     color: #2963f4;
     border: none;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: clamp(10px, 1vw, 14px);
     cursor: pointer;
     transition: background-color 0.2s;
 }
@@ -709,27 +713,19 @@ h1 {
 }
 
 .decrtion {
-    font-size: 14px;
+    font-size: clamp(10px, 1vw, 14px);
     color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
-    line-height: 24px;
-    margin: 15px 0px 30px 0px;
+    line-height: 160%;
+    margin: 3% 0px 6% 0px;
     font-weight: 400;
 }
 
-@media screen and (min-width: 1440px) {
 
-    .navbar,.job-cards{
-        width: 1280px;
-    }
-    .hiring-banner{
-        width: 1000px;
-    }
-}
+@media screen and (max-width: 1440px) {
+   .company-logo {
+    display: none;
+   }
 
-@media screen and (min-width: 1680px) {
-
-    .navbar,.job-cards{
-        width: 1440px;
-    }
 
 }
+
