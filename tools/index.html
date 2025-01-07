@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>新手福利工具 - Sealos兑换码</title>
-  <meta name="description" content="获取 Sealos 云原生应用商店新用户专属优惠券，立即领取开发者福利，享受云原生技术带来的便利。">
-  <meta name="keywords" content="Sealos,云原生,优惠券,新用户福利,应用商店,开发者工具">
+  <meta name="description" content="获取 Sealos 云原生应用商店新用户专属兑换码，立即领取开发者福利，享受云原生技术带来的便利。">
+  <meta name="keywords" content="Sealos,云原生,兑换码,新用户福利,应用商店,开发者工具">
   <link data-rh="true" rel="icon" href="https://sealos.run/img/favicon.ico">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -33,10 +33,10 @@
     </div>
     <button id="getCoupon"
       class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 mb-4">
-      获取优惠券
+      获取兑换码
     </button>
     <div id="couponResult" class="hidden">
-      <p class="text-sm text-gray-600 mb-2">您的优惠券：</p>
+      <p class="text-sm text-gray-600 mb-2">您的兑换码：</p>
       <div class="flex">
         <input type="text" id="couponCode"
           class="flex-grow px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none" readonly>
@@ -105,14 +105,14 @@
           alert(error.message)
         } finally {
           getCouponBtn.disabled = false
-          getCouponBtn.textContent = '获取优惠券'
+          getCouponBtn.textContent = '获取兑换码'
         }
       })
 
       copyCouponBtn.addEventListener('click', () => {
         couponCode.select()
         document.execCommand('copy')
-        alert('优惠券已复制到剪贴板')
+        alert('兑换码已复制到剪贴板')
       })
     });
   </script>
