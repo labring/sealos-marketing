@@ -474,7 +474,7 @@ img {
 }
 
 .menu-more img {
-  width: 18px;
+  width: 14px;
   margin-left: 4px;
 }
 
@@ -525,7 +525,7 @@ img {
 }
 
 .list-gijtitleico {
-  width: 28px;
+  width: 38px;
 }
 
 .list-gj1 ul li {
@@ -586,6 +586,7 @@ img {
   display: flex;
   justify-content: space-between;
   margin-top: 12px;
+  border-top: solid 1px #f8f7f7;
 }
 
 .list-gj1 ul {
@@ -743,7 +744,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width:  clamp(60%, 17vw, 80%);
+  width: 80%;
   padding-right: 30px;
 }
 
@@ -894,7 +895,7 @@ img {
 }
 
 .app-h5 {
-  width: 100%;
+  width: 60%;
   border-right: 1px solid var(--Gray-Modern-250, #DFE2EA);
   border-left: 1px solid var(--Gray-Modern-250, #DFE2EA);
   padding: 32px 40px;
@@ -1401,7 +1402,7 @@ button::-moz-focus-inner {
   line-height: 140%;
   /* 22.4px */
   text-transform: uppercase;
-  padding-bottom: 24px;
+  padding-bottom: 6px;
 }
 
 .h5footerlm ul li {

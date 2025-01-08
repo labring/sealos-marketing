@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                                     </div>
                                                 </li>
                                             </a>
-                                            <a href="/app_store/tool/code-server">
+                                            <a href="/app_store/devetool/code-server/">
                                                 <li> <img src="../../../app_store/img/favicon11.svg"
                                                         class="list-gijtitleico">
                                                     <div class="list-gij-title">
