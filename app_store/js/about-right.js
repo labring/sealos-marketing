@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const aboutHtml = `
          <div class="app-h5-left">
       <h3>什么是Sealos？</h3>
-      <p class="sealos-detice">基于Kubernetes为内核的云操作系统，独特的集群镜像，可将任意应用打包成 OCI 镜像，自由组合，轻松订制所需的云，一并解决各种依赖问题。</p>
+      <p class="sealos-detice">提供高性能可伸缩的容器应用管理能力，支持企业级 Kubernetes 容器化应用的全生命周期管理,一站式集成应用创建、开发、部署、上线等功能，提供了应用引擎、前后端开发框架、API网关、调度引擎等模块，一键部署Helm应用。</p>
       <span class="sealos-detice-span"><a href="/">了解更多 ></a></span> </div>
     <div class="app-h5-left">
       <h3>Sealos部署优势</h3>

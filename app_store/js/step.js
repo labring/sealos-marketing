@@ -5,17 +5,17 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="arrow"><img src="../../../app_store/img/Rectangle 34624252.svg"><img
               src="../../../app_store/img/Polygon 8.svg"></div>
           <div class="step"> <span class="step-number"><i class="step2ico"></i>Step 2</span>
-            <p>登陆Sealos</p>
+            <p>系统自动部署</p>
           </div>
           <div class="arrow"><img src="../../../app_store/img/Rectangle 34624252.svg"><img
               src="../../../app_store/img/Polygon 8.svg"></div>
           <div class="step"> <span class="step-number"><i class="step3ico"></i>Step 3</span>
-            <p>填入配置</p>
+            <p>复制外网地址</p>
           </div>
           <div class="arrow"><img src="../../../app_store/img/Rectangle 34624252.svg"><img
               src="../../../app_store/img/Polygon 8.svg"></div>
           <div class="step"> <span class="step-number"><i class="step4ico"></i>Step 4</span>
-            <p>系统自动部署</p>
+            <p>输入默认账号密码</p>
           </div>
           <div class="arrow"><img src="../../../app_store/img/Rectangle 34624252.svg"><img
               src="../../../app_store/img/Polygon 8.svg"></div>

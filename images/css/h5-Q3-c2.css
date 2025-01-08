@@ -16,6 +16,7 @@ body {
   /* iOS 滚动效果 */
   overflow-y: auto;
   /* 确保有滚动条 */
+  font-family: "PingFang SC";
 }
 
 html,
