@@ -1472,7 +1472,7 @@ video {
 .hero-content {
   max-width: 50%;
   margin-left: 110px;
-  padding-top: clamp(80px, 8vw, 140px);
+  padding-top: clamp(80px, 6vw, 140px);
 }
 
 .navbar-scrolled2 {
@@ -1614,7 +1614,7 @@ a {
   gap: 30px;
   align-items: center;
   position: relative;
-  padding: 0px 10%;
+  padding: 40px 10% 0px 10%;
 }
 
 .feature img {
@@ -2131,6 +2131,7 @@ a {
 
   .hero-content {
     margin-left: 0px;
+    padding-top: 0px;
   }
 
   .hero {
