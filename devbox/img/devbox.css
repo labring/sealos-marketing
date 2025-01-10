@@ -15,7 +15,7 @@ body {
 }
 
 .hero-title {
-    font-size: 48px;
+    font-size: 68px;
     font-weight: 700;
     line-height: 1.5;
     margin-bottom: 10px;
@@ -26,7 +26,8 @@ body {
     font-size: 18px;
     color: #6B7280;
     margin: 0 auto 30px;
-    line-height: 32px
+    line-height: 32px;
+    letter-spacing: 0.8px;
 }
 
 .cta-button {
@@ -35,21 +36,30 @@ body {
     padding: 10px 34px;
     border-radius: 8px;
     border: none;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 14px;
     cursor: pointer;
     transition: background 0.3s ease;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    box-shadow: 0px 4.626px 18.504px 0px rgba(0, 0, 0, 0.28);
+
+}
+.cta-button:hover{
+    background:#ffffff;
+    color: #0a082b;
+    border: solid 1px #0a082b;
 }
 .hero-subtitle span{
-    color:  #219BF4;
+    color: #101827;
+    font-weight: 500;
 }
-.cat-faq{border: solid 1px #0a082b;
+.cat-faq{border: solid 1px #eaeaea;
     background: #ffffff;
     color: #0a082b;
+    box-shadow: 0px 0px 0.809px 0px rgba(0, 0, 0, 0.05), 0px 3.742px 14.969px 0px rgba(182, 202, 224, 0.28);;
     }
-.cta-button:hover {
-    background: #374151;
+.cat-faq:hover {
+    background: #0b092b;
+    color: #ffffff;
 }
 
 .diagram-img {
@@ -60,7 +70,7 @@ body {
     display: flex ;
         justify-content: center;
         align-items: center;
-        gap: 20px;
+        gap: 14px;
 }
 .trusted-by {
     margin-top: 80px;
@@ -447,6 +457,7 @@ body {
 }
 .main{
     margin-bottom: 80px;
+    background: rgba(255, 255, 255, 0.5) url('/devbox/img/20250109-153730.png') no-repeat 50% 25% / 90%;
 }
 
 .wrangle-stack-title h3 {
@@ -599,13 +610,13 @@ body {
 
 .meta3 {
     padding: 80px 10%;
-    background: #f3f5fc;
+    background: #fafafa;
     margin-top: 160px;
   }
   
   .meta4 {
     padding: 80px 10%;
-    background: #f4fcf3;
+    background: #ffffff;
   }
   .meta3 h2 {
     font-size: 38px;
@@ -633,7 +644,6 @@ body {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   }
   
   .meta3-right {
@@ -686,7 +696,13 @@ body {
 .meta3-h3{
     margin-bottom: 30px;
 }
-
+.meta4-rght{
+    padding-top: 120px;
+}
+.meta5{
+    padding: 80px 10%;
+    background: #fafafa;
+}
 
 
 
@@ -722,13 +738,7 @@ body {
       width: 100%;
     }
   }
-.meta4-rght{
-    padding-top: 120px;
-}
-.meta5{
-    padding: 80px 10%;
-    background: #f6f3fc;
-}
+
 
 
 

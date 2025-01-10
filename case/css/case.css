@@ -11,7 +11,7 @@
 
 h1 {
     font-size: 48px;
-    color: #263162;
+    color: #111824;
     margin-bottom: 16px;
     font-weight: bold;
 }
@@ -23,10 +23,10 @@ h1 {
 }
 
 .sign-up-btn {
-    background: #377ffb;
+    background: #219BF4;
     color: #ffffff;
     padding: 10px 40px;
-    border-radius: 4px;
+    border-radius: 6px;
     box-shadow: 0 2px 4px rgba(41, 99, 244, 0.2);
     transition: all 0.3s ease;
     cursor: pointer;
@@ -35,24 +35,26 @@ h1 {
 .sign-up-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(41, 99, 244, 0.3);
-    background: #1952e3;
+    background: #0884DD;
 }
 
 .demo-btn {
     transition: all 0.3s ease;
     cursor: pointer;
-    background: #dee9fd;
     color: #2963f4;
     padding: 10px 40px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(41, 99, 244, 0.2);
+    background-color: #fff;
+    border: 1px solid #E6EDF9;
+    color: #111824;
+    box-shadow: 0px 0px 0.050563em 0px rgba(0, 0, 0, 0.05), 0px 0.233875em 0.935625em 0px rgba(182, 202, 224, 0.28);
+    border-radius: 6px;
 }
 
 .demo-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(41, 99, 244, 0.3);
-    background: #ccdcfc;
+color: var(--light-sealos-secondary-text, var(--Bright-Blue-600, #0884DD));
 }
+
 
 .subtitle {
     font-size: 18px;
@@ -79,7 +81,7 @@ h1 {
     background: linear-gradient(to right,
             #f6f9ff,
             /* 左边浅色 */
-            #e0e7f7,
+            #e0eaf7,
             /* 中间深色 */
             #f6f9ff
             /* 右边浅色 */
@@ -87,9 +89,11 @@ h1 {
 
     padding-bottom: 80px;
 }
-.title p{
+
+.title p {
     letter-spacing: 1px;
 }
+
 .btn-secondary {
     background-color: #eef1ff;
     color: #3366ff;
@@ -132,11 +136,19 @@ h1 {
     background: #f1f8ff;
 
 }
-.anliqy{
+
+.anliqy {
     display: flex;
     justify-content: flex-start;
     gap: clamp(20px, 2vw, 40px);
+    flex-wrap: wrap;
+    width: 100%;
 }
+
+.anliqy > * {
+    width: calc(25% - clamp(15px, 1.5vw, 30px));
+}
+
 .ico4 {
     background: #fdf5eb;
 
@@ -246,7 +258,7 @@ h1 {
     background: #ffffff;
     padding: 15px 20px;
     width: 230px;
-    border-radius: 4px;
+    border-radius: 6px;
     box-shadow: 0 10px 8px rgba(0, 0, 0, 0.05);
     align-items: center;
     justify-content: space-between;
@@ -469,7 +481,7 @@ h1 {
 }
 
 .description strong {
-    color: #377ffb;
+    color: #219BF4;
 }
 
 .apply-button img {
@@ -579,7 +591,7 @@ h1 {
     background: #FFFFFF;
     box-shadow: 0px 8px 24px 0px rgba(19, 51, 107, 0.10);
     border-radius: 8px;
-    padding:60px 0px 80px 0px;
+    padding: 10px 0px 10px 0px;
 }
 
 /* Job Card Styles */
@@ -589,7 +601,13 @@ h1 {
     padding: 20px 20px 30px 20px;
     margin-bottom: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
-    width: 24%;
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: space-between;
+    flex-wrap: nowrap;
 }
 
 /* Company Info Section */
@@ -600,7 +618,7 @@ h1 {
 }
 
 .company-logo {
-    width: clamp(30px, 3vw, 50px);
+    width: clamp(20px, 3vw, 50px);
     height: auto;
     border-radius: 8px;
     margin-right: 12px;
@@ -609,14 +627,14 @@ h1 {
 .company-details h3 {
     font-size: 22px;
     font-weight: 600;
-    color: #263162;
+    color: #111824;
     margin: 0 0 4px 0;
 }
 
 .job-title {
     display: block;
     font-size: clamp(12px, 1vw, 18px);
-    color: #263162;
+    color: #111824;
     margin-bottom: 6px;
     letter-spacing: 0.5px;
     font-weight: bold;
@@ -654,7 +672,7 @@ h1 {
 .salary {
     font-size: clamp(10px, 1vw, 18px);
     font-weight: 600;
-    color: #2563eb;
+    color: #0884DD;
     letter-spacing: 1px;
 }
 
@@ -667,16 +685,17 @@ h1 {
 .apply-now {
     padding: 10% 20%;
     background: #dee9fd;
-    color: #2963f4;
+    color: #0884DD;
     border: none;
     border-radius: 6px;
     font-size: clamp(10px, 1vw, 14px);
     cursor: pointer;
     transition: background-color 0.2s;
+    width: 100px;
 }
 
 .apply-now:hover {
-    background: #1d4ed8;
+    background: #0884DD;
     color: #ffffff;
 }
 
@@ -720,12 +739,74 @@ h1 {
     font-weight: 400;
 }
 
-
-@media screen and (max-width: 1440px) {
-   .company-logo {
+.company-details span {
     display: none;
-   }
+}
+.gsmc2{
+    font-size: 14px;
+    color: #667085;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+.gsmc2 img {
+    width: 12px;
+    margin-right: 4px;
+}
+@media screen and (max-width: 1680px) {
 
+    .company-details h3 {
+        font-size: 18px;
+    }
+    .job-title{
+        font-size: 15px;}
+    .gsmc {
+        display: none;
+    }
 
+    .company-details span {
+        display: block;
+        font-size: 12px;
+    }
+    .company-logo{
+        width: 40px;
+    }
+    .decrtion{
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+    .apply-now{
+        font-size: 12px;
+    }
+    .salary,.salary span{
+        font-size: 14PX;
+    }
 }
 
+
+@media screen and (max-width: 1440px) {
+    .gsmc {
+        display: none;
+    }
+
+    .company-details span {
+        display: block;
+        font-size: 12px;
+    }
+    .job-title {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .gsmc {
+        display: none;
+    }
+
+    .company-details span {
+        display: block
+    }
+    .job-card{
+        width: 31%;
+    }
+}
