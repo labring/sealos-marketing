@@ -504,7 +504,7 @@ background: #EFF8FF;
 
 .wrangle-stack-item:nth-child(2) .wrangle-version {}
 
-.wrangle-stack-item:nth-child(2) .wrangle-icon-wrapper {var(--Bright-Blue-500, #219BF4);}
+.wrangle-stack-item:nth-child(2) .wrangle-icon-wrapper {    color: var(--Bright-Blue-500, #219BF4);}
 
 .wrangle-stack-item:nth-child(3) {
     border-radius: 12px;

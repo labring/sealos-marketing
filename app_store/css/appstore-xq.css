@@ -604,7 +604,6 @@ img {
 
 /* Sidebar styles */
 .sidebar {
-  width: clamp(270px, 17vw, 400px);
   height: 100%;
   overflow-y: auto;
   padding: 32px 8px 32px 20px;
@@ -746,7 +745,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 80%;
+  width: 75%;
   padding-right: 30px;
 }
 
@@ -897,7 +896,7 @@ img {
 }
 
 .app-h5 {
-  width: 60%;
+  width: 56%;
   border-right: 1px solid var(--Gray-Modern-250, #DFE2EA);
   border-left: 1px solid var(--Gray-Modern-250, #DFE2EA);
   padding: 32px 40px;
@@ -908,6 +907,7 @@ img {
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: column;
+  width: 100%;
 }
 
 .title-logo {
@@ -957,7 +957,7 @@ img {
 
 .hard-top-title {
   margin-left: 24px;
-  width: 700px;
+  width: 600px;
 }
 
 .stars {
@@ -1055,14 +1055,15 @@ img {
 .buttons {
   display: flex;
   gap: 12px;
-  width: 20%;
+  width: 25%;
+  justify-content: flex-end;
 }
 
 /* Carousel styles */
 .carousel {
   text-align: center;
   position: relative;
-  width: 700px;
+  width: 80%;
   margin: 0 auto;
   padding-top: 32px;
 }
@@ -1322,10 +1323,12 @@ button::-moz-focus-inner {
 }
 
 .app-faq {
-  width: 640px;
+  width: 22%;
   padding: 20px;
 }
-
+.left-list{
+  width: 22%;
+}
 .app-h5-left {
   width: 100%;
   margin-bottom: 32px;
@@ -1583,16 +1586,59 @@ button::-moz-focus-inner {
 
 @media screen and (max-width: 1200px) {
 
+  .app-decistore{
+    font-size: 12px;
+  }
+  .yaml-button, .deploy-button {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+.app-h5 {
+  padding: 20px 20px;
+}
 
 
 }
 
 @media screen and (max-width: 1440px) {
 
+  .step{
+    padding: 12px 6px;
+  }
+  .sidebar {
+    padding: 20px 8px 32px 8px;
+}
+.app-h5 {    padding: 20px 40px;
+}
+.app-decistore{
+  font-size: 12px;
+}
 
 }
 
 @media screen and (max-width: 1680px) {
+.yaml-button,.deploy-button{
+  padding: 6px 14px;
+}
+.title-logo{
+  height: 60px;
+}
+.carousel-nav{
+  left: -30px;
+  width: 110%;
+}
+.step p{
+  font-size: 12px;
+}
+.left-list{
+  width: 20%;
+}
+.app-faq {
+  width: 20%;
 
+}
+.app-h5{
+  width: 60%;
+}
 
 }
