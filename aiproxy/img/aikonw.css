@@ -10,10 +10,6 @@ button {
     all: unset;
 }
 
-
-body {
-    font-family: Arial, sans-serif;
-}
 /* Resetting default styles */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -32,7 +28,6 @@ time, mark, audio, video {
     padding: 0;
     border: 0;
     font-size: 100%;
-  
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -58,27 +53,22 @@ q:before, q:after {
     content: '';
     content: none;
 }
+tbody tr td{
+    padding: 8px 0px;
+}
 
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0px;
-    max-width: 1440px;
-    margin: 0 auto;
-}
 .nav{
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .navbards{
     display: flex;
-        align-items: center;
+    align-items: center;
 }
 .logo img {
     height: 34px;
@@ -120,7 +110,6 @@ table {
     cursor: pointer;
 }
 
-
 .signup-btn {
     background-color: #007bff;
     color: #fff;
@@ -160,9 +149,14 @@ table {
 }
 table th{
     text-align: center;
+    font-size: 12px;
+    padding: 12px 10px;
 }
+
 tr td{
     text-align: center;
+    font-size: 12px;
+    border-bottom: solid 1px #e2e8f0;
 }
 .dectico{
     font-size: 16px;
@@ -187,8 +181,6 @@ tr td{
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
-
-
 
 .buttons1 {
     display: flex;
@@ -260,8 +252,7 @@ tr td{
 }
 
 .integration-content {
-    max-width: 1440px;
-    margin: 0 auto;
+    margin: 0 10%;
     display: flex;
     justify-content: space-between;
     padding-bottom: 140px;
@@ -288,24 +279,23 @@ a{
 }
 .intexr{
     display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
 }
 .intexr p{
     text-align: right;
 }
 .integration-grid {
     display: flex;
-        justify-items: center;
-        width: 50%;
-        align-content: flex-start;
-        flex-direction: row;
-        justify-content: flex-start;
+    justify-items: center;
+    width: 50%;
+    align-content: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 .intput{
     width: 45%;
 }
-
 
 .integration-grid img:hover {
     filter: grayscale(0%);
@@ -379,6 +369,7 @@ thead tr:last-child th:last-child {
     align-items: center;
     justify-content: flex-start;
     text-align: left;
+    color: var(--chakra-colors-myGray-900);
 }
 .tdbody img{
     margin-right: 5px;
@@ -393,7 +384,7 @@ thead tr:last-child th:last-child {
     padding: 6px 12px;
     border-radius: 4px;
     display: inline-block;
-
+    font-size: 12px;
 }
 .tdsuoyin{
     color: #dc6803;
@@ -445,5 +436,3 @@ thead tr:last-child th:last-child {
     color: #3b4bff;
     padding: 0px 5px;
 }
-
-
