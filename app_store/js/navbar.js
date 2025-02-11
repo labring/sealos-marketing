@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
             <ul class="nav-links">
             <li><a href="/" target="_blank">首页</a></li>
              <li><a href="/devbox/" target="_blank">Devbox</a></li>
+             <li><a href="/aiproxy" target="_blank">AI Proxy</a></li>
+             <li><a href="/price" target="_blank">价格</a></li>
+                <li><a href="/case">案例</a></li>
+                <li><a href="https://sealos.run/docs/Intro/" target="_blank">文档</a></li>
                 <li class="dropdown"> <a href="#appstore">应用商店</a>
                     <div class="dropdown-content">
                         <div class="navbar-list">
@@ -519,19 +523,16 @@ document.addEventListener('DOMContentLoaded', function() {
                                     </div>
                                 </div>
                                 <!--appstore-结束-->
-               
-                <li><a href="/price" target="_blank">定价</a></li>
-                <li><a href="/case">客户案例</a></li>
-                <li><a href="https://sealos.run/docs/Intro/" target="_blank">开发文档</a></li>
+                
         </div>
     </div>
     </li>
     </ul>
     </div>
     <div class="actions">
-        <p> <img src="../../../app_store/img/github.svg" alt="GitHub Icon"> <span>14.1k</span> </p>
+        <div class="headico"> <img src="../../../app_store/img/github.svg" alt="GitHub Icon"> <div id="github-stars">Loading stars...</div> </div>
         <a href="https://hzh.sealos.run/" target="_blank" class="login-link">
-            <button class="btn"> 登录 </button>
+            <button class="btn"> 登<P>录</P> </button>
         </a>
     </div>
     </div>

@@ -70,11 +70,6 @@ table {
     display: flex;
     align-items: center;
 }
-.logo img {
-    height: 34px;
-    width: auto;
-    margin-right: 10px;
-}
 
 .menu {
     display: flex;
