@@ -325,7 +325,7 @@ img {
   width: 100%;
 }
 
-.header-title .nav-links {
+.nav-links {
   display: flex;
   align-items: center;
   gap: 32px;
@@ -1598,40 +1598,6 @@ button::-moz-focus-inner {
   padding: 0 10%;
 }
 
-
-
-@media screen and (max-width: 1200px) {
-
-  .app-decistore{
-    font-size: 12px;
-  }
-  .yaml-button, .deploy-button {
-    padding: 6px 12px;
-    font-size: 12px;
-}
-.app-h5 {
-  padding: 20px 20px;
-}
-
-
-}
-
-@media screen and (max-width: 1440px) {
-
-  .step{
-    padding: 12px 6px;
-  }
-  .sidebar {
-    padding: 20px 8px 32px 8px;
-}
-.app-h5 {    padding: 20px 40px;
-}
-.app-decistore{
-  font-size: 12px;
-}
-
-}
-
 @media screen and (max-width: 1680px) {
 .yaml-button,.deploy-button{
   padding: 6px 14px;
@@ -1657,4 +1623,76 @@ button::-moz-focus-inner {
   width: 60%;
 }
 
+}
+@media screen and (max-width: 1440px) {
+
+  .step{
+    padding: 12px 6px;
+  }
+  .sidebar {
+    padding: 20px 8px 32px 8px;
+}
+.app-h5 {    padding: 20px 40px;
+}
+.app-decistore{
+  font-size: 12px;
+}
+
+}
+@media screen and (max-width: 1200px) {
+  
+.nav-links {
+
+  gap: 20px;
+
+}
+  .nav-links li a {
+    font-size: 14px;
+}
+.app-decistore{
+  font-size: 12px;
+}
+.yaml-button, .deploy-button {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+.app-h5 {
+padding: 20px 20px;
+}
+
+}
+
+@media screen and (max-width: 900px) {
+  .nav ul {
+    gap: 16px;
+}
+.nav-links li a {
+  font-size: 12px;
+}
+.btn {
+  font-size: 12px;
+  width: 64px;
+  height: 28px;
+  padding: 0px 12px;
+}
+.logo {
+  font-size: 16px;
+}
+.logo img {
+  width: 30px;
+}
+.headico {
+  font-size: 12px;
+}
+.headico img {
+  margin-right: 6px;
+  width: 16px;
+}
+.btn-primary, .btn-secondary {
+
+  width: 90px;
+}
+.feature {
+  height: auto;
+}
 }
