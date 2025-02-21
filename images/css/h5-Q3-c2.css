@@ -1467,6 +1467,7 @@ video {
       justify-content: space-between;
       align-items: flex-start;
       margin: 0px 10%;
+      max-width: 1440px;
 }
 
 .hero-content {
@@ -1474,7 +1475,12 @@ video {
   margin-left: 110px;
   padding-top: clamp(80px, 6vw, 140px);
 }
-
+.hero{
+  display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+}
 .navbar-scrolled2 {
   position: fixed;
   box-shadow: 0px 12px 64px -12px rgba(19, 51, 107, 0.08), 0px 0px 1px 0px rgba(19, 51, 107, 0.20);
@@ -1614,7 +1620,10 @@ a {
   gap: 30px;
   align-items: center;
   position: relative;
-  padding: 40px 10% 0px 10%;
+  padding-top: 50px;
+  width: 100%;
+    max-width: 1440px;
+    margin: 0 10%;
 }
 
 .feature img {

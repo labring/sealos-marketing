@@ -2,6 +2,9 @@
         async function fetchGitHubStars() {
             try {
                 const response = await fetch('https://api.github.com/repos/labring/sealos');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
                 const data = await response.json();
                 const starCount = data.stargazers_count;
                 const starCountInK = (starCount / 1000).toFixed(1) + 'k';
@@ -18,11 +21,13 @@
         document.addEventListener('DOMContentLoaded', fetchGitHubStars);
         window.addEventListener('DOMContentLoaded', function() {
             const navbar = document.getElementById('navbar-container');
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 0) {
-                    navbar.classList.add('nav-fixed');
-                } else {
-                    navbar.classList.remove('nav-fixed');
-                }
-            });
+            if (navbar) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 0) {
+                        navbar.classList.add('nav-fixed');
+                    } else {
+                        navbar.classList.remove('nav-fixed');
+                    }
+                });
+            }
         });

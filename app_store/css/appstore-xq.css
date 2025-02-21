@@ -270,13 +270,19 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0px;
   position: sticky;
   top: 0;
   z-index: 1000;
   margin: 0 10%;
   max-width: 1440px;
+  padding: 20px 0px;
+  width: 100%;
 
+}
+
+.index-nav {
+  display: flex;
+  justify-content: center;
 }
 
 .navbar-scrolled {
@@ -358,9 +364,11 @@ img {
 .actions p img {
   margin-right: 8px;
 }
-.btn p{
+
+.btn p {
   margin-left: 2px;
 }
+
 .btn {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
   text-align: center;
@@ -381,16 +389,19 @@ img {
   margin-left: 40px;
   box-shadow: 0px 4px 6px rgb(87 87 87 / 10%);
 }
-.headico{
+
+.headico {
   display: flex;
-    align-items: center;
-    margin-right: 6%;
-    font-size: 14px;
+  align-items: center;
+  margin-right: 6%;
+  font-size: 14px;
 }
-.headico img{
+
+.headico img {
   margin-right: 8px;
   width: 18px;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -1342,9 +1353,11 @@ button::-moz-focus-inner {
   width: 22%;
   padding: 20px;
 }
-.left-list{
+
+.left-list {
   width: 22%;
 }
+
 .app-h5-left {
   width: 100%;
   margin-bottom: 32px;
@@ -1599,100 +1612,128 @@ button::-moz-focus-inner {
 }
 
 @media screen and (max-width: 1680px) {
-.yaml-button,.deploy-button{
-  padding: 6px 14px;
-}
-.title-logo{
-  height: 60px;
-}
-.carousel-nav{
-  left: -30px;
-  width: 110%;
-}
-.step p{
-  font-size: 12px;
-}
-.left-list{
-  width: 20%;
-}
-.app-faq {
-  width: 20%;
+
+  .yaml-button,
+  .deploy-button {
+    padding: 6px 14px;
+  }
+
+  .title-logo {
+    height: 60px;
+  }
+
+  .carousel-nav {
+    left: -30px;
+    width: 110%;
+  }
+
+  .step p {
+    font-size: 12px;
+  }
+
+  .left-list {
+    width: 20%;
+  }
+
+  .app-faq {
+    width: 20%;
+
+  }
+
+  .app-h5 {
+    width: 60%;
+  }
 
 }
-.app-h5{
-  width: 60%;
-}
 
-}
 @media screen and (max-width: 1440px) {
 
-  .step{
+  .step {
     padding: 12px 6px;
   }
+
   .sidebar {
     padding: 20px 8px 32px 8px;
-}
-.app-h5 {    padding: 20px 40px;
-}
-.app-decistore{
-  font-size: 12px;
-}
+  }
+
+  .app-h5 {
+    padding: 20px 40px;
+  }
+
+  .app-decistore {
+    font-size: 12px;
+  }
 
 }
+
 @media screen and (max-width: 1200px) {
-  
-.nav-links {
 
-  gap: 20px;
+  .nav-links {
 
-}
+    gap: 20px;
+
+  }
+
   .nav-links li a {
     font-size: 14px;
-}
-.app-decistore{
-  font-size: 12px;
-}
-.yaml-button, .deploy-button {
-  padding: 6px 12px;
-  font-size: 12px;
-}
-.app-h5 {
-padding: 20px 20px;
-}
+  }
+
+  .app-decistore {
+    font-size: 12px;
+  }
+
+  .yaml-button,
+  .deploy-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .app-h5 {
+    padding: 20px 20px;
+  }
 
 }
 
 @media screen and (max-width: 900px) {
   .nav ul {
     gap: 16px;
-}
-.nav-links li a {
-  font-size: 12px;
-}
-.btn {
-  font-size: 12px;
-  width: 64px;
-  height: 28px;
-  padding: 0px 12px;
-}
-.logo {
-  font-size: 16px;
-}
-.logo img {
-  width: 30px;
-}
-.headico {
-  font-size: 12px;
-}
-.headico img {
-  margin-right: 6px;
-  width: 16px;
-}
-.btn-primary, .btn-secondary {
+  }
 
-  width: 90px;
-}
-.feature {
-  height: auto;
-}
+  .nav-links li a {
+    font-size: 12px;
+  }
+
+  .btn {
+    font-size: 12px;
+    width: 64px;
+    height: 28px;
+    padding: 0px 12px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .logo img {
+    width: 30px;
+  }
+
+  .headico {
+    font-size: 12px;
+  }
+
+  .headico img {
+    margin-right: 6px;
+    width: 16px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+
+    width: 90px;
+  }
+
+  .feature {
+    height: auto;
+  }
 }

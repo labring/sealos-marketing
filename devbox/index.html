@@ -17,14 +17,15 @@
   <script src="/js/sem.js" defer></script>
   <script src="/app_store/js/navbar.js"></script>
   <script src="/app_store/js/foooter.js"></script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "q8gnm02cz6");
-</script>
+  </script>
 </head>
+
 <body>
   <div class="main">
     <div id="navbar-container"></div>
@@ -32,8 +33,14 @@
       <div class="hero-content">
         <h1 class="hero-title">Devbox</h1>
         <p class="hero-subtitle">集<span>本地开发、线上测试、部署上线</span>为一体<br> 云端代码同步，多语言远程协同开发，自动分配外网域名，一键部署上线</p>
-        <div class="devboxzh"><a href="https://hzh.sealos.run/"><button class="cta-button">免费体验</button></a> <a
-            href="https://fael3z0zfze.feishu.cn/wiki/PpdRwz9oHiy3cEkLZMycfJmWnnc?from=from_copylink"><button class="cta-button cat-faq">操作手册</button></a></div>
+        <div class="devboxzh">
+          <a href="https://hzh.sealos.run/">
+            <button class="cta-button">免费体验</button>
+          </a>
+          <a href="https://fael3z0zfze.feishu.cn/wiki/PpdRwz9oHiy3cEkLZMycfJmWnnc?from=from_copylink">
+            <button class="cta-button cat-faq">操作手册</button>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -43,42 +50,45 @@
           <img src="/devbox/img/Union.png" alt="Union">
 
           <!-- IDE工具 -->
+          <div class="icon icon-salesforce">
+            <img src="/devbox/img/vscode.png" alt="VSCode">VSCode
+          </div>
 
-          <div class="icon icon-salesforce"><img src="/devbox/img/vscode.png" alt="VSCode">VSCode</div>
+          <div class="icon icon-stripe">
+            <img src="/devbox/img/crsor.svg" alt="Cursor">Cursor
+          </div>
 
-          <div class="icon icon-stripe"><img src="/devbox/img/crsor.svg" alt="Cursor">Cursor</div>
-
-          <div class="icon icon-mailchimp"><img src="/devbox/img/windsurf.svg" alt="Windsurf">Windsurf</div>
-
+          <div class="icon icon-mailchimp">
+            <img src="/devbox/img/windsurf.svg" alt="Windsurf">Windsurf
+          </div>
 
           <div class="icon icon-segment">
             <img src="/devbox/img/code-icon.svg" alt="VS Code Insiders">
             <p>VS Code Insiders</p>
           </div>
 
-
           <div class="icon icon-intercom">
             <img src="/devbox/img/f1969fe7-844d-4a6a-8649-2eb591ea4f3a.png" alt="JetBrains">JetBrain
           </div>
 
-
-          <div class="icon icon-intercom2"><img src="/devbox/img/github.png" alt="Github Copilot">Github Copilot</div>
+          <div class="icon icon-intercom2">
+            <img src="/devbox/img/github.png" alt="Github Copilot">Github Copilot
+          </div>
 
           <!-- 开发流程 -->
           <div class="icon connect-btn">本地 IDE 开发</div>
           <div class="commit2"></div>
           <div class="commit">
-            <video autoplay loop muted playsinline controls src="/devbox/img/sailos-devbox.webm" type="video/webm">
-            </video>
+            <video autoplay loop muted playsinline controls src="/devbox/img/sailos-devbox.webm" type="video/webm"></video>
           </div>
 
           <div class="commit-devbox">
             <img src="/devbox/img/logo.svg" alt="logo">
           </div>
+
           <!-- 部署选项 -->
           <div class="icon connect-btn2">外网地址测试</div>
-          <div class="icon icon-salesforce2" onmouseover="showTooltip(event)" onmouseout="hideTooltip()"
-            onclick="hideTooltip()">
+          <div class="icon icon-salesforce2" onmouseover="showTooltip(event)" onmouseout="hideTooltip()" onclick="hideTooltip()">
             <img src="/devbox/img/dapp.svg" alt="App">App
             <div id="tooltip" class="icon hower-id">
               <a href="https://mp.weixin.qq.com/s/yVKgB0utFrCTi3oBXGyaoA" target="_blank">
@@ -104,11 +114,11 @@
     <div class="stack-header">
       <h2>支持所有编程语言、框架</h2>
       <div class="stack-tabs">
-        <button class="stack-tab active" onclick="switchTab('frontend')">热门</button>
-        <button class="stack-tab" onclick="switchTab('backend')">后端</button>
-        <button class="stack-tab" onclick="switchTab('fullstack')">前端</button>
-        <button class="stack-tab" onclick="switchTab('docsapi')">文档</button>
-        <button class="stack-tab" onclick="switchTab('native')">系统</button>
+        <button class="stack-tab active" onclick="switchTab('frontend')">官方精选</button>
+        <button class="stack-tab" onclick="switchTab('backend')">Rust</button>
+        <button class="stack-tab" onclick="switchTab('fullstack')">GO</button>
+        <button class="stack-tab" onclick="switchTab('docsapi')">Python</button>
+        <button class="stack-tab" onclick="switchTab('native')">Java</button>
       </div>
     </div>
 
@@ -119,501 +129,467 @@
         <div class="grid">
           <div class="stack-item">
             <div class="stack-img">
-              <img src="/devbox/img/node.js.svg" alt="React">
-              <div class="stack-title">
-                <h3>Node.js</h3>
-                <div class="version">JavaScript</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 89,000</div>
-              <div class="resource-link">📈 95%</div>
-            </div>
-          </div>
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/python.svg" alt="React">
-              <div class="stack-title">
-                <h3>Python</h3>
-                <div class="version">Python</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 45,000</div>
-              <div class="resource-link">📈 92%</div>
-            </div>
-          </div>
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/ruby.png" alt="React">
-              <div class="stack-title">
-                <h3>Ruby</h3>
-                <div class="version">Ruby</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 30,000</div>
-              <div class="resource-link">📈 88%</div>
-            </div>
-          </div>
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/java.svg" alt="React">
-              <div class="stack-title">
-                <h3>Java</h3>
-                <div class="version">Java</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 75,000</div>
-              <div class="resource-link">📈 93%</div>
-            </div>
-          </div>
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/go.svg" alt="React">
-              <div class="stack-title">
-                <h3>Go</h3>
-                <div class="version">Go</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 50,000</div>
-              <div class="resource-link">📈 91%</div>
-            </div>
-          </div>
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/php.svg" alt="React">
-              <div class="stack-title">
-                <h3>PHP</h3>
-                <div class="version">PHP</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 20,000</div>
-              <div class="resource-link">📈 85%</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 后端 -->
-      <div class="stack-group" data-stack="backend" style="display:none">
-        <p class="stack-description">用于可扩展应用程序的强大服务器端框架</p>
-        <div class="grid">
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/echo.svg" alt="Echo">
-              <div class="stack-title">
-                <h3>Echo</h3>
-                <div class="version">JavaScript</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 24,000</div>
-              <div class="resource-link">📈 78%</div>
-            </div>
-          </div>
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/chi.svg" alt="Chi">
-              <div class="stack-title">
-                <h3>Chi</h3>
-                <div class="version">JavaScript</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 15,000</div>
-              <div class="resource-link">📈 72%</div>
-            </div>
-          </div>
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/iris.svg" alt="Gin">
-              <div class="stack-title">
-                <h3>Iris</h3>
-                <div class="version">TypeScript</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 18,000</div>
-              <div class="resource-link">📈 75%</div>
-            </div>
-          </div>
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/gin.svg" alt="Spring Boot">
-              <div class="stack-title">
-                <h3>Gin</h3>
-                <div class="version">Go</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 12,000</div>
-              <div class="resource-link">📈 68%</div>
-            </div>
-          </div>
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/vert.x.svg" alt="Django">
-              <div class="stack-title">
-                <h3>vert.x</h3>
-                <div class="version">Go</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 10,000</div>
-              <div class="resource-link">📈 65%</div>
-            </div>
-          </div>
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/spring-boot.svg" alt="Express.js">
-              <div class="stack-title">
-                <h3>Spring Boot</h3>
-                <div class="version">Java</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 50,000</div>
-              <div class="resource-link">📈 93%</div>
-            </div>
-          </div>
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/django.svg" alt="Rocket">
-              <div class="stack-title">
-                <h3>Django</h3>
-                <div class="version">Python</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 35,000</div>
-              <div class="resource-link">📈 87%</div>
-            </div>
-          </div>
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/flask.svg" alt="Rocket">
-              <div class="stack-title">
-                <h3>Flask</h3>
-                <div class="version">Python</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 20,000</div>
-              <div class="resource-link">📈 82%</div>
-            </div>
-          </div>
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/rocket.svg" alt="Rocket">
-              <div class="stack-title">
-                <h3>Rocket</h3>
-                <div class="version">Rust </div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 10,000</div>
-              <div class="resource-link">📈 70%</div>
-            </div>
-          </div>
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/express.js.svg" alt="Rocket">
-              <div class="stack-title">
-                <h3>Express.js</h3>
-                <div class="version">JavaScript</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 40,000</div>
-              <div class="resource-link">📈 89%</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 前端 -->
-      <div class="stack-group" data-stack="fullstack" style="display:none">
-        <p class="stack-description">用于构建交互式用户界面的现代前端框架</p>
-        <div class="grid">
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/next.js.svg" alt="Rocket">
-              <div class="stack-title">
-                <h3>Next.js</h3>
-                <div class="version">JavaScript</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 50,000</div>
-              <div class="resource-link">📈 94%</div>
-            </div>
-          </div>
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/react.svg" alt="Rocket">
-              <div class="stack-title">
-                <h3>React</h3>
-                <div class="version">JavaScript</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 70,000</div>
-              <div class="resource-link">📈 95%</div>
-            </div>
-          </div>
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/vue.svg" alt="Rocket">
-              <div class="stack-title">
-                <h3>Vue</h3>
-                <div class="version">JavaScript</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 40,000</div>
-              <div class="resource-link">📈 92%</div>
-            </div>
-          </div>
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/angular.svg" alt="Rocket">
+              <img src="https://devbox.hzh.sealos.run/images/angular.svg" alt="React">
               <div class="stack-title">
                 <h3>Angular</h3>
                 <div class="version">JavaScript</div>
               </div>
             </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 60,000</div>
-              <div class="resource-link">📈 93%</div>
-            </div>
           </div>
+
           <div class="stack-item">
             <div class="stack-img">
-              <img src="/devbox/img/nuxt3.svg" alt="Rocket">
+              <img src="https://devbox.hzh.sealos.run/images/astro.svg" alt="React">
               <div class="stack-title">
-                <h3>nuxt</h3>
+                <h3>Astro</h3>
                 <div class="version">JavaScript</div>
               </div>
             </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 20,000</div>
-              <div class="resource-link">📈 85%</div>
-            </div>
           </div>
+
           <div class="stack-item">
             <div class="stack-img">
-              <img src="/devbox/img/umi.svg" alt="Rocket">
+              <img src="https://devbox.hzh.sealos.run/images/c.svg" alt="React">
               <div class="stack-title">
-                <h3>Umi</h3>
-                <div class="version">JavaScript</div>
+                <h3>C</h3>
+                <div class="version">C</div>
               </div>
             </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 15,000</div>
-              <div class="resource-link">📈 80%</div>
-            </div>
           </div>
+
           <div class="stack-item">
             <div class="stack-img">
-              <img src="/devbox/img/svelte.svg" alt="Rocket">
+              <img src="https://devbox.hzh.sealos.run/images/chi.svg" alt="React">
               <div class="stack-title">
-                <h3>SvelteKit</h3>
-                <div class="version">JavaScript</div>
+                <h3>Chi</h3>
+                <div class="version">GO</div>
               </div>
             </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 10,000</div>
-              <div class="resource-link">📈 75%</div>
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-      <!-- 文档 -->
-      <div class="stack-group" data-stack="docsapi" style="display:none">
-        <p class="stack-description">用于创建和管理技术文档和内容的工具</p>
-        <div class="grid">
-
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/docusaurus.svg" alt="Rocket">
-              <div class="stack-title">
-                <h3>Docusaurus</h3>
-                <div class="version">JavaScript</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 20,000</div>
-              <div class="resource-link">📈 85%</div>
-            </div>
           </div>
 
           <div class="stack-item">
             <div class="stack-img">
-              <img src="/devbox/img/vuepress.svg" alt="Rocket">
-              <div class="stack-title">
-                <h3>VuePress</h3>
-                <div class="version">JavaScript</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 15,000</div>
-              <div class="resource-link">📈 82%</div>
-            </div>
-          </div>
-
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/gatsby.svg" alt="Rocket">
-              <div class="stack-title">
-                <h3>Gatsby</h3>
-                <div class="version">JavaScript</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 25,000</div>
-              <div class="resource-link">📈 88%</div>
-            </div>
-          </div>
-
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/hugo.svg" alt="Rocket">
-              <div class="stack-title">
-                <h3>Hugo</h3>
-                <div class="version">Go</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 10,000</div>
-              <div class="resource-link">📈 75%</div>
-            </div>
-          </div>
-
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/jekyll.png" alt="Rocket">
-              <div class="stack-title">
-                <h3>Jekyll</h3>
-                <div class="version">Ruby</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 12,000</div>
-              <div class="resource-link">📈 80%</div>
-            </div>
-          </div>
-
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/reveal.js.svg" alt="Rocket">
-              <div class="stack-title">
-                <h3>Reveal.js</h3>
-                <div class="version">JavaScript</div>
-              </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 18,000</div>
-              <div class="resource-link">📈 85%</div>
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-      <!-- 系统 -->
-      <div class="stack-group" data-stack="native" style="display:none">
-        <p class="stack-description">用于构建高性能应用程序的本机开发框架和语言</p>
-        <div class="grid">
-
-          <div class="stack-item">
-            <div class="stack-img">
-              <img src="/devbox/img/c++.svg" alt="Rocket">
+              <img src="https://devbox.hzh.sealos.run/images/cpp.svg" alt="React">
               <div class="stack-title">
                 <h3>C++</h3>
                 <div class="version">C++</div>
               </div>
             </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 50,000</div>
-              <div class="resource-link">📈 94%</div>
-            </div>
           </div>
 
           <div class="stack-item">
             <div class="stack-img">
-              <img src="/devbox/img/rust.svg" alt="Rocket">
+              <img src="https://devbox.hzh.sealos.run/images/debian-ssh.svg" alt="React">
               <div class="stack-title">
-                <h3>Rust</h3>
-                <div class="version">Rust</div>
+                <h3>Debian</h3>
+                <div class="version">操作系统</div>
               </div>
             </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 30,000</div>
-              <div class="resource-link">📈 88%</div>
-            </div>
           </div>
 
           <div class="stack-item">
             <div class="stack-img">
-              <img src="/devbox/img/go.svg" alt="Rocket">
+              <img src="https://devbox.hzh.sealos.run/images/django.svg" alt="React">
               <div class="stack-title">
-                <h3>Go</h3>
-                <div class="version">Go</div>
+                <h3>Django</h3>
+                <div class="version">Python</div>
               </div>
             </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 40,000</div>
-              <div class="resource-link">📈 92%</div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/docusaurus.svg" alt="React">
+              <div class="stack-title">
+                <h3>Docusaurus</h3>
+                <div class="version">JavaScript</div>
+              </div>
             </div>
           </div>
 
           <div class="stack-item">
             <div class="stack-img">
-              <img src="/devbox/img/java.svg" alt="Rocket">
+              <img src="https://devbox.hzh.sealos.run/images/echo.svg" alt="React">
+              <div class="stack-title">
+                <h3>Echo</h3>
+                <div class="version">GO</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/express.js.svg" alt="React">
+              <div class="stack-title">
+                <h3>Express.js</h3>
+                <div class="version">JavaScript</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/flask.svg" alt="React">
+              <div class="stack-title">
+                <h3>Flask</h3>
+                <div class="version">Python</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/gin.svg" alt="React">
+              <div class="stack-title">
+                <h3>Gin</h3>
+                <div class="version">GO</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/go.svg" alt="React">
+              <div class="stack-title">
+                <h3>GO</h3>
+                <div class="version">GO</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/hexo.svg" alt="React">
+              <div class="stack-title">
+                <h3>Hexo</h3>
+                <div class="version">JavaScript</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/hugo.svg" alt="React">
+              <div class="stack-title">
+                <h3>Hugo</h3>
+                <div class="version">JavaScript</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/iris.svg" alt="React">
+              <div class="stack-title">
+                <h3>Lris</h3>
+                <div class="version">GO</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/java.svg" alt="React">
               <div class="stack-title">
                 <h3>Java</h3>
                 <div class="version">Java</div>
               </div>
             </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 70,000</div>
-              <div class="resource-link">📈 95%</div>
-            </div>
           </div>
 
           <div class="stack-item">
             <div class="stack-img">
-              <img src="/devbox/img/csharp.svg" alt="Rocket">
+              <img src="https://devbox.hzh.sealos.run/images/net.svg" alt="React">
               <div class="stack-title">
-                <h3>C#</h3>
+                <h3>.Net</h3>
                 <div class="version">C#</div>
               </div>
             </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 35,000</div>
-              <div class="resource-link">📈 89%</div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/next.js.svg" alt="React">
+              <div class="stack-title">
+                <h3>Next.js</h3>
+                <div class="version">JavaScript</div>
+              </div>
             </div>
           </div>
 
           <div class="stack-item">
             <div class="stack-img">
-              <img src="/devbox/img/kotlin.svg" alt="Rocket">
+              <img src="https://devbox.hzh.sealos.run/images/nginx.svg" alt="React">
               <div class="stack-title">
-                <h3>Kotlin</h3>
-                <div class="version">Kotlin</div>
+                <h3>Nginx</h3>
+                <div class="version">工具</div>
               </div>
-            </div>
-            <div class="stack-details">
-              <div class="resource-link">⭐ 25,000</div>
-              <div class="resource-link">📈 86%</div>
             </div>
           </div>
 
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/node.js.svg" alt="React">
+              <div class="stack-title">
+                <h3>Node.js</h3>
+                <div class="version">JavaScript</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/nuxt3.svg" alt="React">
+              <div class="stack-title">
+                <h3>Nuxt3</h3>
+                <div class="version">JavaScript</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/php.svg" alt="React">
+              <div class="stack-title">
+                <h3>PHP</h3>
+                <div class="version">PHP</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/quarkus.svg" alt="React">
+              <div class="stack-title">
+                <h3>Quarkus</h3>
+                <div class="version">Java</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/python.svg" alt="React">
+              <div class="stack-title">
+                <h3>Python</h3>
+                <div class="version">Python</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/react.svg" alt="React">
+              <div class="stack-title">
+                <h3>React</h3>
+                <div class="version">JavaScript</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/rocket.svg" alt="React">
+              <div class="stack-title">
+                <h3>Rocket</h3>
+                <div class="version">Rust</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/rust.svg" alt="React">
+              <div class="stack-title">
+                <h3>Rust</h3>
+                <div class="version">Rust</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/sealaf.svg" alt="React">
+              <div class="stack-title">
+                <h3>Laf</h3>
+                <div class="version">JavaScript</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/spring-boot.svg" alt="React">
+              <div class="stack-title">
+                <h3>Spring Boot</h3>
+                <div class="version">Java</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RUST -->
+      <div class="stack-group" data-stack="backend" style="display:none">
+        <p class="stack-description">安全与高性能优势</p>
+        <div class="grid">
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/rocket.svg" alt="React">
+              <div class="stack-title">
+                <h3>Rocket</h3>
+                <div class="version">Rust</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/rust.svg" alt="React">
+              <div class="stack-title">
+                <h3>Rust</h3>
+                <div class="version">Rust</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GO -->
+      <div class="stack-group" data-stack="fullstack" style="display:none">
+        <p class="stack-description">高并发和简洁语法</p>
+        <div class="grid">
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/chi.svg" alt="React">
+              <div class="stack-title">
+                <h3>Chi</h3>
+                <div class="version">GO</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/gin.svg" alt="React">
+              <div class="stack-title">
+                <h3>Gin</h3>
+                <div class="version">GO</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/go.svg" alt="React">
+              <div class="stack-title">
+                <h3>Go</h3>
+                <div class="version">GO</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/iris.svg" alt="React">
+              <div class="stack-title">
+                <h3>Iris</h3>
+                <div class="version">GO</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/echo.svg" alt="React">
+              <div class="stack-title">
+                <h3>Echo</h3>
+                <div class="version">GO</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 文档 -->
+      <div class="stack-group" data-stack="docsapi" style="display:none">
+        <p class="stack-description">易读性与丰富生态</p>
+        <div class="grid">
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/django.svg" alt="React">
+              <div class="stack-title">
+                <h3>Django</h3>
+                <div class="version">Python</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/flask.svg" alt="React">
+              <div class="stack-title">
+                <h3>Flask</h3>
+                <div class="version">Python</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/python.svg" alt="React">
+              <div class="stack-title">
+                <h3>Python</h3>
+                <div class="version">Python</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 系统 -->
+      <div class="stack-group" data-stack="native" style="display:none">
+        <p class="stack-description">JVM跨平台能力，深耕企业级后端</p>
+        <div class="grid">
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/java.svg" alt="React">
+              <div class="stack-title">
+                <h3>Java</h3>
+                <div class="version">Java</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/vert.x.svg" alt="React">
+              <div class="stack-title">
+                <h3>Vert.x</h3>
+                <div class="version">Java</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/quarkus.svg" alt="React">
+              <div class="stack-title">
+                <h3>Quarkus</h3>
+                <div class="version">Java</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-img">
+              <img src="https://devbox.hzh.sealos.run/images/spring-boot.svg" alt="React">
+              <div class="stack-title">
+                <h3>Spring Boot</h3>
+                <div class="version">Java</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -631,9 +607,7 @@
       <div class="grid2 wrangle-stack-group">
         <div class="wrangle-stack-item">
           <div class="wrangle-stack-img">
-            <div class="wrangle-icon-wrapper">
-              1
-            </div>
+            <div class="wrangle-icon-wrapper">1</div>
             <div class="wrangle-stack-title">
               <h3>云开发环境</h3>
               <div class="wrangle-version">
@@ -647,9 +621,7 @@
 
         <div class="wrangle-stack-item">
           <div class="wrangle-stack-img">
-            <div class="wrangle-icon-wrapper">
-              2
-            </div>
+            <div class="wrangle-icon-wrapper">2</div>
             <div class="wrangle-stack-title">
               <h3>本地 IDE 开发</h3>
               <div class="wrangle-version">
@@ -663,9 +635,7 @@
 
         <div class="wrangle-stack-item">
           <div class="wrangle-stack-img">
-            <div class="wrangle-icon-wrapper">
-             3
-            </div>
+            <div class="wrangle-icon-wrapper">3</div>
             <div class="wrangle-stack-title">
               <h3>公网同步预览</h3>
               <div class="wrangle-version">
@@ -676,11 +646,10 @@
             </div>
           </div>
         </div>
+
         <div class="wrangle-stack-item">
           <div class="wrangle-stack-img">
-            <div class="wrangle-icon-wrapper">
-              4
-            </div>
+            <div class="wrangle-icon-wrapper">4</div>
             <div class="wrangle-stack-title">
               <h3>上线生产环境</h3>
               <div class="wrangle-version">
@@ -694,6 +663,7 @@
       </div>
     </div>
   </div>
+
   <div class="meta3">
     <h2>全面的开发堆栈支持</h2>
     <div class="meta3-content">
@@ -703,25 +673,30 @@
       <div class="meta3-right">
         <div class="meta3-h3">
           <h3>统一的云开发环境</h3>
-          <p>秒级创建可共享的云开发环境，减少繁琐的安装和配置过程，统一的开发、测试和生产环境，更快地进入开发状态。
-          </p>
+          <p>秒级创建可共享的云开发环境，减少繁琐的安装和配置过程，统一的开发、测试和生产环境，更快地进入开发状态。</p>
         </div>
         <div class="meta3-item">
-          <div class="meta3-icon"><img src="/devbox/img/yuncloud.svg"></div>
+          <div class="meta3-icon">
+            <img src="/devbox/img/yuncloud.svg">
+          </div>
           <div class="meta3-text">
             <h3>环境一致性</h3>
             <p>所有开发者使用相同的环境配置，消除了因本地环境差异而导致的问题，确保代码在所有开发机器上都能一致运行。</p>
           </div>
         </div>
         <div class="meta3-item">
-          <div class="meta3-icon"><img src="/devbox/img/scces.svg"></div>
+          <div class="meta3-icon">
+            <img src="/devbox/img/scces.svg">
+          </div>
           <div class="meta3-text">
             <h3>生产环境模拟</h3>
             <p>DevBox 提供与生产环境高度相似的测试环境配置，包括服务端、数据库、依赖项等，确保在测试阶段就能暴露潜在问题。</p>
           </div>
         </div>
         <div class="meta3-item">
-          <div class="meta3-icon"><img src="/devbox/img/anqwd.svg"></div>
+          <div class="meta3-icon">
+            <img src="/devbox/img/anqwd.svg">
+          </div>
           <div class="meta3-text">
             <h3>安全稳定性</h3>
             <p>主流云厂商，应用级和租户级网络隔离能力,自研轻量级负载均衡器，支持数万节点集群运行。</p>
@@ -730,30 +705,36 @@
       </div>
     </div>
   </div>
+
   <div class="meta4">
     <div class="meta3-content">
       <div class="meta3-right meta4-rght">
         <div class="meta3-h3">
           <h3>在线协作开发</h3>
-          <p>通过Devbox远程连接，项目代码线上存储，本地AI编码，同时支持实时协作和即时预览功能，团队成员可以同步查看和编辑代码，并快速测试和获取反馈。
-          </p>
+          <p>通过Devbox远程连接，项目代码线上存储，本地AI编码，同时支持实时协作和即时预览功能，团队成员可以同步查看和编辑代码，并快速测试和获取反馈。</p>
         </div>
         <div class="meta3-item">
-          <div class="meta3-icon"><img src="/devbox/img/google.svg"></div>
+          <div class="meta3-icon">
+            <img src="/devbox/img/google.svg">
+          </div>
           <div class="meta3-text">
             <h3>实时预览</h3>
             <p>自动分配公网 URL，无需正式部署，也可暴露给外部访问，本地代码更改，公网地址同步更新</p>
           </div>
         </div>
         <div class="meta3-item">
-          <div class="meta3-icon"><img src="/devbox/img/kiafahuanj.svg"></div>
+          <div class="meta3-icon">
+            <img src="/devbox/img/kiafahuanj.svg">
+          </div>
           <div class="meta3-text">
             <h3>同步开发</h3>
             <p>线上代码保存，支持分布式团队开发，而无需克隆项目或手动拉取更新，快速参与开发工作。</p>
           </div>
         </div>
         <div class="meta3-item">
-          <div class="meta3-icon"><img src="/devbox/img/tuanduikj.svg"></div>
+          <div class="meta3-icon">
+            <img src="/devbox/img/tuanduikj.svg">
+          </div>
           <div class="meta3-text">
             <h3>团队空间</h3>
             <p>所有的项目集中管理，成员能够地查看、切换和维护多个项目，提供权限分配，隔离不同项目和团队。</p>
@@ -765,6 +746,7 @@
       </div>
     </div>
   </div>
+
   <div class="meta5">
     <div class="meta3-content">
       <div class="meta3-left">
@@ -773,39 +755,38 @@
       <div class="meta3-right meta4-rght">
         <div class="meta3-h3">
           <h3>快速迭代与容器化上线</h3>
-          <p>DevBox 深度结合现代容器技术，通过一键打包 Docker 镜像与自动化的容器编排，实现从开发到生产的快速迭代和高效上线流程。
-          </p>
+          <p>DevBox 深度结合现代容器技术，通过一键打包 Docker 镜像与自动化的容器编排，实现从开发到生产的快速迭代和高效上线流程。</p>
         </div>
         <div class="meta3-item">
-          <div class="meta3-icon"><img src="/devbox/img/rongqihua.svg"></div>
+          <div class="meta3-icon">
+            <img src="/devbox/img/rongqihua.svg">
+          </div>
           <div class="meta3-text">
             <h3>完全隔离的环境</h3>
             <p>每个项目独立运行在不同环境中，支持动态资源调整，满足不同阶段（比如测试、性能压力测试、生产发布）的需求，且互不干扰。</p>
           </div>
         </div>
         <div class="meta3-item">
-          <div class="meta3-icon"><img src="/devbox/img/Docker.svg"></div>
+          <div class="meta3-icon">
+            <img src="/devbox/img/Docker.svg">
+          </div>
           <div class="meta3-text">
             <h3>容器化支持</h3>
             <p>DevBox 深度结合现代容器技术，通过一键打包 Docker 镜像与自动化的容器编排，实现从开发到生产的快速迭代和高效上线</p>
           </div>
         </div>
         <div class="meta3-item">
-          <div class="meta3-icon"><img src="/devbox/img/banben.svg"></div>
+          <div class="meta3-icon">
+            <img src="/devbox/img/banben.svg">
+          </div>
           <div class="meta3-text">
             <h3>快速回滚能力</h3>
             <p>通过 Docker 镜像和版本管理，DevBox 支持快速回滚到稳定版本，确保生产环境的快速恢复与服务连续性。</p>
           </div>
         </div>
       </div>
-
     </div>
   </div>
-
-
-
-
-
 
   <script src="/devbox/img/devbox.js"></script>
   <div class="h5footer" id="footer"></div>
@@ -813,19 +794,19 @@
   <script>
     var _hmt = _hmt || [];
     (function () {
-      var hm = document.createElement("script")
-      hm.src = "https://hm.baidu.com/hm.js?d8e8ecf669c47dc2512d3f1417e761f9"
-      var s = document.getElementsByTagName("script")[0]
-      s.parentNode.insertBefore(hm, s)
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?d8e8ecf669c47dc2512d3f1417e761f9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
     })();
   </script>
   <script>
     var _hmt = _hmt || [];
     (function () {
-      var hm = document.createElement("script")
-      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
-      var s = document.getElementsByTagName("script")[0]
-      s.parentNode.insertBefore(hm, s)
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
     })();
   </script>
 </body>
