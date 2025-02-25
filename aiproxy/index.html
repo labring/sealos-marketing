@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/app_store/css/appstore-xq.css">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="/aiproxy/img/aikonw.css">
-    <script src="/skin/aiknow.js"></script>
+    <script src="/aiproxy/img/aiknow.js" defer></script>
     <link rel="stylesheet" href="/app_store/css/appstore-xq.css">
     <link rel="stylesheet" href="/devbox/img/devbox.css">
     <script src="/images/js/h5_Q3_C1.js" defer></script>
@@ -36,14 +36,14 @@
         <section class="hero">
             <div class="hero-content">
                 <div class="badge1">
-                    <img src="/aiproxy/img/laba.svg">免费体验<p>DeepSeek R1</p>模型，注册即送<span> 3500w</span>Token</span>额度！
+                    <img src="/aiproxy/img/laba.svg">限时福利，<p>注册即领</p>所有模型<span> 3500w</span>Token额度！
                 </div>
                 <h1 class="bannh1">AI Proxy</h1>
-                <p class="dectico">一站式 AI 能力对接平台。覆盖语言、语音、图片和视频等多模态场景，包含全球数百种AI模型，无缝获取多平台 API Key，助力企业快速实现 AI 应用落地。
+                <p class="dectico">全球 AI 模型接入平台，内置ChatGpt、Claude、Deepseek等近200+ 模型，涵盖语言、语音、图片和视频等多模态场景，一键生成API Key。
                     </p>    
                 <div class="buttons1">
                     <a href="https://hzh.sealos.run/" class="button github hover-effect"><img src="/aiproxy/img/zhuce.svg" alt="注册图标">立即注册</a>
-                    <a href="https://www.bilibili.com/video/BV1SDNge7EvL/?spm_id_from=333.337.search-card.all.click&vd_source=c7d279db97d7845eca01cda10a90ef45" class="button docs hover-effect" target="_blank"><img src="/aiproxy/img/space_demo_wear_down.svg" alt="演示图标">部署教程</a>
+                    <a href="#moxinggc" class="button docs hover-effect"><img src="/aiproxy/img/space_demo_wear_down.svg" alt="演示图标">模型广场</a>
                 </div>
             </div>
         </section>
@@ -51,15 +51,13 @@
         <div class="banvideo">
 <img src="/aiproxy/img/20250210-120232.png">
         </div>
-
-       
     </main>
     <section class="integration">
-        <div class="integration-content">
+        <div class="integration-content" id="moxinggc">
             <div class="intput">
                 <div class="intputout">全球AI模型支持</div>
-                <h2>200+海量AI模型接入</h2>
-                <p>支持主流商业模型（Deepseek R1）和开源模型（ChatGLM 、Llama2 等）,<a href="https://cloud.fastgpt.cn/price" target="_blank">模型价格</a>低于官方售价 10%-30%。</p>
+                <h2>200+海量AI模型集成</h2>
+                <p>支持主流商业模型 Gpt 4、Claude 3.7、Deepseek R1 和开源模型 ChatGLM 、Llama2 等, <a href="https://cloud.fastgpt.cn/price" target="_blank">模型价格</a>低于官方售价 10%-30%，海外模型请访问 <a href="https://usw.sealos.io/signin">usw.sealos.io</a></p>
                 <a href="https://hzh.sealos.run/" class="button docs" target="_blank"><img src="/aiproxy/img/moxing.svg" alt="模型图标">模型广场</a>
             </div>
             <div class="integration-grid">
@@ -67,7 +65,11 @@
                     <div class="filter-options">
                         <div class="title-bt"> <div class="tiles">系列/厂商<select id="provider-select">
                             <option value="all">全部</option>
+                            <option value="claude">Claude</option>
                             <option value="DeepSeek">DeepSeek</option>
+                            <option value="OpenAI">OpenAI</option>
+                            
+                            <option value="Google">Google</option>
                             <option value="qwen">阿里</option>
                             <option value="baai">BAAI</option>
                             <option value="baidu">百度</option>
@@ -105,18 +107,36 @@
                             </thead>
                             <tbody>
                                 <tr data-provider="DeepSeek" data-type="text">
+                                    <td><div class="tdbody"><img src="/aiproxy/img/open.svg">Deepseek-Reasoner(R1）</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>10000</td>
+                                    <td>0.004 元</td>
+                                    <td>0.016 元</td>
+                                </tr>
+                                <tr data-provider="OpenAI" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/openai.718ff9c5.svg">Gpt-4o</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>60</td>
+                                    <td>0.0025 元</td>
+                                    <td>0.01</td>
+                                </tr>
+                                <tr data-provider="claude" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/anthropic.be6534ba.svg">Claude-3-7-sonnet-thinking-20250219</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>120</td>
+                                    <td>0.004 元</td>
+                                    <td>0.02 元</td>
+                                </tr>
+
+
+                               
+
+                                <tr data-provider="DeepSeek" data-type="text">
                                     <td><div class="tdbody"><img src="/aiproxy/img/open.svg">deepseek-chat</div></td>
                                     <td><div class="tdico">聊天补全</div></td>
                                     <td>10000</td>
                                     <td>0.001 元</td>
                                     <td>0.002 元</td>
-                                </tr>
-                                <tr data-provider="DeepSeek" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/open.svg">deepseek-reasoner(R1）</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>10000</td>
-                                    <td>0.004 元</td>
-                                    <td>0.016 元</td>
                                 </tr>
                                  <!--千问-->
                                 <tr data-provider="qwen" data-type="text">
@@ -1152,6 +1172,175 @@
                                     <td>0.026 元</td>
                                 </tr>
                                 <!-- Add more models as needed -->
+                                <!--claude-->
+                                <tr data-provider="claude" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/anthropic.be6534ba.svg">claude-3-5-haiku-20241022</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>120</td>
+                                    <td>0.001 元</td>
+                                    <td>0.005 元</td>
+                                </tr>
+                                <tr data-provider="claude" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/anthropic.be6534ba.svg">claude-3-5-sonnet-20240620</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>120</td>
+                                    <td>0.004 元</td>
+                                    <td>0.02 元</td>
+                                </tr>
+                                <tr data-provider="claude" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/anthropic.be6534ba.svg">claude-3-5-sonnet-20241022</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>120</td>
+                                    <td>0.004 元</td>
+                                    <td>0.02 元</td>
+                                </tr>
+                                <tr data-provider="claude" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/anthropic.be6534ba.svg">claude-3-5-sonnet-latest</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>120</td>
+                                    <td>0.004 元</td>
+                                    <td>0.02 元</td>
+                                </tr>
+                                <tr data-provider="claude" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/anthropic.be6534ba.svg">claude-3-7-sonnet-20250219</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>120</td>
+                                    <td>0.004 元</td>
+                                    <td>0.02 元</td>
+                                </tr>
+                                
+                                <tr data-provider="claude" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/anthropic.be6534ba.svg">claude-3-opus-20240229</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>120</td>
+                                    <td>0.003 元</td>
+                                    <td>0.015 元</td>
+                                </tr>
+                                <tr data-provider="claude" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/anthropic.be6534ba.svg">claude-3-haiku-20240307</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>120</td>
+                                    <td>0.003 元</td>
+                                    <td>0.015 元</td>
+                                </tr>
+                                <!--Google-->
+                                <tr data-provider="Google" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/google.cb2e36d7.svg">Gemini-1.5-pro</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>600</td>
+                                    <td>0.0025 元</td>
+                                    <td>0.01 元</td>
+                                </tr>
+                                <tr data-provider="Google" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/google.cb2e36d7.svg">Gemini-2.0-flash</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>600</td>
+                                    <td>0.0001 元</td>
+                                    <td>0.0004 元</td>
+                                </tr>
+                                <tr data-provider="Google" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/google.cb2e36d7.svg">gemini-2.0-flash-lite-preview</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>600</td>
+                                    <td>0.000075 元</td>
+                                    <td>0.0003 元</td>
+                                </tr>
+                                <tr data-provider="Google" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/google.cb2e36d7.svg">gemini-2.0-flash-thinking-exp</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>600</td>
+                                    <td>0.0001 元</td>
+                                    <td>0.0004 元</td>
+                                </tr>
+                                <tr data-provider="Google" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/google.cb2e36d7.svg">gemini-1.5-flash</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>600</td>
+                                    <td>0.00015 元</td>
+                                    <td>0.0006 元</td>
+                                </tr>
+                                <tr data-provider="Google" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/google.cb2e36d7.svg">gemini-1.5-flash-8b</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>600</td>
+                                    <td>0.000075 元</td>
+                                    <td>0.0003 元</td>
+                                </tr>
+                                <tr data-provider="Google" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/google.cb2e36d7.svg">gemini-2.0-pro-exp</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>600</td>
+                                    <td>0.0025 元</td>
+                                    <td>0.01 元</td>
+                                </tr>
+                                <tr data-provider="Google" data-type="wbqr">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/google.cb2e36d7.svg">text-embedding-004</div></td>
+                                    <td><div class="tdyuyin">文本嵌入</div></td>
+                                    <td>1500</td>
+                                    <td>0.0001 元</td>
+                                    <td></td>
+                                </tr>
+                                <!--OpenAI-->
+                                <tr data-provider="OpenAI" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/openai.718ff9c5.svg">gpt-3.5-turbo</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>120</td>
+                                    <td>0.003 元</td>
+                                    <td>0.006</td>
+                                </tr>
+                                <tr data-provider="OpenAI" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/openai.718ff9c5.svg">gpt-3.5-turbo-16k</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>120</td>
+                                    <td>0.003 元</td>
+                                    <td>0.006</td>
+                                </tr>
+                                <tr data-provider="OpenAI" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/openai.718ff9c5.svg">gpt-4</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>60</td>
+                                    <td>0.03 元</td>
+                                    <td>0.06</td>
+                                </tr>
+                                <tr data-provider="OpenAI" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/openai.718ff9c5.svg">gpt-4-32k</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>60</td>
+                                    <td>0.03 元</td>
+                                    <td>0.12</td>
+                                </tr>
+                                <tr data-provider="OpenAI" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/openai.718ff9c5.svg">gpt-4-turbo</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>60</td>
+                                    <td>0.01 元</td>
+                                    <td>0.03</td>
+                                </tr>
+                                
+                                <tr data-provider="OpenAI" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/openai.718ff9c5.svg">gpt-4o-mini</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>60</td>
+                                    <td>0.00015 元</td>
+                                    <td>0.0006</td>
+                                </tr>
+                                <tr data-provider="OpenAI" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/openai.718ff9c5.svg">o1-mini</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>60</td>
+                                    <td>0.003 元</td>
+                                    <td>0.012</td>
+                                </tr>
+                                <tr data-provider="OpenAI" data-type="text">
+                                    <td><div class="tdbody"><img src="https://aiproxy-web.usw.sealos.io/_next/static/media/openai.718ff9c5.svg">o1-preview</div></td>
+                                    <td><div class="tdico">聊天补全</div></td>
+                                    <td>60</td>
+                                    <td>0.015 元</td>
+                                    <td>0.06</td>
+                                </tr>
+
+
+
                             </tbody>
                         </table>
                     </div>

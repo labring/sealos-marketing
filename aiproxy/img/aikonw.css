@@ -220,13 +220,13 @@ tr td{
 }
 .github {
     background-color: #2e368c;
-    padding: 12px 24px;
+    padding: 8px 16px;
 }
 
 .docs {
     color: #3b4bff;
     border: solid 1px #3b4bff;
-    padding: 8px 14px;
+    padding: 6px 14px;
     width: fit-content;
     font-size: 14px;
 }
