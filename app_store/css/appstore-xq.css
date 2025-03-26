@@ -5,6 +5,35 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+@font-face {
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/app_store/css/PingFangSC-Regular.woff2') format('woff2'),
+       url('/app_store/css/PingFangSC-Regular.woff') format('woff'),
+       local('PingFang SC Regular'), local('PingFangSC-Regular');
+}
+
+@font-face {
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/app_store/css/PingFangSC-Medium.woff2') format('woff2'),
+       url('/app_store/css/PingFangSC-Medium.woff') format('woff'),
+       local('PingFang SC Medium'), local('PingFangSC-Medium');
+}
+
+@font-face {
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/app_store/css/PingFangSC-Bold.woff2') format('woff2'),
+       url('/app_store/css/PingFangSC-Bold.woff') format('woff'),
+       local('PingFang SC Bold'), local('PingFangSC-Bold');
+}
+
+
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -1736,4 +1765,13 @@ button::-moz-focus-inner {
   .feature {
     height: auto;
   }
+}
+
+@media screen and (max-width: 700px) {
+  .nav .header-title ul {
+      gap: 10px;
+  }
+  .nav ul li a{
+    font-size: 10px;
+}
 }

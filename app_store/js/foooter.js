@@ -23,18 +23,15 @@ document.addEventListener('DOMContentLoaded', function() {
           <li><a
                 href="https://affim.baidu.com/unique_57159132/chat?siteId=21229559&userId=57159132&siteToken=6763f865f8d80f27bf8adf840a3041b6&cp=%E9%A6%96%E9%A1%B5-%E5%BA%95%E9%83%A8-%E5%94%AE%E5%89%8D%E5%92%A8%E8%AF%A2%E6%8C%89%E9%92%AE&cr=&cw="
                 target="_blank">售前咨询</a></li>
-          <li><a
-                href="https://affim.baidu.com/unique_57159132/chat?siteId=21229559&userId=57159132&siteToken=6763f865f8d80f27bf8adf840a3041b6&cp=%E9%A6%96%E9%A1%B5-%E5%BA%95%E9%83%A8-%E5%94%AE%E5%90%8E%E5%92%A8%E8%AF%A2%E6%8C%89%E9%92%AE&cr=&cw="
-                target="_blank">售后咨询</a></li>
           <li><a href="https://sealos.run/docs/5.0.0/Intro/" target="_blank">帮助中心</a></li>
         </ul>
         <ul>
           <li>
             <p>联系我们</p>
           </li>
-          
+           <li><a href="/case">案例</a></li>
           <li><a href="https://blog.sealos.run/blog" target="_blank">博客</a></li>  
-          <li><a href="https://forum.laf.run/" target="_blank">开发者社区</a></li>   
+          <li><a href="https://forum.sealos.run/" target="_blank">社区</a></li>   
           <li><a href="https://github.com/labring/sealos/issues" target="_blank">问题反馈</a></li>
         </ul>
       </div>

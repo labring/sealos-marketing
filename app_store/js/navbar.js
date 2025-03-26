@@ -10,16 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 <li><a href="/" target="_blank">首页</a></li>
                 <li><a href="/devbox/" target="_blank">Devbox</a></li>
                 <li><a href="/aiproxy" target="_blank">AI Proxy</a></li>
-                <li><a href="/price" target="_blank">价格</a></li>
-                <li><a href="/case">案例</a></li>
-                <li><a href="https://sealos.run/docs/5.0.0/Intro" target="_blank">文档</a></li>
                 <li><a href="https://template.hzh.sealos.run/" target="_blank">应用商店</a></li>
+                <li><a href="/price" target="_blank">价格</a></li> 
+                <li><a href="https://sealos.run/docs/5.0.0/Intro" target="_blank">文档</a></li>         
+                <li><a href="https://forum.sealos.run/" target="_blank">社区</a></li>   
             </ul>
         </div>
         <div class="actions">
-            <div class="headico"> <img src="../../../app_store/img/github.svg" alt="GitHub Icon">
+           <a href="https://github.com/labring/sealos" target="_blank"> <div class="headico"> <img src="../../../app_store/img/github.svg" alt="GitHub Icon">
                 <div id="github-stars">Loading stars...</div>
-            </div>
+            </div></a>
             <a href="https://hzh.sealos.run/" target="_blank" class="login-link">
                 <button class="btn"> 登<P>录</P> </button>
             </a>

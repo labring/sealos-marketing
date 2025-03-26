@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /user/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backend/
+Disallow: /checkout/
+Disallow: /login/
+Disallow: /register/
+
+User-agent: Baiduspider
+Allow: /
+Disallow: /baidu-excluded/
+
+User-agent: 360Spider
+Allow: /
+Disallow: /360-excluded/
+
+User-agent: Sogou web spider
+Allow: /
+Disallow: /sogou-excluded/
+
+Sitemap: /sitemap.xml
+Crawl-delay: 10
