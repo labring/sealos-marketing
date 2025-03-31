@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 <li><a href="/aiproxy" target="_blank">AI Proxy</a></li>
                 <li><a href="https://template.hzh.sealos.run/" target="_blank">应用商店</a></li>
                 <li><a href="/price" target="_blank">价格</a></li> 
-                <li><a href="https://sealos.run/docs/5.0.0/Intro" target="_blank">文档</a></li>         
+                <li><a href="/case" target="_blank">案例</a></li>
+                <li><a href="https://sealos.run/docs/5.0.0/Intro" target="_blank">文档</a></li>  
+                <li><a href="/blog" target="_blank">博客</a></li>       
                 <li><a href="https://forum.sealos.run/" target="_blank">社区</a></li>   
             </ul>
         </div>

@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <li>
         <p>产品</p>
       </li>
-      <li><a href="https://fastgpt.cn" target="_blank">FastGpt</a></li>
-      <li><a href="/devbox" target="_blank">Devbox</a></li>
+      <li><a href="https://fastgpt.cn" target="_blank">FastGPT</a></li>
+      <li><a href="/devbox" target="_blank">DevBox</a></li>
       <li><a href="/aiproxy" target="_blank">AI Proxy</a></li>
       
     </ul>
