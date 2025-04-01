@@ -8,6 +8,8 @@ Disallow: /backend/
 Disallow: /checkout/
 Disallow: /login/
 Disallow: /register/
+Disallow: /zh-cn/
+Disallow: /en/
 
 User-agent: Baiduspider
 Allow: /
