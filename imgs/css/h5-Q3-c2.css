@@ -367,6 +367,7 @@ video {
   align-items: center;
   margin-top: 80px;
   padding: 0 10%;
+  margin-bottom: 100px;
 }
 
 .nav {
@@ -404,11 +405,11 @@ video {
 
 .tab-section {
   display: flex;
-  margin-top: 40px;
   gap: 32px;
-  margin-bottom: 100px;
   justify-content: flex-end;
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 
 }
 
@@ -653,8 +654,12 @@ video {
   justify-content: flex-start;
   width: 100%;
   gap: 16px;
+  max-width: 1440px;
 }
-
+.test{
+  max-width: 1440px;
+    margin: 0 auto;
+}
 .card {
   background-color: white;
   border-radius: 12px;
@@ -835,7 +840,9 @@ video {
 
 .testimonial-container {
   margin-top: 40px;
-  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .container3 {
@@ -843,6 +850,7 @@ video {
   flex-direction: column;
   align-items: center;
   margin-top: 160px;
+  margin-bottom: 160px;
 
 }
 
@@ -900,10 +908,11 @@ video {
 }
 
 .specification {
-  margin-top: 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .ddos ul li {
@@ -1159,11 +1168,7 @@ video {
   padding-top: 14px
 }
 
-.h5footkj {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 64px;
-}
+
 
 .h5footerlm ul li p {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
@@ -1373,7 +1378,7 @@ video {
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  margin: 0 10%;
+  max-width: 1440px;
 }
 
 .vids7-left h3 {
@@ -1763,7 +1768,7 @@ a {
 
   .tab-h3 {
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
   }
 
   .cloud-module1 p {
@@ -1837,7 +1842,7 @@ a {
 
   .tag {
     font-size: 12px;
-    padding: 8px 14px;
+    padding: 6px 8px;
   }
 
 }
@@ -2107,10 +2112,19 @@ a {
 }
 @media screen and (max-width: 1200px) {
   .nav ul {
-      gap:20px;
+      gap:18px;
   }
   .nav-links li a {
     font-size: 14px;
+}
+.navbar{
+  padding: 20px 0;
+}
+.logo img{
+  width: 32px;
+}
+.logo{
+  font-size: 18px;
 }
 }
 

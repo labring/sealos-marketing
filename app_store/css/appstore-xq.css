@@ -298,9 +298,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 1000;
-  margin: 0 10%;
-  max-width: 1440px;
-  padding: 20px 0px;
+  padding: 20px 10%;
   width: 100%;
 
 }
@@ -1451,6 +1449,8 @@ button::-moz-focus-inner {
   display: flex;
   justify-content: space-between;
   padding-bottom: 64px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .h5footerlm ul li p {
@@ -1489,6 +1489,8 @@ button::-moz-focus-inner {
   padding: 16px 0px 24px 0px;
   border-top: 1px solid #E6EDF9;
   justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .h5footerdbright {
@@ -1695,7 +1697,7 @@ button::-moz-focus-inner {
 
   .nav-links {
 
-    gap: 20px;
+    gap: 14px;
 
   }
 
