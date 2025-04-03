@@ -252,11 +252,7 @@ img {
 }
 
 /* Navigation styles */
-.nav ul {
-  display: flex;
-  gap: 40px;
 
-}
 
 .nav li {
   cursor: pointer;
@@ -363,7 +359,7 @@ img {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 30px;
   margin-left: 6%;
 }
 
