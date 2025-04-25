@@ -2,6 +2,14 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+.container-2,
+.meta3-content,
+.wrangle-stack-content,
+.meta4 {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+}
 
 .hero-section {
     max-width: 1200px;
@@ -303,7 +311,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    top: 71%;
+    top: 74%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -390,7 +398,10 @@ body {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    overflow: hidden;
 }
+
+
 
 .wrangle-stack-group {
     display: flex;
@@ -586,9 +597,6 @@ body {
     font-family: "PingFang SC";
 }
 
-.container-2 {
-    margin: 0 10%;
-}
 
 .wrangle-stack-header {
     display: flex;
@@ -636,13 +644,13 @@ body {
 
 
 .meta3 {
-    padding: 80px 10%;
+    padding: 80px 0px;
     background: #fafafa;
     margin-top: 160px;
 }
 
 .meta4 {
-    padding: 80px 10%;
+    padding: 80px 0px;
     background: #ffffff;
 }
 
@@ -732,55 +740,412 @@ body {
 }
 
 .meta5 {
-    padding: 80px 10%;
+    padding: 80px 0px;
     background: #fafafa;
 }
 
 
 
+@media screen and (max-width: 1680px) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1024px) {
-    .meta3-content {
-        flex-direction: column;
-        gap: 40px;
+    .hero-section,
+    .container-2,
+    .meta3-content,
+    .meta4 {
+        max-width: 1280px;
     }
 
-    .meta3-left,
-    .meta3-right {
-        width: 100%;
+    .commit {
+        width: 420px;
+        height: 230px;
+    }
+
+    .commit2 {
+        position: absolute;
+        width: 436px;
+        height: 256px;
+    }
+
+    .commit-devbox {
+        top: 78%;
+    }
+
+    .grid>*:nth-child(n+14) {
+        display: none;
     }
 }
 
 
 
+@media screen and (max-width: 1440px) {
+
+    .hero-section,
+    .container-2,
+    .meta3-content,
+    .meta4 {
+        max-width: 1200px;
+    }
+
+    .commit {
+        width: 420px;
+        height: 230px;
+    }
+
+    .commit2 {
+        position: absolute;
+        width: 436px;
+        height: 256px;
+    }
+
+    .commit-devbox {
+        top: 80%;
+    }
+
+    .grid>*:nth-child(n+14) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1344px) {
+
+    .hero-section,
+    .container-2,
+    .meta3-content,
+    .meta4 {
+        max-width: 1100px;
+        gap: 90px;
+    }
+
+    .grid>*:nth-child(n+14) {
+        display: none;
+    }
+
+    .commit {
+        width: 380px;
+        height: 200px;
+        left: 51%;
+    }
+
+    .commit2 {
+        position: absolute;
+        width: 390px;
+        height: 210px;
+        left: 51%;
+    }
+
+    .commit-devbox {
+        top: 80%;
+        display: none;
+    }
+
+    .stack-item {
+        width: 156px;
+    }
+
+    .wrangle-stack-title h3 {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .wrangle-version {
+        height: 80px;
+    }
+
+    .stack-content {
+        padding-bottom: 110px;
+        margin-bottom: 80px;
+    }
+
+    .wrangle-stack-content {
+        margin-bottom: 20px;
+    }
+
+    .meta3-text h3 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .hero-section,
+    .container-2,
+    .meta3-content,
+    .meta4 {
+        max-width: 1000px;
+    }
+
+    .meta4 {
+        padding: 0px 0px 80px 0px;
+    }
+
+    .commit {
+        width: 340px;
+        height: 140px;
+        left: 51%;
+    }
+
+    .commit2 {
+        position: absolute;
+        width: 350px;
+        height: 150px;
+        left: 51%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .hero-section,
+    .container-2,
+    .meta3-content,
+    .meta4 {
+        max-width: 900px;
+    }
+
+    .commit {
+        width: 300px;
+        height: 100px;
+        left: 51%;
+    }
+
+    .commit2 {
+        position: absolute;
+        width: 310px;
+        height: 110px;
+        left: 51%;
+    }
+
+    .grid>*:nth-child(n+11) {
+        display: none;
+    }
+
+    .wrangle-version {
+        height: 120px;
+    }
+
+    .meta3 {
+        margin-top: 110px;
+    }
+}
 
 
-@media screen and (max-width: 1680px) {}
+
+@media screen and (max-width: 1024px) {
+
+    .hero-section,
+    .container-2,
+    .meta3-content,
+    .meta4 {
+        max-width: 800px;
+    }
+
+    .commit {
+        width: 260px;
+        height: 80px;
+        left: 51%;
+    }
+
+    .commit2 {
+        position: absolute;
+        width: 270px;
+        height: 90px;
+        left: 51%;
+    }
 
 
-@media screen and (max-width: 1440px) {}
+}
+
+@media screen and (max-width: 900px) {
+
+    .commit,
+    .commit2,
+    .integration-diagram {
+        display: none;
+    }
+
+    .hero-section,
+    .container-2,
+    .meta3-content,
+    .meta4 {
+        padding: 20px 4%;
+        width: 100%;
+    }
+.meta3-content{
+    display: flex;
+        flex-direction: column;
+        gap: 28px;
+}
+    .stack-tab {
+        padding: 6px 8px;
+        height: auto;
+        font-size: 10px;
+    }
+
+    .wrangle-stack-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 40px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .wrangle-stack-header h2 {
+        padding: 0px;
+    }
+
+    .wrangle-stack-description {
+        width: 100%;
+    }
+
+    .wrangle-stack-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+        /* 添加行与行之间的间距 */
+    }
+    .meta3 {
+        padding: 60px 0px;
+    }
+    .meta3 h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+
+    .wrangle-stack-group>* {
+        width: calc(50% - 10px);
+        margin-bottom: 10px;
+        /* 添加额外的底部间距 */
+    }
+
+    .wrangle-version {
+        height: auto;
+        line-height: 180%;
+    }
+
+    .stack-tabs {
+        gap: 10px;
+        margin-bottom: 14px;
+    }
+    .hero-title {
+        font-size: 48px;
+    }
+    .stack-item img {
+        width: 16px;
+        height: 16px;
+    }
+    .hero-subtitle {
+        font-size: 14px;
+        color: #6B7280;
+        margin: 0 auto 20px;
+        line-height: 180%;
+        letter-spacing: 0.4px;
+    }
+    .stack-title h3 {
+        font-size: 12px;
+    }
+    .stack-img {
+
+        gap: 0.2rem
+
+    }
+    .grid {
+
+        gap: 0.7rem;
+
+    }
+    .stack-section {
+        margin: 0 4%;
+    }
+    .version {
+        display: none;
+    }
+
+    .stack-item {
+        width: 60px;
+        min-width: 102px;
+        padding: 0.4rem 0.4rem;
+    }
+
+    .stack-description {
+        margin-bottom: 16px;
+        font-size: 12px;
+    }
+
+    .stack-header {
+        margin-bottom: 20px;
+    }
+    .main {
+        margin-bottom: 0px;
+    }
+    .stack-content {
+        padding-bottom: 60px;
+        margin-bottom: 40px;
+    }
+    .meta3 {
+        margin-top: 20px;
+    }
+    .meta3-h5{
+        display: none;
+    }
+    .meta4-rght {
+        padding-top: 0px;
+    }
+    .cta-button {
+        padding: 8px 24px;
+ 
+        font-size: 12px;
+    }
+    .hero-content {
+        margin-bottom: 40px;
+    }
+    .stack-header h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .wrangle-stack-header h2 span {
+        font-size: 20px;
+    }
+    .wrangle-stack-header h2 {
+        font-size: 14px;
+        line-height: 200%;
+    }
+    .wrangle-stack-header {
+        gap: 8px;
+    }
+    .wrangle-stack-description {
+        line-height: 160%;
+        font-size:14px;
+    }
+    .wrangle-stack-title h3 {
+        font-size: 14px;
+    }
+    .wrangle-stack-title h3 {
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+    }
+    .meta3-h3 h3 {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+    .meta3-h3 p {
+ 
+        line-height: 160%;
+    }
 
 
 
-@media screen and (max-width: 1024px) {}
+
+
+
+
+
+
+
+
+
+
+
+
+}

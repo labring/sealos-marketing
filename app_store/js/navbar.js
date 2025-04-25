@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
             </a>
             <ul class="nav-links">
                 <li><a href="/" target="_blank">首页</a></li>
-                <li><a href="/devbox/" target="_blank">Devbox</a></li>
-                <li><a href="/aiproxy" target="_blank">AI Proxy</a></li>
+                <li><a href="/devbox/" target="_blank"><span>Devbox</span></a></li>
+                <li><a href="/aiproxy/" target="_blank"><span>AI Proxy</span></a></li>
                 <li><a href="https://template.hzh.sealos.run/" target="_blank">应用商店</a></li>
-                <li><a href="/price" target="_blank">价格</a></li> 
-                <li><a href="/case" target="_blank">案例</a></li>
+                <li><a href="/price" target="_blank">定价</a></li> 
+                <!--<li><a href="/case" target="_blank">案例</a></li>-->
                 <li><a href="https://sealos.run/docs/5.0.0/Intro" target="_blank">文档</a></li>  
             </ul>
         </div>
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
            <a href="https://github.com/labring/sealos" target="_blank"> <div class="headico"> <img src="../../../app_store/img/github.svg" alt="GitHub Icon">
                 <div id="github-stars">Loading stars...</div>
             </div></a>
-            <a href="https://hzh.sealos.run/" target="_blank" class="login-link">
+            <a href="https://cloud.sealos.run/signin/" target="_blank" class="login-link">
                 <button class="btn"> 登<P>录</P> </button>
             </a>
         </div>

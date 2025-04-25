@@ -33,7 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
       newUrl += (newUrl.includes('?') ? '&' : '?') + 's=bd-sealos-marketing-appstore'
 
-      const target = baseUrl.includes('hzh.sealos.run') || baseUrl.includes('mp.weixin.qq.com') ? '_blank' : '_self'
+      const arr = ['cloud.sealos.run','mp.weixin.qq.com','template.hzh.sealos.run','sealos.run/docs','feishu.cn']
+
+      const target = arr.some(item => baseUrl.includes(item)) ? '_blank' : '_self'
       window.open(newUrl, target)
     })
 

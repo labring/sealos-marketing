@@ -14,24 +14,6 @@
        local('PingFang SC Regular'), local('PingFangSC-Regular');
 }
 
-@font-face {
-  font-family: 'PingFang SC';
-  font-style: normal;
-  font-weight: 500;
-  src: url('/app_store/css/PingFangSC-Medium.woff2') format('woff2'),
-       url('/app_store/css/PingFangSC-Medium.woff') format('woff'),
-       local('PingFang SC Medium'), local('PingFangSC-Medium');
-}
-
-@font-face {
-  font-family: 'PingFang SC';
-  font-style: normal;
-  font-weight: 700;
-  src: url('/app_store/css/PingFangSC-Bold.woff2') format('woff2'),
-       url('/app_store/css/PingFangSC-Bold.woff') format('woff'),
-       local('PingFang SC Bold'), local('PingFangSC-Bold');
-}
-
 
 
 ::-webkit-scrollbar {
@@ -298,9 +280,9 @@ img {
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 20px 10%;
-  width: 100%;
-
+  padding: 26px 0 18px 0;
+  width: 1440px;
+  margin: 0 auto;
 }
 
 .index-nav {
@@ -353,11 +335,14 @@ img {
   align-items: center;
   width: 100%;
 }
+.nav-links li span {
+  letter-spacing: 0.1px;
+}
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 28px;
   margin-left: 6%;
 }
 
@@ -365,11 +350,9 @@ img {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
   text-align: center;
   font-family: "PingFang SC";
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.15px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
 .header-title {
@@ -1574,7 +1557,9 @@ button::-moz-focus-inner {
   align-items: flex-start;
   padding-top: 30px;
 }
-
+.headico2 img{
+  margin: 0;
+}
 .vids7_ico {
   display: flex;
   flex-direction: column;
@@ -1635,7 +1620,7 @@ button::-moz-focus-inner {
 
 .h5_footer {
   margin: 0 auto;
-  padding: 0 10%;
+  max-width: 1440px;
 }
 
 @media screen and (max-width: 1680px) {
@@ -1670,6 +1655,9 @@ button::-moz-focus-inner {
   .app-h5 {
     width: 60%;
   }
+  .navbar,.h5_footer{
+    max-width: 1280px;
+  }
 
 }
 
@@ -1690,14 +1678,54 @@ button::-moz-focus-inner {
   .app-decistore {
     font-size: 12px;
   }
-
+  .navbar, .h5_footer {
+    max-width: 1200px;
 }
 
-@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 1340px) {
+
+  .navbar, .h5_footer {
+    max-width: 1100px;
+}
+.feature {
+  gap: 0px;
+  padding: 16px 0px 16px 78px;
+}
+.h5footerlogo p {
+  font-size: 12px;
+
+  padding-top: 8px;
+}
+.h5footerlogo img {
+  height: 28px;
+}
+.footer-title {
+  font-size: 20px;    margin-left: 6px;
+}
+.h5footerlm ul li p{
+  font-size: 14px;
+  line-height: 110%;
+}
+.h5footerlm ul li {
+  font-size: 12px;
+}
+.h5footerdbleft {
+  font-size: 12px;
+
+}
+}
+@media screen and (max-width: 1280px) {
+
+  .navbar, .h5_footer {
+    max-width: 1100px;
+}
+
+
 
   .nav-links {
 
-    gap: 14px;
+    gap: 22px;
 
   }
 
@@ -1719,16 +1747,82 @@ button::-moz-focus-inner {
     padding: 20px 20px;
   }
 
+
 }
 
+@media screen and (max-width: 1200px) {
+
+  .navbar, .h5_footer {
+    max-width: 1000px;
+}
+
+}
+
+@media screen and (max-width: 1100px) {
+
+  .navbar, .h5_footer {
+    max-width: 900px;
+}
+
+
+
+}
+@media screen and (max-width: 1024px) {
+
+  .navbar, .h5_footer {
+    max-width: 800px;
+}
+
+
+
+}
 @media screen and (max-width: 900px) {
+
+  .navbar, .h5_footer {
+    padding: 20px 4%;
+    width: 100%;
+}
+.h5footerlm,.h5footerlogo,.h5footerdb {
+
+  width: 80%;
+
+}
   .nav ul {
     gap: 16px;
   }
-
+  .nav-links{
+    display: none;
+  }
+  .navba,.h5_footer {
+    padding: 20px 4%;
+}
+.h5footkj {
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
   .nav-links li a {
     font-size: 12px;
   }
+  .h5footerlogo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    gap: 14px;
+}
+.h5footerlogo p {
+  padding-top: 0px;
+}
+
+.h5footer {
+  padding-top: 10px;
+}
+
+
+
 
   .btn {
     font-size: 12px;
