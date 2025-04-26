@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <li><a href="/" target="_blank">首页</a></li>
                 <li><a href="/devbox/" target="_blank"><span>Devbox</span></a></li>
                 <li><a href="/aiproxy/" target="_blank"><span>AI Proxy</span></a></li>
-                <li><a href="https://template.hzh.sealos.run/" target="_blank">应用商店</a></li>
+                <li><a href="https://template.cloud.sealos.run/" target="_blank">应用商店</a></li>
                 <li><a href="/price" target="_blank">定价</a></li> 
                 <!--<li><a href="/case" target="_blank">案例</a></li>-->
                 <li><a href="https://sealos.run/docs/5.0.0/Intro" target="_blank">文档</a></li>  

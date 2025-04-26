@@ -407,7 +407,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
     <div class="actions">
       <p> <img src="/imgs/img/github.svg" alt="GitHub Icon"> <span>14.1k</span> </p>
-      <a href="https://hzh.sealos.run/" target="_blank" class="login-link">
+      <a href="https://cloud.sealos.run/" target="_blank" class="login-link">
       <button class="btn"> 登录 </button>
       </a> </div>
   </div>
