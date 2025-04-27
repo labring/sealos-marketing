@@ -9,7 +9,7 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
   ALIYUN_REGISTRY: registry.cn-hangzhou.aliyuncs.com
-  ALIYUN_IMAGE: zhujingyang/sealos-marketing
+  ALIYUN_IMAGE: labring4docker/sealos-marketing
 
 jobs:
   build-and-push:
