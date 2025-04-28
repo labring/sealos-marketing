@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
   console.log('sem is loaded')
   
-  // 检查并更新URL中的s参数为"首页"
+  // 检查并更新URL中的s参数为"Devbox"
   function updateSParameter() {
     const currentUrl = window.location.href;
     const urlObj = new URL(currentUrl);
     
-    // 如果URL中s参数不是"首页"，则更新它
-    if (urlObj.searchParams.get('s') !== '首页') {
-      urlObj.searchParams.set('s', '首页');
+    // 如果URL中s参数不是"AiProxy"，则更新它
+    if (urlObj.searchParams.get('s') !== 'AiProxy') {
+      urlObj.searchParams.set('s', 'AiProxy');
       // 使用history.replaceState避免创建新的历史记录
       window.history.replaceState({}, '', urlObj.toString());
     }
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
         newUrl += (newUrl.includes('?') ? '&' : '?') + 'k=' + encodeURIComponent(kValue)
       }
 
-      newUrl += (newUrl.includes('?') ? '&' : '?') + 's=首页'
+      newUrl += (newUrl.includes('?') ? '&' : '?') + 's=AiProxy'
 
       const arr = ['cloud.sealos.run','mp.weixin.qq.com','template.cloud.sealos.run','sealos.run/docs','feishu.cn']
 
