@@ -1,4 +1,3 @@
-
 function showTooltip(e) {
     const tooltip = e.currentTarget.querySelector('#tooltip');
     tooltip.style.display = 'block';
@@ -27,8 +26,7 @@ function updateButtonPositions() {
         { selector: '.hower-id', topRange: [-100, -100], leftRange: [100, 140] },
         { selector: '.commit', topRange: [49.5, 45], leftRange: [50, 50], widthRange: [320, 500], heightRange: [200, 280] },
         { selector: '.commit2', topRange: [49.5, 45], leftRange: [50, 50], widthRange: [340, 520], heightRange: [220, 300] },
-        { selector: '.commit-devbox', topRange: [89, 75], leftRange: [50, 50], widthRange: [50, 80], heightRange: [50, 80] },
-   
+        { selector: '.commit-devbox', topRange: [88, 69], leftRange: [50, 50], widthRange: [50, 80], heightRange: [50, 80] },
     ];
 
     const minViewWidth = 1023;
@@ -37,6 +35,12 @@ function updateButtonPositions() {
 
     buttonConfigs.forEach(config => {
         const button = document.querySelector(config.selector);
+        
+        // 添加检查，确保元素存在
+        if (!button) {
+            console.warn(`元素 ${config.selector} 不存在`);
+            return; // 跳过当前配置项
+        }
 
         // Calculate new top value
         if (config.topRange) {

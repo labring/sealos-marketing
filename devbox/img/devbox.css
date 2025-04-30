@@ -5,7 +5,7 @@ body {
 .container-2,
 .meta3-content,
 .wrangle-stack-content,
-.meta4 {
+.meta4,.stack-section {
     margin: 0 auto;
     width: 100%;
     max-width: 1440px;
@@ -487,10 +487,6 @@ body {
     background-color: rgb(243 244 246 / var(--tw-bg-opacity));
     border-radius: .25rem;
     letter-spacing: 0.5px;
-}
-
-.stack-section {
-    margin: 0 10%;
 }
 
 .main {

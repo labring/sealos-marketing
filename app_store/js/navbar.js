@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="navtop">
         <div class="header-title">
             <a href="/">
-                <div class="logo"> <img src="../../../app_store/img/sealos.svg" alt="Sealos Logo"> Sealos </div>
+                <div class="logo"> <img src="../../../app_store/img/sealos.svg" alt="Sealos Logo" title="sealos"><h1>Sealos</h1></div>
             </a>
             <ul class="nav-links">
                 <li><a href="/" target="_blank">首页</a></li>
