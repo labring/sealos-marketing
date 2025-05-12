@@ -1,17 +1,207 @@
 <!doctype html>
-<html>
+<html lang="zh-CN">
 
 <head>
+  <!-- 基本元信息 -->
   <meta charset="UTF-8">
-  <title>Sealos-企业级智能云操作系统</title>
-  <meta name="description" content="Sealos云操作系统,Kubernetes 云内核,多 Region 统一管理,以应用为中心的企业级容器云,秒级创建高可用数据库,自动伸缩杜绝资源浪费,一键创建容器集群,端到端的应用安全保障,Sealos支持多种复杂应用场景快速上云,超10w+企业,近百万开发者在线使用。">
-  <meta name="keywords" content="Sealos,Docker,Kubernetes,devbox,云操作系统,云管理平台,云管理,容器云,企业级容器云,容器云部署,容器云厂商,云原生">
+  <title>Sealos - 企业级智能云操作系统【官网】</title>
+  <meta name="description" content="Sealos云操作系统,以Kubernetes云内核为基础,提供多Region统一管理,应用为中心的企业级容器云,秒级创建高可用数据库,自动伸缩杜绝资源浪费,一键创建容器集群,端到端的应用安全保障。已有超10万+企业,近百万开发者在线使用。">
+  <meta name="keywords" content="Sealos,Docker,Kubernetes,DevOps,云操作系统,云管理平台,云管理,容器云,企业级容器云,容器云部署,容器云厂商,云原生,PaaS平台">
+  <meta name="author" content="Sealos">
+  
+  <!-- 移动设备元标签 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#1890ff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <!-- 社交媒体优化标签 -->
+  <meta property="og:title" content="Sealos - 企业级智能云操作系统">
+  <meta property="og:description" content="基于Kubernetes的云原生应用管理平台，高性能、低成本、易扩展">
+  <meta property="og:image" content="https://sealos.run/favicon.ico">
+  <meta property="og:url" content="https://sealos.run">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card 标签 -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sealos - 企业级智能云操作系统">
+  <meta name="twitter:description" content="基于Kubernetes的云原生应用管理平台，高性能、低成本、易扩展">
+  <meta name="twitter:image" content="https://sealos.run/favicon.ico">
+  
+  <!-- 资源与链接 -->
+  <link rel="canonical" href="https://sealos.run/" />
   <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/app_store/css/appstore-xq.css">
+  <link rel="apple-touch-icon" href="https://sealos.run/favicon.ico">
+  
+  <!-- 性能优化: 预加载关键资源 -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://sealos.run">
+  <link rel="preconnect" href="https://cloud.sealos.run">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://sealos.run">
+  <link rel="dns-prefetch" href="https://cloud.sealos.run">
+  
+  <!-- 本地字体定义 -->
+  <style>
+    /* 使用系统自带的苹方字体，不同字重版本 */
+    /* 由于PingFang SC是macOS和iOS系统字体，直接使用系统字体更合适 */
+    @font-face {
+      font-family: 'PingFang SC';
+      src: local('PingFang SC');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    
+    @font-face {
+      font-family: 'PingFang SC';
+      src: local('PingFang SC Medium'), local('PingFang-SC-Medium');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    
+    @font-face {
+      font-family: 'PingFang SC';
+      src: local('PingFang SC Semibold'), local('PingFang-SC-Semibold');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    
+    /* 以下是字体回退机制，确保在非Mac/iOS系统上也有合适字体 */
+    /* 微软雅黑的同等字重 */
+    @font-face {
+      font-family: 'PingFang SC Fallback';
+      src: local('Microsoft YaHei');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    
+    @font-face {
+      font-family: 'PingFang SC Fallback';
+      src: local('Microsoft YaHei Bold'), local('Microsoft YaHei');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    
+    @font-face {
+      font-family: 'PingFang SC Fallback';
+      src: local('Microsoft YaHei Bold'), local('Microsoft YaHei');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+  
+  <!-- 性能优化: 关键CSS内联 -->
+  <style>
+    /* 关键渲染路径CSS - 仅包含首屏渲染必须的样式 */
+    body {
+      margin: 0; 
+      padding: 0; 
+      font-family: "PingFang SC", "PingFang SC Fallback", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      scroll-behavior: smooth; /* 平滑滚动 */
+      font-weight: 400;
+      color: #333;
+    }
+    .hero-section {display: flex; padding: 40px 40px 120px 40px; flex-wrap: wrap;}
+    .hero-content {flex: 1; min-width: 300px;}
+    .hero-video {flex: 1; min-width: 300px;display: flex
+;
+    justify-content: flex-end;}
+    .hero-content h1 {
+      font-size: 36px; 
+      margin-bottom: 20px; 
+      opacity: 0; 
+      transform: translateY(20px); 
+      animation: fadeIn 0.8s ease forwards;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .btn-primary, .btn-secondary {
+      display: inline-block; 
+      padding: 10px 20px; 
+      margin: 10px; 
+      text-decoration: none; 
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+    .btn-primary {background-color: #1890ff; color: white;}
+    .btn-primary:hover {background-color: #0c7ad9; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(24, 144, 255, 0.2);}
+    .btn-secondary {border: 1px solid #1890ff; color: #1890ff;}
+    .btn-secondary:hover {background-color: rgba(24, 144, 255, 0.05); transform: translateY(-2px);}
+    
+    /* 避免布局偏移 */
+    .hero-video video, .hero-video img { max-width: 100%;}
+    .hero-stats {display: flex; margin: 20px 0;}
+    .stat span {
+      font-family: "PingFang SC", "PingFang SC Fallback", "Helvetica Neue", sans-serif;
+      font-weight: 500; /* 统计数字适度强调 */
+    }
+    .stat p {
+      font-weight: 400;
+    }
+    .feature {
+      padding: 15px; 
+      margin: 10px 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    }
+    .feature h3 {
+      font-weight: 500;
+    }
+    .feature p {
+      font-weight: 400;
+    }
+    .videos {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: #acb5bd;
+      font-weight: 500;
+      margin-left: 10px;
+    }
+    .videos img {
+      margin-right: 5px;
+    }
+  </style>
+  
+  <!-- 预加载主要CSS文件 - 告诉浏览器这些资源很重要但不阻塞渲染 -->
+  <link rel="preload" href="/app_store/css/appstore-xq.css" as="style">
+  <link rel="preload" href="./imgs/css/h5-Q3-c2.css" as="style">
+  <link rel="preload" href="./imgs/css/seo-optimized.css" as="style">
+  <link rel="preload" href="./imgs/css/font-weight-optimization.css" as="style">
+  
+  <!-- 非关键CSS延迟加载 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/app_store/css/appstore-xq.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./imgs/css/h5-Q3-c2.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./imgs/css/seo-optimized.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./imgs/css/font-weight-optimization.css" media="print" onload="this.media='all'">
+  
+  <!-- 为不支持JavaScript的浏览器提供回退方案 -->
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/app_store/css/appstore-xq.css">
+    <link rel="stylesheet" href="./imgs/css/h5-Q3-c2.css">
+    <link rel="stylesheet" href="./imgs/css/seo-optimized.css">
+    <link rel="stylesheet" href="./imgs/css/font-weight-optimization.css">
+  </noscript>
   <script src="/app_store/js/stars.js" defer></script>
-  <link rel="stylesheet" href="./imgs/css/h5-Q3-c2.css">
   <script type="text/javascript">
     (function (c, l, a, r, i, t, y) {
       c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
@@ -19,351 +209,684 @@
       y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "q8gnm02cz6");
   </script>
+  <style>
+    /* 通用响应式优化 */
+    img, video, iframe {
+      max-width: 100%;
+      height: auto;
+      display: block; /* 防止图片底部出现间隙 */
+    }
+    
+    /* 字体设置 */
+    body, p, h1, h2, h3, h4, h5, h6, span, a, li, button, input, textarea, select {
+      font-family: "PingFang SC", "PingFang SC Fallback", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    
+    /* 中文字体粗细调整 */
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 600; /* 统一品牌标题字重 */
+    }
+    
+    /* 中文字间距优化 */
+    p, li {
+      letter-spacing: 0.5px;
+      font-weight: 400; /* 确保正文文字保持一致字重 */
+    }
+    
+    /* 品牌文字特殊样式 */
+    .hero-content h1, .tab-h3, .contai h2, .specification h2, .container3 h2 {
+      font-family: "PingFang SC", "Helvetica Neue", "Hiragino Sans GB", sans-serif;
+      font-weight: 600; /* 品牌标题统一字重 */
+      letter-spacing: 1px;
+    }
+    
+    /* 突出显示的品牌数据 */
+    .stat span {
+      font-family: "PingFang SC", "PingFang SC Fallback", "Helvetica Neue", sans-serif;
+      font-weight: 500; /* 统计数字适度强调 */
+    }
+    
+    /* 延迟加载图片优化 */
+    img[loading="lazy"] {
+      transition: opacity 0.3s;
+    }
+    
+    /* 图片加载占位符样式 */
+    .img-placeholder {
+      background-color: #f5f5f5;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .img-placeholder::before {
+      content: '';
+      display: block;
+      padding-top: 56.25%; /* 16:9 宽高比的占位符 */
+    }
+    
+    /* 防止文本溢出 */
+    p, h1, h2, h3, span, a, li {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      -ms-word-break: break-all;
+      word-break: break-word;
+    }
+    
+    /* 触摸友好的交互元素 */
+    button, a, .tab-button, .btn-primary, .btn-secondary, .login-footer, .login-footer2 {
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+    
+    /* 增强移动端按钮点击区域 */
+    .hero-buttons a, .cta-button, .login-footer, .login-footer2 {
+      padding: 12px 20px;
+      margin: 5px;
+      transition: transform 0.1s, background-color 0.3s;letter-spacing: 2px;
+    }
+    
+    .hero-buttons a:active, .cta-button:active, .login-footer:active, .login-footer2:active {
+      transform: scale(0.98);
+    }
+    
+    /* 导航栏响应式 */
+    @media screen and (max-width: 768px) {
+      #navbar-container {
+        width: 100%;
+        padding: 10px;
+      }
+      
+      .navbar-links {
+        display: none;
+      }
+      
+      .navbar-links.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: white;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+      
+      .navbar-right {
+        margin-left: auto;
+      }
+    }
+    
+    @media screen and (max-width: 768px) {
+      .hero-section {
+        flex-direction: column;
+        padding: 20px;
+      }
+      .hero-content, .hero-video {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .hero-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .features-section {
+        flex-direction: column;
+        align-items: center;
+      }
+      .feature {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      .tab-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+      .tab-button {
+        flex: 0 0 45%;
+        margin: 0 0 10px 0;
+        font-size: 14px;
+        text-align: center;
+        padding: 12px 15px;
+      }
+      .tab-button img {
+        margin-right: 4px;
+        width: 20px;
+        height: auto;
+      }
+      .container {
+        flex-direction: column;
+      }
+      .column {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .vids7 {
+        flex-direction: column;
+      }
+      .vids7-left, .vids7-right {
+        width: 100%;
+        text-align: center;
+      }
+      .cloud-module1, .cloud-module2, .cloud-module3 {
+        height: auto;
+      }
+      
+      /* 优化Tab内容区域 */
+      .tab-pane {
+        padding: 15px;
+      }
+      .tab-content {
+        margin-top: 10px;
+      }
+      .tab-h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+      .hero-content h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .hero-stats {
+        margin: 10px 0;
+      }
+      .stat span {
+        font-size: 18px;
+      }
+      .stat p {
+        font-size: 12px;
+      }
+      .btn-primary, .btn-secondary {
+        padding: 8px 15px;
+        font-size: 14px;
+        margin: 5px;
+      }
+      .tab-h3 {
+        font-size: 18px;
+        padding: 10px 0;
+      }
+      .cloud-module h3 {
+        font-size: 14px;
+      }
+      .cloud-module p {
+        font-size: 12px;
+      }
+      .tag {
+        font-size: 10px;
+        padding: 2px 5px;
+      }
+      .card-title {
+        font-size: 16px;
+        font-weight: 500; /* 卡片标题字重 */
+      }
+      .card li {
+        font-size: 12px;
+        font-weight: 400; /* 列表项字重 */
+      }
+      .testimonial {
+        font-size: 14px;
+        padding: 15px;
+        font-weight: 400; /* 证言文本 */
+      }
+      .container3 h2, .specification h2, .contai h2 {
+        font-size: 18px;
+        font-weight: 600; /* 保持标题字重一致 */
+      }
+      .ddos ul li {
+        font-size: 10px;
+        padding: 8px 10px;
+        font-weight: 400; /* 列表项字重 */
+      }
+      .login-footer, .login-footer2 {
+        font-size: 12px;
+        padding: 8px 15px;
+        font-weight: 500; /* 按钮文字字重 */
+      }
+    }
+    
+    /* 优化文本可读性 */
+    @media screen and (max-width: 768px) {
+      body {
+        font-size: 16px;
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%; /* 防止iOS上自动调整字体大小 */
+      }
+      
+      /* 移动端苹方字体优化 */
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: 600; /* 移动端保持与桌面端一致 */
+      }
+      
+      h2 {
+        font-weight: 500; /* 二级标题标准字重 */
+      }
+      
+      h3 {
+        font-weight: 500; /* 三级标题更轻 */
+      }
+      
+      .hero-content h1, .tab-h3, .contai h2, .specification h2, .container3 h2 {
+        letter-spacing: 0.5px; /* 移动端减小字间距 */
+        font-weight: 600; /* 品牌标题统一字重 */
+      }
+      
+      p {
+        margin-bottom: 1em;
+        line-height: 1.6;
+        font-weight: 400;
+      }
+      
+      h1 {
+        font-size: 28px;
+        line-height: 1.3;
+        margin-bottom: 0.5em;
+      }
+      
+      h2 {
+        font-size: 24px;
+        line-height: 1.3;
+        margin-bottom: 0.5em;
+      }
+      
+      h3 {
+        font-size: 20px;
+        line-height: 1.3;
+        margin-bottom: 0.5em;
+      }
+      
+      .cloud-module p, .feature p, .card li {
+        line-height: 1.6;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      
+      /* 按钮文字移动端优化 */
+      .btn-primary, .btn-secondary, .cta-button, .login-footer, .login-footer2 {
+        font-weight: 500;
+      }
+      
+      /* 移动端统计数字 */
+      .stat span {
+        font-weight: 500;
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+      body {
+        font-size: 14px;
+      }
+      
+      h1 {
+        font-size: 24px;
+      }
+      
+      h2 {
+        font-size: 20px;
+      }
+      
+      h3 {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="nav">
+  <!-- 页面加载进度指示器 -->
+  <div class="scroll-indicator" id="scrollIndicator"></div>
+  
+  <header class="nav">
     <div class="nav1">
-      <div id="navbar-container" class="index-nav"> </div>
-      <div class="hero">
+      <nav id="navbar-container" class="index-nav"> </nav>
+      <section class="hero">
         <div class="hero-section">
           <div class="hero-content">
-            <h1>Sealos<p></p>
+            <h1>云操作系统<p></p>
               </p>
             </h1>
-            <p class="tips"><img src="./imgs/Frame20670.svg" title="sealos支持阿里云、腾讯云、谷歌云、火山引擎" alt="sealos支持阿里云、腾讯云、谷歌云、火山引擎"></p>
+            <p class="tips"><img src="./imgs/Frame20670.svg" title="sealos支持阿里云、腾讯云、谷歌云、火山引擎" alt="sealos支持阿里云、腾讯云、谷歌云、火山引擎" loading="lazy"></p>
             <div class="hero-stats">
-              <div class="stat"> <span>50w +</span>
+              <div class="stat"> <span>40w+</span>
                 <p>开发者</p>
               </div>
               <div class="stat-divider"></div>
-              <div class="stat"> <span>96w +</span>
+              <div class="stat"> <span>62w+</span>
                 <p>个人应用</p>
               </div>
               <div class="stat-divider"></div>
-              <div class="stat"> <span>1k +</span>
+              <div class="stat"> <span>2000+</span>
                 <p>企业应用</p>
               </div>
             </div>
             <div class="hero-buttons">
-              <a href="https://cloud.sealos.run/signin/" class="btn-primary">免费试用30天</a>
-              <a href="https://fael3z0zfze.feishu.cn/share/base/form/shrcn5oHHTKCf3VREMKOhEy6fmf" class="btn-secondary"
-                target="_blank">商务咨询</a>
-            <!--<a href="/imgs/sealos-web.mp4" class="videos" target="_blank"><img src="/imgs/demo.svg">Demo</a>-->
+              <a href="https://cloud.sealos.run/signin/" class="btn-primary">领取¥10元赠金</a>
+              <!--<a href="https://fael3z0zfze.feishu.cn/share/base/form/shrcn5oHHTKCf3VREMKOhEy6fmf" class="btn-secondary"
+                target="_blank" rel="noopener">商务咨询</a>-->
+            <a href="/imgs/sealos-web.mp4" class="videos" target="_blank"><img src="/imgs/demo.svg">Demo</a>
             </div>
           </div>
           <div class="hero-video">
-            <video autoplay loop muted playsinline controls poster="imgs/video-poster.jpg">
+            <!--<img src="/imgs/20250108-145632.png">-->
+            <video autoplay loop muted playsinline controls poster="imgs/video-poster.jpg" loading="lazy">
               <source src="imgs/419917700-2fc03676-3310-4f81-8f1c-dd1ab225dde0.mp4" type="video/mp4">
               您的浏览器不支持视频播放。请<a href="imgs/419917700-2fc03676-3310-4f81-8f1c-dd1ab225dde0.mp4" download>下载视频</a>
             </video>
           </div>
         </div>
         <div class="features-section">
-          <div class="feature iconh1">
-            <a href="https://sealos.run/docs/guides/app-launchpad/create-app" target="_blank">
+          <article class="feature iconh1">
+            <a href="https://sealos.run/docs/guides/app-launchpad/create-app" target="_blank" rel="noopener">
               <h3>开箱即用</h3>
             </a>
             <p>3 秒钟注册，1 分钟完成 Docker 部署</p>
-          </div>
-          <div class="feature iconh2"> <a href="https://sealos.run/price/">
+          </article>
+          <article class="feature iconh2"> <a href="https://sealos.run/price/" rel="noopener">
               <h3>按量扣费</h3>
             </a>
             <p>仅需CPU、内存等资源付费，随开随用</p>
-          </div>
-          <div class="feature iconh3"> <a href="https://template.cloud.sealos.run/" target="_blank">
+          </article>
+          <article class="feature iconh3"> <a href="https://template.cloud.sealos.run/" target="_blank" rel="noopener">
               <h3>应用商店</h3>
             </a>
             <p>工具、组件一键自动部署安装</p>
-          </div>
+          </article>
         </div>
-      </div>
+      </section>
     </div>
-  </div>
+  </header>
   </div>
 
-  <div class="tab-section-tions">
-    <h3 class="tab-h3">企业级智能云操作系统</h3>
-    <div class="tab-section">
-      <div class="tab-buttons">
-        <button class="tab-button tabico1 active" data-tab="tab1"><img src="/imgs/tabico1-ac.png"  title="sealos应用ico" alt="sealos应用ico">应用管理</button>
-        <!--<a href="/devbox/" class="tab-button"><img src="/imgs/tabico4-ac.png">Devbox</a>-->
-        <button class="tab-button tabico2" data-tab="tab2"><img src="/imgs/tabico2-ac.png" title="sealos数据库ico" alt="sealos数据库ico">数据库</button>
-        <button class="tab-button tabico3" data-tab="tab3"><img src="/imgs/tabico3-ac.png" title="sealos对象存储ico" alt="sealos对象存储ico">对象存储</button>
-        <button class="tab-button tabico4" data-tab="tab4"><img src="/imgs/tabico4-ac.png" title="sealos laf ico" alt="sealos laf ico">云开发Laf</button>
-        <!--<a href="/aiproxy/" class="tab-button"><img src="/imgs/tabico4-ac.png">AI Proxy</a>-->
-      </div>
-      <div class="tab-content">
-        <div class="tab-pane active" id="tab1">
-          <div class="container">
-            <div class="column">
-              <div class="cloud-module1">
-                <h2>云原生组件</h2>
-                <p>基于原生 K8s 架构，集成丰富云组件</p>
-              </div>
-              <div class="column-kj">
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">应用管理 🔥</h3>
-                  <p>自动化构建、测试与部署流程</p>
-                  <div class="tags"> <span class="tag">App Launchpad</span> <span class="tag">Terminal</span> </div>
+  <main>
+    <section class="tab-section-tions">
+      <h2 class="tab-h3">企业级智能云操作系统</h2>
+      <div class="tab-section">
+        <div class="tab-buttons" role="tablist" aria-label="产品特性">
+          <button class="tab-button tabico1 active" data-tab="tab1" role="tab" aria-selected="true" aria-controls="tab1"><img src="/imgs/tabico1-ac.png"  title="sealos应用ico" alt="sealos应用ico">应用管理</button>
+          <!--<a href="/devbox/" class="tab-button"><img src="/imgs/tabico4-ac.png">Devbox</a>-->
+          <button class="tab-button tabico2" data-tab="tab2" role="tab" aria-selected="false" aria-controls="tab2"><img src="/imgs/tabico2-ac.png" title="sealos数据库ico" alt="sealos数据库ico">数据库</button>
+          <button class="tab-button tabico3" data-tab="tab3" role="tab" aria-selected="false" aria-controls="tab3"><img src="/imgs/tabico3-ac.png" title="sealos对象存储ico" alt="sealos对象存储ico">对象存储</button>
+          <button class="tab-button tabico4" data-tab="tab4" role="tab" aria-selected="false" aria-controls="tab4"><img src="/imgs/tabico4-ac.png" title="sealos laf ico" alt="sealos laf ico">云开发Laf</button>
+          <!--<a href="/aiproxy/" class="tab-button"><img src="/imgs/tabico4-ac.png">AI Proxy</a>-->
+        </div>
+        <div class="tab-content">
+          <div class="tab-pane active" id="tab1" role="tabpanel" aria-labelledby="tab1">
+            <div class="container">
+              <div class="column">
+                <div class="cloud-module1">
+                  <h2>云原生组件</h2>
+                  <p>基于原生 K8s 架构，集成丰富云组件</p>
                 </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">智能运维</h3>
-                  <p>一键式应用交付</p>
-                  <div class="tags"> <span class="tag">整体打包</span> <span class="tag">一键交付</span> </div>
-                </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">公网访问 🔥</h3>
-                  <p>自动配置公网访问与 HTTPS 证书</p>
-                  <div class="tags"> <span class="tag">自定义域名</span> <span class="tag">自动配置 https</span> </div>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="cloud-module2">
-                <h2>便利部署</h2>
-                <p>模板化部署，自动化配置</p>
-              </div>
-              <div class="column-kj">
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">容器镜像</h3>
-                  <p>全面兼容 Docker 生态系统</p>
-                  <div class="tags"> <span class="tag">镜像仓库</span> <span class="tag">集群镜像</span> <span
-                      class="tag ta1023">私有镜像</span> </div>
-                </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">资源管理</h3>
-                  <p>自定义 CPU 和内存，弹性资源调整</p>
-                  <div class="tags"> <span class="tag">弹性伸缩</span> <span class="tag">负载均衡</span> <span
-                      class="tag ta1024">缓存策略</span> </div>
-                </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">内置终端</h3>
-                  <p>内置容器终端，便捷运维管理</p>
-                  <div class="tags"> <span class="tag">命令行参数</span> <span class="tag">批量操作</span> </div>
+                <div class="column-kj">
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="Sealos应用管理功能图标">应用管理 🔥</h3>
+                    <p>自动化构建、测试与部署流程</p>
+                    <div class="tags"> <span class="tag">App Launchpad</span> <span class="tag">Terminal</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="Sealos智能运维功能图标">智能运维</h3>
+                    <p>一键式应用交付</p>
+                    <div class="tags"> <span class="tag">整体打包</span> <span class="tag">一键交付</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="Sealos公网访问功能图标">公网访问 🔥</h3>
+                    <p>自动配置公网访问与 HTTPS 证书</p>
+                    <div class="tags"> <span class="tag">自定义域名</span> <span class="tag">自动配置 https</span> </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="column">
-              <div class="cloud-module3">
-                <h2>超强性能</h2>
-                <p>应用级和租户级网络隔离能力</p>
+              <div class="column">
+                <div class="cloud-module2">
+                  <h2>便利部署</h2>
+                  <p>模板化部署，自动化配置</p>
+                </div>
+                <div class="column-kj">
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">容器镜像</h3>
+                    <p>全面兼容 Docker 生态系统</p>
+                    <div class="tags"> <span class="tag">镜像仓库</span> <span class="tag">集群镜像</span> <span
+                        class="tag ta1023">私有镜像</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">资源管理</h3>
+                    <p>自定义 CPU 和内存，弹性资源调整</p>
+                    <div class="tags"> <span class="tag">弹性伸缩</span> <span class="tag">负载均衡</span> <span
+                        class="tag ta1024">缓存策略</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">内置终端</h3>
+                    <p>内置容器终端，便捷运维管理</p>
+                    <div class="tags"> <span class="tag">命令行参数</span> <span class="tag">批量操作</span> </div>
+                  </div>
+                </div>
               </div>
-              <div class="column-kj">
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">开放兼容</h3>
-                  <p>兼容Java 、Python 、Node.js等语言</p>
-                  <div class="tags"> <span class="tag">GitOps</span> </div>
+              <div class="column">
+                <div class="cloud-module3">
+                  <h2>超强性能</h2>
+                  <p>应用级和租户级网络隔离能力</p>
                 </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">极致性能 🔥</h3>
-                  <p>自研负载均衡器，支持千万级并发处理</p>
-                  <div class="tags"> <span class="tag">超高性能</span> <span class="tag ta1023">Higress Envoy 网关</span> </div>
-                </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">数据安全</h3>
-                  <p>应用级网络隔离， 租户级资源隔离</p>
-                  <div class="tags"> <span class="tag">计算安全隔离</span> <span class="tag">存储隔离</span> </div>
+                <div class="column-kj">
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">开放兼容</h3>
+                    <p>兼容Java 、Python 、Node.js等语言</p>
+                    <div class="tags"> <span class="tag">GitOps</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">极致性能 🔥</h3>
+                    <p>自研负载均衡器，支持千万级并发处理</p>
+                    <div class="tags"> <span class="tag">超高性能</span> <span class="tag ta1023">Higress Envoy 网关</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">数据安全</h3>
+                    <p>应用级网络隔离， 租户级资源隔离</p>
+                    <div class="tags"> <span class="tag">计算安全隔离</span> <span class="tag">存储隔离</span> </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="tab-pane" id="tab2">
-          <div class="container">
-            <div class="column">
-              <div class="cloud-module1">
-                <h2>高可用</h2>
-                <p>分布式存储，支持快速扩展与无缝迁移</p>
-              </div>
-              <div class="column-kj">
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">100% 兼容</h3>
-                  <p>全面兼容mysqlredis/pgsql等生态</p>
-                  <div class="tags"> <span class="tag">自定义YAML</span> </div>
+          <div class="tab-pane" id="tab2" role="tabpanel" aria-labelledby="tab2">
+            <div class="container">
+              <div class="column">
+                <div class="cloud-module1">
+                  <h2>高可用</h2>
+                  <p>分布式存储，支持快速扩展与无缝迁移</p>
                 </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">快速部署🔥</h3>
-                  <p>自动安装部署，无须手动构建架构</p>
-                  <div class="tags"> <span class="tag">集群部署</span> <span class="tag">终端连接</span> </div>
-                </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">超性价比🔥</h3>
-                  <p>成本降低70%，开源免费</p>
-                  <div class="tags"> <span class="tag">0.4元/U</span> <span class="tag">0.2元/G</span> </div>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="cloud-module2">
-                <h2>高并发性能</h2>
-                <p>以30%的成本提供最高6倍性能提升</p>
-              </div>
-              <div class="column-kj">
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">容器镜像</h3>
-                  <p>超百万级 QPS 的高吞吐</p>
-                  <div class="tags"> <span class="tag">高并发</span> <span class="tag">高性能</span> </div>
-                </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">性能高优</h3>
-                  <p>内核性能更优，支持多个只读副本</p>
-                  <div class="tags"> <span class="tag">读写分离</span> </div>
-                </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">弹性扩展</h3>
-                  <p>自动升降配，秒级完成扩容</p>
-                  <div class="tags"> <span class="tag">弹性存储</span> </div>
+                <div class="column-kj">
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">100% 兼容</h3>
+                    <p>全面兼容mysqlredis/pgsql等生态</p>
+                    <div class="tags"> <span class="tag">自定义YAML</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">快速部署🔥</h3>
+                    <p>自动安装部署，无须手动构建架构</p>
+                    <div class="tags"> <span class="tag">集群部署</span> <span class="tag">终端连接</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">超性价比🔥</h3>
+                    <p>成本降低70%，开源免费</p>
+                    <div class="tags"> <span class="tag">0.4元/U</span> <span class="tag">0.2元/G</span> </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="column">
-              <div class="cloud-module3">
-                <h2>高安全</h2>
-                <p>全方位安全加固，企业级安全性和可靠性</p>
+              <div class="column">
+                <div class="cloud-module2">
+                  <h2>高并发性能</h2>
+                  <p>以30%的成本提供最高6倍性能提升</p>
+                </div>
+                <div class="column-kj">
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">容器镜像</h3>
+                    <p>超百万级 QPS 的高吞吐</p>
+                    <div class="tags"> <span class="tag">高并发</span> <span class="tag">高性能</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">性能高优</h3>
+                    <p>内核性能更优，支持多个只读副本</p>
+                    <div class="tags"> <span class="tag">读写分离</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">弹性扩展</h3>
+                    <p>自动升降配，秒级完成扩容</p>
+                    <div class="tags"> <span class="tag">弹性存储</span> </div>
+                  </div>
+                </div>
               </div>
-              <div class="column-kj">
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">网络安全</h3>
-                  <p>自动维护多个副本，可靠性达99.9999%。</p>
-                  <div class="tags"> <span class="tag">安全组</span> <span class="tag ta1023">VPC 网络隔离</span> <span
-                      class="tag">SSL连接</span> </div>
+              <div class="column">
+                <div class="cloud-module3">
+                  <h2>高安全</h2>
+                  <p>全方位安全加固，企业级安全性和可靠性</p>
                 </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">数据安全🔥</h3>
-                  <p>定期自动备份，备份文件自动化管理</p>
-                  <div class="tags"> <span class="tag">资源监控</span> <span class="tag">状态监控</span> <span
-                      class="tag ta1023">性能监控</span> </div>
-                </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">容灾安全</h3>
-                  <p>主备双机高可用，节点故障秒级无感切换</p>
-                  <div class="tags"> <span class="tag">故障自愈</span> <span class="tag">秒级备份回档</span> </div>
+                <div class="column-kj">
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">网络安全</h3>
+                    <p>自动维护多个副本，可靠性达99.9999%。</p>
+                    <div class="tags"> <span class="tag">安全组</span> <span class="tag ta1023">VPC 网络隔离</span> <span
+                        class="tag">SSL连接</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">数据安全🔥</h3>
+                    <p>定期自动备份，备份文件自动化管理</p>
+                    <div class="tags"> <span class="tag">资源监控</span> <span class="tag">状态监控</span> <span
+                        class="tag ta1023">性能监控</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">容灾安全</h3>
+                    <p>主备双机高可用，节点故障秒级无感切换</p>
+                    <div class="tags"> <span class="tag">故障自愈</span> <span class="tag">秒级备份回档</span> </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="tab-pane" id="tab3">
-          <div class="container">
-            <div class="column">
-              <div class="cloud-module1">
-                <h2>对象存储</h2>
-                <p>支持 TB 到 PB 级数据迁移上云</p>
+          <div class="tab-pane" id="tab3" role="tabpanel" aria-labelledby="tab3">
+            <div class="container">
+              <div class="column">
+                <div class="cloud-module1">
+                  <h2>对象存储</h2>
+                  <p>支持 TB 到 PB 级数据迁移上云</p>
+                </div>
+                <div class="column-kj">
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">数据迁移</h3>
+                    <p>提供各语言 SDK，实现无缝接入</p>
+                    <div class="tags"> <span class="tag">平滑迁移</span> <span class="tag">S3 兼容</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">数据加密</h3>
+                    <p>保障数据安全可靠</p>
+                    <div class="tags"> <span class="tag">存储加密</span> <span class="tag">传输加密</span> <span
+                        class="tag ta1023">完整性校验</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">容灾备份</h3>
+                    <p>多冗余备份和异地容灾</p>
+                    <div class="tags"> <span class="tag">跨地域容灾备份</span> <span class="tag ta1023">跨账号数据共享</span> </div>
+                  </div>
+                </div>
               </div>
-              <div class="column-kj">
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">数据迁移</h3>
-                  <p>提供各语言 SDK，实现无缝接入</p>
-                  <div class="tags"> <span class="tag">平滑迁移</span> <span class="tag">S3 兼容</span> </div>
+              <div class="column">
+                <div class="cloud-module2">
+                  <h2>文件存储 sealfs</h2>
+                  <p>高性能、高可靠性分布式存储</p>
                 </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">数据加密</h3>
-                  <p>保障数据安全可靠</p>
-                  <div class="tags"> <span class="tag">存储加密</span> <span class="tag">传输加密</span> <span
-                      class="tag ta1023">完整性校验</span> </div>
-                </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">容灾备份</h3>
-                  <p>多冗余备份和异地容灾</p>
-                  <div class="tags"> <span class="tag">跨地域容灾备份</span> <span class="tag ta1023">跨账号数据共享</span> </div>
+                <div class="column-kj">
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">极致性能🔥</h3>
+                    <p>显著减少I/O延迟，近乎裸机的速度体验</p>
+                    <div class="tags"> <span class="tag">文件存储</span> <span class="tag">元数据存储</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">可扩展性</h3>
+                    <p>适应弹性伸缩，轻松应对数据量爆发性增长。</p>
+                    <div class="tags"> <span class="tag">分布式架构</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">简化运维</h3>
+                    <p>去中心化管理，减少单点故障的风险。</p>
+                    <div class="tags"> <span class="tag">灵活定制</span> </div>
+                  </div>
                 </div>
               </div>
+              <div class="column clolumn"></div>
             </div>
-            <div class="column">
-              <div class="cloud-module2">
-                <h2>文件存储 sealfs</h2>
-                <p>高性能、高可靠性分布式存储</p>
-              </div>
-              <div class="column-kj">
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">极致性能🔥</h3>
-                  <p>显著减少I/O延迟，近乎裸机的速度体验</p>
-                  <div class="tags"> <span class="tag">文件存储</span> <span class="tag">元数据存储</span> </div>
-                </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">可扩展性</h3>
-                  <p>适应弹性伸缩，轻松应对数据量爆发性增长。</p>
-                  <div class="tags"> <span class="tag">分布式架构</span> </div>
-                </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">简化运维</h3>
-                  <p>去中心化管理，减少单点故障的风险。</p>
-                  <div class="tags"> <span class="tag">灵活定制</span> </div>
-                </div>
-              </div>
-            </div>
-            <div class="column clolumn"></div>
           </div>
-        </div>
-        <div class="tab-pane" id="tab4">
-          <div class="container">
-            <div class="column">
-              <div class="cloud-module1">
-                <h2>开箱即用</h2>
-                <p>内置开发环境，无需配置一键使用</p>
-              </div>
-              <div class="column-kj">
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">一站式开发</h3>
-                  <p>无需配置服务器，一分钟上线</p>
-                  <div class="tags"> <span class="tag">数据库内置</span> <span class="tag">对象存储内置</span> </div>
+          <div class="tab-pane" id="tab4" role="tabpanel" aria-labelledby="tab4">
+            <div class="container">
+              <div class="column">
+                <div class="cloud-module1">
+                  <h2>开箱即用</h2>
+                  <p>内置开发环境，无需配置一键使用</p>
                 </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">开源开放</h3>
-                  <p>随时拥有一个属于自己的云开发平台</p>
-                  <div class="tags"> <span class="tag">Apache License 2.0</span> </div>
-                </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">高性价比🔥</h3>
-                  <p>百万次调用，最低仅需 0.01 元</p>
-                  <div class="tags"> <span class="tag">市场最低</span> </div>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="cloud-module2">
-                <h2>IDE 集成</h2>
-                <p>开发-测试-部署，完整闭环的开发体验</p>
-              </div>
-              <div class="column-kj">
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">在线编程🔥</h3>
-                  <p>基于 Web 端的代码编辑器</p>
-                  <div class="tags"> <span class="tag">类型提示</span> <span class="tag ta1023">在线调试</span> <span
-                      class="tag">版本回滚</span> </div>
-                </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">研发提效</h3>
-                  <p>代码毫秒级发布上线，没有冷启时间</p>
-                  <div class="tags"> <span class="tag">快速响应</span> </div>
-                </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">云存储</h3>
-                  <p>提供专业的文件对象存储服务</p>
-                  <div class="tags"> <span class="tag">兼容 S3</span> </div>
+                <div class="column-kj">
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">一站式开发</h3>
+                    <p>无需配置服务器，一分钟上线</p>
+                    <div class="tags"> <span class="tag">数据库内置</span> <span class="tag">对象存储内置</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">开源开放</h3>
+                    <p>随时拥有一个属于自己的云开发平台</p>
+                    <div class="tags"> <span class="tag">Apache License 2.0</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">高性价比🔥</h3>
+                    <p>百万次调用，最低仅需 0.01 元</p>
+                    <div class="tags"> <span class="tag">市场最低</span> </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="column">
-              <div class="cloud-module3">
-                <h2>智能编码</h2>
-                <p>专注业务本身，节省开发时间</p>
+              <div class="column">
+                <div class="cloud-module2">
+                  <h2>IDE 集成</h2>
+                  <p>开发-测试-部署，完整闭环的开发体验</p>
+                </div>
+                <div class="column-kj">
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">在线编程🔥</h3>
+                    <p>基于 Web 端的代码编辑器</p>
+                    <div class="tags"> <span class="tag">类型提示</span> <span class="tag ta1023">在线调试</span> <span
+                        class="tag">版本回滚</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">研发提效</h3>
+                    <p>代码毫秒级发布上线，没有冷启时间</p>
+                    <div class="tags"> <span class="tag">快速响应</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">云存储</h3>
+                    <p>提供专业的文件对象存储服务</p>
+                    <div class="tags"> <span class="tag">兼容 S3</span> </div>
+                  </div>
+                </div>
               </div>
-              <div class="column-kj">
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">AI 编码</h3>
-                  <p>优化代码，包括重构、优化、修改逻辑</p>
-                  <div class="tags"> <span class="tag">代码生成</span> </div>
+              <div class="column">
+                <div class="cloud-module3">
+                  <h2>智能编码</h2>
+                  <p>专注业务本身，节省开发时间</p>
                 </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">AI 修复</h3>
-                  <p>智能优化bug逻辑，自动修复验收</p>
-                  <div class="tags"> <span class="tag">完善逻辑</span> <span class="tag">内测版本</span> </div>
-                </div>
-                <div class="cloud-module">
-                  <h3><img src="./imgs/duihaoico.svg" alt="ico">函数模板</h3>
-                  <p>提供多种不同的类型的函数进行调用</p>
-                  <div class="tags"> <span class="tag">快速加载</span> </div>
+                <div class="column-kj">
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">AI 编码</h3>
+                    <p>优化代码，包括重构、优化、修改逻辑</p>
+                    <div class="tags"> <span class="tag">代码生成</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">AI 修复</h3>
+                    <p>智能优化bug逻辑，自动修复验收</p>
+                    <div class="tags"> <span class="tag">完善逻辑</span> <span class="tag">内测版本</span> </div>
+                  </div>
+                  <div class="cloud-module">
+                    <h3><img src="./imgs/duihaoico.svg" alt="ico">函数模板</h3>
+                    <p>提供多种不同的类型的函数进行调用</p>
+                    <div class="tags"> <span class="tag">快速加载</span> </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -371,9 +894,6 @@
         </div>
       </div>
     </div>
-  </div>
-  </div>
-  </div>
   </div>
   <div class="cons">
     <div class="contai code-ys">
@@ -452,7 +972,7 @@
     <div class="container3">
       <h2>Sealos 的能力，远不止于此</h2>
       <p>不断进化的功能，等你来体验</p>
-      <img src="./imgs/Frame 20765.svg">
+      <img src="./imgs/Frame 20765.svg" loading="lazy">
     </div>
   </div>
   <div class="fooddos">
@@ -480,16 +1000,225 @@
       <h3>开始新建</h3>
       <p>属于自己的企业级应用</p>
       <div class="login-footer1"><a href="https://cloud.sealos.run/" class="login-footer">开始使用 Sealos</a>
-        <a href="https://fael3z0zfze.feishu.cn/share/base/form/shrcn5oHHTKCf3VREMKOhEy6fmf" target="_blank"
+        <a href="https://fael3z0zfze.feishu.cn/share/base/form/shrcn5oHHTKCf3VREMKOhEy6fmf" target="_blank" rel="noopener"
           class="login-footer2">获取解决方案</a>
       </div>
     </div>
     <div class="vids7-right">
-      <img src="./imgs/image33.svg">
+      <img src="./imgs/image33.svg" loading="lazy" alt="Sealos企业级应用">
     </div>
   </div>
-  <div class="h5footer" id="footer">
-  </div>
+  </main>
+  
+  <footer class="h5footer" id="footer">
+  </footer>
+  
+  <!-- 结构化数据 - 提高搜索引擎对网站信息的理解 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Sealos",
+    "applicationCategory": "CloudPlatform",
+    "operatingSystem": "All",
+    "description": "企业级智能云操作系统,基于Kubernetes云内核,提供应用为中心的容器云服务",
+    "offers": {
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "CNY"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "1000"
+    },
+    "potentialAction": {
+      "@type": "DownloadAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://cloud.sealos.run/signin/"
+      }
+    }
+  }
+  </script>
+  
+  <!-- 企业信息结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sealos",
+    "url": "https://sealos.run",
+    "logo": "https://sealos.run/favicon.ico",
+    "description": "企业级智能云操作系统开发商",
+    "sameAs": [
+      "https://github.com/labring/sealos"
+    ]
+  }
+  </script>
+  
+  <!-- 交互增强脚本 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 统计数字动画效果
+      function animateStats() {
+        const stats = document.querySelectorAll('.stat span');
+        stats.forEach(stat => {
+          const value = stat.innerText;
+          const numValue = parseFloat(value.replace(/[^\d.-]/g, ''));
+          const unit = value.replace(/[\d.-]/g, '').trim();
+          
+          let startValue = 0;
+          const duration = 1500;
+          const startTime = performance.now();
+          
+          function updateValue(currentTime) {
+            const elapsedTime = currentTime - startTime;
+            const progress = Math.min(elapsedTime / duration, 1);
+            // 使用缓动函数
+            const easeOutQuad = progress * (2 - progress);
+            const current = Math.floor(easeOutQuad * numValue);
+            
+            stat.innerText = current + ' ' + unit;
+            
+            if (progress < 1) {
+              requestAnimationFrame(updateValue);
+            } else {
+              stat.innerText = value; // 确保最终显示正确的值
+            }
+          }
+          
+          requestAnimationFrame(updateValue);
+        });
+      }
+      
+      // 滚动动画
+      function initScrollAnimations() {
+        const elements = document.querySelectorAll('.cloud-module, .feature, .card, .testimonial');
+        
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animated');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+        
+        elements.forEach(el => {
+          observer.observe(el);
+          // 添加初始样式
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(20px)';
+          el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+        
+        // 添加动画样式
+        const style = document.createElement('style');
+        style.textContent = `
+          .animated {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+          }
+        `;
+        document.head.appendChild(style);
+      }
+      
+      // 平滑锚点滚动
+      function initSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          });
+        });
+      }
+      
+      // 滚动指示器
+      function initScrollIndicator() {
+        const scrollIndicator = document.getElementById('scrollIndicator');
+        if (!scrollIndicator) return;
+        
+        window.addEventListener('scroll', function() {
+          const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          const scrolled = (winScroll / height) * 100;
+          scrollIndicator.style.width = scrolled + '%';
+        });
+      }
+      
+      // 触摸反馈
+      function addTouchFeedback() {
+        const buttons = document.querySelectorAll('.btn-primary, .btn-secondary, .tab-button, .cta-button, .login-footer, .login-footer2');
+        
+        buttons.forEach(button => {
+          button.classList.add('touch-feedback');
+        });
+      }
+      
+      // 初始化所有增强效果
+      setTimeout(() => {
+        animateStats();
+        initScrollAnimations();
+        initSmoothScroll();
+        initScrollIndicator();
+        addTouchFeedback();
+      }, 100);
+      
+      // Tab交互优化
+      const tabButtons = document.querySelectorAll('.tab-button');
+      tabButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          // 添加涟漪效果
+          const ripple = document.createElement('span');
+          ripple.classList.add('ripple');
+          this.appendChild(ripple);
+          
+          const rect = this.getBoundingClientRect();
+          const size = Math.max(rect.width, rect.height) * 2;
+          
+          ripple.style.width = size + 'px';
+          ripple.style.height = size + 'px';
+          ripple.style.left = (e.clientX - rect.left - size/2) + 'px';
+          ripple.style.top = (e.clientY - rect.top - size/2) + 'px';
+          
+          setTimeout(() => {
+            ripple.remove();
+          }, 600);
+          
+          // 处理Tab切换动画
+          const tabId = this.getAttribute('data-tab');
+          document.querySelectorAll('.tab-pane').forEach(pane => {
+            if (pane.id === tabId) {
+              // 给新的面板添加进入动画
+              pane.style.opacity = '0';
+              pane.style.transform = 'translateY(10px)';
+              
+              // 在短暂延迟后显示新面板
+              setTimeout(() => {
+                pane.style.opacity = '1';
+                pane.style.transform = 'translateY(0)';
+              }, 50);
+            }
+          });
+        });
+      });
+    });
+  </script>
+  
+  <!-- 页面跟踪脚本 -->
   <script>
     var _hmt = _hmt || [];
     (function () {
@@ -511,8 +1240,141 @@
   <script src="./imgs/js/h5_Q3_C1.js" defer></script>
   <script src="/app_store/js/appstor.js" defer></script>
   <script src="/js/sem.js" defer></script>
+  <script src="./imgs/js/font-weight-animation.js" defer></script>
   <script src="/app_store/js/navbar.js"></script>
   <script src="/app_store/js/foooter.js"></script>
+  
+  <!-- 移动导航菜单 -->
+  <script>
+    // 性能优化：使用事件委托减少事件监听器数量
+    document.addEventListener('DOMContentLoaded', function() {
+      // 导航菜单优化
+      const navbar = document.querySelector('#navbar-container');
+      if (navbar) {
+        const menuButton = document.createElement('button');
+        menuButton.className = 'menu-toggle';
+        menuButton.innerHTML = '&#9776;'; // 汉堡图标
+        menuButton.style.display = 'none';
+        menuButton.style.background = 'none';
+        menuButton.style.border = 'none';
+        menuButton.style.fontSize = '24px';
+        menuButton.style.cursor = 'pointer';
+        menuButton.style.padding = '5px';
+        
+        // 在小屏幕上显示菜单按钮
+        const mediaQuery = window.matchMedia('(max-width: 768px)');
+        function handleScreenChange(e) {
+          if (e.matches) {
+            menuButton.style.display = 'block';
+          } else {
+            menuButton.style.display = 'none';
+            const navLinks = document.querySelector('.navbar-links');
+            if (navLinks) {
+              navLinks.classList.remove('active');
+            }
+          }
+        }
+        
+        // 使用更现代的事件监听方法
+        try {
+          // 新版API
+          mediaQuery.addEventListener('change', handleScreenChange);
+        } catch (e) {
+          // 兼容旧版浏览器
+          mediaQuery.addListener(handleScreenChange);
+        }
+        
+        handleScreenChange(mediaQuery);
+        
+        // 菜单点击事件
+        menuButton.addEventListener('click', function() {
+          const navLinks = document.querySelector('.navbar-links');
+          if (navLinks) {
+            navLinks.classList.toggle('active');
+          }
+        });
+        
+        // 将按钮添加到导航栏
+        if (navbar.firstChild) {
+          navbar.insertBefore(menuButton, navbar.firstChild);
+        } else {
+          navbar.appendChild(menuButton);
+        }
+      }
+      
+      // Tab切换优化：使用事件委托
+      const tabSection = document.querySelector('.tab-section');
+      if (tabSection) {
+        tabSection.addEventListener('click', function(e) {
+          if (e.target.classList.contains('tab-button') || e.target.parentElement.classList.contains('tab-button')) {
+            const btn = e.target.classList.contains('tab-button') ? e.target : e.target.parentElement;
+            const tabId = btn.dataset.tab;
+            
+            // 移除所有活动状态
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+            
+            // 设置当前活动状态
+            btn.classList.add('active');
+            document.getElementById(tabId)?.classList.add('active');
+          }
+        });
+      }
+      
+      // 图片懒加载优化
+      if ('loading' in HTMLImageElement.prototype) {
+        // 浏览器原生支持懒加载
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        // 原生支持不需要额外处理
+      } else {
+        // 回退实现
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        const options = {
+          rootMargin: '0px 0px 200px 0px'
+        };
+        
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              const src = img.getAttribute('data-src');
+              if (src) {
+                img.src = src;
+              }
+              img.removeAttribute('loading');
+              observer.unobserve(img);
+            }
+          });
+        }, options);
+        
+        images.forEach(img => {
+          if (img.src) {
+            img.setAttribute('data-src', img.src);
+            img.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3C/svg%3E';
+            imageObserver.observe(img);
+          }
+        });
+      }
+    });
+    
+    // 性能优化：减少主线程工作量
+    window.addEventListener('load', function() {
+      // 延迟执行非关键操作
+      setTimeout(function() {
+        // 执行低优先级任务
+        if (window.requestIdleCallback) {
+          requestIdleCallback(function() {
+            // 分析与统计代码
+            // 非必要第三方脚本加载
+          });
+        } else {
+          setTimeout(function() {
+            // 降级处理
+          }, 1);
+        }
+      }, 1000);
+    });
+  </script>
 </body>
 
 </html>

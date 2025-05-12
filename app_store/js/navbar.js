@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <div class="actions">
            <a href="https://github.com/labring/sealos" target="_blank"> <div class="headico"> <img src="../../../app_store/img/github.svg" alt="GitHub Icon">
-                <div id="github-stars">Loading stars...</div>
+                <div id="github-stars" class="gitico">Loading stars...</div>
             </div></a>
             <a href="https://cloud.sealos.run/signin/" target="_blank" class="login-link">
                 <button class="btn"> 登<P>录</P> </button>

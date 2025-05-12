@@ -318,7 +318,7 @@ img {
 }
 
 .logo img {
-  margin-right: 12px;
+  margin-right: 10px;
   border-radius: 6px;
   background: linear-gradient(180deg, #FAFCFF 0%, #F2F7FC 100%);
   box-shadow: 0px 4px 4px 0px rgba(191, 202, 219, 0.50);
@@ -337,8 +337,11 @@ img {
 }
 .nav-links li span {
   letter-spacing: 0.1px;
+  font-weight: bold;
 }
-
+.gitico{
+  width: 70px;
+}
 .nav-links {
   display: flex;
   align-items: center;
@@ -392,7 +395,7 @@ img {
   align-items: center;
   border-radius: 6px;
   background: var(--light-general-surface-opacity-005, rgba(17, 24, 36, 0.05));
-  margin-left: 40px;
+  margin-left: 10px;
   box-shadow: 0px 4px 6px rgb(87 87 87 / 10%);
 }
 
