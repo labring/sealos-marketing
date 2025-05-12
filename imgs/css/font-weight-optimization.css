@@ -1,0 +1,123 @@
+/* 
+ * 字体粗细统一优化
+ * 为Sealos网站提供统一且平衡的字体粗细设置
+ */
+
+/* 基础字体设置 */
+body, p, span, li, a, button, input, textarea, select {
+  font-family: "PingFang SC", "PingFang SC Fallback", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-weight: 400; /* 正文默认字重 */
+  color: #333;
+}
+
+/* 标题层级字重优化 - 保持一致性 */
+h1 {
+  font-weight: 600; /* 页面主标题字重 */
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-weight: 500; /* 二级标题字重 - 使用标准值 */
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-weight: 500; /* 三级标题更轻 */
+  letter-spacing: 0;
+}
+
+/* 特定元素字重优化 */
+.hero-content h1, .tab-h3, .contai h2, .specification h2, .container3 h2 {
+  font-weight: 600; /* 品牌标题统一字重 */
+}
+
+/* 统计数字加粗但不过重 */
+.stat span {
+  font-weight: 500; /* 突出显示但不过于沉重 - 使用标准值 */
+}
+
+.stat p {
+  font-weight: 400; /* 说明文字保持正常字重 */
+}
+
+/* 按钮文字字重优化 */
+.btn-primary, .btn-secondary, .login-footer, .login-footer2, .cta-button {
+  font-weight: 500; /* 按钮文字稍微加粗 */
+  letter-spacing: 0.01em;
+}
+
+/* Tab按钮字重优化 */
+.tab-button {
+  font-weight: 500; /* 保持与其他交互元素一致 */
+}
+
+.tab-button.active {
+  font-weight: 600; /* 活动状态加粗 - 使用标准值 */
+}
+
+/* 功能模块标题字重 */
+.cloud-module h3 {
+  font-weight: 500; /* 功能模块标题 */
+}
+
+.cloud-module p {
+  font-weight: 400; /* 功能描述 */
+}
+
+/* 卡片元素字重优化 */
+.card-title {
+  font-weight: 500; /* 卡片标题 - 使用标准值 */
+}
+
+.card li {
+  font-weight: 400; /* 卡片列表项 */
+}
+
+/* 标签字重 */
+.tag {
+  font-weight: 400; /* 标签文字 */
+}
+
+/* 移动端字重优化 */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-weight: 600; /* 移动端保持一致 */
+  }
+  
+  h2 {
+    font-weight: 500; /* 移动端保持一致 - 使用标准值 */
+  }
+  
+  h3 {
+    font-weight: 500; /* 移动端保持一致 */
+  }
+  
+  /* 移动端按钮字重优化 */
+  .btn-primary, .btn-secondary, .login-footer, .login-footer2, .cta-button {
+    font-weight: 500; /* 移动端按钮文字一致性 */
+  }
+}
+
+/* 特殊文字处理 */
+.testimonial {
+  font-weight: 400; /* 证言正文字重 - 使用标准值 */
+}
+
+/* 图标旁文字 */
+.cloud-module h3 img + span {
+  font-weight: 500; /* 与图标并列的文字 */
+}
+
+/* 高亮文本 */
+strong, b, em {
+  font-weight: 500; /* 统一强调元素字重 - 使用标准值 */
+}
+
+/* ys-fz类显示优化 */
+.ys-fz {
+  display: inline-block;
+  white-space: nowrap;
+} 

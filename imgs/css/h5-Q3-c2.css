@@ -153,7 +153,7 @@ table {
 
 
 .tips img {
-  width: 420px;
+  width: 70%;
 }
 
 .navbar-container {
@@ -175,7 +175,7 @@ table {
 .tag {
   color: var(--light-general-on-surface-low, var(--Gray-Modern-600, #485264));
   display: flex;
-  padding: 8px 10px;
+  padding: 2px 10px;
   justify-content: center;
   align-items: center;
   font-size: 12px;
@@ -187,7 +187,6 @@ table {
 }
 
 .hero-video img {
-  position: relative;
   right: -20%;
 }
 
@@ -386,7 +385,7 @@ video {
   background-position: 14% 50%;
   background-repeat: no-repeat;
   text-align: left;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   letter-spacing: 0.01em;
   white-space: nowrap;
@@ -431,7 +430,7 @@ video {
 .tab-buttons {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 14px;
 }
 
 .tab-button:active {
@@ -463,8 +462,8 @@ video {
   line-height: 40px;
   letter-spacing: 2px;
   text-align: center;
-  margin-bottom: 60px;
-  padding-top: 80px;
+  margin-bottom: 120px;
+  padding-top: 160px;
 }
 
 /*
@@ -669,6 +668,7 @@ video {
 .test {
   max-width: 1440px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .card {
@@ -729,6 +729,7 @@ video {
   justify-content: flex-start;
   align-content: flex-start;
   flex-direction: row;
+  align-items: center;
 }
 
 .card ul li img {
@@ -794,6 +795,7 @@ video {
   background-size: 100% 100%;
   max-width: 1440px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .cons {
@@ -801,6 +803,7 @@ video {
   background-image: url('../bgEllipse114.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  width: 100%;
 }
 
 .caricon1 {
@@ -1266,6 +1269,7 @@ video {
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
 }
 
 .vids8fream2 p {
@@ -1390,6 +1394,7 @@ video {
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1440px;
+  width: 100%;
 }
 
 .vids7-left h3 {
@@ -1481,13 +1486,13 @@ video {
 .hero-section {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   max-width: 1440px;
   width: 100%;
 }
 
 .hero-content {
-  margin-left: 6%;
+  margin-left: 2%;
   padding-top: 100px;
 }
 
@@ -1549,7 +1554,7 @@ video {
 
 .hero-buttons {
   display: flex;
-  gap: 30px;
+  gap: 10px;
   justify-content: flex-start;
 }
 
@@ -1623,8 +1628,7 @@ a {
 }
 
 .hero-video {
-  margin-right: 6%;
-  padding-top: 80px;
+
 }
 
 .stat p {
@@ -1642,7 +1646,6 @@ a {
   gap: 36px;
   align-items: center;
   position: relative;
-  padding-top: 120px;
   width: 100%;
   max-width: 1440px;
 }
@@ -1657,7 +1660,7 @@ a {
   border: 1px solid #E6EDF9;
   display: flex;
   padding: 20px 0px 20px 84px;
-  gap: 6px;
+  gap: 12px;
   flex: 1 0 0;
   flex-direction: column;
 }
@@ -3191,4 +3194,22 @@ margin-bottom: 40px;
 
 
 
+}
+
+.card .ys-fz{
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 1023px) {
+.ta1023{
+  display: none;
+}
+.card .ys-fz{
+  display: inline-block;
+  white-space: nowrap;
+}
+.card .ys-jy{
+  display: none;
+}
 }

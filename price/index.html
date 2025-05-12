@@ -77,10 +77,10 @@
                     </div>
                     <div class="value-points">
                       <div class="point-value" style="left: calc(0%)">1</div>
-                      <div class="point-value" style="left: calc(25%)">8</div>
-                      <div class="point-value" style="left: calc(50%)">16</div>
-                      <div class="point-value" style="left: calc(75%)">24</div>
-                      <div class="point-value" style="left: calc(100%)">32</div>
+                      <div class="point-value" style="left: calc(25%)">32</div>
+                      <div class="point-value" style="left: calc(50%)">64</div>
+                      <div class="point-value" style="left: calc(75%)">128</div>
+                      <div class="point-value" style="left: calc(100%)">256</div>
                     </div>
                     <div class="unit">C</div>
                   </div>
@@ -113,10 +113,10 @@
                     </div>
                     <div class="value-points">
                       <div class="point-value" style="left: calc(0%)">1</div>
-                      <div class="point-value" style="left: calc(25%)">16</div>
-                      <div class="point-value" style="left: calc(50%)">32</div>
-                      <div class="point-value" style="left: calc(75%)">64</div>
-                      <div class="point-value" style="left: calc(100%)">128</div>
+                      <div class="point-value" style="left: calc(25%)">128</div>
+                      <div class="point-value" style="left: calc(50%)">512</div>
+                      <div class="point-value" style="left: calc(75%)">1024</div>
+                      <div class="point-value" style="left: calc(100%)">2048</div>
                     </div>
                     <div class="unit">G</div>
                   </div>
@@ -692,7 +692,7 @@
       constructor(options = {}) {
         this.config = {
           minValue: options.minValue ?? 0,
-          maxValue: options.maxValue || 999,
+          maxValue: options.maxValue || 999999, // 增大最大值上限
           defaultValue: options.defaultValue ?? 1,
           onChange: options.onChange || (() => { })
         }
@@ -837,19 +837,6 @@
         return distanceToLower < distanceToUpper ? this.config.values[lowerValueIndex] : this.config.values[lowestValueIndex]
       }
 
-      // findFloorValue(percent) {
-      // 	let floorIndex = -1; // 初始值设为 -1，表示未找到合适的索引
-
-      // 	this.percentMap.forEach((p, index) => {
-      // 		if (p <= percent) {
-      // 			floorIndex = index; // 更新 floorIndex
-      // 		}
-      // 	});
-      // 	console.log('update!!!', percent, floorIndex, this.percentMap[floorIndex], this.config.values[floorIndex])
-      // 	// 如果没有找到有效的 floorIndex，返回 null
-      // 	return floorIndex !== -1 ? this.config.values[floorIndex] : null;
-      // }
-
       findClosestValue (percent) {
         let closestIndex = 0
 
@@ -891,20 +878,35 @@
       }
 
       setValue (value) {
-        // 首先检查给定的值是否在断点内
+        // 修改setValue方法，让它能够处理超出预设范围的值
         if (this.config.values.includes(value)) {
-          this.state.currentValue = value
+          this.state.currentValue = value;
+        } else if (value > Math.max(...this.config.values)) {
+          // 如果值超过最大预设值，直接设置为用户输入的值而不是预设的最大值
+          this.state.currentValue = value;
+          // 将滑块显示为最大位置
+          const percent = 100;
+          this.elements.fill.style.width = `${percent}%`;
+          this.elements.thumb.style.left = `${percent}%`;
+          
+          // 设置所有点为激活状态
+          this.elements.points.forEach((point) => {
+            point.classList.add('active');
+          });
+          
+          return; // 直接返回，不进行后续的滑块更新
         } else {
-          // 如果不在，则寻找小于该值的最大断点
-          const lowers = this.config.values.filter(v => v <= value)
-          if (!lowers) this.state.currentValue = this.config.values[0]
-          let floorValue = Math.max(...lowers)
-
-          this.state.currentValue = floorValue
-
+          // 如果不在预设值中，但在范围内，查找小于该值的最大断点
+          const lowers = this.config.values.filter(v => v <= value);
+          if (lowers.length === 0) this.state.currentValue = this.config.values[0];
+          else {
+            let floorValue = Math.max(...lowers);
+            this.state.currentValue = floorValue;
+          }
         }
-        const percent = this.valueToPercent(this.state.currentValue)
-        this.updateSlider(percent, true) // 更新滑块并允许吸附
+        
+        const percent = this.valueToPercent(this.state.currentValue);
+        this.updateSlider(percent, true); // 更新滑块并允许吸附
       }
 
       snapToClosestValue (percent) {
@@ -1060,7 +1062,7 @@
       // CPU 控件初始化
       const cpuSlider = new SliderManager({
         sliderSelector: '.segmented-slider.cpu-slider',
-        values: [1, 8, 16, 24, 32],
+        values: [1, 32, 64, 128, 256],
         defaultValue: resourceState.getState('cpu'),
         onChange: (value, source) => {
           if (source === 'slider') {
@@ -1074,7 +1076,7 @@
         upButtonSelector: '.cpu-number-input .arrow.up',
         downButtonSelector: '.cpu-number-input .arrow.down',
         minValue: 1,
-        maxValue: 32,
+        maxValue: 999999, // 提高最大值限制
         defaultValue: resourceState.getState('cpu'),
         onChange: (value, source) => {
           if (source === 'quantity') {
@@ -1088,7 +1090,7 @@
       // Memory 控件初始化
       const memorySlider = new SliderManager({
         sliderSelector: '.segmented-slider.memory-slider',
-        values: [1, 16, 32, 64, 128],
+        values: [1, 128, 512, 1024, 2048],
         defaultValue: resourceState.getState('memory'),
         onChange: (value, source) => {
           if (source === 'slider') {
@@ -1102,7 +1104,7 @@
         upButtonSelector: '.memory-number-input .arrow.up',
         downButtonSelector: '.memory-number-input .arrow.down',
         minValue: 1,
-        maxValue: 128,
+        maxValue: 999999, // 提高最大值限制
         defaultValue: resourceState.getState('memory'),
         onChange: (value, source) => {
           if (source === 'quantity') {
@@ -1118,7 +1120,7 @@
         upButtonSelector: '.storage-number-input .arrow.up',
         downButtonSelector: '.storage-number-input .arrow.down',
         minValue: 0,
-        maxValue: 24,
+        maxValue: 999999, // 提高最大值限制
         defaultValue: resourceState.getState('storage'),
         onChange: (value, source) => {
 
@@ -1133,7 +1135,7 @@
         upButtonSelector: '.network-number-input .arrow.up',
         downButtonSelector: '.network-number-input .arrow.down',
         minValue: 0,
-        maxValue: 24,
+        maxValue: 999999, // 提高最大值限制
         defaultValue: resourceState.getState('network'),
         onChange: (value, source) => {
           // if (source === 'quantity') {
@@ -1147,7 +1149,7 @@
         upButtonSelector: '.port-number-input .arrow.up',
         downButtonSelector: '.port-number-input .arrow.down',
         minValue: 0,
-        maxValue: 24,
+        maxValue: 999999, // 提高最大值限制
         defaultValue: resourceState.getState('port'),
         onChange: (value, source) => {
           // if (source === 'quantity') {
@@ -1161,7 +1163,7 @@
         upButtonSelector: '.count-number-input .arrow.up',
         downButtonSelector: '.count-number-input .arrow.down',
         minValue: 0,
-        maxValue: 100,
+        maxValue: 999999, // 提高最大值限制
         defaultValue: resourceState.getState('count'),
         onChange: (value, source) => {
           resourceState.setState('count', value, source)
@@ -1187,7 +1189,7 @@
         upButtonSelector: '.time-count-number-input .arrow.up',
         downButtonSelector: '.time-count-number-input .arrow.down',
         minValue: 0,
-        maxValue: 100,
+        maxValue: 999999, // 提高最大值限制
         defaultValue: resourceState.getState('timeCount'),
         onChange: (value, source) => {
           resourceState.setState('timeCount', value, source)
