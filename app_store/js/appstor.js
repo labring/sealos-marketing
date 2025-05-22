@@ -57,21 +57,26 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 })
 
-
-
 let currentIndex = 0
 const items = document.querySelectorAll('.carousel-item')
 const totalItems = items.length
 
-document.querySelector('.next').addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % totalItems
-  updateCarousel()
-})
+const nextButton = document.querySelector('.next');
+const prevButton = document.querySelector('.prev');
 
-document.querySelector('.prev').addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + totalItems) % totalItems
-  updateCarousel()
-})
+if (nextButton) {
+  nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalItems
+    updateCarousel()
+  })
+}
+
+if (prevButton) {
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems
+    updateCarousel()
+  })
+}
 
 function updateCarousel () {
   items.forEach((item, index) => {
