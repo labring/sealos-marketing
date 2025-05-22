@@ -55,14 +55,14 @@
   <main>
     <section class="hero-section">
       <div class="hero-content">
-        <h1 class="hero-title">DevBox</h1>
-        <p class="hero-subtitle">集<strong>本地开发、线上测试、部署上线</strong>为一体<br> 云端代码同步，多语言远程协同开发，自动分配外网域名，一键部署上线</p>
+        <h1 class="hero-title">Devbox</h1>
+        <p class="hero-subtitle">集<strong>本地开发、线上测试、Docker部署、版本管理</strong>为一体<br> 本地 AI编码，云端代码同步，多语言远程协同开发，自动分配外网域名，一键部署上线</p>
         <div class="devboxzh">
           <a href="https://cloud.sealos.run/" class="cta-link">
-            <button class="cta-button">免费体验</button>
+            <button class="cta-button">开始创建</button>
           </a>
-          <a href="https://sealos.run/docs/quick-start" class="cta-link">
-            <button class="cta-button cat-faq">操作手册</button>
+          <a href="https://www.bilibili.com/video/BV124D5YEEAD/" class="cta-link">
+            <button class="cta-button cat-faq">功能演示</button>
           </a>
         </div>
       </div>
@@ -71,7 +71,7 @@
     <section class="integration-diagram">
       <div class="backbeijing">
         <div class="container">
-          <img src="/devbox/img/Union.png" alt="DevBox集成开发环境示意图">
+          <img src="/devbox/img/Union.png" alt="DevBox集成开发环境示意图" class="bjico">
 
           <!-- IDE工具 -->
           <div class="icon icon-salesforce">
@@ -101,16 +101,17 @@
 
           <!-- 开发流程 -->
           <div class="icon connect-btn">连接本地 IDE</div>
-          <div class="commit2"></div>
+        <!--<div class="commit2"></div>-->
           <div class="commit">
-            <video autoplay loop muted playsinline controls aria-label="DevBox使用演示视频" src="/devbox/img/sailos-devbox.webm" type="video/webm"></video>
+            <img src="/devbox/img/devboxico.svg">
+          <!--<video autoplay loop muted playsinline controls aria-label="DevBox使用演示视频" src="/devbox/img/sailos-devbox.webm" type="video/webm"></video>-->
           </div>
 
-          <div class="commit-devbox">
+          <!--div class="commit-devbox">
             <img src="/devbox/img/logo.svg" alt="Sealos DevBox 官方Logo">
           </div>
 
-          <!-- 部署选项 -->
+           部署选项 -->
           <div class="icon connect-btn2">云环境开发</div>
           <div class="icon icon-salesforce2" onmouseover="showTooltip(event)" onmouseout="hideTooltip()" onclick="hideTooltip()">
             <img src="/devbox/img/dapp.svg" alt="使用DevBox进行App原生应用开发">App
@@ -621,7 +622,7 @@
     <section class="container-2">
       <div class="wrangle-stack-content">
         <div class="wrangle-stack-header">
-          <h2><span>简单 4 步</span><br />完成独立应用开发上线</h2>
+          <h2><span>简单 4 步</span><br />完成项目开发上线</h2>
           <div class="wrangle-stack-description">
             Devbox提供统一开发环境，确保本地、测试和生产环境的一致性，支持云端高性能计算，实现从开发到部署的全流程自动化。
           </div>
@@ -632,11 +633,11 @@
             <div class="wrangle-stack-img">
               <div class="wrangle-icon-wrapper">1</div>
               <div class="wrangle-stack-title">
-                <h3>云开发环境</h3>
+                <h3>创建云端项目</h3>
                 <div class="wrangle-version">
-                  • 一键创建项目，内置开发模板<br>
-                  • 统一开发环境，保持依赖一致<br>
-                  • 企业级隔离，安全可靠部署
+                  • 内置开发语言、框架模板<br>
+                  • 支持 Github 导入项目<br>
+                  • 自动分配 https 外网域名
                 </div>
               </div>
             </div>
@@ -646,11 +647,12 @@
             <div class="wrangle-stack-img">
               <div class="wrangle-icon-wrapper">2</div>
               <div class="wrangle-stack-title">
-                <h3>本地 IDE 开发</h3>
+                <h3>连接本地 IDE</h3>
                 <div class="wrangle-version">
-                  • 云端代码同步，支持远程协同开发<br>
-                  • 支持VSCode、Cursor等主流IDE<br>
-                  • 云计算资源，支持大规模编译
+                  • 主流 IDE 自动连接<br>
+                  • 自动安装 Devbox 插件<br>
+                  • 支持 SSH 手动连接
+                  
                 </div>
               </div>
             </div>
@@ -660,11 +662,11 @@
             <div class="wrangle-stack-img">
               <div class="wrangle-icon-wrapper">3</div>
               <div class="wrangle-stack-title">
-                <h3>公网同步预览</h3>
+                <h3>本地开发</h3>
                 <div class="wrangle-version">
-                  • 自动分配外网域名访问<br>
-                  • SSL 证书自动配置<br>
-                  • 按资源用量扣费，暂停不计费
+                  • 支持各类依赖项安装<br>
+                  • 本地编码，外网地址实时更新<br>  
+                  • 云端项目代码存储
                 </div>
               </div>
             </div>
@@ -674,11 +676,11 @@
             <div class="wrangle-stack-img">
               <div class="wrangle-icon-wrapper">4</div>
               <div class="wrangle-stack-title">
-                <h3>上线生产环境</h3>
+                <h3>部署上线</h3>
                 <div class="wrangle-version">
-                  • 自动打包Docker镜像<br>
-                  • CPU、内存资源弹性伸缩<br>
-                  • 支持自定义域名绑定
+                  • 多版本管理<br>
+                  • 自动打包 OCL 镜像<br>
+                  • 点击上线，自动部署
                 </div>
               </div>
             </div>
@@ -691,20 +693,20 @@
       <h2>全面的开发堆栈支持</h2>
       <div class="meta3-content">
         <div class="meta3-left">
-          <img src="/devbox/img/20241113-114402.png" alt="Speed Up Decision Making">
+          <img src="/devbox/img/devboxmuban.svg" alt="Speed Up Decision Making">
         </div>
         <div class="meta3-right">
           <div class="meta3-h3">
-            <h3>统一的云开发环境</h3>
-            <p>秒级创建可共享的云开发环境，减少繁琐的安装和配置过程，统一的开发、测试和生产环境，更快地进入开发状态。</p>
+            <h3>统一云开发环境</h3>
+            <p>内置所有开发语言框架模板，秒级创建可共享协作的云开发环境，减少繁琐的安装和配置过程，统一的开发、测试环境，更快地进入开发状态。</p>
           </div>
           <div class="meta3-item">
             <div class="meta3-icon">
               <img src="/devbox/img/yuncloud.svg">
             </div>
             <div class="meta3-text">
-              <h3>环境一致性</h3>
-              <p>所有开发者使用相同的环境配置，消除了因本地环境差异而导致的问题，确保代码在所有开发机器上都能一致运行。</p>
+              <h3>多场景开发</h3>
+              <p>DevBox 支持多人、多机器、多场景同时连接协作开发，消除了因本地环境差异而导致的问题，确保代码在所有场景下都能一致运行。</p>
             </div>
           </div>
           <div class="meta3-item">
@@ -712,8 +714,8 @@
               <img src="/devbox/img/scces.svg">
             </div>
             <div class="meta3-text">
-              <h3>生产环境模拟</h3>
-              <p>DevBox 提供与生产环境高度相似的测试环境配置，包括服务端、数据库、依赖项等，确保在测试阶段就能暴露潜在问题。</p>
+              <h3>正式环境模拟</h3>
+              <p>DevBox 提供与生产环境一致的测试环境配置，包括服务端、数据库、依赖项等，确保在测试阶段就能暴露潜在问题。</p>
             </div>
           </div>
           <div class="meta3-item">
@@ -722,7 +724,7 @@
             </div>
             <div class="meta3-text">
               <h3>安全稳定性</h3>
-              <p>主流云厂商，应用级和租户级网络隔离能力,自研轻量级负载均衡器，支持数万节点集群运行。</p>
+              <p>主流阿里云（杭州区）、腾讯云（广州区）、谷歌云（新加坡区）等云厂商,自研轻量级负载均衡器，支持数万节点集群运行。</p>
             </div>
           </div>
         </div>
@@ -742,7 +744,7 @@
             </div>
             <div class="meta3-text">
               <h3>实时预览</h3>
-              <p>自动分配公网 URL，无需正式部署，也可暴露给外部访问，本地代码更改，公网地址同步更新</p>
+              <p>自动分配外网 URL，本地代码更改，项目效果公网同步更新</p>
             </div>
           </div>
           <div class="meta3-item">
@@ -750,8 +752,8 @@
               <img src="/devbox/img/kiafahuanj.svg" alt="ico">
             </div>
             <div class="meta3-text">
-              <h3>同步开发</h3>
-              <p>线上代码保存，支持分布式团队开发，而无需克隆项目或手动拉取更新，快速参与开发工作。</p>
+              <h3>协作开发</h3>
+              <p>云端代码保存，支持分布式团队开发，Github 拉取、推送，快速参与开发工作。</p>
             </div>
           </div>
           <div class="meta3-item">
@@ -759,7 +761,7 @@
               <img src="/devbox/img/tuanduikj.svg" alt="ico">
             </div>
             <div class="meta3-text">
-              <h3>团队空间</h3>
+              <h3>工作空间</h3>
               <p>所有的项目集中管理，成员能够地查看、切换和维护多个项目，提供权限分配，隔离不同项目和团队。</p>
             </div>
           </div>
@@ -778,7 +780,7 @@
         <div class="meta3-right meta4-rght">
           <div class="meta3-h3">
             <h3>快速迭代与容器化上线</h3>
-            <p>DevBox 深度结合现代容器技术，通过一键打包 Docker 镜像与自动化的容器编排，实现从开发到生产的快速迭代和高效上线流程。</p>
+            <p>DevBox 深度结合现代容器技术，通过一键打包 Docker 镜像与自动化的容器编排，实现从开发到生产的环境一致和自动上线流程。</p>
           </div>
           <div class="meta3-item">
             <div class="meta3-icon">

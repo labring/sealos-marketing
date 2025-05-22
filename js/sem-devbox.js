@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       newUrl += (newUrl.includes('?') ? '&' : '?') + 's=Devbox'
 
-      const arr = ['cloud.sealos.run','mp.weixin.qq.com','template.cloud.sealos.run','sealos.run/docs','feishu.cn']
+      const arr = ['cloud.sealos.run','mp.weixin.qq.com','template.cloud.sealos.run','sealos.run/docs','feishu.cn','bilibili.com']
 
       const target = arr.some(item => baseUrl.includes(item)) ? '_blank' : '_self'
       window.open(newUrl, target)
