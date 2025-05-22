@@ -11,22 +11,22 @@ function hideTooltip() {
 
 function updateButtonPositions() {
     const buttonConfigs = [
-        { selector: '.icon-salesforce', topRange: [20, 20], leftRange: [23.5, 23.5] },
+        { selector: '.icon-salesforce', topRange: [20, 20], leftRange: [21.5, 21.5] },
         { selector: '.icon-intercom', topRange: [49, 49], leftRange: [6, 6] },
         { selector: '.icon-mailchimp', topRange: [49, 49], leftRange: [16.5, 17] },
-        { selector: '.icon-stripe', topRange: [77, 80], leftRange: [23.5, 23] },
+        { selector: '.icon-stripe', topRange: [77, 80], leftRange: [24, 21.5] },
         { selector: '.icon-intercom2', topRange: [94, 95], leftRange: [10, 10] },
         { selector: '.icon-segment', topRange: [3, 3], left: 10 },
-        { selector: '.connect-btn', topRange: [49, 49], leftRange: [28.5, 28.5] },
-        { selector: '.connect-btn2', topRange: [49, 49], leftRange: [73.5, 73] },
+        { selector: '.connect-btn', topRange: [49, 49], leftRange: [27, 27] },
+        { selector: '.connect-btn2', topRange: [49, 49], leftRange: [72.5, 72] },
         { selector: '.icon-salesforce2', topRange: [32.5, 32.5], left: 86 },
         { selector: '.icon-salesforce3', topRange: [0, 0], left: 86 },
         { selector: '.icon-salesforce4', topRange: [65.5, 65.5], left: 86 },
         { selector: '.icon-salesforce5', topRange: [97.5, 98.5], left: 86 },
         { selector: '.hower-id', topRange: [-100, -100], leftRange: [100, 140] },
-        { selector: '.commit', topRange: [49.5, 45], leftRange: [50, 50], widthRange: [320, 500], heightRange: [200, 280] },
-        { selector: '.commit2', topRange: [49.5, 45], leftRange: [50, 50], widthRange: [340, 520], heightRange: [220, 300] },
-        { selector: '.commit-devbox', topRange: [88, 69], leftRange: [50, 50], widthRange: [50, 80], heightRange: [50, 80] },
+        { selector: '.commit', topRange: [50, 50], leftRange: [50, 50], widthRange: [320,850]},
+        { selector: '.commit2', topRange: [50, 50], leftRange: [50, 50], widthRange: [340, 520], heightRange: [220, 300] },
+        { selector: '.commit-devbox', topRange: [88, 82], leftRange: [50, 50], widthRange: [50, 80], heightRange: [50, 80] },
     ];
 
     const minViewWidth = 1023;
