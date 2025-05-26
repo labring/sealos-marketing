@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Permissions-Policy" content="unload=()">
   <title>DevBox-一站式云原生在线开发环境 | Sealos</title>
   <meta name="description" content="Sealos DevBox提供一站式云原生开发环境，支持VSCode、Cursor、Windsurf等多种IDE，集成本地开发、线上测试、部署上线为一体，让开发者专注于代码编写，无需关心环境配置。">
   <meta name="keywords" content="devbox,云原生开发环境,在线IDE,代码托管,开发工具,云开发,DevOps,Sealos DevBox,远程开发,多语言协作">
@@ -16,6 +17,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="/app_store/css/appstore-xq.css">
   <link rel="stylesheet" href="/devbox/img/devbox.css">
+  <link rel="stylesheet" href="/devbox/img/dev-flow.css">
+  
+  <!-- 优化百度统计脚本加载 -->
+  <script async src="https://hm.baidu.com/hm.js?d8e8ecf669c47dc2512d3f1417e761f9"></script>
+  <script async src="https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"></script>
+  
   <script src="/imgs/js/h5_Q3_C1.js" defer></script>
   <script src="/app_store/js/appstor.js" defer></script>
   <script src="/app_store/js/stars.js" defer></script>
@@ -56,7 +63,7 @@
     <section class="hero-section">
       <div class="hero-content">
         <h1 class="hero-title">Devbox</h1>
-        <p class="hero-subtitle">集<strong>本地开发、线上测试、Docker部署、版本管理</strong>为一体<br> 本地 AI编码，云端代码同步，多语言远程协同开发，自动分配外网域名，一键部署上线</p>
+        <p class="hero-subtitle">集<strong>本地开发、线上测试、Docker部署、版本管理</strong>为一体<br> 本地 AI编码，云端代码同步，多终端远程协同开发，默认分配外网域名，自动部署上线阿里云等主流云服务器</p>
         <div class="devboxzh">
           <a href="https://cloud.sealos.run/" class="cta-link">
             <button class="cta-button">开始创建</button>
@@ -101,7 +108,7 @@
 
           <!-- 开发流程 -->
           <div class="icon connect-btn">连接本地 IDE</div>
-        <!--<div class="commit2"></div>-->
+          <!--<div class="commit2"></div>-->
           <div class="commit">
             <img src="/devbox/img/devboxico.svg">
           <!--<video autoplay loop muted playsinline controls aria-label="DevBox使用演示视频" src="/devbox/img/sailos-devbox.webm" type="video/webm"></video>-->
@@ -136,7 +143,7 @@
 
     <section class="stack-section">
       <div class="stack-header">
-        <h2>支持所有主流编程语言和框架</h2>
+        <h2>内置所有编程语言和框架</h2>
         <div class="stack-tabs" role="tablist">
           <button class="stack-tab active" onclick="switchTab('frontend')" role="tab" aria-selected="true" aria-controls="frontend-panel">官方精选</button>
           <button class="stack-tab" onclick="switchTab('backend')" role="tab" aria-selected="false" aria-controls="backend-panel">Rust</button>
@@ -149,7 +156,7 @@
       <div class="stack-content">
         <!-- 热门 -->
         <div id="frontend-panel" class="stack-group" data-stack="frontend" style="display:block" role="tabpanel" aria-labelledby="frontend-tab">
-          <p class="stack-description">行业主流的开发语言</p>
+          <p class="stack-description">支持自安装语言/框架</p>
           <div class="grid">
             <div class="stack-item">
               <div class="stack-img">
@@ -620,13 +627,14 @@
     </section>
 
     <section class="container-2">
-      <div class="wrangle-stack-content">
-        <div class="wrangle-stack-header">
-          <h2><span>简单 4 步</span><br />完成项目开发上线</h2>
-          <div class="wrangle-stack-description">
-            Devbox提供统一开发环境，确保本地、测试和生产环境的一致性，支持云端高性能计算，实现从开发到部署的全流程自动化。
-          </div>
+      <div class="wrangle-stack-header">
+        <h2><span>简单 4 步</span><br />完成项目开发上线</h2>
+        <div class="wrangle-stack-description">
+          统一云开发环境，确保本地、测试和生产环境的一致，云端高性能计算，从开发到部署的全流程自动化。
         </div>
+      </div>
+      <!--<div class="wrangle-stack-content">
+        
 
         <div class="grid2 wrangle-stack-group">
           <div class="wrangle-stack-item">
@@ -686,6 +694,98 @@
             </div>
           </div>
         </div>
+      </div>-->
+
+      <div class="dev-flow-section">
+        <div class="container-2">
+          <div class="dev-flow-wrapper">
+            <!-- 左侧图片区域 -->
+            <div class="dev-flow-image-area">
+              <div>
+                <div class="dev-flow-image dev-flow-image-1 active" data-step="1" data-gif-src="/devbox/img/xinjianxm.gif">
+                  <img src="/devbox/img/xinjianxm.svg" alt="新建项目">
+                </div>
+                <div class="dev-flow-image dev-flow-image-2" data-step="2" data-gif-src="/devbox/img/lianjieide.gif">
+                  <img src="/devbox/img/lianjieide.svg" alt="连接本地IDE">
+                </div>
+                <div class="dev-flow-image dev-flow-image-3" data-step="3" data-gif-src="/devbox/img/kaiftiaoshi.gif">
+                  <img src="/devbox/img/kaiftiaoshi.svg" alt="AI 编码开发">
+                </div>
+                <div class="dev-flow-image dev-flow-image-4" data-step="4" data-gif-src="/devbox/img/bushushangxian.gif">
+                  <img src="/devbox/img/bushushangxian.svg" alt="部署上线">
+                </div></div>
+                <div class="buttonico">点击查看大图</div>
+              </div>
+            
+            <!-- 右侧时间轴步骤区域 -->
+            <div class="dev-flow-steps">
+              <div class="dev-flow-timeline-line"></div>
+              
+              <!-- 步骤1 -->
+              <div class="dev-flow-step active" data-step="1">
+                <div class="dev-flow-step-node">
+                  <span>1</span>
+                </div>
+                <div class="dev-flow-step-content">
+                  <h3 class="dev-flow-step-title">新建项目</h3>
+                  <p class="dev-flow-step-desc">打开 Devbox，新建云开发环境</p>
+                  <div class="dev-flow-features">
+                    <div class="dev-flow-feature-tag">内置语言框架</div>
+                    <div class="dev-flow-feature-tag">分配测试域名</div>
+                    <div class="dev-flow-feature-tag">支持代码导入</div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 步骤2 -->
+              <div class="dev-flow-step" data-step="2">
+                <div class="dev-flow-step-node">
+                  <span>2</span>
+                </div>
+                <div class="dev-flow-step-content">
+                  <h3 class="dev-flow-step-title">IDE 连接</h3>
+                  <p class="dev-flow-step-desc">选择本地开发工具，自动安装插件连接</p>
+                  <div class="dev-flow-features">
+                    <div class="dev-flow-feature-tag">自动连接</div>
+                    <div class="dev-flow-feature-tag">支持SSH连接</div>
+                    <div class="dev-flow-feature-tag">支持主流AI编码工具</div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 步骤3 -->
+              <div class="dev-flow-step" data-step="3">
+                <div class="dev-flow-step-node">
+                  <span>3</span>
+                </div>
+                <div class="dev-flow-step-content">
+                  <h3 class="dev-flow-step-title">开发调试</h3>
+                  <p class="dev-flow-step-desc">本地 AI 编码，线上地址实时预览效果</p>
+                  <div class="dev-flow-features">
+                    <div class="dev-flow-feature-tag">支持依赖项安装</div>
+                    <div class="dev-flow-feature-tag">云端代码存储</div>
+                    <div class="dev-flow-feature-tag">支持Github拉取/推送</div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 步骤4 -->
+              <div class="dev-flow-step" data-step="4">
+                <div class="dev-flow-step-node">
+                  <span>4</span>
+                </div>
+                <div class="dev-flow-step-content">
+                  <h3 class="dev-flow-step-title">部署上线</h3>
+                  <p class="dev-flow-step-desc">内置版本管理，自动打包 OCL 镜像上线正式环境</p>
+                  <div class="dev-flow-features">
+                    <div class="dev-flow-feature-tag">版本回溯</div>
+                    <div class="dev-flow-feature-tag">环境隔离</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -697,7 +797,7 @@
         </div>
         <div class="meta3-right">
           <div class="meta3-h3">
-            <h3>统一云开发环境</h3>
+            <h3 class="meta1-h3">统一云开发环境</h3>
             <p>内置所有开发语言框架模板，秒级创建可共享协作的云开发环境，减少繁琐的安装和配置过程，统一的开发、测试环境，更快地进入开发状态。</p>
           </div>
           <div class="meta3-item">
@@ -812,29 +912,14 @@
         </div>
       </div>
     </section>
+
+    <!-- 开发流程步骤组件 -->
+    
   </main>
 
   <script src="/devbox/img/devbox.js"></script>
+  <script src="/devbox/img/dev-flow.js"></script>
   <div class="h5footer" id="footer"></div>
-  <!-- 百度统计 -->
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?d8e8ecf669c47dc2512d3f1417e761f9";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 </body>
 
 </html>

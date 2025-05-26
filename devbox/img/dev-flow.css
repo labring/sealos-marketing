@@ -1,0 +1,321 @@
+/* 开发流程步骤组件样式 */
+.dev-flow-section {
+  padding: 40px 0;
+  background: #ffffff;
+}
+
+.dev-flow-wrapper {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+.buttonico{
+  color: #6b7280;
+  font-size: 14px;
+}
+/* 左侧图片区域 */
+.dev-flow-image-area {
+  width: 60%;
+  height: 545px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.dev-flow-steps .active .dev-flow-step-desc,.dev-flow-steps .active .dev-flow-features{
+  display: flex;
+}
+.dev-flow-steps .dev-flow-step-desc,.dev-flow-steps .dev-flow-features{
+
+}
+.dev-flow-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dev-flow-image.pre-active {
+  opacity: 0.5;
+}
+
+.dev-flow-image.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.dev-flow-image img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.dev-flow-image img:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 0.809px 0px rgba(0, 0, 0, 0.05), 0px 3.742px 14.969px 0px rgba(182, 202, 224, 0.28);
+}
+
+/* 图片Lightbox样式 */
+.image-lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-lightbox img {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  border: 2px solid white;
+  border-radius: 4px;
+}
+
+/* 右侧步骤区域 */
+.dev-flow-steps {
+  width: 40%;
+  position: relative;
+  padding-left: 30px;
+}
+
+/* 时间轴线条 */
+.dev-flow-timeline-line {
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  bottom: 20px;
+  width: 1px;
+  background: #e5e7eb;
+  z-index: 1;
+}
+
+/* 步骤样式 */
+.dev-flow-step {
+  position: relative;
+  margin-bottom: 40px;
+  display: flex;
+  z-index: 2;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dev-flow-step:last-child {
+  margin-bottom: 0;
+}
+
+.dev-flow-step:hover {
+  transform: translateX(5px);
+}
+
+/* 步骤节点 */
+.dev-flow-step-node {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin-right: 20px;
+  flex-shrink: 0;
+  position: absolute;
+  left: -15px;
+  transform: translateX(-50%);
+  z-index: 3;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dev-flow-step.active .dev-flow-step-node,
+.dev-flow-step:hover .dev-flow-step-node {
+  background: #141414;
+  border-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.dev-flow-step.active .dev-flow-step-node span,
+.dev-flow-step:hover .dev-flow-step-node span {
+
+  color: #ffffff;
+  
+}
+/* 步骤内容 */
+.dev-flow-step-content {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 16px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #e5e7eb;
+  flex: 1;
+  margin-left: 30px;
+}
+
+.dev-flow-step.active .dev-flow-step-content {
+  background: #f2f2f2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+}
+
+.dev-flow-step.active .dev-flow-feature-tag{
+  background: #d5d5d5;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+.dev-flow-step:hover .dev-flow-step-content {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.active .dev-flow-step-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.dev-flow-step-title{
+  font-size: 16px;
+  font-weight: 400;
+  color: #111827;
+  margin: 0 0 4px;
+}
+
+.dev-flow-step-desc {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+  transition: color 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 功能标签 */
+.dev-flow-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.dev-flow-feature-tag {
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 预过渡状态 */
+.dev-flow-step.pre-active .dev-flow-step-node {
+  transform: translateX(-50%) scale(1.05);
+  border-color: #cccccc;
+}
+
+.dev-flow-step.pre-active .dev-flow-step-content {
+  background: #f7f7f7;
+  transform: translateX(5px);
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 淡出过渡状态 - 确保颜色变化平滑 */
+.dev-flow-step.deactivating .dev-flow-step-content {
+  background: #f7f7f7;
+  border-color: #e5e7eb;
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dev-flow-step.deactivating .dev-flow-step-title {
+  color: #6b7280;
+  transition: color 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dev-flow-step.deactivating .dev-flow-step-desc {
+  color: #9ca3af;
+  transition: color 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dev-flow-step.deactivating .dev-flow-feature-tag {
+  background: #f3f4f6;
+  color: #6b7280;
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 响应式调整 */
+@media (max-width: 1024px) {
+  .dev-flow-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .dev-flow-image-area {
+    width: 100%;
+    height: 320px;
+  }
+  
+  .dev-flow-steps {
+    width: 100%;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dev-flow-section {
+    padding: 60px 0;
+  }
+  
+  .dev-flow-image-area {
+    height: 260px;
+  }
+  
+  .dev-flow-step-content {
+    padding: 16px;
+  }
+  
+  .dev-flow-step-title {
+    font-size: 16px;
+  }
+  
+  .dev-flow-feature-tag {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dev-flow-image-area {
+    height: 220px;
+  }
+  
+  .dev-flow-step {
+    margin-bottom: 30px;
+  }
+  
+  .dev-flow-step-node {
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+    margin-right: 16px;
+  }
+  
+  .dev-flow-features {
+    flex-direction: column;
+    gap: 6px;
+  }
+} 

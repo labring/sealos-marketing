@@ -17,7 +17,10 @@ body {
     padding-top: 80px;
     text-align: center;
 }
-
+.hero-subtitle strong{
+    font-weight: bold;
+    color: #333333; 
+}
 .hero-content {
     margin-bottom: 60px;
 }
@@ -135,7 +138,7 @@ body {
     position: relative;
     width: 100%;
     height: auto;
-    margin: 50px auto;
+    margin: 50px auto 120px auto;
 }
 
 /* SVG 线条样式 */
@@ -340,7 +343,7 @@ body {
 }
 
 .stack-header h2 {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
     color: #111827;
     margin-bottom: 40px;
@@ -601,23 +604,23 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
 }
 
 .wrangle-stack-header h2 {
     width: 50%;
-    font-size: 28px;
+    font-size: 26px;
 }
 
 .wrangle-stack-header h2 span {
-    font-size: 38px;
+    font-size: 42px;
     font-weight: bold;
 }
 
 .wrangle-stack-description {
     width: 50%;
     color: #6B7280;
-    font-size: clamp(14px, 1vw, 16px);
+    font-size: clamp(16px, 1vw, 18px);
     line-height: 190%;
 }
 

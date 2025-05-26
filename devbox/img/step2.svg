@@ -1,0 +1,55 @@
+<svg width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="400" fill="#f5f8ff"/>
+  
+  <!-- 协作开发界面 -->
+  <rect x="80" y="60" width="340" height="280" rx="8" fill="#ffffff" stroke="#e0e6f5" stroke-width="2"/>
+  
+  <!-- 导航栏 -->
+  <rect x="80" y="60" width="340" height="40" rx="8" fill="#1890ff"/>
+  <text x="110" y="85" font-family="Arial" font-size="14" fill="#ffffff">开发测试环境</text>
+  
+  <!-- 分割为代码区和预览区 -->
+  <line x1="250" y1="100" x2="250" y2="340" stroke="#e0e6f5" stroke-width="2"/>
+  
+  <!-- 代码编辑区 -->
+  <rect x="90" y="110" width="150" height="20" rx="2" fill="#f7f9fc"/>
+  <text x="100" y="125" font-family="monospace" font-size="10" fill="#666">import React from 'react';</text>
+  
+  <rect x="90" y="135" width="150" height="20" rx="2" fill="#f7f9fc"/>
+  <text x="100" y="150" font-family="monospace" font-size="10" fill="#666">function App() {</text>
+  
+  <rect x="90" y="160" width="150" height="20" rx="2" fill="#f7f9fc"/>
+  <text x="110" y="175" font-family="monospace" font-size="10" fill="#666">return (</text>
+  
+  <rect x="90" y="185" width="150" height="20" rx="2" fill="#f0f7ff"/>
+  <text x="120" y="200" font-family="monospace" font-size="10" fill="#1890ff">&#60;div className="app"&#62;</text>
+  
+  <rect x="90" y="210" width="150" height="20" rx="2" fill="#f7f9fc"/>
+  <text x="130" y="225" font-family="monospace" font-size="10" fill="#666">Hello Devbox!</text>
+  
+  <rect x="90" y="235" width="150" height="20" rx="2" fill="#f7f9fc"/>
+  <text x="120" y="250" font-family="monospace" font-size="10" fill="#666">&#60;/div&#62;</text>
+  
+  <rect x="90" y="260" width="150" height="20" rx="2" fill="#f7f9fc"/>
+  <text x="110" y="275" font-family="monospace" font-size="10" fill="#666">);</text>
+  
+  <rect x="90" y="285" width="150" height="20" rx="2" fill="#f7f9fc"/>
+  <text x="100" y="300" font-family="monospace" font-size="10" fill="#666">}</text>
+  
+  <!-- 预览区域 -->
+  <rect x="260" y="110" width="150" height="180" rx="4" fill="#fff"/>
+  <text x="335" y="180" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">Hello Devbox!</text>
+  
+  <!-- 光标指示器 -->
+  <rect x="180" y="200" width="2" height="10" fill="#1890ff">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+  </rect>
+  
+  <!-- 协作指示器 -->
+  <circle cx="220" y="85" r="6" fill="#4CAF50"/>
+  <text x="230" y="88" font-family="Arial" font-size="10" fill="#ffffff">2 在线</text>
+  
+  <!-- 底部状态栏 -->
+  <rect x="80" y="320" width="340" height="20" rx="0" fill="#f0f7ff"/>
+  <text x="100" y="334" font-family="Arial" font-size="10" fill="#666">外网访问地址: https://myapp.devbox.cloud</text>
+</svg> 
