@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </a>
             <ul class="nav-links">
                 <li><a href="/" target="_blank">首页</a></li>
-                <li><a href="/devbox/" target="_blank"><span>Devbox</span></a></li>
+                <li><a href="/devbox/" target="_blank"><span>DevBox</span></a></li>
                 <li><a href="/aiproxy/" target="_blank"><span>AI Proxy</span></a></li>
                 <li><a href="https://template.cloud.sealos.run/" target="_blank">应用商店</a></li>
                 <li><a href="/price" target="_blank">定价</a></li> 
