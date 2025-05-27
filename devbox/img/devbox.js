@@ -1,6 +1,6 @@
 function showTooltip(e) {
     const tooltip = e.currentTarget.querySelector('#tooltip');
-    tooltip.style.display = 'block';
+    if (tooltip) tooltip.style.display = 'block';
 }
 
 function hideTooltip() {
@@ -23,10 +23,11 @@ function updateButtonPositions() {
         { selector: '.icon-salesforce3', topRange: [0, 0], left: 86 },
         { selector: '.icon-salesforce4', topRange: [65.5, 65.5], left: 86 },
         { selector: '.icon-salesforce5', topRange: [97.5, 98.5], left: 86 },
-        { selector: '.hower-id', topRange: [-100, -100], leftRange: [100, 140] },
-        { selector: '.commit', topRange: [50, 50], leftRange: [50, 50], widthRange: [320,850]},
-        { selector: '.commit2', topRange: [50, 50], leftRange: [50, 50], widthRange: [340, 520], heightRange: [220, 300] },
-        { selector: '.commit-devbox', topRange: [88, 82], leftRange: [50, 50], widthRange: [50, 80], heightRange: [50, 80] },
+        // Commented out elements that don't exist in the HTML
+        // { selector: '.hower-id', topRange: [-100, -100], leftRange: [100, 140] },
+        { selector: '.commit', topRange: [50, 50], leftRange: [50, 50], widthRange: [320,850]}
+        // { selector: '.commit2', topRange: [50, 50], leftRange: [50, 50], widthRange: [340, 520], heightRange: [220, 300] },
+        // { selector: '.commit-devbox', topRange: [88, 82], leftRange: [50, 50], widthRange: [50, 80], heightRange: [50, 80] },
     ];
 
     const minViewWidth = 1023;
@@ -38,7 +39,7 @@ function updateButtonPositions() {
         
         // 添加检查，确保元素存在
         if (!button) {
-            console.warn(`元素 ${config.selector} 不存在`);
+            // console.warn(`元素 ${config.selector} 不存在`);
             return; // 跳过当前配置项
         }
 

@@ -1,0 +1,43 @@
+<svg width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="400" fill="#f5f8ff"/>
+  
+  <!-- 构建与优化面板 -->
+  <rect x="70" y="50" width="360" height="300" rx="8" fill="#ffffff" stroke="#e0e6f5" stroke-width="2"/>
+  
+  <!-- 标题栏 -->
+  <rect x="70" y="50" width="360" height="50" rx="8" fill="#1890ff"/>
+  <text x="120" y="82" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff">构建与优化控制台</text>
+  
+  <!-- 构建进度区域 -->
+  <rect x="90" y="120" width="320" height="90" rx="4" fill="#f9f9f9" stroke="#e0e6f5" stroke-width="1"/>
+  
+  <!-- 构建步骤 -->
+  <circle cx="110" y="140" r="10" fill="#1890ff"/>
+  <line x1="110" y1="150" x2="110" y2="190" stroke="#1890ff" stroke-width="2"/>
+  <text x="130" y="144" font-family="Arial" font-size="12" fill="#333">依赖安装</text>
+  <text x="270" y="144" font-family="Arial" font-size="12" fill="#4CAF50">✓ 完成 (2.4s)</text>
+  
+  <circle cx="110" y="165" r="10" fill="#1890ff"/>
+  <line x1="110" y1="175" x2="110" y2="190" stroke="#1890ff" stroke-width="2"/>
+  <text x="130" y="169" font-family="Arial" font-size="12" fill="#333">代码构建</text>
+  <text x="270" y="169" font-family="Arial" font-size="12" fill="#4CAF50">✓ 完成 (3.7s)</text>
+  
+  <circle cx="110" y="190" r="10" fill="#1890ff"/>
+  <text x="130" y="194" font-family="Arial" font-size="12" fill="#333">容器构建</text>
+  
+  <!-- 进度条 -->
+  <rect x="270" y="185" width="100" height="10" rx="5" fill="#f0f0f0"/>
+  <rect x="270" y="185" width="65" height="10" rx="5" fill="#1890ff"/>
+  <text x="380" y="194" font-family="Arial" font-size="12" fill="#666">65%</text>
+  
+  <!-- 构建日志 -->
+  <rect x="90" y="230" width="320" height="80" rx="4" fill="#f9f9f9" stroke="#e0e6f5" stroke-width="1"/>
+  <text x="100" y="250" font-family="monospace" font-size="10" fill="#666">> 正在构建Docker镜像...</text>
+  <text x="100" y="270" font-family="monospace" font-size="10" fill="#666">> 步骤 1/6: 拉取基础镜像 node:16-alpine</text>
+  <text x="100" y="290" font-family="monospace" font-size="10" fill="#666">> 步骤 2/6: 复制应用文件...</text>
+  
+  <!-- 优化指标 -->
+  <line x1="90" y1="330" x2="410" y2="330" stroke="#e0e6f5" stroke-width="1"/>
+  <text x="90" y="350" font-family="Arial" font-size="12" fill="#333">构建优化:</text>
+  <text x="170" y="350" font-family="Arial" font-size="12" fill="#1890ff">镜像大小减少 43% (210MB → 120MB)</text>
+</svg> 

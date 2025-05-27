@@ -1,0 +1,35 @@
+<svg width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="400" fill="#f5f8ff"/>
+  <rect x="100" y="80" width="300" height="240" rx="8" fill="#ffffff" stroke="#e0e6f5" stroke-width="2"/>
+  
+  <!-- 模板选择界面 -->
+  <rect x="120" y="100" width="260" height="40" rx="4" fill="#f0f7ff"/>
+  <text x="140" y="125" font-family="Arial" font-size="14" fill="#1890ff">项目初始化向导</text>
+  
+  <!-- 模板选项 -->
+  <rect x="130" y="160" width="70" height="80" rx="4" fill="#ffffff" stroke="#e0e6f5" stroke-width="1"/>
+  <rect x="130" y="160" width="70" height="20" rx="4" fill="#1890ff"/>
+  <text x="145" y="175" font-family="Arial" font-size="10" fill="#ffffff">Node.js</text>
+  <circle cx="165" cy="200" r="15" fill="#f0f7ff"/>
+  <text x="155" y="250" font-family="Arial" font-size="10" fill="#333333" text-anchor="middle">Web应用</text>
+  
+  <rect x="215" y="160" width="70" height="80" rx="4" fill="#ffffff" stroke="#e0e6f5" stroke-width="1"/>
+  <rect x="215" y="160" width="70" height="20" rx="4" fill="#1890ff"/>
+  <text x="230" y="175" font-family="Arial" font-size="10" fill="#ffffff">Python</text>
+  <circle cx="250" cy="200" r="15" fill="#f0f7ff"/>
+  <text x="250" y="250" font-family="Arial" font-size="10" fill="#333333" text-anchor="middle">API服务</text>
+  
+  <rect x="300" y="160" width="70" height="80" rx="4" fill="#ffffff" stroke="#e0e6f5" stroke-width="1"/>
+  <rect x="300" y="160" width="70" height="20" rx="4" fill="#1890ff"/>
+  <text x="315" y="175" font-family="Arial" font-size="10" fill="#ffffff">Java</text>
+  <circle cx="335" cy="200" r="15" fill="#f0f7ff"/>
+  <text x="335" y="250" font-family="Arial" font-size="10" fill="#333333" text-anchor="middle">微服务</text>
+  
+  <!-- 底部按钮 -->
+  <rect x="230" y="280" width="100" height="30" rx="15" fill="#1890ff"/>
+  <text x="280" y="300" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">下一步</text>
+  
+  <!-- 装饰元素 -->
+  <circle cx="420" cy="70" r="30" fill="#f0f7ff" opacity="0.6"/>
+  <circle cx="80" cy="320" r="40" fill="#f0f7ff" opacity="0.6"/>
+</svg> 
