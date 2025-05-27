@@ -2,7 +2,7 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-.container-2,
+.cont-bz,
 .meta3-content,
 .wrangle-stack-content,
 .meta4,.stack-section {
@@ -62,21 +62,24 @@ body {
 }
 
 .hero-subtitle span {
-    color: #101827;
+    color: #6B7280;
     font-weight: 500;
 }
 
 .cat-faq {
-    border: solid 1px #eaeaea;
-    background: #ffffff;
     color: #0a082b;
-    box-shadow: 0px 0px 0.809px 0px rgba(0, 0, 0, 0.05), 0px 3.742px 14.969px 0px rgba(182, 202, 224, 0.28);
-    ;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    letter-spacing: 1px;
+    border-bottom: solid 1px #333;
+    padding-bottom: 2px;
 }
 
 .cat-faq:hover {
-    background: #0b092b;
-    color: #ffffff;
+    color: #46a9fc;
+    border-bottom: solid 1px #46a9fc;
 }
 
 .diagram-img {
@@ -89,6 +92,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 14px;
+    flex-direction: column;
 }
 
 .trusted-by {
@@ -138,7 +142,7 @@ body {
     position: relative;
     width: 100%;
     height: auto;
-    margin: 50px auto 120px auto;
+    margin: 0px auto 120px auto;
 }
 
 /* SVG 线条样式 */
@@ -379,11 +383,12 @@ body {
     color: white;
     border-color: #0a082b;
 }
-
+.container-2{
+    padding-top: 120px;
+    border-top: solid 1px #e8e8e8;
+}
 .stack-content {
-    border-bottom: solid 1px #e8e8e8;
     padding-bottom: 140px;
-    margin-bottom: 120px;
 }
 
 .stack-description {
@@ -393,6 +398,7 @@ body {
     margin: 0 auto;
     text-align: center;
     margin-bottom: 30px;
+    letter-spacing: 1px;
 }
 
 .grid {
@@ -404,7 +410,7 @@ body {
     flex-wrap: wrap;
     overflow: hidden;
 }
-.grid>*:nth-child(n+20) {
+.grid>*:nth-child(n+12) {
     display: none;
 }
 
@@ -609,21 +615,25 @@ body {
 
 .wrangle-stack-header h2 {
     width: 50%;
-    font-size: 26px;
+    font-size: 20px;
+    line-height: 220%;
 }
 
 .wrangle-stack-header h2 span {
     font-size: 42px;
     font-weight: bold;
 }
-
 .wrangle-stack-description {
     width: 50%;
     color: #6B7280;
-    font-size: clamp(16px, 1vw, 18px);
-    line-height: 190%;
+    font-size: clamp(14px, 1vw, 16px);
+    line-height: 170%;
+    letter-spacing: 0.6px;
+    text-align: right;
 }
-
+.wrangle-stack-description span{
+    color: #000;
+}
 .wrangle-stack-item {
     padding: clamp(20px, 1vw, 30px);
     border-radius: 8px;
@@ -693,7 +703,7 @@ body {
     margin-bottom: 22px;
     padding: 18px;
     background: #ffffff;
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
 .meta3-icon {
@@ -722,16 +732,18 @@ body {
 .meta3-h3 h3 {
     font-size: 24px;
     font-weight: bold;
-    color: #161225;
+    color: #111827;
     margin-bottom: 10px;
 }
 
 .meta3-h3 p {
-    font-size: 14px;
-    color: #93919a;
+    font-size: 16px;
+    color: #6B7280;
     line-height: 180%;
 }
-
+.metabs-h3 .meta3-item {
+    background: #fafafa;
+}
 .meta3-h3 {
     margin-bottom: 30px;
 }
@@ -750,7 +762,7 @@ body {
 @media screen and (max-width: 1680px) {
 
     .hero-section,
-    .container-2,
+    .cont-bz,
     .meta3-content,
     .meta4 {
         max-width: 1280px;
@@ -776,7 +788,7 @@ body {
 @media screen and (max-width: 1440px) {
 
     .hero-section,
-    .container-2,
+    .cont-bz,
     .meta3-content,
     .meta4 {
         max-width: 1200px;
@@ -800,7 +812,7 @@ body {
 @media screen and (max-width: 1344px) {
 
     .hero-section,
-    .container-2,
+    .cont-bz,
     .meta3-content,
     .meta4,.stack-content {
         max-width: 1100px;
@@ -854,7 +866,7 @@ body {
 @media screen and (max-width: 1200px) {
 
     .hero-section,
-    .container-2,
+    .cont-bz,
     .meta3-content,
     .meta4,
     .stack-content {
@@ -877,7 +889,7 @@ body {
 @media screen and (max-width: 1100px) {
 
     .hero-section,
-    .container-2,
+    .cont-bz,
     .meta3-content,
     .meta4 {
         max-width: 900px;
@@ -908,7 +920,7 @@ body {
 @media screen and (max-width: 1024px) {
 
     .hero-section,
-    .container-2,
+    .cont-bz,
     .meta3-content,
     .meta4 {
         max-width: 800px;
@@ -939,7 +951,7 @@ body {
     }
 
     .hero-section,
-    .container-2,
+    .cont-bz,
     .meta3-content,
     .meta4 {
         padding: 20px 4%;
@@ -1111,17 +1123,7 @@ body {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
+

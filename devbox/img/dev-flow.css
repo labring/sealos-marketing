@@ -171,14 +171,15 @@
 }
 
 .dev-flow-step.active .dev-flow-step-content {
-  background: #f2f2f2;
+  background: linear-gradient(128deg, #080808 0%, #7b7777 100%);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 
 }
 
 .dev-flow-step.active .dev-flow-feature-tag{
-  background: #d5d5d5;
+  background: rgba(255, 255, 255, 0.08);
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+  color: white;
 }
 
 .dev-flow-step:hover .dev-flow-step-content {
@@ -188,7 +189,16 @@
 .active .dev-flow-step-title {
   font-size: 18px;
   font-weight: bold;
+  color: #ffffff;
 }
+
+.active .dev-flow-step-desc {
+  color: rgba(255, 255, 255, 0.75);
+
+}
+
+
+
 .dev-flow-step-title{
   font-size: 16px;
   font-weight: 400;
