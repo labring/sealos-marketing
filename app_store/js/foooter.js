@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const footerHtml = `<div class="h5_footer">
     <div class="h5footkj">
-      <div class="h5footerlogo"><div class="h5footerlogo2"><img src="https://ads.sealos.run/app_store/img/sealos.svg"><h2 class="footer-title">Sealos</h2></div>
+      <div class="h5footerlogo"><div class="h5footerlogo2"><img src="/app_store/img/sealos.svg"><h2 class="footer-title">Sealos</h2></div>
         <p>以 kubernetes 为内核的云操作系统</p>
       </div>
       <div class="h5footerlm">

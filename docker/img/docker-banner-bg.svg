@@ -1,0 +1,47 @@
+<svg width="1440" height="500" viewBox="0 0 1440 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景渐变 -->
+  <rect width="1440" height="500" fill="url(#paint0_linear)" />
+  
+  <!-- 网格线 -->
+  <g opacity="0.1" stroke="white">
+    <line x1="0" y1="100" x2="1440" y2="100" stroke-width="1" />
+    <line x1="0" y1="200" x2="1440" y2="200" stroke-width="1" />
+    <line x1="0" y1="300" x2="1440" y2="300" stroke-width="1" />
+    <line x1="0" y1="400" x2="1440" y2="400" stroke-width="1" />
+    
+    <line x1="200" y1="0" x2="200" y2="500" stroke-width="1" />
+    <line x1="400" y1="0" x2="400" y2="500" stroke-width="1" />
+    <line x1="600" y1="0" x2="600" y2="500" stroke-width="1" />
+    <line x1="800" y1="0" x2="800" y2="500" stroke-width="1" />
+    <line x1="1000" y1="0" x2="1000" y2="500" stroke-width="1" />
+    <line x1="1200" y1="0" x2="1200" y2="500" stroke-width="1" />
+  </g>
+  
+  <!-- 装饰圆圈 -->
+  <circle cx="120" cy="120" r="60" fill="white" fill-opacity="0.05" />
+  <circle cx="1320" cy="380" r="80" fill="white" fill-opacity="0.05" />
+  
+  <!-- 背景云图案 -->
+  <g opacity="0.15">
+    <path d="M400 150C400 172.091 382.091 190 360 190H240C217.909 190 200 172.091 200 150C200 127.909 217.909 110 240 110H360C382.091 110 400 127.909 400 150Z" fill="white"/>
+    <path d="M1200 320C1200 342.091 1182.09 360 1160 360H1040C1017.91 360 1000 342.091 1000 320C1000 297.909 1017.91 280 1040 280H1160C1182.09 280 1200 297.909 1200 320Z" fill="white"/>
+  </g>
+  
+  <!-- Docker容器图标装饰 -->
+  <g opacity="0.2" transform="translate(900, 100)">
+    <rect x="0" y="0" width="40" height="40" rx="4" fill="white"/>
+    <rect x="50" y="0" width="40" height="40" rx="4" fill="white"/>
+    <rect x="0" y="50" width="40" height="40" rx="4" fill="white"/>
+    <rect x="50" y="50" width="40" height="40" rx="4" fill="white"/>
+    <rect x="100" y="0" width="40" height="40" rx="4" fill="white"/>
+    <rect x="100" y="50" width="40" height="40" rx="4" fill="white"/>
+  </g>
+  
+  <!-- 背景渐变定义 -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="1440" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1e3a8a" />
+      <stop offset="1" stop-color="#3b82f6" />
+    </linearGradient>
+  </defs>
+</svg> 

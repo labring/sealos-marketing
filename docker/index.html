@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="unload=()">
+    <title>Sealos云原生Docker部署平台 | 一键容器化应用部署与代码托管</title>
+    <meta name="description" content="Sealos云原生应用部署平台提供Docker容器化部署、DevBox云开发、静态代码托管和数据库部署等一站式解决方案，让应用部署像使用手机APP一样简单高效。">
+    <meta name="keywords" content="Sealos,云原生,Docker部署,容器化部署,云原生应用,代码托管,项目部署,DevBox云开发,数据库部署,Kubernetes,云平台,应用管理,弹性伸缩,免费域名">
+    <link rel="canonical" href="https://sealos.run/docker/" />
+    <meta property="og:title" content="Sealos云原生Docker部署平台 | 一键容器化应用部署与代码托管" />
+    <meta property="og:description" content="Sealos云原生应用部署平台提供Docker容器化部署、DevBox云开发、静态代码托管和数据库部署等一站式解决方案，让应用部署像使用手机APP一样简单高效。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sealos.run/docker/" />
+    <meta property="og:image" content="https://sealos.run/favicon.ico" />
+    <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico">
+    <link rel="stylesheet" href="/docker/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/app_store/css/appstore-xq.css">
+    <link rel="stylesheet" href="/docker/docker.css">
+    <style>
+        /* 改善文本渲染 */
+        html {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+    </style>
+
+    <!-- 结构化数据 - 软件应用 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Sealos云原生Docker部署平台",
+      "description": "Sealos是一个以Kubernetes为内核的云操作系统，提供一站式云原生应用部署平台，包括Docker容器化部署、DevBox云开发、静态代码托管和数据库部署等功能，让应用部署像使用手机APP一样简单高效。",
+      "operatingSystem": "All",
+      "applicationCategory": "CloudComputing",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY"
+      },
+      "keywords": "Sealos,Docker部署,容器化部署,云原生应用,代码托管,项目部署,DevBox云开发,数据库部署",
+      "url": "https://sealos.run/docker/"
+    }
+  </script>
+
+    <!-- 优化百度统计脚本加载 -->
+    <script async src="https://hm.baidu.com/hm.js?d8e8ecf669c47dc2512d3f1417e761f9"></script>
+    <script async src="https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"></script>
+
+    <script src="/imgs/js/h5_Q3_C1.js" defer></script>
+    <script src="/app_store/js/appstor.js" defer></script>
+    <script src="/app_store/js/stars.js" defer></script>
+    <script src="/js/sem-devbox.js" defer></script>
+    <script src="/app_store/js/navbar.js" defer></script>
+    <script src="/app_store/js/foooter.js" defer></script>
+    <script src="/docker/docker.js" defer></script>
+    <script src="/docker/js/code-hosting.js" defer></script>
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "q8gnm02cz6");
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="navbar-container"></div>
+    </header>
+
+    <!-- 应用部署解决方案模块 -->
+    <section class="docker-solution-section">
+        <div class="container">
+            <div class="docker-banner">
+                <h1 class="docker-solution-title">Sealos云原生应用部署解决方案</h1>
+                <p class="docker-solution-desc">无需购买云服务器，Sealos提供Docker容器化部署、DevBox云开发、静态代码托管和数据库部署等多类型应用部署方案，满足不同场景的应用交付、扩展、更新需求</p>
+
+                <div class="docker-solution-tabs">
+                    <button class="docker-solution-tab active" data-target="docker-deploy">Docker容器化部署</button>
+                    <button class="docker-solution-tab" data-target="project-deploy">DevBox云开发部署</button>
+                    <button class="docker-solution-tab" data-target="code-hosting">静态代码托管</button>
+                    <!--<button class="docker-solution-tab" data-target="serverless-deploy">Serverless 部署</button>-->
+                    <button class="docker-solution-tab" data-target="database-deploy">数据库部署</button>
+                </div>
+            </div>
+
+            <!-- Docker部署面板 -->
+            <div id="docker-deploy" class="docker-solution-panel active">
+                <div class="docker-banner2">
+                    <div class="device-wrapper">
+                        <img src="/docker/img/docker.svg" alt="Sealos Docker容器化部署平台" class="docker-step-image">
+                    </div>
+                </div>
+
+                <div class="docker-fade-cptd docker-section-title">
+                    <h2><span>Docker容器化部署功能特性</span></h2>
+                    <div class="docker-advantages-grid docker-fade-in">
+
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/rongqi.svg" alt="一键容器化"></div>
+                            <div class="docker-adv-card">
+                                <h3>一键容器化</h3>
+                                <p>预配置Docker命令及YAML文件，只需填写镜像地址，自动构建运行</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/tanxing.svg" alt="弹性伸缩"></div>
+                            <div class="docker-adv-card">
+                                <h3>弹性伸缩</h3>
+                                <p>云资源自动扩展及负载均衡，基于负载指标自动调整实例数量和CPU、内存配置</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/yuming.svg" alt="免费域名"></div>
+                            <div class="docker-adv-card">
+                                <h3>免费域名</h3>
+                                <p>每个应用默认分配二级域名，默认配置HTTPS，支持绑定自己的域名</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/geli.svg" alt="安全隔离"></div>
+                            <div class="docker-adv-card">
+                                <h3>安全隔离</h3>
+                                <p>基于Kubernetes安全机制，提供网络策略、RBAC权限控制和镜像安全扫描</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/anliang.svg" alt="按量扣费"></div>
+                            <div class="docker-adv-card">
+                                <h3>按量扣费</h3>
+                                <p>基于实际资源使用量，每小时计费，暂停不计费，支持定时开关机</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/chixu.svg" alt="持续集成和部署"></div>
+                            <div class="docker-adv-card">
+                                <h3>持续集成和部署</h3>
+                                <p>内置CI/CD能力，只需更新镜像地址，便可自动构建和重新部署应用</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="docker-section-title docker-fade-in visible">
+                    <h2><span>为什么选择 Sealos Docker 部署</span></h2>
+                    <p>传统 Docker 部署的痛点，我们都帮您解决了</p>
+                    <div class="docker-data-comparison">
+                        <div class="docker-comparison-table">
+                            <table class="doccker-therad">
+                                <thead>
+                                    <tr>
+                                        <th>对比项</th>
+                                        <th>传统 Docker 部署</th>
+                                        <th>Sealos Docker 部署</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>部署时间</td>
+                                        <td>30分钟</td>
+                                        <td>1分钟</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>资源利用率</td>
+                                        <td>20 - 30%</td>
+                                        <td>70 - 80%</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>扩容速度</td>
+                                        <td>小时级</td>
+                                        <td>3-5秒</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>更新应用</td>
+                                        <td>重新构建</td>
+                                        <td>替换镜像</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>学习成本</td>
+                                        <td>需要容器、网络、运维能力</td>
+                                        <td>可视化操作页面</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>运维人力</td>
+                                        <td>需要运维团队</td>
+                                        <td>Sealos 技术团队支持</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docker-steps-section docker-section-title docker-fade-in">
+                    <h2><span>简单4步, 1分钟完成Docker容器化部署</span></h2>
+                    <div class="docker-steps-container">
+                        <div class="docker-step active" onclick="switchDockerStep(1, 'docker')">1. 基础配置</div>
+                        <div class="docker-step" onclick="switchDockerStep(2, 'docker')">2. 网络配置</div>
+                        <div class="docker-step" onclick="switchDockerStep(3, 'docker')">3. 高级配置</div>
+                        <div class="docker-step" onclick="switchDockerStep(4, 'docker')">4. 部署成功</div>
+                    </div>
+                    <div class="docker-step-content-wrapper" id="docker-step-docker-1" style="display: block;">
+                        <div class="docker-step-description">
+                            填写 Docker 镜像地址，自定义云服务器资源，单日消耗实时预览
+                        </div>
+
+                        <div class="docker-step-content">
+
+                            <img src="/docker/img/jichupeizhi.svg" alt="Sealos Docker基础配置界面" class="docker-step-image">
+                        </div>
+
+                    </div>
+                    <div class="docker-step-content-wrapper" id="docker-step-docker-2" style="display: none;">
+                        <div class="docker-step-description">
+                            默认分配可访问二级域名，支持自定义域名解析，自动配置 HTTPS
+                        </div>
+                        <div class="docker-step-content">
+
+                            <img src="/docker/img/wangluopeizhi.svg" alt="Sealos Docker网络配置" class="docker-step-image">
+                        </div>
+
+                    </div>
+
+                    <!-- 步骤3内容 -->
+                    <div class="docker-step-content-wrapper" id="docker-step-docker-3" style="display: none;">
+                        <div class="docker-step-description">
+                            补充启动项目命令，按需配置高级项
+                        </div>
+                        <div class="docker-step-content">
+
+                            <img src="/docker/img/gaojipeizhi.svg" alt="Sealos Docker高级配置" class="docker-step-image">
+                        </div>
+
+                    </div>
+
+                    <!-- 步骤4内容 -->
+                    <div class="docker-step-content-wrapper" id="docker-step-docker-4" style="display: none;">
+
+                        <div class="docker-step-description">
+                            可视化应用管理页
+                        </div>
+                        <div class="docker-step-content">
+
+                            <img src="/docker/img/bushuchengg.svg" alt="Sealos Docker部署成功界面" class="docker-step-image">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 适用场景 -->
+                <div class="docker-use-cases-section docker-section-title docker-fade-in">
+                    <h2><span>Sealos Docker部署完美适配您的使用场景</span></h2>
+                    <div class="docker-use-cases-grid">
+                        <div class="docker-use-case-item">
+                            <div class="docker-use-case-icon">🏢</div>
+                            <h4>企业应用迁移</h4>
+                            <p>传统应用快速容器化，实现云原生转型</p>
+                        </div>
+                        <div class="docker-use-case-item">
+                            <div class="docker-use-case-icon">🔄</div>
+                            <h4>微服务架构</h4>
+                            <p>统一管理多个微服务，简化服务配置</p>
+                        </div>
+                        <div class="docker-use-case-item">
+                            <div class="docker-use-case-icon">🚀</div>
+                            <h4>快速原型开发</h4>
+                            <p>快速部署测试环境，加速产品迭代验证</p>
+                        </div>
+                        <div class="docker-use-case-item">
+                            <div class="docker-use-case-icon">⚡</div>
+                            <h4>CI/CD流水线</h4>
+                            <p>无缝集成开发流程，实现自动化部署</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA区域 -->
+                <div class="docker-deploy-cta docker-fade-in">
+                    <div class="docker-cta-content">
+                        <h3>立即体验 Sealos Docker 部署的智能化</h3>
+                        <p>加入数万开发者，让容器部署从此变得简单高效</p>
+                        <div class="docker-cta-buttons">
+                            <a href="https://cloud.sealos.run/" class="docker-btn-primary">立即免费体验</a>
+                            <a href="https://www.bilibili.com/video/BV1pHC6YAEHy" target="_blank"
+                                class="docker-btn-secondary">观看部署演示</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Devbox 项目部署面板 -->
+            <div id="project-deploy" class="docker-solution-panel">
+                <div class="docker-banner2">
+                    <div class="device-wrapper">
+                        <img src="/docker/img/devboxbanb.svg" alt="Sealos DevBox云开发部署" class="docker-step-image">
+                    </div>
+                </div>
+
+                <div class="docker-fade-cptd docker-section-title">
+                    <h2><span>DevBox云开发部署功能特性</span></h2>
+                    <div class="docker-advantages-grid docker-fade-in">
+
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/kongzhuangtai.svg" alt="开箱即用"></div>
+                            <div class="docker-adv-card">
+                                <h3>开箱即用</h3>
+                                <p>内置云主机及各类开发工具，拖拽项目代码即可进行自动部署测试。</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/bianma.svg" alt="云开发"></div>
+                            <div class="docker-adv-card">
+                                <h3>云开发</h3>
+                                <p>项目代码云端存储，本地AI 编程，免费二级域名实时预览</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/yuming.svg" alt="免费域名"></div>
+                            <div class="docker-adv-card">
+                                <h3>免费域名</h3>
+                                <p>每个应用默认分配二级域名，默认配置 HTTPS，支持绑定自己的域名</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/geli.svg" alt="统一环境"></div>
+                            <div class="docker-adv-card">
+                                <h3>统一环境</h3>
+                                <p>开发、测试、环境一致，但资源隔离，互不影响</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/anliang.svg" alt="按量扣费"></div>
+                            <div class="docker-adv-card">
+                                <h3>按量扣费</h3>
+                                <p>基于实际资源使用量，每小时计费，暂停不计费，支持定时开关机</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/chixu.svg" alt="企业级安全"></div>
+                            <div class="docker-adv-card">
+                                <h3>企业级安全</h3>
+                                <p>覆盖阿里云、腾讯云、谷歌云多区域部署，自研负载均衡支持万级节点。</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="docker-section-title docker-fade-in visible">
+                    <h2><span>为什么选择 Sealos DevBox 云开发部署项目</span></h2>
+                    <p>传统开发部署的痛点，我们都帮您解决了</p>
+                    <div class="docker-data-comparison">
+                        <div class="docker-comparison-table">
+                            <table class="doccker-therad">
+                                <thead>
+                                    <tr>
+                                        <th>对比项</th>
+                                        <th>传统开发</th>
+                                        <th>DevBox 云开发</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>架构差异</td>
+                                        <td>多基于虚拟机，启动慢，资源开销大</td>
+                                        <td>基于Kubernetes Pod，秒级启动，资源利用率更高</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>云原生开发</td>
+                                        <td>存在部分差异化</td>
+                                        <td>开发环境就是生产环境</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>环境限制</td>
+                                        <td>硬件资源限制</td>
+                                        <td>不限 Devbox 项目数量</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>费用成本</td>
+                                        <td>硬件投入</td>
+                                        <td>按秒计费+休眠</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>多集群</td>
+                                        <td>-</td>
+                                        <td>跨集群开发</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>存储</td>
+                                        <td>固定大小</td>
+                                        <td>弹性伸缩</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>网络</td>
+                                        <td>基础端口</td>
+                                        <td>多端口自定义</td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docker-steps-section docker-section-title docker-fade-in">
+                    <h2><span>简单4步, 1分钟完成DevBox云开发部署</span></h2>
+                    <div class="docker-steps-container">
+                        <div class="docker-step active" onclick="switchDockerStep(1, 'project')">1. 创建项目</div>
+                        <div class="docker-step" onclick="switchDockerStep(2, 'project')">2. IDE连接</div>
+                        <div class="docker-step" onclick="switchDockerStep(3, 'project')">3. 开发调试</div>
+                        <div class="docker-step" onclick="switchDockerStep(4, 'project')">4. 部署上线</div>
+                    </div>
+                    <div class="docker-step-content-wrapper" id="docker-step-project-1" style="display: block;">
+                        <div class="docker-step-description">
+                            3秒启动一个云开发环境
+                        </div>
+
+                        <div class="docker-step-content">
+                            <video class="video-player" autoplay="" loop="" muted="" playsinline="" width="100%"
+                                style="display: block; cursor: pointer;">
+                                <source src="/devbox/img/xinjianxm.mp4?t=1750131760078" type="video/mp4">
+                            </video>
+
+                        </div>
+
+                    </div>
+                    <div class="docker-step-content-wrapper" id="docker-step-project-2" style="display: none;">
+                        <div class="docker-step-description">
+                            任何设备、任何地点，无缝开发
+                        </div>
+                        <div class="docker-step-content">
+
+                            <video class="video-player" autoplay="" loop="" muted="" playsinline="" width="100%"
+                                style="display: block; cursor: pointer;">
+                                <source src="/devbox/img/lianjieide.mp4?t=1750131839707" type="video/mp4">
+                            </video>
+                        </div>
+
+                    </div>
+
+                    <!-- 步骤3内容 -->
+                    <div class="docker-step-content-wrapper" id="docker-step-project-3" style="display: none;">
+                        <div class="docker-step-description">
+                            本地 AI 编码，外网链接在线调试
+                        </div>
+                        <div class="docker-step-content">
+
+                            <video class="video-player" autoplay="" loop="" muted="" playsinline="" width="100%"
+                                style="display: block; cursor: pointer;">
+                                <source src="/devbox/img/kaiftiaoshi.mp4?t=1750131872257" type="video/mp4">
+                            </video>
+                        </div>
+
+                    </div>
+
+                    <!-- 步骤4内容 -->
+                    <div class="docker-step-content-wrapper" id="docker-step-project-4" style="display: none;">
+
+                        <div class="docker-step-description">
+                            内置版本管理，自动打包 OCL 镜像上线正式环境
+                        </div>
+                        <div class="docker-step-content">
+
+                            <video class="video-player" autoplay="" loop="" muted="" playsinline="" width="100%"
+                                style="display: block; cursor: pointer;">
+                                <source src="/devbox/img/bushushangxian.mp4?t=1750131917168" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <!-- 适用场景 -->
+                <div class="docker-use-cases-section docker-section-title docker-fade-in">
+                    <h2><span>Sealos DevBox云开发完美适配您的使用场景</span></h2>
+                    <div class="docker-use-cases-grid">
+                        <div class="docker-use-case-item">
+                            <div class="docker-use-case-icon">🏢</div>
+                            <h4>企业应用迁移</h4>
+                            <p>传统应用快速容器化，实现云原生转型</p>
+                        </div>
+                        <div class="docker-use-case-item">
+                            <div class="docker-use-case-icon">🔄</div>
+                            <h4>微服务架构</h4>
+                            <p>统一管理多个微服务，简化服务配置</p>
+                        </div>
+                        <div class="docker-use-case-item">
+                            <div class="docker-use-case-icon">🚀</div>
+                            <h4>快速原型开发</h4>
+                            <p>快速部署测试环境，加速产品迭代验证</p>
+                        </div>
+                        <div class="docker-use-case-item">
+                            <div class="docker-use-case-icon">⚡</div>
+                            <h4>CI/CD流水线</h4>
+                            <p>无缝集成开发流程，实现自动化部署</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA区域 -->
+                <div class="docker-deploy-cta docker-fade-in">
+                    <div class="docker-cta-content">
+                        <h3>体验 Sealos DevBox云开发的智能化</h3>
+                        <p>加入数万开发者，让项目开发部署从此变得简单高效</p>
+                        <div class="docker-cta-buttons">
+                            <a href="https://cloud.sealos.run/" class="docker-btn-primary">立即免费体验</a>
+                            <a href="/devbox" target="_blank" class="docker-btn-secondary">查看 DevBox 详细介绍</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 代码托管面板 -->
+            <div id="code-hosting" class="docker-solution-panel">
+                <div class="docker-banner2">
+                    <div class="device-wrapper">
+                        <img src="/docker/img/screenshot-20250617-122556.png" alt="Sealos静态代码托管平台" class="docker-step-image">
+                    </div>
+                </div>
+
+                <div class="docker-fade-cptd docker-section-title">
+                    <h2><span>静态代码托管功能特性</span></h2>
+                    <div class="docker-advantages-grid docker-fade-in">
+
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/rongqi.svg" alt="企业级存储"></div>
+                            <div class="docker-adv-card">
+                                <h3>从 TB 到 PB，企业级存储 </h3>
+                                <p>支持 TB 到 PB 级数据无缝迁移，完全兼容 AWS S3 API，多语言 SDK 开箱即用</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/tanxing.svg" alt="裸机速度"></div>
+                            <div class="docker-adv-card">
+                                <h3>裸机速度 + 无限扩展</h3>
+                                <p>I/O 延迟降至毫秒级，支持 PB 级弹性扩容，跨地域容灾备份，去中心化架构消除单点故障</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/yuming.svg" alt="免费域名"></div>
+                            <div class="docker-adv-card">
+                                <h3>免费域名</h3>
+                                <p>每个应用默认分配二级域名，默认配置 HTTPS，支持绑定自己的域名。</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/geli.svg" alt="双重加密"></div>
+                            <div class="docker-adv-card">
+                                <h3>存储+传输双重加密 + 跨地域容灾</h3>
+                                <p>端到端数据加密保护，完整性校验确保数据不丢失。多冗余备份 + 异地容灾，跨账号安全共享</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/anliang.svg" alt="按量扣费"></div>
+                            <div class="docker-adv-card">
+                                <h3>按量扣费</h3>
+                                <p>基于实际资源使用量，每小时计费，暂停不计费，支持定时开关机</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/chixu.svg" alt="企业级安全"></div>
+                            <div class="docker-adv-card">
+                                <h3>企业级安全</h3>
+                                <p>覆盖阿里云、腾讯云、谷歌云多区域部署，自研负载均衡支持万级节点。</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="docker-steps-section docker-section-title docker-fade-in">
+                    <h2><span>简单3步,1分钟完成静态代码托管部署</span></h2>
+                    <div class="docker-steps-container">
+                        <div class="docker-step active" data-step="1" data-panel="code">1. 创建存储桶</div>
+                        <div class="docker-step" data-step="2" data-panel="code">2. 代码上传</div>
+                        <div class="docker-step" data-step="3" data-panel="code">3. 开启托管</div>
+                        <div class="docker-step" data-step="4" data-panel="code">4. 部署成功</div>
+                    </div>
+                    <div class="docker-step-content-wrapper" id="docker-step-code-1" style="display: block;">
+                        <div class="docker-step-description">
+                            创建存储桶，选择权限 publicReadwrite
+                        </div>
+                        <div class="docker-step-content">
+                            <img src="/docker/img/screenshot-20250617-150107.png" alt="Sealos代码托管创建存储桶"
+                                class="docker-step-image">
+                        </div>
+
+                    </div>
+                    <div class="docker-step-content-wrapper" id="docker-step-code-2" style="display: none;">
+                        <div class="docker-step-description">
+                            拖拽或点击上传代码文件
+                        </div>
+                        <div class="docker-step-content">
+
+                            <img src="/docker/img/screenshot-20250617-150445.png" alt="Sealos代码托管上传代码" class="docker-step-image">
+                        </div>
+
+                    </div>
+
+                    <!-- 步骤3内容 -->
+                    <div class="docker-step-content-wrapper" id="docker-step-code-3" style="display: none;">
+                        <div class="docker-step-description">
+                            开启托管，获取免费二级域名访问
+                        </div>
+                        <div class="docker-step-content">
+
+                            <img src="/docker/img/screenshot-20250617-150550.png" alt="Sealos代码托管开启托管" class="docker-step-image">
+                        </div>
+
+                    </div>
+
+                    <!-- 步骤4内容 -->
+                    <div class="docker-step-content-wrapper" id="docker-step-code-4" style="display: none;">
+                        <div class="docker-step-description">
+                            绑定自定义域名
+                        </div>
+                        <div class="docker-step-content">
+
+                            <img src="/docker/img/screenshot-20250617-150803.png" alt="Sealos代码托管绑定域名" class="docker-step-image">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 适用场景 -->
+                <div class="docker-use-cases-section docker-section-title docker-fade-in">
+                    <h2><span>Sealos静态代码托管完美适配您的使用场景</span></h2>
+                    <div class="docker-use-cases-grid">
+                        <div class="docker-use-case-item">
+                            <div class="docker-use-case-icon">🏢</div>
+                            <h4>高速存储</h4>
+                            <p>替代传统NAS/SAN存储</p>
+                        </div>
+                        <div class="docker-use-case-item">
+                            <div class="docker-use-case-icon">🔄</div>
+                            <h4>微服务架构</h4>
+                            <p>统一管理多个微服务，简化服务配置</p>
+                        </div>
+                        <div class="docker-use-case-item">
+                            <div class="docker-use-case-icon">🚀</div>
+                            <h4>快速原型开发</h4>
+                            <p>快速部署测试环境，加速产品迭代验证</p>
+                        </div>
+                        <div class="docker-use-case-item">
+                            <div class="docker-use-case-icon">⚡</div>
+                            <h4>CI/CD流水线</h4>
+                            <p>无缝集成开发流程，实现自动化部署</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA区域 -->
+                <div class="docker-deploy-cta docker-fade-in">
+                    <div class="docker-cta-content">
+                        <h3>体验 Sealos 静态代码托管的智能化</h3>
+                        <p>加入数万开发者，让代码托管从此变得简单高效</p>
+                        <div class="docker-cta-buttons">
+                            <a href="https://cloud.sealos.run/" class="docker-btn-primary">立即免费体验</a>
+                            <a href="/" target="_blank"
+                                class="docker-btn-secondary">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serverless 部署面板 
+            <div id="serverless-deploy" class="docker-solution-panel">
+                <div class="docker-banner2">
+                    <div class="device-wrapper">
+                        <img src="/docker/img/laf.svg" alt="Docker 部署" class="docker-step-image">
+                    </div>
+                </div>
+
+                <div class="docker-fade-cptd docker-section-title">
+                    <h2><span>功能特性</span></h2>
+                    <div class="docker-advantages-grid docker-fade-in">
+
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/rongqi.svg"></div>
+                            <div class="docker-adv-card">
+                                <h3>开箱即用</h3>
+                                <p>无需本地安装配置各种开发工具。拖拽项目代码即可进行公网地址测试。</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/tanxing.svg"></div>
+                            <div class="docker-adv-card">
+                                <h3>云开发</h3>
+                                <p>项目代码云端存储，本地AI助力编程，支持实时协作和即时预览。</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/yuming.svg"></div>
+                            <div class="docker-adv-card">
+                                <h3>免费域名</h3>
+                                <p>每个应用默认分配二级域名，默认配置 HTTPS，支持绑定自己的域名。</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/geli.svg"></div>
+                            <div class="docker-adv-card">
+                                <h3>统一环境</h3>
+                                <p>测试即生产，提供与线上完全一致的测试环境，服务端、数据库、依赖项一模一样。</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/anliang.svg"></div>
+                            <div class="docker-adv-card">
+                                <h3>按量扣费</h3>
+                                <p>基于实际资源使用量，每小时计费，暂停不计费，支持定时开关机</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/chixu.svg"></div>
+                            <div class="docker-adv-card">
+                                <h3>企业级安全</h3>
+                                <p>覆盖阿里云、腾讯云、谷歌云多区域部署，自研负载均衡支持万级节点。</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="docker-section-title docker-fade-in visible">
+                    <h2><span>为什么选择 Sealos Devbox 部署项目</span></h2>
+                    <p>传统 Docker 部署的痛点，我们都帮您解决了</p>
+                    <div class="docker-data-comparison">
+                        <div class="docker-comparison-table">
+                            <table class="doccker-therad">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>传统开发</th>
+                                        <th>Devbox 云开发</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>环境配置</td>
+                                        <td>1 - 3 小时本地、测试、正式环境配置</td>
+                                        <td>秒级启动，即开即用，本地/测试/正式环境一致</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>资源利用率</td>
+                                        <td>20 - 30%</td>
+                                        <td>70 - 80%</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>扩容速度</td>
+                                        <td>小时级</td>
+                                        <td>3-5秒</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>更新应用</td>
+                                        <td>重新构建</td>
+                                        <td>替换镜像</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>学习成本</td>
+                                        <td>需要容器、网络、运维能力</td>
+                                        <td>可视化操作页面</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>运维人力</td>
+                                        <td>需要运维团队</td>
+                                        <td>Sealos 技术团队支持</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docker-steps-section docker-section-title docker-fade-in">
+                    <h2><span>简单4步完成部署</span></h2>
+                    <div class="docker-steps-container">
+                        <div class="docker-step active" onclick="switchDockerStep(1, 'serverless')">1. 函数编写</div>
+                        <div class="docker-step" onclick="switchDockerStep(2, 'serverless')">2. 触发器配置</div>
+                        <div class="docker-step" onclick="switchDockerStep(3, 'serverless')">3. 权限设置</div>
+                        <div class="docker-step" onclick="switchDockerStep(4, 'serverless')">4. 一键部署</div>
+                    </div>
+                    <div class="docker-step-content-wrapper" id="docker-step-serverless-1" style="display: block;">
+
+                        <div class="docker-step-content">
+                            <div class="device-top-bar"></div>
+                            <img src="/docker/img/jichupeizhi.svg" alt="函数编写" class="docker-step-image">
+                        </div>
+                        <div class="docker-step-description">
+                            支持多种语言编写函数，内置常用模板和AI辅助编码
+                        </div>
+                    </div>
+                    <div class="docker-step-content-wrapper" id="docker-step-serverless-2" style="display: none;">
+
+                        <div class="docker-step-content">
+                            <div class="device-top-bar"></div>
+                            <img src="/docker/img/wangluopeizhi.svg" alt="触发器配置" class="docker-step-image">
+                        </div>
+                        <div class="docker-step-description">
+                            HTTP触发、定时触发、事件触发多种方式灵活选择
+                        </div>
+                    </div>
+
+               
+                    <div class="docker-step-content-wrapper" id="docker-step-serverless-3" style="display: none;">
+                        <div class="docker-step-content">
+                            <div class="device-top-bar"></div>
+                            <img src="/docker/img/gaojipeizhi.svg" alt="权限设置" class="docker-step-image">
+                        </div>
+                        <div class="docker-step-description">
+                            可视化权限配置，精细化控制资源访问权限
+                        </div>
+                    </div>
+
+                   
+                    <div class="docker-step-content-wrapper" id="docker-step-serverless-4" style="display: none;">
+
+                        <div class="docker-step-content">
+                            <div class="device-top-bar"></div>
+                            <img src="/docker/img/bushuchengg.svg" alt="一键部署" class="docker-step-image">
+                        </div>
+                        <div class="docker-step-description">
+                            秒级部署，自动扩缩容，按调用次数计费
+                        </div>
+                    </div>
+                </div>
+
+
+               
+                <div class="docker-use-cases-section docker-section-title docker-fade-in">
+                    <h2><span>完美适配您的使用场景</span></h2>
+                    <div class="docker-use-cases-grid">
+                        <div class="docker-use-case-item">
+                            <div class="docker-use-case-icon">🏢</div>
+                            <h4>企业应用迁移</h4>
+                            <p>传统应用快速容器化，实现云原生转型</p>
+                        </div>
+                        <div class="docker-use-case-item">
+                            <div class="docker-use-case-icon">🔄</div>
+                            <h4>微服务架构</h4>
+                            <p>统一管理多个微服务，简化服务配置</p>
+                        </div>
+                        <div class="docker-use-case-item">
+                            <div class="docker-use-case-icon">🚀</div>
+                            <h4>快速原型开发</h4>
+                            <p>快速部署测试环境，加速产品迭代验证</p>
+                        </div>
+                        <div class="docker-use-case-item">
+                            <div class="docker-use-case-icon">⚡</div>
+                            <h4>CI/CD流水线</h4>
+                            <p>无缝集成开发流程，实现自动化部署</p>
+                        </div>
+                    </div>
+                </div>
+
+              
+                <div class="docker-deploy-cta docker-fade-in">
+                    <div class="docker-cta-content">
+                        <h3>体验 Sealos Docker 部署的智能化</h3>
+                        <p>加入数万开发者，让容器部署从此变得简单高效</p>
+                        <div class="docker-cta-buttons">
+                            <a href="https://cloud.sealos.run/" class="docker-btn-primary">立即免费体验</a>
+                            <a href="https://www.bilibili.com/video/BV1pHC6YAEHy" target="_blank"
+                                class="docker-btn-secondary">观看部署演示</a>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+
+            <!-- 数据库部署面板 -->
+            <div id="database-deploy" class="docker-solution-panel">
+                <div class="docker-banner2">
+
+                    <div class="device-wrapper">
+                        <img src="/docker/img/deatess.svg" alt="Sealos云原生数据库部署平台" class="docker-step-image">
+                    </div>
+                   
+                </div>
+
+                <div class="docker-fade-cptd docker-section-title">
+                    <h2><span>云原生数据库部署功能特性</span></h2>
+                    <div class="docker-advantages-grid docker-fade-in">
+
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/rongqi.svg" alt="成本优化"></div>
+                            <div class="docker-adv-card">
+                                <h3>70% 成本直接腰斩</h3>
+                                <p>0.4元/核、0.2元/GB的白菜价，让你用传统云数据库30%的成本，获得6倍性能提升。</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/tanxing.svg" alt="高性能"></div>
+                            <div class="docker-adv-card">
+                                <h3>百万QPS秒杀一切</h3>
+                                <p>项内核级优化+智能读写分离+多级缓存，百万级QPS轻松应对，1-3ms极速响应，让用户体验丝般顺滑。</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/yuming.svg" alt="快速部署"></div>
+                            <div class="docker-adv-card">
+                                <h3>30秒从零完成部署</h3>
+                                <p>一个YAML配置，30秒自动部署完成，DBA专家2周的工作量秒级搞定。集群、备份、监控、安全全自动配置</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/geli.svg" alt="高可靠性"></div>
+                            <div class="docker-adv-card">
+                                <h3>99.9999%可靠性</h3>
+                                <p>3副本+跨地域+智能故障切换，10秒故障检测，30秒自动恢复</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/anliang.svg" alt="按量扣费"></div>
+                            <div class="docker-adv-card">
+                                <h3>按量扣费</h3>
+                                <p>基于实际资源使用量，每小时计费，暂停不计费，支持定时开关机</p>
+                            </div>
+                        </div>
+                        <div class="docker-advantage-card ">
+                            <div class="docker-adv-ico"><img src="/docker/img/chixu.svg" alt="企业级防护"></div>
+                            <div class="docker-adv-card">
+                                <h3>企业级防护</h3>
+                                <p>VPC网络隔离+SSL强制加密+多重身份认证，构建数据库安全铁壁。自动备份+连续保护+跨地域容灾</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="docker-steps-section docker-section-title docker-fade-in">
+                    <h2><span>简单4步，1分钟完成数据库部署</span></h2>
+                    <div class="docker-steps-container">
+                        <div class="docker-step active" onclick="switchDockerStep(1, 'database')">1. 选择数据库类型</div>
+                        <div class="docker-step" onclick="switchDockerStep(2, 'database')">2. 配置备份</div>
+                        <div class="docker-step" onclick="switchDockerStep(3, 'database')">3. 安全设置</div>
+                        <div class="docker-step" onclick="switchDockerStep(4, 'database')">4. 连接使用</div>
+                    </div>
+                    <div class="docker-step-content-wrapper" id="docker-step-database-1" style="display: block;">
+                        <div class="docker-step-description">
+                            支持MySQL、PostgreSQL、MongoDB、Redis等多种数据库类型，自定义CPU、内存、存储容量，支持高可用配置
+                        </div>
+                        <div class="docker-step-content">
+                            
+                            <img src="/docker/img/bushudatabase.svg" alt="Sealos数据库部署选择数据库类型" class="docker-step-image">
+                        </div>
+                      
+                    </div>
+                    <div class="docker-step-content-wrapper" id="docker-step-database-2" style="display: none;">
+                        <div class="docker-step-description">
+                           配置备份项
+                        </div>
+                        <div class="docker-step-content">
+                       
+                            <img src="/docker/img/sjkbf.svg" alt="Sealos数据库部署配置备份" class="docker-step-image">
+                        </div>
+                      
+                    </div>
+
+                    <!-- 步骤3内容 -->
+                    <div class="docker-step-content-wrapper" id="docker-step-database-3" style="display: none;">
+                        <div class="docker-step-description">
+                            支持在线、文件数据导入
+                        </div>
+                        <div class="docker-step-content">
+                     
+                            <img src="/docker/img/shujudaoru.svg" alt="Sealos数据库部署安全设置" class="docker-step-image">
+                        </div>
+                      
+                    </div>
+
+                    <!-- 步骤4内容 -->
+                    <div class="docker-step-content-wrapper" id="docker-step-database-4" style="display: none;">
+                        <div class="docker-step-description">
+                           开启外网地址，使用数据库工具连接
+                        </div>
+                        <div class="docker-step-content">
+                    
+                            <img src="/docker/img/deatess.svg" alt="Sealos数据库部署连接使用" class="docker-step-image">
+                        </div>
+                      
+                    </div>
+                </div>
+
+                <!-- CTA区域 -->
+                <div class="docker-deploy-cta docker-fade-in shujukudb">
+                    <div class="docker-cta-content">
+                        <h3>体验 Sealos 云原生数据库部署的智能化</h3>
+                        <p>加入数万开发者，让数据库部署从此变得简单高效</p>
+                        <div class="docker-cta-buttons">
+                            <a href="https://cloud.sealos.run/" class="docker-btn-primary">立即免费体验</a>
+                            <a href="https://www.bilibili.com/video/BV1pHC6YAEHy" target="_blank"
+                                class="docker-btn-secondary">观看部署演示</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Hero 区域 -->
+    <section class="docker-hero" id="home">
+        <!-- ... existing code ... -->
+    </section>
+
+    <div class="h5footer" id="footer"></div>
+
+
+    <!-- 脚本 -->
+    <script>
+        // 创建导航栏内容
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbarContainer = document.getElementById('navbar-container');
+            if (navbarContainer) {
+                navbarContainer.innerHTML = `
+                    <nav class="navbar">
+                        <div class="navbar-brand">
+                            <a href="/">
+                                <img src="/app_store/img/logo.png" alt="Sealos Logo" class="navbar-logo">
+                            </a>
+                        </div>
+                        <div class="navbar-menu">
+                            <a href="/" class="navbar-item">首页</a>
+                            <a href="/app_store" class="navbar-item">应用商店</a>
+                            <a href="/docker" class="navbar-item active">应用部署</a>
+                            <a href="/devbox" class="navbar-item">云开发</a>
+                            <a href="/price" class="navbar-item">价格</a>
+                            <a href="https://cloud.sealos.run/" class="navbar-item login-btn">登录/注册</a>
+                        </div>
+                        <div class="navbar-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </nav>
+                `;
+                
+                // 添加移动端导航栏切换功能
+                const navbarToggle = document.querySelector('.navbar-toggle');
+                const navbarMenu = document.querySelector('.navbar-menu');
+                
+                navbarToggle.addEventListener('click', function() {
+                    navbarMenu.classList.toggle('active');
+                });
+            }
+            
+            // 创建页脚内容
+            const footerContainer = document.getElementById('footer');
+            if (footerContainer) {
+                footerContainer.innerHTML = `
+                    <div class="footer-content">
+                        <div class="footer-section">
+                            <h3>Sealos产品</h3>
+                            <ul>
+                                <li><a href="/app_store">应用商店</a></li>
+                                <li><a href="/docker">Docker容器化部署</a></li>
+                                <li><a href="/devbox">DevBox云开发</a></li>
+                                <li><a href="/docker">静态代码托管</a></li>
+                                <li><a href="/docker">云原生数据库</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h3>技术资源</h3>
+                            <ul>
+                                <li><a href="https://docs.sealos.io/">技术文档</a></li>
+                                <li><a href="https://github.com/labring/sealos">GitHub开源</a></li>
+                                <li><a href="/price">价格方案</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h3>关于我们</h3>
+                            <ul>
+                                <li><a href="/about">公司介绍</a></li>
+                                <li><a href="/contact">联系我们</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h3>联系方式</h3>
+                            <p>邮箱: contact@sealos.io</p>
+                            <div class="social-icons">
+                                <a href="https://github.com/labring/sealos" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://twitter.com/sealosio" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2024 Sealos云原生应用部署平台. 保留所有权利。</p>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+
+</html>

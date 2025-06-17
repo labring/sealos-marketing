@@ -645,8 +645,8 @@
       }
 
       p {
-        margin-bottom: 1em;
-        line-height: 1.6;
+        margin-bottom: 0;
+        line-height: 0;
         font-weight: 400;
       }
 
@@ -657,10 +657,12 @@
       }
 
       h2 {
-        font-size: 24px;
+        font-size: 16px;
         line-height: 1.3;
-        margin-bottom: 0.5em;
       }
+      .btn {
+       margin-left: 0px;
+    }
 
       h3 {
         font-size: 20px;
@@ -701,7 +703,7 @@
       }
 
       h2 {
-        font-size: 20px;
+        font-size: 16px;
       }
 
       h3 {
@@ -793,7 +795,7 @@
           <button class="tab-button tabico3" data-tab="tab3" role="tab" aria-selected="false" aria-controls="tab3"><img
               src="/imgs/tabico3-ac.png" title="sealos对象存储ico" alt="sealos对象存储ico">对象存储</button>
           <button class="tab-button tabico4" data-tab="tab4" role="tab" aria-selected="false" aria-controls="tab4"><img
-              src="/imgs/tabico4-ac.png" title="sealos laf ico" alt="sealos laf ico">云开发Laf</button>
+              src="/imgs/tabico4-ac.png" title="sealos laf ico" alt="sealos laf ico">Laf</button>
 
           <!--<a href="/aiproxy/" class="tab-button"><img src="/imgs/tabico4-ac.png">AI Proxy</a>-->
         </div>
@@ -1422,29 +1424,7 @@
       // 导航菜单优化
       const navbar = document.querySelector('#navbar-container');
       if (navbar) {
-        const menuButton = document.createElement('button');
-        menuButton.className = 'menu-toggle';
-        menuButton.innerHTML = '&#9776;'; // 汉堡图标
-        menuButton.style.display = 'none';
-        menuButton.style.background = 'none';
-        menuButton.style.border = 'none';
-        menuButton.style.fontSize = '24px';
-        menuButton.style.cursor = 'pointer';
-        menuButton.style.padding = '5px';
-
-        // 在小屏幕上显示菜单按钮
-        const mediaQuery = window.matchMedia('(max-width: 768px)');
-        function handleScreenChange(e) {
-          if (e.matches) {
-            menuButton.style.display = 'block';
-          } else {
-            menuButton.style.display = 'none';
-            const navLinks = document.querySelector('.navbar-links');
-            if (navLinks) {
-              navLinks.classList.remove('active');
-            }
-          }
-        }
+       
 
         // 使用更现代的事件监听方法
         try {
@@ -1473,24 +1453,7 @@
         }
       }
 
-      // Tab切换优化：使用事件委托
-      const tabSection = document.querySelector('.tab-section');
-      if (tabSection) {
-        tabSection.addEventListener('click', function (e) {
-          if (e.target.classList.contains('tab-button') || e.target.parentElement.classList.contains('tab-button')) {
-            const btn = e.target.classList.contains('tab-button') ? e.target : e.target.parentElement;
-            const tabId = btn.dataset.tab;
-
-            // 移除所有活动状态
-            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
-
-            // 设置当前活动状态
-            btn.classList.add('active');
-            document.getElementById(tabId)?.classList.add('active');
-          }
-        });
-      }
+     
 
       // 图片懒加载优化
       if ('loading' in HTMLImageElement.prototype) {
