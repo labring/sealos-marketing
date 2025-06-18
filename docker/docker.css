@@ -70,7 +70,7 @@ body {
 }
 
 .docker-solution-section {
-    margin-top: 160px;
+    padding-top: 180px;
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
@@ -212,7 +212,7 @@ body {
     z-index: 1;
     font-size: 1.1rem;
     max-width: 1000px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 4rem;
     opacity: 0.9;
     line-height: 1.7;
     letter-spacing: 1px;
@@ -274,7 +274,7 @@ body {
     font-size: 2.5rem;
     font-weight: var(--font-weight-bold);
     color: #000000;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.4rem;
     letter-spacing: -0.03em;
     background-clip: text;
     text-align: center;
@@ -326,7 +326,6 @@ body {
 }
 .docker-solution-panel .shujukudb{
     margin-top: 100px;
-    margin-bottom: 80px;
 }
 .docker-solution-tab::before {
     content: '';
