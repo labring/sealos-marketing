@@ -76,12 +76,13 @@
     <section class="docker-solution-section">
         <div class="container">
             <div class="docker-banner">
-                <h1 class="docker-solution-title">Sealos云原生应用部署解决方案</h1>
-                <p class="docker-solution-desc">无需购买云服务器，Sealos提供Docker容器化部署、DevBox云开发、静态代码托管和数据库部署等多类型应用部署方案，满足不同场景的应用交付、扩展、更新需求</p>
 
+                <h1 class="docker-solution-title">应用部署解决方案</h1>
+                <p class="docker-solution-desc">无需购买云服务器，Sealos提供 Docker 容器化部署、DevBox 云开发部署、静态代码托管和数据库部署等多类型应用部署方案，满足不同场景的应用交付、扩展、更新需求</p>
                 <div class="docker-solution-tabs">
-                    <button class="docker-solution-tab active" data-target="docker-deploy">Docker容器化部署</button>
-                    <button class="docker-solution-tab" data-target="project-deploy">DevBox云开发部署</button>
+                    <button class="docker-solution-tab active" data-target="docker-deploy">Docker部署</button>
+                    <button class="docker-solution-tab" data-target="project-deploy">DevBox 云开发</button>
+
                     <button class="docker-solution-tab" data-target="code-hosting">静态代码托管</button>
                     <!--<button class="docker-solution-tab" data-target="serverless-deploy">Serverless 部署</button>-->
                     <button class="docker-solution-tab" data-target="database-deploy">数据库部署</button>
@@ -209,10 +210,12 @@
                 <div class="docker-steps-section docker-section-title docker-fade-in">
                     <h2><span>简单4步, 1分钟完成Docker容器化部署</span></h2>
                     <div class="docker-steps-container">
-                        <div class="docker-step active" onclick="switchDockerStep(1, 'docker')">1. 基础配置</div>
-                        <div class="docker-step" onclick="switchDockerStep(2, 'docker')">2. 网络配置</div>
-                        <div class="docker-step" onclick="switchDockerStep(3, 'docker')">3. 高级配置</div>
-                        <div class="docker-step" onclick="switchDockerStep(4, 'docker')">4. 部署成功</div>
+
+                        <div class="docker-step active" data-step="1" data-panel="docker">1. 基础配置</div>
+                        <div class="docker-step" data-step="2" data-panel="docker">2. 网络配置</div>
+                        <div class="docker-step" data-step="3" data-panel="docker">3. 高级配置</div>
+                        <div class="docker-step" data-step="4" data-panel="docker">4. 部署成功</div>
+
                     </div>
                     <div class="docker-step-content-wrapper" id="docker-step-docker-1" style="display: block;">
                         <div class="docker-step-description">
@@ -429,10 +432,12 @@
                 <div class="docker-steps-section docker-section-title docker-fade-in">
                     <h2><span>简单4步, 1分钟完成DevBox云开发部署</span></h2>
                     <div class="docker-steps-container">
-                        <div class="docker-step active" onclick="switchDockerStep(1, 'project')">1. 创建项目</div>
-                        <div class="docker-step" onclick="switchDockerStep(2, 'project')">2. IDE连接</div>
-                        <div class="docker-step" onclick="switchDockerStep(3, 'project')">3. 开发调试</div>
-                        <div class="docker-step" onclick="switchDockerStep(4, 'project')">4. 部署上线</div>
+
+                        <div class="docker-step active" data-step="1" data-panel="project">1. 创建项目</div>
+                        <div class="docker-step" data-step="2" data-panel="project">2. IDE连接</div>
+                        <div class="docker-step" data-step="3" data-panel="project">3. 开发调试</div>
+                        <div class="docker-step" data-step="4" data-panel="project">4. 部署上线</div>
+
                     </div>
                     <div class="docker-step-content-wrapper" id="docker-step-project-1" style="display: block;">
                         <div class="docker-step-description">
@@ -802,10 +807,12 @@
                 <div class="docker-steps-section docker-section-title docker-fade-in">
                     <h2><span>简单4步完成部署</span></h2>
                     <div class="docker-steps-container">
-                        <div class="docker-step active" onclick="switchDockerStep(1, 'serverless')">1. 函数编写</div>
-                        <div class="docker-step" onclick="switchDockerStep(2, 'serverless')">2. 触发器配置</div>
-                        <div class="docker-step" onclick="switchDockerStep(3, 'serverless')">3. 权限设置</div>
-                        <div class="docker-step" onclick="switchDockerStep(4, 'serverless')">4. 一键部署</div>
+
+                        <div class="docker-step active" data-step="1" data-panel="serverless">1. 函数编写</div>
+                        <div class="docker-step" data-step="2" data-panel="serverless">2. 触发器配置</div>
+                        <div class="docker-step" data-step="3" data-panel="serverless">3. 权限设置</div>
+                        <div class="docker-step" data-step="4" data-panel="serverless">4. 一键部署</div>
+
                     </div>
                     <div class="docker-step-content-wrapper" id="docker-step-serverless-1" style="display: block;">
 
@@ -957,10 +964,12 @@
                 <div class="docker-steps-section docker-section-title docker-fade-in">
                     <h2><span>简单4步，1分钟完成数据库部署</span></h2>
                     <div class="docker-steps-container">
-                        <div class="docker-step active" onclick="switchDockerStep(1, 'database')">1. 选择数据库类型</div>
-                        <div class="docker-step" onclick="switchDockerStep(2, 'database')">2. 配置备份</div>
-                        <div class="docker-step" onclick="switchDockerStep(3, 'database')">3. 安全设置</div>
-                        <div class="docker-step" onclick="switchDockerStep(4, 'database')">4. 连接使用</div>
+
+                        <div class="docker-step active" data-step="1" data-panel="database">1. 选择数据库类型</div>
+                        <div class="docker-step" data-step="2" data-panel="database">2. 配置备份</div>
+                        <div class="docker-step" data-step="3" data-panel="database">3. 安全设置</div>
+                        <div class="docker-step" data-step="4" data-panel="database">4. 连接使用</div>
+
                     </div>
                     <div class="docker-step-content-wrapper" id="docker-step-database-1" style="display: block;">
                         <div class="docker-step-description">
@@ -1025,10 +1034,7 @@
 
     </section>
 
-    <!-- Hero 区域 -->
-    <section class="docker-hero" id="home">
-        <!-- ... existing code ... -->
-    </section>
+
 
     <div class="h5footer" id="footer"></div>
 

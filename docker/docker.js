@@ -13,20 +13,15 @@ document.addEventListener('DOMContentLoaded', function() {
   initSolutionTabs(); // 解决方案标签页功能
   initFadeInElements(); // 添加滚动淡入动画
   
-  // 初始化步骤显示
-  if (document.querySelector('#docker-deploy')) {
-    switchDockerStep(1, 'docker');
-  }
-  if (document.querySelector('#project-deploy')) {
-    switchDockerStep(1, 'project');
-  }
-  // code-hosting模块由专门的JavaScript文件处理
-  if (document.querySelector('#serverless-deploy')) {
-    switchDockerStep(1, 'serverless');
-  }
-  if (document.querySelector('#database-deploy')) {
-    switchDockerStep(1, 'database');
-  }
+
+  // 初始化所有面板的第一个步骤
+  ['docker', 'project', 'code', 'serverless', 'database'].forEach(panelType => {
+    const panel = document.querySelector(`#${panelType}-deploy`);
+    if (panel) {
+      switchDockerStep(1, panelType);
+    }
+  });
+
 
   // 标签切换功能
   const tabs = document.querySelectorAll('.docker-solution-tab');
@@ -54,7 +49,9 @@ document.addEventListener('DOMContentLoaded', function() {
       const stepNumber = this.getAttribute('data-step');
       const panelType = this.getAttribute('data-panel');
       if (stepNumber && panelType) {
-        switchDockerStep(stepNumber, panelType);
+
+        switchDockerStep(parseInt(stepNumber), panelType);
+
       }
     });
   });
@@ -92,15 +89,20 @@ function switchDockerStep(stepNumber, panelType) {
   // 显示当前步骤
   document.getElementById(`docker-step-${panelType}-${stepNumber}`).style.display = 'block';
   
-  // 更新步骤指示器
-  const stepIndicators = document.querySelectorAll(`.docker-steps-container .docker-step`);
-  stepIndicators.forEach((indicator, index) => {
-    if (index + 1 <= stepNumber) {
-      indicator.classList.add('active');
-    } else {
-      indicator.classList.remove('active');
-    }
-  });
+
+  // 更新步骤指示器 - 只更新当前面板的步骤按钮
+  const panel = document.getElementById(`${panelType}-deploy`);
+  if (panel) {
+    const stepIndicators = panel.querySelectorAll(`.docker-step`);
+    stepIndicators.forEach((indicator, index) => {
+      if (index + 1 <= stepNumber) {
+        indicator.classList.add('active');
+      } else {
+        indicator.classList.remove('active');
+      }
+    });
+  }
+
 }
 
 /**
@@ -160,6 +162,29 @@ function initSolutionTabs() {
             el.classList.add('visible');
           }, 50);
         });
+
+        
+        // 重新初始化该面板的步骤按钮状态
+        const panelType = targetId.replace('-deploy', '');
+        if (['docker', 'project', 'code', 'serverless', 'database'].includes(panelType)) {
+          // 获取当前显示的步骤
+          const activeStepContent = targetPanel.querySelector('.docker-step-content-wrapper[style*="display: block"]');
+          if (activeStepContent) {
+            const stepMatch = activeStepContent.id.match(/docker-step-(\w+)-(\d+)/);
+            if (stepMatch && stepMatch[2]) {
+              const currentStep = parseInt(stepMatch[2]);
+              switchDockerStep(currentStep, panelType);
+            } else {
+              // 默认显示第一步
+              switchDockerStep(1, panelType);
+            }
+          } else {
+            // 默认显示第一步
+            switchDockerStep(1, panelType);
+          }
+        }
+
+
       }
     });
   });
