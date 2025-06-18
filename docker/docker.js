@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initSolutionTabs(); // 解决方案标签页功能
   initFadeInElements(); // 添加滚动淡入动画
   
+
   // 初始化所有面板的第一个步骤
   ['docker', 'project', 'code', 'serverless', 'database'].forEach(panelType => {
     const panel = document.querySelector(`#${panelType}-deploy`);
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
       switchDockerStep(1, panelType);
     }
   });
+
 
   // 标签切换功能
   const tabs = document.querySelectorAll('.docker-solution-tab');
@@ -47,7 +49,9 @@ document.addEventListener('DOMContentLoaded', function() {
       const stepNumber = this.getAttribute('data-step');
       const panelType = this.getAttribute('data-panel');
       if (stepNumber && panelType) {
+
         switchDockerStep(parseInt(stepNumber), panelType);
+
       }
     });
   });
@@ -85,6 +89,7 @@ function switchDockerStep(stepNumber, panelType) {
   // 显示当前步骤
   document.getElementById(`docker-step-${panelType}-${stepNumber}`).style.display = 'block';
   
+
   // 更新步骤指示器 - 只更新当前面板的步骤按钮
   const panel = document.getElementById(`${panelType}-deploy`);
   if (panel) {
@@ -97,6 +102,7 @@ function switchDockerStep(stepNumber, panelType) {
       }
     });
   }
+
 }
 
 /**
@@ -156,6 +162,7 @@ function initSolutionTabs() {
             el.classList.add('visible');
           }, 50);
         });
+
         
         // 重新初始化该面板的步骤按钮状态
         const panelType = targetId.replace('-deploy', '');
@@ -176,6 +183,8 @@ function initSolutionTabs() {
             switchDockerStep(1, panelType);
           }
         }
+
+
       }
     });
   });
