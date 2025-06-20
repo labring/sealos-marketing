@@ -410,9 +410,7 @@ body {
     flex-wrap: wrap;
     overflow: hidden;
 }
-.grid>*:nth-child(n+12) {
-    display: none;
-}
+
 
 
 .wrangle-stack-group {
@@ -778,9 +776,7 @@ body {
         top: 78%;
     }
 
-    .grid>*:nth-child(n+14) {
-        display: none;
-    }
+   
 }
 
 
@@ -804,9 +800,7 @@ body {
         top: 80%;
     }
 
-    .grid>*:nth-child(n+14) {
-        display: none;
-    }
+
 }
 
 @media screen and (max-width: 1344px) {
@@ -820,9 +814,7 @@ body {
         margin: 0 auto;
     }
 
-    .grid>*:nth-child(n+14) {
-        display: none;
-    }
+  
 
     .commit2 {
         position: absolute;
@@ -902,9 +894,7 @@ body {
         left: 51%;
     }
 
-    .grid>*:nth-child(n+11) {
-        display: none;
-    }
+    
 
     .wrangle-version {
         height: 120px;
