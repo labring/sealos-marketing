@@ -153,7 +153,7 @@ table {
 
 
 .tips img {
-  width: 70%;
+  width: 85%;
 }
 
 .navbar-container {
@@ -802,7 +802,7 @@ video {
   margin-top: 60px;
   background-image: url('../bgEllipse114.svg');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100% 200%;
   width: 100%;
 }
 
@@ -1480,7 +1480,6 @@ video {
   font-size: clamp(1.5rem, 3vw, 2.625rem);
   font-style: normal;
   font-weight: 700;
-  padding-left: 0.475em;
 }
 
 .hero-section {
@@ -1659,7 +1658,7 @@ a {
   border-radius: 12px;
   border: 1px solid #E6EDF9;
   display: flex;
-  padding: 20px 0px 20px 84px;
+  padding: 30px 0px 30px 84px;
   gap: 12px;
   flex: 1 0 0;
   flex-direction: column;
@@ -1668,21 +1667,21 @@ a {
 .iconh1 {
   background-image: url('../rocket.svg');
   background-size: 64px;
-  background-position: 20px 6px;
+  background-position: 20px 14px;
   background-repeat: no-repeat;
 }
 
 .iconh2 {
   background-image: url('../rmb.svg');
   background-size: 64px;
-  background-position: 20px 6px;
+  background-position: 20px 14px;
   background-repeat: no-repeat;
 }
 
 .iconh3 {
   background-image: url('../app_store.svg');
   background-size: 64px;
-  background-position: 20px 6px;
+  background-position: 20px 14px;
   background-repeat: no-repeat;
 }
 

@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div id="github-stars" class="gitico">Loading stars...</div>
             </div></a>
             <a href="https://cloud.sealos.run/signin/" target="_blank" class="login-link">
-                <button class="btn"> 登<P>录</P> </button>
+                <button class="btn"> 登录</button>
             </a>
         </div>
     </div>

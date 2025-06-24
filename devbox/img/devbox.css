@@ -410,10 +410,6 @@ body {
     flex-wrap: wrap;
     overflow: hidden;
 }
-.grid>*:nth-child(n+12) {
-    display: none;
-}
-
 
 .wrangle-stack-group {
     display: flex;
@@ -485,7 +481,7 @@ body {
 .version {
     font-size: 10px;
     color: #0884dd;
-    background: #f0f1f6;
+    background: #f4f4f6;
     padding: 2px 4px;
     border-radius: 4px;
     text-align: center;
@@ -524,9 +520,6 @@ body {
     background: #EBFAFD;
 }
 
-.wrangle-stack-item:nth-child(1) h3 {}
-
-.wrangle-stack-item:nth-child(1) .wrangle-version {}
 
 .wrangle-stack-item:nth-child(1) .wrangle-icon-wrapper {
     color: var(--Teal-500, #13C4B9);
@@ -538,9 +531,7 @@ body {
     background: #EFF8FF;
 }
 
-.wrangle-stack-item:nth-child(2) h3 {}
 
-.wrangle-stack-item:nth-child(2) .wrangle-version {}
 
 .wrangle-stack-item:nth-child(2) .wrangle-icon-wrapper {
     color: var(--Bright-Blue-500, #219BF4);
@@ -551,9 +542,7 @@ body {
     background: #F0F5FF;
 }
 
-.wrangle-stack-item:nth-child(3) h3 {}
 
-.wrangle-stack-item:nth-child(3) .wrangle-version {}
 
 .wrangle-stack-item:nth-child(3) .wrangle-icon-wrapper {
     color: var(--Royal-Blue-400, #5E8FFF);
@@ -564,9 +553,7 @@ body {
     background: #F6F5FF;
 }
 
-.wrangle-stack-item:nth-child(4) .wrangle-version {}
 
-.wrangle-stack-item:nth-child(4) h3 {}
 
 .wrangle-stack-item:nth-child(4) .wrangle-icon-wrapper {
     color: var(--Adora-400, #9E8DFB);
@@ -778,9 +765,7 @@ body {
         top: 78%;
     }
 
-    .grid>*:nth-child(n+14) {
-        display: none;
-    }
+  
 }
 
 
@@ -804,10 +789,7 @@ body {
         top: 80%;
     }
 
-    .grid>*:nth-child(n+14) {
-        display: none;
-    }
-}
+}   
 
 @media screen and (max-width: 1344px) {
 
@@ -820,10 +802,7 @@ body {
         margin: 0 auto;
     }
 
-    .grid>*:nth-child(n+14) {
-        display: none;
-    }
-
+ 
     .commit2 {
         position: absolute;
         width: 390px;
@@ -902,9 +881,7 @@ body {
         left: 51%;
     }
 
-    .grid>*:nth-child(n+11) {
-        display: none;
-    }
+   
 
     .wrangle-version {
         height: 120px;
@@ -1121,9 +1098,74 @@ body {
  
         line-height: 160%;
     }
-
-
 }
 
+/* DevBox FAQ Section Styles - Updated for simple two-column layout */
+.devbox-faq {
+  padding: 120px 0;
+}
 
+.devbox-faq h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  font-weight: 600;
+}
 
+.docs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.docs-column {
+  flex: 1;
+}
+
+.docs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.docs-list li {
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.docs-list li:before {
+  content: "•";
+  color: #3eacfb;
+  font-size: 24px;
+  position: absolute;
+  left: 0;
+  top: -4px;
+}
+
+.docs-list a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+  display: block;
+}
+
+.docs-list a:hover {
+  color: #3eacfb;
+}
+
+@media (max-width: 768px) {
+  .docs-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .docs-list li {
+    margin-bottom: 15px;
+  }
+}
