@@ -69,6 +69,11 @@ document.addEventListener('DOMContentLoaded', function () {
         newUrl += (newUrl.includes('?') ? '&' : '?') + 'k=' + encodeURIComponent(kValue)
       }
 
+      var searchValue = urlParams.get('search')
+      if (searchValue) {
+        newUrl += (newUrl.includes('?') ? '&' : '?') + 'search=' + encodeURIComponent(searchValue)
+      }
+
       newUrl += (newUrl.includes('?') ? '&' : '?') + 's=价格'
 
       const arr = ['cloud.sealos.run','mp.weixin.qq.com','template.cloud.sealos.run','sealos.run/docs','feishu.cn']
