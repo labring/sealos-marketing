@@ -13,7 +13,29 @@ document.addEventListener('DOMContentLoaded', function () {
       window.history.replaceState({}, '', urlObj.toString());
     }
   }
-  
+
+  function getAdClickData(urlParams) {
+		// baidu ad
+		const bdVid = urlParams.get('bd_vid');
+		if (bdVid) {
+			return {
+				clickId: bdVid,
+				urlParam: 'bd_vid',
+			};
+		}
+
+		// bing ad
+		const msclkid = urlParams.get('msclkid');
+		if (msclkid) {
+			return {
+				clickId: msclkid,
+				urlParam: 'msclkid',
+			};
+		}
+
+		return null;
+  }
+
   // 页面加载时更新s参数
   updateSParameter();
   
@@ -35,16 +57,21 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault()
 
       var urlParams = new URLSearchParams(window.location.search)
-      var bdVid = urlParams.get('bd_vid')
-      var kValue = urlParams.get('k')
+      var newUrl = baseUrl;
 
-      var newUrl = baseUrl
-      if (bdVid) {
-        newUrl += (baseUrl.includes('?') ? '&' : '?') + 'bd_vid=' + encodeURIComponent(bdVid)
+      var adClickData = getAdClickData(urlParams);
+      if (adClickData) {
+        newUrl += (baseUrl.includes('?') ? '&' : '?') + adClickData.urlParam + '=' + encodeURIComponent(adClickData.clickId);
       }
 
+      var kValue = urlParams.get('k')
       if (kValue) {
         newUrl += (newUrl.includes('?') ? '&' : '?') + 'k=' + encodeURIComponent(kValue)
+      }
+
+      var searchValue = urlParams.get('search')
+      if (searchValue) {
+        newUrl += (newUrl.includes('?') ? '&' : '?') + 'search=' + encodeURIComponent(searchValue)
       }
 
       newUrl += (newUrl.includes('?') ? '&' : '?') + 's=Devbox'
