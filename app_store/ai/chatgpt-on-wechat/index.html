@@ -1,121 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>使用Sealos部署ChatGpt-On-Wechat教程</title>
-  <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
-  <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico">
-  <script src="../../../app_store/js/appstor.js" defer></script><script src="/app_store/js/stars.js" defer></script>
-  <script src="../../../app_store/js/navbar.js"></script>
-  <script src="../../../app_store/js/header-left.js"></script>
-  <script src="../../../app_store/js/about-right.js"></script>
-  <script src="../../../app_store/js/foooter.js"></script>
-  <script src="../../../app_store/js/step.js"></script>
-  <script src="/js/sem.js" defer></script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "q8gnm02cz6");
-</script>
-</head>
-
-<body>
-  <div id="navbar-container"></div>
-  <div class="stepxq">
-    <div class="left-list" id="left-header">
-    </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('.nav-item[data-page="AI"]').classList.add('active')
-        document.querySelector('li[data-page="chatgpt-on-wechat"]').classList.add('active')
-        document.getElementById('menu_sub').style.display = 'block'
-      });
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用Sealos部署ChatGpt-On-Wechat教程</title>
+    <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css" />
+    <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico" />
+    <script src="../../../app_store/js/appstor.js" defer></script>
+    <script src="/app_store/js/stars.js" defer></script>
+    <script src="../../../app_store/js/navbar.js"></script>
+    <script src="../../../app_store/js/header-left.js"></script>
+    <script src="../../../app_store/js/about-right.js"></script>
+    <script src="../../../app_store/js/foooter.js"></script>
+    <script src="../../../app_store/js/step.js"></script>
+    <script src="/js/sem.js" defer></script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'q8gnm02cz6');
     </script>
-    <div class="app-h5">
-      <div class="hard-top">
-        <div class="hard-title-stats">
-          <div class="title-stats">
-            <div class="title-logo"><img src="../../img/26161723.jpeg" alt="Logo"></div>
-            <div class="hard-top-title">
-              <div class="hard-top2">
-                <h1>Chatgpt-On-Wechat</h1>
-                <span class="stats"> <span class="stars"><img src="../../img/AFFINE-logo2.svg">30.9k</span> <span
-                    class="shares"><img src="../../img/project.svg"><a href="https://github.com/toeverything/AFFiNE"
-                      target="_blank">项目首页</a></span> </span>
+  </head>
+
+  <body>
+    <div id="navbar-container"></div>
+    <div class="stepxq">
+      <div class="left-list" id="left-header"></div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelector('.nav-item[data-page="AI"]').classList.add('active');
+          document.querySelector('li[data-page="chatgpt-on-wechat"]').classList.add('active');
+          document.getElementById('menu_sub').style.display = 'block';
+        });
+      </script>
+      <div class="app-h5">
+        <div class="hard-top">
+          <div class="hard-title-stats">
+            <div class="title-stats">
+              <div class="title-logo"><img src="../../img/26161723.jpeg" alt="Logo" /></div>
+              <div class="hard-top-title">
+                <div class="hard-top2">
+                  <h1>Chatgpt-On-Wechat</h1>
+                  <span class="stats">
+                    <span class="stars"><img src="../../img/AFFINE-logo2.svg" />30.9k</span>
+                    <span class="shares"
+                      ><img src="../../img/project.svg" /><a
+                        href="https://github.com/toeverything/AFFiNE"
+                        target="_blank"
+                        >项目首页</a
+                      ></span
+                    >
+                  </span>
+                </div>
+                <p class="app-decistore">
+                  聊天即创意，沟通随心！让对话瞬间升级，智能语言交互即刻实现。
+                </p>
               </div>
-              <p class="app-decistore">聊天即创意，沟通随心！让对话瞬间升级，智能语言交互即刻实现。</p>
+            </div>
+            <div class="buttons">
+              <button class="yaml-button">
+                <a href="./images/chatgpt-on-wechat.yaml" download>导出 Yaml</a>
+              </button>
+              <button class="deploy-button">
+                <a
+                  href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dchatgpt-on-wechat%26sealos_inside%3Dtrue"
+                  target="_blank"
+                  >一键安装</a
+                >
+              </button>
             </div>
           </div>
-          <div class="buttons">
-            <button class="yaml-button">
-              <a href="./images/chatgpt-on-wechat.yaml" download>导出 Yaml</a>
-            </button>
-            <button class="deploy-button">
-              <a href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dchatgpt-on-wechat%26sealos_inside%3Dtrue"
-                target="_blank">一键安装</a>
-            </button>
+          <div class="carousel">
+            <div class="carousel-container">
+              <img src="./images/banner1.png" alt="Image 1" class="carousel-item active" />
+              <img src="./images/banner2.png" alt="Image 2" class="carousel-item active" />
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-button prev">&lt;</button>
+              <button class="carousel-button next">&gt;</button>
+            </div>
+            <script src="../../../app_store/js/bannerlb.js"></script>
           </div>
-        </div>
-        <div class="carousel">
-          <div class="carousel-container">
-            <img src="./images/banner1.png" alt="Image 1" class="carousel-item active">
-            <img src="./images/banner2.png" alt="Image 2" class="carousel-item active">
-
+          <div class="quick-start">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />如何部署在线 Chatgpt-On-Wechat
+            </h2>
+            <div class="steps" id="steper"></div>
           </div>
-          <div class="carousel-nav">
-            <button class="carousel-button prev">&lt;</button>
-            <button class="carousel-button next">&gt;</button>
-          </div>
-          <script src="../../../app_store/js/bannerlb.js"></script>
-        </div>
-        <div class="quick-start">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 Chatgpt-On-Wechat</h2>
-          <div class="steps" id="steper">
-
-          </div>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 Chatgpt-On-Wechat</h2>
-          <ul class="features-list-ul">
-            <li>
-              Chatgpt-on-wechat是一个前沿的开源项目，是一个基于大模型的智能对话机器人。支持微信、企业微信、公众号、飞书、钉钉接入。旨在将OpenAI的先进自然语言处理模型ChatGPT与微信等平台深度融合，实现高度智能化和人性化的文本交互服务，可选择GPT3.5/GPT4.0/Claude/文心一言/讯飞星火/通义千问/Gemini/LinkAI/ZhipuAI，能处理文本、语音和图片，通过插件访问操作系统和互联网等外部资源，支持基于自有知识库定制企业AI应用。该项目聚焦于提升微信用户的聊天体验，通过精准理解用户意图并生成连贯、逻辑清晰且富有创意的文本回复。
-            </li>
-          </ul>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
-          <ul class="features-list-ul">
-            <ul dir="auto">
-              <li>✅ <strong>多端部署：</strong> 有多种部署方式可选择且功能完备，目前已支持微信公众号、企业微信应用、飞书、钉钉等部署方式</li>
-              <li>✅ <strong>基础对话：</strong> 私聊及群聊的消息智能回复，支持多轮会话上下文记忆，支持 GPT-3.5, GPT-4o-mini, GPT-4o, GPT-4, Claude-3.5,
-                Gemini, 文心一言, 讯飞星火, 通义千问，ChatGLM-4，Kimi(月之暗面), MiniMax</li>
-              <li>✅ <strong>语音能力：</strong> 可识别语音消息，通过文字或语音回复，支持 azure, baidu, google, openai(whisper/tts) 等多种语音模型</li>
-              <li>✅ <strong>图像能力：</strong> 支持图片生成、图片识别、图生图（如照片修复），可选择 Dall-E-3, stable diffusion, replicate, midjourney,
-                CogView-3, vision模型</li>
-              <li>✅ <strong>丰富插件：</strong> 支持个性化插件扩展，已实现多角色切换、文字冒险、敏感词过滤、聊天记录总结、文档总结和对话、联网搜索等插件</li>
-              <li>✅ <strong>知识库：</strong> 通过上传知识库文件自定义专属机器人，可作为数字分身、智能客服、私域助手使用，基于 LinkAI实现</li>
+          <div class="features-list">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />什么是 Chatgpt-On-Wechat
+            </h2>
+            <ul class="features-list-ul">
+              <li>
+                Chatgpt-on-wechat是一个前沿的开源项目，是一个基于大模型的智能对话机器人。支持微信、企业微信、公众号、飞书、钉钉接入。旨在将OpenAI的先进自然语言处理模型ChatGPT与微信等平台深度融合，实现高度智能化和人性化的文本交互服务，可选择GPT3.5/GPT4.0/Claude/文心一言/讯飞星火/通义千问/Gemini/LinkAI/ZhipuAI，能处理文本、语音和图片，通过插件访问操作系统和互联网等外部资源，支持基于自有知识库定制企业AI应用。该项目聚焦于提升微信用户的聊天体验，通过精准理解用户意图并生成连贯、逻辑清晰且富有创意的文本回复。
+              </li>
             </ul>
-          </ul>
+          </div>
+          <div class="features-list">
+            <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg" />功能列表</h2>
+            <ul class="features-list-ul">
+              <ul dir="auto">
+                <li>
+                  ✅
+                  <strong>多端部署：</strong>
+                  有多种部署方式可选择且功能完备，目前已支持微信公众号、企业微信应用、飞书、钉钉等部署方式
+                </li>
+                <li>
+                  ✅
+                  <strong>基础对话：</strong> 私聊及群聊的消息智能回复，支持多轮会话上下文记忆，支持
+                  GPT-3.5, GPT-4o-mini, GPT-4o, GPT-4, Claude-3.5, Gemini, 文心一言, 讯飞星火,
+                  通义千问，ChatGLM-4，Kimi(月之暗面), MiniMax
+                </li>
+                <li>
+                  ✅ <strong>语音能力：</strong> 可识别语音消息，通过文字或语音回复，支持 azure,
+                  baidu, google, openai(whisper/tts) 等多种语音模型
+                </li>
+                <li>
+                  ✅
+                  <strong>图像能力：</strong> 支持图片生成、图片识别、图生图（如照片修复），可选择
+                  Dall-E-3, stable diffusion, replicate, midjourney, CogView-3, vision模型
+                </li>
+                <li>
+                  ✅
+                  <strong>丰富插件：</strong>
+                  支持个性化插件扩展，已实现多角色切换、文字冒险、敏感词过滤、聊天记录总结、文档总结和对话、联网搜索等插件
+                </li>
+                <li>
+                  ✅
+                  <strong>知识库：</strong>
+                  通过上传知识库文件自定义专属机器人，可作为数字分身、智能客服、私域助手使用，基于
+                  LinkAI实现
+                </li>
+              </ul>
+            </ul>
+          </div>
         </div>
       </div>
+      <div class="app-faq" id="about-right"></div>
     </div>
-    <div class="app-faq" id="about-right"></div>
-  </div>
-  <div class="h5footer" id="footer">
-  </div>
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script")
-      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
-      var s = document.getElementsByTagName("script")[0]
-      s.parentNode.insertBefore(hm, s)
-    })();
-  </script>
-</body>
-
+    <div class="h5footer" id="footer"></div>
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </body>
 </html>

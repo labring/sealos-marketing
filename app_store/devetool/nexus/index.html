@@ -1,113 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>使用Sealos部署nexus软件教程</title>
-  <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
-  <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico">
-  <script src="../../../app_store/js/appstor.js" defer></script><script src="/app_store/js/stars.js" defer></script>
-  <script src="../../../app_store/js/navbar.js"></script>
-  <script src="../../../app_store/js/header-left.js"></script>
-  <script src="../../../app_store/js/about-right.js"></script>
-  <script src="../../../app_store/js/foooter.js"></script>
-  <script src="../../../app_store/js/step.js"></script>
-  <script src="/js/sem.js" defer></script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "q8gnm02cz6");
-</script>
-</head>
-
-<body>
-  <div id="navbar-container"></div>
-  <div class="stepxq">
-    <div class="left-list" id="left-header">
-    </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('.nav-item[data-page="devetool"]').classList.add('active')
-        document.querySelector('li[data-page="nexus"]').classList.add('active')
-      });
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用Sealos部署nexus软件教程</title>
+    <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css" />
+    <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico" />
+    <script src="../../../app_store/js/appstor.js" defer></script>
+    <script src="/app_store/js/stars.js" defer></script>
+    <script src="../../../app_store/js/navbar.js"></script>
+    <script src="../../../app_store/js/header-left.js"></script>
+    <script src="../../../app_store/js/about-right.js"></script>
+    <script src="../../../app_store/js/foooter.js"></script>
+    <script src="../../../app_store/js/step.js"></script>
+    <script src="/js/sem.js" defer></script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'q8gnm02cz6');
     </script>
-    <div class="app-h5">
-      <div class="hard-top">
-        <div class="hard-title-stats">
-          <div class="title-stats">
-            <div class="title-logo"><img src="../../img/nexuslogo.webp" alt="AFFiNE Logo"></div>
-            <div class="hard-top-title">
-              <div class="hard-top2">
-                <h1>Nexus</h1>
-                <span class="stats"> <span class="stars"><img src="../../img/AFFINE-logo2.svg">2.0k</span> <span
-                    class="shares"><img src="../../img/project.svg"><a href="https://github.com/sonatype/nexus-public"
-                      target="_blank">项目首页</a></span> </span>
+  </head>
+
+  <body>
+    <div id="navbar-container"></div>
+    <div class="stepxq">
+      <div class="left-list" id="left-header"></div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelector('.nav-item[data-page="devetool"]').classList.add('active');
+          document.querySelector('li[data-page="nexus"]').classList.add('active');
+        });
+      </script>
+      <div class="app-h5">
+        <div class="hard-top">
+          <div class="hard-title-stats">
+            <div class="title-stats">
+              <div class="title-logo"><img src="../../img/nexuslogo.webp" alt="AFFiNE Logo" /></div>
+              <div class="hard-top-title">
+                <div class="hard-top2">
+                  <h1>Nexus</h1>
+                  <span class="stats">
+                    <span class="stars"><img src="../../img/AFFINE-logo2.svg" />2.0k</span>
+                    <span class="shares"
+                      ><img src="../../img/project.svg" /><a
+                        href="https://github.com/sonatype/nexus-public"
+                        target="_blank"
+                        >项目首页</a
+                      ></span
+                    >
+                  </span>
+                </div>
+                <p class="app-decistore">
+                  是Sonatype公司开发的一款强大仓库管理器，它简化了仓库维护，强化了私有仓库管理
+                </p>
               </div>
-              <p class="app-decistore">是Sonatype公司开发的一款强大仓库管理器，它简化了仓库维护，强化了私有仓库管理</p>
+            </div>
+            <div class="buttons">
+              <button class="yaml-button">
+                <a href="./images/nexus.yaml" download>导出 Yaml</a>
+              </button>
+              <button class="deploy-button">
+                <a
+                  href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dnexus%26sealos_inside%3Dtrue"
+                  target="_blank"
+                  >一键安装</a
+                >
+              </button>
             </div>
           </div>
-          <div class="buttons">
-            <button class="yaml-button">
-              <a href="./images/nexus.yaml" download>导出 Yaml</a>
-            </button>
-            <button class="deploy-button">
-              <a href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dnexus%26sealos_inside%3Dtrue"
-                target="_blank">一键安装</a>
-            </button>
+          <div class="carousel">
+            <div class="carousel-container">
+              <img src="./images/banner1.webp" alt="Image 1" class="carousel-item active" />
+              <img src="./images/banner2.webp" alt="Image 2" class="carousel-item" />
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-button prev">&lt;</button>
+              <button class="carousel-button next">&gt;</button>
+            </div>
+            <script src="../../../app_store/js/bannerlb.js"></script>
           </div>
-        </div>
-        <div class="carousel">
-          <div class="carousel-container"> <img src="./images/banner1.webp" alt="Image 1" class="carousel-item active">
-            <img src="./images/banner2.webp" alt="Image 2" class="carousel-item">
+          <div class="quick-start">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />如何部署在线 Nexus
+            </h2>
+            <div class="steps" id="steper"></div>
           </div>
-          <div class="carousel-nav">
-            <button class="carousel-button prev">&lt;</button>
-            <button class="carousel-button next">&gt;</button>
+          <div class="features-list">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />什么是 Nexus
+            </h2>
+            <ul class="features-list-ul">
+              <li>
+                Nexus Repository
+                Manager（简称Nexus）是Sonatype公司开发的一款强大仓库管理器，它简化了仓库维护，强化了私有仓库管理。通过Nexus，用户可集中管理、控制并访问软件组件和依赖项，确保私有仓库的安全稳定。Nexus提供权限控制和访问限制，防止未经授权的访问，增强数据保护。它还支持缓存和代理设置，提升内部网络下载速度，与构建工具和IDE无缝集成，方便开发人员获取依赖项。
+              </li>
+            </ul>
           </div>
-          <script src="../../../app_store/js/bannerlb.js"></script>
-        </div>
-        <div class="quick-start">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 Nexus</h2>
-          <div class="steps" id="steper">
-
+          <div class="features-list">
+            <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg" />功能列表</h2>
+            <ul class="features-list-ul">
+              <li>
+                <b>节省外网带宽</b
+                >大量对中央仓库的重复请求会消耗带宽，利用私服代理外部仓库，可以避免重复的公网下载降低带宽的压力。
+              </li>
+              <li>
+                <b>加速maven的构建</b
+                >maven通过内网从私服拉取所需构件（私服存在此构件的情况下），获取构件的速度大大加快，从而加快打包构件的速度。
+              </li>
+              <li>
+                <b>部署第三方构件</b
+                >开发人员自己封装的一些jar包（工具类），可以部署到私服，以便内部开发人员的maven项目使用
+              </li>
+              <li>
+                <b>插提高稳定性</b
+                >当公网网络不稳定的时候，如果使用远程仓库，maven的构建也会变得不稳定。如果在私服存在所需的构件，即使没有公网，maven的构件也会顺利进行。
+              </li>
+              <li>
+                <b>降低中央仓库的负荷</b
+                >使用私服，避免了从中央仓库的重复下载，可以减轻中央仓库的负荷。
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 Nexus</h2>
-          <ul class="features-list-ul">
-            <li>Nexus Repository
-              Manager（简称Nexus）是Sonatype公司开发的一款强大仓库管理器，它简化了仓库维护，强化了私有仓库管理。通过Nexus，用户可集中管理、控制并访问软件组件和依赖项，确保私有仓库的安全稳定。Nexus提供权限控制和访问限制，防止未经授权的访问，增强数据保护。它还支持缓存和代理设置，提升内部网络下载速度，与构建工具和IDE无缝集成，方便开发人员获取依赖项。
-            </li>
-          </ul>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
-          <ul class="features-list-ul">
-            <li><b>节省外网带宽</b>大量对中央仓库的重复请求会消耗带宽，利用私服代理外部仓库，可以避免重复的公网下载降低带宽的压力。</li>
-            <li><b>加速maven的构建</b>maven通过内网从私服拉取所需构件（私服存在此构件的情况下），获取构件的速度大大加快，从而加快打包构件的速度。</li>
-            <li><b>部署第三方构件</b>开发人员自己封装的一些jar包（工具类），可以部署到私服，以便内部开发人员的maven项目使用</li>
-            <li><b>插提高稳定性</b>当公网网络不稳定的时候，如果使用远程仓库，maven的构建也会变得不稳定。如果在私服存在所需的构件，即使没有公网，maven的构件也会顺利进行。</li>
-            <li><b>降低中央仓库的负荷</b>使用私服，避免了从中央仓库的重复下载，可以减轻中央仓库的负荷。</li>
-          </ul>
         </div>
       </div>
+      <div class="app-faq" id="about-right"></div>
     </div>
-    <div class="app-faq" id="about-right"></div>
-  </div>
-  <div class="h5footer" id="footer">
-  </div>
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script")
-      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
-      var s = document.getElementsByTagName("script")[0]
-      s.parentNode.insertBefore(hm, s)
-    })();
-  </script>
-</body>
-
+    <div class="h5footer" id="footer"></div>
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </body>
 </html>

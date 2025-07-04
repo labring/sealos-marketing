@@ -1,180 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3分钟部署上线官网，我用  Windsurf 和 Devbox一键搞定开发环境</title>
-    <meta name="description" content="使用Windsurf和Devbox快速部署和开发网站，一键配置开发环境，提升开发效率">
-    <meta name="keywords" content="Windsurf,Devbox,网站部署,开发环境,一键配置">
-    <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
-    <link rel="stylesheet" href="../../../app_store/css/docsactive.css">
-    <link rel="icon" href="https://sealos.run/favicon.ico" data-rh="true">
-    <script src="../../../app_store/js/appstor.js" defer></script><script src="/app_store/js/stars.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3分钟部署上线官网，我用 Windsurf 和 Devbox一键搞定开发环境</title>
+    <meta
+      name="description"
+      content="使用Windsurf和Devbox快速部署和开发网站，一键配置开发环境，提升开发效率"
+    />
+    <meta name="keywords" content="Windsurf,Devbox,网站部署,开发环境,一键配置" />
+    <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css" />
+    <link rel="stylesheet" href="../../../app_store/css/docsactive.css" />
+    <link rel="icon" href="https://sealos.run/favicon.ico" data-rh="true" />
+    <script src="../../../app_store/js/appstor.js" defer></script>
+    <script src="/app_store/js/stars.js" defer></script>
     <script src="../../../app_store/js/navbar.js"></script>
     <script src="../../../app_store/js/foooter.js"></script>
     <script src="/js/sem.js" defer></script>
     <script type="text/javascript">
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "oxaa4saana");
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'oxaa4saana');
     </script>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div id="navbar-container"></div>
 
     <div class="bodykj">
-        <div class="body-2">
-            <div class="body_left">
-                <h2>相关阅读</h2>
-                <div class="bodyico"></div>
-                <ul class="body-3">
-                    <li><a href="https://mp.weixin.qq.com/s/58G7d3lxmuN1i_jUn1Hl_A"
-                            target="_blank">不会前端也能写官网？没问题，Devbox+Cursor 带你起飞</a></li>
-                    <li><a href="https://mp.weixin.qq.com/s/yVKgB0utFrCTi3oBXGyaoA" target="_blank">3分钟部署上线小产品？Cursor 和
-                            Devbox 让开发从未如此简单！</a></li>
-                    <li><a href="https://mp.weixin.qq.com/s/We7bs4W6XtymOX47RZVRaQ" target="_blank">我一行代码也没写，Cursor 和
-                            Devbox 给我写了个高仿苹果官网！</a></li>
-                    <li><a href="https://mp.weixin.qq.com/s/OFdxp917nHFYJxnhkyxuTg"
-                            target="_blank">使用Cursor和Devbox告别Nginx环境配置噩梦，让Nginx开发效率提升300%</a></li>
-                    <li><a href="https://mp.weixin.qq.com/s/ZiECfIF4MjfQEywHcVCqFA" target="_blank">别再浪费时间配置环境了！这个比 Laf
-                            还牛的云开发框架，让我3分钟搭建完整应用</a></li>
-                    <li><a href="https://mp.weixin.qq.com/s/t61T8yQjSUQJa0eeUDmhAg" target="_blank">Devbox 开发 C/C++，在
-                            Cursor 终端里玩俄罗斯方块</a></li>
-                    <li><a href="https://mp.weixin.qq.com/s/6G4HES9howgOLtCN6W--CQ" target="_blank">一篇文章告诉你 Devbox
-                            是如何从架构上干掉 CI/CD 的，连渣都不剩</a></li>
-                    <li><a href="https://mp.weixin.qq.com/s/tTNucheR4DA3gFT0NR1zyw"
-                            target="_blank">我真的一行代码都没写啊！都是Cursor和Devbox做的！它甚至写完了还直接帮我部署了</a></li>
-                    <li><a href="https://mp.weixin.qq.com/s/PzP3CT4F3i0Ku11gH8ILXA"
-                            target="_blank">35岁程序员使用Cursor和Devbox手撕基于Rust的WASM智能合约</a></li>
-                    <li><a href="https://mp.weixin.qq.com/s/kDsVS4wkmY0bk3USY7-4Yw" target="_blank">还在使用昂贵的虚拟机？来试试
-                            Devbox，便宜 6 倍！</a></li>
-                    <li><a href="https://mp.weixin.qq.com/s/eolrkMASYXtMDe_Xuz67qA" target="_blank">Sealos Devbox
-                            发布，珍爱生命，远离 CI/CD</a></li>
-                </ul>
-            </div>
-
-            <div class="active-body">
-                <h2>3分钟部署上线官网，我用  Windsurf 和 Devbox一键搞定开发环境</h2>
-                <div class="title-tdk">
-                    <img src="../../../app_store/img/sealos.svg">
-                    <div class="title-dk">
-                        <h3>Sealos</h3>
-                        <span>2024年11月01日</span>
-                    </div>
-                </div>
-
-                <div class="bdynr">
-                    <div class="rich_media_content js_underline_content autoTypeSetting24psection fix_apple_default_style"
-                        id="js_content">
-                        <p><strong>Windsurf</strong> 是 Codeium 最近新放的一个大招，它是一款”既智能又懂事 “的 IDE，采用了与 Cursor 相同的方式，直接 fork 了
-                            VSCode，以便将 AI
-                            能力深度集成到 IDE 中。</p>
-                        <p>下面我们来使用 Sealos Devbox 和 Windsurf 3分钟开发和部署一个网站，实现本地开发环境、测试环境与生产环境的无缝衔接。</p>
-                        <p class="bodyimg"><img src="../devbox1113/img/20241113-114402.png"></p>
-                        <p>Devbox 一键配置所有开发环境，省略了<strong>配置域名解析、申请 SSL 证书，配置网关等</strong>与开发无关的繁琐操作，直接写代码就行。</p>
-                        <h2 id="cjkfhj">创建开发环境</h2>
-                        <h3>一）创建环境</h3>
-                        <p>首先进入 Sealos 桌面：<a href="https://cloud.sealos.run">https://cloud.sealos.run</a></p>
-                        <p>然后打开 Devbox 应用，创建一个新项目，这里我们选择使用 Next.js 作为运行环境。</p>
-                        <img src="../windsurf/img/1.webp">
-                        <h3>二）连接Windsurf</h3>
-                        <p>接着会提示安装 Devbox 插件，安装后即可自动连接开发环境。</p>
-                        <img src="../windsurf/img/2.webp">
-                        <p>连接成功后，打开 Windsurf，选择连接到远程 SSH 环境。</p>
-                        <img src="../windsurf/img/3.png">
-                        <h3>三）修改基础配置</h3>
-                        <p>连接成功后，我们来修改一下项目的根目录，点击左边的 “Open Folder” 按钮：</p>
-                        <img src="../windsurf/img/5.webp">
-                        <p>然后选择 /home/devbox/project 目录作为根目录。</p>
-                        <img src="../windsurf/img/4.webp">
-                        <p>完成连接</p>
-                        <img src="../windsurf/img/6.webp">
-                        <h2 id="">开发网站</h2>
-
-
-<p>Cascade 提供了聊天和编辑两种模式，聊天模式和 Cursor 的 Chat 面板类似，而编辑模式则和 Cursor 的 Composer 面板类似，可以生成和修改代码。</p>
-<p>下面开始念咒施法，来，给我写一个 AI 虚拟女友：</p>
-
-<img src="../windsurf/img/8.webp">
-<p>创建完各种文件之后，还贴心地问我要不要安装依赖，命令都给我写好了9</p>
-<img src="../windsurf/img/9.webp">
-<p>只需要点击右下角的 “Accept all” 接受所有修改就行了。</p>
-<img src="../windsurf/img/10.webp">
-
-<h2 id="ksfbxs">发布线上</h2>
-
-                        <p> 这次的分享主题是「<strong>代码快速上线</strong>」，那这个 demo 在互联网上怎么查看效果呢？</p>
-                        <p> 我们回到 Devbox 项目中，点击<strong>外网地址</strong>，就可以在公网看到效果啦。</p>
-                        <p>
-                            <img src="../devbox1113/img/5.webp"><img src="../devbox1113/img/6.webp">
-                        </p>
-                        <p>当然，这只是用初始化的代码演示的效果。接下来，我们来展示下修改部分代码后，怎么更新线上环境。 </p>
-                        <h2 id="ksgxdm">更新代码</h2>
-                        <p>这里以修改网页内容为例，加上 <strong>I am Jay </strong>的字符，记得保存代码。 </p>
-                        <img src="../devbox1113/img/7.webp">
-                        <p>在控制台（Terminal）按<strong> Ctrl + C </strong>关闭应用，再输入命令 <strong>python3 hello.py
-                            </strong>重新启动。 </p>
-                        <img src="../devbox1113/img/8.webp">
-                        <p> 无论本地还是线上都会立刻更新成功，不需要做任何多余的动作，线上代码就生效了。</p>
-                        <p> 但是，我们并没有完成线上发布哦，毕竟电脑不可能一直运行程序，后续步骤会介绍。</p>
-                        <img src="../devbox1113/img/9.webp">
-
-
-
-                        <h2 id="zjover">总结</h2>
-
-                        <p>在传统开发中，连接开发环境的数据库就像是穿越千山万水去约会 - 要配 IP、调防火墙、改配置。但在 Sealos 中，Cursor
-                            和数据库就像住在隔壁的青梅竹马，想约就约，连个电话都不用打。这种开发体验，不就是我们每个开发者心中的 "理想型" 吗？</p>
-
-                        <p>有了这对神仙搭档，你就可以把更多精力放在实现产品创意上，而不是被繁琐的环境配置耗尽耐心。</p>
-
-                        <h3>关于 Sealos</span></h3>
-                        <p>Sealos 是一款以 Kubernetes
-                            为内核的云操作系统发行版。它以云原生的方式，抛弃了传统的云计算架构，转向以 Kubernetes
-                            为云内核的新架构，使企业能够像使用个人电脑一样简单地使用云。</span></strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="body-right">
-                <h3>目录</h3>
-                <div class="bodyico"></div>
-                <ul class="body-about">
-                    <li><a href="#cjkfhj">创建 Devbox 开发环境</a></li>
-                    <li><a href="#ljcursor">
-                            <p>连接 Windsurf</p>
-                        </a></li>
-                    <li><a href="#bcjkfhj">本地开发项目</a></li>
-                    <li><a href="#cshxm">
-                            <p>启动代码</p>
-                        </a></li>
-                    <li><a href="#bdfw">
-                            <p>本地访问</p>
-                        </a></li>
-                    <li><a href="#ksfbxs">发布线上</a></li>
-                    <li><a href="#ksgxdm">更新代码</a></li>
-                    <li><a href="#zjover">总结</a></li>
-                </ul>
-            </div>
+      <div class="body-2">
+        <div class="body_left">
+          <h2>相关阅读</h2>
+          <div class="bodyico"></div>
+          <ul class="body-3">
+            <li>
+              <a href="https://mp.weixin.qq.com/s/58G7d3lxmuN1i_jUn1Hl_A" target="_blank"
+                >不会前端也能写官网？没问题，Devbox+Cursor 带你起飞</a
+              >
+            </li>
+            <li>
+              <a href="https://mp.weixin.qq.com/s/yVKgB0utFrCTi3oBXGyaoA" target="_blank"
+                >3分钟部署上线小产品？Cursor 和 Devbox 让开发从未如此简单！</a
+              >
+            </li>
+            <li>
+              <a href="https://mp.weixin.qq.com/s/We7bs4W6XtymOX47RZVRaQ" target="_blank"
+                >我一行代码也没写，Cursor 和 Devbox 给我写了个高仿苹果官网！</a
+              >
+            </li>
+            <li>
+              <a href="https://mp.weixin.qq.com/s/OFdxp917nHFYJxnhkyxuTg" target="_blank"
+                >使用Cursor和Devbox告别Nginx环境配置噩梦，让Nginx开发效率提升300%</a
+              >
+            </li>
+            <li>
+              <a href="https://mp.weixin.qq.com/s/ZiECfIF4MjfQEywHcVCqFA" target="_blank"
+                >别再浪费时间配置环境了！这个比 Laf 还牛的云开发框架，让我3分钟搭建完整应用</a
+              >
+            </li>
+            <li>
+              <a href="https://mp.weixin.qq.com/s/t61T8yQjSUQJa0eeUDmhAg" target="_blank"
+                >Devbox 开发 C/C++，在 Cursor 终端里玩俄罗斯方块</a
+              >
+            </li>
+            <li>
+              <a href="https://mp.weixin.qq.com/s/6G4HES9howgOLtCN6W--CQ" target="_blank"
+                >一篇文章告诉你 Devbox 是如何从架构上干掉 CI/CD 的，连渣都不剩</a
+              >
+            </li>
+            <li>
+              <a href="https://mp.weixin.qq.com/s/tTNucheR4DA3gFT0NR1zyw" target="_blank"
+                >我真的一行代码都没写啊！都是Cursor和Devbox做的！它甚至写完了还直接帮我部署了</a
+              >
+            </li>
+            <li>
+              <a href="https://mp.weixin.qq.com/s/PzP3CT4F3i0Ku11gH8ILXA" target="_blank"
+                >35岁程序员使用Cursor和Devbox手撕基于Rust的WASM智能合约</a
+              >
+            </li>
+            <li>
+              <a href="https://mp.weixin.qq.com/s/kDsVS4wkmY0bk3USY7-4Yw" target="_blank"
+                >还在使用昂贵的虚拟机？来试试 Devbox，便宜 6 倍！</a
+              >
+            </li>
+            <li>
+              <a href="https://mp.weixin.qq.com/s/eolrkMASYXtMDe_Xuz67qA" target="_blank"
+                >Sealos Devbox 发布，珍爱生命，远离 CI/CD</a
+              >
+            </li>
+          </ul>
         </div>
+
+        <div class="active-body">
+          <h2>3分钟部署上线官网，我用 Windsurf 和 Devbox一键搞定开发环境</h2>
+          <div class="title-tdk">
+            <img src="../../../app_store/img/sealos.svg" />
+            <div class="title-dk">
+              <h3>Sealos</h3>
+              <span>2024年11月01日</span>
+            </div>
+          </div>
+
+          <div class="bdynr">
+            <div
+              class="rich_media_content js_underline_content autoTypeSetting24psection fix_apple_default_style"
+              id="js_content"
+            >
+              <p>
+                <strong>Windsurf</strong> 是 Codeium 最近新放的一个大招，它是一款”既智能又懂事 “的
+                IDE，采用了与 Cursor 相同的方式，直接 fork 了 VSCode，以便将 AI 能力深度集成到 IDE
+                中。
+              </p>
+              <p>
+                下面我们来使用 Sealos Devbox 和 Windsurf
+                3分钟开发和部署一个网站，实现本地开发环境、测试环境与生产环境的无缝衔接。
+              </p>
+              <p class="bodyimg"><img src="../devbox1113/img/20241113-114402.png" /></p>
+              <p>
+                Devbox 一键配置所有开发环境，省略了<strong
+                  >配置域名解析、申请 SSL 证书，配置网关等</strong
+                >与开发无关的繁琐操作，直接写代码就行。
+              </p>
+              <h2 id="cjkfhj">创建开发环境</h2>
+              <h3>一）创建环境</h3>
+              <p>
+                首先进入 Sealos 桌面：<a href="https://cloud.sealos.run"
+                  >https://cloud.sealos.run</a
+                >
+              </p>
+              <p>然后打开 Devbox 应用，创建一个新项目，这里我们选择使用 Next.js 作为运行环境。</p>
+              <img src="../windsurf/img/1.webp" />
+              <h3>二）连接Windsurf</h3>
+              <p>接着会提示安装 Devbox 插件，安装后即可自动连接开发环境。</p>
+              <img src="../windsurf/img/2.webp" />
+              <p>连接成功后，打开 Windsurf，选择连接到远程 SSH 环境。</p>
+              <img src="../windsurf/img/3.png" />
+              <h3>三）修改基础配置</h3>
+              <p>连接成功后，我们来修改一下项目的根目录，点击左边的 “Open Folder” 按钮：</p>
+              <img src="../windsurf/img/5.webp" />
+              <p>然后选择 /home/devbox/project 目录作为根目录。</p>
+              <img src="../windsurf/img/4.webp" />
+              <p>完成连接</p>
+              <img src="../windsurf/img/6.webp" />
+              <h2 id="">开发网站</h2>
+
+              <p>
+                Cascade 提供了聊天和编辑两种模式，聊天模式和 Cursor 的 Chat 面板类似，而编辑模式则和
+                Cursor 的 Composer 面板类似，可以生成和修改代码。
+              </p>
+              <p>下面开始念咒施法，来，给我写一个 AI 虚拟女友：</p>
+
+              <img src="../windsurf/img/8.webp" />
+              <p>创建完各种文件之后，还贴心地问我要不要安装依赖，命令都给我写好了9</p>
+              <img src="../windsurf/img/9.webp" />
+              <p>只需要点击右下角的 “Accept all” 接受所有修改就行了。</p>
+              <img src="../windsurf/img/10.webp" />
+
+              <h2 id="ksfbxs">发布线上</h2>
+
+              <p>
+                这次的分享主题是「<strong>代码快速上线</strong>」，那这个 demo
+                在互联网上怎么查看效果呢？
+              </p>
+              <p>我们回到 Devbox 项目中，点击<strong>外网地址</strong>，就可以在公网看到效果啦。</p>
+              <p><img src="../devbox1113/img/5.webp" /><img src="../devbox1113/img/6.webp" /></p>
+              <p>
+                当然，这只是用初始化的代码演示的效果。接下来，我们来展示下修改部分代码后，怎么更新线上环境。
+              </p>
+              <h2 id="ksgxdm">更新代码</h2>
+              <p>这里以修改网页内容为例，加上 <strong>I am Jay </strong>的字符，记得保存代码。</p>
+              <img src="../devbox1113/img/7.webp" />
+              <p>
+                在控制台（Terminal）按<strong> Ctrl + C </strong>关闭应用，再输入命令
+                <strong>python3 hello.py </strong>重新启动。
+              </p>
+              <img src="../devbox1113/img/8.webp" />
+              <p>无论本地还是线上都会立刻更新成功，不需要做任何多余的动作，线上代码就生效了。</p>
+              <p>但是，我们并没有完成线上发布哦，毕竟电脑不可能一直运行程序，后续步骤会介绍。</p>
+              <img src="../devbox1113/img/9.webp" />
+
+              <h2 id="zjover">总结</h2>
+
+              <p>
+                在传统开发中，连接开发环境的数据库就像是穿越千山万水去约会 - 要配
+                IP、调防火墙、改配置。但在 Sealos 中，Cursor
+                和数据库就像住在隔壁的青梅竹马，想约就约，连个电话都不用打。这种开发体验，不就是我们每个开发者心中的
+                "理想型" 吗？
+              </p>
+
+              <p>
+                有了这对神仙搭档，你就可以把更多精力放在实现产品创意上，而不是被繁琐的环境配置耗尽耐心。
+              </p>
+
+              <h3>关于 Sealos</h3>
+              <p>
+                Sealos 是一款以 Kubernetes
+                为内核的云操作系统发行版。它以云原生的方式，抛弃了传统的云计算架构，转向以
+                Kubernetes 为云内核的新架构，使企业能够像使用个人电脑一样简单地使用云。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="body-right">
+          <h3>目录</h3>
+          <div class="bodyico"></div>
+          <ul class="body-about">
+            <li><a href="#cjkfhj">创建 Devbox 开发环境</a></li>
+            <li>
+              <a href="#ljcursor">
+                <p>连接 Windsurf</p>
+              </a>
+            </li>
+            <li><a href="#bcjkfhj">本地开发项目</a></li>
+            <li>
+              <a href="#cshxm">
+                <p>启动代码</p>
+              </a>
+            </li>
+            <li>
+              <a href="#bdfw">
+                <p>本地访问</p>
+              </a>
+            </li>
+            <li><a href="#ksfbxs">发布线上</a></li>
+            <li><a href="#ksgxdm">更新代码</a></li>
+            <li><a href="#zjover">总结</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div class="h5footer" id="footer"></div>
 
     <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
     </script>
-</body>
-
+  </body>
 </html>

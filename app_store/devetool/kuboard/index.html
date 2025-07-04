@@ -1,121 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>使用Sealos部署kuboard工具教程</title>
-  <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
-  <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico">
-  <script src="../../../app_store/js/appstor.js" defer></script><script src="/app_store/js/stars.js" defer></script>
-  <script src="../../../app_store/js/navbar.js"></script>
-  <script src="../../../app_store/js/header-left.js"></script>
-  <script src="../../../app_store/js/about-right.js"></script>
-  <script src="../../../app_store/js/foooter.js"></script>
-  <script src="../../../app_store/js/step.js"></script>
-  <script src="/js/sem.js" defer></script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "q8gnm02cz6");
-</script>
-</head>
-
-<body>
-  <div id="navbar-container"></div>
-  <div class="stepxq">
-    <div class="left-list" id="left-header">
-    </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('.nav-item[data-page="devetool"]').classList.add('active')
-        document.querySelector('li[data-page="kuboard"]').classList.add('active')
-      });
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用Sealos部署kuboard工具教程</title>
+    <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css" />
+    <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico" />
+    <script src="../../../app_store/js/appstor.js" defer></script>
+    <script src="/app_store/js/stars.js" defer></script>
+    <script src="../../../app_store/js/navbar.js"></script>
+    <script src="../../../app_store/js/header-left.js"></script>
+    <script src="../../../app_store/js/about-right.js"></script>
+    <script src="../../../app_store/js/foooter.js"></script>
+    <script src="../../../app_store/js/step.js"></script>
+    <script src="/js/sem.js" defer></script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'q8gnm02cz6');
     </script>
-    <div class="app-h5">
-      <div class="hard-top">
-        <div class="hard-title-stats">
-          <div class="title-stats">
-            <div class="title-logo"><img src="../../img/favicon.png" alt="Kuboard Logo"></div>
-            <div class="hard-top-title">
-              <div class="hard-top2">
-                <h1>Kuboard</h1>
-                <span class="stats"> <span class="stars"><img src="../../img/AFFINE-logo2.svg">22.4k</span> <span
-                    class="shares"><img src="../../img/project.svg"><a href="https://github.com/eip-work/kuboard-press"
-                      target="_blank">项目首页</a></span> </span>
+  </head>
+
+  <body>
+    <div id="navbar-container"></div>
+    <div class="stepxq">
+      <div class="left-list" id="left-header"></div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelector('.nav-item[data-page="devetool"]').classList.add('active');
+          document.querySelector('li[data-page="kuboard"]').classList.add('active');
+        });
+      </script>
+      <div class="app-h5">
+        <div class="hard-top">
+          <div class="hard-title-stats">
+            <div class="title-stats">
+              <div class="title-logo"><img src="../../img/favicon.png" alt="Kuboard Logo" /></div>
+              <div class="hard-top-title">
+                <div class="hard-top2">
+                  <h1>Kuboard</h1>
+                  <span class="stats">
+                    <span class="stars"><img src="../../img/AFFINE-logo2.svg" />22.4k</span>
+                    <span class="shares"
+                      ><img src="../../img/project.svg" /><a
+                        href="https://github.com/eip-work/kuboard-press"
+                        target="_blank"
+                        >项目首页</a
+                      ></span
+                    >
+                  </span>
+                </div>
+                <p class="app-decistore">
+                  免费的 Kubernetes 图形化管理工具，帮助用户快速在 Kubernetes 上落地微服务。
+                </p>
               </div>
-              <p class="app-decistore">免费的 Kubernetes 图形化管理工具，帮助用户快速在 Kubernetes 上落地微服务。</p>
+            </div>
+            <div class="buttons">
+              <button class="yaml-button">
+                <a href="./images/kuboard.yaml" download>导出 Yaml</a>
+              </button>
+              <button class="deploy-button">
+                <a
+                  href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dkuboard%26sealos_inside%3Dtrue"
+                  target="”_blank”"
+                  >一键安装</a
+                >
+              </button>
             </div>
           </div>
-          <div class="buttons">
-            <button class="yaml-button">
-              <a href="./images/kuboard.yaml" download>导出 Yaml</a>
-            </button>
-            <button class="deploy-button">
-              <a href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dkuboard%26sealos_inside%3Dtrue"
-                target=”_blank”>一键安装</a>
-            </button>
+          <div class="carousel">
+            <div class="carousel-container">
+              <img src="./images/banner1.png" alt="Image 1" class="carousel-item active" />
+              <img src="./images/banner2.png" alt="Image 2" class="carousel-item" />
+              <img src="./images/banner3.png" alt="Image 3" class="carousel-item" />
+              <img src="./images/banner4.png" alt="Image 4" class="carousel-item" />
+              <img src="./images/banner5.png" alt="Image 5" class="carousel-item" />
+              <img src="./images/banner6.png" alt="Image 6" class="carousel-item" />
+              <img src="./images/banner7.png" alt="Image 7" class="carousel-item" />
+              <img src="./images/banner8.png" alt="Image 8" class="carousel-item" />
+              <img src="./images/banner9.png" alt="Image 9" class="carousel-item" />
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-button prev">&lt;</button>
+              <button class="carousel-button next">&gt;</button>
+            </div>
+            <script src="../../../app_store/js/bannerlb.js"></script>
           </div>
-        </div>
-        <div class="carousel">
-          <div class="carousel-container">
-            <img src="./images/banner1.png" alt="Image 1" class="carousel-item active">
-            <img src="./images/banner2.png" alt="Image 2" class="carousel-item">
-            <img src="./images/banner3.png" alt="Image 3" class="carousel-item">
-            <img src="./images/banner4.png" alt="Image 4" class="carousel-item">
-            <img src="./images/banner5.png" alt="Image 5" class="carousel-item">
-            <img src="./images/banner6.png" alt="Image 6" class="carousel-item">
-            <img src="./images/banner7.png" alt="Image 7" class="carousel-item">
-            <img src="./images/banner8.png" alt="Image 8" class="carousel-item">
-            <img src="./images/banner9.png" alt="Image 9" class="carousel-item">
+          <div class="quick-start">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />如何部署在线 Kuboard
+            </h2>
+            <div class="steps" id="steper"></div>
           </div>
-          <div class="carousel-nav">
-            <button class="carousel-button prev">&lt;</button>
-            <button class="carousel-button next">&gt;</button>
+          <div class="features-list">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />什么是 Kuboard
+            </h2>
+            <ul class="features-list-ul">
+              <li>
+                Kuboard 是一款面向开发者的、用于搭建和管理 Kubernetes
+                集群的工具。它本质上是一个简化工具，帮助用户快速部署、维护和管理 Kubernetes
+                集群，而无需进行过多的手动操作。
+              </li>
+            </ul>
           </div>
-          <script src="../../../app_store/js/bannerlb.js"></script>
-        </div>
-        <div class="quick-start">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 Kuboard</h2>
-          <div class="steps" id="steper">
-
+          <div class="features-list">
+            <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg" />功能列表</h2>
+            <ul class="features-list-ul">
+              <li>
+                <b>简化 Kubernetes 部署：</b> Kuboard 自动化了 Kubernetes
+                集群的许多步骤，让创建、配置和管理 Kubernetes 集群变得更容易。
+                用户只需选择所需类型，Kuboard 就能够处理大部分配置和安装细节。
+              </li>
+              <li>
+                <b>友好的界面：</b> Kuboard 提供了一个直观易用的用户界面，使得用户能够轻松地操作
+                Kubernetes 集群中的对象，比如 Pod、Deployment 和 Service 等。
+                界面往往比命令行更加便捷直观。
+              </li>
+              <li>
+                <b>本地集群管理：</b>除了在云平台上使用，Kuboard 也可以用于本地 Kubernetes
+                集群的管理。
+              </li>
+              <li>
+                <b>各种 Kubernetes 工具的整合：</b>它可以整合其他 Kubernetes
+                工具和资源，让用户方便使用这些工具。
+              </li>
+              <li>
+                <b>其它功能：</b>包含其他的功能，如配置管理、用户授权以及特定的集群管理工具集成等。
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 Kuboard</h2>
-          <ul class="features-list-ul">
-            <li>Kuboard 是一款面向开发者的、用于搭建和管理 Kubernetes 集群的工具。它本质上是一个简化工具，帮助用户快速部署、维护和管理 Kubernetes 集群，而无需进行过多的手动操作。</li>
-          </ul>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
-          <ul class="features-list-ul">
-            <li><b>简化 Kubernetes 部署：</b> Kuboard 自动化了 Kubernetes 集群的许多步骤，让创建、配置和管理 Kubernetes 集群变得更容易。
-              用户只需选择所需类型，Kuboard 就能够处理大部分配置和安装细节。</li>
-            <li><b>友好的界面：</b> Kuboard 提供了一个直观易用的用户界面，使得用户能够轻松地操作 Kubernetes 集群中的对象，比如 Pod、Deployment 和 Service 等。
-              界面往往比命令行更加便捷直观。</li>
-            <li><b>本地集群管理：</b>除了在云平台上使用，Kuboard 也可以用于本地 Kubernetes 集群的管理。</li>
-            <li><b>各种 Kubernetes 工具的整合：</b>它可以整合其他 Kubernetes 工具和资源，让用户方便使用这些工具。</li>
-            <li><b>其它功能：</b>包含其他的功能，如配置管理、用户授权以及特定的集群管理工具集成等。</li>
-          </ul>
         </div>
       </div>
+      <div class="app-faq" id="about-right"></div>
     </div>
-    <div class="app-faq" id="about-right"></div>
-  </div>
-  <div class="h5footer" id="footer">
-  </div>
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script")
-      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
-      var s = document.getElementsByTagName("script")[0]
-      s.parentNode.insertBefore(hm, s)
-    })();
-  </script>
-</body>
-
+    <div class="h5footer" id="footer"></div>
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </body>
 </html>

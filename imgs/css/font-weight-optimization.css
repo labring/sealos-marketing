@@ -4,8 +4,18 @@
  */
 
 /* 基础字体设置 */
-body, p, span, li, a, button, input, textarea, select {
-  font-family: "PingFang SC", "PingFang SC Fallback", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+body,
+p,
+span,
+li,
+a,
+button,
+input,
+textarea,
+select {
+  font-family:
+    'PingFang SC', 'PingFang SC Fallback', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei',
+    '微软雅黑', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -30,7 +40,11 @@ h3 {
 }
 
 /* 特定元素字重优化 */
-.hero-content h1, .tab-h3, .contai h2, .specification h2, .container3 h2 {
+.hero-content h1,
+.tab-h3,
+.contai h2,
+.specification h2,
+.container3 h2 {
   font-weight: 600; /* 品牌标题统一字重 */
 }
 
@@ -44,7 +58,11 @@ h3 {
 }
 
 /* 按钮文字字重优化 */
-.btn-primary, .btn-secondary, .login-footer, .login-footer2, .cta-button {
+.btn-primary,
+.btn-secondary,
+.login-footer,
+.login-footer2,
+.cta-button {
   font-weight: 500; /* 按钮文字稍微加粗 */
   letter-spacing: 0.01em;
 }
@@ -86,17 +104,21 @@ h3 {
   h1 {
     font-weight: 600; /* 移动端保持一致 */
   }
-  
+
   h2 {
     font-weight: 500; /* 移动端保持一致 - 使用标准值 */
   }
-  
+
   h3 {
     font-weight: 500; /* 移动端保持一致 */
   }
-  
+
   /* 移动端按钮字重优化 */
-  .btn-primary, .btn-secondary, .login-footer, .login-footer2, .cta-button {
+  .btn-primary,
+  .btn-secondary,
+  .login-footer,
+  .login-footer2,
+  .cta-button {
     font-weight: 500; /* 移动端按钮文字一致性 */
   }
 }
@@ -112,7 +134,9 @@ h3 {
 }
 
 /* 高亮文本 */
-strong, b, em {
+strong,
+b,
+em {
   font-weight: 500; /* 统一强调元素字重 - 使用标准值 */
 }
 
@@ -120,4 +144,4 @@ strong, b, em {
 .ys-fz {
   display: inline-block;
   white-space: nowrap;
-} 
+}

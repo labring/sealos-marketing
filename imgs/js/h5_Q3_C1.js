@@ -1,26 +1,25 @@
-
 document.addEventListener('DOMContentLoaded', function () {
-  const tabButtons = document.querySelectorAll('.tab-button')
-  const tabPanes = document.querySelectorAll('.tab-pane')
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabPanes = document.querySelectorAll('.tab-pane');
 
-  tabButtons.forEach(button => {
+  tabButtons.forEach((button) => {
     button.addEventListener('click', function () {
-      const tabId = this.getAttribute('data-tab')
+      const tabId = this.getAttribute('data-tab');
 
-      tabButtons.forEach(btn => btn.classList.remove('active'))
-      tabPanes.forEach(pane => pane.classList.remove('active'))
+      tabButtons.forEach((btn) => btn.classList.remove('active'));
+      tabPanes.forEach((pane) => pane.classList.remove('active'));
 
-      this.classList.add('active')
-      document.getElementById(tabId).classList.add('active')
+      this.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
 
       // 添加点击效果
-      this.style.transform = 'scale(0.95)'
+      this.style.transform = 'scale(0.95)';
       setTimeout(() => {
-        this.style.transform = 'scale(1)'
-      }, 100)
-    })
-  })
-})
+        this.style.transform = 'scale(1)';
+      }, 100);
+    });
+  });
+});
 
 // 百度竞价转化追踪
 // document.addEventListener('DOMContentLoaded', function () {
@@ -57,4 +56,3 @@ document.addEventListener('DOMContentLoaded', function () {
 //     })
 //   })
 // })
-

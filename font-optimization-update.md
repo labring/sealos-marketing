@@ -33,6 +33,7 @@
 ## 技术实现
 
 1. **优化的字体声明**
+
    ```css
    @font-face {
      font-family: 'PingFang SC';
@@ -41,7 +42,7 @@
      font-style: normal;
      font-display: swap;
    }
-   
+
    @font-face {
      font-family: 'PingFang SC';
      src: local('PingFang SC Medium'), local('PingFang-SC-Medium');
@@ -49,7 +50,7 @@
      font-style: normal;
      font-display: swap;
    }
-   
+
    @font-face {
      font-family: 'PingFang SC';
      src: local('PingFang SC Semibold'), local('PingFang-SC-Semibold');
@@ -60,11 +61,15 @@
    ```
 
 2. **字体堆栈优化**
+
    ```css
-   font-family: "PingFang SC", "PingFang SC Fallback", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+   font-family:
+     'PingFang SC', 'PingFang SC Fallback', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei',
+     '微软雅黑', Arial, sans-serif;
    ```
 
 3. **特定显示问题解决方案**
+
    ```css
    /* ys-fz类显示优化 */
    .ys-fz {
@@ -102,8 +107,8 @@
 
 2. **为不同语言添加更专门的字体**
    - 针对英文内容，可添加更专门的西文字体
-   - 为数字添加等宽字体选项以改善对齐 
+   - 为数字添加等宽字体选项以改善对齐
 
 3. **优化交互动画**
    - 使用 CSS 动画替代 JavaScript 实现的效果
-   - 尽量减少对 DOM 元素样式的直接操作，提高性能 
+   - 尽量减少对 DOM 元素样式的直接操作，提高性能

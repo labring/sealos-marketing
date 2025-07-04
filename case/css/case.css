@@ -1,812 +1,796 @@
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero {
-    text-align: center;
-    margin-bottom: 40px;
-    padding-top: 80px;
+  text-align: center;
+  margin-bottom: 40px;
+  padding-top: 80px;
 }
 
 h1 {
-    font-size: 48px;
-    color: #111824;
-    margin-bottom: 16px;
-    font-weight: bold;
+  font-size: 48px;
+  color: #111824;
+  margin-bottom: 16px;
+  font-weight: bold;
 }
 
 .title {
-    text-align: center;
-    margin-top: 120px;
-    margin-bottom: 60px;
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 60px;
 }
 
 .sign-up-btn {
-    background: #219BF4;
-    color: #ffffff;
-    padding: 10px 40px;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(41, 99, 244, 0.2);
-    transition: all 0.3s ease;
-    cursor: pointer;
+  background: #219bf4;
+  color: #ffffff;
+  padding: 10px 40px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(41, 99, 244, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .sign-up-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(41, 99, 244, 0.3);
-    background: #0884DD;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(41, 99, 244, 0.3);
+  background: #0884dd;
 }
 
 .demo-btn {
-    transition: all 0.3s ease;
-    cursor: pointer;
-    color: #2963f4;
-    padding: 10px 40px;
-    background-color: #fff;
-    border: 1px solid #E6EDF9;
-    color: #111824;
-    box-shadow: 0px 0px 0.050563em 0px rgba(0, 0, 0, 0.05), 0px 0.233875em 0.935625em 0px rgba(182, 202, 224, 0.28);
-    border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #2963f4;
+  padding: 10px 40px;
+  background-color: #fff;
+  border: 1px solid #e6edf9;
+  color: #111824;
+  box-shadow:
+    0px 0px 0.050563em 0px rgba(0, 0, 0, 0.05),
+    0px 0.233875em 0.935625em 0px rgba(182, 202, 224, 0.28);
+  border-radius: 6px;
 }
 
 .demo-btn:hover {
-    transform: translateY(-2px);
-color: var(--light-sealos-secondary-text, var(--Bright-Blue-600, #0884DD));
+  transform: translateY(-2px);
+  color: var(--light-sealos-secondary-text, var(--Bright-Blue-600, #0884dd));
 }
 
-
 .subtitle {
-    font-size: 18px;
-    color: #697386;
-    margin-bottom: 30px;
+  font-size: 18px;
+  color: #697386;
+  margin-bottom: 30px;
 }
 
 .cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 60px;
-    margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 60px;
+  margin-top: 30px;
 }
 
-
 .btn-primary {
-    background-color: #3366ff;
-    color: white;
-    border: none;
+  background-color: #3366ff;
+  color: white;
+  border: none;
 }
 
 .body-a {
-    background: linear-gradient(to right,
-            #f6f9ff,
-            /* 左边浅色 */
-            #e0eaf7,
-            /* 中间深色 */
-            #f6f9ff
-            /* 右边浅色 */
-        );
+  background: linear-gradient(
+    to right,
+    #f6f9ff,
+    /* 左边浅色 */ #e0eaf7,
+    /* 中间深色 */ #f6f9ff /* 右边浅色 */
+  );
 
-    padding-bottom: 80px;
+  padding-bottom: 80px;
 }
 
 .title p {
-    letter-spacing: 1px;
+  letter-spacing: 1px;
 }
 
 .btn-secondary {
-    background-color: #eef1ff;
-    color: #3366ff;
-    border: none;
+  background-color: #eef1ff;
+  color: #3366ff;
+  border: none;
 }
 
 .hero p {
-    margin-bottom: 8px;
-    color: #8999aa;
-    letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  color: #8999aa;
+  letter-spacing: 0.5px;
 }
 
 .stats {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 .part-logo {
-
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    padding: 5px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 5px;
 }
 
 .ico1 {
-    background: #fdf2ee;
+  background: #fdf2ee;
 }
 
 .ico2 {
-    background: #e8f2fd;
-
+  background: #e8f2fd;
 }
 
 .ico3 {
-    background: #f1f8ff;
-
+  background: #f1f8ff;
 }
 
 .anliqy {
-    display: flex;
-    justify-content: flex-start;
-    gap: clamp(20px, 2vw, 40px);
-    flex-wrap: wrap;
-    width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: clamp(20px, 2vw, 40px);
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .anliqy > * {
-    width: calc(25% - clamp(15px, 1.5vw, 30px));
+  width: calc(25% - clamp(15px, 1.5vw, 30px));
 }
 
 .ico4 {
-    background: #fdf5eb;
-
+  background: #fdf5eb;
 }
 
 .ico5 {
-    background: #f4fde8;
-
+  background: #f4fde8;
 }
 
 .ico6 {
-    background: #f2fbe7;
-
+  background: #f2fbe7;
 }
 
 .ico7 {
-    background: #f5f5f5;
-
+  background: #f5f5f5;
 }
 
 .ico8 {
-    background: #fdedee;
-
+  background: #fdedee;
 }
 
 .ico9 {
-    background: #f1f6ff;
-
+  background: #f1f6ff;
 }
 
 .ico10 {
-    background: #ebeefd;
-
+  background: #ebeefd;
 }
 
 .ico11 {
-    background: #f6f6f6;
+  background: #f6f6f6;
 }
 
 .ico12 {
-    background: #fbfff4;
+  background: #fbfff4;
 }
 
 .ico13 {
-    background: #fef3f5;
+  background: #fef3f5;
 }
 
 .ico14 {
-    background: #fbf4ee;
+  background: #fbf4ee;
 }
 
 .ico15 {
-    background: #f1f0fd;
+  background: #f1f0fd;
 }
 
 .ico16 {
-    background: #edfaec;
+  background: #edfaec;
 }
 
 .ico17 {
-    background: #f0f6fc;
+  background: #f0f6fc;
 }
 
 .ico18 {
-    background: #f0f0f0;
+  background: #f0f0f0;
 }
 
 .partner-track-container {
-    width: 100%;
-    overflow: hidden;
-    padding: 20px 0;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
 }
 
 .partner-item {
-    /* 保持原有样式 */
-    flex-shrink: 0;
+  /* 保持原有样式 */
+  flex-shrink: 0;
 }
 
-
-
-
 .part-kami {
-
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    padding: 5px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 5px;
 }
 
 .part-logo img {
-    width: 30px;
+  width: 30px;
 }
 
 .part-bk {
-    display: flex;
-    gap: 14px;
-    justify-content: flex-start;
-    width: 100%;
+  display: flex;
+  gap: 14px;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .partner-item {
-    display: flex;
-    gap: 15px;
-    background: #ffffff;
-    padding: 15px 20px;
-    width: 230px;
-    border-radius: 6px;
-    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.05);
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  gap: 15px;
+  background: #ffffff;
+  padding: 15px 20px;
+  width: 230px;
+  border-radius: 6px;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.05);
+  align-items: center;
+  justify-content: space-between;
 }
 
 .partner-item-2 {
-    display: flex;
-    gap: 10px;
-    background: #ffffff;
-    padding: 15px 20px;
-    width: 230px;
-    border-radius: 4px;
-    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.05);
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  gap: 10px;
+  background: #ffffff;
+  padding: 15px 20px;
+  width: 230px;
+  border-radius: 4px;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.05);
+  align-items: center;
+  justify-content: space-between;
 }
 
 .partner-grid {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .partner-tdk {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2px;
-    width: 145px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  width: 145px;
 }
 
 .stat-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .partner-tdk h3 {
-    color: #263162;
-    font-size: 14px;
+  color: #263162;
+  font-size: 14px;
 }
 
 .partner-item span {
-    color: #6096f5;
-    font-size: 12px;
+  color: #6096f5;
+  font-size: 12px;
 }
 
 .partner-tdk p {
-    color: #bac3d4;
-    font-size: 12px;
-    letter-spacing: 0.5px;
+  color: #bac3d4;
+  font-size: 12px;
+  letter-spacing: 0.5px;
 }
 
 .stat-item img {
-    width: 15px;
-    height: 15px;
+  width: 15px;
+  height: 15px;
 }
 
 .partners-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .partner-card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .partner-logo {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
 }
 
 .partner-info {
-    flex: 1;
+  flex: 1;
 }
 
 .partner-name {
-    font-weight: 500;
-    margin: 0;
+  font-weight: 500;
+  margin: 0;
 }
 
 .partner-desc {
-    color: #697386;
-    font-size: 14px;
-    margin: 0;
+  color: #697386;
+  font-size: 14px;
+  margin: 0;
 }
 
 .partner-stat {
-    color: #3366ff;
-    font-weight: 500;
+  color: #3366ff;
+  font-weight: 500;
 }
 
 .yuandiv {
-    border: solid 1px #41d280;
-    border-radius: 25px;
-    width: 22px;
-    height: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  border: solid 1px #41d280;
+  border-radius: 25px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .partner-item-2 span {
-    color: #6096f5;
-    font-size: 12px;
+  color: #6096f5;
+  font-size: 12px;
 }
 
 .partner-track-2 {
-    display: flex;
-    gap: 25px;
-    width: 100%;
-    justify-content: center;
-    grid-template-rows: repeat(2, 1fr);
-    /* 分成两行 */
-    grid-auto-flow: column;
-    /* 按列排序 */
-    align-items: center;
+  display: flex;
+  gap: 25px;
+  width: 100%;
+  justify-content: center;
+  grid-template-rows: repeat(2, 1fr);
+  /* 分成两行 */
+  grid-auto-flow: column;
+  /* 按列排序 */
+  align-items: center;
 }
 
 .part-span {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .partners {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    padding-bottom: 20px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 20px;
 }
 
 .partner-track {
-    display: flex;
-    gap: 20px;
-    width: 100%;
-    justify-content: center;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
 }
 
 .partner-item {
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 /* 横幅*/
 
 .tips {
-    margin-top: 80px;
-    padding: 0 10%;
+  margin-top: 80px;
+  padding: 0 10%;
 }
 
 /* 容器样式 */
 .hiring-banner {
-    position: relative;
-    max-width: 1200px;
-    margin: 20px auto;
-    overflow: hidden;
+  position: relative;
+  max-width: 1200px;
+  margin: 20px auto;
+  overflow: hidden;
 }
 
 /* 主要内容区域 */
 .banner-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    padding: 2rem 3.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 2rem 3.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 /* 左侧区域 */
 .left-section {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 /* 图标容器 */
 .icon-container {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .icon-wrapper {
-    width: 48px;
-    height: 48px;
-    background-color: #E7F7EE;
-    border-radius: 8px;
-    display: grid;
-    place-items: center;
+  width: 48px;
+  height: 48px;
+  background-color: #e7f7ee;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
 }
 
 .icon {
-    width: 24px;
-    height: 24px;
-    color: #16A34A;
-    margin-right: 0px;
+  width: 24px;
+  height: 24px;
+  color: #16a34a;
+  margin-right: 0px;
 }
 
 /* 文字样式 */
 .hiring-text {
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: #1F2937;
-    letter-spacing: 0.5px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #1f2937;
+  letter-spacing: 0.5px;
 }
 
 .description {
-    color: #263162;
-    font-size: 15px;
-    margin-top: 8px;
-    letter-spacing: 0.5px;
+  color: #263162;
+  font-size: 15px;
+  margin-top: 8px;
+  letter-spacing: 0.5px;
 }
 
 .description strong {
-    color: #219BF4;
+  color: #219bf4;
 }
 
 .apply-button img {
-    width: 20px;
-    margin-left: 4px;
+  width: 20px;
+  margin-left: 4px;
 }
 
 /* 按钮样式 */
 .apply-button {
-    background-color: #f87d0a;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    display: flex;
-    align-items: center;
+  background-color: #f87d0a;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
 }
 
 .apply-button:hover {
-    background-color: #235bf7;
+  background-color: #235bf7;
 }
 
 /* 装饰元素 */
 .decorative-elements {
-    position: absolute;
-    right: 20px;
-    top: 0;
-    bottom: 0;
-    pointer-events: none;
-    opacity: 0.05;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+  opacity: 0.05;
 }
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-    .banner-content {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-        text-align: center;
-    }
+  .banner-content {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
 
-    .left-section {
-        flex-direction: column;
-    }
+  .left-section {
+    flex-direction: column;
+  }
 
-    .icon-container {
-        justify-content: center;
-    }
+  .icon-container {
+    justify-content: center;
+  }
 }
 
 /* 解决方案*/
 .nav-container {
-    width: 100%;
-    position: sticky;
-    top: 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
 }
 
 .nav-list {
-    display: flex;
-    list-style: none;
-    max-width: 600px;
-    margin: 0 auto;
-    justify-content: space-between;
+  display: flex;
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
 .nav-item {
-    padding: 6px 25px;
-    cursor: pointer;
-    position: relative;
-    color: #263162;
-    transition: color 0.3s;
-    border: solid 1px #ececec;
-    border-radius: 4px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
+  padding: 6px 25px;
+  cursor: pointer;
+  position: relative;
+  color: #263162;
+  transition: color 0.3s;
+  border: solid 1px #ececec;
+  border-radius: 4px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-item.active {
-    border: solid 2px #2258c3
+  border: solid 2px #2258c3;
 }
 
 .nav-item img {
-    width: 20px;
-    margin-right: 4px;
+  width: 20px;
+  margin-right: 4px;
 }
 
 .content-container {
-    margin: 20px auto;
-    padding: 0 20px;
+  margin: 20px auto;
+  padding: 0 20px;
 }
 
 .content-section {
-    display: none;
-    padding: 20px;
+  display: none;
+  padding: 20px;
 }
 
 .content-section.active {
-    display: block;
+  display: block;
 }
 
 .job-cards {
-    margin: 0 10%;
-    background: #FFFFFF;
-    box-shadow: 0px 8px 24px 0px rgba(19, 51, 107, 0.10);
-    border-radius: 8px;
-    padding: 10px 0px 10px 0px;
+  margin: 0 10%;
+  background: #ffffff;
+  box-shadow: 0px 8px 24px 0px rgba(19, 51, 107, 0.1);
+  border-radius: 8px;
+  padding: 10px 0px 10px 0px;
 }
 
 /* Job Card Styles */
 .job-card {
-    background: #f9faff;
-    border-radius: 10px;
-    padding: 20px 20px 30px 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
-    width: 22%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
-    align-content: space-between;
-    flex-wrap: nowrap;
+  background: #f9faff;
+  border-radius: 10px;
+  padding: 20px 20px 30px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: space-between;
+  flex-wrap: nowrap;
 }
 
 /* Company Info Section */
 .company-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: clamp(10px, 1vw, 15px);
+  display: flex;
+  align-items: center;
+  margin-bottom: clamp(10px, 1vw, 15px);
 }
 
 .company-logo {
-    width: clamp(20px, 3vw, 50px);
-    height: auto;
-    border-radius: 8px;
-    margin-right: 12px;
+  width: clamp(20px, 3vw, 50px);
+  height: auto;
+  border-radius: 8px;
+  margin-right: 12px;
 }
 
 .company-details h3 {
-    font-size: 22px;
-    font-weight: 600;
-    color: #111824;
-    margin: 0 0 4px 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111824;
+  margin: 0 0 4px 0;
 }
 
 .job-title {
-    display: block;
-    font-size: clamp(12px, 1vw, 18px);
-    color: #111824;
-    margin-bottom: 6px;
-    letter-spacing: 0.5px;
-    font-weight: bold;
+  display: block;
+  font-size: clamp(12px, 1vw, 18px);
+  color: #111824;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
 }
 
 .job-meta {
-    display: flex;
-    gap: 12px;
-    font-size: 12px;
-    color: #888;
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: #888;
 }
 
 /* Job Tags */
 .job-tags {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 15px;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
 }
 
 .tag {
-    padding: 4px 12px;
-    background: #f5f5f5;
-    border-radius: 16px;
-    font-size: 12px;
-    color: #666;
+  padding: 4px 12px;
+  background: #f5f5f5;
+  border-radius: 16px;
+  font-size: 12px;
+  color: #666;
 }
 
 /* Salary and Apply Section */
 .salary-apply {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .salary {
-    font-size: clamp(10px, 1vw, 18px);
-    font-weight: 600;
-    color: #0884DD;
-    letter-spacing: 1px;
+  font-size: clamp(10px, 1vw, 18px);
+  font-weight: 600;
+  color: #0884dd;
+  letter-spacing: 1px;
 }
 
 .salary span {
-    font-size: clamp(10px, 1vw, 16px);
-    font-weight: normal;
-    color: #666;
+  font-size: clamp(10px, 1vw, 16px);
+  font-weight: normal;
+  color: #666;
 }
 
 .apply-now {
-    padding: 10% 20%;
-    background: #dee9fd;
-    color: #0884DD;
-    border: none;
-    border-radius: 6px;
-    font-size: clamp(10px, 1vw, 14px);
-    cursor: pointer;
-    transition: background-color 0.2s;
-    width: 100px;
+  padding: 10% 20%;
+  background: #dee9fd;
+  color: #0884dd;
+  border: none;
+  border-radius: 6px;
+  font-size: clamp(10px, 1vw, 14px);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100px;
 }
 
 .apply-now:hover {
-    background: #0884DD;
-    color: #ffffff;
+  background: #0884dd;
+  color: #ffffff;
 }
 
 /* Content Section States */
 .content-section {
-    display: none;
+  display: none;
 }
 
 .content-section.active {
-    display: block;
+  display: block;
 }
 
 .company-details p img {
-    width: 12px;
-    margin-right: 2px;
+  width: 12px;
+  margin-right: 2px;
 }
 
 .company-details p {
-    font-size: 12px;
-    display: flex;
-    color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
-    font-weight: 400;
-    align-items: center;
-    margin-top: 6px;
+  font-size: 12px;
+  display: flex;
+  color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
+  font-weight: 400;
+  align-items: center;
+  margin-top: 6px;
 }
 
 .full-time img {
-    width: 14px;
-    margin-right: 2px;
+  width: 14px;
+  margin-right: 2px;
 }
 
 .job-meta span {
-    display: flex;
+  display: flex;
 }
 
 .decrtion {
-    font-size: clamp(10px, 1vw, 14px);
-    color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
-    line-height: 160%;
-    margin: 3% 0px 6% 0px;
-    font-weight: 400;
+  font-size: clamp(10px, 1vw, 14px);
+  color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
+  line-height: 160%;
+  margin: 3% 0px 6% 0px;
+  font-weight: 400;
 }
 
 .company-details span {
-    display: none;
+  display: none;
 }
-.gsmc2{
-    font-size: 14px;
-    color: #667085;
-    display: flex;
-    align-content: center;
-    align-items: center;
+.gsmc2 {
+  font-size: 14px;
+  color: #667085;
+  display: flex;
+  align-content: center;
+  align-items: center;
 }
 .gsmc2 img {
-    width: 12px;
-    margin-right: 4px;
+  width: 12px;
+  margin-right: 4px;
 }
 @media screen and (max-width: 1680px) {
+  .company-details h3 {
+    font-size: 18px;
+  }
+  .job-title {
+    font-size: 15px;
+  }
+  .gsmc {
+    display: none;
+  }
 
-    .company-details h3 {
-        font-size: 18px;
-    }
-    .job-title{
-        font-size: 15px;}
-    .gsmc {
-        display: none;
-    }
-
-    .company-details span {
-        display: block;
-        font-size: 12px;
-    }
-    .company-logo{
-        width: 40px;
-    }
-    .decrtion{
-        font-size: 12px;
-        letter-spacing: 0.5px;
-    }
-    .apply-now{
-        font-size: 12px;
-    }
-    .salary,.salary span{
-        font-size: 14PX;
-    }
+  .company-details span {
+    display: block;
+    font-size: 12px;
+  }
+  .company-logo {
+    width: 40px;
+  }
+  .decrtion {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+  .apply-now {
+    font-size: 12px;
+  }
+  .salary,
+  .salary span {
+    font-size: 14px;
+  }
 }
 
-
 @media screen and (max-width: 1440px) {
-    .gsmc {
-        display: none;
-    }
+  .gsmc {
+    display: none;
+  }
 
-    .company-details span {
-        display: block;
-        font-size: 12px;
-    }
-    .job-title {
-        font-size: 13px;
-    }
+  .company-details span {
+    display: block;
+    font-size: 12px;
+  }
+  .job-title {
+    font-size: 13px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
-    .gsmc {
-        display: none;
-    }
+  .gsmc {
+    display: none;
+  }
 
-    .company-details span {
-        display: block
-    }
-    .job-card{
-        width: 31%;
-    }
+  .company-details span {
+    display: block;
+  }
+  .job-card {
+    width: 31%;
+  }
 }

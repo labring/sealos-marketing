@@ -1,121 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>使用Sealos部署gpt-academic教程</title>
-  <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
-  <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico">
-  <script src="../../../app_store/js/appstor.js" defer></script><script src="/app_store/js/stars.js" defer></script>
-  <script src="../../../app_store/js/navbar.js"></script>
-  <script src="../../../app_store/js/header-left.js"></script>
-  <script src="../../../app_store/js/about-right.js"></script>
-  <script src="../../../app_store/js/foooter.js"></script>
-  <script src="../../../app_store/js/step.js"></script>
-  <script src="/js/sem.js" defer></script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "q8gnm02cz6");
-</script>
-</head>
-
-<body>
-  <div id="navbar-container"></div>
-  <div class="stepxq">
-    <div class="left-list" id="left-header">
-    </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('.nav-item[data-page="AI"]').classList.add('active')
-        document.querySelector('li[data-page="gpt-academic"]').classList.add('active')
-        document.getElementById('menu_sub').style.display = 'block'
-      });
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用Sealos部署gpt-academic教程</title>
+    <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css" />
+    <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico" />
+    <script src="../../../app_store/js/appstor.js" defer></script>
+    <script src="/app_store/js/stars.js" defer></script>
+    <script src="../../../app_store/js/navbar.js"></script>
+    <script src="../../../app_store/js/header-left.js"></script>
+    <script src="../../../app_store/js/about-right.js"></script>
+    <script src="../../../app_store/js/foooter.js"></script>
+    <script src="../../../app_store/js/step.js"></script>
+    <script src="/js/sem.js" defer></script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'q8gnm02cz6');
     </script>
-    <div class="app-h5">
-      <div class="hard-top">
-        <div class="hard-title-stats">
-          <div class="title-stats">
-            <div class="title-logo"><img src="../../img/chatacademic.png" alt="Logo"></div>
-            <div class="hard-top-title">
-              <div class="hard-top2">
-                <h1>Gpt-Academic</h1>
-                <span class="stats"> <span class="stars"><img src="../../img/AFFINE-logo2.svg">65.4k</span> <span
-                    class="shares"><img src="../../img/project.svg"><a href="bgithub.com/binary-husky/gpt_academic"
-                      target="_blank">项目首页</a></span> </span>
+  </head>
+
+  <body>
+    <div id="navbar-container"></div>
+    <div class="stepxq">
+      <div class="left-list" id="left-header"></div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelector('.nav-item[data-page="AI"]').classList.add('active');
+          document.querySelector('li[data-page="gpt-academic"]').classList.add('active');
+          document.getElementById('menu_sub').style.display = 'block';
+        });
+      </script>
+      <div class="app-h5">
+        <div class="hard-top">
+          <div class="hard-title-stats">
+            <div class="title-stats">
+              <div class="title-logo"><img src="../../img/chatacademic.png" alt="Logo" /></div>
+              <div class="hard-top-title">
+                <div class="hard-top2">
+                  <h1>Gpt-Academic</h1>
+                  <span class="stats">
+                    <span class="stars"><img src="../../img/AFFINE-logo2.svg" />65.4k</span>
+                    <span class="shares"
+                      ><img src="../../img/project.svg" /><a
+                        href="bgithub.com/binary-husky/gpt_academic"
+                        target="_blank"
+                        >项目首页</a
+                      ></span
+                    >
+                  </span>
+                </div>
+                <p class="app-decistore">
+                  一键润色、一键中英互译、一键代码解释、chat分析报告生成、PDF论文全文翻译功能、互联网信息聚合+GPT等
+                </p>
               </div>
-              <p class="app-decistore">一键润色、一键中英互译、一键代码解释、chat分析报告生成、PDF论文全文翻译功能、互联网信息聚合+GPT等</p>
+            </div>
+            <div class="buttons">
+              <button class="yaml-button">
+                <a href="./images/gpt-academic.yaml" download>导出 Yaml</a>
+              </button>
+              <button class="deploy-button">
+                <a
+                  href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dgpt-academic%26sealos_inside%3Dtrue"
+                  target="_blank"
+                  >一键安装</a
+                >
+              </button>
             </div>
           </div>
-          <div class="buttons">
-            <button class="yaml-button">
-              <a href="./images/gpt-academic.yaml" download>导出 Yaml</a>
-            </button>
-            <button class="deploy-button">
-              <a href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dgpt-academic%26sealos_inside%3Dtrue"
-                target="_blank">一键安装</a>
-            </button>
+          <div class="carousel">
+            <div class="carousel-container">
+              <img src="./images/banner1.gif" alt="Image 1" class="carousel-item active" />
+              <img src="./images/banner2.gif" alt="Image 2" class="carousel-item active" />
+              <img src="./images/banner3.gif" alt="Image 3" class="carousel-item active" />
+              <img src="./images/banner4.gif" alt="Image 4" class="carousel-item active" />
+              <img src="./images/banner5.png" alt="Image 4" class="carousel-item active" />
+              <img src="./images/banner6.png" alt="Image 4" class="carousel-item active" />
+              <img src="./images/banner7.png" alt="Image 4" class="carousel-item active" />
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-button prev">&lt;</button>
+              <button class="carousel-button next">&gt;</button>
+            </div>
+            <script src="../../../app_store/js/bannerlb.js"></script>
           </div>
-        </div>
-        <div class="carousel">
-          <div class="carousel-container">
-            <img src="./images/banner1.gif" alt="Image 1" class="carousel-item active">
-            <img src="./images/banner2.gif" alt="Image 2" class="carousel-item active">
-            <img src="./images/banner3.gif" alt="Image 3" class="carousel-item active">
-            <img src="./images/banner4.gif" alt="Image 4" class="carousel-item active">
-            <img src="./images/banner5.png" alt="Image 4" class="carousel-item active">
-            <img src="./images/banner6.png" alt="Image 4" class="carousel-item active">
-            <img src="./images/banner7.png" alt="Image 4" class="carousel-item active">
+          <div class="quick-start">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />如何部署在线 Gpt-Academic
+            </h2>
+            <div class="steps" id="steper"></div>
           </div>
-          <div class="carousel-nav">
-            <button class="carousel-button prev">&lt;</button>
-            <button class="carousel-button next">&gt;</button>
+          <div class="features-list">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />什么是 Gpt-Academic
+            </h2>
+            <ul class="features-list-ul">
+              <li>
+                “GPT 学术优化”（GPT
+                Academic）是一个专注于自然语言处理和生成的开源项目，旨在利用GPT模型来优化学术领域的任务。为GPT/GLM等LLM大语言模型提供实用化交互接口，特别优化论文阅读/润色/写作体验，模块化设计，支持自定义快捷按钮&函数插件，支持Python和C++等项目剖析&自译解功能，PDF/LaTex论文翻译&总结功能，支持并行问询多种LLM模型，支持chatglm3等本地模型。接入通义千问,
+                deepseekcoder, 讯飞星火, 文心一言, llama2, rwkv, claude2, moss等。
+              </li>
+            </ul>
           </div>
-          <script src="../../../app_store/js/bannerlb.js"></script>
-        </div>
-        <div class="quick-start">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 Gpt-Academic</h2>
-          <div class="steps" id="steper">
-
+          <div class="features-list">
+            <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg" />功能列表</h2>
+            <ul class="features-list-ul">
+              <li>
+                学术写作和编辑：提供工具和模型来帮助生成学术论文、摘要、文献综述等。通过微调模型，GPT
+                Academic可以生成符合特定学术风格和格式的文本。
+              </li>
+              <li>
+                自动化文献综述：使用GPT模型来自动生成或补充文献综述，这对研究人员来说是一个省时的工具。
+              </li>
+              <li>
+                数据集和训练：该项目可能包括针对学术领域的数据集，用于微调和训练GPT模型，以提高其在处理学术文本时的准确性和相关性。
+              </li>
+              <li>
+                学术问答系统：开发基于GPT的问答系统，可以回答学术领域的特定问题，如数学、物理、历史等。
+              </li>
+              <li>
+                文本分类和主题分析：使用GPT模型来对学术论文进行分类或主题分析，帮助研究人员更好地组织和理解文献。
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 Gpt-Academic</h2>
-          <ul class="features-list-ul">
-            <li>“GPT 学术优化”（GPT
-              Academic）是一个专注于自然语言处理和生成的开源项目，旨在利用GPT模型来优化学术领域的任务。为GPT/GLM等LLM大语言模型提供实用化交互接口，特别优化论文阅读/润色/写作体验，模块化设计，支持自定义快捷按钮&函数插件，支持Python和C++等项目剖析&自译解功能，PDF/LaTex论文翻译&总结功能，支持并行问询多种LLM模型，支持chatglm3等本地模型。接入通义千问,
-              deepseekcoder, 讯飞星火, 文心一言, llama2, rwkv, claude2, moss等。
-            </li>
-          </ul>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
-          <ul class="features-list-ul">
-            <li>学术写作和编辑：提供工具和模型来帮助生成学术论文、摘要、文献综述等。通过微调模型，GPT Academic可以生成符合特定学术风格和格式的文本。</li>
-            <li>自动化文献综述：使用GPT模型来自动生成或补充文献综述，这对研究人员来说是一个省时的工具。</li>
-            <li>数据集和训练：该项目可能包括针对学术领域的数据集，用于微调和训练GPT模型，以提高其在处理学术文本时的准确性和相关性。</li>
-            <li>学术问答系统：开发基于GPT的问答系统，可以回答学术领域的特定问题，如数学、物理、历史等。</li>
-            <li>文本分类和主题分析：使用GPT模型来对学术论文进行分类或主题分析，帮助研究人员更好地组织和理解文献。</li>
-          </ul>
         </div>
       </div>
+      <div class="app-faq" id="about-right"></div>
     </div>
-    <div class="app-faq" id="about-right"></div>
-  </div>
-  <div class="h5footer" id="footer">
-  </div>
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script")
-      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
-      var s = document.getElementsByTagName("script")[0]
-      s.parentNode.insertBefore(hm, s)
-    })();
-  </script>
-</body>
-
+    <div class="h5footer" id="footer"></div>
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </body>
 </html>

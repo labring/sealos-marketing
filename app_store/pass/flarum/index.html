@@ -1,116 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>使用Sealos部署flarum教程</title>
-  <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
-  <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico">
-  <script src="../../../app_store/js/appstor.js" defer></script><script src="/app_store/js/stars.js" defer></script>
-  <script src="../../../app_store/js/navbar.js"></script>
-  <script src="../../../app_store/js/header-left.js"></script>
-  <script src="../../../app_store/js/about-right.js"></script>
-  <script src="../../../app_store/js/foooter.js"></script>
-  <script src="../../../app_store/js/step.js"></script>
-  <script src="/js/sem.js" defer></script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "q8gnm02cz6");
-</script>
-</head>
-
-<body>
-  <div id="navbar-container"></div>
-  <div class="stepxq">
-    <div class="left-list" id="left-header">
-    </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('.nav-item[data-page="pass"]').classList.add('active')
-        document.querySelector('li[data-page="flarum"]').classList.add('active')
-      });
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用Sealos部署flarum教程</title>
+    <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css" />
+    <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico" />
+    <script src="../../../app_store/js/appstor.js" defer></script>
+    <script src="/app_store/js/stars.js" defer></script>
+    <script src="../../../app_store/js/navbar.js"></script>
+    <script src="../../../app_store/js/header-left.js"></script>
+    <script src="../../../app_store/js/about-right.js"></script>
+    <script src="../../../app_store/js/foooter.js"></script>
+    <script src="../../../app_store/js/step.js"></script>
+    <script src="/js/sem.js" defer></script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'q8gnm02cz6');
     </script>
-    <div class="app-h5">
-      <div class="hard-top">
-        <div class="hard-title-stats">
-          <div class="title-stats">
-            <div class="title-logo"><img src="../../img/Flarum.png" alt="Logo"></div>
-            <div class="hard-top-title">
-              <div class="hard-top2">
-                <h1>Flarum</h1>
-                <span class="stats">
-                  <span class="stars"><img src="../../img/AFFINE-logo2.svg">0.193k</span>
-                  <span class="shares"><img src="../../img/project.svg">
-                    <a href="https://github.com/crazy-max/docker-flarum" target="_blank">项目首页</a>
+  </head>
+
+  <body>
+    <div id="navbar-container"></div>
+    <div class="stepxq">
+      <div class="left-list" id="left-header"></div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelector('.nav-item[data-page="pass"]').classList.add('active');
+          document.querySelector('li[data-page="flarum"]').classList.add('active');
+        });
+      </script>
+      <div class="app-h5">
+        <div class="hard-top">
+          <div class="hard-title-stats">
+            <div class="title-stats">
+              <div class="title-logo"><img src="../../img/Flarum.png" alt="Logo" /></div>
+              <div class="hard-top-title">
+                <div class="hard-top2">
+                  <h1>Flarum</h1>
+                  <span class="stats">
+                    <span class="stars"><img src="../../img/AFFINE-logo2.svg" />0.193k</span>
+                    <span class="shares"
+                      ><img src="../../img/project.svg" />
+                      <a href="https://github.com/crazy-max/docker-flarum" target="_blank"
+                        >项目首页</a
+                      >
+                    </span>
                   </span>
-                </span>
+                </div>
+                <p class="app-decistore">
+                  ‌Flarum‌是一款免费的、开源的论坛软件和内容管理系统（CMS）
+                </p>
               </div>
-              <p class="app-decistore">‌Flarum‌是一款免费的、开源的论坛软件和内容管理系统（CMS）
-              </p>
+            </div>
+            <div class="buttons">
+              <button class="yaml-button">
+                <a href="./images/flarum.yaml" download>导出 Yaml</a>
+              </button>
+              <button class="deploy-button">
+                <a
+                  href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dflarum%26sealos_inside%3Dtrue"
+                  target="_blank"
+                  >一键安装</a
+                >
+              </button>
             </div>
           </div>
-          <div class="buttons">
-            <button class="yaml-button">
-              <a href="./images/flarum.yaml" download>导出 Yaml</a>
-            </button>
-            <button class="deploy-button">
-              <a href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dflarum%26sealos_inside%3Dtrue"
-                target="_blank">一键安装</a>
-            </button>
+          <div class="carousel">
+            <div class="carousel-container">
+              <img src="./images/banner1.png" alt="Image 1" class="carousel-item active" />
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-button prev">&lt;</button>
+              <button class="carousel-button next">&gt;</button>
+            </div>
+            <script src="../../../app_store/js/bannerlb.js"></script>
           </div>
-        </div>
-        <div class="carousel">
-          <div class="carousel-container">
-            <img src="./images/banner1.png" alt="Image 1" class="carousel-item active" />
+          <div class="quick-start">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />如何部署在线 Flarum
+            </h2>
+            <div class="steps" id="steper"></div>
           </div>
-          <div class="carousel-nav">
-            <button class="carousel-button prev">&lt;</button>
-            <button class="carousel-button next">&gt;</button>
-          </div>
-          <script src="../../../app_store/js/bannerlb.js"></script>
-        </div>
-        <div class="quick-start">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 Flarum</h2>
-          <div class="steps" id="steper"></div>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 Flarum</h2>
-          <ul class="features-list-ul">
-            <li>
-              Flarum‌是一款免费的、开源的论坛软件和内容管理系统（CMS），适用于个人讨论和商业社区。它基于PHP构建，使用Mithril框架，具有轻量级、高性能的特点。Flarum的设计理念是“自由”和“开源”，旨在提供一个既轻巧又不失强大扩展性的论坛解决方案，让任何个人或组织都能轻松构建属于自己的互动平台‌‌
-            </li>
-          </ul>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
-          <ul class="features-list-ul">
-            <ul>
-              <li>‌<strong>轻量级</strong>‌：Flarum的设计非常简洁，没有复杂的依赖关系，占用空间小，适合在资源有限的服务器上运行‌。</li>
-              <li>‌<strong>高性能</strong>‌：使用高性能的JavaScript框架Mithril，使得界面响应迅速，用户体验良好‌。</li>
-              <li>‌<strong>开源</strong>‌：基于MI协议发布，用户可以自由定制和扩展软件功能‌。</li>
-              <li>‌<strong>可扩展</strong>‌：拥有强大的扩展API，用户可以根据需求开发新的功能或集成现有功能‌。</li>
+          <div class="features-list">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />什么是 Flarum
+            </h2>
+            <ul class="features-list-ul">
+              <li>
+                Flarum‌是一款免费的、开源的论坛软件和内容管理系统（CMS），适用于个人讨论和商业社区。它基于PHP构建，使用Mithril框架，具有轻量级、高性能的特点。Flarum的设计理念是“自由”和“开源”，旨在提供一个既轻巧又不失强大扩展性的论坛解决方案，让任何个人或组织都能轻松构建属于自己的互动平台‌‌
+              </li>
             </ul>
-          </ul>
+          </div>
+          <div class="features-list">
+            <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg" />功能列表</h2>
+            <ul class="features-list-ul">
+              <ul>
+                <li>
+                  ‌<strong>轻量级</strong>‌：Flarum的设计非常简洁，没有复杂的依赖关系，占用空间小，适合在资源有限的服务器上运行‌。
+                </li>
+                <li>
+                  ‌<strong>高性能</strong>‌：使用高性能的JavaScript框架Mithril，使得界面响应迅速，用户体验良好‌。
+                </li>
+                <li>‌<strong>开源</strong>‌：基于MI协议发布，用户可以自由定制和扩展软件功能‌。</li>
+                <li>
+                  ‌<strong>可扩展</strong>‌：拥有强大的扩展API，用户可以根据需求开发新的功能或集成现有功能‌。
+                </li>
+              </ul>
+            </ul>
+          </div>
         </div>
       </div>
+      <div class="app-faq" id="about-right"></div>
     </div>
-    <div class="app-faq" id="about-right"></div>
-  </div>
-  <div class="h5footer" id="footer">
-  </div>
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script")
-      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
-      var s = document.getElementsByTagName("script")[0]
-      s.parentNode.insertBefore(hm, s)
-    })();
-  </script>
-</body>
-
+    <div class="h5footer" id="footer"></div>
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </body>
 </html>

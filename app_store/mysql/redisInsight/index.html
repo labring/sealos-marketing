@@ -1,119 +1,163 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>使用Sealos部署redisInsight教程</title>
-  <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
-  <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico">
-  <script src="../../../app_store/js/appstor.js" defer></script><script src="/app_store/js/stars.js" defer></script>
-  <script src="../../../app_store/js/navbar.js"></script>
-  <script src="../../../app_store/js/header-left.js"></script>
-  <script src="../../../app_store/js/about-right.js"></script>
-  <script src="../../../app_store/js/foooter.js"></script>
-  <script src="../../../app_store/js/step.js"></script>
-  <script src="/js/sem.js" defer></script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "q8gnm02cz6");
-</script>
-</head>
-
-<body>
-  <div id="navbar-container"></div>
-  <div class="stepxq">
-    <div class="left-list" id="left-header">
-    </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('.nav-item[data-page="mysql"]').classList.add('active')
-        document.querySelector('li[data-page="redisInsight"]').classList.add('active')
-      });
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用Sealos部署redisInsight教程</title>
+    <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css" />
+    <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico" />
+    <script src="../../../app_store/js/appstor.js" defer></script>
+    <script src="/app_store/js/stars.js" defer></script>
+    <script src="../../../app_store/js/navbar.js"></script>
+    <script src="../../../app_store/js/header-left.js"></script>
+    <script src="../../../app_store/js/about-right.js"></script>
+    <script src="../../../app_store/js/foooter.js"></script>
+    <script src="../../../app_store/js/step.js"></script>
+    <script src="/js/sem.js" defer></script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'q8gnm02cz6');
     </script>
-    <div class="app-h5">
-      <div class="hard-top">
-        <div class="hard-title-stats">
-          <div class="title-stats">
-            <div class="title-logo"><img src="../../img/redisinsight.svg" alt="Logo"></div>
-            <div class="hard-top-title">
-              <div class="hard-top2">
-                <h1>RedisInsight</h1>
-                <span class="stats">
-                  <span class="stars"><img src="../../img/AFFINE-logo2.svg">6.2k</span>
-                  <span class="shares"><img src="../../img/project.svg">
-                    <a href="https://github.com/RedisInsight/RedisInsight" target="_blank">项目首页</a>
+  </head>
+
+  <body>
+    <div id="navbar-container"></div>
+    <div class="stepxq">
+      <div class="left-list" id="left-header"></div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelector('.nav-item[data-page="mysql"]').classList.add('active');
+          document.querySelector('li[data-page="redisInsight"]').classList.add('active');
+        });
+      </script>
+      <div class="app-h5">
+        <div class="hard-top">
+          <div class="hard-title-stats">
+            <div class="title-stats">
+              <div class="title-logo"><img src="../../img/redisinsight.svg" alt="Logo" /></div>
+              <div class="hard-top-title">
+                <div class="hard-top2">
+                  <h1>RedisInsight</h1>
+                  <span class="stats">
+                    <span class="stars"><img src="../../img/AFFINE-logo2.svg" />6.2k</span>
+                    <span class="shares"
+                      ><img src="../../img/project.svg" />
+                      <a href="https://github.com/RedisInsight/RedisInsight" target="_blank"
+                        >项目首页</a
+                      >
+                    </span>
                   </span>
-                </span>
+                </div>
+                <p class="app-decistore">
+                  用于管理和监控 Redis 数据库的图形用户界面（GUI）工具。它是由 Redis Labs
+                  开发的，旨在简化开发人员和管理员对 Redis 实例的管理任务。
+                </p>
               </div>
-              <p class="app-decistore">用于管理和监控 Redis 数据库的图形用户界面（GUI）工具。它是由 Redis Labs 开发的，旨在简化开发人员和管理员对 Redis 实例的管理任务。
-              </p>
+            </div>
+            <div class="buttons">
+              <button class="yaml-button">
+                <a href="./images/redisinsight.yaml" download>导出 Yaml</a>
+              </button>
+              <button class="deploy-button">
+                <a
+                  href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dredisinsight%26sealos_inside%3Dtrue"
+                  target="_blank"
+                  >一键安装</a
+                >
+              </button>
             </div>
           </div>
-          <div class="buttons">
-            <button class="yaml-button">
-              <a href="./images/redisinsight.yaml" download>导出 Yaml</a>
-            </button>
-            <button class="deploy-button">
-              <a href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dredisinsight%26sealos_inside%3Dtrue"
-                target="_blank">一键安装</a>
-            </button>
+          <div class="carousel">
+            <div class="carousel-container">
+              <img src="./images/banner1.png" alt="Image 1" class="carousel-item active" />
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-button prev">&lt;</button>
+              <button class="carousel-button next">&gt;</button>
+            </div>
+            <script src="../../../app_store/js/bannerlb.js"></script>
           </div>
-        </div>
-        <div class="carousel">
-          <div class="carousel-container">
-            <img src="./images/banner1.png" alt="Image 1" class="carousel-item active" />
+          <div class="quick-start">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />如何部署在线 RedisInsight
+            </h2>
+            <div class="steps" id="steper"></div>
           </div>
-          <div class="carousel-nav">
-            <button class="carousel-button prev">&lt;</button>
-            <button class="carousel-button next">&gt;</button>
-          </div>
-          <script src="../../../app_store/js/bannerlb.js"></script>
-        </div>
-        <div class="quick-start">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 RedisInsight</h2>
-          <div class="steps" id="steper"></div>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 RedisInsight</h2>
-          <ul class="features-list-ul">
-            <li>RedisInsight 是 Redis 官方出品的可视化管理工具，支持 String、Hash、Set、List、JSON 等多种数据类型的管理，同时集成了 RedisCli，可进行终端交互。</li>
-          </ul>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
-          <ul class="features-list-ul">
-            <ul>
-              <li>可视化界面：RedisInsight 提供了一个直观的用户界面，使用户能够轻松地查看和管理 Redis 数据。它以图形方式显示 key-value 对、数据结构等信息，使用户更容易理解和操作数据。
+          <div class="features-list">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />什么是 RedisInsight
+            </h2>
+            <ul class="features-list-ul">
+              <li>
+                RedisInsight 是 Redis 官方出品的可视化管理工具，支持 String、Hash、Set、List、JSON
+                等多种数据类型的管理，同时集成了 RedisCli，可进行终端交互。
               </li>
-              <li>监控和指标：该工具允许用户监控 Redis 服务器的关键性能指标，如内存使用情况、每秒执行的命令数、延迟等。通过监控这些指标，用户可以及时发现潜在的性能问题并进行优化。</li>
-              <li>‌实时命令和日志：RedisInsight 提供实时的命令执行信息和日志查看功能。这对于故障排除和调试非常有用，用户可以实时跟踪 Redis 实例的操作。</li>
-              <li>数据探索：用户可以使用 RedisInsight 探索 Redis 数据，通过 GUI 界面方便地查看数据结构、进行搜索、排序和筛选等操作。</li>
-              <li>空间分析：工具提供了对 Redis 数据集中键分布的分析功能，帮助用户了解数据分布情况，从而更有效地管理数据。</li>
-              <li>备份和恢复：RedisInsight 允许用户对 Redis 数据进行备份，并在需要时进行恢复。这对于数据恢复和维护非常重要。</li>
-              <li>安全性：RedisInsight 提供身份验证和授权机制，以确保 Redis 实例的安全性。用户可以设置访问控制和管理用户角色。</li>
-              <li>跨平台支持：RedisInsight 支持多个操作系统，包括 Windows、macOS 和 Linux，使其适用于广泛的用户群体。</li>
             </ul>
-          </ul>
+          </div>
+          <div class="features-list">
+            <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg" />功能列表</h2>
+            <ul class="features-list-ul">
+              <ul>
+                <li>
+                  可视化界面：RedisInsight 提供了一个直观的用户界面，使用户能够轻松地查看和管理
+                  Redis 数据。它以图形方式显示 key-value
+                  对、数据结构等信息，使用户更容易理解和操作数据。
+                </li>
+                <li>
+                  监控和指标：该工具允许用户监控 Redis
+                  服务器的关键性能指标，如内存使用情况、每秒执行的命令数、延迟等。通过监控这些指标，用户可以及时发现潜在的性能问题并进行优化。
+                </li>
+                <li>
+                  ‌实时命令和日志：RedisInsight
+                  提供实时的命令执行信息和日志查看功能。这对于故障排除和调试非常有用，用户可以实时跟踪
+                  Redis 实例的操作。
+                </li>
+                <li>
+                  数据探索：用户可以使用 RedisInsight 探索 Redis 数据，通过 GUI
+                  界面方便地查看数据结构、进行搜索、排序和筛选等操作。
+                </li>
+                <li>
+                  空间分析：工具提供了对 Redis
+                  数据集中键分布的分析功能，帮助用户了解数据分布情况，从而更有效地管理数据。
+                </li>
+                <li>
+                  备份和恢复：RedisInsight 允许用户对 Redis
+                  数据进行备份，并在需要时进行恢复。这对于数据恢复和维护非常重要。
+                </li>
+                <li>
+                  安全性：RedisInsight 提供身份验证和授权机制，以确保 Redis
+                  实例的安全性。用户可以设置访问控制和管理用户角色。
+                </li>
+                <li>
+                  跨平台支持：RedisInsight 支持多个操作系统，包括 Windows、macOS 和
+                  Linux，使其适用于广泛的用户群体。
+                </li>
+              </ul>
+            </ul>
+          </div>
         </div>
       </div>
+      <div class="app-faq" id="about-right"></div>
     </div>
-    <div class="app-faq" id="about-right"></div>
-  </div>
-  <div class="h5footer" id="footer">
-  </div>
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script")
-      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
-      var s = document.getElementsByTagName("script")[0]
-      s.parentNode.insertBefore(hm, s)
-    })();
-  </script>
-</body>
-
+    <div class="h5footer" id="footer"></div>
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </body>
 </html>

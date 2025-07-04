@@ -1,112 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用Sealos部署bytebase教程</title>
+    <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css" />
+    <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico" />
+    <script src="../../../app_store/js/appstor.js" defer></script>
+    <script src="/app_store/js/stars.js" defer></script>
+    <script src="../../../app_store/js/navbar.js"></script>
+    <script src="../../../app_store/js/header-left.js"></script>
+    <script src="../../../app_store/js/about-right.js"></script>
+    <script src="../../../app_store/js/foooter.js"></script>
+    <script src="../../../app_store/js/step.js"></script>
+    <script src="/js/sem.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>使用Sealos部署bytebase教程</title>
-  <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
-  <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico">
-  <script src="../../../app_store/js/appstor.js" defer></script><script src="/app_store/js/stars.js" defer></script>
-  <script src="../../../app_store/js/navbar.js"></script>
-  <script src="../../../app_store/js/header-left.js"></script>
-  <script src="../../../app_store/js/about-right.js"></script>
-  <script src="../../../app_store/js/foooter.js"></script>
-  <script src="../../../app_store/js/step.js"></script>
-  <script src="/js/sem.js" defer></script>
-</head>
-
-<body>
-  <div id="navbar-container"></div>
-  <div class="stepxq">
-    <div class="left-list" id="left-header">
-    </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('.nav-item[data-page="mysql"]').classList.add('active')
-        document.querySelector('li[data-page="bytebase"]').classList.add('active')
-      });
-    </script>
-    <div class="app-h5">
-      <div class="hard-top">
-        <div class="hard-title-stats">
-          <div class="title-stats">
-            <div class="title-logo"><img src="../../img/bytebase.svg" alt="Logo"></div>
-            <div class="hard-top-title">
-              <div class="hard-top2">
-                <h1>Bytebase</h1>
-                <span class="stats">
-                  <span class="stars"><img src="../../img/AFFINE-logo2.svg">11.4k</span>
-                  <span class="shares"><img src="../../img/project.svg">
-                    <a href="https://github.com/bytebase/bytebase" target="_blank">项目首页</a>
+  <body>
+    <div id="navbar-container"></div>
+    <div class="stepxq">
+      <div class="left-list" id="left-header"></div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelector('.nav-item[data-page="mysql"]').classList.add('active');
+          document.querySelector('li[data-page="bytebase"]').classList.add('active');
+        });
+      </script>
+      <div class="app-h5">
+        <div class="hard-top">
+          <div class="hard-title-stats">
+            <div class="title-stats">
+              <div class="title-logo"><img src="../../img/bytebase.svg" alt="Logo" /></div>
+              <div class="hard-top-title">
+                <div class="hard-top2">
+                  <h1>Bytebase</h1>
+                  <span class="stats">
+                    <span class="stars"><img src="../../img/AFFINE-logo2.svg" />11.4k</span>
+                    <span class="shares"
+                      ><img src="../../img/project.svg" />
+                      <a href="https://github.com/bytebase/bytebase" target="_blank">项目首页</a>
+                    </span>
                   </span>
-                </span>
+                </div>
+                <p class="app-decistore">
+                  ‌Bytebase是面向DevOps团队的基于 Web
+                  的、零配置、无依赖的数据库架构更改和版本控制管理工具。
+                </p>
               </div>
-              <p class="app-decistore">‌Bytebase是面向DevOps团队的基于 Web 的、零配置、无依赖的数据库架构更改和版本控制管理工具。
-              </p>
+            </div>
+            <div class="buttons">
+              <button class="yaml-button">
+                <a href="./images/bytebase.yaml" download>导出 Yaml</a>
+              </button>
+              <button class="deploy-button">
+                <a
+                  href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dbytebase%26sealos_inside%3Dtrue"
+                  target="_blank"
+                  >一键安装</a
+                >
+              </button>
             </div>
           </div>
-          <div class="buttons">
-            <button class="yaml-button">
-              <a href="./images/bytebase.yaml" download>导出 Yaml</a>
-            </button>
-            <button class="deploy-button">
-              <a href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dbytebase%26sealos_inside%3Dtrue"
-                target="_blank">一键安装</a>
-            </button>
+          <div class="carousel">
+            <div class="carousel-container">
+              <img src="./images/banner2.webp" alt="Image 1" class="carousel-item active" />
+              <img src="./images/banner1.webp" alt="Image 2" class="carousel-item active" />
+              <img src="./images/banner3.webp" alt="Image 3" class="carousel-item active" />
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-button prev">&lt;</button>
+              <button class="carousel-button next">&gt;</button>
+            </div>
+            <script src="../../../app_store/js/bannerlb.js"></script>
           </div>
-        </div>
-        <div class="carousel">
-          <div class="carousel-container">
-            <img src="./images/banner2.webp" alt="Image 1" class="carousel-item active" />
-            <img src="./images/banner1.webp" alt="Image 2" class="carousel-item active" />
-            <img src="./images/banner3.webp" alt="Image 3" class="carousel-item active" />
+          <div class="quick-start">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />如何部署在线 Bytebase
+            </h2>
+            <div class="steps" id="steper"></div>
           </div>
-          <div class="carousel-nav">
-            <button class="carousel-button prev">&lt;</button>
-            <button class="carousel-button next">&gt;</button>
+          <div class="features-list">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />什么是 Bytebase
+            </h2>
+            <ul class="features-list-ul">
+              <li>
+                Bytebase‌是一款开源的数据库管理工具，主要支持PostgreSQL和MySQL数据库。它提供直观的用户界面和强大的功能，如数据管理、追踪、备份和协作，帮助用户提升数据库管理效率‌
+              </li>
+            </ul>
           </div>
-          <script src="../../../app_store/js/bannerlb.js"></script>
-        </div>
-        <div class="quick-start">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 Bytebase</h2>
-          <div class="steps" id="steper"></div>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 Bytebase</h2>
-          <ul class="features-list-ul">
-            <li>Bytebase‌是一款开源的数据库管理工具，主要支持PostgreSQL和MySQL数据库。它提供直观的用户界面和强大的功能，如数据管理、追踪、备份和协作，帮助用户提升数据库管理效率‌</li>
-          </ul>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
-          <ul class="features-list-ul">
-            <ul>
+          <div class="features-list">
+            <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg" />功能列表</h2>
+            <ul class="features-list-ul">
               <ul>
-                <li>‌<strong>数据库变更管理</strong>‌：通过标准化的操作流程支持在线模式迁移、批量变更等复杂操作‌</li>
-                <li>‌<strong>SQL审查</strong>‌：内置100+条SQL审查规则，帮助团队检测SQL反模式，确保SQL风格的统一</li>
-                <li>‌<strong>GitOps集成</strong>‌：与GitHu和GitLa无缝集成，支持通过GitOps工作流进行数据库变更</li>
-                <li>‌<strong>数据访问控制</strong>‌：提供组织级别的数据访问控制策略，确保数据安全</li>
-                <li>‌<strong>异常检测与审计</strong>‌：集中管理数据库异常行为和用户操作，提供全面的审计日志</li>
+                <ul>
+                  <li>
+                    ‌<strong>数据库变更管理</strong>‌：通过标准化的操作流程支持在线模式迁移、批量变更等复杂操作‌
+                  </li>
+                  <li>
+                    ‌<strong>SQL审查</strong>‌：内置100+条SQL审查规则，帮助团队检测SQL反模式，确保SQL风格的统一
+                  </li>
+                  <li>
+                    ‌<strong>GitOps集成</strong>‌：与GitHu和GitLa无缝集成，支持通过GitOps工作流进行数据库变更
+                  </li>
+                  <li>
+                    ‌<strong>数据访问控制</strong>‌：提供组织级别的数据访问控制策略，确保数据安全
+                  </li>
+                  <li>
+                    ‌<strong>异常检测与审计</strong>‌：集中管理数据库异常行为和用户操作，提供全面的审计日志
+                  </li>
+                </ul>
               </ul>
             </ul>
-          </ul>
+          </div>
         </div>
       </div>
+      <div class="app-faq" id="about-right"></div>
     </div>
-    <div class="app-faq" id="about-right"></div>
-  </div>
-  <div class="h5footer" id="footer">
-  </div>
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script")
-      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
-      var s = document.getElementsByTagName("script")[0]
-      s.parentNode.insertBefore(hm, s)
-    })();
-  </script>
-</body>
-
+    <div class="h5footer" id="footer"></div>
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </body>
 </html>

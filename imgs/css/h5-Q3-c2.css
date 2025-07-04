@@ -2,7 +2,18 @@
 
 /* CSS Document */
 * {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
 }
 
 /* 确保滚动条样式生效的关键设置 */
@@ -16,7 +27,7 @@ body {
   /* iOS 滚动效果 */
   overflow-y: auto;
   /* 确保有滚动条 */
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
 }
 
 html,
@@ -150,8 +161,6 @@ table {
   border-spacing: 0;
 }
 
-
-
 .tips img {
   width: 85%;
 }
@@ -182,8 +191,8 @@ table {
   font-style: normal;
   letter-spacing: 0.5px;
   border-radius: 4px;
-  border: 1px solid var(--Gray-Modern-200, #E8EBF0);
-  background: var(--White, #FFF);
+  border: 1px solid var(--Gray-Modern-200, #e8ebf0);
+  background: var(--White, #fff);
 }
 
 .hero-video img {
@@ -227,7 +236,7 @@ table {
 }
 
 .navbar-links a:hover {
-  color: #219BF4;
+  color: #219bf4;
 }
 
 .navbar-right {
@@ -258,21 +267,21 @@ table {
   padding: 12px 26px;
   border-radius: 0.3125em;
   font-size: 14px;
-  background: var(--Bright-Blue-500, #219BF4);
-  box-shadow: 0px 0.289125em 1.15650em 0px rgba(58, 149, 255, 0.28);
+  background: var(--Bright-Blue-500, #219bf4);
+  box-shadow: 0px 0.289125em 1.1565em 0px rgba(58, 149, 255, 0.28);
 }
 
 .login-button:hover,
 .btn-primary:hover,
 .cta-button:hover,
 .vid6zhann:hover {
-  background: var(--Bright-Blue-600, #0884DD);
+  background: var(--Bright-Blue-600, #0884dd);
   box-shadow: 0px 4.626px 18.504px 0px rgba(58, 149, 255, 0.28);
 }
 
 .btn-secondary:hover,
 .feature h3:hover {
-  color: var(--light-sealos-secondary-text, var(--Bright-Blue-600, #0884DD));
+  color: var(--light-sealos-secondary-text, var(--Bright-Blue-600, #0884dd));
 }
 
 .video-container {
@@ -298,8 +307,6 @@ video {
 .videos img {
   margin-right: 10px;
 }
-
-
 
 .play-button {
   position: absolute;
@@ -356,7 +363,9 @@ video {
   border-radius: 12px;
   border: 7.093px solid var(--Black, #000);
   background: url(<path-to-image>) lightgray -19.162px 0px / 108.378% 100% no-repeat;
-  box-shadow: 0px 28.373px 56.746px -10.64px rgba(19, 51, 107, 0.20), 0px 0px 0.887px 0px rgba(19, 51, 107, 0.20);
+  box-shadow:
+    0px 28.373px 56.746px -10.64px rgba(19, 51, 107, 0.2),
+    0px 0px 0.887px 0px rgba(19, 51, 107, 0.2);
 }
 
 .tab-section-tions {
@@ -380,7 +389,9 @@ video {
   padding: 14px 60px 14px 26px;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
+  transition:
+    background-color 0.3s,
+    transform 0.1s;
   background-size: 18px;
   background-position: 14% 50%;
   background-repeat: no-repeat;
@@ -405,7 +416,7 @@ video {
   border-radius: 8px;
   color: #111824;
   border-radius: 8px;
-  background: linear-gradient(90deg, #E4F1FF 0%, rgba(228, 241, 255, 0.20) 100%);
+  background: linear-gradient(90deg, #e4f1ff 0%, rgba(228, 241, 255, 0.2) 100%);
 }
 
 .tab-section {
@@ -505,7 +516,7 @@ video {
   gap: 10px;
   align-self: stretch;
   border-radius: 12px;
-  background: linear-gradient(180deg, #D9EBFF 0%, rgba(255, 255, 255, 0.50) 100%);
+  background: linear-gradient(180deg, #d9ebff 0%, rgba(255, 255, 255, 0.5) 100%);
 }
 
 .cloud-module h2 {
@@ -516,7 +527,6 @@ video {
 .cloud-module p {
   color: #666;
 }
-
 
 .sub-module {
   margin-top: 10px;
@@ -529,14 +539,16 @@ video {
 
 .column {
   border-radius: 12px;
-  background: var(--White, #FFF);
-  box-shadow: 0px 12px 64px -12px rgba(19, 51, 107, 0.08), 0px 0px 1px 0px rgba(19, 51, 107, 0.20);
+  background: var(--White, #fff);
+  box-shadow:
+    0px 12px 64px -12px rgba(19, 51, 107, 0.08),
+    0px 0px 1px 0px rgba(19, 51, 107, 0.2);
   width: 32%;
   padding-bottom: 10px;
 }
 
 .cloud-module1 h2 {
-  color: #0080DD;
+  color: #0080dd;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -545,7 +557,7 @@ video {
 
 .cloud-module1 p {
   color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 14px;
   font-style: normal;
   line-height: 20px;
@@ -554,8 +566,8 @@ video {
 }
 
 .cloud-module h3 {
-  color: #273E4F;
-  font-family: "PingFang SC";
+  color: #273e4f;
+  font-family: 'PingFang SC';
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -573,7 +585,7 @@ video {
 .cloud-module p {
   color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
   /* body/small */
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -590,11 +602,11 @@ video {
   gap: 10px;
   align-self: stretch;
   border-radius: 16px;
-  background: linear-gradient(180deg, #D7F1FF 0%, rgba(255, 255, 255, 0.50) 100%);
+  background: linear-gradient(180deg, #d7f1ff 0%, rgba(255, 255, 255, 0.5) 100%);
 }
 
 .cloud-module2 h2 {
-  color: #008EC7;
+  color: #008ec7;
 
   font-size: 24px;
   font-style: normal;
@@ -605,7 +617,7 @@ video {
 
 .cloud-module2 p {
   color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -622,11 +634,11 @@ video {
   gap: 10px;
   align-self: stretch;
   border-radius: 16px;
-  background: linear-gradient(180deg, #E5E6FF 0%, rgba(255, 255, 255, 0.50) 100%);
+  background: linear-gradient(180deg, #e5e6ff 0%, rgba(255, 255, 255, 0.5) 100%);
 }
 
 .cloud-module3 h2 {
-  color: #7F4EC8;
+  color: #7f4ec8;
 
   font-size: 24px;
   font-style: normal;
@@ -638,7 +650,7 @@ video {
 .cloud-module3 p {
   color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
   /* body/medium */
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -676,7 +688,9 @@ video {
   border-radius: 12px;
   padding: 22px 28px;
   width: 100%;
-  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.05), 0px 3.742px 60px 0px rgba(182, 202, 224, 0.28);
+  box-shadow:
+    0px 0px 1px 0px rgba(0, 0, 0, 0.05),
+    0px 3.742px 60px 0px rgba(182, 202, 224, 0.28);
   text-align: left;
 }
 
@@ -691,7 +705,7 @@ video {
 
 .card-icon {
   border-radius: 6.119px;
-  background: #EAFCFF;
+  background: #eafcff;
   display: flex;
   padding: 10px;
   justify-content: center;
@@ -700,21 +714,21 @@ video {
 }
 
 .card-title .card-icon2 {
-  background: #DDF5FF;
+  background: #ddf5ff;
 }
 
 .card-title .card-icon3 {
-  background: #EAF1FF;
+  background: #eaf1ff;
 }
 
 .card-title .card-icon4 {
-  background: #EAF0FF;
+  background: #eaf0ff;
 }
 
 .card ul {
   list-style-type: none;
   padding: 0;
-  border-top: solid 1px #E8EBF0;
+  border-top: solid 1px #e8ebf0;
   padding-top: 20px;
 }
 
@@ -749,7 +763,7 @@ video {
   cursor: pointer;
   margin-top: 64px;
   letter-spacing: 0.15px;
-  background: var(--Bright-Blue-500, #219BF4);
+  background: var(--Bright-Blue-500, #219bf4);
   box-shadow: 0px 4.063px 16.251px 0px rgba(58, 149, 255, 0.28);
   width: 160px;
   margin-bottom: 64px;
@@ -787,7 +801,7 @@ video {
   line-height: 40px;
   letter-spacing: 0.4px;
   text-align: center;
-  padding: 110px 0px 72px 0px
+  padding: 110px 0px 72px 0px;
 }
 
 .fooddos {
@@ -866,7 +880,6 @@ video {
   align-items: center;
   margin-top: 160px;
   margin-bottom: 160px;
-
 }
 
 .container3 h2 {
@@ -919,7 +932,12 @@ video {
   /* 100% */
   letter-spacing: 0.4px;
   margin-bottom: 72px;
-  background: linear-gradient(180deg, rgba(240, 247, 255, 0.60) 0%, rgba(240, 247, 255, 1.00) 44%, rgba(240, 247, 255, 0.00) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(240, 247, 255, 0.6) 0%,
+    rgba(240, 247, 255, 1) 44%,
+    rgba(240, 247, 255, 0) 100%
+  );
 }
 
 .specification {
@@ -931,8 +949,8 @@ video {
 
 .ddos ul li {
   border-radius: 12px;
-  border: 1px solid var(--glass-outline, #E8EFFB);
-  background: var(--White, #FFF);
+  border: 1px solid var(--glass-outline, #e8effb);
+  background: var(--White, #fff);
   display: flex;
   padding: 10px 0px;
   flex-direction: row;
@@ -1000,7 +1018,7 @@ video {
 }
 
 .cloud-title {
-  color: #00223B;
+  color: #00223b;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -1019,7 +1037,7 @@ video {
 }
 
 .cloud-feature {
-  color: #51617D;
+  color: #51617d;
   margin-bottom: 16px;
   /* title/smallest */
   font-size: 16px;
@@ -1030,7 +1048,7 @@ video {
 }
 
 .cloud-feature::before {
-  content: "✓";
+  content: '✓';
   color: #37a1ff;
   margin-right: 10px;
 }
@@ -1038,7 +1056,7 @@ video {
 .cloud-cta {
   border: none;
   cursor: pointer;
-  color: var(--Neutrals-White, var(--White, #FFF));
+  color: var(--Neutrals-White, var(--White, #fff));
   font-size: 16px;
   font-style: normal;
   line-height: 24px;
@@ -1059,14 +1077,14 @@ video {
 .cloud-tag {
   margin-left: 10px;
   border-radius: 38px;
-  border: 1px solid #C9CEFF;
-  background: linear-gradient(90deg, #E2E2FF 0%, #EEF 100%);
+  border: 1px solid #c9ceff;
+  background: linear-gradient(90deg, #e2e2ff 0%, #eef 100%);
   display: flex;
   padding: 6px 12px;
   justify-content: center;
   align-items: center;
   gap: 5.842px;
-  color: #6272C5;
+  color: #6272c5;
   font-size: 12px;
   font-style: normal;
   line-height: 16px;
@@ -1079,9 +1097,9 @@ video {
   overflow: hidden;
   width: 560px;
   border-radius: 16px;
-  border: 1px solid var(--Bright-Blue-300, #85CCFF);
-  background: #F7FBFF;
-  box-shadow: 0px 4.626px 24px -4px rgba(58, 149, 255, 0.30);
+  border: 1px solid var(--Bright-Blue-300, #85ccff);
+  background: #f7fbff;
+  box-shadow: 0px 4.626px 24px -4px rgba(58, 149, 255, 0.3);
 }
 
 .cloud_coro {
@@ -1093,13 +1111,13 @@ video {
   overflow: hidden;
   width: 560px;
   border-radius: 16px;
-  border: 1px solid #DBC9FF;
-  background: #F9F9FF;
-  box-shadow: 0px 4.626px 24px -4px rgba(127, 133, 255, 0.30);
+  border: 1px solid #dbc9ff;
+  background: #f9f9ff;
+  box-shadow: 0px 4.626px 24px -4px rgba(127, 133, 255, 0.3);
 }
 
 .public-cloud::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -10px;
   left: -10px;
@@ -1111,7 +1129,7 @@ video {
 
 .cloud-cta-container {
   border-radius: 8px;
-  background: var(--Bright-Blue-500, #219BF4);
+  background: var(--Bright-Blue-500, #219bf4);
   box-shadow: 0px 4.063px 16.251px 0px rgba(58, 149, 255, 0.28);
   width: 100%;
   display: flex;
@@ -1135,10 +1153,12 @@ video {
   gap: 4.311px;
   margin-top: 50px;
   border-radius: 8px;
-  border: 1px solid var(--Gray-Modern-200, #E8EBF0);
-  background: var(--White, #FFF);
+  border: 1px solid var(--Gray-Modern-200, #e8ebf0);
+  background: var(--White, #fff);
   /* 2 */
-  box-shadow: 0px 0px 0.809px 0px rgba(0, 0, 0, 0.05), 0px 3.742px 14.969px 0px rgba(182, 202, 224, 0.28);
+  box-shadow:
+    0px 0px 0.809px 0px rgba(0, 0, 0, 0.05),
+    0px 3.742px 14.969px 0px rgba(182, 202, 224, 0.28);
 }
 
 .cloud_left {
@@ -1179,10 +1199,8 @@ video {
   font-weight: 400;
   line-height: 140%;
   /* 19.6px */
-  padding-top: 14px
+  padding-top: 14px;
 }
-
-
 
 .h5footerlm ul li p {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
@@ -1211,15 +1229,15 @@ video {
 
 .h5footer {
   padding-top: 72px;
-  border-top: 1px solid #E6EDF9;
-  background: linear-gradient(186deg, #FFF 4.82%, #F9FBFF 94.9%);
+  border-top: 1px solid #e6edf9;
+  background: linear-gradient(186deg, #fff 4.82%, #f9fbff 94.9%);
   margin-top: 100px;
 }
 
 .h5footerdb {
   display: flex;
   padding: 16px 0px 24px 0px;
-  border-top: 1px solid #E6EDF9;
+  border-top: 1px solid #e6edf9;
   justify-content: space-between;
 }
 
@@ -1250,7 +1268,7 @@ video {
 .vids8fream2 {
   padding: 72px 100px 48px 100px;
   border-radius: 20px;
-  background: #E9F4FF;
+  background: #e9f4ff;
 }
 
 .vids8fream h2 {
@@ -1283,7 +1301,7 @@ video {
 }
 
 .vids8fream .vids8fream2 span {
-  color: var(--light-sealos-secondary, var(--Bright-Blue-500, #219BF4));
+  color: var(--light-sealos-secondary, var(--Bright-Blue-500, #219bf4));
   font-size: 20px;
   font-style: normal;
   font-weight: 800;
@@ -1315,7 +1333,7 @@ video {
 }
 
 .vids7ico-0 {
-  background-color: #BCE7FF;
+  background-color: #bce7ff;
   /* 设置背景颜色 */
   border-radius: 50%;
   /* 设置边框半径为50%，‌使正方形变成圆形 */
@@ -1324,7 +1342,7 @@ video {
 }
 
 .vids7ico-1 {
-  background-color: #BCE7FF;
+  background-color: #bce7ff;
   /* 设置背景颜色 */
   width: 1.7px;
   margin: 8px 0px;
@@ -1344,14 +1362,14 @@ video {
   gap: 4.311px;
   flex-shrink: 0;
   border-radius: 7.026px;
-  background: var(--Bright-Blue-500, #219BF4);
+  background: var(--Bright-Blue-500, #219bf4);
   box-shadow: 0px 4.063px 16.251px 0px rgba(58, 149, 255, 0.28);
   width: 160px;
   height: 48px;
 }
 
 .vid6zhann a {
-  color: var(--Neutrals-White, var(--White, #FFF));
+  color: var(--Neutrals-White, var(--White, #fff));
   text-align: center;
   font-size: 17.565px;
   font-style: normal;
@@ -1398,24 +1416,22 @@ video {
 }
 
 .vids7-left h3 {
-  color: #00223B;
+  color: #00223b;
 
   font-size: 30px;
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
   /* 45px */
-
 }
 
 .vids7-left p {
-
   font-size: 30px;
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
   /* 45px */
-  background: linear-gradient(90deg, #7C96FE 0%, #4399F4 100%);
+  background: linear-gradient(90deg, #7c96fe 0%, #4399f4 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1430,37 +1446,41 @@ video {
 
 .login-footer {
   border-radius: 7.026px;
-  background: var(--Bright-Blue-500, #219BF4);
+  background: var(--Bright-Blue-500, #219bf4);
   display: flex;
   padding: 11px 40px;
-  color: var(--Neutrals-White, var(--White, #FFF));
+  color: var(--Neutrals-White, var(--White, #fff));
   text-align: center;
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 22.834px;
   letter-spacing: 0.132px;
-  box-shadow: 0px 0px 0.809px 0px rgba(0, 0, 0, 0.05), 0px 3.742px 14.969px 0px rgba(182, 202, 224, 0.28);
+  box-shadow:
+    0px 0px 0.809px 0px rgba(0, 0, 0, 0.05),
+    0px 3.742px 14.969px 0px rgba(182, 202, 224, 0.28);
   align-items: center;
 }
 
 .login-footer2 {
   border-radius: 7.026px;
-  background: var(--White, #FFF);
+  background: var(--White, #fff);
   display: flex;
   padding: 11px 40px;
   justify-content: center;
   align-items: center;
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
   text-align: center;
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 22.834px;
   letter-spacing: 0.132px;
-  box-shadow: 0px 0px 0.809px 0px rgba(0, 0, 0, 0.05), 0px 3.742px 14.969px 0px rgba(182, 202, 224, 0.28);
+  box-shadow:
+    0px 0px 0.809px 0px rgba(0, 0, 0, 0.05),
+    0px 3.742px 14.969px 0px rgba(182, 202, 224, 0.28);
 }
 
 .hero-content h1 {
@@ -1504,7 +1524,9 @@ video {
 
 .navbar-scrolled2 {
   position: fixed;
-  box-shadow: 0px 12px 64px -12px rgba(19, 51, 107, 0.08), 0px 0px 1px 0px rgba(19, 51, 107, 0.20);
+  box-shadow:
+    0px 12px 64px -12px rgba(19, 51, 107, 0.08),
+    0px 0px 1px 0px rgba(19, 51, 107, 0.2);
   background: #ffffff;
   padding: 16px 0px;
   z-index: 999;
@@ -1536,7 +1558,6 @@ video {
   margin: 64px 0px 35px 0px;
   align-items: center;
   padding-left: 5px;
-
 }
 
 .stat {
@@ -1587,12 +1608,12 @@ a {
 }
 
 .btn-primary {
-  background-color: #219BF4;
-  color: var(--Neutrals-White, var(--White, #FFF));
+  background-color: #219bf4;
+  color: var(--Neutrals-White, var(--White, #fff));
   text-align: center;
   font-style: normal;
 
-  box-shadow: 0px 0.289125em 1.15650em 0px rgba(58, 149, 255, 0.28);
+  box-shadow: 0px 0.289125em 1.1565em 0px rgba(58, 149, 255, 0.28);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1600,7 +1621,7 @@ a {
 
 .btn-secondary {
   background-color: #fff;
-  border: 1px solid #E6EDF9;
+  border: 1px solid #e6edf9;
   color: #111824;
   text-align: center;
   font-style: normal;
@@ -1608,7 +1629,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 0.050563em 0px rgba(0, 0, 0, 0.05), 0px 0.233875em 0.935625em 0px rgba(182, 202, 224, 0.28);
+  box-shadow:
+    0px 0px 0.050563em 0px rgba(0, 0, 0, 0.05),
+    0px 0.233875em 0.935625em 0px rgba(182, 202, 224, 0.28);
 }
 
 .hero-video iframe {
@@ -1627,7 +1650,6 @@ a {
 }
 
 .hero-video {
-
 }
 
 .stat p {
@@ -1656,7 +1678,7 @@ a {
 
 .feature {
   border-radius: 12px;
-  border: 1px solid #E6EDF9;
+  border: 1px solid #e6edf9;
   display: flex;
   padding: 30px 0px 30px 84px;
   gap: 12px;
@@ -1695,7 +1717,7 @@ a {
   flex-direction: row;
   letter-spacing: 1px;
 }
-.card .ys-jy{
+.card .ys-jy {
   display: none;
 }
 .feature p {
@@ -1719,7 +1741,7 @@ a {
 .stat-divider {
   width: 1px;
   height: 24px;
-  background-color: #E0E0E0;
+  background-color: #e0e0e0;
 }
 
 .Feature {
@@ -1728,7 +1750,6 @@ a {
 }
 
 @media screen and (max-width: 1680px) {
-
   .iconh1,
   .iconh2,
   .iconh3 {
@@ -1763,7 +1784,6 @@ a {
   /* 针对桌面显示器的样式 */
   .btn-primary,
   .btn-secondary {
-
     font-size: 14px;
   }
 
@@ -1801,7 +1821,6 @@ a {
     padding-right: 0px;
   }
 
-
   .tab-h3 {
     font-size: 36px;
   }
@@ -1818,7 +1837,6 @@ a {
     font-size: 14px;
   }
 
-
   .stat span {
     font-size: 22px;
   }
@@ -1829,12 +1847,11 @@ a {
 
   .tab-button {
     font-size: 14px;
-
   }
 
   .cloud-module1 {
     padding: 32px 24px 10px 24px;
-    gap: 6px
+    gap: 6px;
   }
 
   .cloud-module2 {
@@ -1855,7 +1872,6 @@ a {
 
   .cloud-module2 h2 {
     font-size: 22px;
-
   }
 
   .cloud-module2 h2 {
@@ -1892,7 +1908,6 @@ a {
 }
 
 @media screen and (max-width: 1440px) {
-
   .features-section,
   .code-ys,
   .fooddos,
@@ -1934,7 +1949,6 @@ a {
     padding: 22px 22px;
   }
 
-
   .cloud-module {
     gap: 8px;
   }
@@ -1968,7 +1982,6 @@ a {
     font-size: 22px;
   }
 
-
   .contai h2 {
     font-size: 30px;
     padding: 110px 0px 62px 0px;
@@ -1979,9 +1992,7 @@ a {
   }
 }
 
-
 @media screen and (max-width: 1344px) {
-
   .features-section,
   .code-ys,
   .fooddos,
@@ -2004,17 +2015,16 @@ a {
   }
 
   .tab-section {
-
     gap: 16px;
-
   }
   .cloud-module h3 img {
     width: 12px;
-}
+  }
 
-  .cloud-module1,.cloud-module2,.cloud-module3 {
+  .cloud-module1,
+  .cloud-module2,
+  .cloud-module3 {
     padding: 20px 22px 10px 22px;
-
   }
 
   /* 针对小型笔记本的样式 */
@@ -2039,7 +2049,6 @@ a {
     font-size: 14px;
   }
 
-
   .feature p {
     font-size: 12px;
   }
@@ -2051,7 +2060,6 @@ a {
   .features-section {
     gap: 18px;
   }
-
 
   .nav-links li a {
     font-size: 15px;
@@ -2127,9 +2135,7 @@ a {
   .cloud-module {
     gap: 8px;
     height: 90px;
-}
-
-
+  }
 
   .cloud-module h3 {
     font-size: 14px;
@@ -2203,41 +2209,43 @@ a {
   .cta-button {
     padding: 10px 20px;
     width: 130px;
-}
-.login-footer,.login-footer2 {
-  padding: 10px 20px;
-  line-height: 120%;
-  font-size: 14px;
-}
-.vids7-left h3,.vids7-left p {
-  font-size: 24px;
-}
-.h5footerlogo p {
-  font-size: 12px;
-  padding-top: 8px;
-}
-.h5footerlogo img {
-  height: 28px;
-}
-.footer-title {
-  font-size: 20px;    margin-left: 6px;
-}
-.h5footerlm ul li p{
-  font-size: 14px;
-  line-height: 110%;
-}
-.h5footerlm ul li {
-  font-size: 12px;
-}
+  }
+  .login-footer,
+  .login-footer2 {
+    padding: 10px 20px;
+    line-height: 120%;
+    font-size: 14px;
+  }
+  .vids7-left h3,
+  .vids7-left p {
+    font-size: 24px;
+  }
+  .h5footerlogo p {
+    font-size: 12px;
+    padding-top: 8px;
+  }
+  .h5footerlogo img {
+    height: 28px;
+  }
+  .footer-title {
+    font-size: 20px;
+    margin-left: 6px;
+  }
+  .h5footerlm ul li p {
+    font-size: 14px;
+    line-height: 110%;
+  }
+  .h5footerlm ul li {
+    font-size: 12px;
+  }
 
-.h5footerdbleft {
-  font-size: 12px;
-
-}
+  .h5footerdbleft {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 1280px) {
-  .tab-section-tions, 
+  .tab-section-tions,
   .features-section,
   .code-ys,
   .fooddos,
@@ -2253,7 +2261,7 @@ a {
 
 @media screen and (max-width: 1200px) {
   .hero-section,
-  .tab-section-tions, 
+  .tab-section-tions,
   .features-section,
   .code-ys,
   .test,
@@ -2263,11 +2271,10 @@ a {
   .h5_footer {
     max-width: 1000px;
   }
-  .btn-primary, .btn-secondary {
-
+  .btn-primary,
+  .btn-secondary {
     width: 136px;
-
-}
+  }
 
   .nav ul {
     gap: 18px;
@@ -2288,15 +2295,11 @@ a {
   .logo {
     font-size: 18px;
   }
-
-
-
 }
-
 
 @media screen and (max-width: 1100px) {
   .hero-section,
-  .tab-section-tions, 
+  .tab-section-tions,
   .features-section,
   .code-ys,
   .fooddos,
@@ -2312,11 +2315,10 @@ a {
     overflow: hidden;
     text-overflow: ellipsis;
     letter-spacing: 0px;
-
   }
 
   .feature h3 {
-    line-height: 150%
+    line-height: 150%;
   }
 
   .iconh1,
@@ -2329,92 +2331,98 @@ a {
   .feature {
     border-radius: 8px;
     padding: 16px 0px 16px 54px;
-
   }
   .hero-video video {
     width: 400px;
-}
-.hero-content {
-  padding-top: 70px;
-}
-.hero-content h1 {
-  font-size: 38px;
-}
-.tips img {
-  width: 280px;
-}
-.hero-video {
-  padding-top: 70px;
-}
-.stat span {
-  font-size: 16px;
-}
-.stat p {
-  font-size: 12px;
-}
-.btn-primary, .btn-secondary {
-  width: 110px;
-  font-size: 12px;
-  height: 34px;
-}
-.hero-buttons {
-  gap: 14px;
-}
-.features-section{
-  padding-top: 70px;
-}
-.feature {
-  padding: 12px 0px 12px 50px;
-}
-.iconh1, .iconh2, .iconh3 {
-  background-position: 6px 4px;
-}
-.tab-h3,.contai h2 {
-  font-size: 24px;
-}
-.tab-h3{
-margin-bottom: 40px;
-}
-.contai h2 {
-  padding: 80px 0px 42px 0px;
-}
-.tab-button {
-  padding: 10px 20px 10px 20px;
-}
-.tab-button img {
-  width: 14px;
-}
-.cloud-module1 p,.cloud-module2 p,.cloud-module3 p {
-  letter-spacing: 0px;
-}
-.cloud-module1 h2,.cloud-module2 h2,.cloud-module3 h2 {
-  font-size: 18px;
-}
+  }
+  .hero-content {
+    padding-top: 70px;
+  }
+  .hero-content h1 {
+    font-size: 38px;
+  }
+  .tips img {
+    width: 280px;
+  }
+  .hero-video {
+    padding-top: 70px;
+  }
+  .stat span {
+    font-size: 16px;
+  }
+  .stat p {
+    font-size: 12px;
+  }
+  .btn-primary,
+  .btn-secondary {
+    width: 110px;
+    font-size: 12px;
+    height: 34px;
+  }
+  .hero-buttons {
+    gap: 14px;
+  }
+  .features-section {
+    padding-top: 70px;
+  }
+  .feature {
+    padding: 12px 0px 12px 50px;
+  }
+  .iconh1,
+  .iconh2,
+  .iconh3 {
+    background-position: 6px 4px;
+  }
+  .tab-h3,
+  .contai h2 {
+    font-size: 24px;
+  }
+  .tab-h3 {
+    margin-bottom: 40px;
+  }
+  .contai h2 {
+    padding: 80px 0px 42px 0px;
+  }
+  .tab-button {
+    padding: 10px 20px 10px 20px;
+  }
+  .tab-button img {
+    width: 14px;
+  }
+  .cloud-module1 p,
+  .cloud-module2 p,
+  .cloud-module3 p {
+    letter-spacing: 0px;
+  }
+  .cloud-module1 h2,
+  .cloud-module2 h2,
+  .cloud-module3 h2 {
+    font-size: 18px;
+  }
 
-.cloud-module p{
-  letter-spacing: 0px;
-}
-.cloud-module p{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
+  .cloud-module p {
+    letter-spacing: 0px;
+  }
+  .cloud-module p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 
-.ta1023{
-  display: none;
-}
-.card .ys-fz{
-  display: none;
-}
-.card .ys-jy{
-  display: block;
-}
-
+  .ta1023 {
+    display: none;
+  }
+  .card .ys-fz {
+    display: none;
+  }
+  .card .ys-jy {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 1024px) {
   .hero-section,
-  .tab-section-tions, 
+  .tab-section-tions,
   .features-section,
   .code-ys,
   .fooddos,
@@ -2427,10 +2435,10 @@ margin-bottom: 40px;
   }
   .hero-video video {
     width: 380px;
-}
-.hero-video {
-  padding-top: 40px;
-}
+  }
+  .hero-video {
+    padding-top: 40px;
+  }
   .hero-section {
     display: flex;
     justify-content: space-between;
@@ -2468,7 +2476,7 @@ margin-bottom: 40px;
   .feature {
     padding: 12px 12px 12px 20px;
     background-size: 0px;
-}
+  }
 
   .tab-section {
     display: flex;
@@ -2524,15 +2532,15 @@ margin-bottom: 40px;
     padding-top: 10px;
     margin-bottom: 0px;
   }
-.ta1024{
-  display: none;
-}
-.consid{
-  gap:0px;
-}
-.card {
-  width: 24%;
-}
+  .ta1024 {
+    display: none;
+  }
+  .consid {
+    gap: 0px;
+  }
+  .card {
+    width: 24%;
+  }
   .tab-button {
     font-size: 14px;
     padding: 10px 8px 10px 40px;
@@ -2555,11 +2563,12 @@ margin-bottom: 40px;
   }
 
   .contai h2 {
-    padding:40px 0px 26px 0px;
+    padding: 40px 0px 26px 0px;
   }
-  .login-footer,.login-footer2 {
+  .login-footer,
+  .login-footer2 {
     font-size: 12px;
-}
+  }
   .cloud-module1 p {
     font-size: 11px;
   }
@@ -2580,7 +2589,6 @@ margin-bottom: 40px;
     font-size: 11px;
     line-height: 180%;
   }
-
 
   .consid {
     display: flex;
@@ -2631,7 +2639,6 @@ margin-bottom: 40px;
 
   .ddos ul {
     gap: 20px;
-
   }
 
   .fooddos {
@@ -2639,9 +2646,7 @@ margin-bottom: 40px;
   }
 
   .vids7-left h3 {
-
     font-size: 20px;
-
   }
 
   .vids7-left p {
@@ -2649,7 +2654,6 @@ margin-bottom: 40px;
   }
 
   .login-footer1 {
-
     gap: 14px;
     margin-top: 16px;
   }
@@ -2667,7 +2671,6 @@ margin-bottom: 40px;
     font-size: 14px;
     padding: 6px 20px;
     font-weight: 400;
-
   }
 
   .vids7 {
@@ -2742,147 +2745,146 @@ margin-bottom: 40px;
     margin-right: 6px;
     width: 16px;
   }
-  .btn-primary, .btn-secondary {
+  .btn-primary,
+  .btn-secondary {
     width: 130px;
-}
+  }
 
-.feature {
-  height: 114px;
-  width: 30%;
-}
-.feature p {
-  font-size: 12px;
-  white-space: normal;
-  overflow: visible;
-  letter-spacing: 0px;
-}
-.features-section {
-  width: 100%;
-  padding: 0 10%;
-}
-.tab-section {
-  margin-top: 0px;
-  margin-bottom: 30px;
-}
-.tab-buttons {
-  gap: 12px;
-  width: 100%;
-  padding: 0 4%;
-}
-.tags{
-  display: none;
-}
-.tab-button {
-  padding: 10px 8px 10px 12px;
-}
-.nav-links{
-  display: none;
-}
-.navbar {
-  padding: 20px 4%;
-}
-.hero-content {
-  padding-top: 20px;
-}
-.hero-content {
-  display: flex
-;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-}
-.hero-content h1 {
-  font-size: 40px;
-  margin-bottom: 14px;
-}
-.btn{
-  margin-left: 28px;
-}
-.hero-video{
-  display: none;
-}
-.hero-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0px 10% 0px 4%;
-  flex-direction: row;
-}
-.tips img {
-  width: 100%;
-}
+  .feature {
+    height: 114px;
+    width: 30%;
+  }
+  .feature p {
+    font-size: 12px;
+    white-space: normal;
+    overflow: visible;
+    letter-spacing: 0px;
+  }
+  .features-section {
+    width: 100%;
+    padding: 0 10%;
+  }
+  .tab-section {
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+  .tab-buttons {
+    gap: 12px;
+    width: 100%;
+    padding: 0 4%;
+  }
+  .tags {
+    display: none;
+  }
+  .tab-button {
+    padding: 10px 8px 10px 12px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .navbar {
+    padding: 20px 4%;
+  }
+  .hero-content {
+    padding-top: 20px;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .hero-content h1 {
+    font-size: 40px;
+    margin-bottom: 14px;
+  }
+  .btn {
+    margin-left: 28px;
+  }
+  .hero-video {
+    display: none;
+  }
+  .hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10% 0px 4%;
+    flex-direction: row;
+  }
+  .tips img {
+    width: 100%;
+  }
 
-.hero-stats {
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.hero-buttons {
-  gap: 20px;
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.cloud-module {
-  height: 80px;
-}
-.cloud-module p {
-  overflow: visible;
-  text-overflow: clip;
-  white-space: normal;
-}
-.container {
-  padding: 0 4%;
-  gap: 12px;
-}
-.column-kj {
-  padding: 10px 14px 20px 14px;
-}
-.cloud-module1,.cloud-module2,.cloud-module3 {
-  padding: 20px 14px 10px 14px;
-}
-.card {
-  width: 48%;
-}
-.test,.Feature,.fooddos{
-  padding: 0 4%;
-}
-.vids7{
-  display: none;
-}
-.specification {
-  margin-top: 20px;
-}
-.container3 {
-  margin-bottom: 60px;
-}
-.specification {
-  margin-bottom: 60px;
-}
-.h5footerlogo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  gap: 14px;
-}
-.h5footerlogo p {
-  padding-top: 0px;
-}
+  .hero-stats {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .hero-buttons {
+    gap: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .cloud-module {
+    height: 80px;
+  }
+  .cloud-module p {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+  }
+  .container {
+    padding: 0 4%;
+    gap: 12px;
+  }
+  .column-kj {
+    padding: 10px 14px 20px 14px;
+  }
+  .cloud-module1,
+  .cloud-module2,
+  .cloud-module3 {
+    padding: 20px 14px 10px 14px;
+  }
+  .card {
+    width: 48%;
+  }
+  .test,
+  .Feature,
+  .fooddos {
+    padding: 0 4%;
+  }
+  .vids7 {
+    display: none;
+  }
+  .specification {
+    margin-top: 20px;
+  }
+  .container3 {
+    margin-bottom: 60px;
+  }
+  .specification {
+    margin-bottom: 60px;
+  }
+  .h5footerlogo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    gap: 14px;
+  }
+  .h5footerlogo p {
+    padding-top: 0px;
+  }
 
-.h5footerlm {
-  width: 60%;
-
+  .h5footerlm {
+    width: 60%;
+  }
+  .h5footer {
+    padding-top: 10px;
+  }
 }
-.h5footer {
-  padding-top: 10px;
-}
-
-
-
-}
-
 
 @media screen and (max-width: 479px) {
   /* 针对小型手机的样式 */
@@ -2979,7 +2981,6 @@ margin-bottom: 40px;
   }
 
   .tab-button {
-
     border-radius: 4px;
     font-size: 10px;
   }
@@ -3176,7 +3177,6 @@ margin-bottom: 40px;
 
   .h5footerdb .h5footerdbleft {
     font-size: 10px;
-
   }
 
   .h5footerico {
@@ -3188,27 +3188,21 @@ margin-bottom: 40px;
   .h5footerdbright {
     gap: 6px;
   }
-
-
-
-
-
 }
 
-.card .ys-fz{
-
+.card .ys-fz {
   white-space: nowrap;
 }
 
 @media screen and (max-width: 1023px) {
-.ta1023{
-  display: none;
-}
-.card .ys-fz{
-  display: inline-block;
-  white-space: nowrap;
-}
-.card .ys-jy{
-  display: none;
-}
+  .ta1023 {
+    display: none;
+  }
+  .card .ys-fz {
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .card .ys-jy {
+    display: none;
+  }
 }

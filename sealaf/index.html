@@ -1,22 +1,1622 @@
-<!DOCTYPE html><html lang="zh" dir="ltr"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/homepage/cancel_btn.svg"/><link rel="preload" as="image" href="logo_text.png"/><link rel="preload" as="image" href="/homepage/play.svg"/><link rel="preload" as="image" href="/homepage/videomobile.png"/><link rel="preload" as="image" href="/homepage/functions.svg"/><link rel="preload" as="image" href="/homepage/function.png"/><link rel="preload" as="image" href="/homepage/database.svg"/><link rel="preload" as="image" href="/homepage/database.png"/><link rel="preload" as="image" href="/homepage/storage.svg"/><link rel="preload" as="image" href="/homepage/storage.png"/><link rel="stylesheet" href="/sealaf/_next/static/css/27adac781495a7d1.css" data-precedence="next"/><link rel="stylesheet" href="/sealaf/_next/static/css/104b26e056d17e82.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/sealaf/_next/static/chunks/webpack-4e3629883134f26e.js"/><script src="/sealaf/_next/static/chunks/cce61ff3-4606116c159ffc35.js" async=""></script><script src="/sealaf/_next/static/chunks/356-d3d5e302f3f7a5fa.js" async=""></script><script src="/sealaf/_next/static/chunks/main-app-e73f56904abfb17f.js" async=""></script><script src="/sealaf/_next/static/chunks/436-eeeae0f9b7b904a0.js" async=""></script><script src="/sealaf/_next/static/chunks/702-61d64122977218af.js" async=""></script><script src="/sealaf/_next/static/chunks/app/%5Blng%5D/page-8a267f9fa085df52.js" async=""></script><script src="/sealaf/_next/static/chunks/31-c61b5cb90526c97d.js" async=""></script><script src="/sealaf/_next/static/chunks/app/%5Blng%5D/layout-488ee6055cbaf6c0.js" async=""></script><link rel="preload" as="image" href="/homepage/icon_01.svg"/><link rel="preload" as="image" href="/homepage/icon_02.svg"/><link rel="preload" as="image" href="/homepage/icon_03.svg"/><link rel="preload" as="image" href="/homepage/icon_04.svg"/><link rel="preload" as="image" href="/homepage/icon_05.svg"/><link rel="preload" as="image" href="/homepage/icon_06.png"/><link rel="preload" as="image" href="/homepage/logo_text.png"/><title>sealaf 云开发</title><meta name="description" content="A playground to explore new Next.js 13/14 app directory features such as nested layouts, instant loading states, streaming, and component level data fetching."/><script src="/sealaf/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js" noModule=""></script></head><body><style data-emotion="css-global 8qrtkf">:host,:root,[data-theme]{--chakra-ring-inset:var(--chakra-empty,/*!*/ /*!*/);--chakra-ring-offset-width:0px;--chakra-ring-offset-color:#fff;--chakra-ring-color:rgba(66, 153, 225, 0.6);--chakra-ring-offset-shadow:0 0 #0000;--chakra-ring-shadow:0 0 #0000;--chakra-space-x-reverse:0;--chakra-space-y-reverse:0;--chakra-colors-transparent:transparent;--chakra-colors-current:currentColor;--chakra-colors-black:#000000;--chakra-colors-white:#FFFFFF;--chakra-colors-whiteAlpha-50:rgba(255, 255, 255, 0.04);--chakra-colors-whiteAlpha-100:rgba(255, 255, 255, 0.06);--chakra-colors-whiteAlpha-200:rgba(255, 255, 255, 0.08);--chakra-colors-whiteAlpha-300:rgba(255, 255, 255, 0.16);--chakra-colors-whiteAlpha-400:rgba(255, 255, 255, 0.24);--chakra-colors-whiteAlpha-500:rgba(255, 255, 255, 0.36);--chakra-colors-whiteAlpha-600:rgba(255, 255, 255, 0.48);--chakra-colors-whiteAlpha-700:rgba(255, 255, 255, 0.64);--chakra-colors-whiteAlpha-800:rgba(255, 255, 255, 0.80);--chakra-colors-whiteAlpha-900:rgba(255, 255, 255, 0.92);--chakra-colors-blackAlpha-50:rgba(0, 0, 0, 0.04);--chakra-colors-blackAlpha-100:rgba(0, 0, 0, 0.06);--chakra-colors-blackAlpha-200:rgba(0, 0, 0, 0.08);--chakra-colors-blackAlpha-300:rgba(0, 0, 0, 0.16);--chakra-colors-blackAlpha-400:rgba(0, 0, 0, 0.24);--chakra-colors-blackAlpha-500:rgba(0, 0, 0, 0.36);--chakra-colors-blackAlpha-600:rgba(0, 0, 0, 0.48);--chakra-colors-blackAlpha-700:rgba(0, 0, 0, 0.64);--chakra-colors-blackAlpha-800:rgba(0, 0, 0, 0.80);--chakra-colors-blackAlpha-900:rgba(0, 0, 0, 0.92);--chakra-colors-gray-50:#F7FAFC;--chakra-colors-gray-100:#EDF2F7;--chakra-colors-gray-200:#E2E8F0;--chakra-colors-gray-300:#CBD5E0;--chakra-colors-gray-400:#A0AEC0;--chakra-colors-gray-500:#718096;--chakra-colors-gray-600:#4A5568;--chakra-colors-gray-700:#2D3748;--chakra-colors-gray-800:#1A202C;--chakra-colors-gray-900:#171923;--chakra-colors-red-50:#FFF5F5;--chakra-colors-red-100:#FED7D7;--chakra-colors-red-200:#FEB2B2;--chakra-colors-red-300:#FC8181;--chakra-colors-red-400:#F56565;--chakra-colors-red-500:#E53E3E;--chakra-colors-red-600:#C53030;--chakra-colors-red-700:#9B2C2C;--chakra-colors-red-800:#822727;--chakra-colors-red-900:#63171B;--chakra-colors-orange-50:#FFFAF0;--chakra-colors-orange-100:#FEEBC8;--chakra-colors-orange-200:#FBD38D;--chakra-colors-orange-300:#F6AD55;--chakra-colors-orange-400:#ED8936;--chakra-colors-orange-500:#DD6B20;--chakra-colors-orange-600:#C05621;--chakra-colors-orange-700:#9C4221;--chakra-colors-orange-800:#7B341E;--chakra-colors-orange-900:#652B19;--chakra-colors-yellow-50:#FFFFF0;--chakra-colors-yellow-100:#FEFCBF;--chakra-colors-yellow-200:#FAF089;--chakra-colors-yellow-300:#F6E05E;--chakra-colors-yellow-400:#ECC94B;--chakra-colors-yellow-500:#D69E2E;--chakra-colors-yellow-600:#B7791F;--chakra-colors-yellow-700:#975A16;--chakra-colors-yellow-800:#744210;--chakra-colors-yellow-900:#5F370E;--chakra-colors-green-50:#F0FFF4;--chakra-colors-green-100:#C6F6D5;--chakra-colors-green-200:#9AE6B4;--chakra-colors-green-300:#68D391;--chakra-colors-green-400:#48BB78;--chakra-colors-green-500:#38A169;--chakra-colors-green-600:#2F855A;--chakra-colors-green-700:#276749;--chakra-colors-green-800:#22543D;--chakra-colors-green-900:#1C4532;--chakra-colors-teal-50:#E6FFFA;--chakra-colors-teal-100:#B2F5EA;--chakra-colors-teal-200:#81E6D9;--chakra-colors-teal-300:#4FD1C5;--chakra-colors-teal-400:#38B2AC;--chakra-colors-teal-500:#319795;--chakra-colors-teal-600:#2C7A7B;--chakra-colors-teal-700:#285E61;--chakra-colors-teal-800:#234E52;--chakra-colors-teal-900:#1D4044;--chakra-colors-blue-50:#ebf8ff;--chakra-colors-blue-100:#EBF7FD;--chakra-colors-blue-200:#90cdf4;--chakra-colors-blue-300:#63b3ed;--chakra-colors-blue-400:#86CEF5;--chakra-colors-blue-500:#5EBDF2;--chakra-colors-blue-600:#36ADEF;--chakra-colors-blue-700:#2B8ABF;--chakra-colors-blue-800:#2a4365;--chakra-colors-blue-900:#1A365D;--chakra-colors-cyan-50:#EDFDFD;--chakra-colors-cyan-100:#C4F1F9;--chakra-colors-cyan-200:#9DECF9;--chakra-colors-cyan-300:#76E4F7;--chakra-colors-cyan-400:#0BC5EA;--chakra-colors-cyan-500:#00B5D8;--chakra-colors-cyan-600:#00A3C4;--chakra-colors-cyan-700:#0987A0;--chakra-colors-cyan-800:#086F83;--chakra-colors-cyan-900:#065666;--chakra-colors-purple-50:#FAF5FF;--chakra-colors-purple-100:#E9D8FD;--chakra-colors-purple-200:#D6BCFA;--chakra-colors-purple-300:#DBBDE9;--chakra-colors-purple-400:#C99CDF;--chakra-colors-purple-500:#805AD5;--chakra-colors-purple-600:#A55AC9;--chakra-colors-purple-700:#7167AA;--chakra-colors-purple-800:#44337A;--chakra-colors-purple-900:#322659;--chakra-colors-pink-50:#FFF5F7;--chakra-colors-pink-100:#FED7E2;--chakra-colors-pink-200:#FBB6CE;--chakra-colors-pink-300:#F687B3;--chakra-colors-pink-400:#ED64A6;--chakra-colors-pink-500:#D53F8C;--chakra-colors-pink-600:#B83280;--chakra-colors-pink-700:#97266D;--chakra-colors-pink-800:#702459;--chakra-colors-pink-900:#521B41;--chakra-colors-linkedin-50:#E8F4F9;--chakra-colors-linkedin-100:#CFEDFB;--chakra-colors-linkedin-200:#9BDAF3;--chakra-colors-linkedin-300:#68C7EC;--chakra-colors-linkedin-400:#34B3E4;--chakra-colors-linkedin-500:#00A0DC;--chakra-colors-linkedin-600:#008CC9;--chakra-colors-linkedin-700:#0077B5;--chakra-colors-linkedin-800:#005E93;--chakra-colors-linkedin-900:#004471;--chakra-colors-facebook-50:#E8F4F9;--chakra-colors-facebook-100:#D9DEE9;--chakra-colors-facebook-200:#B7C2DA;--chakra-colors-facebook-300:#6482C0;--chakra-colors-facebook-400:#4267B2;--chakra-colors-facebook-500:#385898;--chakra-colors-facebook-600:#314E89;--chakra-colors-facebook-700:#29487D;--chakra-colors-facebook-800:#223B67;--chakra-colors-facebook-900:#1E355B;--chakra-colors-messenger-50:#D0E6FF;--chakra-colors-messenger-100:#B9DAFF;--chakra-colors-messenger-200:#A2CDFF;--chakra-colors-messenger-300:#7AB8FF;--chakra-colors-messenger-400:#2E90FF;--chakra-colors-messenger-500:#0078FF;--chakra-colors-messenger-600:#0063D1;--chakra-colors-messenger-700:#0052AC;--chakra-colors-messenger-800:#003C7E;--chakra-colors-messenger-900:#002C5C;--chakra-colors-whatsapp-50:#dffeec;--chakra-colors-whatsapp-100:#b9f5d0;--chakra-colors-whatsapp-200:#90edb3;--chakra-colors-whatsapp-300:#65e495;--chakra-colors-whatsapp-400:#3cdd78;--chakra-colors-whatsapp-500:#22c35e;--chakra-colors-whatsapp-600:#179848;--chakra-colors-whatsapp-700:#0c6c33;--chakra-colors-whatsapp-800:#01421c;--chakra-colors-whatsapp-900:#001803;--chakra-colors-twitter-50:#E5F4FD;--chakra-colors-twitter-100:#C8E9FB;--chakra-colors-twitter-200:#A8DCFA;--chakra-colors-twitter-300:#83CDF7;--chakra-colors-twitter-400:#57BBF5;--chakra-colors-twitter-500:#1DA1F2;--chakra-colors-twitter-600:#1A94DA;--chakra-colors-twitter-700:#1681BF;--chakra-colors-twitter-800:#136B9E;--chakra-colors-twitter-900:#0D4D71;--chakra-colors-telegram-50:#E3F2F9;--chakra-colors-telegram-100:#C5E4F3;--chakra-colors-telegram-200:#A2D4EC;--chakra-colors-telegram-300:#7AC1E4;--chakra-colors-telegram-400:#47A9DA;--chakra-colors-telegram-500:#0088CC;--chakra-colors-telegram-600:#007AB8;--chakra-colors-telegram-700:#006BA1;--chakra-colors-telegram-800:#005885;--chakra-colors-telegram-900:#003F5E;--chakra-colors-primary-100:#E6F6F5;--chakra-colors-primary-200:#CCEEEB;--chakra-colors-primary-300:#99DDD8;--chakra-colors-primary-400:#66CBC4;--chakra-colors-primary-500:#33BAB1;--chakra-colors-primary-600:#00A99D;--chakra-colors-primary-700:#00877E;--chakra-colors-primary-800:#00655E;--chakra-colors-primary-900:#00443F;--chakra-colors-primary-1000:#00221F;--chakra-colors-lafWhite-100:#FEFEFE;--chakra-colors-lafWhite-200:#FDFDFE;--chakra-colors-lafWhite-300:#FBFBFC;--chakra-colors-lafWhite-400:#F8FAFB;--chakra-colors-lafWhite-500:#F6F8F9;--chakra-colors-lafWhite-600:#F4F6F8;--chakra-colors-lafWhite-700:#C3C5C6;--chakra-colors-lafWhite-800:#929495;--chakra-colors-lafWhite-900:#626263;--chakra-colors-lafWhite-1000:#313132;--chakra-colors-grayModern-100:#EFF0F1;--chakra-colors-grayModern-200:#DEE0E2;--chakra-colors-grayModern-300:#BDC1C5;--chakra-colors-grayModern-400:#9CA2A8;--chakra-colors-grayModern-500:#7B838B;--chakra-colors-grayModern-600:#5A646E;--chakra-colors-grayModern-700:#485058;--chakra-colors-grayModern-800:#363C42;--chakra-colors-grayModern-900:#24282C;--chakra-colors-grayModern-1000:#121416;--chakra-colors-grayIron-100:#F3F3F3;--chakra-colors-grayIron-200:#E6E6E7;--chakra-colors-grayIron-300:#CDCDD0;--chakra-colors-grayIron-400:#B4B4B8;--chakra-colors-grayIron-500:#9B9BA1;--chakra-colors-grayIron-600:#828289;--chakra-colors-grayIron-700:#68686E;--chakra-colors-grayIron-800:#4E4E52;--chakra-colors-grayIron-900:#343437;--chakra-colors-grayIron-1000:#1A1A1B;--chakra-colors-error-100:#FDECEE;--chakra-colors-error-200:#FDD8DC;--chakra-colors-error-400:#FF8492;--chakra-colors-error-500:#F16979;--chakra-colors-error-600:#ED4458;--chakra-colors-warn-100:#FFF2EC;--chakra-colors-warn-400:#FDB08A;--chakra-colors-warn-600:#FB7C3C;--chakra-colors-warn-700:#C96330;--chakra-colors-rose-100:#FDEAF1;--chakra-colors-frostyNightfall-200:#EAEBF0;--chakra-borders-none:0;--chakra-borders-1px:1px solid;--chakra-borders-2px:2px solid;--chakra-borders-4px:4px solid;--chakra-borders-8px:8px solid;--chakra-fonts-heading:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";--chakra-fonts-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";--chakra-fonts-mono:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--chakra-fontSizes-3xs:0.45rem;--chakra-fontSizes-2xs:0.625rem;--chakra-fontSizes-xs:0.75rem;--chakra-fontSizes-sm:12px;--chakra-fontSizes-md:14px;--chakra-fontSizes-lg:16px;--chakra-fontSizes-xl:16px;--chakra-fontSizes-2xl:18px;--chakra-fontSizes-3xl:22px;--chakra-fontSizes-4xl:2.25rem;--chakra-fontSizes-5xl:3rem;--chakra-fontSizes-6xl:3.75rem;--chakra-fontSizes-7xl:4.5rem;--chakra-fontSizes-8xl:6rem;--chakra-fontSizes-9xl:8rem;--chakra-fontSizes-base:12px;--chakra-fontWeights-hairline:100;--chakra-fontWeights-thin:200;--chakra-fontWeights-light:300;--chakra-fontWeights-normal:400;--chakra-fontWeights-medium:500;--chakra-fontWeights-semibold:600;--chakra-fontWeights-bold:700;--chakra-fontWeights-extrabold:800;--chakra-fontWeights-black:900;--chakra-letterSpacings-tighter:-0.05em;--chakra-letterSpacings-tight:-0.025em;--chakra-letterSpacings-normal:0;--chakra-letterSpacings-wide:0.025em;--chakra-letterSpacings-wider:0.05em;--chakra-letterSpacings-widest:0.1em;--chakra-lineHeights-3:.75rem;--chakra-lineHeights-4:1rem;--chakra-lineHeights-5:1.25rem;--chakra-lineHeights-6:1.5rem;--chakra-lineHeights-7:1.75rem;--chakra-lineHeights-8:2rem;--chakra-lineHeights-9:2.25rem;--chakra-lineHeights-10:2.5rem;--chakra-lineHeights-normal:normal;--chakra-lineHeights-none:1;--chakra-lineHeights-shorter:1.25;--chakra-lineHeights-short:1.375;--chakra-lineHeights-base:1.5;--chakra-lineHeights-tall:1.625;--chakra-lineHeights-taller:2;--chakra-radii-none:0;--chakra-radii-sm:0.125rem;--chakra-radii-base:0.25rem;--chakra-radii-md:0.375rem;--chakra-radii-lg:0.5rem;--chakra-radii-xl:0.75rem;--chakra-radii-2xl:1rem;--chakra-radii-3xl:1.5rem;--chakra-radii-full:9999px;--chakra-space-1:0.25rem;--chakra-space-2:0.5rem;--chakra-space-3:0.75rem;--chakra-space-4:1rem;--chakra-space-5:1.25rem;--chakra-space-6:1.5rem;--chakra-space-7:1.75rem;--chakra-space-8:2rem;--chakra-space-9:2.25rem;--chakra-space-10:2.5rem;--chakra-space-12:3rem;--chakra-space-14:3.5rem;--chakra-space-16:4rem;--chakra-space-20:5rem;--chakra-space-24:6rem;--chakra-space-28:7rem;--chakra-space-32:8rem;--chakra-space-36:9rem;--chakra-space-40:10rem;--chakra-space-44:11rem;--chakra-space-48:12rem;--chakra-space-52:13rem;--chakra-space-56:14rem;--chakra-space-60:15rem;--chakra-space-64:16rem;--chakra-space-72:18rem;--chakra-space-80:20rem;--chakra-space-96:24rem;--chakra-space-px:1px;--chakra-space-0-5:0.125rem;--chakra-space-1-5:0.375rem;--chakra-space-2-5:0.625rem;--chakra-space-3-5:0.875rem;--chakra-shadows-xs:0 0 0 1px rgba(0, 0, 0, 0.05);--chakra-shadows-sm:0 1px 2px 0 rgba(0, 0, 0, 0.05);--chakra-shadows-base:0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);--chakra-shadows-md:0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);--chakra-shadows-lg:0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05);--chakra-shadows-xl:0 20px 25px -5px rgba(0, 0, 0, 0.1),0 10px 10px -5px rgba(0, 0, 0, 0.04);--chakra-shadows-2xl:0 25px 50px -12px rgba(0, 0, 0, 0.25);--chakra-shadows-outline:0 0 0 3px rgba(66, 153, 225, 0.6);--chakra-shadows-inner:inset 0 2px 4px 0 rgba(0,0,0,0.06);--chakra-shadows-none:none;--chakra-shadows-dark-lg:rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,rgba(0, 0, 0, 0.2) 0px 5px 10px,rgba(0, 0, 0, 0.4) 0px 15px 40px;--chakra-sizes-1:0.25rem;--chakra-sizes-2:0.5rem;--chakra-sizes-3:0.75rem;--chakra-sizes-4:1rem;--chakra-sizes-5:1.25rem;--chakra-sizes-6:1.5rem;--chakra-sizes-7:1.75rem;--chakra-sizes-8:2rem;--chakra-sizes-9:2.25rem;--chakra-sizes-10:2.5rem;--chakra-sizes-12:3rem;--chakra-sizes-14:3.5rem;--chakra-sizes-16:4rem;--chakra-sizes-20:5rem;--chakra-sizes-24:6rem;--chakra-sizes-28:7rem;--chakra-sizes-32:8rem;--chakra-sizes-36:9rem;--chakra-sizes-40:10rem;--chakra-sizes-44:11rem;--chakra-sizes-48:12rem;--chakra-sizes-52:13rem;--chakra-sizes-56:14rem;--chakra-sizes-60:15rem;--chakra-sizes-64:16rem;--chakra-sizes-72:18rem;--chakra-sizes-80:20rem;--chakra-sizes-96:24rem;--chakra-sizes-px:1px;--chakra-sizes-0-5:0.125rem;--chakra-sizes-1-5:0.375rem;--chakra-sizes-2-5:0.625rem;--chakra-sizes-3-5:0.875rem;--chakra-sizes-max:max-content;--chakra-sizes-min:min-content;--chakra-sizes-full:100%;--chakra-sizes-3xs:14rem;--chakra-sizes-2xs:16rem;--chakra-sizes-xs:20rem;--chakra-sizes-sm:24rem;--chakra-sizes-md:28rem;--chakra-sizes-lg:32rem;--chakra-sizes-xl:36rem;--chakra-sizes-2xl:42rem;--chakra-sizes-3xl:48rem;--chakra-sizes-4xl:56rem;--chakra-sizes-5xl:64rem;--chakra-sizes-6xl:72rem;--chakra-sizes-7xl:80rem;--chakra-sizes-8xl:90rem;--chakra-sizes-prose:60ch;--chakra-sizes-container-sm:640px;--chakra-sizes-container-md:768px;--chakra-sizes-container-lg:1024px;--chakra-sizes-container-xl:1280px;--chakra-zIndices-hide:-1;--chakra-zIndices-auto:auto;--chakra-zIndices-base:0;--chakra-zIndices-docked:10;--chakra-zIndices-dropdown:1000;--chakra-zIndices-sticky:1100;--chakra-zIndices-banner:1200;--chakra-zIndices-overlay:1300;--chakra-zIndices-modal:1400;--chakra-zIndices-popover:1500;--chakra-zIndices-skipLink:1600;--chakra-zIndices-toast:1700;--chakra-zIndices-tooltip:1800;--chakra-transition-property-common:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;--chakra-transition-property-colors:background-color,border-color,color,fill,stroke;--chakra-transition-property-dimensions:width,height;--chakra-transition-property-position:left,right,top,bottom;--chakra-transition-property-background:background-color,background-image,background-position;--chakra-transition-easing-ease-in:cubic-bezier(0.4, 0, 1, 1);--chakra-transition-easing-ease-out:cubic-bezier(0, 0, 0.2, 1);--chakra-transition-easing-ease-in-out:cubic-bezier(0.4, 0, 0.2, 1);--chakra-transition-duration-ultra-fast:50ms;--chakra-transition-duration-faster:100ms;--chakra-transition-duration-fast:150ms;--chakra-transition-duration-normal:200ms;--chakra-transition-duration-slow:300ms;--chakra-transition-duration-slower:400ms;--chakra-transition-duration-ultra-slow:500ms;--chakra-blur-none:0;--chakra-blur-sm:4px;--chakra-blur-base:8px;--chakra-blur-md:12px;--chakra-blur-lg:16px;--chakra-blur-xl:24px;--chakra-blur-2xl:40px;--chakra-blur-3xl:64px;--chakra-breakpoints-base:0em;--chakra-breakpoints-sm:30em;--chakra-breakpoints-md:48em;--chakra-breakpoints-lg:62em;--chakra-breakpoints-xl:80em;--chakra-breakpoints-2xl:96em;}.chakra-ui-light :host:not([data-theme]),.chakra-ui-light :root:not([data-theme]),.chakra-ui-light [data-theme]:not([data-theme]),[data-theme=light] :host:not([data-theme]),[data-theme=light] :root:not([data-theme]),[data-theme=light] [data-theme]:not([data-theme]),:host[data-theme=light],:root[data-theme=light],[data-theme][data-theme=light]{--chakra-colors-chakra-body-text:var(--chakra-colors-gray-800);--chakra-colors-chakra-body-bg:var(--chakra-colors-white);--chakra-colors-chakra-border-color:var(--chakra-colors-gray-200);--chakra-colors-chakra-inverse-text:var(--chakra-colors-white);--chakra-colors-chakra-subtle-bg:var(--chakra-colors-gray-100);--chakra-colors-chakra-subtle-text:var(--chakra-colors-gray-600);--chakra-colors-chakra-placeholder-color:var(--chakra-colors-gray-500);}.chakra-ui-dark :host:not([data-theme]),.chakra-ui-dark :root:not([data-theme]),.chakra-ui-dark [data-theme]:not([data-theme]),[data-theme=dark] :host:not([data-theme]),[data-theme=dark] :root:not([data-theme]),[data-theme=dark] [data-theme]:not([data-theme]),:host[data-theme=dark],:root[data-theme=dark],[data-theme][data-theme=dark]{--chakra-colors-chakra-body-text:var(--chakra-colors-whiteAlpha-900);--chakra-colors-chakra-body-bg:var(--chakra-colors-gray-800);--chakra-colors-chakra-border-color:var(--chakra-colors-whiteAlpha-300);--chakra-colors-chakra-inverse-text:var(--chakra-colors-gray-800);--chakra-colors-chakra-subtle-bg:var(--chakra-colors-gray-700);--chakra-colors-chakra-subtle-text:var(--chakra-colors-gray-400);--chakra-colors-chakra-placeholder-color:var(--chakra-colors-whiteAlpha-400);}</style><style data-emotion="css-global fubdgu">html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale;touch-action:manipulation;}body{position:relative;min-height:100%;margin:0;font-feature-settings:"kern";}:where(*, *::before, *::after){border-width:0;border-style:solid;box-sizing:border-box;word-wrap:break-word;}main{display:block;}hr{border-top-width:1px;box-sizing:content-box;height:0;overflow:visible;}:where(pre, code, kbd,samp){font-family:SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:1em;}a{background-color:transparent;color:inherit;-webkit-text-decoration:inherit;text-decoration:inherit;}abbr[title]{border-bottom:none;-webkit-text-decoration:underline;text-decoration:underline;-webkit-text-decoration:underline dotted;-webkit-text-decoration:underline dotted;text-decoration:underline dotted;}:where(b, strong){font-weight:bold;}small{font-size:80%;}:where(sub,sup){font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sub{bottom:-0.25em;}sup{top:-0.5em;}img{border-style:none;}:where(button, input, optgroup, select, textarea){font-family:inherit;font-size:100%;line-height:1.15;margin:0;}:where(button, input){overflow:visible;}:where(button, select){text-transform:none;}:where(
-          button::-moz-focus-inner,
-          [type="button"]::-moz-focus-inner,
-          [type="reset"]::-moz-focus-inner,
-          [type="submit"]::-moz-focus-inner
-        ){border-style:none;padding:0;}fieldset{padding:0.35em 0.75em 0.625em;}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal;}progress{vertical-align:baseline;}textarea{overflow:auto;}:where([type="checkbox"], [type="radio"]){box-sizing:border-box;padding:0;}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{-webkit-appearance:none!important;}input[type="number"]{-moz-appearance:textfield;}input[type="search"]{-webkit-appearance:textfield;outline-offset:-2px;}input[type="search"]::-webkit-search-decoration{-webkit-appearance:none!important;}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit;}details{display:block;}summary{display:-webkit-box;display:-webkit-list-item;display:-ms-list-itembox;display:list-item;}template{display:none;}[hidden]{display:none!important;}:where(
-          blockquote,
-          dl,
-          dd,
-          h1,
-          h2,
-          h3,
-          h4,
-          h5,
-          h6,
-          hr,
-          figure,
-          p,
-          pre
-        ){margin:0;}button{background:transparent;padding:0;}fieldset{margin:0;padding:0;}:where(ol, ul){margin:0;padding:0;}textarea{resize:vertical;}:where(button, [role="button"]){cursor:pointer;}button::-moz-focus-inner{border:0!important;}table{border-collapse:collapse;}:where(h1, h2, h3, h4, h5, h6){font-size:inherit;font-weight:inherit;}:where(button, input, optgroup, select, textarea){padding:0;line-height:inherit;color:inherit;}:where(img, svg, video, canvas, audio, iframe, embed, object){display:block;}:where(img, video){max-width:100%;height:auto;}[data-js-focus-visible] :focus:not([data-focus-visible-added]):not(
-          [data-focus-visible-disabled]
-        ){outline:none;box-shadow:none;}select::-ms-expand{display:none;}:root,:host{--chakra-vh:100vh;}@supports (height: -webkit-fill-available){:root,:host{--chakra-vh:-webkit-fill-available;}}@supports (height: -moz-fill-available){:root,:host{--chakra-vh:-moz-fill-available;}}@supports (height: 100dvh){:root,:host{--chakra-vh:100dvh;}}</style><style data-emotion="css-global 1cgn62j">body{font-family:var(--chakra-fonts-body);color:var(--chakra-colors-chakra-body-text);background:var(--chakra-colors-chakra-body-bg);transition-property:background-color;transition-duration:var(--chakra-transition-duration-normal);line-height:var(--chakra-lineHeights-base);}*::-webkit-input-placeholder{color:var(--chakra-colors-chakra-placeholder-color);}*::-moz-placeholder{color:var(--chakra-colors-chakra-placeholder-color);}*:-ms-input-placeholder{color:var(--chakra-colors-chakra-placeholder-color);}*::placeholder{color:var(--chakra-colors-chakra-placeholder-color);}*,*::before,::after{border-color:var(--chakra-colors-chakra-border-color);}</style><main><div style="font-size:16px" class="homepage"><div class="flex flex-col items-center justify-center"><div class="hidden"><div class="flex h-12 w-screen items-center justify-center bg-[url(&#x27;/homepage/banner.png&#x27;)] bg-center lg:px-32"><a class="whitespace-nowrap text-[6px] text-white lg:text-xl" target="_blank" href="https://github.com/labring/laf" rel="noreferrer">如果你喜欢 Laf 的话，请在 Github 上给我们一个 Star 吧！</a></div><img class="absolute right-4 top-3 z-40 hover:cursor-pointer lg:right-36 " src="/homepage/cancel_btn.svg" alt="cancel"/></div><div class="fixed top-0 z-40  hidden w-full justify-center px-28 py-4 lg:flex bg-lafWhite-600"><div class="flex w-full max-w-[1200px] justify-between"><div class="flex items-center"><div><img src="logo_text.png" class="h-auto w-20" alt="logo"/></div><a target="_blank" href="https://doc.laf.run/zh/" class="ml-10" rel="noreferrer">文档</a></div><div class="flex w-80 items-center justify-evenly"><div class="hover:opacity-75"><style data-emotion="css 1rctasw">.css-1rctasw{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:relative;white-space:nowrap;vertical-align:middle;outline:2px solid transparent;outline-offset:2px;line-height:1.2;border-radius:100px;font-weight:var(--chakra-fontWeights-semibold);transition-property:var(--chakra-transition-property-common);transition-duration:var(--chakra-transition-duration-normal);height:32px;min-width:var(--chakra-sizes-10);font-size:var(--chakra-fontSizes-md);-webkit-padding-start:var(--chakra-space-6);padding-inline-start:var(--chakra-space-6);-webkit-padding-end:var(--chakra-space-6);padding-inline-end:var(--chakra-space-6);}.css-1rctasw:focus-visible,.css-1rctasw[data-focus-visible]{box-shadow:var(--chakra-shadows-outline);}.css-1rctasw:disabled,.css-1rctasw[disabled],.css-1rctasw[aria-disabled=true],.css-1rctasw[data-disabled]{opacity:0.4;cursor:not-allowed;box-shadow:var(--chakra-shadows-none);}.css-1rctasw:hover:disabled,.css-1rctasw[data-hover]:disabled,.css-1rctasw:hover[disabled],.css-1rctasw[data-hover][disabled],.css-1rctasw:hover[aria-disabled=true],.css-1rctasw[data-hover][aria-disabled=true],.css-1rctasw:hover[data-disabled],.css-1rctasw[data-hover][data-disabled]{background:initial;}</style><a class="chakra-button !rounded !px-2 text-xl !font-normal css-1rctasw" href="/sealaf/en"><style data-emotion="css 1wh2kri">.css-1wh2kri{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-margin-end:0.5rem;margin-inline-end:0.5rem;}</style><span class="chakra-button__icon css-1wh2kri"><svg width="24px" height="24px" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_9454_14004)"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.3758 15.6395C11.9201 14.3578 12.293 12.4828 12.293 10.3333C12.293 8.18388 11.9201 6.30884 11.3758 5.02714C11.1024 4.38343 10.8153 3.95903 10.573 3.71771C10.456 3.60122 10.3677 3.54554 10.316 3.52063C10.291 3.50857 10.2748 3.50379 10.2668 3.5019C10.2593 3.50009 10.2556 3.5 10.2538 3.5C10.252 3.5 10.2483 3.50009 10.2408 3.5019C10.2329 3.50379 10.2167 3.50857 10.1916 3.52063C10.1399 3.54554 10.0516 3.60122 9.93467 3.71771C9.69236 3.95903 9.40524 4.38343 9.13185 5.02714C8.58751 6.30884 8.2146 8.18388 8.2146 10.3333C8.2146 12.4828 8.58751 14.3578 9.13185 15.6395C9.40524 16.2832 9.69236 16.7076 9.93467 16.949C10.0516 17.0654 10.1399 17.1211 10.1916 17.146C10.2167 17.1581 10.2329 17.1629 10.2408 17.1648C10.2483 17.1666 10.252 17.1667 10.2538 17.1667C10.2556 17.1667 10.2593 17.1666 10.2668 17.1648C10.2748 17.1629 10.291 17.1581 10.316 17.146C10.3677 17.1211 10.456 17.0654 10.573 16.949C10.8153 16.7076 11.1024 16.2832 11.3758 15.6395ZM10.2538 18.6667C12.2085 18.6667 13.793 14.9357 13.793 10.3333C13.793 5.73096 12.2085 2 10.2538 2C8.29916 2 6.7146 5.73096 6.7146 10.3333C6.7146 14.9357 8.29916 18.6667 10.2538 18.6667Z" fill="#1A202C"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M10.2538 17.1667C14.0278 17.1667 17.0872 14.1073 17.0872 10.3333C17.0872 6.55939 14.0278 3.5 10.2538 3.5C6.47987 3.5 3.42053 6.55939 3.42053 10.3333C3.42053 14.1073 6.47987 17.1667 10.2538 17.1667ZM10.2538 18.6667C14.8562 18.6667 18.5872 14.9357 18.5872 10.3333C18.5872 5.73096 14.8562 2 10.2538 2C5.65144 2 1.92053 5.73096 1.92053 10.3333C1.92053 14.9357 5.65144 18.6667 10.2538 18.6667Z" fill="#1A202C"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M17.7327 10.9424H2.87878V9.44244H17.7327V10.9424Z" fill="#1A202C"></path></g><defs><clipPath id="clip0_9454_14004"><rect width="20" height="20" fill="white" transform="translate(0.253906)"></rect></clipPath></defs></svg></span><p>En</p></a></div><div><a class="bg-primary text-sm rounded px-5 py-2 text-white hover:bg-primary-dark transition duration-300 ease-in-out" target="_blank" rel="noopener noreferrer" href="https://bja.sealos.run?openapp=system-sealaf&amp;s=bd-sealaf">立即开发</a></div></div></div></div><div class="fixed top-0 z-40 flex w-full justify-between px-8 py-4 lg:hidden bg-lafWhite-600"><img class="h-10" src="logo_text.png" alt="logo"/><style data-emotion="css lizqbr">.css-lizqbr{width:1em;height:1em;display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:#3C455D;vertical-align:middle;font-size:32px;}</style><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-lizqbr"><path fill="currentColor" d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg></div></div><div class="flex items-center justify-center mb-12"><div class="flex flex-col lg:mx-[48px] lg:max-w-[1200px]"><div class="flex h-auto flex-col items-center overflow-hidden pt-36 lg:h-[720px] lg:pt-44"><h1 class="text-4xl lg:text-6xl">像写博客一样写代码</h1><p class="z-10 mt-8 px-10 text-center text-2xl lg:mt-5 lg:w-[600px]">Laf 是一个集函数、数据库、存储为一体的云开发平台<br/>随时随地，发布上线</p><div class="z-10 mt-8 lg:mt-6"><a class="bg-primary z-40 flex h-[48px] w-[144px] items-center justify-center rounded-md text-[16px] text-white hover:active:bg-[#00AFA3]" href="https://bja.sealos.run?openapp=system-sealaf&amp;s=bd-sealaf">立即开发</a></div><div class="absolute top-[344px] mx-auto hidden h-[375px] w-[968px] justify-center bg-[url(&#x27;/homepage/videobg.png&#x27;)] bg-contain bg-center bg-no-repeat lg:flex"><img src="/homepage/play.svg" alt="play" class="absolute top-[200px] z-10 hover:cursor-pointer "/></div><img class="h-[200px] w-[350px] object-cover hover:cursor-pointer lg:hidden" src="/homepage/videomobile.png" alt="video"/><div class=" hidden" id="my-modal"><div class="hidden"><div class="relative mx-auto w-3/4"><button class="absolute right-0 top-0 z-20 pr-2 pt-2"><img width="24" height="24" class="rounded-2xl bg-black hover:cursor-pointer hover:bg-gray-600" src="/homepage/cancel_btn.svg" alt="cancel_btn"/></button></div></div></div></div><div class="h-auto"><h2 class="py-[80px] pb-[48px] text-4xl lg:py-[60px] lg:pb-[60px]">Laf 的能力</h2><div class="w-full px-[16px] lg:hidden"><div class="bg-card h-max-[520px] my-6 w-full rounded-2xl lg:hidden"><div class="justify-between"><div class="p-6"><img class="mb-8" src="/homepage/functions.svg" alt="icon"/><h3><span class="bg-gradient-to-r from-[#00C24E] to-[#00A1FC] bg-clip-text text-transparent">云函数</span>， 5秒发布你的第一个函数。</h3></div><img class="w-max-5/6 mx-auto pl-8 lg:hidden " src="/homepage/function.png" alt="function"/></div></div><div class="bg-card my-6 w-full rounded-2xl lg:hidden"><div class="justify-between"><div class="p-6"><img class="mb-8" src="/homepage/database.svg" alt="icon"/><h3 class="leading-normal"><span class="bg-gradient-to-r from-[#00CCE8] to-[#00E8A2] bg-clip-text text-transparent">数据库</span>， 无需创建数据库， 开箱即用.</h3></div><img class="mx-auto pl-8 lg:hidden " src="/homepage/database.png" alt="database"/></div></div><div class="bg-card my-6 w-full rounded-2xl lg:hidden"><div class="justify-between"><div class="p-6"><img class="mb-6" src="/homepage/storage.svg" alt="icon"/><h3><span class="bg-gradient-to-r from-[#57E37A] to-[#00BEB1] bg-clip-text text-transparent">云存储</span>，创建属于你的云存储，管理文件更简单。</h3></div><img class="mx-auto pl-8 lg:hidden " src="/homepage/storage.png" alt="storage"/></div></div></div><div class="bg-card my-6 hidden w-full rounded-2xl lg:block"><div class="justify-between lg:flex lg:flex-row"><div class="p-6 lg:p-12"><img class="mb-6" src="/homepage/functions.svg" alt="icon"/><h3 class="w-[300px]"><span class="bg-gradient-to-r from-[#00C24E] to-[#00A1FC] bg-clip-text text-transparent">云函数</span>， 5秒发布你的第一个函数。</h3></div><div class="overflow-hidden rounded-br-2xl"><img class="w-full lg:mt-8" src="/homepage/function.png" alt="function"/></div><div></div></div></div><div class="hidden w-full gap-6 lg:flex "><div class="bg-card relative h-auto w-1/2 rounded-2xl px-12 pt-12"><img class="mb-6" src="/homepage/database.svg" alt="icon"/><h3 class="w-[400px]"><span class="bg-gradient-to-r from-[#00CCE8] to-[#00E8A2] bg-clip-text text-transparent">数据库</span>， 无需创建数据库， 开箱即用.</h3><div class="absolute bottom-0 flex h-1/2 items-end"><img class="mx-auto" src="/homepage/database.png" alt="database"/></div></div><div class="bg-card relative h-[600px] w-1/2 rounded-2xl px-12 pt-12"><img class="mb-6" src="/homepage/storage.svg" alt="icon"/><h3 class="w-[400px]"><span class="bg-gradient-to-r from-[#57E37A] to-[#00BEB1] bg-clip-text text-transparent">云存储</span>，创建属于你的云存储，管理文件更简单。</h3><div class="absolute bottom-0 flex h-1/2 items-end"><img class="mx-auto" src="/homepage/storage.png" alt="storage"/></div></div></div></div><div class="mt-[120px] "><h2 class="mb-[60px]"> <!-- -->为什么选择 Laf</h2><div class="mx-[16px] space-y-4 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:space-y-0"><div class="flex justify-between rounded-md border border-solid  p-[40px] hover:bg-[#F9F9F9]"><div class="w-1/4"><img src="/homepage/icon_01.svg" alt="logo1"/></div><div class="w-3/4 "><h4 class="mb-2 text-2xl font-bold">更开放</h4><p class="text-xl font-light"> <!-- -->Laf 遵循 Apache License 2.0 开源协议</p></div></div><div class="flex justify-between rounded-md border border-solid  p-[40px] hover:bg-[#F9F9F9]"><div class="w-1/4"><img src="/homepage/icon_02.svg" alt="icon_02"/></div><div class="w-3/4"><h4 class="mb-2 text-2xl font-bold">请求更快</h4><p class="text-xl font-light">没有冷启时间让你的请求响应更快</p></div></div><div class="flex justify-between rounded-md border border-solid  p-[40px] hover:bg-[#F9F9F9]"><div class="w-1/4"><img src="/homepage/icon_03.svg" alt="icon_03"/></div><div class="w-3/4"><h4 class="mb-2 text-2xl font-bold">支持私有化部署</h4><p class="text-xl font-light">无厂商绑定，可交付于任何环境</p></div></div><div class="flex justify-between rounded-md border border-solid  p-[40px] hover:bg-[#F9F9F9]"><div class="w-1/4"><img src="/homepage/icon_04.svg" alt="icon_04"/></div><div class="w-3/4"><h4 class="mb-2 text-2xl font-bold">开发更简单</h4><p class="text-xl font-light">无需关心部署、运维，一切都是 Serverless</p></div></div><div class="flex justify-between rounded-md border border-solid  p-[40px] hover:bg-[#F9F9F9]"><div class="w-1/4"><img src="/homepage/icon_05.svg" alt="icon_05"/></div><div class="w-3/4"><h4 class="mb-2 text-2xl font-bold">高性价比</h4><p class="text-xl font-light">百万次调用，最低仅需 0.01 元</p></div></div><div class="flex justify-between rounded-md border border-solid  p-[40px] hover:bg-[#F9F9F9]"><div class="w-1/4"><img src="/homepage/icon_06.png" class="h-12 w-12" alt="icon_06"/></div><div class="w-3/4"><h4 class="mb-2 text-2xl font-bold">我们致力于为所有开发者提供敏捷高效的服务</h4></div></div></div></div></div></div><div class="hidden justify-center bg-lafWhite-600 lg:flex"><div class=" w-full max-w-[1200px] flex-col divide-y divide-solid divide-gray-200"><div class="py-[60px]"><div class="flex justify-between"><div class="w-1/2"><img src="/homepage/logo_text.png" alt="logo" width="64" height="30" class="mt-4"/><p class="mt-8 w-full max-w-[380px] text-base leading-5 text-[#5E6987]">Laf 是一个 Serverless 框架，提供开箱即用的云函数，云数据库，对象存储等能力，是一个干净清爽的开发平台，像写博客一样写代码！三分钟上线 ChatGPT 应用！</p></div><div class="w-1/6 text-lg leading-10 text-[#5E6987]">产品<ul class="leading-10 text-[#14171F]"><li><a href="https://bja.sealos.run?openapp=system-sealaf&amp;s=bd-sealaf">Laf 公有云</a></li><li><a href="https://github.com/labring/laf/releases" target="_blank" rel="noreferrer">更新日志</a></li><li><a href="https://marketplace.visualstudio.com/items?itemName=NightWhite.laf-assistant" target="_blank" rel="noreferrer">Vscode 插件</a></li><li><a href="https://github.com/labring/sealos" target="_blank" rel="noreferrer">Sealos</a></li></ul></div><div class="w-1/6 text-lg leading-10 text-[#5E6987]">开发者<ul class="leading-10 text-[#14171F]"><li><a href="https://github.com/labring/laf/tree/main/deploy" target="_blank" rel="noreferrer">私有化部署</a></li><li><a href="https://api.laf.run/" target="_blank" rel="noreferrer">开放 API</a></li><li><a href="https://github.com/labring/laf" target="_blank" rel="noreferrer">源码</a></li><li><a href="https://doc.laf.run/zh/" target="_blank" rel="noreferrer">文档</a></li></ul></div><div class="w-1/6 text-lg leading-10 text-[#5E6987]">支持<ul class="leading-10 text-[#14171F]"><li><a href="https://github.com/labring/laf/issues" target="_blank" rel="noreferrer">问题反馈</a></li><li><a href="https://forum.laf.run" target="_blank" rel="noreferrer">开发者社区</a></li><li><a href="https://sealos.run/company" target="_blank" rel="noreferrer">关于我们</a></li></ul></div></div></div><div class="flex h-auto flex-row items-center justify-between py-6"><div class="w-1/2 text-lg text-[#3C455D]">laf. all rights reserved. © <!-- -->2024<div></div></div><div class="flex justify-evenly "><a target="_blank" href="" class="mr-6 flex items-center whitespace-nowrap " rel="noreferrer"><span class="mr-2 text-base">服务状态</span><div class="status_breathing-gradient__R8vu0"></div><div class="status_breathing-gradient__R8vu0"></div><div class="status_breathing-gradient__R8vu0"></div><div class="status_breathing-gradient__R8vu0"></div><div class="status_breathing-gradient__R8vu0"></div><div class="status_breathing-gradient__R8vu0"></div><div class="status_breathing-gradient__R8vu0"></div><div class="status_breathing-gradient__R8vu0"></div></a><a href="" target="_blank" rel="noreferrer" class="mr-1"><style data-emotion="css qtsyz4">.css-qtsyz4{width:1em;height:1em;display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:#3C455D;vertical-align:middle;font-size:22px;}</style><svg viewBox="0 0 22 24" focusable="false" class="chakra-icon css-qtsyz4"><path fill="currentColor" d="M18.574 13.711C18.8112 13.7079 19.0378 13.6123 19.2055 13.4445C19.3733 13.2768 19.4689 13.0502 19.472 12.813C19.472 12.315 19.073 11.915 18.574 11.915C18.075 11.915 17.676 12.315 17.676 12.813C17.676 13.313 18.076 13.711 18.574 13.711ZM14.149 13.711C14.3862 13.7079 14.6128 13.6123 14.7805 13.4445C14.9483 13.2768 15.0439 13.0502 15.047 12.813C15.047 12.315 14.647 11.915 14.149 11.915C13.649 11.915 13.251 12.315 13.251 12.813C13.251 13.313 13.65 13.711 14.149 13.711ZM20.716 18.751C20.6519 18.7866 20.6008 18.8416 20.5699 18.908C20.539 18.9745 20.5299 19.0491 20.544 19.121C20.544 19.169 20.544 19.218 20.569 19.268C20.667 19.685 20.863 20.349 20.863 20.374C20.863 20.447 20.888 20.496 20.888 20.546C20.888 20.575 20.8823 20.6037 20.8712 20.6304C20.86 20.6572 20.8437 20.6815 20.8232 20.7019C20.8027 20.7224 20.7783 20.7385 20.7515 20.7495C20.7247 20.7605 20.696 20.7661 20.667 20.766C20.617 20.766 20.593 20.742 20.544 20.718L19.095 19.882C18.9892 19.8238 18.8716 19.7903 18.751 19.784C18.678 19.784 18.604 19.784 18.555 19.808C17.867 20.005 17.155 20.103 16.394 20.103C12.734 20.103 9.787 17.646 9.787 14.598C9.787 11.551 12.734 9.093 16.394 9.093C20.053 9.093 23 11.551 23 14.598C23 16.245 22.116 17.744 20.716 18.752V18.751ZM16.673 8.099C16.5797 8.0959 16.4864 8.09423 16.393 8.094C12.219 8.094 8.787 10.954 8.787 14.599C8.787 15.153 8.867 15.689 9.015 16.199H8.926C8.05226 16.1902 7.18347 16.0664 6.342 15.831C6.268 15.806 6.194 15.806 6.12 15.806C5.97221 15.8091 5.82793 15.8516 5.702 15.929L3.954 16.934C3.904 16.959 3.855 16.984 3.806 16.984C3.73463 16.9832 3.66641 16.9545 3.61594 16.9041C3.56548 16.8536 3.53678 16.7854 3.536 16.714C3.536 16.64 3.56 16.591 3.585 16.517C3.609 16.493 3.831 15.683 3.954 15.193C3.954 15.143 3.978 15.07 3.978 15.021C3.97773 14.9353 3.95764 14.8508 3.9193 14.7741C3.88097 14.6974 3.82542 14.6307 3.757 14.579C2.058 13.376 1 11.586 1 9.598C1 5.945 4.57 3 8.95 3C12.715 3 15.88 5.169 16.673 8.098V8.099ZM11.519 8.517C12.092 8.517 12.545 8.04 12.545 7.491C12.545 6.918 12.092 6.465 11.519 6.465C10.946 6.465 10.493 6.918 10.493 7.491C10.493 8.064 10.946 8.517 11.519 8.517ZM6.259 8.517C6.832 8.517 7.286 8.04 7.286 7.491C7.286 6.918 6.832 6.465 6.259 6.465C5.687 6.465 5.233 6.918 5.233 7.491C5.233 8.064 5.687 8.517 6.259 8.517Z"></path></svg></a><a href="" target="_blank" rel="noreferrer" class="mr-1"><style data-emotion="css qtsyz4">.css-qtsyz4{width:1em;height:1em;display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:#3C455D;vertical-align:middle;font-size:22px;}</style><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-qtsyz4"><path fill="currentColor" d="M13.6228 19.7399C13.0966 19.8365 12.5542 19.8869 12.0001 19.8869C7.06474 19.8869 3.06384 15.886 3.06384 10.9507C3.06384 6.0153 7.06474 2.0144 12.0001 2.0144C16.9354 2.0144 20.9363 6.0153 20.9363 10.9507C20.9363 13.948 19.4606 16.6007 17.1962 18.2218L14.312 21.9195C14.2207 22.0365 14.0341 21.9907 14.0074 21.8447L13.6228 19.7399ZM9.3375 7.88363C8.97081 7.88363 8.62735 8.06321 8.41812 8.36435L6.63897 10.9249L6.62574 10.9318L6.62997 10.9379L6.62574 10.944L6.63897 10.9508L8.41844 13.5115C8.62768 13.8126 8.9711 13.9921 9.33777 13.9921L10.7393 13.9921L9.1522 10.9379L10.7393 7.88363H9.3375ZM13.9095 14.0177C13.3236 14.0177 12.8487 13.5428 12.8487 12.957C12.8487 12.3711 13.3236 11.8962 13.9095 11.8962H16.3137C16.8995 11.8962 17.3744 12.3711 17.3744 12.957C17.3744 13.5428 16.8995 14.0177 16.3137 14.0177H13.9095Z"></path></svg></a><a href="" target="_blank" rel="noreferrer" class="mr-1"><style data-emotion="css qtsyz4">.css-qtsyz4{width:1em;height:1em;display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:#3C455D;vertical-align:middle;font-size:22px;}</style><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-qtsyz4"><path fill="currentColor" d="M15.0831 17.7969C14.8161 17.862 14.5475 17.9197 14.2773 17.97C12.8114 18.2459 11.3063 18.2403 9.84252 17.9534C9.58615 17.9034 9.22324 17.8152 8.75545 17.6903L7.22224 19.683C3.43832 19.5615 2 17.0261 2 17.0261C2 11.3977 4.46546 6.83466 4.46546 6.83466C6.93091 4.94853 9.27651 5.00014 9.27651 5.00014L9.9474 5.87412C10.0092 5.86545 10.0715 5.8599 10.1338 5.85747C11.4127 5.68795 12.7087 5.69356 13.986 5.87412L14.7218 5.00014C14.7218 5.00014 17.0691 4.94853 19.5329 6.83633C19.5329 6.83633 22 11.3977 22 17.0261C22 17.0261 20.5434 19.5598 16.7594 19.683L15.0831 17.7969ZM8.69356 11.8369C7.69307 11.8369 6.90232 12.586 6.90232 13.5016C6.90232 14.4172 7.70971 15.1664 8.69356 15.1664C9.6924 15.1664 10.4831 14.4172 10.4831 13.5016C10.4998 12.586 9.69406 11.8369 8.69356 11.8369ZM15.0994 11.8369C14.1006 11.8369 13.3098 12.586 13.3098 13.5016C13.3098 14.4172 14.1172 15.1664 15.0994 15.1664C16.0999 15.1664 16.8907 14.4172 16.8907 13.5016C16.8907 12.586 16.0999 11.8369 15.0994 11.8369Z"></path></svg></a></div></div></div></div><div class="mt-12 h-auto flex-col divide-y divide-solid divide-gray-200 bg-[#F9F9F9] px-8 lg:hidden"><div class="pb-4 pt-12"><img src="/homepage/logo_text.png" alt="logo" width="64" height="30"/><p class="mt-4 w-full text-base leading-5 text-[#5E6987]">Laf 是一个 Serverless 框架，提供开箱即用的云函数，云数据库，对象存储等能力，是一个干净清爽的开发平台，像写博客一样写代码！三分钟上线 ChatGPT 应用！</p><div class="mt-4 flex justify-between"><div class="w-1/2 text-lg"><div class="leading-8 text-[#5E6987]">产品</div><ul class="mb-4 leading-8"><li><a href="https://bja.sealos.run?openapp=system-sealaf&amp;s=bd-sealaf">Laf 公有云</a></li><li><a href="https://github.com/labring/laf/releases" target="_blank" rel="noreferrer">更新日志</a></li><li><a href="https://marketplace.visualstudio.com/items?itemName=NightWhite.laf-assistant" target="_blank" rel="noreferrer">Vscode 插件</a></li><li><a href="https://github.com/labring/sealos" target="_blank" rel="noreferrer">Sealos</a></li></ul><div class="w-1/2 text-lg"><div class="leading-8 text-[#5E6987]">支持</div><ul class="leading-8"><li><a href="https://github.com/labring/laf/issues" target="_blank" rel="noreferrer">问题反馈</a></li><li><a href="https://forum.laf.run" target="_blank" rel="noreferrer">开发者社区</a></li><li><a href="https://sealos.run/company" target="_blank" rel="noreferrer">关于我们</a></li></ul></div></div><div class="w-1/2 text-lg"><div class="leading-8 text-[#5E6987]">开发者</div><ul class="leading-8"><li><a href="https://github.com/labring/laf/tree/main/deploy" target="_blank" rel="noreferrer">私有化部署</a></li><li><a href="https://api.laf.run/" target="_blank" rel="noreferrer">开放 API</a></li><li><a href="https://github.com/labring/laf" target="_blank" rel="noreferrer">源码</a></li><li><a href="https://doc.laf.run/zh/" target="_blank" rel="noreferrer">文档</a></li></ul></div></div></div><div class="flex flex-col gap-2 py-6 "><div class="text-lg text-[#3C455D]">laf. all rights reserved. © <!-- -->2024<div></div></div><div class="flex "><a href="" target="_blank" rel="noreferrer"><style data-emotion="css uoxqnj">.css-uoxqnj{width:1em;height:1em;display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:#3C455D;vertical-align:middle;font-size:28px;}</style><svg viewBox="0 0 22 24" focusable="false" class="chakra-icon css-uoxqnj"><path fill="currentColor" d="M18.574 13.711C18.8112 13.7079 19.0378 13.6123 19.2055 13.4445C19.3733 13.2768 19.4689 13.0502 19.472 12.813C19.472 12.315 19.073 11.915 18.574 11.915C18.075 11.915 17.676 12.315 17.676 12.813C17.676 13.313 18.076 13.711 18.574 13.711ZM14.149 13.711C14.3862 13.7079 14.6128 13.6123 14.7805 13.4445C14.9483 13.2768 15.0439 13.0502 15.047 12.813C15.047 12.315 14.647 11.915 14.149 11.915C13.649 11.915 13.251 12.315 13.251 12.813C13.251 13.313 13.65 13.711 14.149 13.711ZM20.716 18.751C20.6519 18.7866 20.6008 18.8416 20.5699 18.908C20.539 18.9745 20.5299 19.0491 20.544 19.121C20.544 19.169 20.544 19.218 20.569 19.268C20.667 19.685 20.863 20.349 20.863 20.374C20.863 20.447 20.888 20.496 20.888 20.546C20.888 20.575 20.8823 20.6037 20.8712 20.6304C20.86 20.6572 20.8437 20.6815 20.8232 20.7019C20.8027 20.7224 20.7783 20.7385 20.7515 20.7495C20.7247 20.7605 20.696 20.7661 20.667 20.766C20.617 20.766 20.593 20.742 20.544 20.718L19.095 19.882C18.9892 19.8238 18.8716 19.7903 18.751 19.784C18.678 19.784 18.604 19.784 18.555 19.808C17.867 20.005 17.155 20.103 16.394 20.103C12.734 20.103 9.787 17.646 9.787 14.598C9.787 11.551 12.734 9.093 16.394 9.093C20.053 9.093 23 11.551 23 14.598C23 16.245 22.116 17.744 20.716 18.752V18.751ZM16.673 8.099C16.5797 8.0959 16.4864 8.09423 16.393 8.094C12.219 8.094 8.787 10.954 8.787 14.599C8.787 15.153 8.867 15.689 9.015 16.199H8.926C8.05226 16.1902 7.18347 16.0664 6.342 15.831C6.268 15.806 6.194 15.806 6.12 15.806C5.97221 15.8091 5.82793 15.8516 5.702 15.929L3.954 16.934C3.904 16.959 3.855 16.984 3.806 16.984C3.73463 16.9832 3.66641 16.9545 3.61594 16.9041C3.56548 16.8536 3.53678 16.7854 3.536 16.714C3.536 16.64 3.56 16.591 3.585 16.517C3.609 16.493 3.831 15.683 3.954 15.193C3.954 15.143 3.978 15.07 3.978 15.021C3.97773 14.9353 3.95764 14.8508 3.9193 14.7741C3.88097 14.6974 3.82542 14.6307 3.757 14.579C2.058 13.376 1 11.586 1 9.598C1 5.945 4.57 3 8.95 3C12.715 3 15.88 5.169 16.673 8.098V8.099ZM11.519 8.517C12.092 8.517 12.545 8.04 12.545 7.491C12.545 6.918 12.092 6.465 11.519 6.465C10.946 6.465 10.493 6.918 10.493 7.491C10.493 8.064 10.946 8.517 11.519 8.517ZM6.259 8.517C6.832 8.517 7.286 8.04 7.286 7.491C7.286 6.918 6.832 6.465 6.259 6.465C5.687 6.465 5.233 6.918 5.233 7.491C5.233 8.064 5.687 8.517 6.259 8.517Z"></path></svg></a><a href="" target="_blank" rel="noreferrer"><style data-emotion="css uoxqnj">.css-uoxqnj{width:1em;height:1em;display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:#3C455D;vertical-align:middle;font-size:28px;}</style><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-uoxqnj"><path fill="currentColor" d="M13.6228 19.7399C13.0966 19.8365 12.5542 19.8869 12.0001 19.8869C7.06474 19.8869 3.06384 15.886 3.06384 10.9507C3.06384 6.0153 7.06474 2.0144 12.0001 2.0144C16.9354 2.0144 20.9363 6.0153 20.9363 10.9507C20.9363 13.948 19.4606 16.6007 17.1962 18.2218L14.312 21.9195C14.2207 22.0365 14.0341 21.9907 14.0074 21.8447L13.6228 19.7399ZM9.3375 7.88363C8.97081 7.88363 8.62735 8.06321 8.41812 8.36435L6.63897 10.9249L6.62574 10.9318L6.62997 10.9379L6.62574 10.944L6.63897 10.9508L8.41844 13.5115C8.62768 13.8126 8.9711 13.9921 9.33777 13.9921L10.7393 13.9921L9.1522 10.9379L10.7393 7.88363H9.3375ZM13.9095 14.0177C13.3236 14.0177 12.8487 13.5428 12.8487 12.957C12.8487 12.3711 13.3236 11.8962 13.9095 11.8962H16.3137C16.8995 11.8962 17.3744 12.3711 17.3744 12.957C17.3744 13.5428 16.8995 14.0177 16.3137 14.0177H13.9095Z"></path></svg></a><a href="" target="_blank" rel="noreferrer"><style data-emotion="css uoxqnj">.css-uoxqnj{width:1em;height:1em;display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:#3C455D;vertical-align:middle;font-size:28px;}</style><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-uoxqnj"><path fill="currentColor" d="M15.0831 17.7969C14.8161 17.862 14.5475 17.9197 14.2773 17.97C12.8114 18.2459 11.3063 18.2403 9.84252 17.9534C9.58615 17.9034 9.22324 17.8152 8.75545 17.6903L7.22224 19.683C3.43832 19.5615 2 17.0261 2 17.0261C2 11.3977 4.46546 6.83466 4.46546 6.83466C6.93091 4.94853 9.27651 5.00014 9.27651 5.00014L9.9474 5.87412C10.0092 5.86545 10.0715 5.8599 10.1338 5.85747C11.4127 5.68795 12.7087 5.69356 13.986 5.87412L14.7218 5.00014C14.7218 5.00014 17.0691 4.94853 19.5329 6.83633C19.5329 6.83633 22 11.3977 22 17.0261C22 17.0261 20.5434 19.5598 16.7594 19.683L15.0831 17.7969ZM8.69356 11.8369C7.69307 11.8369 6.90232 12.586 6.90232 13.5016C6.90232 14.4172 7.70971 15.1664 8.69356 15.1664C9.6924 15.1664 10.4831 14.4172 10.4831 13.5016C10.4998 12.586 9.69406 11.8369 8.69356 11.8369ZM15.0994 11.8369C14.1006 11.8369 13.3098 12.586 13.3098 13.5016C13.3098 14.4172 14.1172 15.1664 15.0994 15.1664C16.0999 15.1664 16.8907 14.4172 16.8907 13.5016C16.8907 12.586 16.0999 11.8369 15.0994 11.8369Z"></path></svg></a></div><div><a target="_blank" href="" class="mr-6 flex items-center whitespace-nowrap " rel="noreferrer"><span class="mr-2 text-base">服务状态</span><div class="status_breathing-gradient__R8vu0"></div><div class="status_breathing-gradient__R8vu0"></div><div class="status_breathing-gradient__R8vu0"></div><div class="status_breathing-gradient__R8vu0"></div><div class="status_breathing-gradient__R8vu0"></div><div class="status_breathing-gradient__R8vu0"></div><div class="status_breathing-gradient__R8vu0"></div><div class="status_breathing-gradient__R8vu0"></div></a></div></div></div></div></main><span></span><span id="__chakra_env" hidden=""></span><script src="/sealaf/_next/static/chunks/webpack-4e3629883134f26e.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null])</script><script>self.__next_f.push([1,"1:HL[\"/sealaf/_next/static/css/27adac781495a7d1.css\",\"style\"]\n2:HL[\"/sealaf/_next/static/css/104b26e056d17e82.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"3:I[2935,[],\"\"]\n7:I[2885,[],\"\"]\n8:I[1747,[],\"\"]\na:I[5334,[],\"\"]\nb:[]\n0:[null,[\"$\",\"$L3\",null,{\"buildId\":\"_mMYaL4mVa18PzI_wHYsC\",\"assetPrefix\":\"/sealaf\",\"initialCanonicalUrl\":\"/zh\",\"initialTree\":[\"\",{\"children\":[[\"lng\",\"zh\",\"d\"],{\"children\":[\"__PAGE__?{\\\"lng\\\":\\\"zh\\\"}\",{}]},\"$undefined\",\"$undefined\",true]}],\"initialSeedData\":[\"\",{\"children\":[[\"lng\",\"zh\",\"d\"],{\"children\":[\"__PAGE__\",{},[[\"$L4\",\"$L5\"],null],null]},[\"$L6\",null],null]},[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L8\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":\"404\"}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],\"notFoundStyles\":[],\"styles\":[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/sealaf/_next/static/css/27adac781495a7d1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]]}],null],\"couldBeIntercepted\":false,\"initialHead\":[null,\"$L9\"],\"globalErrorComponent\":\"$a\",\"missingSlots\":\"$W"])</script><script>self.__next_f.push([1,"b\"}]]\n"])</script><script>self.__next_f.push([1,"c:I[5264,[\"436\",\"static/chunks/436-eeeae0f9b7b904a0.js\",\"702\",\"static/chunks/702-61d64122977218af.js\",\"866\",\"static/chunks/app/%5Blng%5D/page-8a267f9fa085df52.js\"],\"default\"]\nd:I[9882,[\"436\",\"static/chunks/436-eeeae0f9b7b904a0.js\",\"702\",\"static/chunks/702-61d64122977218af.js\",\"866\",\"static/chunks/app/%5Blng%5D/page-8a267f9fa085df52.js\"],\"default\"]\n11:I[3516,[\"436\",\"static/chunks/436-eeeae0f9b7b904a0.js\",\"31\",\"static/chunks/31-c61b5cb90526c97d.js\",\"695\",\"static/chunks/app/%5Blng%5D/layout-488ee6055cbaf6c0.js\"],\"\"]\n12:I[6647,[\"436\",\"static/chunks/436-eeeae0f9b7b904a0.js\",\"31\",\"static/chunks/31-c61b5cb90526c97d.js\",\"695\",\"static/chunks/app/%5Blng%5D/layout-488ee6055cbaf6c0.js\"],\"ChakraProviders\"]\n5:[\"$\",\"main\",null,{\"children\":[\"$\",\"div\",null,{\"style\":{\"fontSize\":\"16px\"},\"className\":\"homepage\",\"children\":[[\"$\",\"$Lc\",null,{\"lng\":\"zh\"}],[\"$\",\"div\",null,{\"className\":\"flex items-center justify-center mb-12\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex flex-col lg:mx-[48px] lg:max-w-[1200px]\",\"children\":[[\"$\",\"$Ld\",null,{\"lng\":\"zh\"}],\"$Le\",\"$Lf\"]}]}],\"$L10\"]}]}]\n13:[\"lng\",\"zh\",\"d\"]\n6:[\"$\",\"html\",null,{\"lang\":\"zh\",\"dir\":\"ltr\",\"children\":[[\"$\",\"head\",null,{\"children\":[\"$\",\"$L11\",null,{\"id\":\"baidu-analytics\",\"strategy\":\"afterInteractive\",\"children\":\"\\n        var _hmt = _hmt || [];\\n        (function() {\\n          var hm = document.createElement(\\\"script\\\");\\n          hm.src = \\\"https://hm.baidu.com/hm.js?d8e8ecf669c47dc2512d3f1417e761f9\\\";\\n          var s = document.getElementsByTagName(\\\"script\\\")[0]; \\n          s.parentNode.insertBefore(hm, s);\\n        })();\\n      \"}]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L12\",null,{\"children\":[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"$13\",\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L8\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\",\"styles\":[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/sealaf/_next/static/css/1"])</script><script>self.__next_f.push([1,"04b26e056d17e82.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]]}]}]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[7754,[\"436\",\"static/chunks/436-eeeae0f9b7b904a0.js\",\"702\",\"static/chunks/702-61d64122977218af.js\",\"866\",\"static/chunks/app/%5Blng%5D/page-8a267f9fa085df52.js\"],\"WechatIcon\"]\n16:I[7754,[\"436\",\"static/chunks/436-eeeae0f9b7b904a0.js\",\"702\",\"static/chunks/702-61d64122977218af.js\",\"866\",\"static/chunks/app/%5Blng%5D/page-8a267f9fa085df52.js\"],\"ForumIcon\"]\n17:I[7754,[\"436\",\"static/chunks/436-eeeae0f9b7b904a0.js\",\"702\",\"static/chunks/702-61d64122977218af.js\",\"866\",\"static/chunks/app/%5Blng%5D/page-8a267f9fa085df52.js\"],\"DiscordIcon\"]\n9:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"2\",{\"children\":\"sealaf 云开发\"}],[\"$\",\"meta\",\"3\",{\"name\":\"description\",\"content\":\"A playground to explore new Next.js 13/14 app directory features such as nested layouts, instant loading states, streaming, and component level data fetching.\"}]]\n4:null\n"])</script><script>self.__next_f.push([1,"e:[\"$\",\"div\",null,{\"className\":\"h-auto\",\"children\":[[\"$\",\"h2\",null,{\"className\":\"py-[80px] pb-[48px] text-4xl lg:py-[60px] lg:pb-[60px]\",\"children\":\"Laf 的能力\"}],[\"$\",\"div\",null,{\"className\":\"w-full px-[16px] lg:hidden\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-card h-max-[520px] my-6 w-full rounded-2xl lg:hidden\",\"children\":[\"$\",\"div\",null,{\"className\":\"justify-between\",\"children\":[[\"$\",\"div\",null,{\"className\":\"p-6\",\"children\":[[\"$\",\"img\",null,{\"className\":\"mb-8\",\"src\":\"/homepage/functions.svg\",\"alt\":\"icon\"}],[\"$\",\"h3\",null,{\"children\":[[\"$\",\"span\",null,{\"className\":\"bg-gradient-to-r from-[#00C24E] to-[#00A1FC] bg-clip-text text-transparent\",\"children\":\"云函数\"}],\"， 5秒发布你的第一个函数。\"]}]]}],[\"$\",\"img\",null,{\"className\":\"w-max-5/6 mx-auto pl-8 lg:hidden \",\"src\":\"/homepage/function.png\",\"alt\":\"function\"}]]}]}],[\"$\",\"div\",null,{\"className\":\"bg-card my-6 w-full rounded-2xl lg:hidden\",\"children\":[\"$\",\"div\",null,{\"className\":\"justify-between\",\"children\":[[\"$\",\"div\",null,{\"className\":\"p-6\",\"children\":[[\"$\",\"img\",null,{\"className\":\"mb-8\",\"src\":\"/homepage/database.svg\",\"alt\":\"icon\"}],[\"$\",\"h3\",null,{\"className\":\"leading-normal\",\"children\":[[\"$\",\"span\",null,{\"className\":\"bg-gradient-to-r from-[#00CCE8] to-[#00E8A2] bg-clip-text text-transparent\",\"children\":\"数据库\"}],\"， 无需创建数据库， 开箱即用.\"]}]]}],[\"$\",\"img\",null,{\"className\":\"mx-auto pl-8 lg:hidden \",\"src\":\"/homepage/database.png\",\"alt\":\"database\"}]]}]}],[\"$\",\"div\",null,{\"className\":\"bg-card my-6 w-full rounded-2xl lg:hidden\",\"children\":[\"$\",\"div\",null,{\"className\":\"justify-between\",\"children\":[[\"$\",\"div\",null,{\"className\":\"p-6\",\"children\":[[\"$\",\"img\",null,{\"className\":\"mb-6\",\"src\":\"/homepage/storage.svg\",\"alt\":\"icon\"}],[\"$\",\"h3\",null,{\"children\":[[\"$\",\"span\",null,{\"className\":\"bg-gradient-to-r from-[#57E37A] to-[#00BEB1] bg-clip-text text-transparent\",\"children\":\"云存储\"}],\"，创建属于你的云存储，管理文件更简单。\"]}]]}],[\"$\",\"img\",null,{\"className\":\"mx-auto pl-8 lg:hidden \",\"src\":\"/homepage/storage.png\",\"alt\":\"storage\"}]]}]}]]}],[\"$\",\"div\",null,{\"className\":\"bg-card my-6 hidden w-full rounded-2xl lg:block\",\"children\":[\"$\",\"div\",null,{\"className\":\"justify-between lg:flex lg:flex-row\",\"children\":[[\"$\",\"div\",null,{\"className\":\"p-6 lg:p-12\",\"children\":[[\"$\",\"img\",null,{\"className\":\"mb-6\",\"src\":\"/homepage/functions.svg\",\"alt\":\"icon\"}],[\"$\",\"h3\",null,{\"className\":\"w-[300px]\",\"children\":[[\"$\",\"span\",null,{\"className\":\"bg-gradient-to-r from-[#00C24E] to-[#00A1FC] bg-clip-text text-transparent\",\"children\":\"云函数\"}],\"， 5秒发布你的第一个函数。\"]}]]}],[\"$\",\"div\",null,{\"className\":\"overflow-hidden rounded-br-2xl\",\"children\":[\"$\",\"img\",null,{\"className\":\"w-full lg:mt-8\",\"src\":\"/homepage/function.png\",\"alt\":\"function\"}]}],[\"$\",\"div\",null,{}]]}]}],[\"$\",\"div\",null,{\"className\":\"hidden w-full gap-6 lg:flex \",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-card relative h-auto w-1/2 rounded-2xl px-12 pt-12\",\"children\":[[\"$\",\"img\",null,{\"className\":\"mb-6\",\"src\":\"/homepage/database.svg\",\"alt\":\"icon\"}],[\"$\",\"h3\",null,{\"className\":\"w-[400px]\",\"children\":[[\"$\",\"span\",null,{\"className\":\"bg-gradient-to-r from-[#00CCE8] to-[#00E8A2] bg-clip-text text-transparent\",\"children\":\"数据库\"}],\"， 无需创建数据库， 开箱即用.\"]}],[\"$\",\"div\",null,{\"className\":\"absolute bottom-0 flex h-1/2 items-end\",\"children\":[\"$\",\"img\",null,{\"className\":\"mx-auto\",\"src\":\"/homepage/database.png\",\"alt\":\"database\"}]}]]}],[\"$\",\"div\",null,{\"className\":\"bg-card relative h-[600px] w-1/2 rounded-2xl px-12 pt-12\",\"children\":[[\"$\",\"img\",null,{\"className\":\"mb-6\",\"src\":\"/homepage/storage.svg\",\"alt\":\"icon\"}],[\"$\",\"h3\",null,{\"className\":\"w-[400px]\",\"children\":[[\"$\",\"span\",null,{\"className\":\"bg-gradient-to-r from-[#57E37A] to-[#00BEB1] bg-clip-text text-transparent\",\"children\":\"云存储\"}],\"，创建属于你的云存储，管理文件更简单。\"]}],[\"$\",\"div\",null,{\"className\":\"absolute bottom-0 flex h-1/2 items-end\",\"children\":[\"$\",\"img\",null,{\"className\":\"mx-auto\",\"src\":\"/homepage/storage.png\",\"alt\":\"storage\"}]}]]}]]}]]}]\n"])</script><script>self.__next_f.push([1,"f:[\"$\",\"div\",null,{\"className\":\"mt-[120px] \",\"children\":[[\"$\",\"h2\",null,{\"className\":\"mb-[60px]\",\"children\":[\" \",\"为什么选择 Laf\"]}],[\"$\",\"div\",null,{\"className\":\"mx-[16px] space-y-4 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:space-y-0\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex justify-between rounded-md border border-solid  p-[40px] hover:bg-[#F9F9F9]\",\"children\":[[\"$\",\"div\",null,{\"className\":\"w-1/4\",\"children\":[\"$\",\"img\",null,{\"src\":\"/homepage/icon_01.svg\",\"alt\":\"logo1\"}]}],[\"$\",\"div\",null,{\"className\":\"w-3/4 \",\"children\":[[\"$\",\"h4\",null,{\"className\":\"mb-2 text-2xl font-bold\",\"children\":\"更开放\"}],[\"$\",\"p\",null,{\"className\":\"text-xl font-light\",\"children\":[\" \",\"Laf 遵循 Apache License 2.0 开源协议\"]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"flex justify-between rounded-md border border-solid  p-[40px] hover:bg-[#F9F9F9]\",\"children\":[[\"$\",\"div\",null,{\"className\":\"w-1/4\",\"children\":[\"$\",\"img\",null,{\"src\":\"/homepage/icon_02.svg\",\"alt\":\"icon_02\"}]}],[\"$\",\"div\",null,{\"className\":\"w-3/4\",\"children\":[[\"$\",\"h4\",null,{\"className\":\"mb-2 text-2xl font-bold\",\"children\":\"请求更快\"}],[\"$\",\"p\",null,{\"className\":\"text-xl font-light\",\"children\":\"没有冷启时间让你的请求响应更快\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"flex justify-between rounded-md border border-solid  p-[40px] hover:bg-[#F9F9F9]\",\"children\":[[\"$\",\"div\",null,{\"className\":\"w-1/4\",\"children\":[\"$\",\"img\",null,{\"src\":\"/homepage/icon_03.svg\",\"alt\":\"icon_03\"}]}],[\"$\",\"div\",null,{\"className\":\"w-3/4\",\"children\":[[\"$\",\"h4\",null,{\"className\":\"mb-2 text-2xl font-bold\",\"children\":\"支持私有化部署\"}],[\"$\",\"p\",null,{\"className\":\"text-xl font-light\",\"children\":\"无厂商绑定，可交付于任何环境\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"flex justify-between rounded-md border border-solid  p-[40px] hover:bg-[#F9F9F9]\",\"children\":[[\"$\",\"div\",null,{\"className\":\"w-1/4\",\"children\":[\"$\",\"img\",null,{\"src\":\"/homepage/icon_04.svg\",\"alt\":\"icon_04\"}]}],[\"$\",\"div\",null,{\"className\":\"w-3/4\",\"children\":[[\"$\",\"h4\",null,{\"className\":\"mb-2 text-2xl font-bold\",\"children\":\"开发更简单\"}],[\"$\",\"p\",null,{\"className\":\"text-xl font-light\",\"children\":\"无需关心部署、运维，一切都是 Serverless\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"flex justify-between rounded-md border border-solid  p-[40px] hover:bg-[#F9F9F9]\",\"children\":[[\"$\",\"div\",null,{\"className\":\"w-1/4\",\"children\":[\"$\",\"img\",null,{\"src\":\"/homepage/icon_05.svg\",\"alt\":\"icon_05\"}]}],[\"$\",\"div\",null,{\"className\":\"w-3/4\",\"children\":[[\"$\",\"h4\",null,{\"className\":\"mb-2 text-2xl font-bold\",\"children\":\"高性价比\"}],[\"$\",\"p\",null,{\"className\":\"text-xl font-light\",\"children\":\"百万次调用，最低仅需 0.01 元\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"flex justify-between rounded-md border border-solid  p-[40px] hover:bg-[#F9F9F9]\",\"children\":[[\"$\",\"div\",null,{\"className\":\"w-1/4\",\"children\":[\"$\",\"img\",null,{\"src\":\"/homepage/icon_06.png\",\"className\":\"h-12 w-12\",\"alt\":\"icon_06\"}]}],[\"$\",\"div\",null,{\"className\":\"w-3/4\",\"children\":[\"$\",\"h4\",null,{\"className\":\"mb-2 text-2xl font-bold\",\"children\":\"我们致力于为所有开发者提供敏捷高效的服务\"}]}]]}]]}]]}]\n"])</script><script>self.__next_f.push([1,"10:[[\"$\",\"div\",null,{\"className\":\"hidden justify-center bg-lafWhite-600 lg:flex\",\"children\":[\"$\",\"div\",null,{\"className\":\" w-full max-w-[1200px] flex-col divide-y divide-solid divide-gray-200\",\"children\":[[\"$\",\"div\",null,{\"className\":\"py-[60px]\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex justify-between\",\"children\":[[\"$\",\"div\",null,{\"className\":\"w-1/2\",\"children\":[[\"$\",\"img\",null,{\"src\":\"/homepage/logo_text.png\",\"alt\":\"logo\",\"width\":64,\"height\":30,\"className\":\"mt-4\"}],[\"$\",\"p\",null,{\"className\":\"mt-8 w-full max-w-[380px] text-base leading-5 text-[#5E6987]\",\"children\":\"Laf 是一个 Serverless 框架，提供开箱即用的云函数，云数据库，对象存储等能力，是一个干净清爽的开发平台，像写博客一样写代码！三分钟上线 ChatGPT 应用！\"}]]}],[\"$\",\"div\",null,{\"className\":\"w-1/6 text-lg leading-10 text-[#5E6987]\",\"children\":[\"产品\",[\"$\",\"ul\",null,{\"className\":\"leading-10 text-[#14171F]\",\"children\":[[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://bja.sealos.run?openapp=system-sealaf\u0026s=bd-sealaf\",\"children\":\"Laf 公有云\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://github.com/labring/laf/releases\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"更新日志\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://marketplace.visualstudio.com/items?itemName=NightWhite.laf-assistant\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"Vscode 插件\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://github.com/labring/sealos\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"Sealos\"}]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"w-1/6 text-lg leading-10 text-[#5E6987]\",\"children\":[\"开发者\",[\"$\",\"ul\",null,{\"className\":\"leading-10 text-[#14171F]\",\"children\":[[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://github.com/labring/laf/tree/main/deploy\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"私有化部署\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://api.laf.run/\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"开放 API\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://github.com/labring/laf\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"源码\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://doc.laf.run/zh/\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"文档\"}]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"w-1/6 text-lg leading-10 text-[#5E6987]\",\"children\":[\"支持\",[\"$\",\"ul\",null,{\"className\":\"leading-10 text-[#14171F]\",\"children\":[[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://github.com/labring/laf/issues\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"问题反馈\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://forum.laf.run\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"开发者社区\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://sealos.run/company\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"关于我们\"}]}]]}]]}]]}]}],[\"$\",\"div\",null,{\"className\":\"flex h-auto flex-row items-center justify-between py-6\",\"children\":[[\"$\",\"div\",null,{\"className\":\"w-1/2 text-lg text-[#3C455D]\",\"children\":[\"laf. all rights reserved. © \",2024,[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"\"}}]]}],[\"$\",\"div\",null,{\"className\":\"flex justify-evenly \",\"children\":[\"$L14\",[\"$\",\"a\",null,{\"href\":\"\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"className\":\"mr-1\",\"children\":[\"$\",\"$L15\",null,{\"fontSize\":22,\"color\":\"#3C455D\"}]}],[\"$\",\"a\",null,{\"href\":\"\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"className\":\"mr-1\",\"children\":[\"$\",\"$L16\",null,{\"fontSize\":22,\"color\":\"#3C455D\"}]}],[\"$\",\"a\",null,{\"href\":\"\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"className\":\"mr-1\",\"children\":[\"$\",\"$L17\",null,{\"fontSize\":22,\"color\":\"#3C455D\"}]}]]}]]}]]}]}],[\"$\",\"div\",null,{\"className\":\"mt-12 h-auto flex-col divide-y divide-solid divide-gray-200 bg-[#F9F9F9] px-8 lg:hidden\",\"children\":[[\"$\",\"div\",null,{\"className\":\"pb-4 pt-12\",\"children\":[[\"$\",\"img\",null,{\"src\":\"/homepage/logo_text.png\",\"alt\":\"logo\",\"width\":64,\"height\":30}],[\"$\",\"p\",null,{\"className\":\"mt-4 w-full text-base leading-5 text-[#5E6987]\",\"children\":\"Laf 是一个 Serverless 框架，提供开箱即用的云函数，云数据库，对象存储等能力，是一个干净清爽的开发平台，像写博客一样写代码！三分钟上线 ChatGPT 应用！\"}],[\"$\",\"div\",null,{\"className\":\"mt-4 flex justify-between\",\"children\":[[\"$\",\"div\",null,{\"className\":\"w-1/2 text-lg\",\"children\":[[\"$\",\"div\",null,{\"className\":\"leading-8 text-[#5E6987]\",\"children\":\"产品\"}],[\"$\",\"ul\",null,{\"className\":\"mb-4 leading-8\",\"children\":[[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://bja.sealos.run?openapp=system-sealaf\u0026s=bd-sealaf\",\"children\":\"Laf 公有云\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://github.com/labring/laf/releases\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"更新日志\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://marketplace.visualstudio.com/items?itemName=NightWhite.laf-assistant\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"Vscode 插件\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://github.com/labring/sealos\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"Sealos\"}]}]]}],[\"$\",\"div\",null,{\"className\":\"w-1/2 text-lg\",\"children\":[[\"$\",\"div\",null,{\"className\":\"leading-8 text-[#5E6987]\",\"children\":\"支持\"}],[\"$\",\"ul\",null,{\"className\":\"leading-8\",\"children\":[[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://github.com/labring/laf/issues\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"问题反馈\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://forum.laf.run\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"开发者社区\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://sealos.run/company\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"关于我们\"}]}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"w-1/2 text-lg\",\"children\":[[\"$\",\"div\",null,{\"className\":\"leading-8 text-[#5E6987]\",\"children\":\"开发者\"}],[\"$\",\"ul\",null,{\"className\":\"leading-8\",\"children\":[[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://github.com/labring/laf/tree/main/deploy\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"私有化部署\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://api.laf.run/\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"开放 API\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://github.com/labring/laf\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"源码\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://doc.laf.run/zh/\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"文档\"}]}]]}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"flex flex-col gap-2 py-6 \",\"children\":[[\"$\",\"div\",null,{\"className\":\"text-lg text-[#3C455D]\",\"children\":[\"laf. all rights reserved. © \",2024,[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"\"}}]]}],[\"$\",\"div\",null,{\"className\":\"flex \",\"children\":[[\"$\",\"a\",null,{\"href\":\"\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":[\"$\",\"$L15\",null,{\"fontSize\":28,\"color\":\"#3C455D\"}]}],[\"$\",\"a\",null,{\"href\":\"\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":[\"$\",\"$L16\",null,{\"fontSize\":28,\"color\":\"#3C455D\"}]}],[\"$\",\"a\",null,{\"href\":\"\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":[\"$\",\"$L17\",null,{\"fontSize\":28,\"color\":\"#3C455D\"}]}]]}],[\"$\",\"div\",null,{\"children\":\"$L18\"}]]}]]}]]\n"])</script><script>self.__next_f.push([1,"14:[\"$\",\"a\",null,{\"target\":\"_blank\",\"href\":\"\",\"className\":\"mr-6 flex items-center whitespace-nowrap \",\"rel\":\"noreferrer\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-2 text-base\",\"children\":\"服务状态\"}],[[\"$\",\"div\",\"0\",{\"className\":\"status_breathing-gradient__R8vu0\"}],[\"$\",\"div\",\"1\",{\"className\":\"status_breathing-gradient__R8vu0\"}],[\"$\",\"div\",\"2\",{\"className\":\"status_breathing-gradient__R8vu0\"}],[\"$\",\"div\",\"3\",{\"className\":\"status_breathing-gradient__R8vu0\"}],[\"$\",\"div\",\"4\",{\"className\":\"status_breathing-gradient__R8vu0\"}],[\"$\",\"div\",\"5\",{\"className\":\"status_breathing-gradient__R8vu0\"}],[\"$\",\"div\",\"6\",{\"className\":\"status_breathing-gradient__R8vu0\"}],[\"$\",\"div\",\"7\",{\"className\":\"status_breathing-gradient__R8vu0\"}]]]}]\n18:[\"$\",\"a\",null,{\"target\":\"_blank\",\"href\":\"\",\"className\":\"mr-6 flex items-center whitespace-nowrap \",\"rel\":\"noreferrer\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-2 text-base\",\"children\":\"服务状态\"}],[[\"$\",\"div\",\"0\",{\"className\":\"status_breathing-gradient__R8vu0\"}],[\"$\",\"div\",\"1\",{\"className\":\"status_breathing-gradient__R8vu0\"}],[\"$\",\"div\",\"2\",{\"className\":\"status_breathing-gradient__R8vu0\"}],[\"$\",\"div\",\"3\",{\"className\":\"status_breathing-gradient__R8vu0\"}],[\"$\",\"div\",\"4\",{\"className\":\"status_breathing-gradient__R8vu0\"}],[\"$\",\"div\",\"5\",{\"className\":\"status_breathing-gradient__R8vu0\"}],[\"$\",\"div\",\"6\",{\"className\":\"status_breathing-gradient__R8vu0\"}],[\"$\",\"div\",\"7\",{\"className\":\"status_breathing-gradient__R8vu0\"}]]]}]\n"])</script></body></html>
+<!doctype html>
+<html lang="zh" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" as="image" href="/homepage/cancel_btn.svg" />
+    <link rel="preload" as="image" href="logo_text.png" />
+    <link rel="preload" as="image" href="/homepage/play.svg" />
+    <link rel="preload" as="image" href="/homepage/videomobile.png" />
+    <link rel="preload" as="image" href="/homepage/functions.svg" />
+    <link rel="preload" as="image" href="/homepage/function.png" />
+    <link rel="preload" as="image" href="/homepage/database.svg" />
+    <link rel="preload" as="image" href="/homepage/database.png" />
+    <link rel="preload" as="image" href="/homepage/storage.svg" />
+    <link rel="preload" as="image" href="/homepage/storage.png" />
+    <link
+      rel="stylesheet"
+      href="/sealaf/_next/static/css/27adac781495a7d1.css"
+      data-precedence="next"
+    />
+    <link
+      rel="stylesheet"
+      href="/sealaf/_next/static/css/104b26e056d17e82.css"
+      data-precedence="next"
+    />
+    <link
+      rel="preload"
+      as="script"
+      fetchpriority="low"
+      href="/sealaf/_next/static/chunks/webpack-4e3629883134f26e.js"
+    />
+    <script src="/sealaf/_next/static/chunks/cce61ff3-4606116c159ffc35.js" async=""></script>
+    <script src="/sealaf/_next/static/chunks/356-d3d5e302f3f7a5fa.js" async=""></script>
+    <script src="/sealaf/_next/static/chunks/main-app-e73f56904abfb17f.js" async=""></script>
+    <script src="/sealaf/_next/static/chunks/436-eeeae0f9b7b904a0.js" async=""></script>
+    <script src="/sealaf/_next/static/chunks/702-61d64122977218af.js" async=""></script>
+    <script
+      src="/sealaf/_next/static/chunks/app/%5Blng%5D/page-8a267f9fa085df52.js"
+      async=""
+    ></script>
+    <script src="/sealaf/_next/static/chunks/31-c61b5cb90526c97d.js" async=""></script>
+    <script
+      src="/sealaf/_next/static/chunks/app/%5Blng%5D/layout-488ee6055cbaf6c0.js"
+      async=""
+    ></script>
+    <link rel="preload" as="image" href="/homepage/icon_01.svg" />
+    <link rel="preload" as="image" href="/homepage/icon_02.svg" />
+    <link rel="preload" as="image" href="/homepage/icon_03.svg" />
+    <link rel="preload" as="image" href="/homepage/icon_04.svg" />
+    <link rel="preload" as="image" href="/homepage/icon_05.svg" />
+    <link rel="preload" as="image" href="/homepage/icon_06.png" />
+    <link rel="preload" as="image" href="/homepage/logo_text.png" />
+    <title>sealaf 云开发</title>
+    <meta
+      name="description"
+      content="A playground to explore new Next.js 13/14 app directory features such as nested layouts, instant loading states, streaming, and component level data fetching."
+    />
+    <script src="/sealaf/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js" nomodule=""></script>
+  </head>
+  <body>
+    <style data-emotion="css-global 8qrtkf">
+      :host,
+      :root,
+      [data-theme] {
+        --chakra-ring-inset: var(--chakra-empty, /*!*/ /*!*/);
+        --chakra-ring-offset-width: 0px;
+        --chakra-ring-offset-color: #fff;
+        --chakra-ring-color: rgba(66, 153, 225, 0.6);
+        --chakra-ring-offset-shadow: 0 0 #0000;
+        --chakra-ring-shadow: 0 0 #0000;
+        --chakra-space-x-reverse: 0;
+        --chakra-space-y-reverse: 0;
+        --chakra-colors-transparent: transparent;
+        --chakra-colors-current: currentColor;
+        --chakra-colors-black: #000000;
+        --chakra-colors-white: #ffffff;
+        --chakra-colors-whiteAlpha-50: rgba(255, 255, 255, 0.04);
+        --chakra-colors-whiteAlpha-100: rgba(255, 255, 255, 0.06);
+        --chakra-colors-whiteAlpha-200: rgba(255, 255, 255, 0.08);
+        --chakra-colors-whiteAlpha-300: rgba(255, 255, 255, 0.16);
+        --chakra-colors-whiteAlpha-400: rgba(255, 255, 255, 0.24);
+        --chakra-colors-whiteAlpha-500: rgba(255, 255, 255, 0.36);
+        --chakra-colors-whiteAlpha-600: rgba(255, 255, 255, 0.48);
+        --chakra-colors-whiteAlpha-700: rgba(255, 255, 255, 0.64);
+        --chakra-colors-whiteAlpha-800: rgba(255, 255, 255, 0.8);
+        --chakra-colors-whiteAlpha-900: rgba(255, 255, 255, 0.92);
+        --chakra-colors-blackAlpha-50: rgba(0, 0, 0, 0.04);
+        --chakra-colors-blackAlpha-100: rgba(0, 0, 0, 0.06);
+        --chakra-colors-blackAlpha-200: rgba(0, 0, 0, 0.08);
+        --chakra-colors-blackAlpha-300: rgba(0, 0, 0, 0.16);
+        --chakra-colors-blackAlpha-400: rgba(0, 0, 0, 0.24);
+        --chakra-colors-blackAlpha-500: rgba(0, 0, 0, 0.36);
+        --chakra-colors-blackAlpha-600: rgba(0, 0, 0, 0.48);
+        --chakra-colors-blackAlpha-700: rgba(0, 0, 0, 0.64);
+        --chakra-colors-blackAlpha-800: rgba(0, 0, 0, 0.8);
+        --chakra-colors-blackAlpha-900: rgba(0, 0, 0, 0.92);
+        --chakra-colors-gray-50: #f7fafc;
+        --chakra-colors-gray-100: #edf2f7;
+        --chakra-colors-gray-200: #e2e8f0;
+        --chakra-colors-gray-300: #cbd5e0;
+        --chakra-colors-gray-400: #a0aec0;
+        --chakra-colors-gray-500: #718096;
+        --chakra-colors-gray-600: #4a5568;
+        --chakra-colors-gray-700: #2d3748;
+        --chakra-colors-gray-800: #1a202c;
+        --chakra-colors-gray-900: #171923;
+        --chakra-colors-red-50: #fff5f5;
+        --chakra-colors-red-100: #fed7d7;
+        --chakra-colors-red-200: #feb2b2;
+        --chakra-colors-red-300: #fc8181;
+        --chakra-colors-red-400: #f56565;
+        --chakra-colors-red-500: #e53e3e;
+        --chakra-colors-red-600: #c53030;
+        --chakra-colors-red-700: #9b2c2c;
+        --chakra-colors-red-800: #822727;
+        --chakra-colors-red-900: #63171b;
+        --chakra-colors-orange-50: #fffaf0;
+        --chakra-colors-orange-100: #feebc8;
+        --chakra-colors-orange-200: #fbd38d;
+        --chakra-colors-orange-300: #f6ad55;
+        --chakra-colors-orange-400: #ed8936;
+        --chakra-colors-orange-500: #dd6b20;
+        --chakra-colors-orange-600: #c05621;
+        --chakra-colors-orange-700: #9c4221;
+        --chakra-colors-orange-800: #7b341e;
+        --chakra-colors-orange-900: #652b19;
+        --chakra-colors-yellow-50: #fffff0;
+        --chakra-colors-yellow-100: #fefcbf;
+        --chakra-colors-yellow-200: #faf089;
+        --chakra-colors-yellow-300: #f6e05e;
+        --chakra-colors-yellow-400: #ecc94b;
+        --chakra-colors-yellow-500: #d69e2e;
+        --chakra-colors-yellow-600: #b7791f;
+        --chakra-colors-yellow-700: #975a16;
+        --chakra-colors-yellow-800: #744210;
+        --chakra-colors-yellow-900: #5f370e;
+        --chakra-colors-green-50: #f0fff4;
+        --chakra-colors-green-100: #c6f6d5;
+        --chakra-colors-green-200: #9ae6b4;
+        --chakra-colors-green-300: #68d391;
+        --chakra-colors-green-400: #48bb78;
+        --chakra-colors-green-500: #38a169;
+        --chakra-colors-green-600: #2f855a;
+        --chakra-colors-green-700: #276749;
+        --chakra-colors-green-800: #22543d;
+        --chakra-colors-green-900: #1c4532;
+        --chakra-colors-teal-50: #e6fffa;
+        --chakra-colors-teal-100: #b2f5ea;
+        --chakra-colors-teal-200: #81e6d9;
+        --chakra-colors-teal-300: #4fd1c5;
+        --chakra-colors-teal-400: #38b2ac;
+        --chakra-colors-teal-500: #319795;
+        --chakra-colors-teal-600: #2c7a7b;
+        --chakra-colors-teal-700: #285e61;
+        --chakra-colors-teal-800: #234e52;
+        --chakra-colors-teal-900: #1d4044;
+        --chakra-colors-blue-50: #ebf8ff;
+        --chakra-colors-blue-100: #ebf7fd;
+        --chakra-colors-blue-200: #90cdf4;
+        --chakra-colors-blue-300: #63b3ed;
+        --chakra-colors-blue-400: #86cef5;
+        --chakra-colors-blue-500: #5ebdf2;
+        --chakra-colors-blue-600: #36adef;
+        --chakra-colors-blue-700: #2b8abf;
+        --chakra-colors-blue-800: #2a4365;
+        --chakra-colors-blue-900: #1a365d;
+        --chakra-colors-cyan-50: #edfdfd;
+        --chakra-colors-cyan-100: #c4f1f9;
+        --chakra-colors-cyan-200: #9decf9;
+        --chakra-colors-cyan-300: #76e4f7;
+        --chakra-colors-cyan-400: #0bc5ea;
+        --chakra-colors-cyan-500: #00b5d8;
+        --chakra-colors-cyan-600: #00a3c4;
+        --chakra-colors-cyan-700: #0987a0;
+        --chakra-colors-cyan-800: #086f83;
+        --chakra-colors-cyan-900: #065666;
+        --chakra-colors-purple-50: #faf5ff;
+        --chakra-colors-purple-100: #e9d8fd;
+        --chakra-colors-purple-200: #d6bcfa;
+        --chakra-colors-purple-300: #dbbde9;
+        --chakra-colors-purple-400: #c99cdf;
+        --chakra-colors-purple-500: #805ad5;
+        --chakra-colors-purple-600: #a55ac9;
+        --chakra-colors-purple-700: #7167aa;
+        --chakra-colors-purple-800: #44337a;
+        --chakra-colors-purple-900: #322659;
+        --chakra-colors-pink-50: #fff5f7;
+        --chakra-colors-pink-100: #fed7e2;
+        --chakra-colors-pink-200: #fbb6ce;
+        --chakra-colors-pink-300: #f687b3;
+        --chakra-colors-pink-400: #ed64a6;
+        --chakra-colors-pink-500: #d53f8c;
+        --chakra-colors-pink-600: #b83280;
+        --chakra-colors-pink-700: #97266d;
+        --chakra-colors-pink-800: #702459;
+        --chakra-colors-pink-900: #521b41;
+        --chakra-colors-linkedin-50: #e8f4f9;
+        --chakra-colors-linkedin-100: #cfedfb;
+        --chakra-colors-linkedin-200: #9bdaf3;
+        --chakra-colors-linkedin-300: #68c7ec;
+        --chakra-colors-linkedin-400: #34b3e4;
+        --chakra-colors-linkedin-500: #00a0dc;
+        --chakra-colors-linkedin-600: #008cc9;
+        --chakra-colors-linkedin-700: #0077b5;
+        --chakra-colors-linkedin-800: #005e93;
+        --chakra-colors-linkedin-900: #004471;
+        --chakra-colors-facebook-50: #e8f4f9;
+        --chakra-colors-facebook-100: #d9dee9;
+        --chakra-colors-facebook-200: #b7c2da;
+        --chakra-colors-facebook-300: #6482c0;
+        --chakra-colors-facebook-400: #4267b2;
+        --chakra-colors-facebook-500: #385898;
+        --chakra-colors-facebook-600: #314e89;
+        --chakra-colors-facebook-700: #29487d;
+        --chakra-colors-facebook-800: #223b67;
+        --chakra-colors-facebook-900: #1e355b;
+        --chakra-colors-messenger-50: #d0e6ff;
+        --chakra-colors-messenger-100: #b9daff;
+        --chakra-colors-messenger-200: #a2cdff;
+        --chakra-colors-messenger-300: #7ab8ff;
+        --chakra-colors-messenger-400: #2e90ff;
+        --chakra-colors-messenger-500: #0078ff;
+        --chakra-colors-messenger-600: #0063d1;
+        --chakra-colors-messenger-700: #0052ac;
+        --chakra-colors-messenger-800: #003c7e;
+        --chakra-colors-messenger-900: #002c5c;
+        --chakra-colors-whatsapp-50: #dffeec;
+        --chakra-colors-whatsapp-100: #b9f5d0;
+        --chakra-colors-whatsapp-200: #90edb3;
+        --chakra-colors-whatsapp-300: #65e495;
+        --chakra-colors-whatsapp-400: #3cdd78;
+        --chakra-colors-whatsapp-500: #22c35e;
+        --chakra-colors-whatsapp-600: #179848;
+        --chakra-colors-whatsapp-700: #0c6c33;
+        --chakra-colors-whatsapp-800: #01421c;
+        --chakra-colors-whatsapp-900: #001803;
+        --chakra-colors-twitter-50: #e5f4fd;
+        --chakra-colors-twitter-100: #c8e9fb;
+        --chakra-colors-twitter-200: #a8dcfa;
+        --chakra-colors-twitter-300: #83cdf7;
+        --chakra-colors-twitter-400: #57bbf5;
+        --chakra-colors-twitter-500: #1da1f2;
+        --chakra-colors-twitter-600: #1a94da;
+        --chakra-colors-twitter-700: #1681bf;
+        --chakra-colors-twitter-800: #136b9e;
+        --chakra-colors-twitter-900: #0d4d71;
+        --chakra-colors-telegram-50: #e3f2f9;
+        --chakra-colors-telegram-100: #c5e4f3;
+        --chakra-colors-telegram-200: #a2d4ec;
+        --chakra-colors-telegram-300: #7ac1e4;
+        --chakra-colors-telegram-400: #47a9da;
+        --chakra-colors-telegram-500: #0088cc;
+        --chakra-colors-telegram-600: #007ab8;
+        --chakra-colors-telegram-700: #006ba1;
+        --chakra-colors-telegram-800: #005885;
+        --chakra-colors-telegram-900: #003f5e;
+        --chakra-colors-primary-100: #e6f6f5;
+        --chakra-colors-primary-200: #cceeeb;
+        --chakra-colors-primary-300: #99ddd8;
+        --chakra-colors-primary-400: #66cbc4;
+        --chakra-colors-primary-500: #33bab1;
+        --chakra-colors-primary-600: #00a99d;
+        --chakra-colors-primary-700: #00877e;
+        --chakra-colors-primary-800: #00655e;
+        --chakra-colors-primary-900: #00443f;
+        --chakra-colors-primary-1000: #00221f;
+        --chakra-colors-lafWhite-100: #fefefe;
+        --chakra-colors-lafWhite-200: #fdfdfe;
+        --chakra-colors-lafWhite-300: #fbfbfc;
+        --chakra-colors-lafWhite-400: #f8fafb;
+        --chakra-colors-lafWhite-500: #f6f8f9;
+        --chakra-colors-lafWhite-600: #f4f6f8;
+        --chakra-colors-lafWhite-700: #c3c5c6;
+        --chakra-colors-lafWhite-800: #929495;
+        --chakra-colors-lafWhite-900: #626263;
+        --chakra-colors-lafWhite-1000: #313132;
+        --chakra-colors-grayModern-100: #eff0f1;
+        --chakra-colors-grayModern-200: #dee0e2;
+        --chakra-colors-grayModern-300: #bdc1c5;
+        --chakra-colors-grayModern-400: #9ca2a8;
+        --chakra-colors-grayModern-500: #7b838b;
+        --chakra-colors-grayModern-600: #5a646e;
+        --chakra-colors-grayModern-700: #485058;
+        --chakra-colors-grayModern-800: #363c42;
+        --chakra-colors-grayModern-900: #24282c;
+        --chakra-colors-grayModern-1000: #121416;
+        --chakra-colors-grayIron-100: #f3f3f3;
+        --chakra-colors-grayIron-200: #e6e6e7;
+        --chakra-colors-grayIron-300: #cdcdd0;
+        --chakra-colors-grayIron-400: #b4b4b8;
+        --chakra-colors-grayIron-500: #9b9ba1;
+        --chakra-colors-grayIron-600: #828289;
+        --chakra-colors-grayIron-700: #68686e;
+        --chakra-colors-grayIron-800: #4e4e52;
+        --chakra-colors-grayIron-900: #343437;
+        --chakra-colors-grayIron-1000: #1a1a1b;
+        --chakra-colors-error-100: #fdecee;
+        --chakra-colors-error-200: #fdd8dc;
+        --chakra-colors-error-400: #ff8492;
+        --chakra-colors-error-500: #f16979;
+        --chakra-colors-error-600: #ed4458;
+        --chakra-colors-warn-100: #fff2ec;
+        --chakra-colors-warn-400: #fdb08a;
+        --chakra-colors-warn-600: #fb7c3c;
+        --chakra-colors-warn-700: #c96330;
+        --chakra-colors-rose-100: #fdeaf1;
+        --chakra-colors-frostyNightfall-200: #eaebf0;
+        --chakra-borders-none: 0;
+        --chakra-borders-1px: 1px solid;
+        --chakra-borders-2px: 2px solid;
+        --chakra-borders-4px: 4px solid;
+        --chakra-borders-8px: 8px solid;
+        --chakra-fonts-heading:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+        --chakra-fonts-body:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+        --chakra-fonts-mono:
+          SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+        --chakra-fontSizes-3xs: 0.45rem;
+        --chakra-fontSizes-2xs: 0.625rem;
+        --chakra-fontSizes-xs: 0.75rem;
+        --chakra-fontSizes-sm: 12px;
+        --chakra-fontSizes-md: 14px;
+        --chakra-fontSizes-lg: 16px;
+        --chakra-fontSizes-xl: 16px;
+        --chakra-fontSizes-2xl: 18px;
+        --chakra-fontSizes-3xl: 22px;
+        --chakra-fontSizes-4xl: 2.25rem;
+        --chakra-fontSizes-5xl: 3rem;
+        --chakra-fontSizes-6xl: 3.75rem;
+        --chakra-fontSizes-7xl: 4.5rem;
+        --chakra-fontSizes-8xl: 6rem;
+        --chakra-fontSizes-9xl: 8rem;
+        --chakra-fontSizes-base: 12px;
+        --chakra-fontWeights-hairline: 100;
+        --chakra-fontWeights-thin: 200;
+        --chakra-fontWeights-light: 300;
+        --chakra-fontWeights-normal: 400;
+        --chakra-fontWeights-medium: 500;
+        --chakra-fontWeights-semibold: 600;
+        --chakra-fontWeights-bold: 700;
+        --chakra-fontWeights-extrabold: 800;
+        --chakra-fontWeights-black: 900;
+        --chakra-letterSpacings-tighter: -0.05em;
+        --chakra-letterSpacings-tight: -0.025em;
+        --chakra-letterSpacings-normal: 0;
+        --chakra-letterSpacings-wide: 0.025em;
+        --chakra-letterSpacings-wider: 0.05em;
+        --chakra-letterSpacings-widest: 0.1em;
+        --chakra-lineHeights-3: 0.75rem;
+        --chakra-lineHeights-4: 1rem;
+        --chakra-lineHeights-5: 1.25rem;
+        --chakra-lineHeights-6: 1.5rem;
+        --chakra-lineHeights-7: 1.75rem;
+        --chakra-lineHeights-8: 2rem;
+        --chakra-lineHeights-9: 2.25rem;
+        --chakra-lineHeights-10: 2.5rem;
+        --chakra-lineHeights-normal: normal;
+        --chakra-lineHeights-none: 1;
+        --chakra-lineHeights-shorter: 1.25;
+        --chakra-lineHeights-short: 1.375;
+        --chakra-lineHeights-base: 1.5;
+        --chakra-lineHeights-tall: 1.625;
+        --chakra-lineHeights-taller: 2;
+        --chakra-radii-none: 0;
+        --chakra-radii-sm: 0.125rem;
+        --chakra-radii-base: 0.25rem;
+        --chakra-radii-md: 0.375rem;
+        --chakra-radii-lg: 0.5rem;
+        --chakra-radii-xl: 0.75rem;
+        --chakra-radii-2xl: 1rem;
+        --chakra-radii-3xl: 1.5rem;
+        --chakra-radii-full: 9999px;
+        --chakra-space-1: 0.25rem;
+        --chakra-space-2: 0.5rem;
+        --chakra-space-3: 0.75rem;
+        --chakra-space-4: 1rem;
+        --chakra-space-5: 1.25rem;
+        --chakra-space-6: 1.5rem;
+        --chakra-space-7: 1.75rem;
+        --chakra-space-8: 2rem;
+        --chakra-space-9: 2.25rem;
+        --chakra-space-10: 2.5rem;
+        --chakra-space-12: 3rem;
+        --chakra-space-14: 3.5rem;
+        --chakra-space-16: 4rem;
+        --chakra-space-20: 5rem;
+        --chakra-space-24: 6rem;
+        --chakra-space-28: 7rem;
+        --chakra-space-32: 8rem;
+        --chakra-space-36: 9rem;
+        --chakra-space-40: 10rem;
+        --chakra-space-44: 11rem;
+        --chakra-space-48: 12rem;
+        --chakra-space-52: 13rem;
+        --chakra-space-56: 14rem;
+        --chakra-space-60: 15rem;
+        --chakra-space-64: 16rem;
+        --chakra-space-72: 18rem;
+        --chakra-space-80: 20rem;
+        --chakra-space-96: 24rem;
+        --chakra-space-px: 1px;
+        --chakra-space-0-5: 0.125rem;
+        --chakra-space-1-5: 0.375rem;
+        --chakra-space-2-5: 0.625rem;
+        --chakra-space-3-5: 0.875rem;
+        --chakra-shadows-xs: 0 0 0 1px rgba(0, 0, 0, 0.05);
+        --chakra-shadows-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        --chakra-shadows-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        --chakra-shadows-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --chakra-shadows-lg:
+          0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        --chakra-shadows-xl:
+          0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        --chakra-shadows-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        --chakra-shadows-outline: 0 0 0 3px rgba(66, 153, 225, 0.6);
+        --chakra-shadows-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+        --chakra-shadows-none: none;
+        --chakra-shadows-dark-lg:
+          rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.2) 0px 5px 10px,
+          rgba(0, 0, 0, 0.4) 0px 15px 40px;
+        --chakra-sizes-1: 0.25rem;
+        --chakra-sizes-2: 0.5rem;
+        --chakra-sizes-3: 0.75rem;
+        --chakra-sizes-4: 1rem;
+        --chakra-sizes-5: 1.25rem;
+        --chakra-sizes-6: 1.5rem;
+        --chakra-sizes-7: 1.75rem;
+        --chakra-sizes-8: 2rem;
+        --chakra-sizes-9: 2.25rem;
+        --chakra-sizes-10: 2.5rem;
+        --chakra-sizes-12: 3rem;
+        --chakra-sizes-14: 3.5rem;
+        --chakra-sizes-16: 4rem;
+        --chakra-sizes-20: 5rem;
+        --chakra-sizes-24: 6rem;
+        --chakra-sizes-28: 7rem;
+        --chakra-sizes-32: 8rem;
+        --chakra-sizes-36: 9rem;
+        --chakra-sizes-40: 10rem;
+        --chakra-sizes-44: 11rem;
+        --chakra-sizes-48: 12rem;
+        --chakra-sizes-52: 13rem;
+        --chakra-sizes-56: 14rem;
+        --chakra-sizes-60: 15rem;
+        --chakra-sizes-64: 16rem;
+        --chakra-sizes-72: 18rem;
+        --chakra-sizes-80: 20rem;
+        --chakra-sizes-96: 24rem;
+        --chakra-sizes-px: 1px;
+        --chakra-sizes-0-5: 0.125rem;
+        --chakra-sizes-1-5: 0.375rem;
+        --chakra-sizes-2-5: 0.625rem;
+        --chakra-sizes-3-5: 0.875rem;
+        --chakra-sizes-max: max-content;
+        --chakra-sizes-min: min-content;
+        --chakra-sizes-full: 100%;
+        --chakra-sizes-3xs: 14rem;
+        --chakra-sizes-2xs: 16rem;
+        --chakra-sizes-xs: 20rem;
+        --chakra-sizes-sm: 24rem;
+        --chakra-sizes-md: 28rem;
+        --chakra-sizes-lg: 32rem;
+        --chakra-sizes-xl: 36rem;
+        --chakra-sizes-2xl: 42rem;
+        --chakra-sizes-3xl: 48rem;
+        --chakra-sizes-4xl: 56rem;
+        --chakra-sizes-5xl: 64rem;
+        --chakra-sizes-6xl: 72rem;
+        --chakra-sizes-7xl: 80rem;
+        --chakra-sizes-8xl: 90rem;
+        --chakra-sizes-prose: 60ch;
+        --chakra-sizes-container-sm: 640px;
+        --chakra-sizes-container-md: 768px;
+        --chakra-sizes-container-lg: 1024px;
+        --chakra-sizes-container-xl: 1280px;
+        --chakra-zIndices-hide: -1;
+        --chakra-zIndices-auto: auto;
+        --chakra-zIndices-base: 0;
+        --chakra-zIndices-docked: 10;
+        --chakra-zIndices-dropdown: 1000;
+        --chakra-zIndices-sticky: 1100;
+        --chakra-zIndices-banner: 1200;
+        --chakra-zIndices-overlay: 1300;
+        --chakra-zIndices-modal: 1400;
+        --chakra-zIndices-popover: 1500;
+        --chakra-zIndices-skipLink: 1600;
+        --chakra-zIndices-toast: 1700;
+        --chakra-zIndices-tooltip: 1800;
+        --chakra-transition-property-common:
+          background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+        --chakra-transition-property-colors: background-color, border-color, color, fill, stroke;
+        --chakra-transition-property-dimensions: width, height;
+        --chakra-transition-property-position: left, right, top, bottom;
+        --chakra-transition-property-background:
+          background-color, background-image, background-position;
+        --chakra-transition-easing-ease-in: cubic-bezier(0.4, 0, 1, 1);
+        --chakra-transition-easing-ease-out: cubic-bezier(0, 0, 0.2, 1);
+        --chakra-transition-easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+        --chakra-transition-duration-ultra-fast: 50ms;
+        --chakra-transition-duration-faster: 100ms;
+        --chakra-transition-duration-fast: 150ms;
+        --chakra-transition-duration-normal: 200ms;
+        --chakra-transition-duration-slow: 300ms;
+        --chakra-transition-duration-slower: 400ms;
+        --chakra-transition-duration-ultra-slow: 500ms;
+        --chakra-blur-none: 0;
+        --chakra-blur-sm: 4px;
+        --chakra-blur-base: 8px;
+        --chakra-blur-md: 12px;
+        --chakra-blur-lg: 16px;
+        --chakra-blur-xl: 24px;
+        --chakra-blur-2xl: 40px;
+        --chakra-blur-3xl: 64px;
+        --chakra-breakpoints-base: 0em;
+        --chakra-breakpoints-sm: 30em;
+        --chakra-breakpoints-md: 48em;
+        --chakra-breakpoints-lg: 62em;
+        --chakra-breakpoints-xl: 80em;
+        --chakra-breakpoints-2xl: 96em;
+      }
+      .chakra-ui-light :host:not([data-theme]),
+      .chakra-ui-light :root:not([data-theme]),
+      .chakra-ui-light [data-theme]:not([data-theme]),
+      [data-theme='light'] :host:not([data-theme]),
+      [data-theme='light'] :root:not([data-theme]),
+      [data-theme='light'] [data-theme]:not([data-theme]),
+      :host[data-theme='light'],
+      :root[data-theme='light'],
+      [data-theme][data-theme='light'] {
+        --chakra-colors-chakra-body-text: var(--chakra-colors-gray-800);
+        --chakra-colors-chakra-body-bg: var(--chakra-colors-white);
+        --chakra-colors-chakra-border-color: var(--chakra-colors-gray-200);
+        --chakra-colors-chakra-inverse-text: var(--chakra-colors-white);
+        --chakra-colors-chakra-subtle-bg: var(--chakra-colors-gray-100);
+        --chakra-colors-chakra-subtle-text: var(--chakra-colors-gray-600);
+        --chakra-colors-chakra-placeholder-color: var(--chakra-colors-gray-500);
+      }
+      .chakra-ui-dark :host:not([data-theme]),
+      .chakra-ui-dark :root:not([data-theme]),
+      .chakra-ui-dark [data-theme]:not([data-theme]),
+      [data-theme='dark'] :host:not([data-theme]),
+      [data-theme='dark'] :root:not([data-theme]),
+      [data-theme='dark'] [data-theme]:not([data-theme]),
+      :host[data-theme='dark'],
+      :root[data-theme='dark'],
+      [data-theme][data-theme='dark'] {
+        --chakra-colors-chakra-body-text: var(--chakra-colors-whiteAlpha-900);
+        --chakra-colors-chakra-body-bg: var(--chakra-colors-gray-800);
+        --chakra-colors-chakra-border-color: var(--chakra-colors-whiteAlpha-300);
+        --chakra-colors-chakra-inverse-text: var(--chakra-colors-gray-800);
+        --chakra-colors-chakra-subtle-bg: var(--chakra-colors-gray-700);
+        --chakra-colors-chakra-subtle-text: var(--chakra-colors-gray-400);
+        --chakra-colors-chakra-placeholder-color: var(--chakra-colors-whiteAlpha-400);
+      }</style
+    ><style data-emotion="css-global fubdgu">
+      html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        font-family: system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        -moz-osx-font-smoothing: grayscale;
+        touch-action: manipulation;
+      }
+      body {
+        position: relative;
+        min-height: 100%;
+        margin: 0;
+        font-feature-settings: 'kern';
+      }
+      :where(*, *::before, *::after) {
+        border-width: 0;
+        border-style: solid;
+        box-sizing: border-box;
+        word-wrap: break-word;
+      }
+      main {
+        display: block;
+      }
+      hr {
+        border-top-width: 1px;
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
+      }
+      :where(pre, code, kbd, samp) {
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 1em;
+      }
+      a {
+        background-color: transparent;
+        color: inherit;
+        -webkit-text-decoration: inherit;
+        text-decoration: inherit;
+      }
+      abbr[title] {
+        border-bottom: none;
+        -webkit-text-decoration: underline;
+        text-decoration: underline;
+        -webkit-text-decoration: underline dotted;
+        -webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted;
+      }
+      :where(b, strong) {
+        font-weight: bold;
+      }
+      small {
+        font-size: 80%;
+      }
+      :where(sub, sup) {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+      sub {
+        bottom: -0.25em;
+      }
+      sup {
+        top: -0.5em;
+      }
+      img {
+        border-style: none;
+      }
+      :where(button, input, optgroup, select, textarea) {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+      }
+      :where(button, input) {
+        overflow: visible;
+      }
+      :where(button, select) {
+        text-transform: none;
+      }
+      :where(
+        button::-moz-focus-inner,
+        [type='button']::-moz-focus-inner,
+        [type='reset']::-moz-focus-inner,
+        [type='submit']::-moz-focus-inner
+      ) {
+        border-style: none;
+        padding: 0;
+      }
+      fieldset {
+        padding: 0.35em 0.75em 0.625em;
+      }
+      legend {
+        box-sizing: border-box;
+        color: inherit;
+        display: table;
+        max-width: 100%;
+        padding: 0;
+        white-space: normal;
+      }
+      progress {
+        vertical-align: baseline;
+      }
+      textarea {
+        overflow: auto;
+      }
+      :where([type='checkbox'], [type='radio']) {
+        box-sizing: border-box;
+        padding: 0;
+      }
+      input[type='number']::-webkit-inner-spin-button,
+      input[type='number']::-webkit-outer-spin-button {
+        -webkit-appearance: none !important;
+      }
+      input[type='number'] {
+        -moz-appearance: textfield;
+      }
+      input[type='search'] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px;
+      }
+      input[type='search']::-webkit-search-decoration {
+        -webkit-appearance: none !important;
+      }
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+      }
+      details {
+        display: block;
+      }
+      summary {
+        display: -webkit-box;
+        display: -webkit-list-item;
+        display: -ms-list-itembox;
+        display: list-item;
+      }
+      template {
+        display: none;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      :where(blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre) {
+        margin: 0;
+      }
+      button {
+        background: transparent;
+        padding: 0;
+      }
+      fieldset {
+        margin: 0;
+        padding: 0;
+      }
+      :where(ol, ul) {
+        margin: 0;
+        padding: 0;
+      }
+      textarea {
+        resize: vertical;
+      }
+      :where(button, [role='button']) {
+        cursor: pointer;
+      }
+      button::-moz-focus-inner {
+        border: 0 !important;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      :where(h1, h2, h3, h4, h5, h6) {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      :where(button, input, optgroup, select, textarea) {
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+      }
+      :where(img, svg, video, canvas, audio, iframe, embed, object) {
+        display: block;
+      }
+      :where(img, video) {
+        max-width: 100%;
+        height: auto;
+      }
+      [data-js-focus-visible]
+        :focus:not([data-focus-visible-added]):not([data-focus-visible-disabled]) {
+        outline: none;
+        box-shadow: none;
+      }
+      select::-ms-expand {
+        display: none;
+      }
+      :root,
+      :host {
+        --chakra-vh: 100vh;
+      }
+      @supports (height: -webkit-fill-available) {
+        :root,
+        :host {
+          --chakra-vh: -webkit-fill-available;
+        }
+      }
+      @supports (height: -moz-fill-available) {
+        :root,
+        :host {
+          --chakra-vh: -moz-fill-available;
+        }
+      }
+      @supports (height: 100dvh) {
+        :root,
+        :host {
+          --chakra-vh: 100dvh;
+        }
+      }</style
+    ><style data-emotion="css-global 1cgn62j">
+      body {
+        font-family: var(--chakra-fonts-body);
+        color: var(--chakra-colors-chakra-body-text);
+        background: var(--chakra-colors-chakra-body-bg);
+        transition-property: background-color;
+        transition-duration: var(--chakra-transition-duration-normal);
+        line-height: var(--chakra-lineHeights-base);
+      }
+      *::-webkit-input-placeholder {
+        color: var(--chakra-colors-chakra-placeholder-color);
+      }
+      *::-moz-placeholder {
+        color: var(--chakra-colors-chakra-placeholder-color);
+      }
+      *:-ms-input-placeholder {
+        color: var(--chakra-colors-chakra-placeholder-color);
+      }
+      *::placeholder {
+        color: var(--chakra-colors-chakra-placeholder-color);
+      }
+      *,
+      *::before,
+      ::after {
+        border-color: var(--chakra-colors-chakra-border-color);
+      }
+    </style>
+    <main>
+      <div style="font-size: 16px" class="homepage">
+        <div class="flex flex-col items-center justify-center">
+          <div class="hidden">
+            <div
+              class="flex h-12 w-screen items-center justify-center bg-[url(&#x27;/homepage/banner.png&#x27;)] bg-center lg:px-32"
+            >
+              <a
+                class="whitespace-nowrap text-[6px] text-white lg:text-xl"
+                target="_blank"
+                href="https://github.com/labring/laf"
+                rel="noreferrer"
+                >如果你喜欢 Laf 的话，请在 Github 上给我们一个 Star 吧！</a
+              >
+            </div>
+            <img
+              class="absolute right-4 top-3 z-40 hover:cursor-pointer lg:right-36"
+              src="/homepage/cancel_btn.svg"
+              alt="cancel"
+            />
+          </div>
+          <div
+            class="fixed top-0 z-40 hidden w-full justify-center px-28 py-4 lg:flex bg-lafWhite-600"
+          >
+            <div class="flex w-full max-w-[1200px] justify-between">
+              <div class="flex items-center">
+                <div><img src="logo_text.png" class="h-auto w-20" alt="logo" /></div>
+                <a target="_blank" href="https://doc.laf.run/zh/" class="ml-10" rel="noreferrer"
+                  >文档</a
+                >
+              </div>
+              <div class="flex w-80 items-center justify-evenly">
+                <div class="hover:opacity-75">
+                  <style data-emotion="css 1rctasw">
+                    .css-1rctasw {
+                      display: -webkit-inline-box;
+                      display: -webkit-inline-flex;
+                      display: -ms-inline-flexbox;
+                      display: inline-flex;
+                      -webkit-appearance: none;
+                      -moz-appearance: none;
+                      -ms-appearance: none;
+                      appearance: none;
+                      -webkit-align-items: center;
+                      -webkit-box-align: center;
+                      -ms-flex-align: center;
+                      align-items: center;
+                      -webkit-box-pack: center;
+                      -ms-flex-pack: center;
+                      -webkit-justify-content: center;
+                      justify-content: center;
+                      -webkit-user-select: none;
+                      -moz-user-select: none;
+                      -ms-user-select: none;
+                      user-select: none;
+                      position: relative;
+                      white-space: nowrap;
+                      vertical-align: middle;
+                      outline: 2px solid transparent;
+                      outline-offset: 2px;
+                      line-height: 1.2;
+                      border-radius: 100px;
+                      font-weight: var(--chakra-fontWeights-semibold);
+                      transition-property: var(--chakra-transition-property-common);
+                      transition-duration: var(--chakra-transition-duration-normal);
+                      height: 32px;
+                      min-width: var(--chakra-sizes-10);
+                      font-size: var(--chakra-fontSizes-md);
+                      -webkit-padding-start: var(--chakra-space-6);
+                      padding-inline-start: var(--chakra-space-6);
+                      -webkit-padding-end: var(--chakra-space-6);
+                      padding-inline-end: var(--chakra-space-6);
+                    }
+                    .css-1rctasw:focus-visible,
+                    .css-1rctasw[data-focus-visible] {
+                      box-shadow: var(--chakra-shadows-outline);
+                    }
+                    .css-1rctasw:disabled,
+                    .css-1rctasw[disabled],
+                    .css-1rctasw[aria-disabled='true'],
+                    .css-1rctasw[data-disabled] {
+                      opacity: 0.4;
+                      cursor: not-allowed;
+                      box-shadow: var(--chakra-shadows-none);
+                    }
+                    .css-1rctasw:hover:disabled,
+                    .css-1rctasw[data-hover]:disabled,
+                    .css-1rctasw:hover[disabled],
+                    .css-1rctasw[data-hover][disabled],
+                    .css-1rctasw:hover[aria-disabled='true'],
+                    .css-1rctasw[data-hover][aria-disabled='true'],
+                    .css-1rctasw:hover[data-disabled],
+                    .css-1rctasw[data-hover][data-disabled] {
+                      background: initial;
+                    }</style
+                  ><a
+                    class="chakra-button !rounded !px-2 text-xl !font-normal css-1rctasw"
+                    href="/sealaf/en"
+                    ><style data-emotion="css 1wh2kri">
+                      .css-1wh2kri {
+                        display: -webkit-inline-box;
+                        display: -webkit-inline-flex;
+                        display: -ms-inline-flexbox;
+                        display: inline-flex;
+                        -webkit-align-self: center;
+                        -ms-flex-item-align: center;
+                        align-self: center;
+                        -webkit-flex-shrink: 0;
+                        -ms-flex-negative: 0;
+                        flex-shrink: 0;
+                        -webkit-margin-end: 0.5rem;
+                        margin-inline-end: 0.5rem;
+                      }</style
+                    ><span class="chakra-button__icon css-1wh2kri"
+                      ><svg
+                        width="24px"
+                        height="24px"
+                        viewBox="0 0 21 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_9454_14004)">
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M11.3758 15.6395C11.9201 14.3578 12.293 12.4828 12.293 10.3333C12.293 8.18388 11.9201 6.30884 11.3758 5.02714C11.1024 4.38343 10.8153 3.95903 10.573 3.71771C10.456 3.60122 10.3677 3.54554 10.316 3.52063C10.291 3.50857 10.2748 3.50379 10.2668 3.5019C10.2593 3.50009 10.2556 3.5 10.2538 3.5C10.252 3.5 10.2483 3.50009 10.2408 3.5019C10.2329 3.50379 10.2167 3.50857 10.1916 3.52063C10.1399 3.54554 10.0516 3.60122 9.93467 3.71771C9.69236 3.95903 9.40524 4.38343 9.13185 5.02714C8.58751 6.30884 8.2146 8.18388 8.2146 10.3333C8.2146 12.4828 8.58751 14.3578 9.13185 15.6395C9.40524 16.2832 9.69236 16.7076 9.93467 16.949C10.0516 17.0654 10.1399 17.1211 10.1916 17.146C10.2167 17.1581 10.2329 17.1629 10.2408 17.1648C10.2483 17.1666 10.252 17.1667 10.2538 17.1667C10.2556 17.1667 10.2593 17.1666 10.2668 17.1648C10.2748 17.1629 10.291 17.1581 10.316 17.146C10.3677 17.1211 10.456 17.0654 10.573 16.949C10.8153 16.7076 11.1024 16.2832 11.3758 15.6395ZM10.2538 18.6667C12.2085 18.6667 13.793 14.9357 13.793 10.3333C13.793 5.73096 12.2085 2 10.2538 2C8.29916 2 6.7146 5.73096 6.7146 10.3333C6.7146 14.9357 8.29916 18.6667 10.2538 18.6667Z"
+                            fill="#1A202C"
+                          ></path>
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M10.2538 17.1667C14.0278 17.1667 17.0872 14.1073 17.0872 10.3333C17.0872 6.55939 14.0278 3.5 10.2538 3.5C6.47987 3.5 3.42053 6.55939 3.42053 10.3333C3.42053 14.1073 6.47987 17.1667 10.2538 17.1667ZM10.2538 18.6667C14.8562 18.6667 18.5872 14.9357 18.5872 10.3333C18.5872 5.73096 14.8562 2 10.2538 2C5.65144 2 1.92053 5.73096 1.92053 10.3333C1.92053 14.9357 5.65144 18.6667 10.2538 18.6667Z"
+                            fill="#1A202C"
+                          ></path>
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M17.7327 10.9424H2.87878V9.44244H17.7327V10.9424Z"
+                            fill="#1A202C"
+                          ></path>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_9454_14004">
+                            <rect
+                              width="20"
+                              height="20"
+                              fill="white"
+                              transform="translate(0.253906)"
+                            ></rect>
+                          </clipPath>
+                        </defs></svg
+                    ></span>
+                    <p>En</p></a
+                  >
+                </div>
+                <div>
+                  <a
+                    class="bg-primary text-sm rounded px-5 py-2 text-white hover:bg-primary-dark transition duration-300 ease-in-out"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://bja.sealos.run?openapp=system-sealaf&amp;s=bd-sealaf"
+                    >立即开发</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="fixed top-0 z-40 flex w-full justify-between px-8 py-4 lg:hidden bg-lafWhite-600"
+          >
+            <img class="h-10" src="logo_text.png" alt="logo" /><style data-emotion="css lizqbr">
+              .css-lizqbr {
+                width: 1em;
+                height: 1em;
+                display: inline-block;
+                line-height: 1em;
+                -webkit-flex-shrink: 0;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+                color: #3c455d;
+                vertical-align: middle;
+                font-size: 32px;
+              }</style
+            ><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-lizqbr">
+              <path fill="currentColor" d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="flex items-center justify-center mb-12">
+          <div class="flex flex-col lg:mx-[48px] lg:max-w-[1200px]">
+            <div
+              class="flex h-auto flex-col items-center overflow-hidden pt-36 lg:h-[720px] lg:pt-44"
+            >
+              <h1 class="text-4xl lg:text-6xl">像写博客一样写代码</h1>
+              <p class="z-10 mt-8 px-10 text-center text-2xl lg:mt-5 lg:w-[600px]">
+                Laf 是一个集函数、数据库、存储为一体的云开发平台<br />随时随地，发布上线
+              </p>
+              <div class="z-10 mt-8 lg:mt-6">
+                <a
+                  class="bg-primary z-40 flex h-[48px] w-[144px] items-center justify-center rounded-md text-[16px] text-white hover:active:bg-[#00AFA3]"
+                  href="https://bja.sealos.run?openapp=system-sealaf&amp;s=bd-sealaf"
+                  >立即开发</a
+                >
+              </div>
+              <div
+                class="absolute top-[344px] mx-auto hidden h-[375px] w-[968px] justify-center bg-[url(&#x27;/homepage/videobg.png&#x27;)] bg-contain bg-center bg-no-repeat lg:flex"
+              >
+                <img
+                  src="/homepage/play.svg"
+                  alt="play"
+                  class="absolute top-[200px] z-10 hover:cursor-pointer"
+                />
+              </div>
+              <img
+                class="h-[200px] w-[350px] object-cover hover:cursor-pointer lg:hidden"
+                src="/homepage/videomobile.png"
+                alt="video"
+              />
+              <div class="hidden" id="my-modal">
+                <div class="hidden">
+                  <div class="relative mx-auto w-3/4">
+                    <button class="absolute right-0 top-0 z-20 pr-2 pt-2">
+                      <img
+                        width="24"
+                        height="24"
+                        class="rounded-2xl bg-black hover:cursor-pointer hover:bg-gray-600"
+                        src="/homepage/cancel_btn.svg"
+                        alt="cancel_btn"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="h-auto">
+              <h2 class="py-[80px] pb-[48px] text-4xl lg:py-[60px] lg:pb-[60px]">Laf 的能力</h2>
+              <div class="w-full px-[16px] lg:hidden">
+                <div class="bg-card h-max-[520px] my-6 w-full rounded-2xl lg:hidden">
+                  <div class="justify-between">
+                    <div class="p-6">
+                      <img class="mb-8" src="/homepage/functions.svg" alt="icon" />
+                      <h3>
+                        <span
+                          class="bg-gradient-to-r from-[#00C24E] to-[#00A1FC] bg-clip-text text-transparent"
+                          >云函数</span
+                        >， 5秒发布你的第一个函数。
+                      </h3>
+                    </div>
+                    <img
+                      class="w-max-5/6 mx-auto pl-8 lg:hidden"
+                      src="/homepage/function.png"
+                      alt="function"
+                    />
+                  </div>
+                </div>
+                <div class="bg-card my-6 w-full rounded-2xl lg:hidden">
+                  <div class="justify-between">
+                    <div class="p-6">
+                      <img class="mb-8" src="/homepage/database.svg" alt="icon" />
+                      <h3 class="leading-normal">
+                        <span
+                          class="bg-gradient-to-r from-[#00CCE8] to-[#00E8A2] bg-clip-text text-transparent"
+                          >数据库</span
+                        >， 无需创建数据库， 开箱即用.
+                      </h3>
+                    </div>
+                    <img
+                      class="mx-auto pl-8 lg:hidden"
+                      src="/homepage/database.png"
+                      alt="database"
+                    />
+                  </div>
+                </div>
+                <div class="bg-card my-6 w-full rounded-2xl lg:hidden">
+                  <div class="justify-between">
+                    <div class="p-6">
+                      <img class="mb-6" src="/homepage/storage.svg" alt="icon" />
+                      <h3>
+                        <span
+                          class="bg-gradient-to-r from-[#57E37A] to-[#00BEB1] bg-clip-text text-transparent"
+                          >云存储</span
+                        >，创建属于你的云存储，管理文件更简单。
+                      </h3>
+                    </div>
+                    <img class="mx-auto pl-8 lg:hidden" src="/homepage/storage.png" alt="storage" />
+                  </div>
+                </div>
+              </div>
+              <div class="bg-card my-6 hidden w-full rounded-2xl lg:block">
+                <div class="justify-between lg:flex lg:flex-row">
+                  <div class="p-6 lg:p-12">
+                    <img class="mb-6" src="/homepage/functions.svg" alt="icon" />
+                    <h3 class="w-[300px]">
+                      <span
+                        class="bg-gradient-to-r from-[#00C24E] to-[#00A1FC] bg-clip-text text-transparent"
+                        >云函数</span
+                      >， 5秒发布你的第一个函数。
+                    </h3>
+                  </div>
+                  <div class="overflow-hidden rounded-br-2xl">
+                    <img class="w-full lg:mt-8" src="/homepage/function.png" alt="function" />
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+              <div class="hidden w-full gap-6 lg:flex">
+                <div class="bg-card relative h-auto w-1/2 rounded-2xl px-12 pt-12">
+                  <img class="mb-6" src="/homepage/database.svg" alt="icon" />
+                  <h3 class="w-[400px]">
+                    <span
+                      class="bg-gradient-to-r from-[#00CCE8] to-[#00E8A2] bg-clip-text text-transparent"
+                      >数据库</span
+                    >， 无需创建数据库， 开箱即用.
+                  </h3>
+                  <div class="absolute bottom-0 flex h-1/2 items-end">
+                    <img class="mx-auto" src="/homepage/database.png" alt="database" />
+                  </div>
+                </div>
+                <div class="bg-card relative h-[600px] w-1/2 rounded-2xl px-12 pt-12">
+                  <img class="mb-6" src="/homepage/storage.svg" alt="icon" />
+                  <h3 class="w-[400px]">
+                    <span
+                      class="bg-gradient-to-r from-[#57E37A] to-[#00BEB1] bg-clip-text text-transparent"
+                      >云存储</span
+                    >，创建属于你的云存储，管理文件更简单。
+                  </h3>
+                  <div class="absolute bottom-0 flex h-1/2 items-end">
+                    <img class="mx-auto" src="/homepage/storage.png" alt="storage" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-[120px]">
+              <h2 class="mb-[60px]"><!-- -->为什么选择 Laf</h2>
+              <div class="mx-[16px] space-y-4 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:space-y-0">
+                <div
+                  class="flex justify-between rounded-md border border-solid p-[40px] hover:bg-[#F9F9F9]"
+                >
+                  <div class="w-1/4"><img src="/homepage/icon_01.svg" alt="logo1" /></div>
+                  <div class="w-3/4">
+                    <h4 class="mb-2 text-2xl font-bold">更开放</h4>
+                    <p class="text-xl font-light"><!-- -->Laf 遵循 Apache License 2.0 开源协议</p>
+                  </div>
+                </div>
+                <div
+                  class="flex justify-between rounded-md border border-solid p-[40px] hover:bg-[#F9F9F9]"
+                >
+                  <div class="w-1/4"><img src="/homepage/icon_02.svg" alt="icon_02" /></div>
+                  <div class="w-3/4">
+                    <h4 class="mb-2 text-2xl font-bold">请求更快</h4>
+                    <p class="text-xl font-light">没有冷启时间让你的请求响应更快</p>
+                  </div>
+                </div>
+                <div
+                  class="flex justify-between rounded-md border border-solid p-[40px] hover:bg-[#F9F9F9]"
+                >
+                  <div class="w-1/4"><img src="/homepage/icon_03.svg" alt="icon_03" /></div>
+                  <div class="w-3/4">
+                    <h4 class="mb-2 text-2xl font-bold">支持私有化部署</h4>
+                    <p class="text-xl font-light">无厂商绑定，可交付于任何环境</p>
+                  </div>
+                </div>
+                <div
+                  class="flex justify-between rounded-md border border-solid p-[40px] hover:bg-[#F9F9F9]"
+                >
+                  <div class="w-1/4"><img src="/homepage/icon_04.svg" alt="icon_04" /></div>
+                  <div class="w-3/4">
+                    <h4 class="mb-2 text-2xl font-bold">开发更简单</h4>
+                    <p class="text-xl font-light">无需关心部署、运维，一切都是 Serverless</p>
+                  </div>
+                </div>
+                <div
+                  class="flex justify-between rounded-md border border-solid p-[40px] hover:bg-[#F9F9F9]"
+                >
+                  <div class="w-1/4"><img src="/homepage/icon_05.svg" alt="icon_05" /></div>
+                  <div class="w-3/4">
+                    <h4 class="mb-2 text-2xl font-bold">高性价比</h4>
+                    <p class="text-xl font-light">百万次调用，最低仅需 0.01 元</p>
+                  </div>
+                </div>
+                <div
+                  class="flex justify-between rounded-md border border-solid p-[40px] hover:bg-[#F9F9F9]"
+                >
+                  <div class="w-1/4">
+                    <img src="/homepage/icon_06.png" class="h-12 w-12" alt="icon_06" />
+                  </div>
+                  <div class="w-3/4">
+                    <h4 class="mb-2 text-2xl font-bold">
+                      我们致力于为所有开发者提供敏捷高效的服务
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden justify-center bg-lafWhite-600 lg:flex">
+          <div class="w-full max-w-[1200px] flex-col divide-y divide-solid divide-gray-200">
+            <div class="py-[60px]">
+              <div class="flex justify-between">
+                <div class="w-1/2">
+                  <img
+                    src="/homepage/logo_text.png"
+                    alt="logo"
+                    width="64"
+                    height="30"
+                    class="mt-4"
+                  />
+                  <p class="mt-8 w-full max-w-[380px] text-base leading-5 text-[#5E6987]">
+                    Laf 是一个 Serverless
+                    框架，提供开箱即用的云函数，云数据库，对象存储等能力，是一个干净清爽的开发平台，像写博客一样写代码！三分钟上线
+                    ChatGPT 应用！
+                  </p>
+                </div>
+                <div class="w-1/6 text-lg leading-10 text-[#5E6987]">
+                  产品
+                  <ul class="leading-10 text-[#14171F]">
+                    <li>
+                      <a href="https://bja.sealos.run?openapp=system-sealaf&amp;s=bd-sealaf"
+                        >Laf 公有云</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/labring/laf/releases"
+                        target="_blank"
+                        rel="noreferrer"
+                        >更新日志</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://marketplace.visualstudio.com/items?itemName=NightWhite.laf-assistant"
+                        target="_blank"
+                        rel="noreferrer"
+                        >Vscode 插件</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://github.com/labring/sealos" target="_blank" rel="noreferrer"
+                        >Sealos</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="w-1/6 text-lg leading-10 text-[#5E6987]">
+                  开发者
+                  <ul class="leading-10 text-[#14171F]">
+                    <li>
+                      <a
+                        href="https://github.com/labring/laf/tree/main/deploy"
+                        target="_blank"
+                        rel="noreferrer"
+                        >私有化部署</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://api.laf.run/" target="_blank" rel="noreferrer">开放 API</a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/labring/laf" target="_blank" rel="noreferrer"
+                        >源码</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://doc.laf.run/zh/" target="_blank" rel="noreferrer">文档</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="w-1/6 text-lg leading-10 text-[#5E6987]">
+                  支持
+                  <ul class="leading-10 text-[#14171F]">
+                    <li>
+                      <a
+                        href="https://github.com/labring/laf/issues"
+                        target="_blank"
+                        rel="noreferrer"
+                        >问题反馈</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://forum.laf.run" target="_blank" rel="noreferrer"
+                        >开发者社区</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://sealos.run/company" target="_blank" rel="noreferrer"
+                        >关于我们</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flex h-auto flex-row items-center justify-between py-6">
+              <div class="w-1/2 text-lg text-[#3C455D]">
+                laf. all rights reserved. ©
+                <!-- -->2024
+                <div></div>
+              </div>
+              <div class="flex justify-evenly">
+                <a
+                  target="_blank"
+                  href=""
+                  class="mr-6 flex items-center whitespace-nowrap"
+                  rel="noreferrer"
+                  ><span class="mr-2 text-base">服务状态</span>
+                  <div class="status_breathing-gradient__R8vu0"></div>
+                  <div class="status_breathing-gradient__R8vu0"></div>
+                  <div class="status_breathing-gradient__R8vu0"></div>
+                  <div class="status_breathing-gradient__R8vu0"></div>
+                  <div class="status_breathing-gradient__R8vu0"></div>
+                  <div class="status_breathing-gradient__R8vu0"></div>
+                  <div class="status_breathing-gradient__R8vu0"></div>
+                  <div class="status_breathing-gradient__R8vu0"></div></a
+                ><a href="" target="_blank" rel="noreferrer" class="mr-1"
+                  ><style data-emotion="css qtsyz4">
+                    .css-qtsyz4 {
+                      width: 1em;
+                      height: 1em;
+                      display: inline-block;
+                      line-height: 1em;
+                      -webkit-flex-shrink: 0;
+                      -ms-flex-negative: 0;
+                      flex-shrink: 0;
+                      color: #3c455d;
+                      vertical-align: middle;
+                      font-size: 22px;
+                    }</style
+                  ><svg viewBox="0 0 22 24" focusable="false" class="chakra-icon css-qtsyz4">
+                    <path
+                      fill="currentColor"
+                      d="M18.574 13.711C18.8112 13.7079 19.0378 13.6123 19.2055 13.4445C19.3733 13.2768 19.4689 13.0502 19.472 12.813C19.472 12.315 19.073 11.915 18.574 11.915C18.075 11.915 17.676 12.315 17.676 12.813C17.676 13.313 18.076 13.711 18.574 13.711ZM14.149 13.711C14.3862 13.7079 14.6128 13.6123 14.7805 13.4445C14.9483 13.2768 15.0439 13.0502 15.047 12.813C15.047 12.315 14.647 11.915 14.149 11.915C13.649 11.915 13.251 12.315 13.251 12.813C13.251 13.313 13.65 13.711 14.149 13.711ZM20.716 18.751C20.6519 18.7866 20.6008 18.8416 20.5699 18.908C20.539 18.9745 20.5299 19.0491 20.544 19.121C20.544 19.169 20.544 19.218 20.569 19.268C20.667 19.685 20.863 20.349 20.863 20.374C20.863 20.447 20.888 20.496 20.888 20.546C20.888 20.575 20.8823 20.6037 20.8712 20.6304C20.86 20.6572 20.8437 20.6815 20.8232 20.7019C20.8027 20.7224 20.7783 20.7385 20.7515 20.7495C20.7247 20.7605 20.696 20.7661 20.667 20.766C20.617 20.766 20.593 20.742 20.544 20.718L19.095 19.882C18.9892 19.8238 18.8716 19.7903 18.751 19.784C18.678 19.784 18.604 19.784 18.555 19.808C17.867 20.005 17.155 20.103 16.394 20.103C12.734 20.103 9.787 17.646 9.787 14.598C9.787 11.551 12.734 9.093 16.394 9.093C20.053 9.093 23 11.551 23 14.598C23 16.245 22.116 17.744 20.716 18.752V18.751ZM16.673 8.099C16.5797 8.0959 16.4864 8.09423 16.393 8.094C12.219 8.094 8.787 10.954 8.787 14.599C8.787 15.153 8.867 15.689 9.015 16.199H8.926C8.05226 16.1902 7.18347 16.0664 6.342 15.831C6.268 15.806 6.194 15.806 6.12 15.806C5.97221 15.8091 5.82793 15.8516 5.702 15.929L3.954 16.934C3.904 16.959 3.855 16.984 3.806 16.984C3.73463 16.9832 3.66641 16.9545 3.61594 16.9041C3.56548 16.8536 3.53678 16.7854 3.536 16.714C3.536 16.64 3.56 16.591 3.585 16.517C3.609 16.493 3.831 15.683 3.954 15.193C3.954 15.143 3.978 15.07 3.978 15.021C3.97773 14.9353 3.95764 14.8508 3.9193 14.7741C3.88097 14.6974 3.82542 14.6307 3.757 14.579C2.058 13.376 1 11.586 1 9.598C1 5.945 4.57 3 8.95 3C12.715 3 15.88 5.169 16.673 8.098V8.099ZM11.519 8.517C12.092 8.517 12.545 8.04 12.545 7.491C12.545 6.918 12.092 6.465 11.519 6.465C10.946 6.465 10.493 6.918 10.493 7.491C10.493 8.064 10.946 8.517 11.519 8.517ZM6.259 8.517C6.832 8.517 7.286 8.04 7.286 7.491C7.286 6.918 6.832 6.465 6.259 6.465C5.687 6.465 5.233 6.918 5.233 7.491C5.233 8.064 5.687 8.517 6.259 8.517Z"
+                    ></path></svg></a
+                ><a href="" target="_blank" rel="noreferrer" class="mr-1"
+                  ><style data-emotion="css qtsyz4">
+                    .css-qtsyz4 {
+                      width: 1em;
+                      height: 1em;
+                      display: inline-block;
+                      line-height: 1em;
+                      -webkit-flex-shrink: 0;
+                      -ms-flex-negative: 0;
+                      flex-shrink: 0;
+                      color: #3c455d;
+                      vertical-align: middle;
+                      font-size: 22px;
+                    }</style
+                  ><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-qtsyz4">
+                    <path
+                      fill="currentColor"
+                      d="M13.6228 19.7399C13.0966 19.8365 12.5542 19.8869 12.0001 19.8869C7.06474 19.8869 3.06384 15.886 3.06384 10.9507C3.06384 6.0153 7.06474 2.0144 12.0001 2.0144C16.9354 2.0144 20.9363 6.0153 20.9363 10.9507C20.9363 13.948 19.4606 16.6007 17.1962 18.2218L14.312 21.9195C14.2207 22.0365 14.0341 21.9907 14.0074 21.8447L13.6228 19.7399ZM9.3375 7.88363C8.97081 7.88363 8.62735 8.06321 8.41812 8.36435L6.63897 10.9249L6.62574 10.9318L6.62997 10.9379L6.62574 10.944L6.63897 10.9508L8.41844 13.5115C8.62768 13.8126 8.9711 13.9921 9.33777 13.9921L10.7393 13.9921L9.1522 10.9379L10.7393 7.88363H9.3375ZM13.9095 14.0177C13.3236 14.0177 12.8487 13.5428 12.8487 12.957C12.8487 12.3711 13.3236 11.8962 13.9095 11.8962H16.3137C16.8995 11.8962 17.3744 12.3711 17.3744 12.957C17.3744 13.5428 16.8995 14.0177 16.3137 14.0177H13.9095Z"
+                    ></path></svg></a
+                ><a href="" target="_blank" rel="noreferrer" class="mr-1"
+                  ><style data-emotion="css qtsyz4">
+                    .css-qtsyz4 {
+                      width: 1em;
+                      height: 1em;
+                      display: inline-block;
+                      line-height: 1em;
+                      -webkit-flex-shrink: 0;
+                      -ms-flex-negative: 0;
+                      flex-shrink: 0;
+                      color: #3c455d;
+                      vertical-align: middle;
+                      font-size: 22px;
+                    }</style
+                  ><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-qtsyz4">
+                    <path
+                      fill="currentColor"
+                      d="M15.0831 17.7969C14.8161 17.862 14.5475 17.9197 14.2773 17.97C12.8114 18.2459 11.3063 18.2403 9.84252 17.9534C9.58615 17.9034 9.22324 17.8152 8.75545 17.6903L7.22224 19.683C3.43832 19.5615 2 17.0261 2 17.0261C2 11.3977 4.46546 6.83466 4.46546 6.83466C6.93091 4.94853 9.27651 5.00014 9.27651 5.00014L9.9474 5.87412C10.0092 5.86545 10.0715 5.8599 10.1338 5.85747C11.4127 5.68795 12.7087 5.69356 13.986 5.87412L14.7218 5.00014C14.7218 5.00014 17.0691 4.94853 19.5329 6.83633C19.5329 6.83633 22 11.3977 22 17.0261C22 17.0261 20.5434 19.5598 16.7594 19.683L15.0831 17.7969ZM8.69356 11.8369C7.69307 11.8369 6.90232 12.586 6.90232 13.5016C6.90232 14.4172 7.70971 15.1664 8.69356 15.1664C9.6924 15.1664 10.4831 14.4172 10.4831 13.5016C10.4998 12.586 9.69406 11.8369 8.69356 11.8369ZM15.0994 11.8369C14.1006 11.8369 13.3098 12.586 13.3098 13.5016C13.3098 14.4172 14.1172 15.1664 15.0994 15.1664C16.0999 15.1664 16.8907 14.4172 16.8907 13.5016C16.8907 12.586 16.0999 11.8369 15.0994 11.8369Z"
+                    ></path></svg
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-12 h-auto flex-col divide-y divide-solid divide-gray-200 bg-[#F9F9F9] px-8 lg:hidden"
+        >
+          <div class="pb-4 pt-12">
+            <img src="/homepage/logo_text.png" alt="logo" width="64" height="30" />
+            <p class="mt-4 w-full text-base leading-5 text-[#5E6987]">
+              Laf 是一个 Serverless
+              框架，提供开箱即用的云函数，云数据库，对象存储等能力，是一个干净清爽的开发平台，像写博客一样写代码！三分钟上线
+              ChatGPT 应用！
+            </p>
+            <div class="mt-4 flex justify-between">
+              <div class="w-1/2 text-lg">
+                <div class="leading-8 text-[#5E6987]">产品</div>
+                <ul class="mb-4 leading-8">
+                  <li>
+                    <a href="https://bja.sealos.run?openapp=system-sealaf&amp;s=bd-sealaf"
+                      >Laf 公有云</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/labring/laf/releases"
+                      target="_blank"
+                      rel="noreferrer"
+                      >更新日志</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://marketplace.visualstudio.com/items?itemName=NightWhite.laf-assistant"
+                      target="_blank"
+                      rel="noreferrer"
+                      >Vscode 插件</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://github.com/labring/sealos" target="_blank" rel="noreferrer"
+                      >Sealos</a
+                    >
+                  </li>
+                </ul>
+                <div class="w-1/2 text-lg">
+                  <div class="leading-8 text-[#5E6987]">支持</div>
+                  <ul class="leading-8">
+                    <li>
+                      <a
+                        href="https://github.com/labring/laf/issues"
+                        target="_blank"
+                        rel="noreferrer"
+                        >问题反馈</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://forum.laf.run" target="_blank" rel="noreferrer"
+                        >开发者社区</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://sealos.run/company" target="_blank" rel="noreferrer"
+                        >关于我们</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="w-1/2 text-lg">
+                <div class="leading-8 text-[#5E6987]">开发者</div>
+                <ul class="leading-8">
+                  <li>
+                    <a
+                      href="https://github.com/labring/laf/tree/main/deploy"
+                      target="_blank"
+                      rel="noreferrer"
+                      >私有化部署</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://api.laf.run/" target="_blank" rel="noreferrer">开放 API</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/labring/laf" target="_blank" rel="noreferrer"
+                      >源码</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://doc.laf.run/zh/" target="_blank" rel="noreferrer">文档</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 py-6">
+            <div class="text-lg text-[#3C455D]">
+              laf. all rights reserved. ©
+              <!-- -->2024
+              <div></div>
+            </div>
+            <div class="flex">
+              <a href="" target="_blank" rel="noreferrer"
+                ><style data-emotion="css uoxqnj">
+                  .css-uoxqnj {
+                    width: 1em;
+                    height: 1em;
+                    display: inline-block;
+                    line-height: 1em;
+                    -webkit-flex-shrink: 0;
+                    -ms-flex-negative: 0;
+                    flex-shrink: 0;
+                    color: #3c455d;
+                    vertical-align: middle;
+                    font-size: 28px;
+                  }</style
+                ><svg viewBox="0 0 22 24" focusable="false" class="chakra-icon css-uoxqnj">
+                  <path
+                    fill="currentColor"
+                    d="M18.574 13.711C18.8112 13.7079 19.0378 13.6123 19.2055 13.4445C19.3733 13.2768 19.4689 13.0502 19.472 12.813C19.472 12.315 19.073 11.915 18.574 11.915C18.075 11.915 17.676 12.315 17.676 12.813C17.676 13.313 18.076 13.711 18.574 13.711ZM14.149 13.711C14.3862 13.7079 14.6128 13.6123 14.7805 13.4445C14.9483 13.2768 15.0439 13.0502 15.047 12.813C15.047 12.315 14.647 11.915 14.149 11.915C13.649 11.915 13.251 12.315 13.251 12.813C13.251 13.313 13.65 13.711 14.149 13.711ZM20.716 18.751C20.6519 18.7866 20.6008 18.8416 20.5699 18.908C20.539 18.9745 20.5299 19.0491 20.544 19.121C20.544 19.169 20.544 19.218 20.569 19.268C20.667 19.685 20.863 20.349 20.863 20.374C20.863 20.447 20.888 20.496 20.888 20.546C20.888 20.575 20.8823 20.6037 20.8712 20.6304C20.86 20.6572 20.8437 20.6815 20.8232 20.7019C20.8027 20.7224 20.7783 20.7385 20.7515 20.7495C20.7247 20.7605 20.696 20.7661 20.667 20.766C20.617 20.766 20.593 20.742 20.544 20.718L19.095 19.882C18.9892 19.8238 18.8716 19.7903 18.751 19.784C18.678 19.784 18.604 19.784 18.555 19.808C17.867 20.005 17.155 20.103 16.394 20.103C12.734 20.103 9.787 17.646 9.787 14.598C9.787 11.551 12.734 9.093 16.394 9.093C20.053 9.093 23 11.551 23 14.598C23 16.245 22.116 17.744 20.716 18.752V18.751ZM16.673 8.099C16.5797 8.0959 16.4864 8.09423 16.393 8.094C12.219 8.094 8.787 10.954 8.787 14.599C8.787 15.153 8.867 15.689 9.015 16.199H8.926C8.05226 16.1902 7.18347 16.0664 6.342 15.831C6.268 15.806 6.194 15.806 6.12 15.806C5.97221 15.8091 5.82793 15.8516 5.702 15.929L3.954 16.934C3.904 16.959 3.855 16.984 3.806 16.984C3.73463 16.9832 3.66641 16.9545 3.61594 16.9041C3.56548 16.8536 3.53678 16.7854 3.536 16.714C3.536 16.64 3.56 16.591 3.585 16.517C3.609 16.493 3.831 15.683 3.954 15.193C3.954 15.143 3.978 15.07 3.978 15.021C3.97773 14.9353 3.95764 14.8508 3.9193 14.7741C3.88097 14.6974 3.82542 14.6307 3.757 14.579C2.058 13.376 1 11.586 1 9.598C1 5.945 4.57 3 8.95 3C12.715 3 15.88 5.169 16.673 8.098V8.099ZM11.519 8.517C12.092 8.517 12.545 8.04 12.545 7.491C12.545 6.918 12.092 6.465 11.519 6.465C10.946 6.465 10.493 6.918 10.493 7.491C10.493 8.064 10.946 8.517 11.519 8.517ZM6.259 8.517C6.832 8.517 7.286 8.04 7.286 7.491C7.286 6.918 6.832 6.465 6.259 6.465C5.687 6.465 5.233 6.918 5.233 7.491C5.233 8.064 5.687 8.517 6.259 8.517Z"
+                  ></path></svg></a
+              ><a href="" target="_blank" rel="noreferrer"
+                ><style data-emotion="css uoxqnj">
+                  .css-uoxqnj {
+                    width: 1em;
+                    height: 1em;
+                    display: inline-block;
+                    line-height: 1em;
+                    -webkit-flex-shrink: 0;
+                    -ms-flex-negative: 0;
+                    flex-shrink: 0;
+                    color: #3c455d;
+                    vertical-align: middle;
+                    font-size: 28px;
+                  }</style
+                ><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-uoxqnj">
+                  <path
+                    fill="currentColor"
+                    d="M13.6228 19.7399C13.0966 19.8365 12.5542 19.8869 12.0001 19.8869C7.06474 19.8869 3.06384 15.886 3.06384 10.9507C3.06384 6.0153 7.06474 2.0144 12.0001 2.0144C16.9354 2.0144 20.9363 6.0153 20.9363 10.9507C20.9363 13.948 19.4606 16.6007 17.1962 18.2218L14.312 21.9195C14.2207 22.0365 14.0341 21.9907 14.0074 21.8447L13.6228 19.7399ZM9.3375 7.88363C8.97081 7.88363 8.62735 8.06321 8.41812 8.36435L6.63897 10.9249L6.62574 10.9318L6.62997 10.9379L6.62574 10.944L6.63897 10.9508L8.41844 13.5115C8.62768 13.8126 8.9711 13.9921 9.33777 13.9921L10.7393 13.9921L9.1522 10.9379L10.7393 7.88363H9.3375ZM13.9095 14.0177C13.3236 14.0177 12.8487 13.5428 12.8487 12.957C12.8487 12.3711 13.3236 11.8962 13.9095 11.8962H16.3137C16.8995 11.8962 17.3744 12.3711 17.3744 12.957C17.3744 13.5428 16.8995 14.0177 16.3137 14.0177H13.9095Z"
+                  ></path></svg></a
+              ><a href="" target="_blank" rel="noreferrer"
+                ><style data-emotion="css uoxqnj">
+                  .css-uoxqnj {
+                    width: 1em;
+                    height: 1em;
+                    display: inline-block;
+                    line-height: 1em;
+                    -webkit-flex-shrink: 0;
+                    -ms-flex-negative: 0;
+                    flex-shrink: 0;
+                    color: #3c455d;
+                    vertical-align: middle;
+                    font-size: 28px;
+                  }</style
+                ><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-uoxqnj">
+                  <path
+                    fill="currentColor"
+                    d="M15.0831 17.7969C14.8161 17.862 14.5475 17.9197 14.2773 17.97C12.8114 18.2459 11.3063 18.2403 9.84252 17.9534C9.58615 17.9034 9.22324 17.8152 8.75545 17.6903L7.22224 19.683C3.43832 19.5615 2 17.0261 2 17.0261C2 11.3977 4.46546 6.83466 4.46546 6.83466C6.93091 4.94853 9.27651 5.00014 9.27651 5.00014L9.9474 5.87412C10.0092 5.86545 10.0715 5.8599 10.1338 5.85747C11.4127 5.68795 12.7087 5.69356 13.986 5.87412L14.7218 5.00014C14.7218 5.00014 17.0691 4.94853 19.5329 6.83633C19.5329 6.83633 22 11.3977 22 17.0261C22 17.0261 20.5434 19.5598 16.7594 19.683L15.0831 17.7969ZM8.69356 11.8369C7.69307 11.8369 6.90232 12.586 6.90232 13.5016C6.90232 14.4172 7.70971 15.1664 8.69356 15.1664C9.6924 15.1664 10.4831 14.4172 10.4831 13.5016C10.4998 12.586 9.69406 11.8369 8.69356 11.8369ZM15.0994 11.8369C14.1006 11.8369 13.3098 12.586 13.3098 13.5016C13.3098 14.4172 14.1172 15.1664 15.0994 15.1664C16.0999 15.1664 16.8907 14.4172 16.8907 13.5016C16.8907 12.586 16.0999 11.8369 15.0994 11.8369Z"
+                  ></path></svg
+              ></a>
+            </div>
+            <div>
+              <a
+                target="_blank"
+                href=""
+                class="mr-6 flex items-center whitespace-nowrap"
+                rel="noreferrer"
+                ><span class="mr-2 text-base">服务状态</span>
+                <div class="status_breathing-gradient__R8vu0"></div>
+                <div class="status_breathing-gradient__R8vu0"></div>
+                <div class="status_breathing-gradient__R8vu0"></div>
+                <div class="status_breathing-gradient__R8vu0"></div>
+                <div class="status_breathing-gradient__R8vu0"></div>
+                <div class="status_breathing-gradient__R8vu0"></div>
+                <div class="status_breathing-gradient__R8vu0"></div>
+                <div class="status_breathing-gradient__R8vu0"></div
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <span></span><span id="__chakra_env" hidden=""></span>
+    <script src="/sealaf/_next/static/chunks/webpack-4e3629883134f26e.js" async=""></script>
+    <script>
+      (self.__next_f = self.__next_f || []).push([0]);
+      self.__next_f.push([2, null]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '1:HL["/sealaf/_next/static/css/27adac781495a7d1.css","style"]\n2:HL["/sealaf/_next/static/css/104b26e056d17e82.css","style"]\n'
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '3:I[2935,[],""]\n7:I[2885,[],""]\n8:I[1747,[],""]\na:I[5334,[],""]\nb:[]\n0:[null,["$","$L3",null,{"buildId":"_mMYaL4mVa18PzI_wHYsC","assetPrefix":"/sealaf","initialCanonicalUrl":"/zh","initialTree":["",{"children":[["lng","zh","d"],{"children":["__PAGE__?{\\"lng\\":\\"zh\\"}",{}]},"$undefined","$undefined",true]}],"initialSeedData":["",{"children":[["lng","zh","d"],{"children":["__PAGE__",{},[["$L4","$L5"],null],null]},["$L6",null],null]},["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\\"Segoe UI\\",Roboto,Helvetica,Arial,sans-serif,\\"Apple Color Emoji\\",\\"Segoe UI Emoji\\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":[["$","link","0",{"rel":"stylesheet","href":"/sealaf/_next/static/css/27adac781495a7d1.css","precedence":"next","crossOrigin":"$undefined"}]]}],null],"couldBeIntercepted":false,"initialHead":[null,"$L9"],"globalErrorComponent":"$a","missingSlots":"$W'
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([1, 'b"}]]\n']);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        'c:I[5264,["436","static/chunks/436-eeeae0f9b7b904a0.js","702","static/chunks/702-61d64122977218af.js","866","static/chunks/app/%5Blng%5D/page-8a267f9fa085df52.js"],"default"]\nd:I[9882,["436","static/chunks/436-eeeae0f9b7b904a0.js","702","static/chunks/702-61d64122977218af.js","866","static/chunks/app/%5Blng%5D/page-8a267f9fa085df52.js"],"default"]\n11:I[3516,["436","static/chunks/436-eeeae0f9b7b904a0.js","31","static/chunks/31-c61b5cb90526c97d.js","695","static/chunks/app/%5Blng%5D/layout-488ee6055cbaf6c0.js"],""]\n12:I[6647,["436","static/chunks/436-eeeae0f9b7b904a0.js","31","static/chunks/31-c61b5cb90526c97d.js","695","static/chunks/app/%5Blng%5D/layout-488ee6055cbaf6c0.js"],"ChakraProviders"]\n5:["$","main",null,{"children":["$","div",null,{"style":{"fontSize":"16px"},"className":"homepage","children":[["$","$Lc",null,{"lng":"zh"}],["$","div",null,{"className":"flex items-center justify-center mb-12","children":["$","div",null,{"className":"flex flex-col lg:mx-[48px] lg:max-w-[1200px]","children":[["$","$Ld",null,{"lng":"zh"}],"$Le","$Lf"]}]}],"$L10"]}]}]\n13:["lng","zh","d"]\n6:["$","html",null,{"lang":"zh","dir":"ltr","children":[["$","head",null,{"children":["$","$L11",null,{"id":"baidu-analytics","strategy":"afterInteractive","children":"\\n        var _hmt = _hmt || [];\\n        (function() {\\n          var hm = document.createElement(\\"script\\");\\n          hm.src = \\"https://hm.baidu.com/hm.js?d8e8ecf669c47dc2512d3f1417e761f9\\";\\n          var s = document.getElementsByTagName(\\"script\\")[0]; \\n          s.parentNode.insertBefore(hm, s);\\n        })();\\n      "}]}],["$","body",null,{"children":["$","$L12",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","$13","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":[["$","link","0",{"rel":"stylesheet","href":"/sealaf/_next/static/css/1'
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '04b26e056d17e82.css","precedence":"next","crossOrigin":"$undefined"}]]}]}]}]]}]\n'
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '15:I[7754,["436","static/chunks/436-eeeae0f9b7b904a0.js","702","static/chunks/702-61d64122977218af.js","866","static/chunks/app/%5Blng%5D/page-8a267f9fa085df52.js"],"WechatIcon"]\n16:I[7754,["436","static/chunks/436-eeeae0f9b7b904a0.js","702","static/chunks/702-61d64122977218af.js","866","static/chunks/app/%5Blng%5D/page-8a267f9fa085df52.js"],"ForumIcon"]\n17:I[7754,["436","static/chunks/436-eeeae0f9b7b904a0.js","702","static/chunks/702-61d64122977218af.js","866","static/chunks/app/%5Blng%5D/page-8a267f9fa085df52.js"],"DiscordIcon"]\n9:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"sealaf 云开发"}],["$","meta","3",{"name":"description","content":"A playground to explore new Next.js 13/14 app directory features such as nested layouts, instant loading states, streaming, and component level data fetching."}]]\n4:null\n'
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        'e:["$","div",null,{"className":"h-auto","children":[["$","h2",null,{"className":"py-[80px] pb-[48px] text-4xl lg:py-[60px] lg:pb-[60px]","children":"Laf 的能力"}],["$","div",null,{"className":"w-full px-[16px] lg:hidden","children":[["$","div",null,{"className":"bg-card h-max-[520px] my-6 w-full rounded-2xl lg:hidden","children":["$","div",null,{"className":"justify-between","children":[["$","div",null,{"className":"p-6","children":[["$","img",null,{"className":"mb-8","src":"/homepage/functions.svg","alt":"icon"}],["$","h3",null,{"children":[["$","span",null,{"className":"bg-gradient-to-r from-[#00C24E] to-[#00A1FC] bg-clip-text text-transparent","children":"云函数"}],"， 5秒发布你的第一个函数。"]}]]}],["$","img",null,{"className":"w-max-5/6 mx-auto pl-8 lg:hidden ","src":"/homepage/function.png","alt":"function"}]]}]}],["$","div",null,{"className":"bg-card my-6 w-full rounded-2xl lg:hidden","children":["$","div",null,{"className":"justify-between","children":[["$","div",null,{"className":"p-6","children":[["$","img",null,{"className":"mb-8","src":"/homepage/database.svg","alt":"icon"}],["$","h3",null,{"className":"leading-normal","children":[["$","span",null,{"className":"bg-gradient-to-r from-[#00CCE8] to-[#00E8A2] bg-clip-text text-transparent","children":"数据库"}],"， 无需创建数据库， 开箱即用."]}]]}],["$","img",null,{"className":"mx-auto pl-8 lg:hidden ","src":"/homepage/database.png","alt":"database"}]]}]}],["$","div",null,{"className":"bg-card my-6 w-full rounded-2xl lg:hidden","children":["$","div",null,{"className":"justify-between","children":[["$","div",null,{"className":"p-6","children":[["$","img",null,{"className":"mb-6","src":"/homepage/storage.svg","alt":"icon"}],["$","h3",null,{"children":[["$","span",null,{"className":"bg-gradient-to-r from-[#57E37A] to-[#00BEB1] bg-clip-text text-transparent","children":"云存储"}],"，创建属于你的云存储，管理文件更简单。"]}]]}],["$","img",null,{"className":"mx-auto pl-8 lg:hidden ","src":"/homepage/storage.png","alt":"storage"}]]}]}]]}],["$","div",null,{"className":"bg-card my-6 hidden w-full rounded-2xl lg:block","children":["$","div",null,{"className":"justify-between lg:flex lg:flex-row","children":[["$","div",null,{"className":"p-6 lg:p-12","children":[["$","img",null,{"className":"mb-6","src":"/homepage/functions.svg","alt":"icon"}],["$","h3",null,{"className":"w-[300px]","children":[["$","span",null,{"className":"bg-gradient-to-r from-[#00C24E] to-[#00A1FC] bg-clip-text text-transparent","children":"云函数"}],"， 5秒发布你的第一个函数。"]}]]}],["$","div",null,{"className":"overflow-hidden rounded-br-2xl","children":["$","img",null,{"className":"w-full lg:mt-8","src":"/homepage/function.png","alt":"function"}]}],["$","div",null,{}]]}]}],["$","div",null,{"className":"hidden w-full gap-6 lg:flex ","children":[["$","div",null,{"className":"bg-card relative h-auto w-1/2 rounded-2xl px-12 pt-12","children":[["$","img",null,{"className":"mb-6","src":"/homepage/database.svg","alt":"icon"}],["$","h3",null,{"className":"w-[400px]","children":[["$","span",null,{"className":"bg-gradient-to-r from-[#00CCE8] to-[#00E8A2] bg-clip-text text-transparent","children":"数据库"}],"， 无需创建数据库， 开箱即用."]}],["$","div",null,{"className":"absolute bottom-0 flex h-1/2 items-end","children":["$","img",null,{"className":"mx-auto","src":"/homepage/database.png","alt":"database"}]}]]}],["$","div",null,{"className":"bg-card relative h-[600px] w-1/2 rounded-2xl px-12 pt-12","children":[["$","img",null,{"className":"mb-6","src":"/homepage/storage.svg","alt":"icon"}],["$","h3",null,{"className":"w-[400px]","children":[["$","span",null,{"className":"bg-gradient-to-r from-[#57E37A] to-[#00BEB1] bg-clip-text text-transparent","children":"云存储"}],"，创建属于你的云存储，管理文件更简单。"]}],["$","div",null,{"className":"absolute bottom-0 flex h-1/2 items-end","children":["$","img",null,{"className":"mx-auto","src":"/homepage/storage.png","alt":"storage"}]}]]}]]}]]}]\n'
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        'f:["$","div",null,{"className":"mt-[120px] ","children":[["$","h2",null,{"className":"mb-[60px]","children":[" ","为什么选择 Laf"]}],["$","div",null,{"className":"mx-[16px] space-y-4 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:space-y-0","children":[["$","div",null,{"className":"flex justify-between rounded-md border border-solid  p-[40px] hover:bg-[#F9F9F9]","children":[["$","div",null,{"className":"w-1/4","children":["$","img",null,{"src":"/homepage/icon_01.svg","alt":"logo1"}]}],["$","div",null,{"className":"w-3/4 ","children":[["$","h4",null,{"className":"mb-2 text-2xl font-bold","children":"更开放"}],["$","p",null,{"className":"text-xl font-light","children":[" ","Laf 遵循 Apache License 2.0 开源协议"]}]]}]]}],["$","div",null,{"className":"flex justify-between rounded-md border border-solid  p-[40px] hover:bg-[#F9F9F9]","children":[["$","div",null,{"className":"w-1/4","children":["$","img",null,{"src":"/homepage/icon_02.svg","alt":"icon_02"}]}],["$","div",null,{"className":"w-3/4","children":[["$","h4",null,{"className":"mb-2 text-2xl font-bold","children":"请求更快"}],["$","p",null,{"className":"text-xl font-light","children":"没有冷启时间让你的请求响应更快"}]]}]]}],["$","div",null,{"className":"flex justify-between rounded-md border border-solid  p-[40px] hover:bg-[#F9F9F9]","children":[["$","div",null,{"className":"w-1/4","children":["$","img",null,{"src":"/homepage/icon_03.svg","alt":"icon_03"}]}],["$","div",null,{"className":"w-3/4","children":[["$","h4",null,{"className":"mb-2 text-2xl font-bold","children":"支持私有化部署"}],["$","p",null,{"className":"text-xl font-light","children":"无厂商绑定，可交付于任何环境"}]]}]]}],["$","div",null,{"className":"flex justify-between rounded-md border border-solid  p-[40px] hover:bg-[#F9F9F9]","children":[["$","div",null,{"className":"w-1/4","children":["$","img",null,{"src":"/homepage/icon_04.svg","alt":"icon_04"}]}],["$","div",null,{"className":"w-3/4","children":[["$","h4",null,{"className":"mb-2 text-2xl font-bold","children":"开发更简单"}],["$","p",null,{"className":"text-xl font-light","children":"无需关心部署、运维，一切都是 Serverless"}]]}]]}],["$","div",null,{"className":"flex justify-between rounded-md border border-solid  p-[40px] hover:bg-[#F9F9F9]","children":[["$","div",null,{"className":"w-1/4","children":["$","img",null,{"src":"/homepage/icon_05.svg","alt":"icon_05"}]}],["$","div",null,{"className":"w-3/4","children":[["$","h4",null,{"className":"mb-2 text-2xl font-bold","children":"高性价比"}],["$","p",null,{"className":"text-xl font-light","children":"百万次调用，最低仅需 0.01 元"}]]}]]}],["$","div",null,{"className":"flex justify-between rounded-md border border-solid  p-[40px] hover:bg-[#F9F9F9]","children":[["$","div",null,{"className":"w-1/4","children":["$","img",null,{"src":"/homepage/icon_06.png","className":"h-12 w-12","alt":"icon_06"}]}],["$","div",null,{"className":"w-3/4","children":["$","h4",null,{"className":"mb-2 text-2xl font-bold","children":"我们致力于为所有开发者提供敏捷高效的服务"}]}]]}]]}]]}]\n'
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '10:[["$","div",null,{"className":"hidden justify-center bg-lafWhite-600 lg:flex","children":["$","div",null,{"className":" w-full max-w-[1200px] flex-col divide-y divide-solid divide-gray-200","children":[["$","div",null,{"className":"py-[60px]","children":["$","div",null,{"className":"flex justify-between","children":[["$","div",null,{"className":"w-1/2","children":[["$","img",null,{"src":"/homepage/logo_text.png","alt":"logo","width":64,"height":30,"className":"mt-4"}],["$","p",null,{"className":"mt-8 w-full max-w-[380px] text-base leading-5 text-[#5E6987]","children":"Laf 是一个 Serverless 框架，提供开箱即用的云函数，云数据库，对象存储等能力，是一个干净清爽的开发平台，像写博客一样写代码！三分钟上线 ChatGPT 应用！"}]]}],["$","div",null,{"className":"w-1/6 text-lg leading-10 text-[#5E6987]","children":["产品",["$","ul",null,{"className":"leading-10 text-[#14171F]","children":[["$","li",null,{"children":["$","a",null,{"href":"https://bja.sealos.run?openapp=system-sealaf\u0026s=bd-sealaf","children":"Laf 公有云"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://github.com/labring/laf/releases","target":"_blank","rel":"noreferrer","children":"更新日志"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://marketplace.visualstudio.com/items?itemName=NightWhite.laf-assistant","target":"_blank","rel":"noreferrer","children":"Vscode 插件"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://github.com/labring/sealos","target":"_blank","rel":"noreferrer","children":"Sealos"}]}]]}]]}],["$","div",null,{"className":"w-1/6 text-lg leading-10 text-[#5E6987]","children":["开发者",["$","ul",null,{"className":"leading-10 text-[#14171F]","children":[["$","li",null,{"children":["$","a",null,{"href":"https://github.com/labring/laf/tree/main/deploy","target":"_blank","rel":"noreferrer","children":"私有化部署"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://api.laf.run/","target":"_blank","rel":"noreferrer","children":"开放 API"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://github.com/labring/laf","target":"_blank","rel":"noreferrer","children":"源码"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://doc.laf.run/zh/","target":"_blank","rel":"noreferrer","children":"文档"}]}]]}]]}],["$","div",null,{"className":"w-1/6 text-lg leading-10 text-[#5E6987]","children":["支持",["$","ul",null,{"className":"leading-10 text-[#14171F]","children":[["$","li",null,{"children":["$","a",null,{"href":"https://github.com/labring/laf/issues","target":"_blank","rel":"noreferrer","children":"问题反馈"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://forum.laf.run","target":"_blank","rel":"noreferrer","children":"开发者社区"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://sealos.run/company","target":"_blank","rel":"noreferrer","children":"关于我们"}]}]]}]]}]]}]}],["$","div",null,{"className":"flex h-auto flex-row items-center justify-between py-6","children":[["$","div",null,{"className":"w-1/2 text-lg text-[#3C455D]","children":["laf. all rights reserved. © ",2024,["$","div",null,{"dangerouslySetInnerHTML":{"__html":""}}]]}],["$","div",null,{"className":"flex justify-evenly ","children":["$L14",["$","a",null,{"href":"","target":"_blank","rel":"noreferrer","className":"mr-1","children":["$","$L15",null,{"fontSize":22,"color":"#3C455D"}]}],["$","a",null,{"href":"","target":"_blank","rel":"noreferrer","className":"mr-1","children":["$","$L16",null,{"fontSize":22,"color":"#3C455D"}]}],["$","a",null,{"href":"","target":"_blank","rel":"noreferrer","className":"mr-1","children":["$","$L17",null,{"fontSize":22,"color":"#3C455D"}]}]]}]]}]]}]}],["$","div",null,{"className":"mt-12 h-auto flex-col divide-y divide-solid divide-gray-200 bg-[#F9F9F9] px-8 lg:hidden","children":[["$","div",null,{"className":"pb-4 pt-12","children":[["$","img",null,{"src":"/homepage/logo_text.png","alt":"logo","width":64,"height":30}],["$","p",null,{"className":"mt-4 w-full text-base leading-5 text-[#5E6987]","children":"Laf 是一个 Serverless 框架，提供开箱即用的云函数，云数据库，对象存储等能力，是一个干净清爽的开发平台，像写博客一样写代码！三分钟上线 ChatGPT 应用！"}],["$","div",null,{"className":"mt-4 flex justify-between","children":[["$","div",null,{"className":"w-1/2 text-lg","children":[["$","div",null,{"className":"leading-8 text-[#5E6987]","children":"产品"}],["$","ul",null,{"className":"mb-4 leading-8","children":[["$","li",null,{"children":["$","a",null,{"href":"https://bja.sealos.run?openapp=system-sealaf\u0026s=bd-sealaf","children":"Laf 公有云"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://github.com/labring/laf/releases","target":"_blank","rel":"noreferrer","children":"更新日志"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://marketplace.visualstudio.com/items?itemName=NightWhite.laf-assistant","target":"_blank","rel":"noreferrer","children":"Vscode 插件"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://github.com/labring/sealos","target":"_blank","rel":"noreferrer","children":"Sealos"}]}]]}],["$","div",null,{"className":"w-1/2 text-lg","children":[["$","div",null,{"className":"leading-8 text-[#5E6987]","children":"支持"}],["$","ul",null,{"className":"leading-8","children":[["$","li",null,{"children":["$","a",null,{"href":"https://github.com/labring/laf/issues","target":"_blank","rel":"noreferrer","children":"问题反馈"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://forum.laf.run","target":"_blank","rel":"noreferrer","children":"开发者社区"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://sealos.run/company","target":"_blank","rel":"noreferrer","children":"关于我们"}]}]]}]]}]]}],["$","div",null,{"className":"w-1/2 text-lg","children":[["$","div",null,{"className":"leading-8 text-[#5E6987]","children":"开发者"}],["$","ul",null,{"className":"leading-8","children":[["$","li",null,{"children":["$","a",null,{"href":"https://github.com/labring/laf/tree/main/deploy","target":"_blank","rel":"noreferrer","children":"私有化部署"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://api.laf.run/","target":"_blank","rel":"noreferrer","children":"开放 API"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://github.com/labring/laf","target":"_blank","rel":"noreferrer","children":"源码"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://doc.laf.run/zh/","target":"_blank","rel":"noreferrer","children":"文档"}]}]]}]]}]]}]]}],["$","div",null,{"className":"flex flex-col gap-2 py-6 ","children":[["$","div",null,{"className":"text-lg text-[#3C455D]","children":["laf. all rights reserved. © ",2024,["$","div",null,{"dangerouslySetInnerHTML":{"__html":""}}]]}],["$","div",null,{"className":"flex ","children":[["$","a",null,{"href":"","target":"_blank","rel":"noreferrer","children":["$","$L15",null,{"fontSize":28,"color":"#3C455D"}]}],["$","a",null,{"href":"","target":"_blank","rel":"noreferrer","children":["$","$L16",null,{"fontSize":28,"color":"#3C455D"}]}],["$","a",null,{"href":"","target":"_blank","rel":"noreferrer","children":["$","$L17",null,{"fontSize":28,"color":"#3C455D"}]}]]}],["$","div",null,{"children":"$L18"}]]}]]}]]\n'
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '14:["$","a",null,{"target":"_blank","href":"","className":"mr-6 flex items-center whitespace-nowrap ","rel":"noreferrer","children":[["$","span",null,{"className":"mr-2 text-base","children":"服务状态"}],[["$","div","0",{"className":"status_breathing-gradient__R8vu0"}],["$","div","1",{"className":"status_breathing-gradient__R8vu0"}],["$","div","2",{"className":"status_breathing-gradient__R8vu0"}],["$","div","3",{"className":"status_breathing-gradient__R8vu0"}],["$","div","4",{"className":"status_breathing-gradient__R8vu0"}],["$","div","5",{"className":"status_breathing-gradient__R8vu0"}],["$","div","6",{"className":"status_breathing-gradient__R8vu0"}],["$","div","7",{"className":"status_breathing-gradient__R8vu0"}]]]}]\n18:["$","a",null,{"target":"_blank","href":"","className":"mr-6 flex items-center whitespace-nowrap ","rel":"noreferrer","children":[["$","span",null,{"className":"mr-2 text-base","children":"服务状态"}],[["$","div","0",{"className":"status_breathing-gradient__R8vu0"}],["$","div","1",{"className":"status_breathing-gradient__R8vu0"}],["$","div","2",{"className":"status_breathing-gradient__R8vu0"}],["$","div","3",{"className":"status_breathing-gradient__R8vu0"}],["$","div","4",{"className":"status_breathing-gradient__R8vu0"}],["$","div","5",{"className":"status_breathing-gradient__R8vu0"}],["$","div","6",{"className":"status_breathing-gradient__R8vu0"}],["$","div","7",{"className":"status_breathing-gradient__R8vu0"}]]]}]\n'
+      ]);
+    </script>
+  </body>
+</html>

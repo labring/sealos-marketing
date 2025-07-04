@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-  console.log('sem is loaded')
-  
+  console.log('sem is loaded');
+
   // 检查并更新URL中的s参数为"Devbox"
   function updateSParameter() {
     const currentUrl = window.location.href;
     const urlObj = new URL(currentUrl);
-    
+
     // 如果URL中s参数不是"价格"，则更新它
     if (urlObj.searchParams.get('s') !== '价格') {
       urlObj.searchParams.set('s', '价格');
@@ -15,72 +15,80 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function getAdClickData(urlParams) {
-		// baidu ad
-		const bdVid = urlParams.get('bd_vid');
-		if (bdVid) {
-			return {
-				clickId: bdVid,
-				urlParam: 'bd_vid',
-			};
-		}
+    // baidu ad
+    const bdVid = urlParams.get('bd_vid');
+    if (bdVid) {
+      return {
+        clickId: bdVid,
+        urlParam: 'bd_vid'
+      };
+    }
 
-		// bing ad
-		const msclkid = urlParams.get('msclkid');
-		if (msclkid) {
-			return {
-				clickId: msclkid,
-				urlParam: 'msclkid',
-			};
-		}
+    // bing ad
+    const msclkid = urlParams.get('msclkid');
+    if (msclkid) {
+      return {
+        clickId: msclkid,
+        urlParam: 'msclkid'
+      };
+    }
 
-		return null;
+    return null;
   }
 
   // 页面加载时更新s参数
   updateSParameter();
-  
+
   // 选择所有的 a 标签，而不是仅限于 .login-link
-  var links = document.querySelectorAll('a')
+  var links = document.querySelectorAll('a');
 
   links.forEach(function (link) {
     link.addEventListener('click', function (e) {
+      var baseUrl = this.getAttribute('href');
 
-      var baseUrl = this.getAttribute('href')
-
-      console.log(baseUrl, 'baseUrl')
+      console.log(baseUrl, 'baseUrl');
 
       // 如果链接不存在或是锚点链接，则不处理
       if (!baseUrl || baseUrl.startsWith('#')) {
-        return
+        return;
       }
 
-      e.preventDefault()
+      e.preventDefault();
 
-      var urlParams = new URLSearchParams(window.location.search)
+      var urlParams = new URLSearchParams(window.location.search);
       var newUrl = baseUrl;
 
       var adClickData = getAdClickData(urlParams);
       if (adClickData) {
-        newUrl += (baseUrl.includes('?') ? '&' : '?') + adClickData.urlParam + '=' + encodeURIComponent(adClickData.clickId);
+        newUrl +=
+          (baseUrl.includes('?') ? '&' : '?') +
+          adClickData.urlParam +
+          '=' +
+          encodeURIComponent(adClickData.clickId);
       }
 
-      var kValue = urlParams.get('k')
+      var kValue = urlParams.get('k');
       if (kValue) {
-        newUrl += (newUrl.includes('?') ? '&' : '?') + 'k=' + encodeURIComponent(kValue)
+        newUrl += (newUrl.includes('?') ? '&' : '?') + 'k=' + encodeURIComponent(kValue);
       }
 
-      var searchValue = urlParams.get('search')
+      var searchValue = urlParams.get('search');
       if (searchValue) {
-        newUrl += (newUrl.includes('?') ? '&' : '?') + 'search=' + encodeURIComponent(searchValue)
+        newUrl += (newUrl.includes('?') ? '&' : '?') + 'search=' + encodeURIComponent(searchValue);
       }
 
-      newUrl += (newUrl.includes('?') ? '&' : '?') + 's=价格'
+      newUrl += (newUrl.includes('?') ? '&' : '?') + 's=价格';
 
-      const arr = ['cloud.sealos.run','mp.weixin.qq.com','template.cloud.sealos.run','sealos.run/docs','feishu.cn']
+      const arr = [
+        'cloud.sealos.run',
+        'mp.weixin.qq.com',
+        'template.cloud.sealos.run',
+        'sealos.run/docs',
+        'feishu.cn'
+      ];
 
-      const target = arr.some(item => baseUrl.includes(item)) ? '_blank' : '_self'
-      window.open(newUrl, target)
-    })
-
-  })
-})
+      const target = arr.some((item) => baseUrl.includes(item)) ? '_blank' : '_self';
+      window.open(newUrl, target);
+    });
+  });
+});

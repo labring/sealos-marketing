@@ -1,240 +1,104 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>产品定价-Sealos</title>
-  <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/app_store/css/appstore-xq.css">
-  <link rel="stylesheet" href="/imgs/css/h5-Q3-c2.css">
-  <script src="/imgs/js/h5_Q3_C1.js" defer></script>
-  <script src="/app_store/js/appstor.js" defer></script>
-  <script src="/app_store/js/stars.js" defer></script>
-  <script src="/app_store/js/navbar.js" defer></script>
-  <script src="/app_store/js/foooter.js" defer></script>
-  <script src="/js/sem-price.js" defer></script>
-  <link rel="stylesheet" href="/app_store/css/price.css">
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <title>产品定价-Sealos</title>
+    <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/app_store/css/appstore-xq.css" />
+    <link rel="stylesheet" href="/imgs/css/h5-Q3-c2.css" />
+    <script src="/imgs/js/h5_Q3_C1.js" defer></script>
+    <script src="/app_store/js/appstor.js" defer></script>
+    <script src="/app_store/js/stars.js" defer></script>
+    <script src="/app_store/js/navbar.js" defer></script>
+    <script src="/app_store/js/foooter.js" defer></script>
+    <script src="/js/sem-price.js" defer></script>
+    <link rel="stylesheet" href="/app_store/css/price.css" />
+  </head>
+  <body>
     <div class="nav1">
       <div id="navbar-container"></div>
     </div>
 
-  <main>
-    <div class="main-container">
-      <div class="price-header">
-        <!-- price -->
-        <div class="title-container">
-          <img src="/imgs/img/price/frame.svg">
-          <span class="title">价格计算器</span>
-        </div>
+    <main>
+      <div class="main-container">
+        <div class="price-header">
+          <!-- price -->
+          <div class="title-container">
+            <img src="/imgs/img/price/frame.svg" />
+            <span class="title">价格计算器</span>
+          </div>
 
-        <div class="region-select-container">
-          <div class="select-label">可用区</div>
-          <!-- 区域选择 -->
-          <div class="region-select menu-select">
-            <div class="select-trigger">
-              <span class="selected-text">北京 A</span>
-              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="select-options">
-              <div class="option" data-value="a">北京 A</div>
-              <div class="option" data-value="g">广州 G</div>
-              <div class="option" data-value="b">新加坡 B</div>
-              <div class="option" data-value="h">杭州 H</div>
+          <div class="region-select-container">
+            <div class="select-label">可用区</div>
+            <!-- 区域选择 -->
+            <div class="region-select menu-select">
+              <div class="select-trigger">
+                <span class="selected-text">北京 A</span>
+                <svg
+                  class="arrow-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 6L8 10L12 6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="select-options">
+                <div class="option" data-value="a">北京 A</div>
+                <div class="option" data-value="g">广州 G</div>
+                <div class="option" data-value="b">新加坡 B</div>
+                <div class="option" data-value="h">杭州 H</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="price-calculator">
-        <div class="calculator-container">
-
-          <div class="calculator-content">
-            <!-- Resources Section -->
-            <section>
-              <div class="section-title">
-                <img src="/imgs/img/price/labelLine.svg" />
-                资源
-              </div>
-              <div class="calculator-input">
-                <!-- CPU -->
-                <div class="resource-item cpu-resource">
-                  <label>
-                    <img src="/imgs/img/price/cpu.svg" />
-                    CPU
-                  </label>
-                  <!-- cpu -->
-                  <div class="segmented-slider cpu-slider">
-                    <div class="slider-track">
-                      <div class="slider-fill"></div>
-                      <div class="slider-thumb"></div>
-                    </div>
-                    <div class="value-points">
-                      <div class="point-value" style="left: calc(0%)">1</div>
-                      <div class="point-value" style="left: calc(25%)">32</div>
-                      <div class="point-value" style="left: calc(50%)">64</div>
-                      <div class="point-value" style="left: calc(75%)">128</div>
-                      <div class="point-value" style="left: calc(100%)">256</div>
-                    </div>
-                    <div class="unit">C</div>
-                  </div>
-                  <div class="number-input cpu-number-input">
-                    <input type="number" class="quantity-input">
-                    <div class="right-element">C</div>
-                    <div class="arrows">
-                      <button class="arrow up">
-                        <img src="/imgs/img/up.svg" />
-                      </button>
-                      <button class="arrow down">
-                        <img src="/imgs/img/down.svg" />
-                      </button>
-                    </div>
-                  </div>
+        <div class="price-calculator">
+          <div class="calculator-container">
+            <div class="calculator-content">
+              <!-- Resources Section -->
+              <section>
+                <div class="section-title">
+                  <img src="/imgs/img/price/labelLine.svg" />
+                  资源
                 </div>
-
-                <!-- Memory -->
-                <div class="resource-item memory-resource">
-                  <label>
-                    <img src="/imgs/img/price/memory.svg" />
-                    内存
-                  </label>
-
-                  <!-- memory -->
-                  <div class="segmented-slider memory-slider">
-                    <div class="slider-track">
-                      <div class="slider-fill"></div>
-                      <div class="slider-thumb"></div>
+                <div class="calculator-input">
+                  <!-- CPU -->
+                  <div class="resource-item cpu-resource">
+                    <label>
+                      <img src="/imgs/img/price/cpu.svg" />
+                      CPU
+                    </label>
+                    <!-- cpu -->
+                    <div class="segmented-slider cpu-slider">
+                      <div class="slider-track">
+                        <div class="slider-fill"></div>
+                        <div class="slider-thumb"></div>
+                      </div>
+                      <div class="value-points">
+                        <div class="point-value" style="left: calc(0%)">1</div>
+                        <div class="point-value" style="left: calc(25%)">32</div>
+                        <div class="point-value" style="left: calc(50%)">64</div>
+                        <div class="point-value" style="left: calc(75%)">128</div>
+                        <div class="point-value" style="left: calc(100%)">256</div>
+                      </div>
+                      <div class="unit">C</div>
                     </div>
-                    <div class="value-points">
-                      <div class="point-value" style="left: calc(0%)">1</div>
-                      <div class="point-value" style="left: calc(25%)">128</div>
-                      <div class="point-value" style="left: calc(50%)">512</div>
-                      <div class="point-value" style="left: calc(75%)">1024</div>
-                      <div class="point-value" style="left: calc(100%)">2048</div>
-                    </div>
-                    <div class="unit">G</div>
-                  </div>
-                  <div class="number-input memory-number-input">
-                    <input type="number" class="quantity-input">
-                    <div class="right-element">G</div>
-                    <div class="arrows">
-                      <button class="arrow up">
-                        <img src="/imgs/img/up.svg" />
-                      </button>
-                      <button class="arrow down">
-                        <img src="/imgs/img/down.svg" />
-                      </button>
-                    </div>
-                  </div>
-
-                </div>
-
-                <!-- Storage -->
-                <div class="resource-item">
-                  <label>
-                    <img src="/imgs/img/price/storage.svg" />
-                    存储
-                  </label>
-                  <!-- storage -->
-                  <div class="number-input storage-number-input">
-                    <input type="number" class="quantity-input">
-                    <div class="right-element">G</div>
-                    <div class="arrows">
-                      <button class="arrow up">
-                        <img src="/imgs/img/up.svg" />
-                      </button>
-                      <button class="arrow down">
-                        <img src="/imgs/img/down.svg" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Network -->
-                <div class="resource-item">
-                  <label>
-                    <img src="/imgs/img/price/network.svg" />
-                    流量
-                  </label>
-                  <!-- network -->
-                  <div class="number-input network-number-input">
-                    <input type="number" class="quantity-input">
-                    <div class="right-element">G</div>
-
-                    <div class="arrows">
-                      <button class="arrow up">
-                        <img src="/imgs/img/up.svg" />
-                      </button>
-                      <button class="arrow down">
-                        <img src="/imgs/img/down.svg" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- TCP Port -->
-                <div class="resource-item">
-                  <label>
-                    <img src="/imgs/img/price/port.svg" />
-                    端口
-                  </label>
-                  <!-- tcp port -->
-                  <div class="number-input port-number-input">
-                    <input type="number" class="quantity-input">
-                    <div class="right-element">个</div>
-                    <div class="arrows">
-                      <button class="arrow up">
-                        <img src="/imgs/img/up.svg" />
-                      </button>
-                      <button class="arrow down">
-                        <img src="/imgs/img/down.svg" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- Usage Section -->
-            <section>
-              <div class="section-title2">
-                <img src="/imgs/img/price/labelLine.svg" />
-                用量
-              </div>
-              <div class="calculator-input">
-                <!-- Count -->
-                <div class="usage-item">
-                  <label>
-                    <img src="/imgs/img/price/node.svg" />
-                    数量
-                  </label>
-                  <div class="number-input count-number-input">
-                    <input type="number" class="quantity-input">
-                    <div class="arrows">
-                      <button class="arrow up">
-                        <img src="/imgs/img/up.svg" />
-                      </button>
-                      <button class="arrow down">
-                        <img src="/imgs/img/down.svg" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <!-- Time -->
-                <div class="usage-item">
-                  <label>
-                    <img src="/imgs/img/price/clock.svg" />
-                    时间
-                  </label>
-                  <div class="duration-input-container">
-                    <div class="number-input time-count-number-input">
-                      <input type="number" class="quantity-input">
+                    <div class="number-input cpu-number-input">
+                      <input type="number" class="quantity-input" />
+                      <div class="right-element">C</div>
                       <div class="arrows">
                         <button class="arrow up">
                           <img src="/imgs/img/up.svg" />
@@ -244,1179 +108,1346 @@
                         </button>
                       </div>
                     </div>
-                    <div class="time-select-container menu-select time-select-container1">
-                      <div class="select-trigger">
-                        <span class="selected-text">小时</span>
-                        <img src="/imgs/img/down.svg" class="arrow-icon" />
+                  </div>
+
+                  <!-- Memory -->
+                  <div class="resource-item memory-resource">
+                    <label>
+                      <img src="/imgs/img/price/memory.svg" />
+                      内存
+                    </label>
+
+                    <!-- memory -->
+                    <div class="segmented-slider memory-slider">
+                      <div class="slider-track">
+                        <div class="slider-fill"></div>
+                        <div class="slider-thumb"></div>
                       </div>
-                      <div class="select-options">
-                        <div class="option" data-value="hour">小时</div>
-                        <div class="option" data-value="week">周</div>
-                        <div class="option" data-value="day">天</div>
-                        <div class="option" data-value="month">月</div>
-                        <div class="option" data-value="year">年</div>
+                      <div class="value-points">
+                        <div class="point-value" style="left: calc(0%)">1</div>
+                        <div class="point-value" style="left: calc(25%)">128</div>
+                        <div class="point-value" style="left: calc(50%)">512</div>
+                        <div class="point-value" style="left: calc(75%)">1024</div>
+                        <div class="point-value" style="left: calc(100%)">2048</div>
+                      </div>
+                      <div class="unit">G</div>
+                    </div>
+                    <div class="number-input memory-number-input">
+                      <input type="number" class="quantity-input" />
+                      <div class="right-element">G</div>
+                      <div class="arrows">
+                        <button class="arrow up">
+                          <img src="/imgs/img/up.svg" />
+                        </button>
+                        <button class="arrow down">
+                          <img src="/imgs/img/down.svg" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Storage -->
+                  <div class="resource-item">
+                    <label>
+                      <img src="/imgs/img/price/storage.svg" />
+                      存储
+                    </label>
+                    <!-- storage -->
+                    <div class="number-input storage-number-input">
+                      <input type="number" class="quantity-input" />
+                      <div class="right-element">G</div>
+                      <div class="arrows">
+                        <button class="arrow up">
+                          <img src="/imgs/img/up.svg" />
+                        </button>
+                        <button class="arrow down">
+                          <img src="/imgs/img/down.svg" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Network -->
+                  <div class="resource-item">
+                    <label>
+                      <img src="/imgs/img/price/network.svg" />
+                      流量
+                    </label>
+                    <!-- network -->
+                    <div class="number-input network-number-input">
+                      <input type="number" class="quantity-input" />
+                      <div class="right-element">G</div>
+
+                      <div class="arrows">
+                        <button class="arrow up">
+                          <img src="/imgs/img/up.svg" />
+                        </button>
+                        <button class="arrow down">
+                          <img src="/imgs/img/down.svg" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- TCP Port -->
+                  <div class="resource-item">
+                    <label>
+                      <img src="/imgs/img/price/port.svg" />
+                      端口
+                    </label>
+                    <!-- tcp port -->
+                    <div class="number-input port-number-input">
+                      <input type="number" class="quantity-input" />
+                      <div class="right-element">个</div>
+                      <div class="arrows">
+                        <button class="arrow up">
+                          <img src="/imgs/img/up.svg" />
+                        </button>
+                        <button class="arrow down">
+                          <img src="/imgs/img/down.svg" />
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
+              </section>
 
-              </div>
-            </section>
-          </div>
-          <div class="total-price">
-            <span>总价格:</span>
-            <span class="price">160.02</span>
-            <img src="/imgs/img/price/currency.svg" />
-          </div>
-        </div>
-        <!-- Header -->
-        <div class="price-table-container">
-          <!-- 价格表 -->
-          <div class="price-table-header">
-            <div class="title">单价</div>
-            <div class="menu-select time-select-container2 time-select-container">
-              <div class="select-trigger">
-                <span class="selected-text">小时</span>
-                <img src="/imgs/img/down.svg" class="arrow-icon" />
-              </div>
-              <div class="select-options">
-                <div class="option" data-value="hour">小时</div>
-                <div class="option" data-value="week">周</div>
-                <div class="option" data-value="day">天</div>
-                <div class="option" data-value="month">月</div>
-                <div class="option" data-value="year">年</div>
-              </div>
+              <!-- Usage Section -->
+              <section>
+                <div class="section-title2">
+                  <img src="/imgs/img/price/labelLine.svg" />
+                  用量
+                </div>
+                <div class="calculator-input">
+                  <!-- Count -->
+                  <div class="usage-item">
+                    <label>
+                      <img src="/imgs/img/price/node.svg" />
+                      数量
+                    </label>
+                    <div class="number-input count-number-input">
+                      <input type="number" class="quantity-input" />
+                      <div class="arrows">
+                        <button class="arrow up">
+                          <img src="/imgs/img/up.svg" />
+                        </button>
+                        <button class="arrow down">
+                          <img src="/imgs/img/down.svg" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Time -->
+                  <div class="usage-item">
+                    <label>
+                      <img src="/imgs/img/price/clock.svg" />
+                      时间
+                    </label>
+                    <div class="duration-input-container">
+                      <div class="number-input time-count-number-input">
+                        <input type="number" class="quantity-input" />
+                        <div class="arrows">
+                          <button class="arrow up">
+                            <img src="/imgs/img/up.svg" />
+                          </button>
+                          <button class="arrow down">
+                            <img src="/imgs/img/down.svg" />
+                          </button>
+                        </div>
+                      </div>
+                      <div class="time-select-container menu-select time-select-container1">
+                        <div class="select-trigger">
+                          <span class="selected-text">小时</span>
+                          <img src="/imgs/img/down.svg" class="arrow-icon" />
+                        </div>
+                        <div class="select-options">
+                          <div class="option" data-value="hour">小时</div>
+                          <div class="option" data-value="week">周</div>
+                          <div class="option" data-value="day">天</div>
+                          <div class="option" data-value="month">月</div>
+                          <div class="option" data-value="year">年</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="total-price">
+              <span>总价格:</span>
+              <span class="price">160.02</span>
+              <img src="/imgs/img/price/currency.svg" />
             </div>
           </div>
-          <div class="price-list">
-            <div class="price-list-header">
-              <span>资源名</span>
-              <div class="unit-price">
-                <span>单价</span>
-                <img src="/imgs/img/price/currency.svg" alt="currency" />
+          <!-- Header -->
+          <div class="price-table-container">
+            <!-- 价格表 -->
+            <div class="price-table-header">
+              <div class="title">单价</div>
+              <div class="menu-select time-select-container2 time-select-container">
+                <div class="select-trigger">
+                  <span class="selected-text">小时</span>
+                  <img src="/imgs/img/down.svg" class="arrow-icon" />
+                </div>
+                <div class="select-options">
+                  <div class="option" data-value="hour">小时</div>
+                  <div class="option" data-value="week">周</div>
+                  <div class="option" data-value="day">天</div>
+                  <div class="option" data-value="month">月</div>
+                  <div class="option" data-value="year">年</div>
+                </div>
               </div>
             </div>
-
-            <div class="price-items price-container">
-              <!-- CPU -->
-              <div class="price-item">
-                <div class="resource">
-                  <img src="/imgs/img/price/cpu.svg" alt="cpu" />
-                  <span>CPU</span>
-                </div>
-                <div class="price-value">
-                  <span class="price-value-amount cpu-price-result">0.02</span>
-                  <span class="price-value-unit">核 /</span>
-                  <span class="price-value-unit price-cycle">小时</span>
+            <div class="price-list">
+              <div class="price-list-header">
+                <span>资源名</span>
+                <div class="unit-price">
+                  <span>单价</span>
+                  <img src="/imgs/img/price/currency.svg" alt="currency" />
                 </div>
               </div>
 
-              <!-- Memory -->
-              <div class="price-item">
-                <div class="resource">
-                  <img src="/imgs/img/price/memory.svg" alt="memory" />
-                  <span>内存</span>
+              <div class="price-items price-container">
+                <!-- CPU -->
+                <div class="price-item">
+                  <div class="resource">
+                    <img src="/imgs/img/price/cpu.svg" alt="cpu" />
+                    <span>CPU</span>
+                  </div>
+                  <div class="price-value">
+                    <span class="price-value-amount cpu-price-result">0.02</span>
+                    <span class="price-value-unit">核 /</span>
+                    <span class="price-value-unit price-cycle">小时</span>
+                  </div>
                 </div>
-                <div class="price-value">
-                  <span class="price-value-amount memory-price-result">0.02</span>
-                  <span class="price-value-unit">G /</span>
-                  <span class="price-value-unit price-cycle">小时</span>
-                </div>
-              </div>
 
-              <!-- Storage -->
-              <div class="price-item">
-                <div class="resource">
-                  <img src="/imgs/img/price/storage.svg" alt="storage" />
-                  <span>存储卷</span>
+                <!-- Memory -->
+                <div class="price-item">
+                  <div class="resource">
+                    <img src="/imgs/img/price/memory.svg" alt="memory" />
+                    <span>内存</span>
+                  </div>
+                  <div class="price-value">
+                    <span class="price-value-amount memory-price-result">0.02</span>
+                    <span class="price-value-unit">G /</span>
+                    <span class="price-value-unit price-cycle">小时</span>
+                  </div>
                 </div>
-                <div class="price-value">
-                  <span class="price-value-amount storage-price-result">0.02</span>
-                  <span class="price-value-unit">G /<span>
-                      <span class="price-value-unit price-cycle">小时</span>
-                </div>
-              </div>
 
-              <!-- TCP Port -->
-              <div class="price-item">
-                <div class="resource">
-                  <img src="/imgs/img/price/port.svg" alt="port" />
-                  <span>端口</span>
+                <!-- Storage -->
+                <div class="price-item">
+                  <div class="resource">
+                    <img src="/imgs/img/price/storage.svg" alt="storage" />
+                    <span>存储卷</span>
+                  </div>
+                  <div class="price-value">
+                    <span class="price-value-amount storage-price-result">0.02</span>
+                    <span class="price-value-unit">G /</span>
+                    <span class="price-value-unit price-cycle">小时</span>
+                  </div>
                 </div>
-                <div class="price-value">
-                  <span class="price-value-amount port-price-result">0.02</span>
-                  <span class="price-value-unit">/</span>
-                  <span class="price-value-unit price-cycle">小时</span>
-                </div>
-              </div>
 
-              <!-- Network -->
-              <div class="price-item">
-                <div class="resource">
-                  <img src="/imgs/img/price/network.svg" alt="network" />
-                  <span>流量</span>
+                <!-- TCP Port -->
+                <div class="price-item">
+                  <div class="resource">
+                    <img src="/imgs/img/price/port.svg" alt="port" />
+                    <span>端口</span>
+                  </div>
+                  <div class="price-value">
+                    <span class="price-value-amount port-price-result">0.02</span>
+                    <span class="price-value-unit">/</span>
+                    <span class="price-value-unit price-cycle">小时</span>
+                  </div>
                 </div>
-                <div class="price-value">
-                  <span class="price-value-amount network-price-result">0.02</span>
-                  <span class="price-value-unit">/ G</span>
+
+                <!-- Network -->
+                <div class="price-item">
+                  <div class="resource">
+                    <img src="/imgs/img/price/network.svg" alt="network" />
+                    <span>流量</span>
+                  </div>
+                  <div class="price-value">
+                    <span class="price-value-amount network-price-result">0.02</span>
+                    <span class="price-value-unit">/ G</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="ellipse"></div>
-  </main>
-  <div class="h5footer" id="footer">
-  </div>
-  <script>
-    // const
-    // 价格
-    const regionPriceMap = new Map([
-      ['g', {
-        cpu: {
-          "name": "cpu",
-          "unit_price": 17420, // Converted from 1m to 1c
-          "unit": "1c"
-        },
-        memory: {
-          "name": "memory",
-          "unit_price": 8.58 * 1024, // Converted from 1Mi to 1Gi
-          "unit": "1Gi"
-        },
-        storage: {
-          "name": "storage",
-          "unit_price": 0.52 * 1024, // Converted from 1Mi to 1Gi
-          "unit": "1Gi"
-        },
-        network: {
-          "name": "network",
-          "unit_price": 781 * 1024, // Converted from 1Mi to 1Gi
-          "unit": "1Gi"
-        },
-        port: {
-          "name": "services.nodeports",
-          "unit_price": 7000,
-          "unit": "1"
-        }
-      }],
-      [
-        'a',
-        {
-          cpu: {
-            "name": "cpu",
-            "unit_price": 17.1247 * 1000, // Converted from 1m to 1c
-            "unit": "1c"
-          },
-          memory: {
-            "name": "memory",
-            "unit_price": 8.4346 * 1024, // Converted from 1Mi to 1Gi
-            "unit": "1Gi"
-          },
-          storage: {
-            "name": "storage",
-            "unit_price": 0.5112 * 1024, // Converted from 1Mi to 1Gi
-            "unit": "1Gi"
-          },
-          network: {
-            "name": "network",
-            "unit_price": 781 * 1024, // Converted from 1Mi to 1Gi
-            "unit": "1Gi"
-          },
-          port: {
-            "name": "services.nodeports",
-            "unit_price": 7000,
-            "unit": "1"
+      <div class="ellipse"></div>
+    </main>
+    <div class="h5footer" id="footer"></div>
+    <script>
+      // const
+      // 价格
+      const regionPriceMap = new Map([
+        [
+          'g',
+          {
+            cpu: {
+              name: 'cpu',
+              unit_price: 17420, // Converted from 1m to 1c
+              unit: '1c'
+            },
+            memory: {
+              name: 'memory',
+              unit_price: 8.58 * 1024, // Converted from 1Mi to 1Gi
+              unit: '1Gi'
+            },
+            storage: {
+              name: 'storage',
+              unit_price: 0.52 * 1024, // Converted from 1Mi to 1Gi
+              unit: '1Gi'
+            },
+            network: {
+              name: 'network',
+              unit_price: 781 * 1024, // Converted from 1Mi to 1Gi
+              unit: '1Gi'
+            },
+            port: {
+              name: 'services.nodeports',
+              unit_price: 7000,
+              unit: '1'
+            }
           }
-        }
-      ],
-      [
-        'b',
-        {
-          cpu: {
-            "name": "cpu",
-            "unit_price": 67 * 1000, // Converted from 1m to 1c
-            "unit": "1c"
-          },
-          memory: {
-            "name": "memory",
-            "unit_price": 33 * 1024, // Converted from 1Mi to 1Gi
-            "unit": "1Gi"
-          },
-          storage: {
-            "name": "storage",
-            "unit_price": 2 * 1024, // Converted from 1Mi to 1Gi
-            "unit": "1Gi"
-          },
-          network: {
-            "name": "network",
-            "unit_price": 781 * 1024, // Converted from 1Mi to 1Gi
-            "unit": "1Gi"
-          },
-          port: {
-            "name": "services.nodeports",
-            "unit_price": 69500,
-            "unit": "1"
-            // Converted from 1 to 1
+        ],
+        [
+          'a',
+          {
+            cpu: {
+              name: 'cpu',
+              unit_price: 17.1247 * 1000, // Converted from 1m to 1c
+              unit: '1c'
+            },
+            memory: {
+              name: 'memory',
+              unit_price: 8.4346 * 1024, // Converted from 1Mi to 1Gi
+              unit: '1Gi'
+            },
+            storage: {
+              name: 'storage',
+              unit_price: 0.5112 * 1024, // Converted from 1Mi to 1Gi
+              unit: '1Gi'
+            },
+            network: {
+              name: 'network',
+              unit_price: 781 * 1024, // Converted from 1Mi to 1Gi
+              unit: '1Gi'
+            },
+            port: {
+              name: 'services.nodeports',
+              unit_price: 7000,
+              unit: '1'
+            }
           }
-        }
-      ],
-      [
-        'h',
-        {
-          cpu: {
-            "name": "cpu",
-            "unit_price": 27.6706 * 1000, // Converted from 1m to 1c
-            "unit": "1c"
-          },
-          memory: {
-            "name": "memory",
-            "unit_price": 13.6288 * 1024, // Converted from 1Mi to 1Gi
-            "unit": "1Gi"
-          },
-          storage: {
-            "name": "storage",
-            "unit_price": 0.826 * 1024, // Converted from 1Mi to 1Gi
-            "unit": "1Gi"
-          },
-          network: {
-            "name": "network",
-            "unit_price": 781 * 1024, // Converted from 1Mi to 1Gi
-            "unit": "1Gi"
-          },
-          port: {
-            "name": "services.nodeports",
-            "unit_price": 13900,
-            "unit": "1"
+        ],
+        [
+          'b',
+          {
+            cpu: {
+              name: 'cpu',
+              unit_price: 67 * 1000, // Converted from 1m to 1c
+              unit: '1c'
+            },
+            memory: {
+              name: 'memory',
+              unit_price: 33 * 1024, // Converted from 1Mi to 1Gi
+              unit: '1Gi'
+            },
+            storage: {
+              name: 'storage',
+              unit_price: 2 * 1024, // Converted from 1Mi to 1Gi
+              unit: '1Gi'
+            },
+            network: {
+              name: 'network',
+              unit_price: 781 * 1024, // Converted from 1Mi to 1Gi
+              unit: '1Gi'
+            },
+            port: {
+              name: 'services.nodeports',
+              unit_price: 69500,
+              unit: '1'
+              // Converted from 1 to 1
+            }
           }
-        }
-      ]
-    ])
-
-    const timeMap = new Map([
-      ['hour', {
-        "name": "hour",
-        "unit": "小时",
-        "value": 1
-      }],
-      ['day', {
-        "name": "day",
-        "unit": "天",
-        "value": 24
-      }],
-      ['week', {
-        "name": "week",
-        "unit": "周",
-        "value": 168
-      }],
-      ['month', {
-        "name": "month",
-        "unit": "月",
-        "value": 720
-      }],
-      ['year', {
-        "name": "year",
-        "unit": "年",
-        "value": 8760
-      }]
-    ])
-  </script>
-  <script>
-    // 选择器管理器
-    class SelectManager {
-      constructor(options = {}) {
-        this.config = {
-          containerSelector: options.containerSelector || '.select-container',
-          triggerSelector: options.triggerSelector || '.select-trigger',
-          selectedTextSelector: options.selectedTextSelector || '.selected-text',
-          optionSelector: options.optionSelector || '.option',
-          activeClass: options.activeClass || 'active',
-          onChange: options.onChange || (() => { }),
-          defaultValue: options.defaultValue || null
-        }
-        this.elements = {
-          container: null,
-          trigger: null,
-          selectedText: null,
-          options: null
-        }
-
-        this.state = {
-          isOpen: false,
-          selectedValue: this.config.defaultValue
-        }
-        this.isInternalUpdate = false  // 添加内部更新标志
-        this.init()
-      }
-
-      init () {
-        // 初始化 DOM 元素
-        this.elements.container = document.querySelector(this.config.containerSelector)
-        if (!this.elements.container) {
-          console.error('Time select container not found')
-          return
-        }
-        this.elements.trigger = this.elements.container.querySelector(this.config.triggerSelector)
-        this.elements.selectedText = this.elements.container.querySelector(this.config.selectedTextSelector)
-        this.elements.options = this.elements.container.querySelectorAll(this.config.optionSelector)
-
-        if (!this.validateElements()) {
-          console.error('Required elements not found')
-          return
-        }
-
-        this.bindEvents()
-        this.initializeSelection()
-      }
-
-      validateElements () {
-        return (
-          this.elements.trigger &&
-          this.elements.selectedText &&
-          this.elements.options.length > 0
-        )
-      }
-
-      bindEvents () {
-        // 点击触发器
-        this.elements.trigger.addEventListener('click', (e) => {
-          e.stopPropagation()
-          this.toggleDropdown()
-        })
-
-        // 选项点击事件
-        this.elements.options.forEach(option => {
-          option.addEventListener('click', (e) => {
-            e.stopPropagation()
-            this.selectOption(option)
-          })
-        })
-
-        // 点击外部关闭
-        document.addEventListener('click', (e) => {
-          if (!this.elements.container.contains(e.target)) {
-            this.closeDropdown()
+        ],
+        [
+          'h',
+          {
+            cpu: {
+              name: 'cpu',
+              unit_price: 27.6706 * 1000, // Converted from 1m to 1c
+              unit: '1c'
+            },
+            memory: {
+              name: 'memory',
+              unit_price: 13.6288 * 1024, // Converted from 1Mi to 1Gi
+              unit: '1Gi'
+            },
+            storage: {
+              name: 'storage',
+              unit_price: 0.826 * 1024, // Converted from 1Mi to 1Gi
+              unit: '1Gi'
+            },
+            network: {
+              name: 'network',
+              unit_price: 781 * 1024, // Converted from 1Mi to 1Gi
+              unit: '1Gi'
+            },
+            port: {
+              name: 'services.nodeports',
+              unit_price: 13900,
+              unit: '1'
+            }
           }
-        })
+        ]
+      ]);
 
-        // ESC 键关闭
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape') {
-            this.closeDropdown()
+      const timeMap = new Map([
+        [
+          'hour',
+          {
+            name: 'hour',
+            unit: '小时',
+            value: 1
           }
-        })
-      }
-
-      initializeSelection () {
-        // 初始化选中状态
-        if (this.config.defaultValue) {
-
-          const defaultOption = Array.from(this.elements.options)
-            .find(option => option.dataset.value === this.config.defaultValue)
-
-          if (defaultOption) {
-            this.selectOption(defaultOption, false)
+        ],
+        [
+          'day',
+          {
+            name: 'day',
+            unit: '天',
+            value: 24
           }
-        }
-      }
-
-      toggleDropdown () {
-        this.state.isOpen = !this.state.isOpen
-        this.elements.container.classList.toggle(this.config.activeClass)
-      }
-
-      openDropdown () {
-        this.state.isOpen = true
-        this.elements.container.classList.add(this.config.activeClass)
-      }
-
-      closeDropdown () {
-        this.state.isOpen = false
-        this.elements.container.classList.remove(this.config.activeClass)
-      }
-
-      selectOption (option, shouldNotify = true) {
-        const value = option.dataset.value
-        const text = option.textContent
-
-        this.state.selectedValue = value
-        this.elements.selectedText.textContent = text
-
-        // 更新选中状态的样式
-        this.elements.options.forEach(opt => {
-          opt.classList.toggle('selected', opt === option)
-        })
-
-        this.closeDropdown()
-
-        if (shouldNotify && !this.isInternalUpdate) {
-          this.config.onChange(value, text)
-        }
-      }
-
-      // 公共方法
-      getValue () {
-        return this.state.selectedValue
-      }
-
-      setText (text) {
-        this.elements.selectedText.textContent = text
-      }
-
-      setValue (value) {
-        if (this.isInternalUpdate) return  // 如果是内部更新，直接返回
-
-        this.isInternalUpdate = true  // 设置标志
-        const option = Array.from(this.elements.options)
-          .find(opt => opt.dataset.value === value)
-
-        if (option) {
-          this.selectOption(option, false)  // 不触发 onChange 回调
-        }
-        this.isInternalUpdate = false  // 重置标志
-      }
-
-      disable () {
-        this.elements.container.classList.add('disabled')
-        this.elements.trigger.setAttribute('disabled', 'disabled')
-      }
-
-      enable () {
-        this.elements.container.classList.remove('disabled')
-        this.elements.trigger.removeAttribute('disabled')
-      }
-    }
-    // 计数管理器
-    class QuantityManager {
-      constructor(options = {}) {
-        this.config = {
-          minValue: options.minValue ?? 0,
-          maxValue: options.maxValue || 999999, // 增大最大值上限
-          defaultValue: options.defaultValue ?? 1,
-          onChange: options.onChange || (() => { })
-        }
-
-        this.elements = {
-          input: document.querySelector(options.inputSelector),
-          upButton: document.querySelector(options.upButtonSelector),
-          downButton: document.querySelector(options.downButtonSelector)
-        }
-
-        this.state = {
-          value: this.config.defaultValue
-        }
-
-        this.init()
-      }
-
-      init () {
-        this.bindEvents()
-        this.updateView()
-      }
-
-      bindEvents () {
-        this.elements.upButton.addEventListener('click', () => this.increment())
-        this.elements.downButton.addEventListener('click', () => this.decrement())
-        this.elements.input.addEventListener('input', (e) => this.handleInput(e))
-        this.elements.input.addEventListener('blur', () => this.validateValue())
-      }
-
-      increment () {
-        if (this.state.value < this.config.maxValue) {
-          this.setState(this.state.value + 1)
-        }
-      }
-
-      decrement () {
-        if (this.state.value > this.config.minValue) {
-          this.setState(this.state.value - 1)
-        }
-      }
-
-      handleInput (e) {
-        e.target.value = e.target.value.replace(/[^\d]/g, '')
-        const value = parseInt(e.target.value)
-        if (!isNaN(value)) {
-          this.setState(value)
-        }
-      }
-
-      validateValue () {
-        let value = parseInt(this.elements.input.value)
-        if (isNaN(value) || this.elements.input.value === '') {
-          value = this.config.defaultValue
-        }
-        value = Math.max(this.config.minValue, Math.min(value, this.config.maxValue))
-        this.setState(value)
-      }
-
-      setState (newValue) {
-        this.state.value = newValue
-        this.updateView()
-        this.config.onChange(newValue, 'quantity')
-      }
-      // 添加新方法
-      setValue (value) {
-        const newValue = Math.max(
-          this.config.minValue,
-          Math.min(value, this.config.maxValue)
-        )
-        this.state.value = newValue
-        this.updateView()
-      }
-      updateView () {
-        this.elements.input.value = this.state.value
-      }
-    }
-    // 滑块管理器
-    class SliderManager {
-      constructor(options = {}) {
-        this.config = {
-          values: options.values,
-          defaultValue: options.defaultValue || null,
-          onChange: options.onChange || (() => { })
-        }
-
-        this.elements = {
-          slider: document.querySelector(options.sliderSelector),
-          track: null,
-          fill: null,
-          thumb: null,
-          points: null
-        }
-
-        this.state = {
-          currentValue: this.config.defaultValue || this.config.values[0],
-          isDragging: false
-        }
-
-        // Calculate percent mapping
-        this.percentMap = this.calculateUniformPercentMap(this.config.values)
-        this.init()
-      }
-
-      init () {
-        this.elements.track = this.elements.slider.querySelector('.slider-track')
-        this.elements.fill = this.elements.slider.querySelector('.slider-fill')
-        this.elements.thumb = this.elements.slider.querySelector('.slider-thumb')
-        this.elements.points = this.elements.slider.querySelectorAll('.point')
-
-        this.bindEvents()
-        this.updateSlider(this.valueToPercent(this.state.currentValue), true)
-      }
-
-      calculateUniformPercentMap (values) {
-        const range = values.length - 1 // Adjust to ensure full range coverage
-        return values.map((_, idx) => (idx / range) * 100)
-      }
-
-      valueToPercent (value) {
-        const index = this.config.values.indexOf(value)
-        return index !== -1 ? this.percentMap[index] : 0
-      }
-
-      createValueToPercentMap () {
-        const map = {}
-        this.config.values.forEach((value, index) => {
-          map[value] = this.percentMap[index]
-        })
-        return map
-      }
-
-      percentToValue (percent) {
-        const lowestValueIndex = this.percentMap.findIndex(p => p >= percent)
-        const lowerValueIndex = lowestValueIndex === 0 ? 0 : lowestValueIndex - 1
-
-        if (lowestValueIndex === -1) return this.config.values[this.config.values.length - 1]
-        if (lowestValueIndex === 0) return this.config.values[0]
-
-        const distanceToLower = Math.abs(this.percentMap[lowerValueIndex] - percent)
-        const distanceToUpper = Math.abs(this.percentMap[lowestValueIndex] - percent)
-
-        return distanceToLower < distanceToUpper ? this.config.values[lowerValueIndex] : this.config.values[lowestValueIndex]
-      }
-
-      findClosestValue (percent) {
-        let closestIndex = 0
-
-        this.percentMap.forEach((p, index) => {
-          const distance = Math.abs(p - percent)
-          if (distance < Math.abs(this.percentMap[closestIndex] - percent)) {
-            closestIndex = index
+        ],
+        [
+          'week',
+          {
+            name: 'week',
+            unit: '周',
+            value: 168
           }
-        })
+        ],
+        [
+          'month',
+          {
+            name: 'month',
+            unit: '月',
+            value: 720
+          }
+        ],
+        [
+          'year',
+          {
+            name: 'year',
+            unit: '年',
+            value: 8760
+          }
+        ]
+      ]);
+    </script>
+    <script>
+      // 选择器管理器
+      class SelectManager {
+        constructor(options = {}) {
+          this.config = {
+            containerSelector: options.containerSelector || '.select-container',
+            triggerSelector: options.triggerSelector || '.select-trigger',
+            selectedTextSelector: options.selectedTextSelector || '.selected-text',
+            optionSelector: options.optionSelector || '.option',
+            activeClass: options.activeClass || 'active',
+            onChange: options.onChange || (() => {}),
+            defaultValue: options.defaultValue || null
+          };
+          this.elements = {
+            container: null,
+            trigger: null,
+            selectedText: null,
+            options: null
+          };
 
-        return this.config.values[closestIndex]
-      }
+          this.state = {
+            isOpen: false,
+            selectedValue: this.config.defaultValue
+          };
+          this.isInternalUpdate = false; // 添加内部更新标志
+          this.init();
+        }
 
-      updateSlider (percent, shouldSnap = true) {
-        percent = Math.max(0, Math.min(100, percent))
+        init() {
+          // 初始化 DOM 元素
+          this.elements.container = document.querySelector(this.config.containerSelector);
+          if (!this.elements.container) {
+            console.error('Time select container not found');
+            return;
+          }
+          this.elements.trigger = this.elements.container.querySelector(
+            this.config.triggerSelector
+          );
+          this.elements.selectedText = this.elements.container.querySelector(
+            this.config.selectedTextSelector
+          );
+          this.elements.options = this.elements.container.querySelectorAll(
+            this.config.optionSelector
+          );
 
-        if (shouldSnap) {
-          const newValue = this.percentToValue(percent)
-          if (newValue !== this.state.currentValue) {
-            this.state.currentValue = newValue
-            percent = this.valueToPercent(this.state.currentValue)
-            this.config.onChange(this.state.currentValue, 'slider')
+          if (!this.validateElements()) {
+            console.error('Required elements not found');
+            return;
+          }
+
+          this.bindEvents();
+          this.initializeSelection();
+        }
+
+        validateElements() {
+          return (
+            this.elements.trigger && this.elements.selectedText && this.elements.options.length > 0
+          );
+        }
+
+        bindEvents() {
+          // 点击触发器
+          this.elements.trigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.toggleDropdown();
+          });
+
+          // 选项点击事件
+          this.elements.options.forEach((option) => {
+            option.addEventListener('click', (e) => {
+              e.stopPropagation();
+              this.selectOption(option);
+            });
+          });
+
+          // 点击外部关闭
+          document.addEventListener('click', (e) => {
+            if (!this.elements.container.contains(e.target)) {
+              this.closeDropdown();
+            }
+          });
+
+          // ESC 键关闭
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+              this.closeDropdown();
+            }
+          });
+        }
+
+        initializeSelection() {
+          // 初始化选中状态
+          if (this.config.defaultValue) {
+            const defaultOption = Array.from(this.elements.options).find(
+              (option) => option.dataset.value === this.config.defaultValue
+            );
+
+            if (defaultOption) {
+              this.selectOption(defaultOption, false);
+            }
           }
         }
 
-        // Update UI
-        this.elements.fill.style.width = `${percent}%`
-        this.elements.thumb.style.left = `${percent}%`
+        toggleDropdown() {
+          this.state.isOpen = !this.state.isOpen;
+          this.elements.container.classList.toggle(this.config.activeClass);
+        }
 
-        // Update point active state
-        this.elements.points.forEach((point, index) => {
-          point.classList.toggle('active', this.percentMap[index] <= percent)
-        })
+        openDropdown() {
+          this.state.isOpen = true;
+          this.elements.container.classList.add(this.config.activeClass);
+        }
+
+        closeDropdown() {
+          this.state.isOpen = false;
+          this.elements.container.classList.remove(this.config.activeClass);
+        }
+
+        selectOption(option, shouldNotify = true) {
+          const value = option.dataset.value;
+          const text = option.textContent;
+
+          this.state.selectedValue = value;
+          this.elements.selectedText.textContent = text;
+
+          // 更新选中状态的样式
+          this.elements.options.forEach((opt) => {
+            opt.classList.toggle('selected', opt === option);
+          });
+
+          this.closeDropdown();
+
+          if (shouldNotify && !this.isInternalUpdate) {
+            this.config.onChange(value, text);
+          }
+        }
+
+        // 公共方法
+        getValue() {
+          return this.state.selectedValue;
+        }
+
+        setText(text) {
+          this.elements.selectedText.textContent = text;
+        }
+
+        setValue(value) {
+          if (this.isInternalUpdate) return; // 如果是内部更新，直接返回
+
+          this.isInternalUpdate = true; // 设置标志
+          const option = Array.from(this.elements.options).find(
+            (opt) => opt.dataset.value === value
+          );
+
+          if (option) {
+            this.selectOption(option, false); // 不触发 onChange 回调
+          }
+          this.isInternalUpdate = false; // 重置标志
+        }
+
+        disable() {
+          this.elements.container.classList.add('disabled');
+          this.elements.trigger.setAttribute('disabled', 'disabled');
+        }
+
+        enable() {
+          this.elements.container.classList.remove('disabled');
+          this.elements.trigger.removeAttribute('disabled');
+        }
       }
+      // 计数管理器
+      class QuantityManager {
+        constructor(options = {}) {
+          this.config = {
+            minValue: options.minValue ?? 0,
+            maxValue: options.maxValue || 999999, // 增大最大值上限
+            defaultValue: options.defaultValue ?? 1,
+            onChange: options.onChange || (() => {})
+          };
 
-      getPercentFromEvent (e) {
-        const rect = this.elements.track.getBoundingClientRect()
-        return Math.max(0, Math.min(100, ((e.clientX - rect.left) / rect.width) * 100))
+          this.elements = {
+            input: document.querySelector(options.inputSelector),
+            upButton: document.querySelector(options.upButtonSelector),
+            downButton: document.querySelector(options.downButtonSelector)
+          };
+
+          this.state = {
+            value: this.config.defaultValue
+          };
+
+          this.init();
+        }
+
+        init() {
+          this.bindEvents();
+          this.updateView();
+        }
+
+        bindEvents() {
+          this.elements.upButton.addEventListener('click', () => this.increment());
+          this.elements.downButton.addEventListener('click', () => this.decrement());
+          this.elements.input.addEventListener('input', (e) => this.handleInput(e));
+          this.elements.input.addEventListener('blur', () => this.validateValue());
+        }
+
+        increment() {
+          if (this.state.value < this.config.maxValue) {
+            this.setState(this.state.value + 1);
+          }
+        }
+
+        decrement() {
+          if (this.state.value > this.config.minValue) {
+            this.setState(this.state.value - 1);
+          }
+        }
+
+        handleInput(e) {
+          e.target.value = e.target.value.replace(/[^\d]/g, '');
+          const value = parseInt(e.target.value);
+          if (!isNaN(value)) {
+            this.setState(value);
+          }
+        }
+
+        validateValue() {
+          let value = parseInt(this.elements.input.value);
+          if (isNaN(value) || this.elements.input.value === '') {
+            value = this.config.defaultValue;
+          }
+          value = Math.max(this.config.minValue, Math.min(value, this.config.maxValue));
+          this.setState(value);
+        }
+
+        setState(newValue) {
+          this.state.value = newValue;
+          this.updateView();
+          this.config.onChange(newValue, 'quantity');
+        }
+        // 添加新方法
+        setValue(value) {
+          const newValue = Math.max(this.config.minValue, Math.min(value, this.config.maxValue));
+          this.state.value = newValue;
+          this.updateView();
+        }
+        updateView() {
+          this.elements.input.value = this.state.value;
+        }
       }
+      // 滑块管理器
+      class SliderManager {
+        constructor(options = {}) {
+          this.config = {
+            values: options.values,
+            defaultValue: options.defaultValue || null,
+            onChange: options.onChange || (() => {})
+          };
 
-      setValue (value) {
-        // 修改setValue方法，让它能够处理超出预设范围的值
-        if (this.config.values.includes(value)) {
-          this.state.currentValue = value;
-        } else if (value > Math.max(...this.config.values)) {
-          // 如果值超过最大预设值，直接设置为用户输入的值而不是预设的最大值
-          this.state.currentValue = value;
-          // 将滑块显示为最大位置
-          const percent = 100;
+          this.elements = {
+            slider: document.querySelector(options.sliderSelector),
+            track: null,
+            fill: null,
+            thumb: null,
+            points: null
+          };
+
+          this.state = {
+            currentValue: this.config.defaultValue || this.config.values[0],
+            isDragging: false
+          };
+
+          // Calculate percent mapping
+          this.percentMap = this.calculateUniformPercentMap(this.config.values);
+          this.init();
+        }
+
+        init() {
+          this.elements.track = this.elements.slider.querySelector('.slider-track');
+          this.elements.fill = this.elements.slider.querySelector('.slider-fill');
+          this.elements.thumb = this.elements.slider.querySelector('.slider-thumb');
+          this.elements.points = this.elements.slider.querySelectorAll('.point');
+
+          this.bindEvents();
+          this.updateSlider(this.valueToPercent(this.state.currentValue), true);
+        }
+
+        calculateUniformPercentMap(values) {
+          const range = values.length - 1; // Adjust to ensure full range coverage
+          return values.map((_, idx) => (idx / range) * 100);
+        }
+
+        valueToPercent(value) {
+          const index = this.config.values.indexOf(value);
+          return index !== -1 ? this.percentMap[index] : 0;
+        }
+
+        createValueToPercentMap() {
+          const map = {};
+          this.config.values.forEach((value, index) => {
+            map[value] = this.percentMap[index];
+          });
+          return map;
+        }
+
+        percentToValue(percent) {
+          const lowestValueIndex = this.percentMap.findIndex((p) => p >= percent);
+          const lowerValueIndex = lowestValueIndex === 0 ? 0 : lowestValueIndex - 1;
+
+          if (lowestValueIndex === -1) return this.config.values[this.config.values.length - 1];
+          if (lowestValueIndex === 0) return this.config.values[0];
+
+          const distanceToLower = Math.abs(this.percentMap[lowerValueIndex] - percent);
+          const distanceToUpper = Math.abs(this.percentMap[lowestValueIndex] - percent);
+
+          return distanceToLower < distanceToUpper
+            ? this.config.values[lowerValueIndex]
+            : this.config.values[lowestValueIndex];
+        }
+
+        findClosestValue(percent) {
+          let closestIndex = 0;
+
+          this.percentMap.forEach((p, index) => {
+            const distance = Math.abs(p - percent);
+            if (distance < Math.abs(this.percentMap[closestIndex] - percent)) {
+              closestIndex = index;
+            }
+          });
+
+          return this.config.values[closestIndex];
+        }
+
+        updateSlider(percent, shouldSnap = true) {
+          percent = Math.max(0, Math.min(100, percent));
+
+          if (shouldSnap) {
+            const newValue = this.percentToValue(percent);
+            if (newValue !== this.state.currentValue) {
+              this.state.currentValue = newValue;
+              percent = this.valueToPercent(this.state.currentValue);
+              this.config.onChange(this.state.currentValue, 'slider');
+            }
+          }
+
+          // Update UI
           this.elements.fill.style.width = `${percent}%`;
           this.elements.thumb.style.left = `${percent}%`;
-          
-          // 设置所有点为激活状态
-          this.elements.points.forEach((point) => {
-            point.classList.add('active');
+
+          // Update point active state
+          this.elements.points.forEach((point, index) => {
+            point.classList.toggle('active', this.percentMap[index] <= percent);
           });
-          
-          return; // 直接返回，不进行后续的滑块更新
-        } else {
-          // 如果不在预设值中，但在范围内，查找小于该值的最大断点
-          const lowers = this.config.values.filter(v => v <= value);
-          if (lowers.length === 0) this.state.currentValue = this.config.values[0];
-          else {
-            let floorValue = Math.max(...lowers);
-            this.state.currentValue = floorValue;
+        }
+
+        getPercentFromEvent(e) {
+          const rect = this.elements.track.getBoundingClientRect();
+          return Math.max(0, Math.min(100, ((e.clientX - rect.left) / rect.width) * 100));
+        }
+
+        setValue(value) {
+          // 修改setValue方法，让它能够处理超出预设范围的值
+          if (this.config.values.includes(value)) {
+            this.state.currentValue = value;
+          } else if (value > Math.max(...this.config.values)) {
+            // 如果值超过最大预设值，直接设置为用户输入的值而不是预设的最大值
+            this.state.currentValue = value;
+            // 将滑块显示为最大位置
+            const percent = 100;
+            this.elements.fill.style.width = `${percent}%`;
+            this.elements.thumb.style.left = `${percent}%`;
+
+            // 设置所有点为激活状态
+            this.elements.points.forEach((point) => {
+              point.classList.add('active');
+            });
+
+            return; // 直接返回，不进行后续的滑块更新
+          } else {
+            // 如果不在预设值中，但在范围内，查找小于该值的最大断点
+            const lowers = this.config.values.filter((v) => v <= value);
+            if (lowers.length === 0) this.state.currentValue = this.config.values[0];
+            else {
+              let floorValue = Math.max(...lowers);
+              this.state.currentValue = floorValue;
+            }
           }
-        }
-        
-        const percent = this.valueToPercent(this.state.currentValue);
-        this.updateSlider(percent, true); // 更新滑块并允许吸附
-      }
 
-      snapToClosestValue (percent) {
-        const closestValue = this.findClosestValue(percent)
-        this.state.currentValue = closestValue
-        const snappedPercent = this.valueToPercent(closestValue)
-        this.updateSlider(snappedPercent)
-        this.config.onChange(closestValue, 'slider')
-      }
-
-      bindEvents () {
-        this.elements.thumb.addEventListener('mousedown', (e) => {
-          this.state.isDragging = true
-          this.elements.thumb.style.cursor = 'grabbing'
-          document.body.style.cursor = 'grabbing'
-          e.preventDefault()
-        })
-
-        document.addEventListener('mousemove', (e) => {
-          if (!this.state.isDragging) return
-          // Update position without snapping while dragging
-          this.updateSlider(this.getPercentFromEvent(e), false)
-        })
-
-        document.addEventListener('mouseup', (e) => {
-          if (!this.state.isDragging) return
-          this.state.isDragging = false
-          this.elements.thumb.style.cursor = 'grab'
-          document.body.style.cursor = 'default'
-
-          // Snap to the closest value on mouse up
-          const percent = this.getPercentFromEvent(e)
-          this.snapToClosestValue(percent)
-        })
-
-        this.elements.track.addEventListener('click', (e) => {
-          if (this.state.isDragging) return
-          const percent = this.getPercentFromEvent(e)
-          this.snapToClosestValue(percent)
-        })
-
-        this.elements.points.forEach((point, index) => {
-          point.addEventListener('click', (e) => {
-            e.stopPropagation()
-            this.state.currentValue = this.config.values[index]
-            const percent = this.valueToPercent(this.state.currentValue)
-            this.updateSlider(percent, false)
-            this.config.onChange(this.state.currentValue, 'slider')
-          })
-        })
-      }
-    }// 全局状态管理器
-    class ResourceStateManager {
-      constructor(initialState = {}) {
-        this.state = {
-          ...initialState
-        }
-        this.listeners = []
-      }
-
-      setState (key, value, source) {
-        this.state[key] = value
-        this.notifyListeners(key, value, source)
-      }
-
-      getState (key) {
-        return this.state[key]
-      }
-
-
-      addListener (listener) {
-        this.listeners.push(listener)
-      }
-
-      notifyListeners (key, value, source) {
-        this.listeners.forEach(listener => listener(key, value, source))
-      }
-    }
-
-    // 展示计算结果管理器
-    // 展示计算结果管理器
-    class ShowManager {
-      constructor(options = {}) {
-        this.config = {
-          containerSelector: options.containerSelector || '.result-container',
-          resultSelector: options.resultSelector || '.result',
-          resultFormat: options.resultFormat || (value => value.toFixed(2)),
-          defaultValue: options.defaultValue || 0
+          const percent = this.valueToPercent(this.state.currentValue);
+          this.updateSlider(percent, true); // 更新滑块并允许吸附
         }
 
-        this.elements = {
-          containers: [], // 改为数组存储多个容器
-          results: []    // 改为数组存储多个结果元素
+        snapToClosestValue(percent) {
+          const closestValue = this.findClosestValue(percent);
+          this.state.currentValue = closestValue;
+          const snappedPercent = this.valueToPercent(closestValue);
+          this.updateSlider(snappedPercent);
+          this.config.onChange(closestValue, 'slider');
         }
 
-        this.state = {
-          currentValue: this.config.defaultValue
+        bindEvents() {
+          this.elements.thumb.addEventListener('mousedown', (e) => {
+            this.state.isDragging = true;
+            this.elements.thumb.style.cursor = 'grabbing';
+            document.body.style.cursor = 'grabbing';
+            e.preventDefault();
+          });
+
+          document.addEventListener('mousemove', (e) => {
+            if (!this.state.isDragging) return;
+            // Update position without snapping while dragging
+            this.updateSlider(this.getPercentFromEvent(e), false);
+          });
+
+          document.addEventListener('mouseup', (e) => {
+            if (!this.state.isDragging) return;
+            this.state.isDragging = false;
+            this.elements.thumb.style.cursor = 'grab';
+            document.body.style.cursor = 'default';
+
+            // Snap to the closest value on mouse up
+            const percent = this.getPercentFromEvent(e);
+            this.snapToClosestValue(percent);
+          });
+
+          this.elements.track.addEventListener('click', (e) => {
+            if (this.state.isDragging) return;
+            const percent = this.getPercentFromEvent(e);
+            this.snapToClosestValue(percent);
+          });
+
+          this.elements.points.forEach((point, index) => {
+            point.addEventListener('click', (e) => {
+              e.stopPropagation();
+              this.state.currentValue = this.config.values[index];
+              const percent = this.valueToPercent(this.state.currentValue);
+              this.updateSlider(percent, false);
+              this.config.onChange(this.state.currentValue, 'slider');
+            });
+          });
+        }
+      } // 全局状态管理器
+      class ResourceStateManager {
+        constructor(initialState = {}) {
+          this.state = {
+            ...initialState
+          };
+          this.listeners = [];
         }
 
-        this.init()
-      }
-
-      init () {
-        // 获取所有匹配的容器
-        this.elements.containers = Array.from(document.querySelectorAll(this.config.containerSelector))
-        console.log(this.elements.containers)
-        if (this.elements.containers.length === 0) {
-          console.error('No result containers found')
-          return
+        setState(key, value, source) {
+          this.state[key] = value;
+          this.notifyListeners(key, value, source);
         }
 
-        // 从每个容器中获取结果元素
-        this.elements.results = this.elements.containers.flatMap(container => {
-          const result = Array.from(container.querySelectorAll(this.config.resultSelector))
-          console.log(result)
-          return result
-        }) // 过滤掉无效的结果元素
-        console.log(this.elements.results)
-        if (this.elements.results.length === 0) {
-          console.error('No result elements found')
-          return
+        getState(key) {
+          return this.state[key];
         }
-        this.updateDisplay()
+
+        addListener(listener) {
+          this.listeners.push(listener);
+        }
+
+        notifyListeners(key, value, source) {
+          this.listeners.forEach((listener) => listener(key, value, source));
+        }
       }
 
-      updateDisplay () {
-        const formattedValue = this.config.resultFormat(this.state.currentValue)
-        // 更新所有结果元素
-        this.elements.results.forEach(result => {
-          result.textContent = formattedValue
-        })
-      }
+      // 展示计算结果管理器
+      // 展示计算结果管理器
+      class ShowManager {
+        constructor(options = {}) {
+          this.config = {
+            containerSelector: options.containerSelector || '.result-container',
+            resultSelector: options.resultSelector || '.result',
+            resultFormat: options.resultFormat || ((value) => value.toFixed(2)),
+            defaultValue: options.defaultValue || 0
+          };
 
-      setValue (value) {
-        this.state.currentValue = value
-        this.updateDisplay()
-      }
-    }
+          this.elements = {
+            containers: [], // 改为数组存储多个容器
+            results: [] // 改为数组存储多个结果元素
+          };
 
-    document.addEventListener('DOMContentLoaded', function () {
-      // 创建计算状态管理器
-      const resourceState = new ResourceStateManager({
-        cpu: 1,
-        memory: 1,
-        storage: 0,
-        network: 0,
-        port: 0,
-        count: 1,
-        time: 'hour',
-        region: 'a',
-        timeCount: 1,
-      })
-      // CPU 控件初始化
-      const cpuSlider = new SliderManager({
-        sliderSelector: '.segmented-slider.cpu-slider',
-        values: [1, 32, 64, 128, 256],
-        defaultValue: resourceState.getState('cpu'),
-        onChange: (value, source) => {
-          if (source === 'slider') {
-            cpuQuantity.setValue(value)
-            resourceState.setState('cpu', value, source)
+          this.state = {
+            currentValue: this.config.defaultValue
+          };
+
+          this.init();
+        }
+
+        init() {
+          // 获取所有匹配的容器
+          this.elements.containers = Array.from(
+            document.querySelectorAll(this.config.containerSelector)
+          );
+          console.log(this.elements.containers);
+          if (this.elements.containers.length === 0) {
+            console.error('No result containers found');
+            return;
           }
-        }
-      })
-      const cpuQuantity = new QuantityManager({
-        inputSelector: '.cpu-number-input .quantity-input',
-        upButtonSelector: '.cpu-number-input .arrow.up',
-        downButtonSelector: '.cpu-number-input .arrow.down',
-        minValue: 1,
-        maxValue: 999999, // 提高最大值限制
-        defaultValue: resourceState.getState('cpu'),
-        onChange: (value, source) => {
-          if (source === 'quantity') {
-            cpuSlider.setValue(value)
-            resourceState.setState('cpu', value, source)
+
+          // 从每个容器中获取结果元素
+          this.elements.results = this.elements.containers.flatMap((container) => {
+            const result = Array.from(container.querySelectorAll(this.config.resultSelector));
+            console.log(result);
+            return result;
+          }); // 过滤掉无效的结果元素
+          console.log(this.elements.results);
+          if (this.elements.results.length === 0) {
+            console.error('No result elements found');
+            return;
           }
+          this.updateDisplay();
         }
-      })
 
-      console.log('memory init')
-      // Memory 控件初始化
-      const memorySlider = new SliderManager({
-        sliderSelector: '.segmented-slider.memory-slider',
-        values: [1, 128, 512, 1024, 2048],
-        defaultValue: resourceState.getState('memory'),
-        onChange: (value, source) => {
-          if (source === 'slider') {
-            memoryQuantity.setValue(value)
-            resourceState.setState('memory', value, source)
-          }
+        updateDisplay() {
+          const formattedValue = this.config.resultFormat(this.state.currentValue);
+          // 更新所有结果元素
+          this.elements.results.forEach((result) => {
+            result.textContent = formattedValue;
+          });
         }
-      })
-      const memoryQuantity = new QuantityManager({
-        inputSelector: '.memory-number-input .quantity-input',
-        upButtonSelector: '.memory-number-input .arrow.up',
-        downButtonSelector: '.memory-number-input .arrow.down',
-        minValue: 1,
-        maxValue: 999999, // 提高最大值限制
-        defaultValue: resourceState.getState('memory'),
-        onChange: (value, source) => {
-          if (source === 'quantity') {
-            memorySlider.setValue(value)
-            resourceState.setState('memory', value, source)
-          }
+
+        setValue(value) {
+          this.state.currentValue = value;
+          this.updateDisplay();
         }
-      })
-      console.log('storage init')
-      // Storage 控件初始化
-      const storageQuantity = new QuantityManager({
-        inputSelector: '.storage-number-input .quantity-input',
-        upButtonSelector: '.storage-number-input .arrow.up',
-        downButtonSelector: '.storage-number-input .arrow.down',
-        minValue: 0,
-        maxValue: 999999, // 提高最大值限制
-        defaultValue: resourceState.getState('storage'),
-        onChange: (value, source) => {
-
-          resourceState.setState('storage', value, source)
-
-        }
-      })
-      console.log('network init')
-      // network 控件初始化
-      const networkQuantity = new QuantityManager({
-        inputSelector: '.network-number-input .quantity-input',
-        upButtonSelector: '.network-number-input .arrow.up',
-        downButtonSelector: '.network-number-input .arrow.down',
-        minValue: 0,
-        maxValue: 999999, // 提高最大值限制
-        defaultValue: resourceState.getState('network'),
-        onChange: (value, source) => {
-          // if (source === 'quantity') {
-          resourceState.setState('network', value, source)
-          // }
-        }
-      })
-      // port 控件初始化
-      const portQuantity = new QuantityManager({
-        inputSelector: '.port-number-input .quantity-input',
-        upButtonSelector: '.port-number-input .arrow.up',
-        downButtonSelector: '.port-number-input .arrow.down',
-        minValue: 0,
-        maxValue: 999999, // 提高最大值限制
-        defaultValue: resourceState.getState('port'),
-        onChange: (value, source) => {
-          // if (source === 'quantity') {
-          resourceState.setState('port', value, source)
-          // }
-        }
-      })
-      // count 控件初始化
-      const countQuantity = new QuantityManager({
-        inputSelector: '.count-number-input .quantity-input',
-        upButtonSelector: '.count-number-input .arrow.up',
-        downButtonSelector: '.count-number-input .arrow.down',
-        minValue: 0,
-        maxValue: 999999, // 提高最大值限制
-        defaultValue: resourceState.getState('count'),
-        onChange: (value, source) => {
-          resourceState.setState('count', value, source)
-        }
-      })
-      // time 控件初始化
-      console.log('time mangeer')
-      const timeSelect = new SelectManager({
-        containerSelector: '.time-select-container1',
-        defaultValue: resourceState.getState('time'),
-        onChange: (value, text) => {
-          console.log(`Selected: ${text} (value: ${value})`)
-          resourceState.setState('time', value, timeSelect)
-          // 处理选择变更
-        }
-      })
-
-
-      // time count 控件初始化
-      console.log('time count mangeer')
-      const timeCountSelect = new QuantityManager({
-        inputSelector: '.time-count-number-input .quantity-input',
-        upButtonSelector: '.time-count-number-input .arrow.up',
-        downButtonSelector: '.time-count-number-input .arrow.down',
-        minValue: 0,
-        maxValue: 999999, // 提高最大值限制
-        defaultValue: resourceState.getState('timeCount'),
-        onChange: (value, source) => {
-          resourceState.setState('timeCount', value, source)
-        }
-      })
-
-      // price time2 控件初始化
-      console.log('price time mangeer 2')
-      const timeSelect2 = new SelectManager({
-        containerSelector: '.time-select-container2',
-        defaultValue: resourceState.getState('time'),
-        onChange: (value, text) => {
-          console.log(`Selected: ${text} (value: ${value})`)
-          resourceState.setState('time', value, timeSelect2)
-          // 处理选择变更
-        }
-      })
-      console.log('region init')
-      // region 控件初始化
-      const regionSelect = new SelectManager({
-        containerSelector: '.region-select',
-
-        defaultValue: resourceState.getState('region'),
-        onChange: (value, text) => {
-          console.log(`Selected: ${text} (value: ${value})`)
-          resourceState.setState('region', value)
-          // 处理选择变更
-        }
-      })
-
-      // show 控件初始化
-      console.log('show init')
-      const showManager = new ShowManager({
-        containerSelector: '.total-price',
-        resultSelector: '.total-price .price',
-        resultFormat: (value) => {
-          return value.toFixed(6)
-        },
-        defaultValue: 0
-      })
-      // show price
-      const showCpuManager = new ShowManager({
-        containerSelector: '.price-container',
-        resultSelector: '.price-container .cpu-price-result',
-        resultFormat: (value) => {
-          return value.toFixed(6)
-        },
-        defaultValue: 0
-      })
-      const showMemoryManager = new ShowManager({
-        containerSelector: '.price-container',
-        resultSelector: '.price-container .memory-price-result',
-        resultFormat: (value) => {
-          return value.toFixed(6)
-        },
-        defaultValue: 0
-      })
-      const showstorageManager = new ShowManager({
-        containerSelector: '.price-container',
-        resultSelector: '.price-container .storage-price-result',
-        resultFormat: (value) => {
-          return value.toFixed(6)
-        },
-        defaultValue: 0
-      })
-      const showPortManager = new ShowManager({
-        containerSelector: '.price-container',
-        resultSelector: '.price-container .port-price-result',
-        resultFormat: (value) => {
-          return value.toFixed(6)
-        },
-        defaultValue: 0
-      })
-      const showNetWorkManager = new ShowManager({
-        containerSelector: '.price-container',
-        resultSelector: '.price-container .network-price-result',
-        resultFormat: (value) => {
-          return value.toFixed(6)
-        },
-        defaultValue: 0
-      })
-      const showCycleManager = new ShowManager({
-        containerSelector: '.price-container',
-        resultSelector: '.price-container .price-cycle',
-        resultFormat: (value) => {
-          return value
-        },
-        defaultValue: resourceState.getState('time')
-      })
-      console.log('add listener')
-      // 两个time 控件状态绑定
-      resourceState.addListener((key, value, source) => {
-        // 只处理 time 相关的更新
-        if (key !== 'time') return
-
-        // 根据来源更新另一个选择器
-        if (source === timeSelect) {
-          timeSelect2.setValue(value)
-        } else if (source === timeSelect2) {
-          timeSelect.setValue(value)
-        }
-      })
-
-      // 添加价格状态变化监听器（可选）for total price
-      resourceState.addListener((key, value, source) => {
-        if (![
-          'cpu',
-          'memory',
-          'storage',
-          'network',
-          'port',
-          'time',
-          'region',
-          'count',
-          'timeCount'
-        ].includes(key)) return
-        console.log('update state')
-        console.log(key)
-        console.log(`${key}: ${value} (from ${source})`)
-        const priceData = regionPriceMap.get(resourceState.getState('region'))
-        if (!priceData) {
-          throw new Error('region not found')
-        }
-        const cpuPrice = priceData.cpu.unit_price
-        const cpuAmount = cpuPrice * resourceState.getState('cpu')
-
-        const memoryPrice = priceData.memory.unit_price
-        const memoryAmount = memoryPrice * resourceState.getState('memory')
-
-        const storagePrice = priceData.storage.unit_price
-        const storageAmount = storagePrice * resourceState.getState('storage')
-
-        const networkPrice = priceData.network.unit_price
-        const networkAmount = networkPrice * resourceState.getState('network')
-
-        const portPrice = priceData.port.unit_price
-        const portAmount = portPrice * resourceState.getState('port')
-
-        let amount = cpuAmount + memoryAmount + storageAmount + portAmount
-        const count = resourceState.getState('count')
-        const time = resourceState.getState('time')
-        const timeCount = resourceState.getState('timeCount') || 0
-
-        const duration_scale = timeMap.get(time)?.value || 1
-        // 计算总金额
-        const totalAmount = (amount * duration_scale * timeCount + networkAmount) * count / 1_000_000
-        // 更新展示结果
-        showManager.setValue((totalAmount))
-      })
-
-      // 添加状态变化监听器（可选）for price table
-      resourceState.addListener((key, value, source) => {
-        if (![
-          'region',
-          'time'
-        ].includes(key)) return
-        // 这里可以添加价格计算等逻辑
-        const priceData = regionPriceMap.get(resourceState.getState('region'))
-        if (!priceData) {
-          throw new Error('region not found')
-        }
-        const time = resourceState.getState('time')
-        const duration_scale = timeMap.get(time)?.value || 1
-        const unit = timeMap.get(time)?.unit || ''
-        const cpuPrice = priceData.cpu.unit_price
-
-        const cpuAmount = cpuPrice * duration_scale / 1_000_000
-        showCpuManager.setValue(cpuAmount)
-
-        const memoryPrice = priceData.memory.unit_price
-        const memoryAmount = memoryPrice * duration_scale / 1_000_000
-        showMemoryManager.setValue(memoryAmount)
-
-        const storagePrice = priceData.storage.unit_price
-        const storageAmount = storagePrice * duration_scale / 1_000_000
-        showstorageManager.setValue(storageAmount)
-
-
-        const networkPrice = priceData.network.unit_price
-        showNetWorkManager.setValue(networkPrice / 1_000_000)
-
-        const portPrice = priceData.port.unit_price
-        const portAmount = portPrice * duration_scale / 1_000_000
-
-        showPortManager.setValue(portAmount)
-
-        showCycleManager.setValue(unit)
-      })
-
-
-      function triggerInitialCalculations () {
-        // Trigger calculations for total price
-        // resourceState.notifyListeners('cpu', resourceState.getState('cpu'), 'init');
-        // Trigger calculations for individual component prices
-        resourceState.notifyListeners('region', resourceState.getState('region'), 'init')
-
       }
-      triggerInitialCalculations()
-    });
 
+      document.addEventListener('DOMContentLoaded', function () {
+        // 创建计算状态管理器
+        const resourceState = new ResourceStateManager({
+          cpu: 1,
+          memory: 1,
+          storage: 0,
+          network: 0,
+          port: 0,
+          count: 1,
+          time: 'hour',
+          region: 'a',
+          timeCount: 1
+        });
+        // CPU 控件初始化
+        const cpuSlider = new SliderManager({
+          sliderSelector: '.segmented-slider.cpu-slider',
+          values: [1, 32, 64, 128, 256],
+          defaultValue: resourceState.getState('cpu'),
+          onChange: (value, source) => {
+            if (source === 'slider') {
+              cpuQuantity.setValue(value);
+              resourceState.setState('cpu', value, source);
+            }
+          }
+        });
+        const cpuQuantity = new QuantityManager({
+          inputSelector: '.cpu-number-input .quantity-input',
+          upButtonSelector: '.cpu-number-input .arrow.up',
+          downButtonSelector: '.cpu-number-input .arrow.down',
+          minValue: 1,
+          maxValue: 999999, // 提高最大值限制
+          defaultValue: resourceState.getState('cpu'),
+          onChange: (value, source) => {
+            if (source === 'quantity') {
+              cpuSlider.setValue(value);
+              resourceState.setState('cpu', value, source);
+            }
+          }
+        });
 
-  </script>
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script")
-      hm.src = "https://hm.baidu.com/hm.js?d8e8ecf669c47dc2512d3f1417e761f9"
-      var s = document.getElementsByTagName("script")[0]
-      s.parentNode.insertBefore(hm, s)
-    })();
-  </script>
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script")
-      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
-      var s = document.getElementsByTagName("script")[0]
-      s.parentNode.insertBefore(hm, s)
-    })();
-  </script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "q8gnm02cz6");
-</script>
-</body>
+        console.log('memory init');
+        // Memory 控件初始化
+        const memorySlider = new SliderManager({
+          sliderSelector: '.segmented-slider.memory-slider',
+          values: [1, 128, 512, 1024, 2048],
+          defaultValue: resourceState.getState('memory'),
+          onChange: (value, source) => {
+            if (source === 'slider') {
+              memoryQuantity.setValue(value);
+              resourceState.setState('memory', value, source);
+            }
+          }
+        });
+        const memoryQuantity = new QuantityManager({
+          inputSelector: '.memory-number-input .quantity-input',
+          upButtonSelector: '.memory-number-input .arrow.up',
+          downButtonSelector: '.memory-number-input .arrow.down',
+          minValue: 1,
+          maxValue: 999999, // 提高最大值限制
+          defaultValue: resourceState.getState('memory'),
+          onChange: (value, source) => {
+            if (source === 'quantity') {
+              memorySlider.setValue(value);
+              resourceState.setState('memory', value, source);
+            }
+          }
+        });
+        console.log('storage init');
+        // Storage 控件初始化
+        const storageQuantity = new QuantityManager({
+          inputSelector: '.storage-number-input .quantity-input',
+          upButtonSelector: '.storage-number-input .arrow.up',
+          downButtonSelector: '.storage-number-input .arrow.down',
+          minValue: 0,
+          maxValue: 999999, // 提高最大值限制
+          defaultValue: resourceState.getState('storage'),
+          onChange: (value, source) => {
+            resourceState.setState('storage', value, source);
+          }
+        });
+        console.log('network init');
+        // network 控件初始化
+        const networkQuantity = new QuantityManager({
+          inputSelector: '.network-number-input .quantity-input',
+          upButtonSelector: '.network-number-input .arrow.up',
+          downButtonSelector: '.network-number-input .arrow.down',
+          minValue: 0,
+          maxValue: 999999, // 提高最大值限制
+          defaultValue: resourceState.getState('network'),
+          onChange: (value, source) => {
+            // if (source === 'quantity') {
+            resourceState.setState('network', value, source);
+            // }
+          }
+        });
+        // port 控件初始化
+        const portQuantity = new QuantityManager({
+          inputSelector: '.port-number-input .quantity-input',
+          upButtonSelector: '.port-number-input .arrow.up',
+          downButtonSelector: '.port-number-input .arrow.down',
+          minValue: 0,
+          maxValue: 999999, // 提高最大值限制
+          defaultValue: resourceState.getState('port'),
+          onChange: (value, source) => {
+            // if (source === 'quantity') {
+            resourceState.setState('port', value, source);
+            // }
+          }
+        });
+        // count 控件初始化
+        const countQuantity = new QuantityManager({
+          inputSelector: '.count-number-input .quantity-input',
+          upButtonSelector: '.count-number-input .arrow.up',
+          downButtonSelector: '.count-number-input .arrow.down',
+          minValue: 0,
+          maxValue: 999999, // 提高最大值限制
+          defaultValue: resourceState.getState('count'),
+          onChange: (value, source) => {
+            resourceState.setState('count', value, source);
+          }
+        });
+        // time 控件初始化
+        console.log('time mangeer');
+        const timeSelect = new SelectManager({
+          containerSelector: '.time-select-container1',
+          defaultValue: resourceState.getState('time'),
+          onChange: (value, text) => {
+            console.log(`Selected: ${text} (value: ${value})`);
+            resourceState.setState('time', value, timeSelect);
+            // 处理选择变更
+          }
+        });
 
+        // time count 控件初始化
+        console.log('time count mangeer');
+        const timeCountSelect = new QuantityManager({
+          inputSelector: '.time-count-number-input .quantity-input',
+          upButtonSelector: '.time-count-number-input .arrow.up',
+          downButtonSelector: '.time-count-number-input .arrow.down',
+          minValue: 0,
+          maxValue: 999999, // 提高最大值限制
+          defaultValue: resourceState.getState('timeCount'),
+          onChange: (value, source) => {
+            resourceState.setState('timeCount', value, source);
+          }
+        });
+
+        // price time2 控件初始化
+        console.log('price time mangeer 2');
+        const timeSelect2 = new SelectManager({
+          containerSelector: '.time-select-container2',
+          defaultValue: resourceState.getState('time'),
+          onChange: (value, text) => {
+            console.log(`Selected: ${text} (value: ${value})`);
+            resourceState.setState('time', value, timeSelect2);
+            // 处理选择变更
+          }
+        });
+        console.log('region init');
+        // region 控件初始化
+        const regionSelect = new SelectManager({
+          containerSelector: '.region-select',
+
+          defaultValue: resourceState.getState('region'),
+          onChange: (value, text) => {
+            console.log(`Selected: ${text} (value: ${value})`);
+            resourceState.setState('region', value);
+            // 处理选择变更
+          }
+        });
+
+        // show 控件初始化
+        console.log('show init');
+        const showManager = new ShowManager({
+          containerSelector: '.total-price',
+          resultSelector: '.total-price .price',
+          resultFormat: (value) => {
+            return value.toFixed(6);
+          },
+          defaultValue: 0
+        });
+        // show price
+        const showCpuManager = new ShowManager({
+          containerSelector: '.price-container',
+          resultSelector: '.price-container .cpu-price-result',
+          resultFormat: (value) => {
+            return value.toFixed(6);
+          },
+          defaultValue: 0
+        });
+        const showMemoryManager = new ShowManager({
+          containerSelector: '.price-container',
+          resultSelector: '.price-container .memory-price-result',
+          resultFormat: (value) => {
+            return value.toFixed(6);
+          },
+          defaultValue: 0
+        });
+        const showstorageManager = new ShowManager({
+          containerSelector: '.price-container',
+          resultSelector: '.price-container .storage-price-result',
+          resultFormat: (value) => {
+            return value.toFixed(6);
+          },
+          defaultValue: 0
+        });
+        const showPortManager = new ShowManager({
+          containerSelector: '.price-container',
+          resultSelector: '.price-container .port-price-result',
+          resultFormat: (value) => {
+            return value.toFixed(6);
+          },
+          defaultValue: 0
+        });
+        const showNetWorkManager = new ShowManager({
+          containerSelector: '.price-container',
+          resultSelector: '.price-container .network-price-result',
+          resultFormat: (value) => {
+            return value.toFixed(6);
+          },
+          defaultValue: 0
+        });
+        const showCycleManager = new ShowManager({
+          containerSelector: '.price-container',
+          resultSelector: '.price-container .price-cycle',
+          resultFormat: (value) => {
+            return value;
+          },
+          defaultValue: resourceState.getState('time')
+        });
+        console.log('add listener');
+        // 两个time 控件状态绑定
+        resourceState.addListener((key, value, source) => {
+          // 只处理 time 相关的更新
+          if (key !== 'time') return;
+
+          // 根据来源更新另一个选择器
+          if (source === timeSelect) {
+            timeSelect2.setValue(value);
+          } else if (source === timeSelect2) {
+            timeSelect.setValue(value);
+          }
+        });
+
+        // 添加价格状态变化监听器（可选）for total price
+        resourceState.addListener((key, value, source) => {
+          if (
+            ![
+              'cpu',
+              'memory',
+              'storage',
+              'network',
+              'port',
+              'time',
+              'region',
+              'count',
+              'timeCount'
+            ].includes(key)
+          )
+            return;
+          console.log('update state');
+          console.log(key);
+          console.log(`${key}: ${value} (from ${source})`);
+          const priceData = regionPriceMap.get(resourceState.getState('region'));
+          if (!priceData) {
+            throw new Error('region not found');
+          }
+          const cpuPrice = priceData.cpu.unit_price;
+          const cpuAmount = cpuPrice * resourceState.getState('cpu');
+
+          const memoryPrice = priceData.memory.unit_price;
+          const memoryAmount = memoryPrice * resourceState.getState('memory');
+
+          const storagePrice = priceData.storage.unit_price;
+          const storageAmount = storagePrice * resourceState.getState('storage');
+
+          const networkPrice = priceData.network.unit_price;
+          const networkAmount = networkPrice * resourceState.getState('network');
+
+          const portPrice = priceData.port.unit_price;
+          const portAmount = portPrice * resourceState.getState('port');
+
+          let amount = cpuAmount + memoryAmount + storageAmount + portAmount;
+          const count = resourceState.getState('count');
+          const time = resourceState.getState('time');
+          const timeCount = resourceState.getState('timeCount') || 0;
+
+          const duration_scale = timeMap.get(time)?.value || 1;
+          // 计算总金额
+          const totalAmount =
+            ((amount * duration_scale * timeCount + networkAmount) * count) / 1_000_000;
+          // 更新展示结果
+          showManager.setValue(totalAmount);
+        });
+
+        // 添加状态变化监听器（可选）for price table
+        resourceState.addListener((key, value, source) => {
+          if (!['region', 'time'].includes(key)) return;
+          // 这里可以添加价格计算等逻辑
+          const priceData = regionPriceMap.get(resourceState.getState('region'));
+          if (!priceData) {
+            throw new Error('region not found');
+          }
+          const time = resourceState.getState('time');
+          const duration_scale = timeMap.get(time)?.value || 1;
+          const unit = timeMap.get(time)?.unit || '';
+          const cpuPrice = priceData.cpu.unit_price;
+
+          const cpuAmount = (cpuPrice * duration_scale) / 1_000_000;
+          showCpuManager.setValue(cpuAmount);
+
+          const memoryPrice = priceData.memory.unit_price;
+          const memoryAmount = (memoryPrice * duration_scale) / 1_000_000;
+          showMemoryManager.setValue(memoryAmount);
+
+          const storagePrice = priceData.storage.unit_price;
+          const storageAmount = (storagePrice * duration_scale) / 1_000_000;
+          showstorageManager.setValue(storageAmount);
+
+          const networkPrice = priceData.network.unit_price;
+          showNetWorkManager.setValue(networkPrice / 1_000_000);
+
+          const portPrice = priceData.port.unit_price;
+          const portAmount = (portPrice * duration_scale) / 1_000_000;
+
+          showPortManager.setValue(portAmount);
+
+          showCycleManager.setValue(unit);
+        });
+
+        function triggerInitialCalculations() {
+          // Trigger calculations for total price
+          // resourceState.notifyListeners('cpu', resourceState.getState('cpu'), 'init');
+          // Trigger calculations for individual component prices
+          resourceState.notifyListeners('region', resourceState.getState('region'), 'init');
+        }
+        triggerInitialCalculations();
+      });
+    </script>
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?d8e8ecf669c47dc2512d3f1417e761f9';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'q8gnm02cz6');
+    </script>
+  </body>
 </html>
