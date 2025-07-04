@@ -1,631 +1,624 @@
 main {
-    /* Ellipse 108 */
+  /* Ellipse 108 */
 
-    position: relative;
-
+  position: relative;
 }
 
 main .ellipse {
-    /* Ellipse 108 */
+  /* Ellipse 108 */
 
-    position: absolute;
-    width: 524.84px;
-    height: 524.84px;
-    left: calc(50% - 524.84px/2 - 411.42px);
-    top: 28.77px;
-    z-index: -1;
-    background: rgba(235, 242, 255, 0.7);
-    filter: blur(61.8477px);
-
+  position: absolute;
+  width: 524.84px;
+  height: 524.84px;
+  left: calc(50% - 524.84px / 2 - 411.42px);
+  top: 28.77px;
+  z-index: -1;
+  background: rgba(235, 242, 255, 0.7);
+  filter: blur(61.8477px);
 }
 
 main .main-container {
-    width: 1100px;
-    margin: 100px auto;
+  width: 1100px;
+  margin: 100px auto;
 }
 
 .price-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px;
-    width: 100%;
-    height: 36px;
-    margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+  height: 36px;
+  margin-bottom: 24px;
 }
 
 .price-header .title {
-    height: 36px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 36px;
-    color: #111824;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+  height: 36px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  color: #111824;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
 
 .price-header .title-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    gap: 13.51px;
-    height: 36px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 13.51px;
+  height: 36px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 .price-calculator {
-    display: flex;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 0.682898px rgba(0, 0, 0, 0.05), 0px 3.15903px 12.6361px rgba(182, 202, 224, 0.28);
-    border-radius: 12px;
-    border: Mixed solid var(--Gray-Modern-200, #E8EBF0);
-    justify-content: center;
+  display: flex;
+  background: #ffffff;
+  box-shadow:
+    0px 0px 0.682898px rgba(0, 0, 0, 0.05),
+    0px 3.15903px 12.6361px rgba(182, 202, 224, 0.28);
+  border-radius: 12px;
+  border: Mixed solid var(--Gray-Modern-200, #e8ebf0);
+  justify-content: center;
 }
 
 .region-select-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    gap: 24px;
-    width: 376.76px;
-    height: 36px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+  width: 376.76px;
+  height: 36px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
 
 .calculator-container {
-    padding:50px 70px 70px 50px;
-    border-radius: 10.1296px 0px 0px 10.1296px;
-    border-right: 0.84px solid var(--Gray-Modern-200, #E8EBF0);
+  padding: 50px 70px 70px 50px;
+  border-radius: 10.1296px 0px 0px 10.1296px;
+  border-right: 0.84px solid var(--Gray-Modern-200, #e8ebf0);
 }
 
 .price-table-container {
-    padding: 50px 50px 50px 70px;
+  padding: 50px 50px 50px 70px;
 }
 
 .calculator-header,
 .price-table-header {
-    /* Frame 20858 */
+  /* Frame 20858 */
 
-    /* Auto layout */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
 }
 
 .calculator-header {
-    margin-bottom: 30px;
-    width: 629px;
-    height: 32px;
-    margin-top: 10px;
+  margin-bottom: 30px;
+  width: 629px;
+  height: 32px;
+  margin-top: 10px;
 }
 
 .price-header {
-    width: 100%;
-    margin-bottom: 40px;
+  width: 100%;
+  margin-bottom: 40px;
 }
 
-.calculator-header+.line {
-    margin-top: 13px;
-    margin-bottom: 30px;
-    border: 0.84px solid var(--Gray-Modern-200, #E8EBF0)
+.calculator-header + .line {
+  margin-top: 13px;
+  margin-bottom: 30px;
+  border: 0.84px solid var(--Gray-Modern-200, #e8ebf0);
 }
 
 .calculator-header .title,
 .price-table-header .title {
-    /* 价格计算器 */
-    height: 22px;
+  /* 价格计算器 */
+  height: 22px;
 
-    font-family: 'PingFang SC';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-    display: flex;
-    align-items: flex-end;
-    letter-spacing: 0.12662px;
-    color: #111824;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.12662px;
+  color: #111824;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 .calculator-container .cpu-resource,
 .calculator-container .memory-resource {
-    /* Frame 20837 */
-    /* Auto layout */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8.44px;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-
+  /* Frame 20837 */
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8.44px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
 }
 
 .resource-item,
 .usage-item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0px;
-    width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px;
+  width: auto;
 }
 
-.calculator-container .resource-item>label,
-.calculator-container .usage-item>label {
-    display: flex;
-    gap: 2px;
-    align-items: center;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    font-family: PingFang SC;
-    font-size: 14px;
-    letter-spacing: 1px;
-    margin-right: 10px;
+.calculator-container .resource-item > label,
+.calculator-container .usage-item > label {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  font-family: PingFang SC;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-right: 10px;
 }
 
 .calculator-content {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
-.calculator-content>section {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
+.calculator-content > section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
 }
 
 .total-price {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 22px;
-    margin-top: 60px;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+  margin-top: 60px;
+  justify-content: center;
 }
 
 .total-price .price {
-    color: #1890ff;
-    font-size: 24px;
-    font-weight: 500;
+  color: #1890ff;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .calculator-input {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
-.section-title2{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8.44px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin-right: 20px;
-    margin-top: 12px; 
+.section-title2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8.44px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-right: 20px;
+  margin-top: 12px;
 }
 .section-title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8.44px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin-right: 20px;
-    margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8.44px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-right: 20px;
+  margin-top: 12px;
 }
 
 .section-title span {
-    /* Line 44 */
+  /* Line 44 */
 
-    width: 8.44px;
-    height: 0px;
+  width: 8.44px;
+  height: 0px;
 
-    /* light/sealos/secondary */
-    border: 3.37652px solid #219BF4;
-    transform: rotate(90deg);
+  /* light/sealos/secondary */
+  border: 3.37652px solid #219bf4;
+  transform: rotate(90deg);
 
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
-
 .price-list {
-    width: 250px;
-    padding: 0;
-    margin-top: 30px;
-    background: #FFFFFF;
+  width: 250px;
+  padding: 0;
+  margin-top: 30px;
+  background: #ffffff;
 }
 
 .price-list-header {
-    display: grid;
-    grid-template-columns: 90px 1fr;
-    align-items: center;
-    padding: 11px 20px;
-    background: #F4F4F7;
-    border-radius: 5px;
-    margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-items: center;
+  padding: 11px 20px;
+  background: #f4f4f7;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .price-list-header span {
-    font-size: 14px;
-    color: #111824;
-    letter-spacing: 0.42px;
+  font-size: 14px;
+  color: #111824;
+  letter-spacing: 0.42px;
 }
 
 .unit-price {
-    display: flex;
-    align-items: center;
-    gap: 3.4px;
-    justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 3.4px;
+  justify-content: flex-start;
 }
 
 .unit-price img {
-    width: 14px;
-    height: 14px;
+  width: 14px;
+  height: 14px;
 }
 
 .price-items {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .price-item {
-    display: grid;
-    /* 修改为grid布局并设置两列 */
-    grid-template-columns: 90px 1fr;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    height: 44px;
+  display: grid;
+  /* 修改为grid布局并设置两列 */
+  grid-template-columns: 90px 1fr;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  height: 44px;
 }
 
 .resource {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .resource img {
-    width: 13.5px;
-    height: 13.5px;
+  width: 13.5px;
+  height: 13.5px;
 }
 
 .resource span {
-    font-size: 14px;
-    color: #111824;
-    letter-spacing: 0.52px;
+  font-size: 14px;
+  color: #111824;
+  letter-spacing: 0.52px;
 }
 
 .price-value {
-    display: flex;
-    align-items: center;
-    gap: 3.4px;
-    justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 3.4px;
+  justify-content: flex-start;
 }
 
 .price-value-amount {
-    font-size: 14px;
-    color: #0884DD;
+  font-size: 14px;
+  color: #0884dd;
 }
 
 .price-value-unit {
-    font-size: 14px;
-    color: #667085;
-    letter-spacing: 0.42px;
+  font-size: 14px;
+  color: #667085;
+  letter-spacing: 0.42px;
 }
 
 /* 段落式进度条 */
 .segmented-slider {
-    position: relative;
-    width: 300px;
-    padding: 20px 0;
-    margin-right: 40px;
-    /* margin: 0 40px; */
+  position: relative;
+  width: 300px;
+  padding: 20px 0;
+  margin-right: 40px;
+  /* margin: 0 40px; */
 }
 
 .slider-track {
-    position: relative;
-    height: 2px;
-    background: #F4F4F7;
-    border-radius: 2px;
+  position: relative;
+  height: 2px;
+  background: #f4f4f7;
+  border-radius: 2px;
 }
 
 .slider-fill {
-    position: absolute;
-    height: 100%;
-    background: #111824;
-    border-radius: 2px;
+  position: absolute;
+  height: 100%;
+  background: #111824;
+  border-radius: 2px;
 }
 
 .slider-thumb {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    background: #111824;
-    box-shadow: 0px 1.69px 2.53px 0.84px #ABBDCE66;
-    border-radius: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    transition: border-color 0.2s;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #111824;
+  box-shadow: 0px 1.69px 2.53px 0.84px #abbdce66;
+  border-radius: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: border-color 0.2s;
 }
 
 .value-points {
-    position: absolute;
-    width: 100%;
-    top: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: -10px;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -10px;
 }
 
 .point-value {
-    position: absolute;
-    transform: translateX(-50%);
-    font-size: 12px;
-    color: #667085;
-    white-space: nowrap;
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #667085;
+  white-space: nowrap;
 }
 
 .unit {
-    position: absolute;
-    right: -30px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 14px;
-    color: #667085;
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #667085;
 }
 
 .number-input {
-    display: flex;
-    align-items: center;
-    border: 0.84px solid var(--Gray-Modern-200, #E8EBF0);
-    color: #667085;
-    border-radius: 4px;
-    width: 236px;
-    background: #F7F8FA;
-    overflow: hidden;
-    position: relative;
+  display: flex;
+  align-items: center;
+  border: 0.84px solid var(--Gray-Modern-200, #e8ebf0);
+  color: #667085;
+  border-radius: 4px;
+  width: 236px;
+  background: #f7f8fa;
+  overflow: hidden;
+  position: relative;
 }
 
 .number-input .right-element {
-    position: absolute;
-    right: 26px;
-    font-size: 12px;
-    font-weight: 500;
-
+  position: absolute;
+  right: 26px;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .quantity-input {
-    width: 215px;
-    border: none;
-    padding: 6px 10px;
-    box-sizing: border-box;
-    background-color: #F7F8FA;
-    font-size: 14px;
-    outline: none;
-    -moz-appearance: textfield;
-    /* Firefox */
+  width: 215px;
+  border: none;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  background-color: #f7f8fa;
+  font-size: 14px;
+  outline: none;
+  -moz-appearance: textfield;
+  /* Firefox */
 }
 
 .quantity-input::-webkit-outer-spin-button,
 .quantity-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .cpu-number-input,
 .memory-number-input {
-    width: 88px;
+  width: 88px;
 }
 
 .cpu-number-input .quantity-input,
 .memory-number-input .quantity-input {
-    width: 52px;
+  width: 52px;
 }
 
 .number-input .arrows {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    border-left: 0.84px solid #E8EBF0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  border-left: 0.84px solid #e8ebf0;
 }
 
 .number-input .arrow {
-
-    border: none;
-    background: none;
-    width: 20px;
-    height: 13px;
-    padding: 1px 5px;
-    cursor: pointer;
-    color: #667085;
-    font-size: 8px;
+  border: none;
+  background: none;
+  width: 20px;
+  height: 13px;
+  padding: 1px 5px;
+  cursor: pointer;
+  color: #667085;
+  font-size: 8px;
 }
 
 .number-input .arrow:hover {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 .number-input .up img,
 .number-input .down img {
-    width: 10.13px;
-    height: 10.13px;
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
+  width: 10.13px;
+  height: 10.13px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 .number-input .up {
-    border-bottom: 0.84px solid #ddd;
+  border-bottom: 0.84px solid #ddd;
 }
 
 /* time select */
 .menu-select {
-    position: relative;
-    width: 120px;
-    user-select: none;
+  position: relative;
+  width: 120px;
+  user-select: none;
 }
 
 .select-trigger {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 12px;
-    background: white;
-    border: 0.84px solid #E8EBF0;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    color: #344054;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: white;
+  border: 0.84px solid #e8ebf0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #344054;
 }
 
 .select-options {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    margin-top: 4px;
-    background: white;
-    border: 0.84px solid #E8EBF0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: none;
-    z-index: 1000;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  background: white;
+  border: 0.84px solid #e8ebf0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
 }
 
 .option {
-    padding: 8px 12px;
-    cursor: pointer;
-    font-size: 14px;
-    color: #344054;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #344054;
 }
 
 .option:hover {
-    background: #F9FAFB;
+  background: #f9fafb;
 }
 
 .menu-select.active .select-options {
-    display: block;
+  display: block;
 }
 
 .menu-select.active .arrow-icon {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .arrow-icon {
-    transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .region-select-container .select-trigger {
-    /* dropdown */
-    box-sizing: border-box;
+  /* dropdown */
+  box-sizing: border-box;
 
-    width: 300px;
-    height: 36px;
+  width: 300px;
+  height: 36px;
 
-    background: #FFFFFF;
-    /* light/general/outline-low */
-    border: 0.84px solid #E8EBF0;
-    /* light/1 */
-    box-shadow: 0px 1px 2px rgba(19, 51, 107, 0.05), 0px 0px 1px rgba(19, 51, 107, 0.08);
-    border-radius: 6px;
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 1;
+  background: #ffffff;
+  /* light/general/outline-low */
+  border: 0.84px solid #e8ebf0;
+  /* light/1 */
+  box-shadow:
+    0px 1px 2px rgba(19, 51, 107, 0.05),
+    0px 0px 1px rgba(19, 51, 107, 0.08);
+  border-radius: 6px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 1;
 }
 
 .region-select-container .option,
 .region-select-container .select-options,
 .region-select-container .select-trigger,
 .region-select-container .menu-select {
-    width: 300px;
+  width: 300px;
 }
 
 .time-select-container .select-trigger {
-    width: 85px;
-    background: #F7F8FA;
-    border: 0.844131px solid #E8EBF0;
-    border-radius: 5.27381px;
-    font-weight: 400;
-    font-size: 14px;
-    color: #24282C;
+  width: 85px;
+  background: #f7f8fa;
+  border: 0.844131px solid #e8ebf0;
+  border-radius: 5.27381px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #24282c;
 }
 
 .time-select-container .option,
 .time-select-container .select-options,
 .time-select-container .select-trigger,
 .time-select-container .menu-select {
-    width: 85px;
+  width: 85px;
 }
 
 .time-select-container2 {
-    width: auto;
+  width: auto;
 }
 
 .select-label {
-    /* 可用区 */
+  /* 可用区 */
 
-    width: 49.53px;
-    height: 20px;
+  width: 49.53px;
+  height: 20px;
 
-    /* label/large */
-    font-family: 'PingFang SC';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    /* identical to box height, or 143% */
-    display: flex;
-    align-items: flex-end;
-    letter-spacing: 0.1px;
+  /* label/large */
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.1px;
 
-    /* light/general/on-surface */
-    color: #111824;
+  /* light/general/on-surface */
+  color: #111824;
 
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 .duration-input-container {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }

@@ -1,146 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>使用Sealos部署Alist在线网盘管理系统教程</title>
-  <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
-  <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico">
-  <script src="../../../app_store/js/appstor.js" defer></script><script src="/app_store/js/stars.js" defer></script>
-  <script src="../../../app_store/js/navbar.js"></script>
-  <script src="../../../app_store/js/header-left.js"></script>
-  <script src="../../../app_store/js/foooter.js"></script>
-  <script src="../../../app_store/js/step.js"></script>
-  <script src="/js/sem.js" defer></script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "q8gnm02cz6");
-</script>
-</head>
-
-<body>
-  <div id="navbar-container"></div>
-  <div class="stepxq">
-    <div class="left-list" id="left-header"></div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('.nav-item[data-page="tool"]').classList.add('active');
-        document.querySelector('li[data-page="alist"]').classList.add('active');
-        document.getElementById('menu_sub').style.display = 'block';
-      });
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用Sealos部署Alist在线网盘管理系统教程</title>
+    <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css" />
+    <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico" />
+    <script src="../../../app_store/js/appstor.js" defer></script>
+    <script src="/app_store/js/stars.js" defer></script>
+    <script src="../../../app_store/js/navbar.js"></script>
+    <script src="../../../app_store/js/header-left.js"></script>
+    <script src="../../../app_store/js/foooter.js"></script>
+    <script src="../../../app_store/js/step.js"></script>
+    <script src="/js/sem.js" defer></script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'q8gnm02cz6');
     </script>
-    <div class="app-h5">
-      <div class="hard-top">
-        <div class="hard-title-stats">
-          <div class="title-stats">
-            <div class="title-logo">
-              <img src="../../img/Alist.svg" alt="Kuboard Logo">
-            </div>
-            <div class="hard-top-title">
-              <div class="hard-top2">
-                <h1>Alist</h1>
-                <span class="stats">
-                  <span class="stars">
-                    <img src="../../img/AFFINE-logo2.svg">43.5k
-                  </span>
-                  <span class="shares">
-                    <img src="../../img/project.svg">
-                    <a href="https://github.com/AlistGo/alist" target="_blank">项目首页</a>
-                  </span>
-                </span>
-              </div>
-              <p class="app-decistore">
-                AList 是一个支持多种存储，支持网页浏览和 WebDAV 的文件列表程序，可以将你的网盘挂载到一起，方便统一管理。使用 Sealos 部署 AList，不仅成本低至 0.19 /天，而且一键自动完成部署，默认提供外网地址访问。
-              </p>
-            </div>
-          </div>
-          <div class="buttons">
-            <button class="deploy-button">
-              <a href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dalist%26sealos_inside%3Dtrue" target="_blank">私有云部署</a>
-            </button>
-            <button class="yaml-button">
-              <a href="https://fael3z0zfze.feishu.cn/wiki/VWW3wcIR0i1KBbkm1pmc5H5fnRK?from=from_copylink" download target="_blank">部署文档</a>
-            </button>
-          </div>
-        </div>
-        <div class="carousel">
-          <div class="carousel-container">
-            <img src="/app_store/tool/alist/images/banner1.jpg" alt="Image 1" class="carousel-item active">
-            <img src="/app_store/tool/alist/images/banner2.jpg" alt="Image 1" class="carousel-item active">
-            <img src="/app_store/tool/alist/images/banner3.jpg" alt="Image 1" class="carousel-item active">
-          </div>
-          <div class="carousel-nav">
-            <button class="carousel-button prev">&lt;</button>
-            <button class="carousel-button next">&gt;</button>
-          </div>
-          <script src="../../../app_store/js/bannerlb.js"></script>
-        </div>
-        <div class="quick-start">
-          <h2 class="quick-start-h2">
-            <div>
-              <img src="../../img/Rectangle 34624253.svg">部署流程
-            </div>
-          </h2>
-          <div class="steps" id="steper"></div>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2">
-            <img src="../../img/Rectangle 34624253.svg">Alist介绍
-          </h2>
-          <ul class="features-list-ul">
-            <li>
-              AList 是一个功能强大的网盘管理工具，支持多种存储方式，用户可以将不同的网盘挂载在一起进行统一管理。AList 可以安装在任何连接网络的设备上，如服务器或路由器。<br /><br />支持的网盘包括：本地磁盘、FTP、SFTP、WebDAV、SMB、对象存储、115 网盘、123 网盘、百度网盘、阿里云盘、MEGA、谷歌云盘、谷歌相册、移动云盘、天翼云盘、OneDrive、迅雷、夸克网盘、蓝奏云、Cloudreve 等等。
-            </li>
-          </ul>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2">
-            <img src="../../img/Rectangle 34624253.svg">云端部署优势
-          </h2>
-          <ul class="features-list-ul">
-            <li><b>价格优势：</b> 低至 0.19 元/天的成本享受高性能的网盘服务，相比阿里云便宜数倍。</li>
-            <li><b>快速部署：</b> 1分钟内完成 AList 网盘的安装和自动配置，节省时间和精力。</li>
-            <li><b>稳定性：</b> 企业级的稳定性和可靠性，在高负载下依然能够平稳运行，保障用户的数据安全和访问流畅。</li>
-            <li><b>随开随用：</b>支持按需使用、随开随用，用户可以根据需要随时启动和停止服务，暂停不收费</li>
-            <li><b>弹性扩容：</b>提供弹性扩容能力，可以根据业务需求动态调整资源配置，确保服务的高效运行。</li>
-            <li><b>用多少扣多少：</b> Sealos 采用按使用量计费的模式，用户只需为实际使用的资源付费，进一步降低成本。</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="app-faq" id="about-right">
-      <div class="app-h5-left">
-        <h3>什么是Sealos？</h3>
-        <p class="sealos-detice">提供高性能可伸缩的容器应用管理能力，支持企业级 Kubernetes 容器化应用的全生命周期管理,一站式集成应用创建、开发、部署、上线等功能，提供了应用引擎、前后端开发框架、API网关、调度引擎等模块，一键部署Helm应用。</p>
-        <span class="sealos-detice-span"><a href="/">了解更多 ></a></span>
-      </div>
-      <div class="app-h5-left">
-        <h3>Sealos部署优势</h3>
-        <p class="sealos-detice"> 💰 快速上云：一键创建容器，自动化部署应用<br/>
-          🌐 成本缩减：仅容器付费，资源成本减少 80%<br/>
-          🛡️ 安全稳定：应用级和租户级网络隔离能力。
-        </p>
-      </div>
-      <h3>Alist部署交流群</h3>
-      <div class="app-h5-left3">
-        
-<img src="/app_store/tool/alist/images/alistewm.png">微信Alist交流群
-      </div>
-    </div>
-  </div>
-  <div class="h5footer" id="footer"></div>
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-</body>
+  </head>
 
+  <body>
+    <div id="navbar-container"></div>
+    <div class="stepxq">
+      <div class="left-list" id="left-header"></div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelector('.nav-item[data-page="tool"]').classList.add('active');
+          document.querySelector('li[data-page="alist"]').classList.add('active');
+          document.getElementById('menu_sub').style.display = 'block';
+        });
+      </script>
+      <div class="app-h5">
+        <div class="hard-top">
+          <div class="hard-title-stats">
+            <div class="title-stats">
+              <div class="title-logo">
+                <img src="../../img/Alist.svg" alt="Kuboard Logo" />
+              </div>
+              <div class="hard-top-title">
+                <div class="hard-top2">
+                  <h1>Alist</h1>
+                  <span class="stats">
+                    <span class="stars"> <img src="../../img/AFFINE-logo2.svg" />43.5k </span>
+                    <span class="shares">
+                      <img src="../../img/project.svg" />
+                      <a href="https://github.com/AlistGo/alist" target="_blank">项目首页</a>
+                    </span>
+                  </span>
+                </div>
+                <p class="app-decistore">
+                  AList 是一个支持多种存储，支持网页浏览和 WebDAV
+                  的文件列表程序，可以将你的网盘挂载到一起，方便统一管理。使用 Sealos 部署
+                  AList，不仅成本低至 0.19 /天，而且一键自动完成部署，默认提供外网地址访问。
+                </p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="deploy-button">
+                <a
+                  href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dalist%26sealos_inside%3Dtrue"
+                  target="_blank"
+                  >私有云部署</a
+                >
+              </button>
+              <button class="yaml-button">
+                <a
+                  href="https://fael3z0zfze.feishu.cn/wiki/VWW3wcIR0i1KBbkm1pmc5H5fnRK?from=from_copylink"
+                  download
+                  target="_blank"
+                  >部署文档</a
+                >
+              </button>
+            </div>
+          </div>
+          <div class="carousel">
+            <div class="carousel-container">
+              <img
+                src="/app_store/tool/alist/images/banner1.jpg"
+                alt="Image 1"
+                class="carousel-item active"
+              />
+              <img
+                src="/app_store/tool/alist/images/banner2.jpg"
+                alt="Image 1"
+                class="carousel-item active"
+              />
+              <img
+                src="/app_store/tool/alist/images/banner3.jpg"
+                alt="Image 1"
+                class="carousel-item active"
+              />
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-button prev">&lt;</button>
+              <button class="carousel-button next">&gt;</button>
+            </div>
+            <script src="../../../app_store/js/bannerlb.js"></script>
+          </div>
+          <div class="quick-start">
+            <h2 class="quick-start-h2">
+              <div><img src="../../img/Rectangle 34624253.svg" />部署流程</div>
+            </h2>
+            <div class="steps" id="steper"></div>
+          </div>
+          <div class="features-list">
+            <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg" />Alist介绍</h2>
+            <ul class="features-list-ul">
+              <li>
+                AList
+                是一个功能强大的网盘管理工具，支持多种存储方式，用户可以将不同的网盘挂载在一起进行统一管理。AList
+                可以安装在任何连接网络的设备上，如服务器或路由器。<br /><br />支持的网盘包括：本地磁盘、FTP、SFTP、WebDAV、SMB、对象存储、115
+                网盘、123
+                网盘、百度网盘、阿里云盘、MEGA、谷歌云盘、谷歌相册、移动云盘、天翼云盘、OneDrive、迅雷、夸克网盘、蓝奏云、Cloudreve
+                等等。
+              </li>
+            </ul>
+          </div>
+          <div class="features-list">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />云端部署优势
+            </h2>
+            <ul class="features-list-ul">
+              <li>
+                <b>价格优势：</b> 低至 0.19 元/天的成本享受高性能的网盘服务，相比阿里云便宜数倍。
+              </li>
+              <li><b>快速部署：</b> 1分钟内完成 AList 网盘的安装和自动配置，节省时间和精力。</li>
+              <li>
+                <b>稳定性：</b>
+                企业级的稳定性和可靠性，在高负载下依然能够平稳运行，保障用户的数据安全和访问流畅。
+              </li>
+              <li>
+                <b>随开随用：</b
+                >支持按需使用、随开随用，用户可以根据需要随时启动和停止服务，暂停不收费
+              </li>
+              <li>
+                <b>弹性扩容：</b
+                >提供弹性扩容能力，可以根据业务需求动态调整资源配置，确保服务的高效运行。
+              </li>
+              <li>
+                <b>用多少扣多少：</b> Sealos
+                采用按使用量计费的模式，用户只需为实际使用的资源付费，进一步降低成本。
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="app-faq" id="about-right">
+        <div class="app-h5-left">
+          <h3>什么是Sealos？</h3>
+          <p class="sealos-detice">
+            提供高性能可伸缩的容器应用管理能力，支持企业级 Kubernetes
+            容器化应用的全生命周期管理,一站式集成应用创建、开发、部署、上线等功能，提供了应用引擎、前后端开发框架、API网关、调度引擎等模块，一键部署Helm应用。
+          </p>
+          <span class="sealos-detice-span"><a href="/">了解更多 ></a></span>
+        </div>
+        <div class="app-h5-left">
+          <h3>Sealos部署优势</h3>
+          <p class="sealos-detice">
+            💰 快速上云：一键创建容器，自动化部署应用<br />
+            🌐 成本缩减：仅容器付费，资源成本减少 80%<br />
+            🛡️ 安全稳定：应用级和租户级网络隔离能力。
+          </p>
+        </div>
+        <h3>Alist部署交流群</h3>
+        <div class="app-h5-left3">
+          <img src="/app_store/tool/alist/images/alistewm.png" />微信Alist交流群
+        </div>
+      </div>
+    </div>
+    <div class="h5footer" id="footer"></div>
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </body>
 </html>

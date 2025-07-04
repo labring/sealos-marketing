@@ -1,140 +1,198 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>使用Sealos部署plane软件教程</title>
-  <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
-  <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico">
-  <script src="../../../app_store/js/appstor.js" defer></script><script src="/app_store/js/stars.js" defer></script>
-  <script src="../../../app_store/js/navbar.js"></script>
-  <script src="../../../app_store/js/header-left.js"></script>
-  <script src="../../../app_store/js/foooter.js"></script>
-  <script src="../../../app_store/js/step.js"></script>
-  <script src="/js/sem.js" defer></script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "q8gnm02cz6");
-</script>
-</head>
-
-<body>
-  <div id="navbar-container"></div>
-  <div class="stepxq">
-    <div class="left-list" id="left-header">
-    </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('.nav-item[data-page="tool"]').classList.add('active')
-        document.querySelector('li[data-page="plane"]').classList.add('active')
-      });
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用Sealos部署plane软件教程</title>
+    <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css" />
+    <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico" />
+    <script src="../../../app_store/js/appstor.js" defer></script>
+    <script src="/app_store/js/stars.js" defer></script>
+    <script src="../../../app_store/js/navbar.js"></script>
+    <script src="../../../app_store/js/header-left.js"></script>
+    <script src="../../../app_store/js/foooter.js"></script>
+    <script src="../../../app_store/js/step.js"></script>
+    <script src="/js/sem.js" defer></script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'q8gnm02cz6');
     </script>
-    <div class="app-h5">
-      <div class="hard-top">
-        <div class="hard-title-stats">
-          <div class="title-stats">
-            <div class="title-logo"><img src="../../img/plane.svg" alt="AFFiNE Logo"></div>
-            <div class="hard-top-title">
-              <div class="hard-top2">
-                <h1>Plane</h1>
-                <span class="stats"> <span class="stars"><img src="../../img/AFFINE-logo2.svg">30.6k</span> <span
-                    class="shares"><img src="../../img/project.svg"><a href="https://github.com/makeplane/plane"
-                      target="_blank">项目首页</a></span> </span>
+  </head>
+
+  <body>
+    <div id="navbar-container"></div>
+    <div class="stepxq">
+      <div class="left-list" id="left-header"></div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelector('.nav-item[data-page="tool"]').classList.add('active');
+          document.querySelector('li[data-page="plane"]').classList.add('active');
+        });
+      </script>
+      <div class="app-h5">
+        <div class="hard-top">
+          <div class="hard-title-stats">
+            <div class="title-stats">
+              <div class="title-logo"><img src="../../img/plane.svg" alt="AFFiNE Logo" /></div>
+              <div class="hard-top-title">
+                <div class="hard-top2">
+                  <h1>Plane</h1>
+                  <span class="stats">
+                    <span class="stars"><img src="../../img/AFFINE-logo2.svg" />30.6k</span>
+                    <span class="shares"
+                      ><img src="../../img/project.svg" /><a
+                        href="https://github.com/makeplane/plane"
+                        target="_blank"
+                        >项目首页</a
+                      ></span
+                    >
+                  </span>
+                </div>
+                <p class="app-decistore">
+                  Plane 是一个开源的项目管理工具，使用 Python
+                  语言开发，旨在帮助团队跟踪问题、运行迭代周期，并管理产品路线图，同时避免陷入管理工具本身的混乱中。
+                </p>
               </div>
-              <p class="app-decistore">Plane 是一个开源的项目管理工具，使用 Python 语言开发，旨在帮助团队跟踪问题、运行迭代周期，并管理产品路线图，同时避免陷入管理工具本身的混乱中。
-              </p>
+            </div>
+            <div class="buttons">
+              <button class="deploy-button">
+                <a
+                  href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dplane%26sealos_inside%3Dtrue"
+                  target="_blank"
+                  >私有化部署</a
+                >
+              </button>
+              <button class="yaml-button">
+                <a
+                  href="https://fael3z0zfze.feishu.cn/wiki/Nx00wpIM6iiXFlkdyXtcMKQUnFw?from=from_copylink"
+                  download
+                  >操作文档</a
+                >
+              </button>
             </div>
           </div>
-          <div class="buttons">
-            <button class="deploy-button">
-              <a href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dplane%26sealos_inside%3Dtrue"
-                target="_blank">私有化部署</a>
-            </button>
-            <button class="yaml-button">
-              <a href="https://fael3z0zfze.feishu.cn/wiki/Nx00wpIM6iiXFlkdyXtcMKQUnFw?from=from_copylink" download>操作文档</a>
-            </button>
+          <div class="carousel">
+            <div class="carousel-container">
+              <img src="./images/banner1.webp" alt="Image 1" class="carousel-item active" />
+              <img src="./images/banner2.webp" alt="Image 2" class="carousel-item" />
+              <img src="./images/banner3.webp" alt="Image 3" class="carousel-item" />
+              <img src="./images/banner4.webp" alt="Image 3" class="carousel-item" />
+              <img src="./images/banner5.webp" alt="Image 3" class="carousel-item" />
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-button prev">&lt;</button>
+              <button class="carousel-button next">&gt;</button>
+            </div>
+            <script src="../../../app_store/js/bannerlb.js"></script>
+          </div>
+          <div class="quick-start">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />如何部署在线 Plane
+            </h2>
+            <div class="steps" id="steper"></div>
+          </div>
+          <div class="features-list">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />什么是 Plane
+            </h2>
+            <ul class="features-list-ul">
+              <li>
+                Plane
+                的诞生源于开发者对现有项目管理工具的不满。创始团队意识到，一个理想的工具应该既能满足复杂项目的需求，又能保持足够的灵活性和易用性。Plane
+                的核心理念是提供一个简洁、灵活、功能强大的项目管理解决方案，涵盖从基础到高级的各种项目管理需求，同时保持开源透明，让团队能够完全掌控和定制自己的项目管理工具。
+              </li>
+              <li>
+                <b>周期管理</b> 迭代规划：通过 “周期” (Cycles)
+                功能规划和跟踪短期目标。进度可视化：燃尽图等工具提供直观的项目进度洞察。回顾与分析：周期结束后进行回顾，持续改进团队效率。
+              </li>
+              <li>
+                <b>模块化</b
+                >项目拆分：将大型项目分解为可管理的模块。跨团队协作：在团队间分配模块，实现更好的协作。进度跟踪：轻松监控各模块的完成情况。
+              </li>
+              <li>
+                <b>自定义视图</b>
+                灵活过滤：创建自定义过滤器，只显示关键信息。一键保存与共享：轻松保存和分享自定义视图。多种展示模式：支持看板、列表、甘特图等多种视图模式。
+              </li>
+              <li>
+                <b>页面功能</b>AI 辅助编辑：集成 AI
+                功能，辅助内容创作。即时协作：团队成员可以实时协作编辑页面。任务关联：轻松将页面内容转化为可操作的任务。
+              </li>
+              <li>
+                <b>实时分析</b
+                >数据可视化：直观展示项目进度、团队效率等关键指标。趋势分析：发现潜在问题，及时调整项目方向。自定义报告：根据需求生成定制化的项目报告。
+              </li>
+            </ul>
+          </div>
+          <div class="features-list">
+            <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg" />功能列表</h2>
+            <ul class="features-list-ul">
+              <li>
+                <b>价格优势：</b> 低至 1.76 元/天的成本享受高性能的 Overleaf
+                服务，相比阿里云便宜数倍。
+              </li>
+              <li><b>快速部署：</b> 1分钟内完成 Overleaf 的安装和自动配置，节省时间和精力。</li>
+              <li>
+                <b>稳定性：</b>
+                企业级的稳定性和可靠性，在高负载下依然能够平稳运行，保障用户的数据安全和访问流畅。
+              </li>
+              <li>
+                <b>随开随用：</b
+                >支持按需使用、随开随用，用户可以根据需要随时启动和停止服务，暂停不收费。
+              </li>
+              <li>
+                <b>弹性扩容：</b
+                >提供弹性扩容能力，可以根据业务需求动态调整资源配置，确保服务的高效运行。
+              </li>
+              <li>
+                <b>用多少扣多少：</b> Sealos
+                采用按使用量计费的模式，用户只需为实际使用的资源付费，进一步降低成本。
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="carousel">
-          <div class="carousel-container">
-            <img src="./images/banner1.webp" alt="Image 1" class="carousel-item active">
-            <img src="./images/banner2.webp" alt="Image 2" class="carousel-item">
-            <img src="./images/banner3.webp" alt="Image 3" class="carousel-item">
-            <img src="./images/banner4.webp" alt="Image 3" class="carousel-item">
-            <img src="./images/banner5.webp" alt="Image 3" class="carousel-item">
-          </div>
-          <div class="carousel-nav">
-            <button class="carousel-button prev">&lt;</button>
-            <button class="carousel-button next">&gt;</button>
-          </div>
-          <script src="../../../app_store/js/bannerlb.js"></script>
+      </div>
+      <div class="app-faq" id="about-right">
+        <div class="app-h5-left">
+          <h3>什么是Sealos？</h3>
+          <p class="sealos-detice">
+            提供高性能可伸缩的容器应用管理能力，支持企业级 Kubernetes
+            容器化应用的全生命周期管理,一站式集成应用创建、开发、部署、上线等功能，提供了应用引擎、前后端开发框架、API网关、调度引擎等模块，一键部署Helm应用。
+          </p>
+          <span class="sealos-detice-span"><a href="/">了解更多 ></a></span>
         </div>
-        <div class="quick-start">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 Plane</h2>
-          <div class="steps" id="steper">
-
-          </div>
+        <div class="app-h5-left">
+          <h3>Sealos部署优势</h3>
+          <p class="sealos-detice">
+            💰 快速上云：一键创建容器，自动化部署应用<br />
+            🌐 成本缩减：仅容器付费，资源成本减少 80%<br />
+            🛡️ 安全稳定：应用级和租户级网络隔离能力。
+          </p>
         </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 Plane</h2>
-          <ul class="features-list-ul">
-            <li>Plane 的诞生源于开发者对现有项目管理工具的不满。创始团队意识到，一个理想的工具应该既能满足复杂项目的需求，又能保持足够的灵活性和易用性。Plane
-              的核心理念是提供一个简洁、灵活、功能强大的项目管理解决方案，涵盖从基础到高级的各种项目管理需求，同时保持开源透明，让团队能够完全掌控和定制自己的项目管理工具。
-            </li>
-            <li><b>周期管理</b> 迭代规划：通过 “周期” (Cycles) 功能规划和跟踪短期目标。进度可视化：燃尽图等工具提供直观的项目进度洞察。回顾与分析：周期结束后进行回顾，持续改进团队效率。</li>
-            <li><b>模块化</b>项目拆分：将大型项目分解为可管理的模块。跨团队协作：在团队间分配模块，实现更好的协作。进度跟踪：轻松监控各模块的完成情况。</li>
-            <li><b>自定义视图</b> 灵活过滤：创建自定义过滤器，只显示关键信息。一键保存与共享：轻松保存和分享自定义视图。多种展示模式：支持看板、列表、甘特图等多种视图模式。</li>
-            <li><b>页面功能</b>AI 辅助编辑：集成 AI 功能，辅助内容创作。即时协作：团队成员可以实时协作编辑页面。任务关联：轻松将页面内容转化为可操作的任务。</li>
-            <li><b>实时分析</b>数据可视化：直观展示项目进度、团队效率等关键指标。趋势分析：发现潜在问题，及时调整项目方向。自定义报告：根据需求生成定制化的项目报告。</li>
-          </ul>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
-          <ul class="features-list-ul">
-            <li><b>价格优势：</b> 低至 1.76 元/天的成本享受高性能的 Overleaf 服务，相比阿里云便宜数倍。</li>
-            <li><b>快速部署：</b> 1分钟内完成 Overleaf 的安装和自动配置，节省时间和精力。</li>
-            <li><b>稳定性：</b> 企业级的稳定性和可靠性，在高负载下依然能够平稳运行，保障用户的数据安全和访问流畅。</li>
-            <li><b>随开随用：</b>支持按需使用、随开随用，用户可以根据需要随时启动和停止服务，暂停不收费。</li>
-            <li><b>弹性扩容：</b>提供弹性扩容能力，可以根据业务需求动态调整资源配置，确保服务的高效运行。</li>
-            <li><b>用多少扣多少：</b> Sealos 采用按使用量计费的模式，用户只需为实际使用的资源付费，进一步降低成本。</li>
-          </ul>
+        <h3>Plane 部署交流群</h3>
+        <div class="app-h5-left3">
+          <img src="/app_store/tool/plane/images/Plane.png" />微信交流群
         </div>
       </div>
     </div>
-    <div class="app-faq" id="about-right">
-      <div class="app-h5-left">
-        <h3>什么是Sealos？</h3>
-        <p class="sealos-detice">提供高性能可伸缩的容器应用管理能力，支持企业级 Kubernetes 容器化应用的全生命周期管理,一站式集成应用创建、开发、部署、上线等功能，提供了应用引擎、前后端开发框架、API网关、调度引擎等模块，一键部署Helm应用。</p>
-        <span class="sealos-detice-span"><a href="/">了解更多 ></a></span>
-      </div>
-      <div class="app-h5-left">
-        <h3>Sealos部署优势</h3>
-        <p class="sealos-detice"> 💰 快速上云：一键创建容器，自动化部署应用<br/>
-          🌐 成本缩减：仅容器付费，资源成本减少 80%<br/>
-          🛡️ 安全稳定：应用级和租户级网络隔离能力。
-        </p>
-      </div>
-      <h3>Plane 部署交流群</h3>
-      <div class="app-h5-left3">   
-          <img src="/app_store/tool/plane/images/Plane.png">微信交流群
-      </div>
-    </div>
-  </div>
-  <div class="h5footer" id="footer">
-  </div>
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script")
-      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
-      var s = document.getElementsByTagName("script")[0]
-      s.parentNode.insertBefore(hm, s)
-    })();
-  </script>
-</body>
-
+    <div class="h5footer" id="footer"></div>
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </body>
 </html>

@@ -1,115 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>使用Sealos部署AFFINE笔记软件教程</title>
-  <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
-  <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico">
-  <script src="../../../app_store/js/appstor.js" defer></script><script src="/app_store/js/stars.js" defer></script>
-  <script src="../../../app_store/js/navbar.js"></script>
-  <script src="../../../app_store/js/header-left.js"></script>
-  <script src="../../../app_store/js/about-right.js"></script>
-  <script src="../../../app_store/js/foooter.js"></script>
-  <script src="../../../app_store/js/step.js"></script>
-  <script src="/js/sem.js" defer></script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "q8gnm02cz6");
-</script>
-</head>
-
-<body>
-  <div id="navbar-container"></div>
-  <div class="stepxq">
-    <div class="left-list" id="left-header">
-    </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('.nav-item[data-page="tool"]').classList.add('active')
-        document.querySelector('li[data-page="affine"]').classList.add('active')
-        document.getElementById('menu_sub').style.display = 'block'
-      });
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用Sealos部署AFFINE笔记软件教程</title>
+    <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css" />
+    <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico" />
+    <script src="../../../app_store/js/appstor.js" defer></script>
+    <script src="/app_store/js/stars.js" defer></script>
+    <script src="../../../app_store/js/navbar.js"></script>
+    <script src="../../../app_store/js/header-left.js"></script>
+    <script src="../../../app_store/js/about-right.js"></script>
+    <script src="../../../app_store/js/foooter.js"></script>
+    <script src="../../../app_store/js/step.js"></script>
+    <script src="/js/sem.js" defer></script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'q8gnm02cz6');
     </script>
-    <div class="app-h5">
-      <div class="hard-top">
-        <div class="hard-title-stats">
-          <div class="title-stats">
-            <div class="title-logo"><img src="../../img/favicon-144.png" alt="AFFiNE Logo"></div>
-            <div class="hard-top-title">
-              <div class="hard-top2">
-                <h1>AFFiNE</h1>
-                <span class="stats"> <span class="stars"><img src="../../img/AFFINE-logo2.svg">41.8k</span> <span
-                    class="shares"><img src="../../img/project.svg"><a href="https://github.com/toeverything/AFFiNE"
-                      target="_blank">项目首页</a></span> </span>
+  </head>
+
+  <body>
+    <div id="navbar-container"></div>
+    <div class="stepxq">
+      <div class="left-list" id="left-header"></div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelector('.nav-item[data-page="tool"]').classList.add('active');
+          document.querySelector('li[data-page="affine"]').classList.add('active');
+          document.getElementById('menu_sub').style.display = 'block';
+        });
+      </script>
+      <div class="app-h5">
+        <div class="hard-top">
+          <div class="hard-title-stats">
+            <div class="title-stats">
+              <div class="title-logo">
+                <img src="../../img/favicon-144.png" alt="AFFiNE Logo" />
               </div>
-              <p class="app-decistore">开源的一体化知识操作系统，用于组织和管理wiki、知识库、演示文稿等知识库的所有构建块，集成了AI功能，帮助用户在写作、绘图和演示方面提高效率。</p>
+              <div class="hard-top-title">
+                <div class="hard-top2">
+                  <h1>AFFiNE</h1>
+                  <span class="stats">
+                    <span class="stars"><img src="../../img/AFFINE-logo2.svg" />41.8k</span>
+                    <span class="shares"
+                      ><img src="../../img/project.svg" /><a
+                        href="https://github.com/toeverything/AFFiNE"
+                        target="_blank"
+                        >项目首页</a
+                      ></span
+                    >
+                  </span>
+                </div>
+                <p class="app-decistore">
+                  开源的一体化知识操作系统，用于组织和管理wiki、知识库、演示文稿等知识库的所有构建块，集成了AI功能，帮助用户在写作、绘图和演示方面提高效率。
+                </p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="yaml-button">
+                <a href="./images/affine.yaml" download>导出 Yaml</a>
+              </button>
+              <button class="deploy-button">
+                <a
+                  href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Daffine%26sealos_inside%3Dtrue"
+                  target="_blank"
+                  >一键安装</a
+                >
+              </button>
             </div>
           </div>
-          <div class="buttons">
-            <button class="yaml-button">
-              <a href="./images/affine.yaml" download>导出 Yaml</a>
-            </button>
-            <button class="deploy-button">
-              <a href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Daffine%26sealos_inside%3Dtrue"
-                target="_blank">一键安装</a>
-            </button>
+          <div class="carousel">
+            <div class="carousel-container">
+              <img src="./images/AFFINE-banner3.jpg" alt="Image 1" class="carousel-item active" />
+              <img src="./images/AFFINE-banner2.jpg" alt="Image 2" class="carousel-item" />
+              <img src="./images/AFFINE-banner1.jpg" alt="Image 3" class="carousel-item" />
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-button prev">&lt;</button>
+              <button class="carousel-button next">&gt;</button>
+            </div>
+            <script src="../../../app_store/js/bannerlb.js"></script>
           </div>
-        </div>
-        <div class="carousel">
-          <div class="carousel-container"> <img src="./images/AFFINE-banner3.jpg" alt="Image 1"
-              class="carousel-item active"> <img src="./images/AFFINE-banner2.jpg" alt="Image 2" class="carousel-item">
-            <img src="./images/AFFINE-banner1.jpg" alt="Image 3" class="carousel-item"> </div>
-          <div class="carousel-nav">
-            <button class="carousel-button prev">&lt;</button>
-            <button class="carousel-button next">&gt;</button>
+          <div class="quick-start">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />如何部署在线 AFFiNE
+            </h2>
+            <div class="steps" id="steper"></div>
           </div>
-          <script src="../../../app_store/js/bannerlb.js"></script>
-        </div>
-        <div class="quick-start">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 AFFiNE</h2>
-          <div class="steps" id="steper">
-
+          <div class="features-list">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />什么是 AFFiNE
+            </h2>
+            <ul class="features-list-ul">
+              <li>
+                AFFiNE是一个开源的一体化工作区和操作系统，适用于构建知识库的所有构建块以及更多内容——wiki、知识管理、演示和数字资产。它是
+                Notion 和 Miro 的更好替代品。
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 AFFiNE</h2>
-          <ul class="features-list-ul">
-            <li>AFFiNE是一个开源的一体化工作区和操作系统，适用于构建知识库的所有构建块以及更多内容——wiki、知识管理、演示和数字资产。它是 Notion 和 Miro 的更好替代品。</li>
-          </ul>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">功能列表</h2>
-          <ul class="features-list-ul">
-            <li><b>任何形式的块的真正画布。文档和白板现已完全合并。</b> 许多编辑器应用都声称自己是生产力的画布，但 AFFiNE
-              是极少数允许您在无边画布上放置任何构建块的应用之一——富文本、便签、任何嵌入式网页、多视图数据库、链接页面、形状甚至幻灯片。我们拥有一切。</li>
-            <li><b>多模式 AI
-                合作伙伴随时准备投入任何工作</b>撰写专业的工作报告？将大纲变成富有表现力且易于展示的幻灯片？将文章总结为结构良好的思维导图？整理您的工作计划和待办事项？或者...只需一个提示即可直接绘制和编码原型应用程序和网页？有了你，AFFiNE
-              AI将您的创造力推向想象的边缘，就像Canvas AI生成思维导图以供头脑风暴一样。</li>
-            <li><b>本地优先、实时协作</b> AFFiNE提供了多人协作功能，你可以和团队成员实时编辑同一份笔记，这对于团队项目和共享知识库非常有用。</li>
-            <li><b>插件和扩展：</b> AFFiNE有一个活跃的社区，提供了丰富的插件和扩展，可以根据你的需求定制软件的功能。例如，代码高亮、任务管理、日历集成等插件应有尽有。</li>
-            <li><b>离线模式：</b> 即使在没有网络的情况下，AFFiNE也能正常工作。所有笔记会在恢复网络后自动同步，确保你的数据永远不会丢失。 </li>
-          </ul>
+          <div class="features-list">
+            <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg" />功能列表</h2>
+            <ul class="features-list-ul">
+              <li>
+                <b>任何形式的块的真正画布。文档和白板现已完全合并。</b>
+                许多编辑器应用都声称自己是生产力的画布，但 AFFiNE
+                是极少数允许您在无边画布上放置任何构建块的应用之一——富文本、便签、任何嵌入式网页、多视图数据库、链接页面、形状甚至幻灯片。我们拥有一切。
+              </li>
+              <li>
+                <b>多模式 AI 合作伙伴随时准备投入任何工作</b
+                >撰写专业的工作报告？将大纲变成富有表现力且易于展示的幻灯片？将文章总结为结构良好的思维导图？整理您的工作计划和待办事项？或者...只需一个提示即可直接绘制和编码原型应用程序和网页？有了你，AFFiNE
+                AI将您的创造力推向想象的边缘，就像Canvas AI生成思维导图以供头脑风暴一样。
+              </li>
+              <li>
+                <b>本地优先、实时协作</b>
+                AFFiNE提供了多人协作功能，你可以和团队成员实时编辑同一份笔记，这对于团队项目和共享知识库非常有用。
+              </li>
+              <li>
+                <b>插件和扩展：</b>
+                AFFiNE有一个活跃的社区，提供了丰富的插件和扩展，可以根据你的需求定制软件的功能。例如，代码高亮、任务管理、日历集成等插件应有尽有。
+              </li>
+              <li>
+                <b>离线模式：</b>
+                即使在没有网络的情况下，AFFiNE也能正常工作。所有笔记会在恢复网络后自动同步，确保你的数据永远不会丢失。
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+      <div class="app-faq" id="about-right"></div>
     </div>
-    <div class="app-faq" id="about-right"></div>
-  </div>
-  <div class="h5footer" id="footer">
-  </div>
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script")
-      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
-      var s = document.getElementsByTagName("script")[0]
-      s.parentNode.insertBefore(hm, s)
-    })();
-  </script>
-</body>
-
+    <div class="h5footer" id="footer"></div>
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </body>
 </html>

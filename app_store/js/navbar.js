@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const navbarHtml = `
+document.addEventListener('DOMContentLoaded', function () {
+  const navbarHtml = `
     <nav class="navbar">
     <div class="navtop">
         <div class="header-title">
@@ -28,35 +28,35 @@ document.addEventListener('DOMContentLoaded', function() {
 </nav>
     `;
 
-    // 获取导航栏容器并插入内容
-    const navContainer = document.getElementById('navbar-container');
-    if (navContainer) {
-        navContainer.innerHTML = navbarHtml;
-    }
+  // 获取导航栏容器并插入内容
+  const navContainer = document.getElementById('navbar-container');
+  if (navContainer) {
+    navContainer.innerHTML = navbarHtml;
+  }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // ... 其他代码 ...
 
   // 添加工具菜单的显示/隐藏功能
   function hideTools() {
-      const dropdownContent = document.querySelector('.dropdown-content');
-      if (dropdownContent) {
-          dropdownContent.style.display = 'none';
-      }
+    const dropdownContent = document.querySelector('.dropdown-content');
+    if (dropdownContent) {
+      dropdownContent.style.display = 'none';
+    }
   }
 
   function showTools() {
-      const dropdownContent = document.querySelector('.dropdown-content');
-      if (dropdownContent) {
-          dropdownContent.style.display = 'block';
-      }
+    const dropdownContent = document.querySelector('.dropdown-content');
+    if (dropdownContent) {
+      dropdownContent.style.display = 'block';
+    }
   }
 
   // 获取所有需要添加事件的元素
   const toolsDropdown = document.querySelector('.dropdown');
   if (toolsDropdown) {
-      toolsDropdown.addEventListener('mouseover', showTools);
-      toolsDropdown.addEventListener('mouseout', hideTools);
+    toolsDropdown.addEventListener('mouseover', showTools);
+    toolsDropdown.addEventListener('mouseout', hideTools);
   }
 });

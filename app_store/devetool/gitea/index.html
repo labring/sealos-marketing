@@ -1,120 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>使用Sealos部署gitea教程</title>
-    <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
-    <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico">
-    <script src="../../../app_store/js/appstor.js" defer></script><script src="/app_store/js/stars.js" defer></script>
+    <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css" />
+    <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico" />
+    <script src="../../../app_store/js/appstor.js" defer></script>
+    <script src="/app_store/js/stars.js" defer></script>
     <script src="../../../app_store/js/navbar.js"></script>
     <script src="../../../app_store/js/header-left.js"></script>
     <script src="../../../app_store/js/about-right.js"></script>
     <script src="../../../app_store/js/foooter.js"></script>
     <script src="../../../app_store/js/step.js"></script>
     <script src="/js/sem.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="navbar-container"></div>
     <div class="stepxq">
-        <div class="left-list" id="left-header"></div>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                document.querySelector('.nav-item[data-page="devetool"]').classList.add('active')
-                document.querySelector('li[data-page="gitea"]').classList.add('active')
-            });
-        </script>
-        <div class="app-h5">
-            <div class="hard-top">
-                <div class="hard-title-stats">
-                    <div class="title-stats">
-                        <div class="title-logo">
-                            <img src="../../img/gitea.svg" alt="Kuboard Logo">
-                        </div>
-                        <div class="hard-top-title">
-                            <div class="hard-top2">
-                                <h1>Gitea
-                                </h1>
-                                <span class="stats">
-                                    <span class="stars">
-                                        <img src="../../img/AFFINE-logo2.svg">45k
-                                    </span>
-                                    <span class="shares">
-                                        <img src="../../img/project.svg">
-                                        <a href="https://github.com/go-gitea/gitea" target="_blank">项目首页</a>
-                                    </span>
-                                </span>
-                            </div>
-                            <p class="app-decistore">Gitea 的首要目标是创建一个极易安装，运行非常快速，安装和使用体验良好的自建 Git 服务。</p>
-                        </div>
-                    </div>
-                    <div class="buttons">
-                        <button class="yaml-button">
-                            <a href="./images/gitea.yaml" download>导出 Yaml</a>
-                        </button>
-                        <button class="deploy-button">
-                            <a href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dgitea%26sealos_inside%3Dtrue"
-                                target="_blank">一键安装</a>
-                        </button>
-                    </div>
+      <div class="left-list" id="left-header"></div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelector('.nav-item[data-page="devetool"]').classList.add('active');
+          document.querySelector('li[data-page="gitea"]').classList.add('active');
+        });
+      </script>
+      <div class="app-h5">
+        <div class="hard-top">
+          <div class="hard-title-stats">
+            <div class="title-stats">
+              <div class="title-logo">
+                <img src="../../img/gitea.svg" alt="Kuboard Logo" />
+              </div>
+              <div class="hard-top-title">
+                <div class="hard-top2">
+                  <h1>Gitea</h1>
+                  <span class="stats">
+                    <span class="stars"> <img src="../../img/AFFINE-logo2.svg" />45k </span>
+                    <span class="shares">
+                      <img src="../../img/project.svg" />
+                      <a href="https://github.com/go-gitea/gitea" target="_blank">项目首页</a>
+                    </span>
+                  </span>
                 </div>
-                <div class="carousel">
-                    <div class="carousel-container">
-                        <img src="./images/banner1.png" alt="Image 1" class="carousel-item active">
-                        <img src="./images/banner2.png" alt="Image 2" class="carousel-item">
-                        <img src="./images/banner3.png" alt="Image 3" class="carousel-item">
-                    </div>
-                    <div class="carousel-nav">
-                        <button class="carousel-button prev">&lt;</button>
-                        <button class="carousel-button next">&gt;</button>
-                    </div>
-                    <script src="../../../app_store/js/bannerlb.js"></script>
-                </div>
-                <div class="quick-start">
-                    <h2 class="quick-start-h2">
-                        <img src="../../img/Rectangle 34624253.svg">如何部署在线 Gitea
-                    </h2>
-                    <div class="steps" id="steper"></div>
-                </div>
-                <div class="features-list">
-                    <h2 class="quick-start-h2">
-                        <img src="../../img/Rectangle 34624253.svg">什么是 Gitea
-                    </h2>
-                    <ul class="features-list-ul">
-                        <li>Gitea 是一种轻松、自托管、一站式的软件开发服务。它包括 Git 托管、代码审查、团队协作、包注册和 CI/CD。它类似于 GitHub、Bitbucket 和 GitLab。
-                        </li>
-                    </ul>
-                </div>
-                <div class="features-list">
-                    <h2 class="quick-start-h2">
-                        <img src="../../img/Rectangle 34624253.svg">功能列表
-                    </h2>
-                    <ul class="features-list-ul">
-                        <li><strong>轻量级：</strong>Gitea 是一个轻量级的 Git 服务，提供了快速、稳定的代码托管和协作开发环境。</li>
-                        <li><strong>易于安装和部署：</strong>Gitea 提供了简单易用的安装和部署方式，可以在各种操作系统上快速搭建自己的 Git 服务。</li>
-                        <li><strong>自托管：</strong>Gitea 支持自托管，用户可以在自己的服务器上部署和管理 Gitea 实例，完全掌控自己的代码和数据。</li>
-                        <li><strong>多用户支持：</strong>Gitea 支持多用户管理，可以创建多个用户账号，并且为不同的用户分配不同的权限和角色。</li>
-                        <li><strong>团队协作：</strong>Gitea 提供了团队协作和代码审查功能，支持代码分支、合并请求、问题跟踪等工作流程，方便团队成员之间的协作开发。</li>
-                        <li><strong>轻量级界面：</strong>Gitea 的用户界面简洁清晰，操作简单易懂，适合开发者和团队快速上手使用。</li>
-                        <li><strong>社区支持：</strong>Gitea 是一个活跃的开源项目，拥有一个热情的社区，提供了丰富的文档、教程和支持资源，方便用户学习和使用。</li>
-                    </ul>
-                </div>
+                <p class="app-decistore">
+                  Gitea 的首要目标是创建一个极易安装，运行非常快速，安装和使用体验良好的自建 Git
+                  服务。
+                </p>
+              </div>
             </div>
+            <div class="buttons">
+              <button class="yaml-button">
+                <a href="./images/gitea.yaml" download>导出 Yaml</a>
+              </button>
+              <button class="deploy-button">
+                <a
+                  href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Dgitea%26sealos_inside%3Dtrue"
+                  target="_blank"
+                  >一键安装</a
+                >
+              </button>
+            </div>
+          </div>
+          <div class="carousel">
+            <div class="carousel-container">
+              <img src="./images/banner1.png" alt="Image 1" class="carousel-item active" />
+              <img src="./images/banner2.png" alt="Image 2" class="carousel-item" />
+              <img src="./images/banner3.png" alt="Image 3" class="carousel-item" />
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-button prev">&lt;</button>
+              <button class="carousel-button next">&gt;</button>
+            </div>
+            <script src="../../../app_store/js/bannerlb.js"></script>
+          </div>
+          <div class="quick-start">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />如何部署在线 Gitea
+            </h2>
+            <div class="steps" id="steper"></div>
+          </div>
+          <div class="features-list">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />什么是 Gitea
+            </h2>
+            <ul class="features-list-ul">
+              <li>
+                Gitea 是一种轻松、自托管、一站式的软件开发服务。它包括 Git
+                托管、代码审查、团队协作、包注册和 CI/CD。它类似于 GitHub、Bitbucket 和 GitLab。
+              </li>
+            </ul>
+          </div>
+          <div class="features-list">
+            <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg" />功能列表</h2>
+            <ul class="features-list-ul">
+              <li>
+                <strong>轻量级：</strong>Gitea 是一个轻量级的 Git
+                服务，提供了快速、稳定的代码托管和协作开发环境。
+              </li>
+              <li>
+                <strong>易于安装和部署：</strong>Gitea
+                提供了简单易用的安装和部署方式，可以在各种操作系统上快速搭建自己的 Git 服务。
+              </li>
+              <li>
+                <strong>自托管：</strong>Gitea 支持自托管，用户可以在自己的服务器上部署和管理 Gitea
+                实例，完全掌控自己的代码和数据。
+              </li>
+              <li>
+                <strong>多用户支持：</strong>Gitea
+                支持多用户管理，可以创建多个用户账号，并且为不同的用户分配不同的权限和角色。
+              </li>
+              <li>
+                <strong>团队协作：</strong>Gitea
+                提供了团队协作和代码审查功能，支持代码分支、合并请求、问题跟踪等工作流程，方便团队成员之间的协作开发。
+              </li>
+              <li>
+                <strong>轻量级界面：</strong>Gitea
+                的用户界面简洁清晰，操作简单易懂，适合开发者和团队快速上手使用。
+              </li>
+              <li>
+                <strong>社区支持：</strong>Gitea
+                是一个活跃的开源项目，拥有一个热情的社区，提供了丰富的文档、教程和支持资源，方便用户学习和使用。
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="app-faq" id="about-right"></div>
+      </div>
+      <div class="app-faq" id="about-right"></div>
     </div>
     <div class="h5footer" id="footer"></div>
     <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script")
-            hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
-            var s = document.getElementsByTagName("script")[0]
-            s.parentNode.insertBefore(hm, s)
-        })();
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
     </script>
-</body>
-
+  </body>
 </html>

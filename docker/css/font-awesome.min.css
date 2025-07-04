@@ -20,16 +20,16 @@
 
 .fa-lg {
   font-size: 1.33333em;
-  line-height: .75em;
-  vertical-align: -.0667em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
 }
 
 .fa-xs {
-  font-size: .75em;
+  font-size: 0.75em;
 }
 
 .fa-sm {
-  font-size: .875em;
+  font-size: 0.875em;
 }
 
 .fa-1x {
@@ -76,25 +76,69 @@
 }
 
 /* 常用图标 - 使用Unicode字符替代 */
-.fa-check:before { content: "✓"; }
-.fa-times:before { content: "✕"; }
-.fa-search:before { content: "🔍"; }
-.fa-user:before { content: "👤"; }
-.fa-home:before { content: "🏠"; }
-.fa-download:before { content: "⬇️"; }
-.fa-arrow-right:before { content: "→"; }
-.fa-arrow-left:before { content: "←"; }
-.fa-chevron-right:before { content: "❯"; }
-.fa-chevron-left:before { content: "❮"; }
-.fa-chevron-up:before { content: "▲"; }
-.fa-chevron-down:before { content: "▼"; }
-.fa-bars:before { content: "☰"; }
-.fa-envelope:before { content: "✉️"; }
-.fa-phone:before { content: "📞"; }
-.fa-twitter:before { content: "𝕏"; }
-.fa-facebook:before { content: "f"; }
-.fa-linkedin:before { content: "in"; }
-.fa-github:before { content: "G"; }
-.fa-weixin:before { content: "微"; }
-.fa-qq:before { content: "Q"; }
-.fa-weibo:before { content: "微"; } 
+.fa-check:before {
+  content: '✓';
+}
+.fa-times:before {
+  content: '✕';
+}
+.fa-search:before {
+  content: '🔍';
+}
+.fa-user:before {
+  content: '👤';
+}
+.fa-home:before {
+  content: '🏠';
+}
+.fa-download:before {
+  content: '⬇️';
+}
+.fa-arrow-right:before {
+  content: '→';
+}
+.fa-arrow-left:before {
+  content: '←';
+}
+.fa-chevron-right:before {
+  content: '❯';
+}
+.fa-chevron-left:before {
+  content: '❮';
+}
+.fa-chevron-up:before {
+  content: '▲';
+}
+.fa-chevron-down:before {
+  content: '▼';
+}
+.fa-bars:before {
+  content: '☰';
+}
+.fa-envelope:before {
+  content: '✉️';
+}
+.fa-phone:before {
+  content: '📞';
+}
+.fa-twitter:before {
+  content: '𝕏';
+}
+.fa-facebook:before {
+  content: 'f';
+}
+.fa-linkedin:before {
+  content: 'in';
+}
+.fa-github:before {
+  content: 'G';
+}
+.fa-weixin:before {
+  content: '微';
+}
+.fa-qq:before {
+  content: 'Q';
+}
+.fa-weibo:before {
+  content: '微';
+}

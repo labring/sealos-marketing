@@ -1,1598 +1,1594 @@
 /* docker.css - Sealos 云原生应用部署平台营销网站样式 */
 
 html {
-    font-family: var(--font-family);
+  font-family: var(--font-family);
 }
 
 :root {
-    /* 更新配色方案 - 科技简约风格 */
-    --primary-dark-blue: #1e3a8a;
-    --primary-blue: #3b82f6;
-    --primary-light-blue: #60a5fa;
-    --secondary-blue: #1d4ed8;
-    --accent-purple: #8b5cf6;
-    --accent-cyan: #06b6d4;
-    --white: #FFFFFF;
-    --light-gray: #f8fafc;
-    --neutral-100: #f1f5f9;
-    --neutral-200: #e2e8f0;
-    --neutral-300: #cbd5e1;
-    --neutral-600: #64748b;
-    --neutral-800: #1e293b;
-    --neutral-900: #0f172a;
+  /* 更新配色方案 - 科技简约风格 */
+  --primary-dark-blue: #1e3a8a;
+  --primary-blue: #3b82f6;
+  --primary-light-blue: #60a5fa;
+  --secondary-blue: #1d4ed8;
+  --accent-purple: #8b5cf6;
+  --accent-cyan: #06b6d4;
+  --white: #ffffff;
+  --light-gray: #f8fafc;
+  --neutral-100: #f1f5f9;
+  --neutral-200: #e2e8f0;
+  --neutral-300: #cbd5e1;
+  --neutral-600: #64748b;
+  --neutral-800: #1e293b;
+  --neutral-900: #0f172a;
 
-    /* 渐变 */
-    --gradient-blue: linear-gradient(135deg, #60a5fa, #1d4ed8);
-    --gradient-purple-blue: linear-gradient(135deg, #8b5cf6, #3b82f6);
-    --gradient-cyan-blue: linear-gradient(135deg, #06b6d4, #3b82f6);
+  /* 渐变 */
+  --gradient-blue: linear-gradient(135deg, #60a5fa, #1d4ed8);
+  --gradient-purple-blue: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  --gradient-cyan-blue: linear-gradient(135deg, #06b6d4, #3b82f6);
 
-    /* 阴影 */
-    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
-    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
-    --shadow-hover: 0 10px 25px rgba(59, 130, 246, 0.18);
+  /* 阴影 */
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 10px 25px rgba(59, 130, 246, 0.18);
 
-    /* 间距 */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 4rem;
-    --spacing-xl: 6rem;
+  /* 间距 */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
 
-    /* 动画 */
-    --transition-normal: all 0.3s ease;
-    --transition-slow: all 0.5s ease;
+  /* 动画 */
+  --transition-normal: all 0.3s ease;
+  --transition-slow: all 0.5s ease;
 
-    /* 圆角 */
-    --radius-sm: 8px;
-    --radius-md: 12px;
-    --radius-lg: 16px;
-    --radius-xl: 20px;
-    
-    /* 字体 */
-    --font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --font-weight-normal: 400;
-    --font-weight-medium: 500;
-    --font-weight-semibold: 600;
-    --font-weight-bold: 700;
+  /* 圆角 */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  /* 字体 */
+  --font-family:
+    -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 }
 
 /* ... existing styles ... */
 
 /* 应用部署解决方案模块 - 现代科技风格 */
 body {
-    position: relative;
-    background: #ffffff;
-    overflow-x: hidden;
-    z-index: 0;
-    font-family: var(--font-family);
-    font-weight: var(--font-weight-normal);
+  position: relative;
+  background: #ffffff;
+  overflow-x: hidden;
+  z-index: 0;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
 }
 
 .docker-solution-section {
-    padding-top: 180px;
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+  padding-top: 180px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .docker-solution-panel .docker-fade-cptd {
-    background: linear-gradient(135deg, rgb(13, 27, 72) 0%, rgb(10, 18, 58) 100%);
-    width: 100%;
-    padding: 80px 20px;
+  background: linear-gradient(135deg, rgb(13, 27, 72) 0%, rgb(10, 18, 58) 100%);
+  width: 100%;
+  padding: 80px 20px;
 }
 
 .docker-solution-panel .docker-fade-cptd h2 {
-    color: #ffffff;
-    margin-bottom: 60px;
-    font-size: 2rem;
-    position: relative;
-    display: inline-block;
-    padding: 0 15px;
-    font-weight: var(--font-weight-bold);
+  color: #ffffff;
+  margin-bottom: 60px;
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+  padding: 0 15px;
+  font-weight: var(--font-weight-bold);
 }
 .docker-section-title h2 {
-    color: #333;
-    font-weight: var(--font-weight-bold);
-    font-size: 2rem;
-    position: relative;
-    display: inline-block;
-    padding: 0 15px;
+  color: #333;
+  font-weight: var(--font-weight-bold);
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+  padding: 0 15px;
 }
 .docker-section-title h2::before,
 .docker-section-title h2::after {
-    content: '';
-    position: absolute;
-    background-color: var(--accent-cyan);
+  content: '';
+  position: absolute;
+  background-color: var(--accent-cyan);
 }
 
 .docker-section-title h2::before {
-    width: 30px;
-    height: 2px;
-    left: -40px;
-    top: 50%;
+  width: 30px;
+  height: 2px;
+  left: -40px;
+  top: 50%;
 }
 
 .docker-section-title h2::after {
-    width: 30px;
-    height: 2px;
-    right: -40px;
-    top: 50%;
+  width: 30px;
+  height: 2px;
+  right: -40px;
+  top: 50%;
 }
 
 .docker-section-title h2 span {
-    position: relative;
-    z-index: 1;
-    letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 2px;
 }
 
 .docker-section-title h2 span::before,
 .docker-section-title h2 span::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: var(--accent-purple);
-    top: 50%;
-    transform: translateY(-50%);
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent-purple);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .docker-section-title h2 span::before {
-    left: -50px;
+  left: -50px;
 }
 
 .docker-section-title h2 span::after {
-    right: -50px;
+  right: -50px;
 }
-
 
 .docker-solution-panel .docker-fade-cptd h2::before,
 .docker-solution-panel .docker-fade-cptd h2::after {
-    content: '';
-    position: absolute;
-    background-color: var(--accent-cyan);
+  content: '';
+  position: absolute;
+  background-color: var(--accent-cyan);
 }
 
 .docker-solution-panel .docker-fade-cptd h2::before {
-    width: 30px;
-    height: 2px;
-    left: -40px;
-    top: 50%;
+  width: 30px;
+  height: 2px;
+  left: -40px;
+  top: 50%;
 }
 
 .docker-solution-panel .docker-fade-cptd h2::after {
-    width: 30px;
-    height: 2px;
-    right: -40px;
-    top: 50%;
+  width: 30px;
+  height: 2px;
+  right: -40px;
+  top: 50%;
 }
 
 .docker-solution-panel .docker-fade-cptd h2 span {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .docker-solution-panel .docker-fade-cptd h2 span::before,
 .docker-solution-panel .docker-fade-cptd h2 span::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: var(--accent-purple);
-    top: 50%;
-    transform: translateY(-50%);
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent-purple);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .docker-solution-panel .docker-fade-cptd h2 span::before {
-    left: -50px;
+  left: -50px;
 }
 
 .docker-solution-panel .docker-fade-cptd h2 span::after {
-    right: -50px;
+  right: -50px;
 }
 
 .docker-solution-panel .docker-fade-cptd h3 {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .docker-banner h2 {
-    position: relative;
-    z-index: 1;
-    font-size: 2.5rem;
-    font-weight: var(--font-weight-bold);
-    margin-bottom: 1.2rem;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-    letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1.2rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  letter-spacing: 1px;
 }
 
 .docker-banner p {
-    position: relative;
-    z-index: 1;
-    font-size: 1.1rem;
-    max-width: 1000px;
+  position: relative;
+  z-index: 1;
+  font-size: 1.1rem;
+  max-width: 1000px;
 
-    margin: 0 auto 4rem;
+  margin: 0 auto 4rem;
 
-    opacity: 0.9;
-    line-height: 1.7;
-    letter-spacing: 1px;
-    color: var(--neutral-800);
-    font-weight: var(--font-weight-normal);
+  opacity: 0.9;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  color: var(--neutral-800);
+  font-weight: var(--font-weight-normal);
 }
 
 /* 背景装饰元素 */
 .docker-solution-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image:
-        radial-gradient(circle at 5% 10%, rgba(96, 165, 250, 0.08) 0%, transparent 25%),
-        radial-gradient(circle at 95% 90%, rgba(139, 92, 246, 0.08) 0%, transparent 25%);
-    z-index: -1;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 5% 10%, rgba(96, 165, 250, 0.08) 0%, transparent 25%),
+    radial-gradient(circle at 95% 90%, rgba(139, 92, 246, 0.08) 0%, transparent 25%);
+  z-index: -1;
 }
-
-
 
 /* 漂浮几何装饰 */
 .docker-solution-section .container {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 
-    margin: 0 auto;
+  margin: 0 auto;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .docker-solution-section .container::before,
 .docker-solution-section .container::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    background: var(--gradient-purple-blue);
-    opacity: 0.05;
-    z-index: -1;
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: var(--gradient-purple-blue);
+  opacity: 0.05;
+  z-index: -1;
 }
 
 .docker-solution-section .container::before {
-    width: 300px;
-    height: 300px;
-    top: -150px;
-    left: -150px;
+  width: 300px;
+  height: 300px;
+  top: -150px;
+  left: -150px;
 }
 
 .docker-solution-section .container::after {
-    width: 200px;
-    height: 200px;
-    bottom: -100px;
-    right: -100px;
+  width: 200px;
+  height: 200px;
+  bottom: -100px;
+  right: -100px;
 }
 
 .docker-solution-title {
-    font-size: 2.5rem;
-    font-weight: var(--font-weight-bold);
-    color: #000000;
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: #000000;
 
-    margin-bottom: 1.4rem;
+  margin-bottom: 1.4rem;
 
-    letter-spacing: -0.03em;
-    background-clip: text;
-    text-align: center;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+  letter-spacing: -0.03em;
+  background-clip: text;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .docker-solution-desc {
-    font-size: 1.1rem;
-    max-width: 700px;
-    margin: 0 auto var(--spacing-lg);
-    line-height: 1.7;
-    text-align: center;
-    font-weight: var(--font-weight-normal);
-    padding: 0 15px;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto var(--spacing-lg);
+  line-height: 1.7;
+  text-align: center;
+  font-weight: var(--font-weight-normal);
+  padding: 0 15px;
 }
 
 /* 标签导航设计 */
 .docker-solution-tabs {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    position: relative;
-    z-index: 1;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
 }
 
 .docker-solution-tab {
-    background-color: var(--white);
-    border: none;
-    color: #000000;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-weight: var(--font-weight-medium);
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: var(--transition-normal);
-    box-shadow: var(--shadow-sm);
-    position: relative;
-    overflow: hidden;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+  background-color: var(--white);
+  border: none;
+  color: #000000;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: var(--font-weight-medium);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
-.docker-solution-panel .shujukudb{
-    margin-top: 100px;
-
+.docker-solution-panel .shujukudb {
+  margin-top: 100px;
 }
 .docker-solution-tab::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient-blue);
-    opacity: 0;
-    transition: var(--transition-normal);
-    z-index: -1;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-blue);
+  opacity: 0;
+  transition: var(--transition-normal);
+  z-index: -1;
 }
 
 .docker-solution-tab:hover {
-    color: var(--primary-blue);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
+  color: var(--primary-blue);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 .docker-solution-tab.active {
-    background: var(--gradient-blue);
-    color: var(--white);
-    box-shadow: var(--shadow-md);
+  background: var(--gradient-blue);
+  color: var(--white);
+  box-shadow: var(--shadow-md);
 }
 
 .docker-solution-tab.active::before {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* 内容区域 */
 .docker-solution-content {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    z-index: 1;
-    padding: 0 var(--spacing-md);
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+  padding: 0 var(--spacing-md);
 }
 
 .docker-solution-panel {
-    display: none;
-    transition: var(--transition-normal);
-    width: 100%;
-    overflow-x: hidden;
+  display: none;
+  transition: var(--transition-normal);
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .docker-solution-panel.active {
-    display: block;
-    animation: panelFadeIn 0.5s ease forwards;
+  display: block;
+  animation: panelFadeIn 0.5s ease forwards;
 }
 
 @keyframes panelFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Docker部署优势模块样式 - 现代科技风格 */
 .docker-section-title {
-    text-align: center;
-    margin-bottom: 3rem;
-    padding: 0 15px;
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 15px;
 }
 
 .docker-adv-ico img {
-    width: 60px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-
+  width: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .docker-section-title h3 {
-    font-size: 2rem;
-    font-weight: var(--font-weight-semibold);
-    color: var(--neutral-800);
-    letter-spacing: -0.02em;
-    position: relative;
-    display: inline-block;
+  font-size: 2rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--neutral-800);
+  letter-spacing: -0.02em;
+  position: relative;
+  display: inline-block;
 }
 
 .docker-advantage-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-hover);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
 }
 
 .docker-adv-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    width: 78%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 78%;
 }
 
 .docker-adv-card h3 {
-    font-size: 1.2rem;
-    font-weight: var(--font-weight-semibold);
-    margin-bottom: 0.5rem;
-    color: var(--white);
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 0.5rem;
+  color: var(--white);
 }
 
 .docker-adv-card p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .docker-adv-ico {
-    width: 22%;
+  width: 22%;
 }
 
 .docker-banner2 video {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    object-fit: contain;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  object-fit: contain;
 }
 .docker-section-title p {
-    font-weight: var(--font-weight-normal);
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.75);
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-    text-align: left;
-    letter-spacing: 0.8px;
-    width: 100%;
+  font-weight: var(--font-weight-normal);
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: left;
+  letter-spacing: 0.8px;
+  width: 100%;
 }
 
 /* Docker部署步骤模块 - 进度条风格 */
 .docker-steps-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-    margin-top: 60px;
-    position: relative;
-    flex-wrap: wrap;
-    padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  margin-top: 60px;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 0 10px;
 }
 
 .docker-step {
-    background-color: #f2f2f2;
-    text-align: center;
-    padding: 12px 15px;
-    font-weight: var(--font-weight-semibold);
-    box-shadow: var(--shadow-md);
-    flex: 1;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    min-width: 150px;
-    margin-bottom: 5px;
-    /* 创建斜边效果 */
-    clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 12px 15px;
+  font-weight: var(--font-weight-semibold);
+  box-shadow: var(--shadow-md);
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-width: 150px;
+  margin-bottom: 5px;
+  /* 创建斜边效果 */
+  clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
 }
 
 .docker-banner2 {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 80px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 80px;
 }
 
 /* 添加电脑框样式 */
 .docker-banner2 img,
 .docker-banner2 video,
 .docker-step-content img {
-    border-radius: 8px;
-    box-shadow: var(--shadow-md);
-    padding: 10px;
-    background-color: transparent;
-    position: relative;
-    max-width: 100%;
-    height: auto;
-    max-height: 800px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  padding: 10px;
+  background-color: transparent;
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  max-height: 800px;
 }
 
 .docker-banner2 .device-wrapper,
 .docker-step-content {
-    position: relative;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 5px;
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 5px;
 }
-
-
 
 .docker-banner2 .device-wrapper::after,
 .docker-step-content::after {
-    content: '';
-    position: absolute;
-    bottom: -45px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 140px;
-    height: 30px;
-    background: rgba(255, 255, 255, 0.25);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+  content: '';
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
 }
 
 .docker-banner2 .device-top-bar {
-    position: absolute;
-    top: -22px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% + 50px);
-    height: 22px;
-    background: rgba(255, 255, 255, 0.3);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 8px 8px 0 0;
-    display: flex;
-    align-items: center;
-    padding: 0 15px;
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 50px);
+  height: 22px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
 }
 
 .docker-step-content .device-top-bar {
-    position: absolute;
-    top: -22px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% + 50px);
-    height: 22px;
-    background: rgba(255, 255, 255, 0.3);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 8px 8px 0 0;
-    z-index: 1;
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 50px);
+  height: 22px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px 8px 0 0;
+  z-index: 1;
 }
 
 .docker-banner2 .device-top-bar::before,
 .docker-step-content .device-top-bar::before {
-    content: '';
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ff5f57;
-    box-shadow: 22px 0 0 #ffbd2e, 44px 0 0 #28ca41;
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ff5f57;
+  box-shadow:
+    22px 0 0 #ffbd2e,
+    44px 0 0 #28ca41;
 }
-
-
 
 /* 处理第一个步骤的特殊形状 */
 .docker-step:first-child {
-    clip-path: polygon(0% 0%, 100% 0%, 92% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 92% 100%, 0% 100%);
 }
 
 /* 处理最后一个步骤的特殊形状 */
 .docker-step:last-child {
-    clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .docker-step:hover {
-    background-color: #e8e8e8;
+  background-color: #e8e8e8;
 }
 
 /* 当前活动步骤样式 */
 .docker-step.active {
-    background-color: #e6f0ff;
-    color: var(--primary-blue);
+  background-color: #e6f0ff;
+  color: var(--primary-blue);
 }
 
 /* 已完成步骤样式 */
 .docker-step.completed {
-    background-color: #e6f0ff;
-    color: var(--primary-blue);
+  background-color: #e6f0ff;
+  color: var(--primary-blue);
 }
 
 .docker-step-content-wrapper {
-    transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .docker-step-description {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #000000;
-    font-size: 1rem;
-    font-weight: var(--font-weight-normal);
-    padding-top: 10px;
-    letter-spacing: 1px;
-    padding: 10px 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: var(--font-weight-normal);
+  padding-top: 10px;
+  letter-spacing: 1px;
+  padding: 10px 15px;
 }
 
 .docker-step-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 15px;
 }
 
 .docker-step-image {
-    border-radius: 4px;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 /* 优势网格 - 现代卡片设计 */
 .docker-advantages-grid {
-    display: grid;
-    gap: 1.5rem;
-    margin-bottom: 4rem;
-    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
-    padding: 0 15px;
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+  padding: 0 15px;
 }
 
 .docker-advantage-card {
-    padding: 1rem 1rem;
-    transition: var(--transition-normal);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    align-items: flex-start;
-    gap: 20px;
-    border-radius: 8px;
+  padding: 1rem 1rem;
+  transition: var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: 8px;
 }
 
 .docker-advantage-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-hover);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
 }
 
 .docker-advantage-icon {
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 1;
-    width: 70px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .docker-advantage-icon::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(96, 165, 250, 0.1);
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(96, 165, 250, 0.1);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 .docker-advantage-card h3 {
-    font-size: 1.2rem;
-    font-weight: var(--font-weight-semibold);
-    margin-bottom: 0.5rem;
-    color: var(--white);
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 0.5rem;
+  color: var(--white);
 }
 
 .docker-advantage-stats {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background: var(--neutral-100);
-    border-radius: var(--radius-md);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--neutral-100);
+  border-radius: var(--radius-md);
 }
 
 .docker-stat-number {
-    font-size: 2.5rem;
-    font-weight: var(--font-weight-bold);
-    color: var(--primary-blue);
-    margin-bottom: 0.5rem;
-    position: relative;
-    display: inline-block;
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
 }
 
 .docker-stat-label {
-    font-size: 0.9rem;
-    color: var(--neutral-600);
-    font-weight: var(--font-weight-normal);
+  font-size: 0.9rem;
+  color: var(--neutral-600);
+  font-weight: var(--font-weight-normal);
 }
 
 .docker-advantage-features {
-    list-style: none;
-    padding: 0;
-    margin-top: auto;
+  list-style: none;
+  padding: 0;
+  margin-top: auto;
 }
 
 .docker-advantage-features li {
-    padding: 0.5rem 0;
-    color: var(--neutral-600);
-    position: relative;
-    padding-left: 1.8rem;
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
+  padding: 0.5rem 0;
+  color: var(--neutral-600);
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
 }
 
 .docker-advantage-features li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%233b82f6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7' /%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%233b82f6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7' /%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* 数据对比表格 - 极简风格 */
 .docker-data-comparison {
-    margin-bottom: 4rem;
-    padding-top: 2rem;
-    border-radius: var(--radius-lg);
-    box-shadow: none;
+  margin-bottom: 4rem;
+  padding-top: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: none;
 }
 
 .doccker-therad thead tr th {
-    background-color: #f6f6f6;
-    padding: 15px;
-    font-weight: var(--font-weight-semibold);
+  background-color: #f6f6f6;
+  padding: 15px;
+  font-weight: var(--font-weight-semibold);
 }
 
 .doccker-therad tbody tr td {
-    padding: 30px;
-    text-align: center;
-    border-bottom: 1px solid #eee;
-    font-weight: var(--font-weight-normal);
-    font-size: 16px;
+  padding: 30px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  font-weight: var(--font-weight-normal);
+  font-size: 16px;
 }
 
 .doccker-therad tbody tr {
-    font-size: 1.1rem;
-    padding: 20px 0px;
-    border-bottom: 1px solid #efefef;
+  font-size: 1.1rem;
+  padding: 20px 0px;
+  border-bottom: 1px solid #efefef;
 }
 
 .doccker-therad thead th:nth-child(2) {
-    color: #6B7280;
+  color: #6b7280;
 }
 
 .doccker-therad tbody td:nth-child(2) {
-    font-weight: 300;
-    color: #6B7280;
-    text-align: center;
+  font-weight: 300;
+  color: #6b7280;
+  text-align: center;
 }
 
 .docker-data-comparison h3 {
-    font-size: 1.8rem;
-    font-weight: var(--font-weight-semibold);
-    color: var(--neutral-800);
-    margin-bottom: 2rem;
-    position: relative;
-    display: inline-block;
+  font-size: 1.8rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--neutral-800);
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
 }
 
 .docker-data-comparison h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 2px;
-    background: var(--primary-blue);
-    border-radius: 1px;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background: var(--primary-blue);
+  border-radius: 1px;
 }
 
 .docker-comparison-table {
-    overflow-x: auto;
-    margin: 0 auto;
-    max-width: 100%;
-    -webkit-overflow-scrolling: touch; /* Improve scroll on iOS */
+  overflow-x: auto;
+  margin: 0 auto;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch; /* Improve scroll on iOS */
 }
 
 .docker-comparison-table table {
-    width: 100%;
-    font-size: 0.95rem;
-    text-align: center;
-    margin: 0 auto;
-    border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95rem;
+  text-align: center;
+  margin: 0 auto;
+  border-collapse: collapse;
 }
 
 .doccker-therad {
-    width: 100%;
-    min-width: 600px; /* Ensure minimum width for readability */
+  width: 100%;
+  min-width: 600px; /* Ensure minimum width for readability */
 }
 
 .docker-improvement {
-    color: var(--primary-blue);
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
+  color: var(--primary-blue);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
 }
 
 .docker-improvement::before {
-    content: '↑';
-    margin-right: 4px;
+  content: '↑';
+  margin-right: 4px;
 }
 
 /* 动画效果 - 极简版 */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.docker-fade-cptd .docker-fade-in{
-    padding: 0;
-}
-.docker-fade-in {
+  from {
     opacity: 0;
     transform: translateY(10px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    will-change: opacity, transform;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding-top: 140px;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.docker-fade-cptd .docker-fade-in {
+  padding: 0;
+}
+.docker-fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+  will-change: opacity, transform;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 140px;
 }
 
 .docker-fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* 使用场景 - 现代卡片设计 */
 .docker-use-cases-section {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 
 .docker-gntd {
-    width: 100%;
-    background: linear-gradient(135deg, #0d1b48 0%, #0a123a 100%);
-    padding: 100px 0;
+  width: 100%;
+  background: linear-gradient(135deg, #0d1b48 0%, #0a123a 100%);
+  padding: 100px 0;
 }
 
 .docker-use-cases-section h3 {
-    font-size: 1.8rem;
-    font-weight: var(--font-weight-semibold);
-    color: var(--neutral-800);
-    margin-bottom: 2rem;
-    position: relative;
-    display: inline-block;
+  font-size: 1.8rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--neutral-800);
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
 }
 
 .docker-use-cases-section h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 3px;
-    background: var(--gradient-blue);
-    border-radius: 3px;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: var(--gradient-blue);
+  border-radius: 3px;
 }
 
 .docker-use-cases-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 80px;
 }
 
 .docker-use-case-item {
-    background: var(--white);
-    padding: 2rem;
-    border-radius: var(--radius-lg);
-    text-align: center;
-    transition: var(--transition-normal);
-    border: none;
-    box-shadow: var(--shadow-md);
-    position: relative;
-    overflow: hidden;
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: var(--transition-normal);
+  border: none;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
 }
 
 .docker-use-case-item::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: var(--gradient-cyan-blue);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient-cyan-blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .docker-use-case-item:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-hover);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
 }
 
 .docker-use-case-item:hover::before {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .docker-use-case-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .docker-use-case-icon::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(6, 182, 212, 0.1);
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(6, 182, 212, 0.1);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 .docker-use-case-item h4 {
-    font-size: 1.2rem;
-    font-weight: var(--font-weight-semibold);
-    margin: 1rem 0 0.5rem;
-    color: var(--neutral-800);
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-semibold);
+  margin: 1rem 0 0.5rem;
+  color: var(--neutral-800);
 }
 
 .docker-use-case-item p {
-    font-size: 0.9rem;
-    color: var(--neutral-600);
-    line-height: 1.6;
-    font-weight: var(--font-weight-normal);
+  font-size: 0.9rem;
+  color: var(--neutral-600);
+  line-height: 1.6;
+  font-weight: var(--font-weight-normal);
 }
 
 /* CTA区域 - 现代科技风格 */
 .docker-deploy-cta {
-    background: var(--gradient-blue);
-    padding: 3.5rem 2.5rem;
-    border-radius: var(--radius-lg);
-    text-align: center;
-    color: white;
-    margin-bottom: 2rem;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 15px 30px rgba(59, 130, 246, 0.2);
+  background: var(--gradient-blue);
+  padding: 3.5rem 2.5rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(59, 130, 246, 0.2);
 }
 
 .docker-deploy-cta::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image:
-        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 15%),
-        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 15%);
-    z-index: 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 15%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 15%);
+  z-index: 0;
 }
 
 .docker-deploy-cta::after {
-    content: '';
-    position: absolute;
-    top: 10%;
-    right: 5%;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    z-index: 0;
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 0;
 }
 
 .docker-cta-content {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .docker-deploy-cta h3 {
-    font-size: 2rem;
-    font-weight: var(--font-weight-bold);
-    color: var(--white);
-    margin-bottom: 1rem;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--white);
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .docker-deploy-cta p {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    font-weight: var(--font-weight-normal);
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: var(--font-weight-normal);
 }
 
 .docker-cta-buttons {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    position: relative;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 .docker-btn-primary,
 .docker-btn-secondary {
-    display: inline-block;
-    padding: 0.9rem 2rem;
-    border-radius: var(--radius-md);
-    font-weight: var(--font-weight-semibold);
-    font-size: 1rem;
-    text-align: center;
-    transition: var(--transition-normal);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    box-shadow: var(--shadow-md);
-    text-decoration: none;
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  font-size: 1rem;
+  text-align: center;
+  transition: var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
 }
 
 .docker-btn-primary {
-    background: var(--white);
-    color: var(--primary-blue);
-    border: none;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background: var(--white);
+  color: var(--primary-blue);
+  border: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .docker-btn-secondary {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
 }
 
 .docker-btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
 .docker-btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-3px);
 }
 
 .docker-btn-primary::after,
 .docker-btn-secondary::after {
-    content: '';
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-left: 8px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%233b82f6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M14 5l7 7m0 0l-7 7m7-7H3' /%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: transform 0.3s ease;
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%233b82f6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M14 5l7 7m0 0l-7 7m7-7H3' /%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
 }
 
 .docker-btn-secondary::after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23ffffff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M14 5l7 7m0 0l-7 7m7-7H3' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23ffffff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M14 5l7 7m0 0l-7 7m7-7H3' /%3E%3C/svg%3E");
 }
 
 .docker-btn-primary:hover::after,
 .docker-btn-secondary:hover::after {
-    transform: translateX(4px);
+  transform: translateX(4px);
 }
 
 /* 响应式适配 */
 @media (max-width: 1200px) {
-    .docker-banner2 {
-        width: 100%;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    
-    .docker-step-image {
-        max-width: 100%;
-    }
+  .docker-banner2 {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .docker-step-image {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 1024px) {
-    .docker-solution-tabs {
-        max-width: 95%;
-        gap: 0.8rem;
-    }
+  .docker-solution-tabs {
+    max-width: 95%;
+    gap: 0.8rem;
+  }
 
-    .docker-advantages-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-    }
+  .docker-advantages-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
 
-    .docker-solution-title {
-        font-size: 2.2rem;
-    }
+  .docker-solution-title {
+    font-size: 2.2rem;
+  }
 
-    .docker-deploy-cta h3 {
-        font-size: 1.8rem;
-    }
-    
-    .docker-banner h2 {
-        font-size: 2.2rem;
-    }
-    
-    .docker-steps-container {
-        flex-wrap: wrap;
-    }
-    
-    .docker-step {
-        min-width: 140px;
-        font-size: 0.9rem;
-        margin-bottom: 5px;
-    }
+  .docker-deploy-cta h3 {
+    font-size: 1.8rem;
+  }
+
+  .docker-banner h2 {
+    font-size: 2.2rem;
+  }
+
+  .docker-steps-container {
+    flex-wrap: wrap;
+  }
+
+  .docker-step {
+    min-width: 140px;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
 }
 
 @media (max-width: 768px) {
-    .docker-solution-tabs {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        max-width: 100%;
-        gap: 0.5rem;
-        margin-bottom: 1.5rem;
-    }
+  .docker-solution-tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
 
-    .docker-solution-tab {
-        width: auto;
-        font-size: 0.85rem;
-        padding: 0.6rem 1rem;
-        margin-bottom: 8px;
-        flex: 0 0 calc(50% - 10px);
-        text-align: center;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+  .docker-solution-tab {
+    width: auto;
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+    margin-bottom: 8px;
+    flex: 0 0 calc(50% - 10px);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-    .docker-advantages-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 1.2rem;
-    }
+  .docker-advantages-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+  }
 
-    .docker-section-title h3 {
-        font-size: 1.8rem;
-    }
+  .docker-section-title h3 {
+    font-size: 1.8rem;
+  }
 
-    .docker-deploy-cta {
-        padding: 2.5rem 1.5rem;
-    }
+  .docker-deploy-cta {
+    padding: 2.5rem 1.5rem;
+  }
 
-    .docker-deploy-cta h3 {
-        font-size: 1.6rem;
-    }
+  .docker-deploy-cta h3 {
+    font-size: 1.6rem;
+  }
 
-    .docker-cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
+  .docker-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .docker-btn-primary,
-    .docker-btn-secondary {
-        width: 100%;
-        max-width: 300px;
-    }
+  .docker-btn-primary,
+  .docker-btn-secondary {
+    width: 100%;
+    max-width: 300px;
+  }
 
-    .docker-comparison-table {
-        font-size: 0.85rem;
-        overflow-x: auto;
-    }
+  .docker-comparison-table {
+    font-size: 0.85rem;
+    overflow-x: auto;
+  }
 
-    .docker-comparison-table th,
-    .docker-comparison-table td {
-        padding: 0.75rem 0.5rem;
-    }
-    
-    .docker-banner h2 {
-        font-size: 1.8rem;
-    }
-    
-    .docker-solution-section {
-        margin-top: 60px;
-    }
-    
-    .docker-steps-container {
-        justify-content: center;
-        gap: 8px;
-        margin-top: 40px;
-    }
-    
-    .docker-step {
-        flex: 0 0 48%;
-        margin: 0 0 8px;
-        padding: 10px;
-        clip-path: none;
-        border-radius: 6px;
-        font-size: 0.85rem;
-    }
-    
-    .docker-step:first-child,
-    .docker-step:last-child {
-        clip-path: none;
-    }
-    
-    .docker-advantage-card {
-        flex-direction: column;
-        padding: 1.2rem 1rem;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .docker-adv-card {
-        width: 100%;
-        align-items: center;
-    }
-    
-    .docker-adv-ico {
-        width: 100%;
-        margin-bottom: 10px;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .docker-adv-ico img {
-        width: 50px;
-    }
-    
-    .docker-banner2 {
-        padding-top: 40px;
-        padding-bottom: 60px;
-    }
-    
-    .docker-solution-panel .docker-fade-cptd {
-        padding: 60px 15px;
-    }
-    
-    .video-player {
-        max-height: 400px;
-        width: 100%;
-    }
+  .docker-comparison-table th,
+  .docker-comparison-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .docker-banner h2 {
+    font-size: 1.8rem;
+  }
+
+  .docker-solution-section {
+    margin-top: 60px;
+  }
+
+  .docker-steps-container {
+    justify-content: center;
+    gap: 8px;
+    margin-top: 40px;
+  }
+
+  .docker-step {
+    flex: 0 0 48%;
+    margin: 0 0 8px;
+    padding: 10px;
+    clip-path: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+  }
+
+  .docker-step:first-child,
+  .docker-step:last-child {
+    clip-path: none;
+  }
+
+  .docker-advantage-card {
+    flex-direction: column;
+    padding: 1.2rem 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .docker-adv-card {
+    width: 100%;
+    align-items: center;
+  }
+
+  .docker-adv-ico {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .docker-adv-ico img {
+    width: 50px;
+  }
+
+  .docker-banner2 {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  .docker-solution-panel .docker-fade-cptd {
+    padding: 60px 15px;
+  }
+
+  .video-player {
+    max-height: 400px;
+    width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
-    .docker-solution-title {
-        font-size: 1.8rem;
-    }
+  .docker-solution-title {
+    font-size: 1.8rem;
+  }
 
-    .docker-solution-desc {
-        font-size: 1rem;
-    }
+  .docker-solution-desc {
+    font-size: 1rem;
+  }
 
-    .docker-section-title h3 {
-        font-size: 1.5rem;
-    }
+  .docker-section-title h3 {
+    font-size: 1.5rem;
+  }
 
-    .docker-deploy-cta h3 {
-        font-size: 1.4rem;
-    }
+  .docker-deploy-cta h3 {
+    font-size: 1.4rem;
+  }
 
-    .docker-deploy-cta p {
-        font-size: 1rem;
-    }
-    
-    .docker-solution-tab {
-        font-size: 0.8rem;
-        padding: 0.5rem 0.8rem;
-        flex: 0 0 calc(50% - 8px);
-    }
-    
-    .docker-steps-container {
-        flex-direction: column;
-        gap: 6px;
-    }
-    
-    .docker-step {
-        flex: 0 0 100%;
-        margin: 0 0 6px;
-        font-size: 0.9rem;
-    }
-    
-    .docker-section-title h2,
-    .docker-solution-panel .docker-fade-cptd h2 {
-        font-size: 1.6rem;
-    }
-    
-    .docker-section-title h2::before,
-    .docker-section-title h2::after,
-    .docker-solution-panel .docker-fade-cptd h2::before,
-    .docker-solution-panel .docker-fade-cptd h2::after {
-        width: 20px;
-        left: -25px;
-    }
-    
-    .docker-section-title h2::after,
-    .docker-solution-panel .docker-fade-cptd h2::after {
-        right: -25px;
-        left: auto;
-    }
-    
-    .docker-section-title h2 span::before,
-    .docker-section-title h2 span::after,
-    .docker-solution-panel .docker-fade-cptd h2 span::before,
-    .docker-solution-panel .docker-fade-cptd h2 span::after {
-        left: -30px;
-    }
-    
-    .docker-section-title h2 span::after,
-    .docker-solution-panel .docker-fade-cptd h2 span::after {
-        right: -30px;
-        left: auto;
-    }
-    
-    .video-player {
-        max-height: 300px;
-    }
+  .docker-deploy-cta p {
+    font-size: 1rem;
+  }
+
+  .docker-solution-tab {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+    flex: 0 0 calc(50% - 8px);
+  }
+
+  .docker-steps-container {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .docker-step {
+    flex: 0 0 100%;
+    margin: 0 0 6px;
+    font-size: 0.9rem;
+  }
+
+  .docker-section-title h2,
+  .docker-solution-panel .docker-fade-cptd h2 {
+    font-size: 1.6rem;
+  }
+
+  .docker-section-title h2::before,
+  .docker-section-title h2::after,
+  .docker-solution-panel .docker-fade-cptd h2::before,
+  .docker-solution-panel .docker-fade-cptd h2::after {
+    width: 20px;
+    left: -25px;
+  }
+
+  .docker-section-title h2::after,
+  .docker-solution-panel .docker-fade-cptd h2::after {
+    right: -25px;
+    left: auto;
+  }
+
+  .docker-section-title h2 span::before,
+  .docker-section-title h2 span::after,
+  .docker-solution-panel .docker-fade-cptd h2 span::before,
+  .docker-solution-panel .docker-fade-cptd h2 span::after {
+    left: -30px;
+  }
+
+  .docker-section-title h2 span::after,
+  .docker-solution-panel .docker-fade-cptd h2 span::after {
+    right: -30px;
+    left: auto;
+  }
+
+  .video-player {
+    max-height: 300px;
+  }
 }
 
 @media (max-width: 480px) {
-    .docker-solution-title {
-        font-size: 1.6rem;
-    }
+  .docker-solution-title {
+    font-size: 1.6rem;
+  }
 
-    .docker-solution-desc {
-        font-size: 0.9rem;
-    }
+  .docker-solution-desc {
+    font-size: 0.9rem;
+  }
 
-    .docker-section-title h3 {
-        font-size: 1.4rem;
-    }
+  .docker-section-title h3 {
+    font-size: 1.4rem;
+  }
 
-    .docker-advantage-card {
-        padding: 0.8rem 0.6rem;
-    }
+  .docker-advantage-card {
+    padding: 0.8rem 0.6rem;
+  }
 
-    .docker-deploy-cta h3 {
-        font-size: 1.3rem;
-    }
+  .docker-deploy-cta h3 {
+    font-size: 1.3rem;
+  }
 
-    .docker-deploy-cta p {
-        font-size: 0.9rem;
-    }
-    
-    .docker-banner h2 {
-        font-size: 1.5rem;
-    }
-    
-    .docker-banner p {
-        font-size: 0.9rem;
-    }
-    
-    .video-player {
-        max-height: 200px;
-    }
+  .docker-deploy-cta p {
+    font-size: 0.9rem;
+  }
 
-    .docker-solution-tabs {
-        gap: 0.4rem;
-    }
-    
-    .docker-solution-tab {
-        font-size: 0.75rem;
-        padding: 0.5rem 0.6rem;
-        flex: 0 0 calc(50% - 6px);
-    }
+  .docker-banner h2 {
+    font-size: 1.5rem;
+  }
+
+  .docker-banner p {
+    font-size: 0.9rem;
+  }
+
+  .video-player {
+    max-height: 200px;
+  }
+
+  .docker-solution-tabs {
+    gap: 0.4rem;
+  }
+
+  .docker-solution-tab {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.6rem;
+    flex: 0 0 calc(50% - 6px);
+  }
 }
 
 /* ... rest of existing styles ... */
 
 .video-player {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: var(--shadow-md);
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 .container {
-    width: 100%;
+  width: 100%;
 
-    margin: 0 auto;
+  margin: 0 auto;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @media (max-width: 1200px) {
-    .container {
-        max-width: 100%;
-        padding: 0 20px;
-    }
-    
-    .docker-step-image {
-        max-width: 100%;
-    }
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .docker-step-image {
+    max-width: 100%;
+  }
 }
 
-
 .login-btn {
-    background: var(--gradient-blue);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    margin-left: 1rem;
+  background: var(--gradient-blue);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-left: 1rem;
 }
 
 .login-btn:hover {
-    opacity: 0.9;
-    color: white;
+  opacity: 0.9;
+  color: white;
 }
-
-
 
 /* 页脚样式 */
 .footer {
-    background-color: #f8f9fa;
-    padding: 3rem 0;
-    margin-top: 4rem;
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+  margin-top: 4rem;
 }
 
 .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .footer-section {
-    flex: 1;
-    min-width: 200px;
-    margin-bottom: 2rem;
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 2rem;
 }
 
 .footer-section h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
 }
 
 .footer-section ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .footer-section li {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer-section a {
-    color: #666;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .footer-section a:hover {
-    color: var(--primary-blue);
+  color: var(--primary-blue);
 }
 
 .social-icons {
-    display: flex;
-    margin-top: 1rem;
+  display: flex;
+  margin-top: 1rem;
 }
 
 .social-icons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: #eee;
-    margin-right: 0.5rem;
-    transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #eee;
+  margin-right: 0.5rem;
+  transition: background-color 0.3s;
 }
 
 .social-icons a:hover {
-    background-color: var(--primary-light-blue);
-    color: white;
+  background-color: var(--primary-light-blue);
+  color: white;
 }
 
 .footer-bottom {
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid #eee;
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
 }
 
 .footer-bottom p {
-    color: #999;
-    font-size: 0.9rem;
+  color: #999;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        padding: 1rem;
-    }
-    
-    .navbar-menu {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background-color: white;
-        flex-direction: column;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        padding: 1rem 0;
-    }
-    
-    .navbar-menu.active {
-        display: flex;
-    }
-    
-    .navbar-item {
-        margin: 0.5rem 0;
-        padding: 0.5rem 1rem;
-        width: 100%;
-        text-align: center;
-    }
-    
-    .login-btn {
-        margin: 0.5rem 1rem;
-    }
-    
-    .navbar-toggle {
-        display: flex;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-    }
-    
-    .footer-section {
-        margin-bottom: 1.5rem;
-    }
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-item {
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .login-btn {
+    margin: 0.5rem 1rem;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    margin-bottom: 1.5rem;
+  }
 }

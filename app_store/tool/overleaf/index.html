@@ -1,137 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>使用Sealos部署overleaf软件教程</title>
-  <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css">
-  <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico">
-  <script src="../../../app_store/js/appstor.js" defer></script><script src="/app_store/js/stars.js" defer></script>
-  <script src="../../../app_store/js/navbar.js"></script>
-  <script src="../../../app_store/js/header-left.js"></script>
-  <script src="../../../app_store/js/foooter.js"></script>
-  <script src="../../../app_store/js/step.js"></script>
-  <script src="/js/sem.js" defer></script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "q8gnm02cz6");
-</script>
-</head>
-
-<body>
-  <div id="navbar-container"></div>
-  <div class="stepxq">
-    <div class="left-list" id="left-header">
-    </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('.nav-item[data-page="tool"]').classList.add('active')
-        document.querySelector('li[data-page="overleaf"]').classList.add('active')
-        document.getElementById('menu_sub').style.display = 'block'
-      });
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用Sealos部署overleaf软件教程</title>
+    <link rel="stylesheet" href="../../../app_store/css/appstore-xq.css" />
+    <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico" />
+    <script src="../../../app_store/js/appstor.js" defer></script>
+    <script src="/app_store/js/stars.js" defer></script>
+    <script src="../../../app_store/js/navbar.js"></script>
+    <script src="../../../app_store/js/header-left.js"></script>
+    <script src="../../../app_store/js/foooter.js"></script>
+    <script src="../../../app_store/js/step.js"></script>
+    <script src="/js/sem.js" defer></script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'q8gnm02cz6');
     </script>
-    <div class="app-h5">
-      <div class="hard-top">
-        <div class="hard-title-stats">
-          <div class="title-stats">
-            <div class="title-logo"><img src="../../img/6359919.png" alt="AFFiNE Logo"></div>
-            <div class="hard-top-title">
-              <div class="hard-top2">
-                <h1>Overleaf</h1>
-                <span class="stats"> <span class="stars"><img src="../../img/AFFINE-logo2.svg">14.1k</span> <span
-                    class="shares"><img src="../../img/project.svg"><a href="https://github.com/overleaf/overleaf"
-                      target="_blank">项目首页</a></span> </span>
+  </head>
+
+  <body>
+    <div id="navbar-container"></div>
+    <div class="stepxq">
+      <div class="left-list" id="left-header"></div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelector('.nav-item[data-page="tool"]').classList.add('active');
+          document.querySelector('li[data-page="overleaf"]').classList.add('active');
+          document.getElementById('menu_sub').style.display = 'block';
+        });
+      </script>
+      <div class="app-h5">
+        <div class="hard-top">
+          <div class="hard-title-stats">
+            <div class="title-stats">
+              <div class="title-logo"><img src="../../img/6359919.png" alt="AFFiNE Logo" /></div>
+              <div class="hard-top-title">
+                <div class="hard-top2">
+                  <h1>Overleaf</h1>
+                  <span class="stats">
+                    <span class="stars"><img src="../../img/AFFINE-logo2.svg" />14.1k</span>
+                    <span class="shares"
+                      ><img src="../../img/project.svg" /><a
+                        href="https://github.com/overleaf/overleaf"
+                        target="_blank"
+                        >项目首页</a
+                      ></span
+                    >
+                  </span>
+                </div>
+                <p class="app-decistore">Overleaf 是一款开源的在线实时协作 LaTeX 编辑器，</p>
               </div>
-              <p class="app-decistore">Overleaf 是一款开源的在线实时协作 LaTeX 编辑器，</p>
+            </div>
+            <div class="buttons">
+              <button class="deploy-button">
+                <a
+                  href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Doverleaf%26sealos_inside%3Dtrue"
+                  target="_blank"
+                  >私有云部署</a
+                >
+              </button>
+              <button class="yaml-button">
+                <a
+                  href="https://fael3z0zfze.feishu.cn/wiki/Lbr2wT46QiInIZkUImTc6cJCnVc?from=from_copylink"
+                  download
+                  >操作文档</a
+                >
+              </button>
             </div>
           </div>
-          <div class="buttons">
-            <button class="deploy-button">
-              <a href="https://cloud.sealos.run/?openapp=system-template%3FtemplateName%3Doverleaf%26sealos_inside%3Dtrue"
-                target="_blank">私有云部署</a>
-            </button>
-            <button class="yaml-button">
-              <a href="https://fael3z0zfze.feishu.cn/wiki/Lbr2wT46QiInIZkUImTc6cJCnVc?from=from_copylink" download>操作文档</a>
-            </button>
+          <div class="carousel">
+            <div class="carousel-container">
+              <video src="./images/editor-pdf-video.mp4" class="carousel-item active" controls>
+                <source src="./images/editor-pdf-video.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-button prev">&lt;</button>
+              <button class="carousel-button next">&gt;</button>
+            </div>
+            <script src="../../../app_store/js/bannerlb.js"></script>
+          </div>
+          <div class="quick-start">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />如何部署在线 Overleaf
+            </h2>
+            <div class="steps" id="steper"></div>
+          </div>
+          <div class="features-list">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />什么是 Overleaf
+            </h2>
+            <ul class="features-list-ul">
+              <li>
+                Overleaf是一款在线latex编辑器，不用配置本地环境，一般不会创建空项目来写论文，更多的是上传一个给定的Latex模板。编辑公式的工具，LaTeX在线：吴文中数学公式编辑器
+              </li>
+              <li>实时协作：多人可以同时编辑同一个文档，实时查看对方的修改。</li>
+              <li>自动编译：Overleaf会自动编译LaTeX代码，实时显示文档的预览效果。</li>
+              <li>版本控制：支持Git版本控制，可以方便地管理和回溯文档的修改历史。</li>
+              <li>丰富的模板：提供了各种学术论文、期刊模板，方便用户快速开始撰写。</li>
+              <li>方便的分享与发布：可以将文档分享给他人，并且支持导出为PDF格式。</li>
+            </ul>
+          </div>
+          <div class="features-list">
+            <h2 class="quick-start-h2">
+              <img src="../../img/Rectangle 34624253.svg" />云端部署优势
+            </h2>
+            <ul class="features-list-ul">
+              <li>
+                <b>价格优势：</b> 低至 0.77 元/天的成本享受高性能的 Overleaf
+                服务，相比阿里云便宜数倍。
+              </li>
+              <li><b>快速部署：</b> 1分钟内完成 Overleaf 的安装和自动配置，节省时间和精力。</li>
+              <li>
+                <b>稳定性：</b>
+                企业级的稳定性和可靠性，在高负载下依然能够平稳运行，保障用户的数据安全和访问流畅。
+              </li>
+              <li>
+                <b>随开随用：</b
+                >支持按需使用、随开随用，用户可以根据需要随时启动和停止服务，暂停不收费。
+              </li>
+              <li>
+                <b>弹性扩容：</b
+                >提供弹性扩容能力，可以根据业务需求动态调整资源配置，确保服务的高效运行。
+              </li>
+              <li>
+                <b>用多少扣多少：</b> Sealos
+                采用按使用量计费的模式，用户只需为实际使用的资源付费，进一步降低成本。
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="carousel">
-          <div class="carousel-container">
-
-            <video src="./images/editor-pdf-video.mp4" class="carousel-item active" controls>
-              <source src="./images/editor-pdf-video.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="carousel-nav">
-            <button class="carousel-button prev">&lt;</button>
-            <button class="carousel-button next">&gt;</button>
-          </div>
-          <script src="../../../app_store/js/bannerlb.js"></script>
+      </div>
+      <div class="app-faq" id="about-right">
+        <div class="app-h5-left">
+          <h3>什么是Sealos？</h3>
+          <p class="sealos-detice">
+            提供高性能可伸缩的容器应用管理能力，支持企业级 Kubernetes
+            容器化应用的全生命周期管理,一站式集成应用创建、开发、部署、上线等功能，提供了应用引擎、前后端开发框架、API网关、调度引擎等模块，一键部署Helm应用。
+          </p>
+          <span class="sealos-detice-span"><a href="/">了解更多 ></a></span>
         </div>
-        <div class="quick-start">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">如何部署在线 Overleaf</h2>
-          <div class="steps" id="steper">
-
-          </div>
+        <div class="app-h5-left">
+          <h3>Sealos部署优势</h3>
+          <p class="sealos-detice">
+            💰 快速上云：一键创建容器，自动化部署应用<br />
+            🌐 成本缩减：仅容器付费，资源成本减少 80%<br />
+            🛡️ 安全稳定：应用级和租户级网络隔离能力。
+          </p>
         </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">什么是 Overleaf</h2>
-          <ul class="features-list-ul">
-            <li>Overleaf是一款在线latex编辑器，不用配置本地环境，一般不会创建空项目来写论文，更多的是上传一个给定的Latex模板。编辑公式的工具，LaTeX在线：吴文中数学公式编辑器</li>
-            <li>实时协作：多人可以同时编辑同一个文档，实时查看对方的修改。</li>
-            <li>自动编译：Overleaf会自动编译LaTeX代码，实时显示文档的预览效果。</li>
-            <li>版本控制：支持Git版本控制，可以方便地管理和回溯文档的修改历史。</li>
-            <li>丰富的模板：提供了各种学术论文、期刊模板，方便用户快速开始撰写。</li>
-            <li>方便的分享与发布：可以将文档分享给他人，并且支持导出为PDF格式。</li>
-          </ul>
-        </div>
-        <div class="features-list">
-          <h2 class="quick-start-h2"><img src="../../img/Rectangle 34624253.svg">云端部署优势</h2>
-          <ul class="features-list-ul">
-            <li><b>价格优势：</b> 低至 0.77 元/天的成本享受高性能的 Overleaf 服务，相比阿里云便宜数倍。</li>
-            <li><b>快速部署：</b> 1分钟内完成 Overleaf 的安装和自动配置，节省时间和精力。</li>
-            <li><b>稳定性：</b> 企业级的稳定性和可靠性，在高负载下依然能够平稳运行，保障用户的数据安全和访问流畅。</li>
-            <li><b>随开随用：</b>支持按需使用、随开随用，用户可以根据需要随时启动和停止服务，暂停不收费。</li>
-            <li><b>弹性扩容：</b>提供弹性扩容能力，可以根据业务需求动态调整资源配置，确保服务的高效运行。</li>
-            <li><b>用多少扣多少：</b> Sealos 采用按使用量计费的模式，用户只需为实际使用的资源付费，进一步降低成本。</li>
-          </ul>
+        <h3>Overleaf部署交流群</h3>
+        <div class="app-h5-left3">
+          <img src="/app_store/tool/overleaf/images/Overleaf-s.png" />微信交流群
         </div>
       </div>
     </div>
-    <div class="app-faq" id="about-right">
-      <div class="app-h5-left">
-        <h3>什么是Sealos？</h3>
-        <p class="sealos-detice">提供高性能可伸缩的容器应用管理能力，支持企业级 Kubernetes 容器化应用的全生命周期管理,一站式集成应用创建、开发、部署、上线等功能，提供了应用引擎、前后端开发框架、API网关、调度引擎等模块，一键部署Helm应用。</p>
-        <span class="sealos-detice-span"><a href="/">了解更多 ></a></span>
-      </div>
-      <div class="app-h5-left">
-        <h3>Sealos部署优势</h3>
-        <p class="sealos-detice"> 💰 快速上云：一键创建容器，自动化部署应用<br/>
-          🌐 成本缩减：仅容器付费，资源成本减少 80%<br/>
-          🛡️ 安全稳定：应用级和租户级网络隔离能力。
-        </p>
-      </div>
-      <h3>Overleaf部署交流群</h3>
-      <div class="app-h5-left3">   
-          <img src="/app_store/tool/overleaf/images/Overleaf-s.png">微信交流群
-      </div>
-    </div>
-  </div>
-  <div class="h5footer" id="footer">
-  </div>
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script")
-      hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
-      var s = document.getElementsByTagName("script")[0]
-      s.parentNode.insertBefore(hm, s)
-    })();
-  </script>
-</body>
-
+    <div class="h5footer" id="footer"></div>
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </body>
 </html>

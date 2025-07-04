@@ -1,287 +1,308 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Permissions-Policy" content="unload=()">
-  <title>订阅支付门户 | Sealos</title>
-  <meta name="description" content="Sealos 订阅支付门户提供简化的购买或续订订阅流程，支持多种灵活的付款选项和管理功能。">
-  <meta name="keywords" content="订阅支付,支付门户,Sealos订阅,订阅管理,合同管理,自动付款,报表面板">
-  <link rel="canonical" href="https://sealos.run/deploy/" />
-  <meta property="og:title" content="Sealos 订阅支付门户 | 简化订阅流程" />
-  <meta property="og:description" content="简化购买或续订订阅的流程，提供灵活的付款选项和合同管理功能。" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sealos.run/deploy/" />
-  <meta property="og:image" content="https://sealos.run/favicon.ico" />
-  <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="/app_store/css/appstore-xq.css">
-  <link rel="stylesheet" href="/deploy/deploy.css">
-  
-  <!-- 优化百度统计脚本加载 -->
-  <script async src="https://hm.baidu.com/hm.js?d8e8ecf669c47dc2512d3f1417e761f9"></script>
-  <script async src="https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"></script>
-  
-  <script src="/imgs/js/h5_Q3_C1.js" defer></script>
-  <script src="/app_store/js/appstor.js" defer></script>
-  <script src="/app_store/js/stars.js" defer></script>
-  <script src="/app_store/js/navbar.js" defer></script>
-  <script src="/app_store/js/foooter.js" defer></script>
-  <script src="/deploy/deploy.js" defer></script>
-  <script src="/js/sem-devbox.js" defer></script>
-  
-  <!-- 结构化数据 - 软件应用 -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Sealos 订阅支付门户",
-      "description": "简化购买或续订订阅的流程，提供灵活的付款选项和合同管理功能。",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "CNY"
-      }
-    }
-  </script>
-  <script type="text/javascript">
-    (function (c, l, a, r, i, t, y) {
-      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-    })(window, document, "clarity", "script", "q8gnm02cz6");
-  </script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Permissions-Policy" content="unload=()" />
+    <title>订阅支付门户 | Sealos</title>
+    <meta
+      name="description"
+      content="Sealos 订阅支付门户提供简化的购买或续订订阅流程，支持多种灵活的付款选项和管理功能。"
+    />
+    <meta
+      name="keywords"
+      content="订阅支付,支付门户,Sealos订阅,订阅管理,合同管理,自动付款,报表面板"
+    />
+    <link rel="canonical" href="https://sealos.run/deploy/" />
+    <meta property="og:title" content="Sealos 订阅支付门户 | 简化订阅流程" />
+    <meta
+      property="og:description"
+      content="简化购买或续订订阅的流程，提供灵活的付款选项和合同管理功能。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sealos.run/deploy/" />
+    <meta property="og:image" content="https://sealos.run/favicon.ico" />
+    <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/app_store/css/appstore-xq.css" />
+    <link rel="stylesheet" href="/deploy/deploy.css" />
 
-<body>
-  <header>
-    <div id="navbar-container"></div>
-  </header>
-  
-  <main>
-    <!-- 订阅支付门户标题部分 -->
-    <section class="deploy-hero-section">
-      <div class="deploy-container">
-        <div class="deploy-hero-content">
-          <div class="deploy-hero-text">
-            <h1>
-              <div class="deploy-hero-subtitle">简化流程</div>
-              <div class="deploy-hero-title">购买或续订订阅</div>
-              <div class="deploy-hero-main-title">
-                <span>订阅</span> <span class="deploy-highlight">支付</span> <span>门户</span>
-              </div>
-            </h1>
-          </div>
-          
-          <div class="deploy-hero-image">
-            <div class="deploy-payment-card-group">
-              <div class="deploy-payment-card deploy-card-credit">
-                <div class="deploy-card-content">
-                  <div class="deploy-card-chip"></div>
-                  <div class="deploy-card-number">4104 3373 8020</div>
-                  <div class="deploy-card-name">Bank Method</div>
+    <!-- 优化百度统计脚本加载 -->
+    <script async src="https://hm.baidu.com/hm.js?d8e8ecf669c47dc2512d3f1417e761f9"></script>
+    <script async src="https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"></script>
+
+    <script src="/imgs/js/h5_Q3_C1.js" defer></script>
+    <script src="/app_store/js/appstor.js" defer></script>
+    <script src="/app_store/js/stars.js" defer></script>
+    <script src="/app_store/js/navbar.js" defer></script>
+    <script src="/app_store/js/foooter.js" defer></script>
+    <script src="/deploy/deploy.js" defer></script>
+    <script src="/js/sem-devbox.js" defer></script>
+
+    <!-- 结构化数据 - 软件应用 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Sealos 订阅支付门户",
+        "description": "简化购买或续订订阅的流程，提供灵活的付款选项和合同管理功能。",
+        "operatingSystem": "All",
+        "applicationCategory": "FinanceApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "CNY"
+        }
+      }
+    </script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'q8gnm02cz6');
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div id="navbar-container"></div>
+    </header>
+
+    <main>
+      <!-- 订阅支付门户标题部分 -->
+      <section class="deploy-hero-section">
+        <div class="deploy-container">
+          <div class="deploy-hero-content">
+            <div class="deploy-hero-text">
+              <h1>
+                <div class="deploy-hero-subtitle">简化流程</div>
+                <div class="deploy-hero-title">购买或续订订阅</div>
+                <div class="deploy-hero-main-title">
+                  <span>订阅</span> <span class="deploy-highlight">支付</span> <span>门户</span>
                 </div>
-              </div>
-              <div class="deploy-payment-card deploy-card-blue">
-                <div class="deploy-card-content">
-                  <div class="deploy-card-logo">
-                    <i class="fas fa-university"></i>
+              </h1>
+            </div>
+
+            <div class="deploy-hero-image">
+              <div class="deploy-payment-card-group">
+                <div class="deploy-payment-card deploy-card-credit">
+                  <div class="deploy-card-content">
+                    <div class="deploy-card-chip"></div>
+                    <div class="deploy-card-number">4104 3373 8020</div>
+                    <div class="deploy-card-name">Bank Method</div>
                   </div>
-                  <div class="deploy-card-text">自动付款</div>
                 </div>
-              </div>
-              <div class="deploy-payment-card deploy-card-light">
-                <div class="deploy-card-content">
-                  <div class="deploy-card-logo">
-                    <i class="fas fa-receipt"></i>
+                <div class="deploy-payment-card deploy-card-blue">
+                  <div class="deploy-card-content">
+                    <div class="deploy-card-logo">
+                      <i class="fas fa-university"></i>
+                    </div>
+                    <div class="deploy-card-text">自动付款</div>
                   </div>
-                  <div class="deploy-card-text">自动收据</div>
+                </div>
+                <div class="deploy-payment-card deploy-card-light">
+                  <div class="deploy-card-content">
+                    <div class="deploy-card-logo">
+                      <i class="fas fa-receipt"></i>
+                    </div>
+                    <div class="deploy-card-text">自动收据</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    
-    <!-- 功能特点部分 -->
-    <section class="deploy-features-section">
-      <div class="deploy-container">
-        <div class="deploy-title-container">
-          <h2 class="deploy-section-title">强大功能特性</h2>
-        </div>
-        <div class="deploy-features-grid">
-          <!-- 功能1: 高度灵活性 -->
-          <div class="deploy-feature-card">
-            <div class="deploy-feature-icon">
-              <i class="fas fa-sliders-h"></i>
-            </div>
-            <div class="deploy-feature-content">
-              <h3 class="deploy-feature-title">高度灵活性</h3>
-              <p class="deploy-feature-desc">完全灵活定义合同期限及付款方式，支持定制化合同条款</p>
-            </div>
+      </section>
+
+      <!-- 功能特点部分 -->
+      <section class="deploy-features-section">
+        <div class="deploy-container">
+          <div class="deploy-title-container">
+            <h2 class="deploy-section-title">强大功能特性</h2>
           </div>
-          
-          <!-- 功能2: 取消合同 -->
-          <div class="deploy-feature-card">
-            <div class="deploy-feature-icon">
-              <i class="fas fa-file-contract"></i>
-            </div>
-            <div class="deploy-feature-content">
-              <h3 class="deploy-feature-title">取消合同</h3>
-              <p class="deploy-feature-desc">提供单方面或双方取消合同的可能性，灵活的终止条款</p>
-            </div>
-          </div>
-          
-          <!-- 功能3: 报表面板访问 -->
-          <div class="deploy-feature-card">
-            <div class="deploy-feature-icon">
-              <i class="fas fa-chart-bar"></i>
-            </div>
-            <div class="deploy-feature-content">
-              <h3 class="deploy-feature-title">报表面板访问</h3>
-              <p class="deploy-feature-desc">各种查询服务和报表面板，为企业提供全面的数据洞察</p>
-            </div>
-          </div>
-          
-          <!-- 功能4: 试用期 -->
-          <div class="deploy-feature-card">
-            <div class="deploy-feature-icon">
-              <i class="fas fa-hourglass-start"></i>
-            </div>
-            <div class="deploy-feature-content">
-              <h3 class="deploy-feature-title">试用期</h3>
-              <p class="deploy-feature-desc">为合同设置试用期的可能性，让客户无风险体验</p>
-            </div>
-          </div>
-          
-          <!-- 功能5: 类似合同便利 -->
-          <div class="deploy-feature-card">
-            <div class="deploy-feature-icon">
-              <i class="fas fa-copy"></i>
-            </div>
-            <div class="deploy-feature-content">
-              <h3 class="deploy-feature-title">便捷合同管理</h3>
-              <p class="deploy-feature-desc">对类似合同进行分组，一键部署多个相似合同给用户</p>
-            </div>
-          </div>
-          
-          <!-- 功能6: 免费测试 -->
-          <div class="deploy-feature-card">
-            <div class="deploy-feature-icon">
-              <i class="fas fa-gift"></i>
-            </div>
-            <div class="deploy-feature-content">
-              <h3 class="deploy-feature-title">免费测试</h3>
-              <p class="deploy-feature-desc">提供2个月的免费使用期，无任何条件限制</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- 订阅计划部分 -->
-    <section class="deploy-pricing-section">
-      <div class="deploy-container">
-        <div class="deploy-title-container">
-          <h2 class="deploy-section-title">选择适合您的订阅计划</h2>
-        </div>
-        <p class="deploy-section-desc">灵活的订阅选项，满足不同规模企业的需求</p>
-        
-        <div class="deploy-pricing-grid">
-          <!-- 基础计划 -->
-          <div class="deploy-pricing-card">
-            <div class="deploy-pricing-header">
-              <h3 class="deploy-pricing-title">基础版</h3>
-              <div class="deploy-pricing-price">
-                <span class="deploy-price-currency">¥</span>
-                <span class="deploy-price-amount">99</span>
-                <span class="deploy-price-period">/月</span>
+          <div class="deploy-features-grid">
+            <!-- 功能1: 高度灵活性 -->
+            <div class="deploy-feature-card">
+              <div class="deploy-feature-icon">
+                <i class="fas fa-sliders-h"></i>
               </div>
-              <p class="deploy-pricing-desc">适合小型团队和初创企业</p>
-            </div>
-            
-            <ul class="deploy-pricing-features">
-              <li><i class="fas fa-check"></i> 最多5个用户</li>
-              <li><i class="fas fa-check"></i> 基础报表功能</li>
-              <li><i class="fas fa-check"></i> 标准合同模板</li>
-              <li><i class="fas fa-check"></i> 电子邮件支持</li>
-              <li><i class="fas fa-check"></i> 2个月免费试用</li>
-            </ul>
-            
-            <a href="#" class="deploy-pricing-button">开始使用</a>
-          </div>
-          
-          <!-- 专业计划 -->
-          <div class="deploy-pricing-card deploy-pricing-popular">
-            <div class="deploy-popular-tag">最受欢迎</div>
-            <div class="deploy-pricing-header">
-              <h3 class="deploy-pricing-title">专业版</h3>
-              <div class="deploy-pricing-price">
-                <span class="deploy-price-currency">¥</span>
-                <span class="deploy-price-amount">299</span>
-                <span class="deploy-price-period">/月</span>
+              <div class="deploy-feature-content">
+                <h3 class="deploy-feature-title">高度灵活性</h3>
+                <p class="deploy-feature-desc">
+                  完全灵活定义合同期限及付款方式，支持定制化合同条款
+                </p>
               </div>
-              <p class="deploy-pricing-desc">适合中型企业和成长型团队</p>
             </div>
-            
-            <ul class="deploy-pricing-features">
-              <li><i class="fas fa-check"></i> 最多25个用户</li>
-              <li><i class="fas fa-check"></i> 高级报表功能</li>
-              <li><i class="fas fa-check"></i> 自定义合同模板</li>
-              <li><i class="fas fa-check"></i> 优先电子邮件支持</li>
-              <li><i class="fas fa-check"></i> 实时聊天支持</li>
-              <li><i class="fas fa-check"></i> 2个月免费试用</li>
-            </ul>
-            
-            <a href="#" class="deploy-pricing-button deploy-button-primary">立即订阅</a>
-          </div>
-          
-          <!-- 企业计划 -->
-          <div class="deploy-pricing-card">
-            <div class="deploy-pricing-header">
-              <h3 class="deploy-pricing-title">企业版</h3>
-              <div class="deploy-pricing-price">
-                <span class="deploy-price-currency">¥</span>
-                <span class="deploy-price-amount">999</span>
-                <span class="deploy-price-period">/月</span>
+
+            <!-- 功能2: 取消合同 -->
+            <div class="deploy-feature-card">
+              <div class="deploy-feature-icon">
+                <i class="fas fa-file-contract"></i>
               </div>
-              <p class="deploy-pricing-desc">适合大型企业和高要求团队</p>
+              <div class="deploy-feature-content">
+                <h3 class="deploy-feature-title">取消合同</h3>
+                <p class="deploy-feature-desc">提供单方面或双方取消合同的可能性，灵活的终止条款</p>
+              </div>
             </div>
-            
-            <ul class="deploy-pricing-features">
-              <li><i class="fas fa-check"></i> 无限用户</li>
-              <li><i class="fas fa-check"></i> 定制报表方案</li>
-              <li><i class="fas fa-check"></i> 高级合同管理</li>
-              <li><i class="fas fa-check"></i> 专属客户经理</li>
-              <li><i class="fas fa-check"></i> 24/7全天候支持</li>
-              <li><i class="fas fa-check"></i> API集成支持</li>
-              <li><i class="fas fa-check"></i> 2个月免费试用</li>
-            </ul>
-            
-            <a href="#" class="deploy-pricing-button">联系销售</a>
+
+            <!-- 功能3: 报表面板访问 -->
+            <div class="deploy-feature-card">
+              <div class="deploy-feature-icon">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <div class="deploy-feature-content">
+                <h3 class="deploy-feature-title">报表面板访问</h3>
+                <p class="deploy-feature-desc">各种查询服务和报表面板，为企业提供全面的数据洞察</p>
+              </div>
+            </div>
+
+            <!-- 功能4: 试用期 -->
+            <div class="deploy-feature-card">
+              <div class="deploy-feature-icon">
+                <i class="fas fa-hourglass-start"></i>
+              </div>
+              <div class="deploy-feature-content">
+                <h3 class="deploy-feature-title">试用期</h3>
+                <p class="deploy-feature-desc">为合同设置试用期的可能性，让客户无风险体验</p>
+              </div>
+            </div>
+
+            <!-- 功能5: 类似合同便利 -->
+            <div class="deploy-feature-card">
+              <div class="deploy-feature-icon">
+                <i class="fas fa-copy"></i>
+              </div>
+              <div class="deploy-feature-content">
+                <h3 class="deploy-feature-title">便捷合同管理</h3>
+                <p class="deploy-feature-desc">对类似合同进行分组，一键部署多个相似合同给用户</p>
+              </div>
+            </div>
+
+            <!-- 功能6: 免费测试 -->
+            <div class="deploy-feature-card">
+              <div class="deploy-feature-icon">
+                <i class="fas fa-gift"></i>
+              </div>
+              <div class="deploy-feature-content">
+                <h3 class="deploy-feature-title">免费测试</h3>
+                <p class="deploy-feature-desc">提供2个月的免费使用期，无任何条件限制</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    
-    <!-- 呼叫操作部分 -->
-    <section class="deploy-cta-section">
-      <div class="deploy-container">
-        <div class="deploy-cta-content">
-          <h2 class="deploy-cta-title">准备简化您的订阅流程？</h2>
-          <p class="deploy-cta-desc">立即开始使用我们的订阅支付门户，享受2个月免费试用期</p>
-          <div class="deploy-cta-buttons">
-            <a href="#" class="deploy-cta-button deploy-button-primary">开始免费试用</a>
-            <a href="#" class="deploy-cta-button deploy-button-secondary">预约演示</a>
+      </section>
+
+      <!-- 订阅计划部分 -->
+      <section class="deploy-pricing-section">
+        <div class="deploy-container">
+          <div class="deploy-title-container">
+            <h2 class="deploy-section-title">选择适合您的订阅计划</h2>
+          </div>
+          <p class="deploy-section-desc">灵活的订阅选项，满足不同规模企业的需求</p>
+
+          <div class="deploy-pricing-grid">
+            <!-- 基础计划 -->
+            <div class="deploy-pricing-card">
+              <div class="deploy-pricing-header">
+                <h3 class="deploy-pricing-title">基础版</h3>
+                <div class="deploy-pricing-price">
+                  <span class="deploy-price-currency">¥</span>
+                  <span class="deploy-price-amount">99</span>
+                  <span class="deploy-price-period">/月</span>
+                </div>
+                <p class="deploy-pricing-desc">适合小型团队和初创企业</p>
+              </div>
+
+              <ul class="deploy-pricing-features">
+                <li><i class="fas fa-check"></i> 最多5个用户</li>
+                <li><i class="fas fa-check"></i> 基础报表功能</li>
+                <li><i class="fas fa-check"></i> 标准合同模板</li>
+                <li><i class="fas fa-check"></i> 电子邮件支持</li>
+                <li><i class="fas fa-check"></i> 2个月免费试用</li>
+              </ul>
+
+              <a href="#" class="deploy-pricing-button">开始使用</a>
+            </div>
+
+            <!-- 专业计划 -->
+            <div class="deploy-pricing-card deploy-pricing-popular">
+              <div class="deploy-popular-tag">最受欢迎</div>
+              <div class="deploy-pricing-header">
+                <h3 class="deploy-pricing-title">专业版</h3>
+                <div class="deploy-pricing-price">
+                  <span class="deploy-price-currency">¥</span>
+                  <span class="deploy-price-amount">299</span>
+                  <span class="deploy-price-period">/月</span>
+                </div>
+                <p class="deploy-pricing-desc">适合中型企业和成长型团队</p>
+              </div>
+
+              <ul class="deploy-pricing-features">
+                <li><i class="fas fa-check"></i> 最多25个用户</li>
+                <li><i class="fas fa-check"></i> 高级报表功能</li>
+                <li><i class="fas fa-check"></i> 自定义合同模板</li>
+                <li><i class="fas fa-check"></i> 优先电子邮件支持</li>
+                <li><i class="fas fa-check"></i> 实时聊天支持</li>
+                <li><i class="fas fa-check"></i> 2个月免费试用</li>
+              </ul>
+
+              <a href="#" class="deploy-pricing-button deploy-button-primary">立即订阅</a>
+            </div>
+
+            <!-- 企业计划 -->
+            <div class="deploy-pricing-card">
+              <div class="deploy-pricing-header">
+                <h3 class="deploy-pricing-title">企业版</h3>
+                <div class="deploy-pricing-price">
+                  <span class="deploy-price-currency">¥</span>
+                  <span class="deploy-price-amount">999</span>
+                  <span class="deploy-price-period">/月</span>
+                </div>
+                <p class="deploy-pricing-desc">适合大型企业和高要求团队</p>
+              </div>
+
+              <ul class="deploy-pricing-features">
+                <li><i class="fas fa-check"></i> 无限用户</li>
+                <li><i class="fas fa-check"></i> 定制报表方案</li>
+                <li><i class="fas fa-check"></i> 高级合同管理</li>
+                <li><i class="fas fa-check"></i> 专属客户经理</li>
+                <li><i class="fas fa-check"></i> 24/7全天候支持</li>
+                <li><i class="fas fa-check"></i> API集成支持</li>
+                <li><i class="fas fa-check"></i> 2个月免费试用</li>
+              </ul>
+
+              <a href="#" class="deploy-pricing-button">联系销售</a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-  
-  <div class="h5footer" id="footer"></div>
-</body>
+      </section>
+
+      <!-- 呼叫操作部分 -->
+      <section class="deploy-cta-section">
+        <div class="deploy-container">
+          <div class="deploy-cta-content">
+            <h2 class="deploy-cta-title">准备简化您的订阅流程？</h2>
+            <p class="deploy-cta-desc">立即开始使用我们的订阅支付门户，享受2个月免费试用期</p>
+            <div class="deploy-cta-buttons">
+              <a href="#" class="deploy-cta-button deploy-button-primary">开始免费试用</a>
+              <a href="#" class="deploy-cta-button deploy-button-secondary">预约演示</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="h5footer" id="footer"></div>
+  </body>
 </html>

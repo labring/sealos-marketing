@@ -1,1 +1,339 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[695],{4634:function(r,e,o){Promise.resolve().then(o.t.bind(o,5885,23)),Promise.resolve().then(o.t.bind(o,3516,23)),Promise.resolve().then(o.bind(o,6647))},5275:function(r,e,o){"use strict";o.d(e,{s8:function(){return d},xx:function(){return a}});let d={laf_github:"https://github.com/labring/laf",laf_index_video:"https://itceb8-video.oss.laf.run/laf-website.mp4",sealaf:"https://bja.sealos.run?openapp=system-sealaf&s=bd-sealaf"},a={light:"light",dark:"dark"}},6647:function(r,e,o){"use strict";o.d(e,{ChakraProviders:function(){return f}});var d=o(7230),a=o(6590),t=o(3500),i=o(1318),n=o(9058),l=o(5275);let{definePartsStyle:s,defineMultiStyleConfig:b}=(0,i.D)(t.VM.keys),p=b({sizes:{sm:s({container:{width:"60px",height:"18px",px:"1",py:"1",zoom:"0.8",fontWeight:"600",borderRadius:"4px"}})},variants:{private:s({container:{borderColor:"blue.400",borderWidth:1,color:"blue.700"}}),readonly:s({container:{borderColor:"purple.300",borderWidth:1,color:"purple.600"}}),readwrite:s({container:{borderColor:"warn.400",borderWidth:1,color:"warn.700"}}),inputTag:s({container:{backgroundColor:"lafWhite.100",borderColor:"lafWhite.100",borderWidth:1,color:"grayModern.900",height:"28px"}}),inputTagActive:s({container:{backgroundColor:"lafWhite.600",borderColor:"primary.500",borderWidth:1,color:"primary.500",height:"28px"}})}}),h=(0,i.fj)({baseStyle:{},sizes:{sm:{fontSize:"sm",px:2,py:0,height:"24px",fontWeight:"normal"},md:{fontSize:"md",borderRadius:"100px",px:6,height:"32px"}},variants:{primary:{bg:"primary.600",color:"lafWhite.200",_hover:{bg:"primary.700"},_disabled:{_hover:{bg:"primary.500 !important"}}},secondary:{color:"primary.500",bg:"primary.100",_hover:{bg:"primary.200"}},plain:{bg:"grayModern.100",color:"grayModern.500",_hover:{bg:"grayModern.200"}},text:{color:"primary.500",_hover:{bg:"primary.100"}},text_disabled:{color:"grayModern.500",_hover:{cursor:"not-allowed"}},warn:{bg:"error.100",color:"error.500",_hover:{bg:"error.200"}},warnText:{color:"error.500",_hover:{bg:"error.100"}},thirdly:{color:"primary.500",bg:"primary.100",_hover:{bg:"primary.200"},border:"1px solid",rounded:"md"},thirdly_disabled:{bg:"grayModern.100",color:"grayModern.500",_hover:{bg:"grayModern.100",cursor:"not-allowed"},border:"1px solid",rounded:"md"}},defaultProps:{size:"md",variant:"primary"}}),g={baseStyle:(0,i.k0)({borderRadius:"50px",textTransform:"none",fontWeight:"medium",display:"flex",justifyContent:"center",alignItems:"center"})},u=(0,n.B1)({initialColorMode:l.xx.dark,useSystemColorMode:!1,fontSizes:{sm:"12px",base:"12px",md:"14px",lg:"16px",xl:"16px","2xl":"18px","3xl":"22px"},colors:{primary:{100:"#E6F6F5",200:"#CCEEEB",300:"#99DDD8",400:"#66CBC4",500:"#33BAB1",600:"#00A99D",700:"#00877E",800:"#00655E",900:"#00443F",1e3:"#00221F"},lafWhite:{100:"#FEFEFE",200:"#FDFDFE",300:"#FBFBFC",400:"#F8FAFB",500:"#F6F8F9",600:"#F4F6F8",700:"#C3C5C6",800:"#929495",900:"#626263",1e3:"#313132"},grayModern:{100:"#EFF0F1",200:"#DEE0E2",300:"#BDC1C5",400:"#9CA2A8",500:"#7B838B",600:"#5A646E",700:"#485058",800:"#363C42",900:"#24282C",1e3:"#121416"},grayIron:{100:"#F3F3F3",200:"#E6E6E7",300:"#CDCDD0",400:"#B4B4B8",500:"#9B9BA1",600:"#828289",700:"#68686E",800:"#4E4E52",900:"#343437",1e3:"#1A1A1B"},error:{100:"#FDECEE",200:"#FDD8DC",400:"#FF8492",500:"#F16979",600:"#ED4458"},warn:{100:"#FFF2EC",400:"#FDB08A",600:"#FB7C3C",700:"#C96330"},rose:{100:"#FDEAF1"},blue:{100:"#EBF7FD",400:"#86CEF5",500:"#5EBDF2",600:"#36ADEF",700:"#2B8ABF"},purple:{300:"#DBBDE9",400:"#C99CDF",600:"#A55AC9",700:"#7167AA"},frostyNightfall:{200:"#EAEBF0"}},components:{Button:h,Modal:{defaultProps:{}},Tag:p,Input:{baseStyle:{field:{}},sizes:{xs:{field:{borderRadius:"sm",fontSize:"xs",height:6,paddingX:2}},sm:{field:{borderRadius:"sm",fontSize:"sm",height:8,paddingX:3}},md:{field:{borderRadius:"md",fontSize:"md",height:10,paddingX:4}},lg:{field:{borderRadius:"md",fontSize:"lg",height:12,paddingX:4}}},variants:{outline:{field:{background:"#fff",border:"1px solid",borderColor:"transparent",_focus:{background:"transparent",borderColor:"#3182ce"}}},filled:{field:{background:"lafWhite.600",border:"1px solid",borderColor:"transparent",_hover:{background:"lafWhite.600"},_focus:{background:"transparent",borderColor:"primary.400"}},addon:{background:"lafWhite.600"}},unstyled:{field:{background:"transparent",borderRadius:"md",height:"auto",paddingX:0}},userInfo:{field:{background:"#F8FAFB",border:"1px",height:"32px",borderColor:"#D5D6E1"}}},defaultProps:{size:"md",variant:"filled"}},Tabs:{variants:{"soft-rounded":{tab:{borderRadius:"4px",color:"grayModern.500",_selected:{color:"grayModern.900",bg:"lafWhite.600",borderRadius:"4px"}}}}},Table:{baseStyle:{},variants:{simple:{parts:["th","td"],th:{border:"none",fontWeight:"400",color:"grayModern.500"},td:{border:"none"}},border:{parts:["th","td"],th:{borderWidth:1,borderColor:"grayModern.100",background:"lafWhite.300"},td:{borderWidth:1,borderColor:"grayModern.100",background:"lafWhite.300"}},params:{parts:["th","td"],th:{borderWidth:1,borderColor:"grayModern.100",background:"lafWhite.400"},td:{borderWidth:1,borderColor:"grayModern.100",background:"lafWhite.400"}}},defaultProps:{variant:"border"}},Select:{variants:{filled:{field:{background:"lafWhite.600",borderWidth:1,_hover:{background:"lafWhite.600"},_focusVisible:{background:"lafWhite.200",borderColor:"primary.400"}},icon:{color:"grayIron.600"}}}},Badge:g,Menu:{variants:{default:{list:{py:"4px",borderRadius:"4px",border:"none",boxShadow:"0px 4px 8px rgba(0, 0, 0, 0.1)"},item:{minHeight:"36px"}}},defaultProps:{variant:"default"}}}});function f(r){let{children:e}=r;return(0,d.jsx)(a.x,{theme:u,children:e})}},5885:function(){}},function(r){r.O(0,[501,436,31,428,356,744],function(){return r(r.s=4634)}),_N_E=r.O()}]);
+(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
+  [695],
+  {
+    4634: function (r, e, o) {
+      (Promise.resolve().then(o.t.bind(o, 5885, 23)),
+        Promise.resolve().then(o.t.bind(o, 3516, 23)),
+        Promise.resolve().then(o.bind(o, 6647)));
+    },
+    5275: function (r, e, o) {
+      'use strict';
+      o.d(e, {
+        s8: function () {
+          return d;
+        },
+        xx: function () {
+          return a;
+        }
+      });
+      let d = {
+          laf_github: 'https://github.com/labring/laf',
+          laf_index_video: 'https://itceb8-video.oss.laf.run/laf-website.mp4',
+          sealaf: 'https://bja.sealos.run?openapp=system-sealaf&s=bd-sealaf'
+        },
+        a = { light: 'light', dark: 'dark' };
+    },
+    6647: function (r, e, o) {
+      'use strict';
+      o.d(e, {
+        ChakraProviders: function () {
+          return f;
+        }
+      });
+      var d = o(7230),
+        a = o(6590),
+        t = o(3500),
+        i = o(1318),
+        n = o(9058),
+        l = o(5275);
+      let { definePartsStyle: s, defineMultiStyleConfig: b } = (0, i.D)(t.VM.keys),
+        p = b({
+          sizes: {
+            sm: s({
+              container: {
+                width: '60px',
+                height: '18px',
+                px: '1',
+                py: '1',
+                zoom: '0.8',
+                fontWeight: '600',
+                borderRadius: '4px'
+              }
+            })
+          },
+          variants: {
+            private: s({
+              container: { borderColor: 'blue.400', borderWidth: 1, color: 'blue.700' }
+            }),
+            readonly: s({
+              container: { borderColor: 'purple.300', borderWidth: 1, color: 'purple.600' }
+            }),
+            readwrite: s({
+              container: { borderColor: 'warn.400', borderWidth: 1, color: 'warn.700' }
+            }),
+            inputTag: s({
+              container: {
+                backgroundColor: 'lafWhite.100',
+                borderColor: 'lafWhite.100',
+                borderWidth: 1,
+                color: 'grayModern.900',
+                height: '28px'
+              }
+            }),
+            inputTagActive: s({
+              container: {
+                backgroundColor: 'lafWhite.600',
+                borderColor: 'primary.500',
+                borderWidth: 1,
+                color: 'primary.500',
+                height: '28px'
+              }
+            })
+          }
+        }),
+        h = (0, i.fj)({
+          baseStyle: {},
+          sizes: {
+            sm: { fontSize: 'sm', px: 2, py: 0, height: '24px', fontWeight: 'normal' },
+            md: { fontSize: 'md', borderRadius: '100px', px: 6, height: '32px' }
+          },
+          variants: {
+            primary: {
+              bg: 'primary.600',
+              color: 'lafWhite.200',
+              _hover: { bg: 'primary.700' },
+              _disabled: { _hover: { bg: 'primary.500 !important' } }
+            },
+            secondary: { color: 'primary.500', bg: 'primary.100', _hover: { bg: 'primary.200' } },
+            plain: {
+              bg: 'grayModern.100',
+              color: 'grayModern.500',
+              _hover: { bg: 'grayModern.200' }
+            },
+            text: { color: 'primary.500', _hover: { bg: 'primary.100' } },
+            text_disabled: { color: 'grayModern.500', _hover: { cursor: 'not-allowed' } },
+            warn: { bg: 'error.100', color: 'error.500', _hover: { bg: 'error.200' } },
+            warnText: { color: 'error.500', _hover: { bg: 'error.100' } },
+            thirdly: {
+              color: 'primary.500',
+              bg: 'primary.100',
+              _hover: { bg: 'primary.200' },
+              border: '1px solid',
+              rounded: 'md'
+            },
+            thirdly_disabled: {
+              bg: 'grayModern.100',
+              color: 'grayModern.500',
+              _hover: { bg: 'grayModern.100', cursor: 'not-allowed' },
+              border: '1px solid',
+              rounded: 'md'
+            }
+          },
+          defaultProps: { size: 'md', variant: 'primary' }
+        }),
+        g = {
+          baseStyle: (0, i.k0)({
+            borderRadius: '50px',
+            textTransform: 'none',
+            fontWeight: 'medium',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+          })
+        },
+        u = (0, n.B1)({
+          initialColorMode: l.xx.dark,
+          useSystemColorMode: !1,
+          fontSizes: {
+            sm: '12px',
+            base: '12px',
+            md: '14px',
+            lg: '16px',
+            xl: '16px',
+            '2xl': '18px',
+            '3xl': '22px'
+          },
+          colors: {
+            primary: {
+              100: '#E6F6F5',
+              200: '#CCEEEB',
+              300: '#99DDD8',
+              400: '#66CBC4',
+              500: '#33BAB1',
+              600: '#00A99D',
+              700: '#00877E',
+              800: '#00655E',
+              900: '#00443F',
+              1e3: '#00221F'
+            },
+            lafWhite: {
+              100: '#FEFEFE',
+              200: '#FDFDFE',
+              300: '#FBFBFC',
+              400: '#F8FAFB',
+              500: '#F6F8F9',
+              600: '#F4F6F8',
+              700: '#C3C5C6',
+              800: '#929495',
+              900: '#626263',
+              1e3: '#313132'
+            },
+            grayModern: {
+              100: '#EFF0F1',
+              200: '#DEE0E2',
+              300: '#BDC1C5',
+              400: '#9CA2A8',
+              500: '#7B838B',
+              600: '#5A646E',
+              700: '#485058',
+              800: '#363C42',
+              900: '#24282C',
+              1e3: '#121416'
+            },
+            grayIron: {
+              100: '#F3F3F3',
+              200: '#E6E6E7',
+              300: '#CDCDD0',
+              400: '#B4B4B8',
+              500: '#9B9BA1',
+              600: '#828289',
+              700: '#68686E',
+              800: '#4E4E52',
+              900: '#343437',
+              1e3: '#1A1A1B'
+            },
+            error: {
+              100: '#FDECEE',
+              200: '#FDD8DC',
+              400: '#FF8492',
+              500: '#F16979',
+              600: '#ED4458'
+            },
+            warn: { 100: '#FFF2EC', 400: '#FDB08A', 600: '#FB7C3C', 700: '#C96330' },
+            rose: { 100: '#FDEAF1' },
+            blue: {
+              100: '#EBF7FD',
+              400: '#86CEF5',
+              500: '#5EBDF2',
+              600: '#36ADEF',
+              700: '#2B8ABF'
+            },
+            purple: { 300: '#DBBDE9', 400: '#C99CDF', 600: '#A55AC9', 700: '#7167AA' },
+            frostyNightfall: { 200: '#EAEBF0' }
+          },
+          components: {
+            Button: h,
+            Modal: { defaultProps: {} },
+            Tag: p,
+            Input: {
+              baseStyle: { field: {} },
+              sizes: {
+                xs: { field: { borderRadius: 'sm', fontSize: 'xs', height: 6, paddingX: 2 } },
+                sm: { field: { borderRadius: 'sm', fontSize: 'sm', height: 8, paddingX: 3 } },
+                md: { field: { borderRadius: 'md', fontSize: 'md', height: 10, paddingX: 4 } },
+                lg: { field: { borderRadius: 'md', fontSize: 'lg', height: 12, paddingX: 4 } }
+              },
+              variants: {
+                outline: {
+                  field: {
+                    background: '#fff',
+                    border: '1px solid',
+                    borderColor: 'transparent',
+                    _focus: { background: 'transparent', borderColor: '#3182ce' }
+                  }
+                },
+                filled: {
+                  field: {
+                    background: 'lafWhite.600',
+                    border: '1px solid',
+                    borderColor: 'transparent',
+                    _hover: { background: 'lafWhite.600' },
+                    _focus: { background: 'transparent', borderColor: 'primary.400' }
+                  },
+                  addon: { background: 'lafWhite.600' }
+                },
+                unstyled: {
+                  field: {
+                    background: 'transparent',
+                    borderRadius: 'md',
+                    height: 'auto',
+                    paddingX: 0
+                  }
+                },
+                userInfo: {
+                  field: {
+                    background: '#F8FAFB',
+                    border: '1px',
+                    height: '32px',
+                    borderColor: '#D5D6E1'
+                  }
+                }
+              },
+              defaultProps: { size: 'md', variant: 'filled' }
+            },
+            Tabs: {
+              variants: {
+                'soft-rounded': {
+                  tab: {
+                    borderRadius: '4px',
+                    color: 'grayModern.500',
+                    _selected: { color: 'grayModern.900', bg: 'lafWhite.600', borderRadius: '4px' }
+                  }
+                }
+              }
+            },
+            Table: {
+              baseStyle: {},
+              variants: {
+                simple: {
+                  parts: ['th', 'td'],
+                  th: { border: 'none', fontWeight: '400', color: 'grayModern.500' },
+                  td: { border: 'none' }
+                },
+                border: {
+                  parts: ['th', 'td'],
+                  th: { borderWidth: 1, borderColor: 'grayModern.100', background: 'lafWhite.300' },
+                  td: { borderWidth: 1, borderColor: 'grayModern.100', background: 'lafWhite.300' }
+                },
+                params: {
+                  parts: ['th', 'td'],
+                  th: { borderWidth: 1, borderColor: 'grayModern.100', background: 'lafWhite.400' },
+                  td: { borderWidth: 1, borderColor: 'grayModern.100', background: 'lafWhite.400' }
+                }
+              },
+              defaultProps: { variant: 'border' }
+            },
+            Select: {
+              variants: {
+                filled: {
+                  field: {
+                    background: 'lafWhite.600',
+                    borderWidth: 1,
+                    _hover: { background: 'lafWhite.600' },
+                    _focusVisible: { background: 'lafWhite.200', borderColor: 'primary.400' }
+                  },
+                  icon: { color: 'grayIron.600' }
+                }
+              }
+            },
+            Badge: g,
+            Menu: {
+              variants: {
+                default: {
+                  list: {
+                    py: '4px',
+                    borderRadius: '4px',
+                    border: 'none',
+                    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)'
+                  },
+                  item: { minHeight: '36px' }
+                }
+              },
+              defaultProps: { variant: 'default' }
+            }
+          }
+        });
+      function f(r) {
+        let { children: e } = r;
+        return (0, d.jsx)(a.x, { theme: u, children: e });
+      }
+    },
+    5885: function () {}
+  },
+  function (r) {
+    (r.O(0, [501, 436, 31, 428, 356, 744], function () {
+      return r((r.s = 4634));
+    }),
+      (_N_E = r.O()));
+  }
+]);

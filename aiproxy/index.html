@@ -1,1413 +1,2157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Proxy - Sealos AI模型集成平台</title>
-    <meta name="description" content="一个平台，轻松调用国内外数百种主流 AI 模型，无缝获取多平台 API Key，超低单价，统一支付与计费">
-    <meta name="keywords" content="一个平台，轻松调用国内外数百种主流 AI 模型，无缝获取多平台 API Key，超低单价，统一支付与计费">
-    <meta name="description" content="FastGpt is a cutting-edge AI platform providing advanced GPT solutions for developers and enterprises.">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="stylesheet" href="/app_store/css/appstore-xq.css">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="/aiproxy/img/aikonw.css">
+    <meta
+      name="description"
+      content="一个平台，轻松调用国内外数百种主流 AI 模型，无缝获取多平台 API Key，超低单价，统一支付与计费"
+    />
+    <meta
+      name="keywords"
+      content="一个平台，轻松调用国内外数百种主流 AI 模型，无缝获取多平台 API Key，超低单价，统一支付与计费"
+    />
+    <meta
+      name="description"
+      content="FastGpt is a cutting-edge AI platform providing advanced GPT solutions for developers and enterprises."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <link rel="stylesheet" href="/app_store/css/appstore-xq.css" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/aiproxy/img/aikonw.css" />
     <script src="/aiproxy/img/aiknow.js" defer></script>
-    <link rel="stylesheet" href="/app_store/css/appstore-xq.css">
-    <link rel="stylesheet" href="/devbox/img/devbox.css">
+    <link rel="stylesheet" href="/app_store/css/appstore-xq.css" />
+    <link rel="stylesheet" href="/devbox/img/devbox.css" />
     <script src="/imgs/js/h5_Q3_C1.js" defer></script>
     <script src="/app_store/js/appstor.js" defer></script>
     <script src="/app_store/js/stars.js" defer></script>
-    <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico">
+    <link data-rh="true" rel="icon" href="https://sealos.run/favicon.ico" />
     <script src="/app_store/js/navbar.js"></script>
     <script src="/app_store/js/foooter.js"></script>
     <script src="/js/sem-aiproxy.js" defer></script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-N2X5FW9W');
+    </script>
+    <!-- End Google Tag Manager -->
     <script type="text/javascript">
-        (function (c, l, a, r, i, t, y) {
-          c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) }
-          t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i
-          y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y)
-        })(window, document, "clarity", "script", "oxaa4saana");
-      </script>
-</head>
-<body class="bannerico">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'oxaa4saana');
+    </script>
+  </head>
+  <body class="bannerico">
     <div id="navbar-container"></div>
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <div class="badge1">
-                    <img src="/aiproxy/img/laba.svg">限时福利，<p>注册即领</p>所有模型<span> 3500w</span>Token额度！
-                </div>
-                <h1 class="bannh1">AI Proxy</h1>
-                <p class="dectico">全球 AI 模型接入平台，内置ChatGpt、Claude、Deepseek等近200+ 模型，涵盖语言、语音、图片和视频等多模态场景，一键生成API Key。
-                    </p>    
-                <div class="buttons1">
-                    <a href="https://cloud.sealos.run/" class="login-link button github hover-effect"><img src="/aiproxy/img/zhuce.svg" alt="注册图标">立即注册</a>
-                    <a href="#moxinggc" class="login-link button docs hover-effect"><img src="/aiproxy/img/space_demo_wear_down.svg" alt="演示图标">模型广场</a>
-                </div>
-            </div>
-        </section>
-
-        <div class="banvideo">
-<img src="/aiproxy/img/20250210-120232.png">
+      <section class="hero">
+        <div class="hero-content">
+          <div class="badge1">
+            <img src="/aiproxy/img/laba.svg" />限时福利，
+            <p>注册即领</p>
+            所有模型<span> 3500w</span>Token额度！
+          </div>
+          <h1 class="bannh1">AI Proxy</h1>
+          <p class="dectico">
+            全球 AI 模型接入平台，内置ChatGpt、Claude、Deepseek等近200+
+            模型，涵盖语言、语音、图片和视频等多模态场景，一键生成API Key。
+          </p>
+          <div class="buttons1">
+            <a href="https://cloud.sealos.run/" class="login-link button github hover-effect"
+              ><img src="/aiproxy/img/zhuce.svg" alt="注册图标" />立即注册</a
+            >
+            <a href="#moxinggc" class="login-link button docs hover-effect"
+              ><img src="/aiproxy/img/space_demo_wear_down.svg" alt="演示图标" />模型广场</a
+            >
+          </div>
         </div>
+      </section>
+
+      <div class="banvideo">
+        <img src="/aiproxy/img/20250210-120232.png" />
+      </div>
     </main>
     <section class="integration">
-        <div class="integration-content" id="moxinggc">
-            <div class="intput">
-                <div class="intputout">全球AI模型支持</div>
-                <h2>200+海量AI模型集成</h2>
-                <p>支持主流商业模型 Gpt 4、Claude 3.7、Deepseek R1 和开源模型 ChatGLM 、Llama2 等, <a href="https://cloud.fastgpt.cn/price" target="_blank">模型价格</a>低于官方售价 10%-30%，海外模型请访问 <a href="https://usw.sealos.io/signin" class="login-link">usw.sealos.io</a></p>
-                <a href="https://cloud.sealos.run/" class="button docs login-link" target="_blank"><img src="/aiproxy/img/moxing.svg" alt="模型图标">模型广场</a>
-            </div>
-            <div class="integration-grid">
-                <div class="filter-module">
-                    <div class="filter-options">
-                        <div class="title-bt"> <div class="tiles">系列/厂商<select id="provider-select">
-                            <option value="all">全部</option>
-                            <option value="claude">Claude</option>
-                            <option value="DeepSeek">DeepSeek</option>
-                            <option value="OpenAI">OpenAI</option>
-                            
-                            <option value="Google">Google</option>
-                            <option value="qwen">阿里</option>
-                            <option value="baai">BAAI</option>
-                            <option value="baidu">百度</option>
-                            <option value="zpqy">智谱清言</option>
-                            <option value="doubao">豆包</option>
-                            <option value="lyww">零一万物</option>
-                            <option value="MiniMax">MiniMax</option>
-                            <option value="yzam">月之暗面</option>
-                            <option value="StepFun">StepFun</option>
-                            <option value="tengxun">腾讯</option>
-                            <option value="xunfei">讯飞</option>
-                            <!-- Add more providers as needed -->
-                        </select>
-                        </div>
-                       <div class="tiles"> 类型<select id="type-select">
-                            <option value="all">全部</option>
-                            <option value="text">聊天补全</option>
-                            <option value="wbqr">文本嵌入</option>
-                            <option value="yyhc">语音合成</option>
-                            <option value="cpx">重排序</option>
-                            <!-- Add more types as needed -->
-                        </select></div></div>
-                        <input type="text" id="model-search" placeholder="根据模型名称搜索" class="sousuo">
-                    </div>
-                    <div class="model-list">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th class="dabody1">模型名称</th>
-                                    <th>模型类型</th>
-                                    <th>RPM</th>
-                                    <th class="dabody">输入单价 /1k tokens</th>
-                                    <th class="dabody">输出单价 /1k tokens</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr data-provider="DeepSeek" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/open.svg">Deepseek-Reasoner(R1）</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>10000</td>
-                                    <td>0.004 元</td>
-                                    <td>0.016 元</td>
-                                </tr>
-                                <tr data-provider="OpenAI" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/openai.718ff9c5.svg">Gpt-4o</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.0025 元</td>
-                                    <td>0.01</td>
-                                </tr>
-                                <tr data-provider="claude" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/anthropic.be6534ba.svg">Claude-3-7-sonnet-thinking-20250219</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.004 元</td>
-                                    <td>0.02 元</td>
-                                </tr>
-
-
-                               
-
-                                <tr data-provider="DeepSeek" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/open.svg">deepseek-chat</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>10000</td>
-                                    <td>0.001 元</td>
-                                    <td>0.002 元</td>
-                                </tr>
-                                 <!--千问-->
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qvq-72b-preview</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.012 元</td>
-                                    <td>0.036 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-7b-chat</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>300</td>
-                                    <td>0.006 元</td>
-                                    <td>0.006 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-14b-chat</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>300</td>
-                                    <td>0.008 元</td>
-                                    <td>0.008 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-72b-chat</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>80</td>
-                                    <td>0.002 元</td>
-                                    <td>0.002 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-coder-plus</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.0035 元</td>
-                                    <td>0.007 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-coder-plus-latest</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.0035 元</td>
-                                    <td>0.007 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-coder-turbo</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.002 元</td>
-                                    <td>0.006 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-coder-turbo-latest</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.002 元</td>
-                                    <td>0.006 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-long</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.0005 元</td>
-                                    <td>0.002 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-math-plus</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.004 元</td>
-                                    <td>0.012 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-math-plus-latest</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.004 元</td>
-                                    <td>0.012 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-math-turbo</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.002 元</td>
-                                    <td>0.006 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-math-turbo-latest</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.002 元</td>
-                                    <td>0.006 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-max</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.02 元</td>
-                                    <td>0.06 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-max-latest</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.02 元</td>
-                                    <td>0.06 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-plus</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.0008 元</td>
-                                    <td>0.002 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-plus-latest</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.0008 元</td>
-                                    <td>0.002 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-turbo</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.0003 元</td>
-                                    <td>0.0006 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-turbo-latest</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.0003 元</td>
-                                    <td>0.0006 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-vl-max</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.003 元</td>
-                                    <td>0.009 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-vl-max-latest</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.003 元</td>
-                                    <td>0.009 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-vl-ocr</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>600</td>
-                                    <td>0.005 元</td>
-                                    <td>0.005 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-vl-ocr-latest</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>600</td>
-                                    <td>0.005 元</td>
-                                    <td>0.005 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-vl-plus</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.0015 元</td>
-                                    <td>0.0048 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen-vl-plus-latest</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.0015 元</td>
-                                    <td>0.0048 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen1.5-7b-chat</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.001 元</td>
-                                    <td>0.002 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen1.5-14b-chat</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.002 元</td>
-                                    <td>0.004 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen1.5-32b-chat</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>10</td>
-                                    <td>0.0035 元</td>
-                                    <td>0.007 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen1.5-72b-chat</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.005 元</td>
-                                    <td>0.01 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen1.5-110b-chat</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>10</td>
-                                    <td>0.007 元</td>
-                                    <td>0.014 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen2-7b-instruct</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.001 元</td>
-                                    <td>0.002 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen2-57b-a14b-instruct</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.0035 元</td>
-                                    <td>0.007 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen2-72b-instruct</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.004 元</td>
-                                    <td>0.012 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen2-math-7b-instruct</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>10</td>
-                                    <td>0.001 元</td>
-                                    <td>0.002 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen2-math-72b-instruct</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>10</td>
-                                    <td>0.004 元</td>
-                                    <td>0.012 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen2.5-7b-instruct</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.001 元</td>
-                                    <td>0.002 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen2.5-32b-instruct</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.0035 元</td>
-                                    <td>0.007 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen2.5-72b-instruct</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.004 元</td>
-                                    <td>0.012 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen2.5-coder-7b-instruct</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.001 元</td>
-                                    <td>0.002 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen2.5-coder-14b-instruct</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.002 元</td>
-                                    <td>0.006 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen2.5-coder-32b-instruct</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.0035 元</td>
-                                    <td>0.007 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen2.5-math-7b-instruct</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.001 元</td>
-                                    <td>0.002 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwen2.5-math-72b-instruct</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.004 元</td>
-                                    <td>0.012 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">qwq-32b-preview</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>1200</td>
-                                    <td>0.0035 元</td>
-                                    <td>0.007 元</td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="wbqr">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">text-embedding-v1</div></td>
-                                    <td><div class="tdyuyin">文本嵌入</div></td>
-                                    <td>1800</td>
-                                    <td>0.0007 元</td>
-                                    <td></td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="wbqr">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">text-embedding-v2</div></td>
-                                    <td><div class="tdyuyin">文本嵌入</div></td>
-                                    <td>1800</td>
-                                    <td>0.0007 元</td>
-                                    <td></td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="wbqr">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">text-embedding-v3</div></td>
-                                    <td><div class="tdyuyin">文本嵌入</div></td>
-                                    <td>1800</td>
-                                    <td>0.0007 元</td>
-                                    <td></td>
-                                </tr>
-                                <tr data-provider="qwen" data-type="yyhc">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">sambert-v1</div></td>
-                                    <td><div class="tdsuoyin">语音合成</div></td>
-                                    <td>1200</td>
-                                    <td>0.1 元</td>
-                                    <td></td>
-                                </tr>
-                                <!--BAAi-->
-                                <tr data-provider="baai" data-type="wbqr">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/baai.cfd726b4.svg">bge-large-en</div></td>
-                                    <td><div class="tdyuyin">文本嵌入</div></td>
-                                    <td>1200</td>
-                                    <td>0.0005 元</td>
-                                    <td></td>
-                                </tr>
-                                <tr data-provider="baai" data-type="wbqr">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/baai.cfd726b4.svg">bge-large-zh</div></td>
-                                    <td><div class="tdyuyin">文本嵌入</div></td>
-                                    <td>1200</td>
-                                    <td>0.0005 元</td>
-                                    <td></td>
-                                </tr>
-                                <!--百度-->
-                                <tr data-provider="baai" data-type="cpx">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/baai.cfd726b4.svg">bge-reranker-v2-m3</div></td>
-                                    <td><div class="tdcpx">重排序</div></td>
-                                    <td>2000</td>
-                                    <td>0.0009 元</td>
-                                    <td></td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">ERNIE-3.5-8K</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>10000</td>
-                                    <td>0.0008 元</td>
-                                    <td>0.002 元</td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">ERNIE-3.5-8K-Preview</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>300</td>
-                                    <td>0.0008 元</td>
-                                    <td>0.002 元</td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">ERNIE-3.5-128K</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>5000</td>
-                                    <td>0.0008 元</td>
-                                    <td>0.002 元</td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">ERNIE-4.0-8K</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>10000</td>
-                                    <td>0.03 元</td>
-                                    <td>0.09 元</td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">ERNIE-4.0-8K-Latest</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.03 元</td>
-                                    <td>0.09 元</td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">ERNIE-4.0-8K-Preview</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>300</td>
-                                    <td>0.003 元</td>
-                                    <td>0.009 元</td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">ERNIE-4.0-Turbo-8K</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>10000</td>
-                                    <td>0.002 元</td>
-                                    <td>0.006 元</td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">ERNIE-4.0-Turbo-8K-Latest</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.02 元</td>
-                                    <td>0.06 元</td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">ERNIE-4.0-Turbo-8K-Preview</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.02 元</td>
-                                    <td>0.06 元</td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">ERNIE-4.0-Turbo-128K</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.02 元</td>
-                                    <td>0.06 元</td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">ERNIE-Character-8K</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.0003 元</td>
-                                    <td>0.0006 元</td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">ERNIE-Character-Fiction-8K</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>300</td>
-                                    <td>0.0003 元</td>
-                                    <td>0.0006 元</td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">ERNIE-Lite-8K</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>500</td>
-                                    <td>0.0001 元</td>
-                                    <td>0.0001 元</td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">ERNIE-Lite-Pro-128K</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>10000</td>
-                                    <td>0.0002 元</td>
-                                    <td>0.0004 元</td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">ERNIE-Novel-8K</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.04 元</td>
-                                    <td>0.12 元</td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">ERNIE-Speed-8K</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>500</td>
-                                    <td>0.0001 元</td>
-                                    <td>0.0001 元</td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">ERNIE-Speed-128K</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>500</td>
-                                    <td>0.0001 元</td>
-                                    <td>0.0001 元</td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">ERNIE-Speed-Pro-128K</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>10000</td>
-                                    <td>0.0003 元</td>
-                                    <td>0.0006 元</td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">ERNIE-Tiny-8K</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>10000</td>
-                                    <td>0.0001 元</td>
-                                    <td>0.0001 元</td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="wbqr">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">Embedding-V1</div></td>
-                                    <td><div class="tdyuyin">文本嵌入</div></td>
-                                    <td>1200</td>
-                                    <td>0.0005 元</td>
-                                    <td></td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="wbqr">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">tao-8k</div></td>
-                                    <td><div class="tdyuyin">文本嵌入</div></td>
-                                    <td>1200</td>
-                                    <td>0.0005 元</td>
-                                    <td></td>
-                                </tr>
-                                <tr data-provider="baidu" data-type="cpx">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/qianwen.9b637091.svg">bce-reranker-base_v1</div></td>
-                                    <td><div class="tdcpx">重排序</div></td>
-                                    <td>1200</td>
-                                    <td>0.0005 元</td>
-                                    <td></td>
-                                </tr>
-                               <!--智谱清言-->
-                               <tr data-provider="zpqy" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/chatglm.654831da.svg">charglm-4</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>60</td>
-                                <td>0.001 元</td>
-                                <td>0.001 元</td>
-                               </tr>
-                               <tr data-provider="zpqy" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/chatglm.654831da.svg">codegeex-4</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>60</td>
-                                <td>0.0001 元</td>
-                                <td>0.0001 元</td>
-                               </tr>
-                               <tr data-provider="zpqy" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/chatglm.654831da.svg">glm-3-turbo</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>300</td>
-                                <td>0.001 元</td>
-                                <td>0.001 元</td>
-                               </tr>
-                               <tr data-provider="zpqy" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/chatglm.654831da.svg">glm-4</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>60</td>
-                                <td>0.1 元</td>
-                                <td>0.1 元</td>
-                               </tr>
-                               <tr data-provider="zpqy" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/chatglm.654831da.svg">glm-4-air</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>900</td>
-                                <td>0.001 元</td>
-                                <td>0.001 元</td>
-                               </tr>
-                               <tr data-provider="zpqy" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/chatglm.654831da.svg">glm-4-airx</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>60</td>
-                                <td>0.01 元</td>
-                                <td>0.01 元</td>
-                               </tr>
-                               <tr data-provider="zpqy" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/chatglm.654831da.svg">glm-4-flash</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>1800</td>
-                                <td>0.0001 元</td>
-                                <td>0.0001 元</td>
-                               </tr>
-                               <tr data-provider="zpqy" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/chatglm.654831da.svg">glm-4-flashx</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>600</td>
-                                <td>0.0001 元</td>
-                                <td>0.0001 元</td>
-                               </tr>
-                               <tr data-provider="zpqy" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/chatglm.654831da.svg">glm-4-long</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>60</td>
-                                <td>0.001 元</td>
-                                <td>0.001 元</td>
-                               </tr>
-                               <tr data-provider="zpqy" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/chatglm.654831da.svg">glm-4-plus</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>600</td>
-                                <td>0.05 元</td>
-                                <td>0.05 元</td>
-                               </tr>
-                               <tr data-provider="zpqy" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/chatglm.654831da.svg">glm-4v</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>60</td>
-                                <td>0.05元</td>
-                                <td>0.05 元</td>
-                               </tr>
-                               <tr data-provider="zpqy" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/chatglm.654831da.svg">glm-4v-flash</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>60</td>
-                                <td>0.0001 元</td>
-                                <td>0.0001 元</td>
-                               </tr>
-                               <tr data-provider="zpqy" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/chatglm.654831da.svg">glm-4v-plus</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>60</td>
-                                <td>0.01 元</td>
-                                <td>0.01 元</td>
-                               </tr>
-                               <tr data-provider="zpqy" data-type="wbqr">
-                                <td><div class="tdbody"><img src="/aiproxy/img/chatglm.654831da.svg">embedding-2</div></td>
-                                <td><div class="tdyuyin">文本嵌入</div></td>
-                                <td>60</td>
-                                <td>0.0005 元</td>
-                                <td></td>
-                               </tr>
-                               <tr data-provider="zpqy" data-type="wbqr">
-                                <td><div class="tdbody"><img src="/aiproxy/img/chatglm.654831da.svg">embedding-3</div></td>
-                                <td><div class="tdyuyin">文本嵌入</div></td>
-                                <td>600</td>
-                                <td>0.0005 元</td>
-                                <td></td>
-                               </tr>
-                               <!--豆包-->
-                               <tr data-provider="doubao" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/doubao.4d92cba8.svg">Doubao-1.5-lite-32k</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>15000</td>
-                                <td>0.0003 元</td>
-                                <td>0.0006 元</td>
-                               </tr>
-                               <tr data-provider="doubao" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/doubao.4d92cba8.svg">Doubao-1.5-pro-32k</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>15000</td>
-                                <td>0.0008 元</td>
-                                <td>0.002 元</td>
-                               </tr>
-                               <tr data-provider="doubao" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/doubao.4d92cba8.svg">Doubao-1.5-pro-256k</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>2000</td>
-                                <td>0.0005 元</td>
-                                <td>0.0009 元</td>
-                               </tr>
-                               <tr data-provider="doubao" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/doubao.4d92cba8.svg">Doubao-1.5-vision-pro-32k</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>15000</td>
-                                <td>0.003 元</td>
-                                <td>0.009 元</td>
-                               </tr>
-                               <tr data-provider="doubao" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/doubao.4d92cba8.svg">Doubao-lite-4k</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>10000</td>
-                                <td>0.0003 元</td>
-                                <td>0.0006 元</td>
-                               </tr>
-                               <tr data-provider="doubao" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/doubao.4d92cba8.svg">Doubao-lite-32k</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>15000</td>
-                                <td>0.003 元</td>
-                                <td>0.009 元</td>
-                               </tr>
-                               <tr data-provider="doubao" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/doubao.4d92cba8.svg">Doubao-lite-128k</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>15000</td>
-                                <td>0.0008 元</td>
-                                <td>0.001 元</td>
-                               </tr>
-                               <tr data-provider="doubao" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/doubao.4d92cba8.svg">Doubao-pro-4k</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>10000</td>
-                                <td>0.0008 元</td>
-                                <td>0.002 元</td>
-                               </tr>
-                               <tr data-provider="doubao" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/doubao.4d92cba8.svg">Doubao-pro-32k</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>15000</td>
-                                <td>0.0008 元</td>
-                                <td>0.002 元</td>
-                               </tr>
-                               <tr data-provider="doubao" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/doubao.4d92cba8.svg">Doubao-pro-128k</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>1000</td>
-                                <td>0.005 元</td>
-                                <td>0.009 元</td>
-                               </tr>
-                               <tr data-provider="doubao" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/doubao.4d92cba8.svg">Doubao-vision-lite-32k</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>15000</td>
-                                <td>0.008 元</td>
-                                <td>0.008 元</td>
-                               </tr>
-                               <tr data-provider="doubao" data-type="text">
-                                <td><div class="tdbody"><img src="/aiproxy/img/doubao.4d92cba8.svg">Doubao-vision-pro-32k</div></td>
-                                <td><div class="tdico">聊天补全</div></td>
-                                <td>15000</td>
-                                <td>0.02 元</td>
-                                <td>0.02 元</td>
-                               </tr>
-                               <tr data-provider="doubao" data-type="wbqr">
-                                <td><div class="tdbody"><img src="/aiproxy/img/doubao.4d92cba8.svg">Doubao-embedding</div></td>
-                                <td><div class="tdyuyin">文本嵌入</div></td>
-                                <td>1200</td>
-                                <td>0.0005 元</td>
-                                <td></td>
-                               </tr>
-                               <tr data-provider="doubao" data-type="wbqr">
-                                <td><div class="tdbody"><img src="/aiproxy/img/doubao.4d92cba8.svg">Doubao-embedding-large</div></td>
-                                <td><div class="tdyuyin">文本嵌入</div></td>
-                                <td>1000</td>
-                                <td>0.0007 元</td>
-                                <td></td>
-                               </tr>
-                               <tr data-provider="doubao" data-type="yyhc">
-                                <td><div class="tdbody"><img src="/aiproxy/img/doubao.4d92cba8.svg">Doubao-tts</div></td>
-                                <td><div class="tdsuoyin">语音合成</div></td>
-                                <td>60</td>
-                                <td>0.5 元</td>
-                                <td></td>
-                               </tr>
-                                <!--零一万物-->
-                                <tr data-provider="lyww" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/lingyiwanwu.eaa51e3e.svg">yi-lightning</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.00099 元</td>
-                                    <td>0.00099 元</td>
-                                </tr>
-                                <tr data-provider="lyww" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/lingyiwanwu.eaa51e3e.svg">yi-vision-v2</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.006 元</td>
-                                    <td>0.006 元</td>
-                                </tr>
-                                <!--MiniMax-->
-                                <tr data-provider="MiniMax" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/minimax.5d47676c.svg">MiniMax-Text-01</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.001 元</td>
-                                    <td>0.008 元</td>
-                                </tr>
-                                <tr data-provider="MiniMax" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/minimax.5d47676c.svg">abab5.5-chat</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.015 元</td>
-                                    <td>0.015 元</td>
-                                </tr>
-                                <tr data-provider="MiniMax" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/minimax.5d47676c.svg">abab5.5s-chat</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.005 元</td>
-                                    <td>0.005 元</td>
-                                </tr>
-                                <tr data-provider="MiniMax" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/minimax.5d47676c.svg">abab6.5g-chat</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.005 元</td>
-                                    <td>0.005 元</td>
-                                </tr>
-                                <tr data-provider="MiniMax" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/minimax.5d47676c.svg">abab6.5s-chat</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.001 元</td>
-                                    <td>0.001 元</td>
-                                </tr>
-                                <tr data-provider="MiniMax" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/minimax.5d47676c.svg">abab6.5t-chat</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.005 元</td>
-                                    <td>0.005 元</td>
-                                </tr>
-                                <tr data-provider="MiniMax" data-type="yyhc">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/minimax.5d47676c.svg">speech-01-turbo</div></td>
-                                    <td><div class="tdsuoyin">语音合成</div></td>
-                                    <td>20</td>
-                                    <td>0.2 元</td>
-                                    <td></td>
-                                </tr>
-                                <!--月之暗面-->
-                                <tr data-provider="yzam" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/moonshot.4d46eebd.svg">moonshot-v1-8k</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>500</td>
-                                    <td>0.012 元</td>
-                                    <td>0.012 元</td>
-                                </tr>
-                                <tr data-provider="yzam" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/moonshot.4d46eebd.svg">moonshot-v1-8k-vision-preview</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>500</td>
-                                    <td>0.012 元</td>
-                                    <td>0.012 元</td>
-                                </tr>
-                                <tr data-provider="yzam" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/moonshot.4d46eebd.svg">moonshot-v1-32k</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>500</td>
-                                    <td>0.024 元</td>
-                                    <td>0.024 元</td>
-                                </tr>
-                                <tr data-provider="yzam" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/moonshot.4d46eebd.svg">moonshot-v1-32k-vision-preview</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>500</td>
-                                    <td>0.024 元</td>
-                                    <td>0.024 元</td>
-                                </tr>
-                                <tr data-provider="yzam" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/moonshot.4d46eebd.svg">moonshot-v1-128k</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>500</td>
-                                    <td>0.006 元</td>
-                                    <td>0.006 元</td>
-                                </tr>
-                                <tr data-provider="yzam" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/moonshot.4d46eebd.svg">moonshot-v1-128k-vision-preview</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>500</td>
-                                    <td>0.006 元</td>
-                                    <td>0.006 元</td>
-                                </tr>
-                                <!--StepFun-->
-                                <tr data-provider="StepFun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/stepfun.c406aa0d.svg">step-1-8k</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.005 元</td>
-                                    <td>0.02 元</td>
-                                </tr>
-                                <tr data-provider="StepFun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/stepfun.c406aa0d.svg">step-1-32k</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.015 元</td>
-                                    <td>0.07 元</td>
-                                </tr>
-                                <tr data-provider="StepFun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/stepfun.c406aa0d.svg">step-1-128k</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.04 元</td>
-                                    <td>0.02 元</td>
-                                </tr>
-                                <tr data-provider="StepFun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/stepfun.c406aa0d.svg">step-1-256k</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.95 元</td>
-                                    <td>0.3 元</td>
-                                </tr>
-                                <tr data-provider="StepFun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/stepfun.c406aa0d.svg">step-1-flash</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.001 元</td>
-                                    <td>0.004 元</td>
-                                </tr>
-                                <tr data-provider="StepFun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/stepfun.c406aa0d.svg">step-1.5v-mini</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.008 元</td>
-                                    <td>0.035 元</td>
-                                </tr>
-                                <tr data-provider="StepFun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/stepfun.c406aa0d.svg">step-1v-8k</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.005 元</td>
-                                    <td>0.02 元</td>
-                                </tr>
-                                <tr data-provider="StepFun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/stepfun.c406aa0d.svg">step-1v-32k</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.015 元</td>
-                                    <td>0.07 元</td>
-                                </tr>
-                                <tr data-provider="StepFun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/stepfun.c406aa0d.svg">step-2-16k</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.038 元</td>
-                                    <td>0.12 元</td>
-                                </tr>
-                                <tr data-provider="StepFun" data-type="yyhc">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/stepfun.c406aa0d.svg">step-tts-mini</div></td>
-                                    <td><div class="tdsuoyin">语音合成</div></td>
-                                    <td>60</td>
-                                    <td>0.09 元</td>
-                                    <td></td>
-                                </tr>
-                                <!--腾讯-->
-                                <tr data-provider="tengxun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/hunyuan.025cc867.svg">hunyuan-code</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>300</td>
-                                    <td>0.004 元</td>
-                                    <td>0.008 元</td>
-                                </tr>
-                                <tr data-provider="tengxun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/hunyuan.025cc867.svg">hunyuan-functioncall</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>300</td>
-                                    <td>0.004 元</td>
-                                    <td>0.008 元</td>
-                                </tr>
-                                <tr data-provider="tengxun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/hunyuan.025cc867.svg">hunyuan-large</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>300</td>
-                                    <td>0.004 元</td>
-                                    <td>0.012 元</td>
-                                </tr>
-                                <tr data-provider="tengxun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/hunyuan.025cc867.svg">hunyuan-large-longcontext</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>300</td>
-                                    <td>0.006 元</td>
-                                    <td>0.018 元</td>
-                                </tr>
-                                <tr data-provider="tengxun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/hunyuan.025cc867.svg">hunyuan-lite</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>300</td>
-                                    <td>0.0001 元</td>
-                                    <td>0.0001 元</td>
-                                </tr>
-                                <tr data-provider="tengxun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/hunyuan.025cc867.svg">hunyuan-pro</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>300</td>
-                                    <td>0.03 元</td>
-                                    <td>0.1 元</td>
-                                </tr>
-                                <tr data-provider="tengxun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/hunyuan.025cc867.svg">hunyuan-role</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>300</td>
-                                    <td>0.004 元</td>
-                                    <td>0.008 元</td>
-                                </tr>
-                                <tr data-provider="tengxun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/hunyuan.025cc867.svg">hunyuan-standard</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>300</td>
-                                    <td>0.0008 元</td>
-                                    <td>0.002 元</td>
-                                </tr>
-                                <tr data-provider="tengxun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/hunyuan.025cc867.svg">hunyuan-turbo</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>300</td>
-                                    <td>0.015 元</td>
-                                    <td>0.05 元</td>
-                                </tr>
-                                <tr data-provider="tengxun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/hunyuan.025cc867.svg">hunyuan-turbo-vision</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>300</td>
-                                    <td>0.008 元</td>
-                                    <td>0.008 元</td>
-                                </tr>
-                                <tr data-provider="tengxun" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/hunyuan.025cc867.svg">hunyuan-vision</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>300</td>
-                                    <td>0.018 元</td>
-                                    <td>0.018 元</td>
-                                </tr>
-                                <tr data-provider="tengxun" data-type="wbqr">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/hunyuan.025cc867.svg">hunyuan-embedding</div></td>
-                                    <td><div class="tdyuyin">文本嵌入</div></td>
-                                    <td>300</td>
-                                    <td>0.0007 元</td>
-                                    <td></td>
-                                </tr>
-                                <!--讯飞-->
-                                <tr data-provider="xunfei" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/sparkdesk.96979cd6.svg">SparkDesk-4.0-Ultra</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.14 元</td>
-                                    <td>0.14 元</td>
-                                </tr>
-                                <tr data-provider="xunfei" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/sparkdesk.96979cd6.svg">SparkDesk-Lite</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.001 元</td>
-                                    <td>0.001 元</td>
-                                </tr>
-                                <tr data-provider="xunfei" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/sparkdesk.96979cd6.svg">SparkDesk-Max</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.06 元</td>
-                                    <td>0.06 元</td>
-                                </tr>
-                                <tr data-provider="xunfei" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/sparkdesk.96979cd6.svg">SparkDesk-Max-32k</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.09 元</td>
-                                    <td>0.09 元</td>
-                                </tr>
-                                <tr data-provider="xunfei" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/sparkdesk.96979cd6.svg">SparkDesk-Pro</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.014 元</td>
-                                    <td>0.014 元</td>
-                                </tr>
-                                <tr data-provider="xunfei" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/sparkdesk.96979cd6.svg">SparkDesk-Pro-128K</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.026 元</td>
-                                    <td>0.026 元</td>
-                                </tr>
-                                <!-- Add more models as needed -->
-                                <!--claude-->
-                                <tr data-provider="claude" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/anthropic.be6534ba.svg">claude-3-5-haiku-20241022</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.001 元</td>
-                                    <td>0.005 元</td>
-                                </tr>
-                                <tr data-provider="claude" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/anthropic.be6534ba.svg">claude-3-5-sonnet-20240620</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.004 元</td>
-                                    <td>0.02 元</td>
-                                </tr>
-                                <tr data-provider="claude" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/anthropic.be6534ba.svg">claude-3-5-sonnet-20241022</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.004 元</td>
-                                    <td>0.02 元</td>
-                                </tr>
-                                <tr data-provider="claude" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/anthropic.be6534ba.svg">claude-3-5-sonnet-latest</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.004 元</td>
-                                    <td>0.02 元</td>
-                                </tr>
-                                <tr data-provider="claude" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/anthropic.be6534ba.svg">claude-3-7-sonnet-20250219</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.004 元</td>
-                                    <td>0.02 元</td>
-                                </tr>
-                                
-                                <tr data-provider="claude" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/anthropic.be6534ba.svg">claude-3-opus-20240229</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.003 元</td>
-                                    <td>0.015 元</td>
-                                </tr>
-                                <tr data-provider="claude" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/anthropic.be6534ba.svg">claude-3-haiku-20240307</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.003 元</td>
-                                    <td>0.015 元</td>
-                                </tr>
-                                <!--Google-->
-                                <tr data-provider="Google" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/google.cb2e36d7.svg">Gemini-1.5-pro</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>600</td>
-                                    <td>0.0025 元</td>
-                                    <td>0.01 元</td>
-                                </tr>
-                                <tr data-provider="Google" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/google.cb2e36d7.svg">Gemini-2.0-flash</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>600</td>
-                                    <td>0.0001 元</td>
-                                    <td>0.0004 元</td>
-                                </tr>
-                                <tr data-provider="Google" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/google.cb2e36d7.svg">gemini-2.0-flash-lite-preview</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>600</td>
-                                    <td>0.000075 元</td>
-                                    <td>0.0003 元</td>
-                                </tr>
-                                <tr data-provider="Google" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/google.cb2e36d7.svg">gemini-2.0-flash-thinking-exp</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>600</td>
-                                    <td>0.0001 元</td>
-                                    <td>0.0004 元</td>
-                                </tr>
-                                <tr data-provider="Google" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/google.cb2e36d7.svg">gemini-1.5-flash</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>600</td>
-                                    <td>0.00015 元</td>
-                                    <td>0.0006 元</td>
-                                </tr>
-                                <tr data-provider="Google" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/google.cb2e36d7.svg">gemini-1.5-flash-8b</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>600</td>
-                                    <td>0.000075 元</td>
-                                    <td>0.0003 元</td>
-                                </tr>
-                                <tr data-provider="Google" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/google.cb2e36d7.svg">gemini-2.0-pro-exp</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>600</td>
-                                    <td>0.0025 元</td>
-                                    <td>0.01 元</td>
-                                </tr>
-                                <tr data-provider="Google" data-type="wbqr">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/google.cb2e36d7.svg">text-embedding-004</div></td>
-                                    <td><div class="tdyuyin">文本嵌入</div></td>
-                                    <td>1500</td>
-                                    <td>0.0001 元</td>
-                                    <td></td>
-                                </tr>
-                                <!--OpenAI-->
-                                <tr data-provider="OpenAI" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/openai.718ff9c5.svg">gpt-3.5-turbo</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.003 元</td>
-                                    <td>0.006</td>
-                                </tr>
-                                <tr data-provider="OpenAI" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/openai.718ff9c5.svg">gpt-3.5-turbo-16k</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>120</td>
-                                    <td>0.003 元</td>
-                                    <td>0.006</td>
-                                </tr>
-                                <tr data-provider="OpenAI" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/openai.718ff9c5.svg">gpt-4</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.03 元</td>
-                                    <td>0.06</td>
-                                </tr>
-                                <tr data-provider="OpenAI" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/openai.718ff9c5.svg">gpt-4-32k</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.03 元</td>
-                                    <td>0.12</td>
-                                </tr>
-                                <tr data-provider="OpenAI" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/openai.718ff9c5.svg">gpt-4-turbo</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.01 元</td>
-                                    <td>0.03</td>
-                                </tr>
-                                
-                                <tr data-provider="OpenAI" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/openai.718ff9c5.svg">gpt-4o-mini</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.00015 元</td>
-                                    <td>0.0006</td>
-                                </tr>
-                                <tr data-provider="OpenAI" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/openai.718ff9c5.svg">o1-mini</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.003 元</td>
-                                    <td>0.012</td>
-                                </tr>
-                                <tr data-provider="OpenAI" data-type="text">
-                                    <td><div class="tdbody"><img src="/aiproxy/img/openai.718ff9c5.svg">o1-preview</div></td>
-                                    <td><div class="tdico">聊天补全</div></td>
-                                    <td>60</td>
-                                    <td>0.015 元</td>
-                                    <td>0.06</td>
-                                </tr>
-
-
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <script>
-                    document.getElementById('provider-select').addEventListener('change', filterModels);
-                    document.getElementById('type-select').addEventListener('change', filterModels);
-                    document.getElementById('model-search').addEventListener('input', filterModels);
-
-                    function filterModels() {
-                        const provider = document.getElementById('provider-select').value;
-                        const type = document.getElementById('type-select').value;
-                        const searchQuery = document.getElementById('model-search').value.toLowerCase();
-                        const rows = document.querySelectorAll('.model-list tbody tr');
-
-                        rows.forEach(row => {
-                            const providerMatch = provider === 'all' || row.getAttribute('data-provider') === provider;
-                            const typeMatch = type === 'all' || row.getAttribute('data-type') === type;
-                            const nameMatch = row.cells[0].textContent.toLowerCase().includes(searchQuery);
-                            row.style.display = providerMatch && typeMatch && nameMatch ? '' : 'none';
-                        });
-                    }
-                </script>
-            </div>
+      <div class="integration-content" id="moxinggc">
+        <div class="intput">
+          <div class="intputout">全球AI模型支持</div>
+          <h2>200+海量AI模型集成</h2>
+          <p>
+            支持主流商业模型 Gpt 4、Claude 3.7、Deepseek R1 和开源模型 ChatGLM 、Llama2 等,
+            <a href="https://cloud.fastgpt.cn/price" target="_blank">模型价格</a>低于官方售价
+            10%-30%，海外模型请访问
+            <a href="https://usw.sealos.io/signin" class="login-link">usw.sealos.io</a>
+          </p>
+          <a href="https://cloud.sealos.run/" class="button docs login-link" target="_blank"
+            ><img src="/aiproxy/img/moxing.svg" alt="模型图标" />模型广场</a
+          >
         </div>
-
-        <div class="integration-content">
-            <div class="integration-grid">
-                <img src="/aiproxy/img/apiliebiao.svg" alt="Nvidia">
-            </div>
-            <div class="intput intexr">
-                <div class="intputout">API 集成</div>
-                <h2>统一的 API 访问</h2>
-                <p>提供标准化的 API 接口，支持多家主流 AI 模型厂商,兼容 OpenAI API 格式，便于快速迁移和集成，持续扩充支持的模型类型。</p>
-            </div>
-        </div>
-        <div class="integration-content">
-           
-            <div class="intput">
-                <div class="intputout">日志</div>
-                <h2>集中化计费与监控</h2>
-                <p>使用 Sealos 平台统一结算，透明的按量计费模式，详细的费用明细和账单查询，详细的调用日志记录</p>
-            </div>
         <div class="integration-grid">
-            <img src="/aiproxy/img/rizhi.svg" alt="Nvidia">
+          <div class="filter-module">
+            <div class="filter-options">
+              <div class="title-bt">
+                <div class="tiles">
+                  系列/厂商<select id="provider-select">
+                    <option value="all">全部</option>
+                    <option value="claude">Claude</option>
+                    <option value="DeepSeek">DeepSeek</option>
+                    <option value="OpenAI">OpenAI</option>
+
+                    <option value="Google">Google</option>
+                    <option value="qwen">阿里</option>
+                    <option value="baai">BAAI</option>
+                    <option value="baidu">百度</option>
+                    <option value="zpqy">智谱清言</option>
+                    <option value="doubao">豆包</option>
+                    <option value="lyww">零一万物</option>
+                    <option value="MiniMax">MiniMax</option>
+                    <option value="yzam">月之暗面</option>
+                    <option value="StepFun">StepFun</option>
+                    <option value="tengxun">腾讯</option>
+                    <option value="xunfei">讯飞</option>
+                    <!-- Add more providers as needed -->
+                  </select>
+                </div>
+                <div class="tiles">
+                  类型<select id="type-select">
+                    <option value="all">全部</option>
+                    <option value="text">聊天补全</option>
+                    <option value="wbqr">文本嵌入</option>
+                    <option value="yyhc">语音合成</option>
+                    <option value="cpx">重排序</option>
+                    <!-- Add more types as needed -->
+                  </select>
+                </div>
+              </div>
+              <input type="text" id="model-search" placeholder="根据模型名称搜索" class="sousuo" />
+            </div>
+            <div class="model-list">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="dabody1">模型名称</th>
+                    <th>模型类型</th>
+                    <th>RPM</th>
+                    <th class="dabody">输入单价 /1k tokens</th>
+                    <th class="dabody">输出单价 /1k tokens</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-provider="DeepSeek" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/open.svg" />Deepseek-Reasoner(R1）
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>10000</td>
+                    <td>0.004 元</td>
+                    <td>0.016 元</td>
+                  </tr>
+                  <tr data-provider="OpenAI" data-type="text">
+                    <td>
+                      <div class="tdbody"><img src="/aiproxy/img/openai.718ff9c5.svg" />Gpt-4o</div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.0025 元</td>
+                    <td>0.01</td>
+                  </tr>
+                  <tr data-provider="claude" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img
+                          src="/aiproxy/img/anthropic.be6534ba.svg"
+                        />Claude-3-7-sonnet-thinking-20250219
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.004 元</td>
+                    <td>0.02 元</td>
+                  </tr>
+
+                  <tr data-provider="DeepSeek" data-type="text">
+                    <td>
+                      <div class="tdbody"><img src="/aiproxy/img/open.svg" />deepseek-chat</div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>10000</td>
+                    <td>0.001 元</td>
+                    <td>0.002 元</td>
+                  </tr>
+                  <!--千问-->
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qvq-72b-preview
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.012 元</td>
+                    <td>0.036 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-7b-chat
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>300</td>
+                    <td>0.006 元</td>
+                    <td>0.006 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-14b-chat
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>300</td>
+                    <td>0.008 元</td>
+                    <td>0.008 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-72b-chat
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>80</td>
+                    <td>0.002 元</td>
+                    <td>0.002 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-coder-plus
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.0035 元</td>
+                    <td>0.007 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-coder-plus-latest
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.0035 元</td>
+                    <td>0.007 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-coder-turbo
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.002 元</td>
+                    <td>0.006 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-coder-turbo-latest
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.002 元</td>
+                    <td>0.006 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-long
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.0005 元</td>
+                    <td>0.002 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-math-plus
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.004 元</td>
+                    <td>0.012 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-math-plus-latest
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.004 元</td>
+                    <td>0.012 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-math-turbo
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.002 元</td>
+                    <td>0.006 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-math-turbo-latest
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.002 元</td>
+                    <td>0.006 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-max
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.02 元</td>
+                    <td>0.06 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-max-latest
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.02 元</td>
+                    <td>0.06 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-plus
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.0008 元</td>
+                    <td>0.002 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-plus-latest
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.0008 元</td>
+                    <td>0.002 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-turbo
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.0003 元</td>
+                    <td>0.0006 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-turbo-latest
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.0003 元</td>
+                    <td>0.0006 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-vl-max
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.003 元</td>
+                    <td>0.009 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-vl-max-latest
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.003 元</td>
+                    <td>0.009 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-vl-ocr
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>600</td>
+                    <td>0.005 元</td>
+                    <td>0.005 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-vl-ocr-latest
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>600</td>
+                    <td>0.005 元</td>
+                    <td>0.005 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-vl-plus
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.0015 元</td>
+                    <td>0.0048 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen-vl-plus-latest
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.0015 元</td>
+                    <td>0.0048 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen1.5-7b-chat
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.001 元</td>
+                    <td>0.002 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen1.5-14b-chat
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.002 元</td>
+                    <td>0.004 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen1.5-32b-chat
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>10</td>
+                    <td>0.0035 元</td>
+                    <td>0.007 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen1.5-72b-chat
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.005 元</td>
+                    <td>0.01 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen1.5-110b-chat
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>10</td>
+                    <td>0.007 元</td>
+                    <td>0.014 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen2-7b-instruct
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.001 元</td>
+                    <td>0.002 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen2-57b-a14b-instruct
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.0035 元</td>
+                    <td>0.007 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen2-72b-instruct
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.004 元</td>
+                    <td>0.012 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen2-math-7b-instruct
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>10</td>
+                    <td>0.001 元</td>
+                    <td>0.002 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen2-math-72b-instruct
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>10</td>
+                    <td>0.004 元</td>
+                    <td>0.012 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen2.5-7b-instruct
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.001 元</td>
+                    <td>0.002 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen2.5-32b-instruct
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.0035 元</td>
+                    <td>0.007 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen2.5-72b-instruct
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.004 元</td>
+                    <td>0.012 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen2.5-coder-7b-instruct
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.001 元</td>
+                    <td>0.002 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen2.5-coder-14b-instruct
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.002 元</td>
+                    <td>0.006 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen2.5-coder-32b-instruct
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.0035 元</td>
+                    <td>0.007 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen2.5-math-7b-instruct
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.001 元</td>
+                    <td>0.002 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwen2.5-math-72b-instruct
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.004 元</td>
+                    <td>0.012 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />qwq-32b-preview
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1200</td>
+                    <td>0.0035 元</td>
+                    <td>0.007 元</td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="wbqr">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />text-embedding-v1
+                      </div>
+                    </td>
+                    <td><div class="tdyuyin">文本嵌入</div></td>
+                    <td>1800</td>
+                    <td>0.0007 元</td>
+                    <td></td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="wbqr">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />text-embedding-v2
+                      </div>
+                    </td>
+                    <td><div class="tdyuyin">文本嵌入</div></td>
+                    <td>1800</td>
+                    <td>0.0007 元</td>
+                    <td></td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="wbqr">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />text-embedding-v3
+                      </div>
+                    </td>
+                    <td><div class="tdyuyin">文本嵌入</div></td>
+                    <td>1800</td>
+                    <td>0.0007 元</td>
+                    <td></td>
+                  </tr>
+                  <tr data-provider="qwen" data-type="yyhc">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />sambert-v1
+                      </div>
+                    </td>
+                    <td><div class="tdsuoyin">语音合成</div></td>
+                    <td>1200</td>
+                    <td>0.1 元</td>
+                    <td></td>
+                  </tr>
+                  <!--BAAi-->
+                  <tr data-provider="baai" data-type="wbqr">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/baai.cfd726b4.svg" />bge-large-en
+                      </div>
+                    </td>
+                    <td><div class="tdyuyin">文本嵌入</div></td>
+                    <td>1200</td>
+                    <td>0.0005 元</td>
+                    <td></td>
+                  </tr>
+                  <tr data-provider="baai" data-type="wbqr">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/baai.cfd726b4.svg" />bge-large-zh
+                      </div>
+                    </td>
+                    <td><div class="tdyuyin">文本嵌入</div></td>
+                    <td>1200</td>
+                    <td>0.0005 元</td>
+                    <td></td>
+                  </tr>
+                  <!--百度-->
+                  <tr data-provider="baai" data-type="cpx">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/baai.cfd726b4.svg" />bge-reranker-v2-m3
+                      </div>
+                    </td>
+                    <td><div class="tdcpx">重排序</div></td>
+                    <td>2000</td>
+                    <td>0.0009 元</td>
+                    <td></td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />ERNIE-3.5-8K
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>10000</td>
+                    <td>0.0008 元</td>
+                    <td>0.002 元</td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />ERNIE-3.5-8K-Preview
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>300</td>
+                    <td>0.0008 元</td>
+                    <td>0.002 元</td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />ERNIE-3.5-128K
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>5000</td>
+                    <td>0.0008 元</td>
+                    <td>0.002 元</td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />ERNIE-4.0-8K
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>10000</td>
+                    <td>0.03 元</td>
+                    <td>0.09 元</td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />ERNIE-4.0-8K-Latest
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.03 元</td>
+                    <td>0.09 元</td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />ERNIE-4.0-8K-Preview
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>300</td>
+                    <td>0.003 元</td>
+                    <td>0.009 元</td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />ERNIE-4.0-Turbo-8K
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>10000</td>
+                    <td>0.002 元</td>
+                    <td>0.006 元</td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />ERNIE-4.0-Turbo-8K-Latest
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.02 元</td>
+                    <td>0.06 元</td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />ERNIE-4.0-Turbo-8K-Preview
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.02 元</td>
+                    <td>0.06 元</td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />ERNIE-4.0-Turbo-128K
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.02 元</td>
+                    <td>0.06 元</td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />ERNIE-Character-8K
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.0003 元</td>
+                    <td>0.0006 元</td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />ERNIE-Character-Fiction-8K
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>300</td>
+                    <td>0.0003 元</td>
+                    <td>0.0006 元</td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />ERNIE-Lite-8K
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>500</td>
+                    <td>0.0001 元</td>
+                    <td>0.0001 元</td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />ERNIE-Lite-Pro-128K
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>10000</td>
+                    <td>0.0002 元</td>
+                    <td>0.0004 元</td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />ERNIE-Novel-8K
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.04 元</td>
+                    <td>0.12 元</td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />ERNIE-Speed-8K
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>500</td>
+                    <td>0.0001 元</td>
+                    <td>0.0001 元</td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />ERNIE-Speed-128K
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>500</td>
+                    <td>0.0001 元</td>
+                    <td>0.0001 元</td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />ERNIE-Speed-Pro-128K
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>10000</td>
+                    <td>0.0003 元</td>
+                    <td>0.0006 元</td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />ERNIE-Tiny-8K
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>10000</td>
+                    <td>0.0001 元</td>
+                    <td>0.0001 元</td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="wbqr">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />Embedding-V1
+                      </div>
+                    </td>
+                    <td><div class="tdyuyin">文本嵌入</div></td>
+                    <td>1200</td>
+                    <td>0.0005 元</td>
+                    <td></td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="wbqr">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />tao-8k
+                      </div>
+                    </td>
+                    <td><div class="tdyuyin">文本嵌入</div></td>
+                    <td>1200</td>
+                    <td>0.0005 元</td>
+                    <td></td>
+                  </tr>
+                  <tr data-provider="baidu" data-type="cpx">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/qianwen.9b637091.svg" />bce-reranker-base_v1
+                      </div>
+                    </td>
+                    <td><div class="tdcpx">重排序</div></td>
+                    <td>1200</td>
+                    <td>0.0005 元</td>
+                    <td></td>
+                  </tr>
+                  <!--智谱清言-->
+                  <tr data-provider="zpqy" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/chatglm.654831da.svg" />charglm-4
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.001 元</td>
+                    <td>0.001 元</td>
+                  </tr>
+                  <tr data-provider="zpqy" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/chatglm.654831da.svg" />codegeex-4
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.0001 元</td>
+                    <td>0.0001 元</td>
+                  </tr>
+                  <tr data-provider="zpqy" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/chatglm.654831da.svg" />glm-3-turbo
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>300</td>
+                    <td>0.001 元</td>
+                    <td>0.001 元</td>
+                  </tr>
+                  <tr data-provider="zpqy" data-type="text">
+                    <td>
+                      <div class="tdbody"><img src="/aiproxy/img/chatglm.654831da.svg" />glm-4</div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.1 元</td>
+                    <td>0.1 元</td>
+                  </tr>
+                  <tr data-provider="zpqy" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/chatglm.654831da.svg" />glm-4-air
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>900</td>
+                    <td>0.001 元</td>
+                    <td>0.001 元</td>
+                  </tr>
+                  <tr data-provider="zpqy" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/chatglm.654831da.svg" />glm-4-airx
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.01 元</td>
+                    <td>0.01 元</td>
+                  </tr>
+                  <tr data-provider="zpqy" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/chatglm.654831da.svg" />glm-4-flash
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1800</td>
+                    <td>0.0001 元</td>
+                    <td>0.0001 元</td>
+                  </tr>
+                  <tr data-provider="zpqy" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/chatglm.654831da.svg" />glm-4-flashx
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>600</td>
+                    <td>0.0001 元</td>
+                    <td>0.0001 元</td>
+                  </tr>
+                  <tr data-provider="zpqy" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/chatglm.654831da.svg" />glm-4-long
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.001 元</td>
+                    <td>0.001 元</td>
+                  </tr>
+                  <tr data-provider="zpqy" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/chatglm.654831da.svg" />glm-4-plus
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>600</td>
+                    <td>0.05 元</td>
+                    <td>0.05 元</td>
+                  </tr>
+                  <tr data-provider="zpqy" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/chatglm.654831da.svg" />glm-4v
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.05元</td>
+                    <td>0.05 元</td>
+                  </tr>
+                  <tr data-provider="zpqy" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/chatglm.654831da.svg" />glm-4v-flash
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.0001 元</td>
+                    <td>0.0001 元</td>
+                  </tr>
+                  <tr data-provider="zpqy" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/chatglm.654831da.svg" />glm-4v-plus
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.01 元</td>
+                    <td>0.01 元</td>
+                  </tr>
+                  <tr data-provider="zpqy" data-type="wbqr">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/chatglm.654831da.svg" />embedding-2
+                      </div>
+                    </td>
+                    <td><div class="tdyuyin">文本嵌入</div></td>
+                    <td>60</td>
+                    <td>0.0005 元</td>
+                    <td></td>
+                  </tr>
+                  <tr data-provider="zpqy" data-type="wbqr">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/chatglm.654831da.svg" />embedding-3
+                      </div>
+                    </td>
+                    <td><div class="tdyuyin">文本嵌入</div></td>
+                    <td>600</td>
+                    <td>0.0005 元</td>
+                    <td></td>
+                  </tr>
+                  <!--豆包-->
+                  <tr data-provider="doubao" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/doubao.4d92cba8.svg" />Doubao-1.5-lite-32k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>15000</td>
+                    <td>0.0003 元</td>
+                    <td>0.0006 元</td>
+                  </tr>
+                  <tr data-provider="doubao" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/doubao.4d92cba8.svg" />Doubao-1.5-pro-32k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>15000</td>
+                    <td>0.0008 元</td>
+                    <td>0.002 元</td>
+                  </tr>
+                  <tr data-provider="doubao" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/doubao.4d92cba8.svg" />Doubao-1.5-pro-256k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>2000</td>
+                    <td>0.0005 元</td>
+                    <td>0.0009 元</td>
+                  </tr>
+                  <tr data-provider="doubao" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/doubao.4d92cba8.svg" />Doubao-1.5-vision-pro-32k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>15000</td>
+                    <td>0.003 元</td>
+                    <td>0.009 元</td>
+                  </tr>
+                  <tr data-provider="doubao" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/doubao.4d92cba8.svg" />Doubao-lite-4k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>10000</td>
+                    <td>0.0003 元</td>
+                    <td>0.0006 元</td>
+                  </tr>
+                  <tr data-provider="doubao" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/doubao.4d92cba8.svg" />Doubao-lite-32k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>15000</td>
+                    <td>0.003 元</td>
+                    <td>0.009 元</td>
+                  </tr>
+                  <tr data-provider="doubao" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/doubao.4d92cba8.svg" />Doubao-lite-128k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>15000</td>
+                    <td>0.0008 元</td>
+                    <td>0.001 元</td>
+                  </tr>
+                  <tr data-provider="doubao" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/doubao.4d92cba8.svg" />Doubao-pro-4k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>10000</td>
+                    <td>0.0008 元</td>
+                    <td>0.002 元</td>
+                  </tr>
+                  <tr data-provider="doubao" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/doubao.4d92cba8.svg" />Doubao-pro-32k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>15000</td>
+                    <td>0.0008 元</td>
+                    <td>0.002 元</td>
+                  </tr>
+                  <tr data-provider="doubao" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/doubao.4d92cba8.svg" />Doubao-pro-128k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>1000</td>
+                    <td>0.005 元</td>
+                    <td>0.009 元</td>
+                  </tr>
+                  <tr data-provider="doubao" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/doubao.4d92cba8.svg" />Doubao-vision-lite-32k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>15000</td>
+                    <td>0.008 元</td>
+                    <td>0.008 元</td>
+                  </tr>
+                  <tr data-provider="doubao" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/doubao.4d92cba8.svg" />Doubao-vision-pro-32k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>15000</td>
+                    <td>0.02 元</td>
+                    <td>0.02 元</td>
+                  </tr>
+                  <tr data-provider="doubao" data-type="wbqr">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/doubao.4d92cba8.svg" />Doubao-embedding
+                      </div>
+                    </td>
+                    <td><div class="tdyuyin">文本嵌入</div></td>
+                    <td>1200</td>
+                    <td>0.0005 元</td>
+                    <td></td>
+                  </tr>
+                  <tr data-provider="doubao" data-type="wbqr">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/doubao.4d92cba8.svg" />Doubao-embedding-large
+                      </div>
+                    </td>
+                    <td><div class="tdyuyin">文本嵌入</div></td>
+                    <td>1000</td>
+                    <td>0.0007 元</td>
+                    <td></td>
+                  </tr>
+                  <tr data-provider="doubao" data-type="yyhc">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/doubao.4d92cba8.svg" />Doubao-tts
+                      </div>
+                    </td>
+                    <td><div class="tdsuoyin">语音合成</div></td>
+                    <td>60</td>
+                    <td>0.5 元</td>
+                    <td></td>
+                  </tr>
+                  <!--零一万物-->
+                  <tr data-provider="lyww" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/lingyiwanwu.eaa51e3e.svg" />yi-lightning
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.00099 元</td>
+                    <td>0.00099 元</td>
+                  </tr>
+                  <tr data-provider="lyww" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/lingyiwanwu.eaa51e3e.svg" />yi-vision-v2
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.006 元</td>
+                    <td>0.006 元</td>
+                  </tr>
+                  <!--MiniMax-->
+                  <tr data-provider="MiniMax" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/minimax.5d47676c.svg" />MiniMax-Text-01
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.001 元</td>
+                    <td>0.008 元</td>
+                  </tr>
+                  <tr data-provider="MiniMax" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/minimax.5d47676c.svg" />abab5.5-chat
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.015 元</td>
+                    <td>0.015 元</td>
+                  </tr>
+                  <tr data-provider="MiniMax" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/minimax.5d47676c.svg" />abab5.5s-chat
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.005 元</td>
+                    <td>0.005 元</td>
+                  </tr>
+                  <tr data-provider="MiniMax" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/minimax.5d47676c.svg" />abab6.5g-chat
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.005 元</td>
+                    <td>0.005 元</td>
+                  </tr>
+                  <tr data-provider="MiniMax" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/minimax.5d47676c.svg" />abab6.5s-chat
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.001 元</td>
+                    <td>0.001 元</td>
+                  </tr>
+                  <tr data-provider="MiniMax" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/minimax.5d47676c.svg" />abab6.5t-chat
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.005 元</td>
+                    <td>0.005 元</td>
+                  </tr>
+                  <tr data-provider="MiniMax" data-type="yyhc">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/minimax.5d47676c.svg" />speech-01-turbo
+                      </div>
+                    </td>
+                    <td><div class="tdsuoyin">语音合成</div></td>
+                    <td>20</td>
+                    <td>0.2 元</td>
+                    <td></td>
+                  </tr>
+                  <!--月之暗面-->
+                  <tr data-provider="yzam" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/moonshot.4d46eebd.svg" />moonshot-v1-8k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>500</td>
+                    <td>0.012 元</td>
+                    <td>0.012 元</td>
+                  </tr>
+                  <tr data-provider="yzam" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img
+                          src="/aiproxy/img/moonshot.4d46eebd.svg"
+                        />moonshot-v1-8k-vision-preview
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>500</td>
+                    <td>0.012 元</td>
+                    <td>0.012 元</td>
+                  </tr>
+                  <tr data-provider="yzam" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/moonshot.4d46eebd.svg" />moonshot-v1-32k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>500</td>
+                    <td>0.024 元</td>
+                    <td>0.024 元</td>
+                  </tr>
+                  <tr data-provider="yzam" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img
+                          src="/aiproxy/img/moonshot.4d46eebd.svg"
+                        />moonshot-v1-32k-vision-preview
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>500</td>
+                    <td>0.024 元</td>
+                    <td>0.024 元</td>
+                  </tr>
+                  <tr data-provider="yzam" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/moonshot.4d46eebd.svg" />moonshot-v1-128k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>500</td>
+                    <td>0.006 元</td>
+                    <td>0.006 元</td>
+                  </tr>
+                  <tr data-provider="yzam" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img
+                          src="/aiproxy/img/moonshot.4d46eebd.svg"
+                        />moonshot-v1-128k-vision-preview
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>500</td>
+                    <td>0.006 元</td>
+                    <td>0.006 元</td>
+                  </tr>
+                  <!--StepFun-->
+                  <tr data-provider="StepFun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/stepfun.c406aa0d.svg" />step-1-8k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.005 元</td>
+                    <td>0.02 元</td>
+                  </tr>
+                  <tr data-provider="StepFun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/stepfun.c406aa0d.svg" />step-1-32k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.015 元</td>
+                    <td>0.07 元</td>
+                  </tr>
+                  <tr data-provider="StepFun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/stepfun.c406aa0d.svg" />step-1-128k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.04 元</td>
+                    <td>0.02 元</td>
+                  </tr>
+                  <tr data-provider="StepFun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/stepfun.c406aa0d.svg" />step-1-256k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.95 元</td>
+                    <td>0.3 元</td>
+                  </tr>
+                  <tr data-provider="StepFun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/stepfun.c406aa0d.svg" />step-1-flash
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.001 元</td>
+                    <td>0.004 元</td>
+                  </tr>
+                  <tr data-provider="StepFun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/stepfun.c406aa0d.svg" />step-1.5v-mini
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.008 元</td>
+                    <td>0.035 元</td>
+                  </tr>
+                  <tr data-provider="StepFun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/stepfun.c406aa0d.svg" />step-1v-8k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.005 元</td>
+                    <td>0.02 元</td>
+                  </tr>
+                  <tr data-provider="StepFun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/stepfun.c406aa0d.svg" />step-1v-32k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.015 元</td>
+                    <td>0.07 元</td>
+                  </tr>
+                  <tr data-provider="StepFun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/stepfun.c406aa0d.svg" />step-2-16k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.038 元</td>
+                    <td>0.12 元</td>
+                  </tr>
+                  <tr data-provider="StepFun" data-type="yyhc">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/stepfun.c406aa0d.svg" />step-tts-mini
+                      </div>
+                    </td>
+                    <td><div class="tdsuoyin">语音合成</div></td>
+                    <td>60</td>
+                    <td>0.09 元</td>
+                    <td></td>
+                  </tr>
+                  <!--腾讯-->
+                  <tr data-provider="tengxun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/hunyuan.025cc867.svg" />hunyuan-code
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>300</td>
+                    <td>0.004 元</td>
+                    <td>0.008 元</td>
+                  </tr>
+                  <tr data-provider="tengxun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/hunyuan.025cc867.svg" />hunyuan-functioncall
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>300</td>
+                    <td>0.004 元</td>
+                    <td>0.008 元</td>
+                  </tr>
+                  <tr data-provider="tengxun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/hunyuan.025cc867.svg" />hunyuan-large
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>300</td>
+                    <td>0.004 元</td>
+                    <td>0.012 元</td>
+                  </tr>
+                  <tr data-provider="tengxun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/hunyuan.025cc867.svg" />hunyuan-large-longcontext
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>300</td>
+                    <td>0.006 元</td>
+                    <td>0.018 元</td>
+                  </tr>
+                  <tr data-provider="tengxun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/hunyuan.025cc867.svg" />hunyuan-lite
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>300</td>
+                    <td>0.0001 元</td>
+                    <td>0.0001 元</td>
+                  </tr>
+                  <tr data-provider="tengxun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/hunyuan.025cc867.svg" />hunyuan-pro
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>300</td>
+                    <td>0.03 元</td>
+                    <td>0.1 元</td>
+                  </tr>
+                  <tr data-provider="tengxun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/hunyuan.025cc867.svg" />hunyuan-role
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>300</td>
+                    <td>0.004 元</td>
+                    <td>0.008 元</td>
+                  </tr>
+                  <tr data-provider="tengxun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/hunyuan.025cc867.svg" />hunyuan-standard
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>300</td>
+                    <td>0.0008 元</td>
+                    <td>0.002 元</td>
+                  </tr>
+                  <tr data-provider="tengxun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/hunyuan.025cc867.svg" />hunyuan-turbo
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>300</td>
+                    <td>0.015 元</td>
+                    <td>0.05 元</td>
+                  </tr>
+                  <tr data-provider="tengxun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/hunyuan.025cc867.svg" />hunyuan-turbo-vision
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>300</td>
+                    <td>0.008 元</td>
+                    <td>0.008 元</td>
+                  </tr>
+                  <tr data-provider="tengxun" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/hunyuan.025cc867.svg" />hunyuan-vision
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>300</td>
+                    <td>0.018 元</td>
+                    <td>0.018 元</td>
+                  </tr>
+                  <tr data-provider="tengxun" data-type="wbqr">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/hunyuan.025cc867.svg" />hunyuan-embedding
+                      </div>
+                    </td>
+                    <td><div class="tdyuyin">文本嵌入</div></td>
+                    <td>300</td>
+                    <td>0.0007 元</td>
+                    <td></td>
+                  </tr>
+                  <!--讯飞-->
+                  <tr data-provider="xunfei" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/sparkdesk.96979cd6.svg" />SparkDesk-4.0-Ultra
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.14 元</td>
+                    <td>0.14 元</td>
+                  </tr>
+                  <tr data-provider="xunfei" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/sparkdesk.96979cd6.svg" />SparkDesk-Lite
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.001 元</td>
+                    <td>0.001 元</td>
+                  </tr>
+                  <tr data-provider="xunfei" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/sparkdesk.96979cd6.svg" />SparkDesk-Max
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.06 元</td>
+                    <td>0.06 元</td>
+                  </tr>
+                  <tr data-provider="xunfei" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/sparkdesk.96979cd6.svg" />SparkDesk-Max-32k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.09 元</td>
+                    <td>0.09 元</td>
+                  </tr>
+                  <tr data-provider="xunfei" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/sparkdesk.96979cd6.svg" />SparkDesk-Pro
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.014 元</td>
+                    <td>0.014 元</td>
+                  </tr>
+                  <tr data-provider="xunfei" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/sparkdesk.96979cd6.svg" />SparkDesk-Pro-128K
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.026 元</td>
+                    <td>0.026 元</td>
+                  </tr>
+                  <!-- Add more models as needed -->
+                  <!--claude-->
+                  <tr data-provider="claude" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/anthropic.be6534ba.svg" />claude-3-5-haiku-20241022
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.001 元</td>
+                    <td>0.005 元</td>
+                  </tr>
+                  <tr data-provider="claude" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/anthropic.be6534ba.svg" />claude-3-5-sonnet-20240620
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.004 元</td>
+                    <td>0.02 元</td>
+                  </tr>
+                  <tr data-provider="claude" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/anthropic.be6534ba.svg" />claude-3-5-sonnet-20241022
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.004 元</td>
+                    <td>0.02 元</td>
+                  </tr>
+                  <tr data-provider="claude" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/anthropic.be6534ba.svg" />claude-3-5-sonnet-latest
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.004 元</td>
+                    <td>0.02 元</td>
+                  </tr>
+                  <tr data-provider="claude" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/anthropic.be6534ba.svg" />claude-3-7-sonnet-20250219
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.004 元</td>
+                    <td>0.02 元</td>
+                  </tr>
+
+                  <tr data-provider="claude" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/anthropic.be6534ba.svg" />claude-3-opus-20240229
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.003 元</td>
+                    <td>0.015 元</td>
+                  </tr>
+                  <tr data-provider="claude" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/anthropic.be6534ba.svg" />claude-3-haiku-20240307
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.003 元</td>
+                    <td>0.015 元</td>
+                  </tr>
+                  <!--Google-->
+                  <tr data-provider="Google" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/google.cb2e36d7.svg" />Gemini-1.5-pro
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>600</td>
+                    <td>0.0025 元</td>
+                    <td>0.01 元</td>
+                  </tr>
+                  <tr data-provider="Google" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/google.cb2e36d7.svg" />Gemini-2.0-flash
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>600</td>
+                    <td>0.0001 元</td>
+                    <td>0.0004 元</td>
+                  </tr>
+                  <tr data-provider="Google" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/google.cb2e36d7.svg" />gemini-2.0-flash-lite-preview
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>600</td>
+                    <td>0.000075 元</td>
+                    <td>0.0003 元</td>
+                  </tr>
+                  <tr data-provider="Google" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/google.cb2e36d7.svg" />gemini-2.0-flash-thinking-exp
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>600</td>
+                    <td>0.0001 元</td>
+                    <td>0.0004 元</td>
+                  </tr>
+                  <tr data-provider="Google" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/google.cb2e36d7.svg" />gemini-1.5-flash
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>600</td>
+                    <td>0.00015 元</td>
+                    <td>0.0006 元</td>
+                  </tr>
+                  <tr data-provider="Google" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/google.cb2e36d7.svg" />gemini-1.5-flash-8b
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>600</td>
+                    <td>0.000075 元</td>
+                    <td>0.0003 元</td>
+                  </tr>
+                  <tr data-provider="Google" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/google.cb2e36d7.svg" />gemini-2.0-pro-exp
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>600</td>
+                    <td>0.0025 元</td>
+                    <td>0.01 元</td>
+                  </tr>
+                  <tr data-provider="Google" data-type="wbqr">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/google.cb2e36d7.svg" />text-embedding-004
+                      </div>
+                    </td>
+                    <td><div class="tdyuyin">文本嵌入</div></td>
+                    <td>1500</td>
+                    <td>0.0001 元</td>
+                    <td></td>
+                  </tr>
+                  <!--OpenAI-->
+                  <tr data-provider="OpenAI" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/openai.718ff9c5.svg" />gpt-3.5-turbo
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.003 元</td>
+                    <td>0.006</td>
+                  </tr>
+                  <tr data-provider="OpenAI" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/openai.718ff9c5.svg" />gpt-3.5-turbo-16k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>120</td>
+                    <td>0.003 元</td>
+                    <td>0.006</td>
+                  </tr>
+                  <tr data-provider="OpenAI" data-type="text">
+                    <td>
+                      <div class="tdbody"><img src="/aiproxy/img/openai.718ff9c5.svg" />gpt-4</div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.03 元</td>
+                    <td>0.06</td>
+                  </tr>
+                  <tr data-provider="OpenAI" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/openai.718ff9c5.svg" />gpt-4-32k
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.03 元</td>
+                    <td>0.12</td>
+                  </tr>
+                  <tr data-provider="OpenAI" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/openai.718ff9c5.svg" />gpt-4-turbo
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.01 元</td>
+                    <td>0.03</td>
+                  </tr>
+
+                  <tr data-provider="OpenAI" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/openai.718ff9c5.svg" />gpt-4o-mini
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.00015 元</td>
+                    <td>0.0006</td>
+                  </tr>
+                  <tr data-provider="OpenAI" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/openai.718ff9c5.svg" />o1-mini
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.003 元</td>
+                    <td>0.012</td>
+                  </tr>
+                  <tr data-provider="OpenAI" data-type="text">
+                    <td>
+                      <div class="tdbody">
+                        <img src="/aiproxy/img/openai.718ff9c5.svg" />o1-preview
+                      </div>
+                    </td>
+                    <td><div class="tdico">聊天补全</div></td>
+                    <td>60</td>
+                    <td>0.015 元</td>
+                    <td>0.06</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <script>
+            document.getElementById('provider-select').addEventListener('change', filterModels);
+            document.getElementById('type-select').addEventListener('change', filterModels);
+            document.getElementById('model-search').addEventListener('input', filterModels);
+
+            function filterModels() {
+              const provider = document.getElementById('provider-select').value;
+              const type = document.getElementById('type-select').value;
+              const searchQuery = document.getElementById('model-search').value.toLowerCase();
+              const rows = document.querySelectorAll('.model-list tbody tr');
+
+              rows.forEach((row) => {
+                const providerMatch =
+                  provider === 'all' || row.getAttribute('data-provider') === provider;
+                const typeMatch = type === 'all' || row.getAttribute('data-type') === type;
+                const nameMatch = row.cells[0].textContent.toLowerCase().includes(searchQuery);
+                row.style.display = providerMatch && typeMatch && nameMatch ? '' : 'none';
+              });
+            }
+          </script>
         </div>
-    </div>
+      </div>
+
+      <div class="integration-content">
+        <div class="integration-grid">
+          <img src="/aiproxy/img/apiliebiao.svg" alt="Nvidia" />
+        </div>
+        <div class="intput intexr">
+          <div class="intputout">API 集成</div>
+          <h2>统一的 API 访问</h2>
+          <p>
+            提供标准化的 API 接口，支持多家主流 AI 模型厂商,兼容 OpenAI API
+            格式，便于快速迁移和集成，持续扩充支持的模型类型。
+          </p>
+        </div>
+      </div>
+      <div class="integration-content">
+        <div class="intput">
+          <div class="intputout">日志</div>
+          <h2>集中化计费与监控</h2>
+          <p>
+            使用 Sealos
+            平台统一结算，透明的按量计费模式，详细的费用明细和账单查询，详细的调用日志记录
+          </p>
+        </div>
+        <div class="integration-grid">
+          <img src="/aiproxy/img/rizhi.svg" alt="Nvidia" />
+        </div>
+      </div>
     </section>
     <div class="h5footer" id="footer"></div>
     <!-- 百度统计 -->
     <script>
       var _hmt = _hmt || [];
       (function () {
-        var hm = document.createElement("script")
-        hm.src = "https://hm.baidu.com/hm.js?d8e8ecf669c47dc2512d3f1417e761f9"
-        var s = document.getElementsByTagName("script")[0]
-        s.parentNode.insertBefore(hm, s)
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?d8e8ecf669c47dc2512d3f1417e761f9';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
       })();
     </script>
     <script>
       var _hmt = _hmt || [];
       (function () {
-        var hm = document.createElement("script")
-        hm.src = "https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6"
-        var s = document.getElementsByTagName("script")[0]
-        s.parentNode.insertBefore(hm, s)
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?6763f865f8d80f27bf8adf840a3041b6';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
       })();
     </script>
-</body>
+  </body>
 </html>

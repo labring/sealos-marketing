@@ -4,7 +4,9 @@
  */
 
 /* 优化布局稳定性 - 减少CLS */
-img, video, iframe {
+img,
+video,
+iframe {
   max-width: 100%;
   height: auto;
   display: block;
@@ -22,7 +24,9 @@ img, video, iframe {
 
 /* 字体粗细统一优化 */
 body {
-  font-family: "PingFang SC", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-family:
+    'PingFang SC', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -46,12 +50,19 @@ h3 {
 }
 
 /* 文本与强调元素字重 */
-p, li, span {
+p,
+li,
+span {
   font-weight: 400;
   line-height: 1.6;
 }
 
-strong, b, .stat span, .tab-button, .btn-primary, .btn-secondary {
+strong,
+b,
+.stat span,
+.tab-button,
+.btn-primary,
+.btn-secondary {
   font-weight: 500; /* 半粗体，不太重但有足够强调 */
 }
 
@@ -81,8 +92,8 @@ strong, b, .stat span, .tab-button, .btn-primary, .btn-secondary {
   letter-spacing: 0;
 }
 
-.cloud-module1 h2, 
-.cloud-module2 h2, 
+.cloud-module1 h2,
+.cloud-module2 h2,
 .cloud-module3 h2 {
   font-weight: 500;
   letter-spacing: 0;
@@ -95,7 +106,10 @@ strong, b, .stat span, .tab-button, .btn-primary, .btn-secondary {
 }
 
 /* 按钮文字优化 */
-.btn-primary, .btn-secondary, .login-footer, .login-footer2 {
+.btn-primary,
+.btn-secondary,
+.login-footer,
+.login-footer2 {
   font-weight: 500;
   letter-spacing: 0.01em;
 }
@@ -115,7 +129,9 @@ html {
 
 /* 页面过渡动画 */
 .tab-pane {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
   opacity: 0;
   transform: translateY(10px);
 }
@@ -192,9 +208,15 @@ html {
 }
 
 @keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* 状态数字增长动画 */
@@ -250,38 +272,39 @@ html {
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
   }
-  
+
   h1 {
     font-size: 28px;
     line-height: 1.3;
   }
-  
+
   h2 {
     font-size: 24px;
     line-height: 1.3;
   }
-  
+
   h3 {
     font-size: 20px;
     line-height: 1.3;
   }
-  
+
   .hero-section {
     flex-direction: column;
     padding: 20px;
   }
-  
-  .hero-content, .hero-video {
+
+  .hero-content,
+  .hero-video {
     width: 100%;
     margin-bottom: 20px;
   }
-  
+
   .tab-buttons {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
   }
-  
+
   /* 减少移动端动画，提高性能 */
   .cloud-module:hover,
   .feature:hover,
@@ -293,12 +316,21 @@ html {
 
 /* 触摸设备优化 */
 @media (hover: none) {
-  button, a, .tab-button, .btn-primary, .btn-secondary, .login-footer, .login-footer2 {
+  button,
+  a,
+  .tab-button,
+  .btn-primary,
+  .btn-secondary,
+  .login-footer,
+  .login-footer2 {
     touch-action: manipulation;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
-  
-  .hero-buttons a:active, .cta-button:active, .login-footer:active, .login-footer2:active {
+
+  .hero-buttons a:active,
+  .cta-button:active,
+  .login-footer:active,
+  .login-footer2:active {
     transform: scale(0.98);
   }
 }
@@ -309,12 +341,12 @@ html {
     color: #000;
     background: #fff;
   }
-  
+
   a {
     color: #000;
     text-decoration: underline;
   }
-  
+
   .hero-video,
   .tab-buttons,
   .footer,
@@ -378,7 +410,7 @@ html {
     position: relative;
     overflow: hidden;
   }
-  
+
   .touch-feedback::after {
     content: '';
     display: block;
@@ -393,9 +425,11 @@ html {
     background-position: 50%;
     transform: scale(10, 10);
     opacity: 0;
-    transition: transform 0.3s, opacity 0.5s;
+    transition:
+      transform 0.3s,
+      opacity 0.5s;
   }
-  
+
   .touch-feedback:active::after {
     transform: scale(0, 0);
     opacity: 0.3;
@@ -413,4 +447,4 @@ html {
   z-index: 9999;
   width: 0%;
   transition: width 0.2s ease;
-} 
+}

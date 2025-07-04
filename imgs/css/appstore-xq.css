@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 ::-webkit-scrollbar {
   display: none;
@@ -17,7 +19,87 @@ body {
   overflow-y: auto;
 }
 /* Reset for specific HTML elements */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -26,18 +108,33 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 /* List styles */
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 /* Quote styles */
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none;
 }
@@ -68,7 +165,9 @@ button {
   cursor: pointer;
   outline: inherit;
 }
-input, textarea, select {
+input,
+textarea,
+select {
   font: inherit;
 }
 img {
@@ -121,7 +220,7 @@ img {
 .navbar-list .active {
   display: block;
 }
-.navlefttitle{
+.navlefttitle {
   display: flex;
   flex-direction: column;
 }
@@ -170,7 +269,7 @@ img {
 .nav-links li a {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
   text-align: center;
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 16px;
   font-style: normal;
   line-height: 24px;
@@ -197,13 +296,13 @@ img {
 .btn {
   margin-left: 40px;
   border-radius: 8px;
-  background: var(--Bright-Blue-500, #219BF4);
+  background: var(--Bright-Blue-500, #219bf4);
   box-shadow: 0px 4.626px 18.504px 0px rgba(58, 149, 255, 0.28);
   width: 100px;
   height: 36px;
-  color: var(--Neutrals-White, var(--White, #FFF));
+  color: var(--Neutrals-White, var(--White, #fff));
   text-align: center;
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -229,19 +328,21 @@ img {
   height: 100%;
   display: flex;
   align-items: flex-start;
-  box-shadow: 0px 32px 64px -12px rgba(19, 51, 107, 0.20), 0px 0px 1px 0px rgba(19, 51, 107, 0.20);
+  box-shadow:
+    0px 32px 64px -12px rgba(19, 51, 107, 0.2),
+    0px 0px 1px 0px rgba(19, 51, 107, 0.2);
   border-radius: 12px;
 }
 .menu {
   width: 197px;
-  background: #E4F1FF;
+  background: #e4f1ff;
   height: 100%;
   border-radius: 12px 0px 0px 12px;
   padding: 24px 17px 0px 20px;
 }
 .menu-left {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -258,7 +359,7 @@ img {
   align-self: stretch;
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
   text-align: center;
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -267,7 +368,7 @@ img {
 }
 .menu li:hover {
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.80);
+  background: rgba(255, 255, 255, 0.8);
   cursor: pointer;
 }
 .menu-list {
@@ -277,7 +378,7 @@ img {
 }
 .menu-more {
   color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -290,29 +391,28 @@ img {
   width: 18px;
   margin-left: 4px;
 }
-.btn:hover{
-  border: 1px solid var(--Gray-Modern-250, #DFE2EA);
-  background: var(--White, #FFF);
+.btn:hover {
+  border: 1px solid var(--Gray-Modern-250, #dfe2ea);
+  background: var(--White, #fff);
   color: var(--light-general-on-surface-low, var(--Gray-Modern-600, #485264));
   transition: all 0.3s ease;
 }
-.deploy-button:hover{
-  border: 1px solid var(--Gray-Modern-250, #DFE2EA);
-  background: var(--White, #FFF);
+.deploy-button:hover {
+  border: 1px solid var(--Gray-Modern-250, #dfe2ea);
+  background: var(--White, #fff);
   color: var(--light-general-on-surface-low, var(--Gray-Modern-600, #485264));
   transition: all 0.2s ease;
 }
-.yaml-button:hover{
-  background: var(--Bright-Blue-500, #219BF4);
-  color: var(--White, #FFF);
+.yaml-button:hover {
+  background: var(--Bright-Blue-500, #219bf4);
+  color: var(--White, #fff);
 }
-.sealos-detice-span:hover{
+.sealos-detice-span:hover {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
-
 }
 .menu-title {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -341,7 +441,7 @@ img {
 }
 .list-gj1 ul li:hover {
   border-radius: 12px;
-  background: #EEF6FF;
+  background: #eef6ff;
 }
 .title-top {
   display: flex;
@@ -350,7 +450,7 @@ img {
 }
 .title-top h2 {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -362,7 +462,7 @@ img {
 }
 .list-bsrs {
   color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -371,7 +471,7 @@ img {
 }
 .list-gij-title p {
   color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -413,7 +513,7 @@ img {
 .link-text {
   flex-grow: 1;
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -422,16 +522,16 @@ img {
 }
 .badge {
   border-radius: 14px;
-  background: var(--Bright-Blue-500, #219BF4);
+  background: var(--Bright-Blue-500, #219bf4);
   box-shadow: 0px 1.428px 5.711px 0px rgba(58, 149, 255, 0.28);
   display: flex;
   padding: 4px 6px;
   justify-content: center;
   align-items: center;
   gap: 3.627px;
-  color: var(--Neutrals-White, var(--White, #FFF));
+  color: var(--Neutrals-White, var(--White, #fff));
   text-align: center;
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -472,7 +572,7 @@ img {
   display: block;
 }
 .stepxq {
-  border-top: 1px solid var(--Gray-Modern-250, #DFE2EA);
+  border-top: 1px solid var(--Gray-Modern-250, #dfe2ea);
   display: flex;
   flex-direction: row;
   align-content: flex-start;
@@ -513,12 +613,12 @@ img {
   height: 20px;
   display: inline-block;
 }
-.title-stats{
+.title-stats {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-.title-logo img{
+.title-logo img {
   padding: 10px;
 }
 .active .briefcase-2 {
@@ -547,7 +647,7 @@ img {
   display: flex;
   align-items: center;
   align-self: stretch;
-  border-left: 2px solid var(--Gray-Modern-200, #E8EBF0);
+  border-left: 2px solid var(--Gray-Modern-200, #e8ebf0);
   padding-left: 12px;
 }
 .sub-menu-lef {
@@ -558,7 +658,7 @@ img {
 .sub-menu-lef p {
   color: #111824;
   text-align: left;
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -566,9 +666,9 @@ img {
   letter-spacing: 0.1px;
 }
 .badge-tips {
-  color: var(--light-sealos-secondary-text, var(--Bright-Blue-600, #0884DD));
+  color: var(--light-sealos-secondary-text, var(--Bright-Blue-600, #0884dd));
   text-align: center;
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -580,18 +680,18 @@ img {
   align-items: center;
   gap: 3.627px;
   border-radius: 34px;
-  background: var(--Bright-Blue-100, #DBF3FF);
+  background: var(--Bright-Blue-100, #dbf3ff);
 }
 .nav-item .sub-menu .active {
-  border-left: 2px solid var(--Bright-Blue-500, #219BF4);
+  border-left: 2px solid var(--Bright-Blue-500, #219bf4);
 }
 .sub-menu .active a {
   border-radius: 8px;
-  background: #E4F1FF;
+  background: #e4f1ff;
 }
-.sealos-detice{
+.sealos-detice {
   color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -599,10 +699,10 @@ img {
   letter-spacing: 0.048px;
   margin: 10px 0px 4px 0px;
 }
-.sealos-detice-span{
+.sealos-detice-span {
   font-size: 12px;
   color: #209bf4;
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   display: flex;
   justify-content: flex-end;
   padding-right: 10px;
@@ -634,8 +734,8 @@ img {
 }
 .app-h5 {
   width: 100%;
-  border-right: 1px solid var(--Gray-Modern-250, #DFE2EA);
-  border-left: 1px solid var(--Gray-Modern-250, #DFE2EA);
+  border-right: 1px solid var(--Gray-Modern-250, #dfe2ea);
+  border-left: 1px solid var(--Gray-Modern-250, #dfe2ea);
   padding: 32px 40px;
 }
 .hard-top {
@@ -649,15 +749,17 @@ img {
   height: 80px;
   border-radius: 8px;
   border: 1px solid #ffffff;
-  background: linear-gradient(0deg, var(--White, #FFF) 0%, var(--White, #FFF) 100%), linear-gradient(180deg, #F9F9FA 0%, #FBFBFC 100%);
-  box-shadow: 0px 1px 2px 0.5px rgba(84, 96, 107, 0.20);
+  background:
+    linear-gradient(0deg, var(--White, #fff) 0%, var(--White, #fff) 100%),
+    linear-gradient(180deg, #f9f9fa 0%, #fbfbfc 100%);
+  box-shadow: 0px 1px 2px 0.5px rgba(84, 96, 107, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .hard-top2 h1 {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -670,7 +772,7 @@ img {
 }
 .app-decistore {
   color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -690,7 +792,7 @@ img {
 }
 .stars {
   color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 14px;
   font-style: normal;
   line-height: 20px;
@@ -707,14 +809,13 @@ img {
 .stars img {
   margin-right: 4px;
 }
-.sub-menu li a:hover{
+.sub-menu li a:hover {
   border-radius: 8px;
-  background: #E4F1FF;
-
+  background: #e4f1ff;
 }
-.shares a{
+.shares a {
   color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 12px;
   font-style: normal;
   letter-spacing: 0.1px;
@@ -724,7 +825,7 @@ img {
 }
 .shares {
   color: var(--light-general-on-surface-low, var(--Gray-Modern-600, #485264));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -743,11 +844,13 @@ img {
   align-items: center;
   gap: var(--sm, 6px);
   border-radius: var(--sm, 6px);
-  border: 1px solid var(--Gray-Modern-250, #DFE2EA);
-  background: var(--White, #FFF);
-  box-shadow: 0px 1px 2px 0px rgba(19, 51, 107, 0.05), 0px 0px 1px 0px rgba(19, 51, 107, 0.08);
+  border: 1px solid var(--Gray-Modern-250, #dfe2ea);
+  background: var(--White, #fff);
+  box-shadow:
+    0px 1px 2px 0px rgba(19, 51, 107, 0.05),
+    0px 0px 1px 0px rgba(19, 51, 107, 0.08);
   color: var(--light-general-on-surface-low, var(--Gray-Modern-600, #485264));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -761,10 +864,12 @@ img {
   align-items: center;
   gap: 8px;
   border-radius: var(--sm, 6px);
-  background: var(--Bright-Blue-500, #219BF4);
-  box-shadow: 0px 1px 2px 0px rgba(19, 51, 107, 0.05), 0px 0px 1px 0px rgba(19, 51, 107, 0.08);
-  color: var(--White, #FFF);
-  font-family: "PingFang SC";
+  background: var(--Bright-Blue-500, #219bf4);
+  box-shadow:
+    0px 1px 2px 0px rgba(19, 51, 107, 0.05),
+    0px 0px 1px 0px rgba(19, 51, 107, 0.08);
+  color: var(--White, #fff);
+  font-family: 'PingFang SC';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -839,12 +944,12 @@ img {
   align-items: flex-start;
   gap: 2px;
   border-radius: 10px;
-  border: 1px solid var(--Gray-Modern-200, #E8EBF0);
-  background: var(--Gray-Modern-25, #FBFBFC);
+  border: 1px solid var(--Gray-Modern-200, #e8ebf0);
+  background: var(--Gray-Modern-25, #fbfbfc);
 }
 .step-number {
   color: var(--light-general-on-surface-low, var(--Gray-Modern-600, #485264));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -853,7 +958,7 @@ img {
   display: flex;
   align-items: center;
 }
-.step1ico{
+.step1ico {
   display: flex;
   width: 6px;
   height: 6px;
@@ -861,10 +966,10 @@ img {
   align-items: center;
   gap: 3.627px;
   border-radius: 50%;
-  background: var(--Bright-Blue-400, #47B2FF);
+  background: var(--Bright-Blue-400, #47b2ff);
   margin-right: 4px;
 }
-.step5ico{
+.step5ico {
   display: flex;
   width: 6px;
   height: 6px;
@@ -872,10 +977,10 @@ img {
   align-items: center;
   gap: 3.627px;
   border-radius: 50%;
-  background: #FF8AA9;
+  background: #ff8aa9;
   margin-right: 4px;
 }
-.step4ico{
+.step4ico {
   display: flex;
   width: 6px;
   height: 6px;
@@ -883,10 +988,10 @@ img {
   align-items: center;
   gap: 3.627px;
   border-radius: 50%;
-  background: #BE8AFF;
+  background: #be8aff;
   margin-right: 4px;
 }
-.step3ico{
+.step3ico {
   display: flex;
   width: 6px;
   height: 6px;
@@ -894,10 +999,10 @@ img {
   align-items: center;
   gap: 3.627px;
   border-radius: 50%;
-  background: #8D98FB;
+  background: #8d98fb;
   margin-right: 4px;
 }
-.step2ico{
+.step2ico {
   display: flex;
   width: 6px;
   height: 6px;
@@ -905,7 +1010,7 @@ img {
   align-items: center;
   gap: 3.627px;
   border-radius: 50%;
-  background: #00C9B1;
+  background: #00c9b1;
   margin-right: 4px;
 }
 .arrow {
@@ -924,7 +1029,7 @@ img {
 }
 .features-list li {
   color: var(--light-general-on-surface-low, var(--Gray-Modern-600, #485264));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -934,7 +1039,7 @@ img {
 }
 .step p {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -943,7 +1048,7 @@ img {
 }
 .quick-start-h2 {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -981,7 +1086,7 @@ button::-moz-focus-inner {
 .sub-muen-desctie {
   font-weight: 400;
   font-size: 12px;
-  color:var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
+  color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
 }
 .app-h5-left a {
   display: flex;
@@ -1004,7 +1109,7 @@ button::-moz-focus-inner {
 }
 .app-h5-left h3 {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -1013,7 +1118,7 @@ button::-moz-focus-inner {
 }
 .app-h5-left a p {
   color: var(--light-general-on-surface-lowest, var(--Gray-Modern-500, #667085));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -1022,7 +1127,7 @@ button::-moz-focus-inner {
 }
 .app-h5-left2 h3 {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -1050,7 +1155,7 @@ button::-moz-focus-inner {
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 19.6px */
-  padding-top: 14px
+  padding-top: 14px;
 }
 .h5footkj {
   display: flex;
@@ -1071,20 +1176,21 @@ button::-moz-focus-inner {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 140%; /* 19.6px */ padding-bottom: 14px;
+  line-height: 140%; /* 19.6px */
+  padding-bottom: 14px;
 }
 .h5footerlm ul li a {
   color: var(--light-general-on-surface-low, var(--Gray-Modern-600, #485264));
 }
 .h5footer {
   padding-top: 72px;
-  border-top: 1px solid #E6EDF9;
-  background: linear-gradient(186deg, #FFF 4.82%, #F9FBFF 94.9%);
+  border-top: 1px solid #e6edf9;
+  background: linear-gradient(186deg, #fff 4.82%, #f9fbff 94.9%);
 }
 .h5footerdb {
   display: flex;
   padding: 16px 0px 24px 0px;
-  border-top: 1px solid #E6EDF9;
+  border-top: 1px solid #e6edf9;
   justify-content: space-between;
 }
 .h5footerdbright {
@@ -1111,7 +1217,7 @@ button::-moz-focus-inner {
 .vids8fream2 {
   padding: 72px 100px 48px 100px;
   border-radius: 20px;
-  background: #E9F4FF;
+  background: #e9f4ff;
 }
 .vids8fream h2 {
   color: var(--light-general-on-surface, var(--Gray-Modern-900, #111824));
@@ -1137,7 +1243,7 @@ button::-moz-focus-inner {
   letter-spacing: 0.15px;
 }
 .vids8fream .vids8fream2 span {
-  color: var(--light-sealos-secondary, var(--Bright-Blue-500, #219BF4));
+  color: var(--light-sealos-secondary, var(--Bright-Blue-500, #219bf4));
   font-size: 20px;
   font-style: normal;
   font-weight: 800;
@@ -1164,12 +1270,13 @@ button::-moz-focus-inner {
   padding-right: 24px;
 }
 .vids7ico-0 {
-  background-color: #BCE7FF; /* 设置背景颜色 */
-  border-radius: 50%; /* 设置边框半径为50%，‌使正方形变成圆形 */ width: 10px;
+  background-color: #bce7ff; /* 设置背景颜色 */
+  border-radius: 50%; /* 设置边框半径为50%，‌使正方形变成圆形 */
+  width: 10px;
   height: 10px;
 }
 .vids7ico-1 {
-  background-color: #BCE7FF; /* 设置背景颜色 */
+  background-color: #bce7ff; /* 设置背景颜色 */
   width: 1.7px;
   margin: 8px 0px;
   height: 20px;
@@ -1186,13 +1293,13 @@ button::-moz-focus-inner {
   gap: 4.311px;
   flex-shrink: 0;
   border-radius: 7.026px;
-  background: var(--Bright-Blue-500, #219BF4);
+  background: var(--Bright-Blue-500, #219bf4);
   box-shadow: 0px 4.063px 16.251px 0px rgba(58, 149, 255, 0.28);
   width: 160px;
   height: 48px;
 }
 .vid6zhann a {
-  color: var(--Neutrals-White, var(--White, #FFF));
+  color: var(--Neutrals-White, var(--White, #fff));
   text-align: center;
   font-size: 17.565px;
   font-style: normal;
@@ -1207,12 +1314,13 @@ button::-moz-focus-inner {
   width: 1180px;
   margin: 0 auto;
 }
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+}
 @media screen and (min-width: 1024px) {
   .sidebar {
     width: 300px;
   }
-  .carousel-container{
+  .carousel-container {
     width: 80%;
     margin: 0 auto;
   }
@@ -1230,7 +1338,7 @@ button::-moz-focus-inner {
     font-size: 12px;
   }
   .step {
-    padding:10px 28px;
+    padding: 10px 28px;
   }
   .navtop {
     width: 960px;
@@ -1293,18 +1401,18 @@ button::-moz-focus-inner {
   .navtop {
     width: 1440px;
   }
-  .nav-links{
+  .nav-links {
     margin-left: 80px;
     gap: 40px;
   }
-  .actions p{
+  .actions p {
     font-size: 16px;
   }
 
   .sidebar {
     width: 400px;
   }
-  .nav-links li a{
+  .nav-links li a {
     font-size: 14px;
   }
   .app-h5 {
@@ -1362,29 +1470,10 @@ button::-moz-focus-inner {
     width: 125%;
     left: -100px;
   }
-  .carousel{
+  .carousel {
     width: 900px;
   }
-  .link-text{
+  .link-text {
     font-size: 16px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

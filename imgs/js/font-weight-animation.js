@@ -3,7 +3,7 @@
  * 为Sealos网站提供更平滑的字体粗细过渡体验
  */
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // 字体粗细过渡效果
   function addFontWeightTransitions() {
     // 创建样式元素
@@ -43,54 +43,54 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
   }
-  
+
   // 添加字体粗细对比动画
   function addTextEmphasisEffects() {
     // 找到所有需要增强的元素
     const tabs = document.querySelectorAll('.tab-button');
     const features = document.querySelectorAll('.feature');
     const cloudModules = document.querySelectorAll('.cloud-module');
-    
+
     // Tab按钮增强
-    tabs.forEach(tab => {
-      tab.addEventListener('mouseenter', function() {
+    tabs.forEach((tab) => {
+      tab.addEventListener('mouseenter', function () {
         // 非活动状态下字体稍微加粗以增强反馈
         if (!this.classList.contains('active')) {
           this.style.fontWeight = '550';
         }
       });
-      
-      tab.addEventListener('mouseleave', function() {
+
+      tab.addEventListener('mouseleave', function () {
         // 恢复原有字重
         if (!this.classList.contains('active')) {
           this.style.fontWeight = '500';
         }
       });
     });
-    
+
     // 功能模块标题增强
-    [...features, ...cloudModules].forEach(item => {
+    [...features, ...cloudModules].forEach((item) => {
       const title = item.querySelector('h3');
       if (title) {
-        item.addEventListener('mouseenter', function() {
+        item.addEventListener('mouseenter', function () {
           title.style.fontWeight = '550';
           title.style.letterSpacing = '-0.01em';
         });
-        
-        item.addEventListener('mouseleave', function() {
+
+        item.addEventListener('mouseleave', function () {
           title.style.fontWeight = '500';
           title.style.letterSpacing = '0';
         });
       }
     });
   }
-  
+
   // 初始化
-  setTimeout(function() {
+  setTimeout(function () {
     addFontWeightTransitions();
     // 检查是否在触摸设备上，触摸设备不应用悬停效果
     if (!('ontouchstart' in window)) {
       addTextEmphasisEffects();
     }
   }, 500); // 延迟执行以确保DOM完全加载
-}); 
+});

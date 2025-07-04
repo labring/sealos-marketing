@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const steperHtml = `<div class="step"> <span class="step-number"><i class="step1ico"></i>Step 1</span>
+document.addEventListener('DOMContentLoaded', function () {
+  const steperHtml = `<div class="step"> <span class="step-number"><i class="step1ico"></i>Step 1</span>
             <p>点击部署</p>
           </div>
           <div class="arrow"><img src="../../../app_store/img/Rectangle 34624252.svg"><img
@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
     `;
 
-    // 获取导航栏容器并插入内容
-    const navContainer = document.getElementById('steper');
-    if (navContainer) {
-        navContainer.innerHTML = steperHtml;
-    }
+  // 获取导航栏容器并插入内容
+  const navContainer = document.getElementById('steper');
+  if (navContainer) {
+    navContainer.innerHTML = steperHtml;
+  }
 });
