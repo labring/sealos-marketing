@@ -17,23 +17,58 @@
 ├── index.html              # 网站主页
 ├── price/                  # 价格计算器页面
 ├── devbox/                 # DevBox产品页面
+│   ├── dev-flow.html       # 开发流程页面
+│   ├── img/                # DevBox相关图片资源
+│   └── index.html          # DevBox主页
 ├── docker/                 # Docker容器化部署页面
+│   ├── css/                # Docker页面样式
+│   ├── img/                # Docker相关图片
+│   ├── js/                 # Docker页面脚本
+│   └── index.html          # Docker主页
 ├── js/                     # JavaScript文件
 │   ├── sem.js              # 主站点交互脚本
 │   ├── sem-price.js        # 价格计算器脚本
 │   ├── sem-devbox.js       # DevBox页面脚本
 │   └── sem-aiproxy.js      # AIProxy页面脚本
-├── imgs/                   # 图片资源
+├── imgs/                   # 图片资源和公共样式
+│   ├── css/                # 公共CSS文件
+│   ├── img/                # 图片文件
+│   └── js/                 # 公共JavaScript文件
 ├── aiproxy/                # AIProxy产品页面
-├── sealaf/                 # SealAF产品页面
+│   ├── img/                # AIProxy相关图片和样式
+│   └── index.html          # AIProxy主页
+├── sealaf/                 # SealAF产品页面（Next.js应用）
+│   ├── _next/              # Next.js构建文件
+│   ├── homepage/           # 主页资源
+│   ├── locales/            # 国际化文件
+│   └── index.html          # SealAF主页
 ├── docs/                   # 文档页面
+│   ├── devbox1113/         # DevBox文档
+│   └── windsurf/           # Windsurf相关文档
 ├── case/                   # 客户案例页面
+│   ├── css/                # 案例页面样式
+│   ├── img/                # 案例相关图片
+│   ├── js/                 # 案例页面脚本
+│   └── index.html          # 客户案例主页
 ├── app_store/              # 应用商店页面
-├── tools/                  # 工具脚本
+│   ├── ai/                 # AI相关应用
+│   ├── devetool/           # 开发工具应用
+│   ├── game/               # 游戏应用
+│   ├── mysql/              # 数据库应用
+│   ├── pass/               # 通用应用
+│   ├── tool/               # 工具应用
+│   ├── css/                # 应用商店样式
+│   ├── img/                # 应用商店图片
+│   ├── js/                 # 应用商店脚本
+│   └── 各应用目录/          # 每个应用包含images/和index.html
+├── deploy/                 # 部署相关页面
+├── tools/                  # 工具脚本和演示
 ├── sitemap.xml             # 网站地图
 ├── robots.txt              # 搜索引擎爬虫规则
 ├── nginx.conf              # Nginx配置文件
-└── Dockerfile              # Docker构建文件
+├── Dockerfile              # Docker构建文件
+├── entrypoint.sh           # Docker入口脚本
+└── package-lock.json       # NPM依赖锁定文件
 ```
 
 ## 开发指南
