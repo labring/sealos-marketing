@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 <li><a href="https://template.bja.sealos.run/" target="_blank">应用商店</a></li>
                 <li><a href="/price" target="_blank">定价</a></li> 
                 <li><a href="https://sealos.run/docs/5.0.0/Intro" target="_blank">文档</a></li> 
-                <li><a href="https://fael3z0zfze.feishu.cn/share/base/form/shrcn5oHHTKCf3VREMKOhEy6fmf" target="_blank">私有云</a></li>   
                 <!--<li><a href="/case" target="_blank">解决方案</a></li>-->
             </ul>
         </div>
